@@ -1,0 +1,14 @@
+
+> routing:coverage:next
+> node routing/buffer-preflight.mjs --case calibration
+
+validated: 0.39 s; cgroup peak 696451072; anon 15441920; file 677982208; swap max/peak 0/0
+Traceback (most recent call last):
+  File "/recipe/buffer_preflight.py", line 130, in <module>
+    run(parser.parse_args())
+  File "/recipe/buffer_preflight.py", line 99, in run
+    fixtures = fixture_checks(output, args.image_id) if args.case == "calibration" else proof["fixtures"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/buffer_preflight.py", line 50, in fixture_checks
+    raise ValueError(f"Staged preparation fixture differs: {index}")
+ValueError: Staged preparation fixture differs: 5

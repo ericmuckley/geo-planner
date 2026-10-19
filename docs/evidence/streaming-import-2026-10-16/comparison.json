@@ -1,0 +1,501 @@
+{
+  "measurements": [
+    {
+      "case": "downtown-v2",
+      "states": 20332,
+      "transitions": 39171,
+      "importMs": 829.6976670026197,
+      "workerWallMs": 968.593500998395,
+      "workerMaxRssGiB": 0.089813232421875,
+      "containerObservedPeakGiB": 0.09637832641601562,
+      "originalArtifactsEqual": true,
+      "importStages": {
+        "baseAndRestrictionsMs": 540.7102919998579,
+        "baseBuilds": 4,
+        "historyMs": 84.31195799494162,
+        "parseMs": 204.13825000287034,
+        "resolvedViaWayRules": 40,
+        "sharedRoadLookupBuilds": 3,
+        "xmlPasses": 1
+      }
+    },
+    {
+      "case": "corridor-v2",
+      "states": 387236,
+      "transitions": 818698,
+      "importMs": 17813.11592500424,
+      "workerWallMs": 20076.639509003144,
+      "workerMaxRssGiB": 0.9790725708007812,
+      "containerObservedPeakGiB": 1.1796913146972656,
+      "originalArtifactsEqual": true,
+      "importStages": {
+        "baseAndRestrictionsMs": 14107.326090001152,
+        "baseBuilds": 5,
+        "historyMs": 1865.689124999335,
+        "parseMs": 1826.5459179965546,
+        "resolvedViaWayRules": 185,
+        "sharedRoadLookupBuilds": 4,
+        "xmlPasses": 1
+      }
+    },
+    {
+      "case": "corridor-v3",
+      "states": 387236,
+      "transitions": 819241,
+      "importMs": 26300.410220996127,
+      "workerWallMs": 32244.55447299988,
+      "workerMaxRssGiB": 0.9856109619140625,
+      "containerObservedPeakGiB": 1.315155029296875,
+      "originalArtifactsEqual": true,
+      "importStages": {
+        "baseAndRestrictionsMs": 15187.36779900064,
+        "baseBuilds": 5,
+        "historyMs": 1945.479834001162,
+        "parseMs": 3093.266292999033,
+        "resolvedViaWayRules": 185,
+        "sharedRoadLookupBuilds": 4,
+        "xmlPasses": 1
+      }
+    },
+    {
+      "case": "wide-v2",
+      "states": 926900,
+      "transitions": 1955345,
+      "importMs": 61149.25461100211,
+      "workerWallMs": 347042.6170749997,
+      "workerMaxRssGiB": 2.2005653381347656,
+      "containerObservedPeakGiB": 2.350170135498047,
+      "originalArtifactsEqual": false,
+      "importStages": {
+        "baseAndRestrictionsMs": 51864.362064996385,
+        "baseBuilds": 7,
+        "historyMs": 4511.991334999038,
+        "parseMs": 4740.475210004661,
+        "resolvedViaWayRules": 501,
+        "sharedRoadLookupBuilds": 6,
+        "xmlPasses": 1
+      }
+    }
+  ],
+  "rebuildComparisons": [
+    {
+      "case": "corridor-v2",
+      "oldImportMs": 88149.5740399987,
+      "oldWorkerMaxRssGiB": 3.1564178466796875,
+      "newImportMs": 17813.11592500424,
+      "newWorkerMaxRssGiB": 0.9790725708007812,
+      "workerRssReductionPercent": 68.98152848075259
+    },
+    {
+      "case": "corridor-v3",
+      "oldImportMs": 94552.24383400491,
+      "oldWorkerMaxRssGiB": 3.1561126708984375,
+      "newImportMs": 26300.410220996127,
+      "newWorkerMaxRssGiB": 0.9856109619140625,
+      "workerRssReductionPercent": 68.77136323420632
+    }
+  ],
+  "previousGraphsAndFailurePreserved": true,
+  "nativeBinaryUnchanged": true,
+  "wideSourceSha256": "2db3f467a62182314fc94a4fe5bb6c919f36d4c17e3784aae0fb1ad8720cc0fd",
+  "wideGraphIdentity": "1b98e473181c96eb0c216fc81cfd5851eb9c29346375623de8ade2a41ec8ce4d",
+  "wideCutWitnesses": [
+    {
+      "origin": "san-diego",
+      "costMs": 614768,
+      "state": 834003,
+      "road": {
+        "costMs": 2197,
+        "from": 49259272,
+        "fromPoint": [
+          -117.2494609,
+          32.753671
+        ],
+        "id": "1077596899:2:f",
+        "name": "West Point Loma Boulevard",
+        "to": 1416492916,
+        "toPoint": [
+          -117.2498077,
+          32.7535688
+        ],
+        "way": 1077596899
+      }
+    },
+    {
+      "origin": "el-cajon",
+      "costMs": 280140,
+      "state": 436334,
+      "road": {
+        "costMs": 4733,
+        "from": 49071430,
+        "fromPoint": [
+          -116.954153,
+          32.84855
+        ],
+        "id": "161937728:6:f",
+        "name": "San Vicente Freeway",
+        "to": 49071431,
+        "toPoint": [
+          -116.953087,
+          32.849403
+        ],
+        "way": 161937728
+      }
+    },
+    {
+      "origin": "tijuana",
+      "costMs": 356393,
+      "state": 759148,
+      "road": {
+        "costMs": 3022,
+        "from": 7325987736,
+        "fromPoint": [
+          -117.0361845,
+          32.4819119
+        ],
+        "id": "784252846:0:f",
+        "name": "Boulevard de los Fundadores",
+        "to": 365041470,
+        "toPoint": [
+          -117.036287,
+          32.4815058
+        ],
+        "way": 784252846
+      }
+    },
+    {
+      "origin": "san-ysidro",
+      "costMs": 1344555,
+      "state": 820925,
+      "road": {
+        "costMs": 52455,
+        "from": 9359800597,
+        "fromPoint": [
+          -116.9027002,
+          32.5536151
+        ],
+        "id": "1014516416:0:r",
+        "name": null,
+        "to": 9359800596,
+        "toPoint": [
+          -116.9003828,
+          32.5538343
+        ],
+        "way": 1014516416
+      }
+    }
+  ],
+  "wideBorderRouteDiagnostic": [
+    {
+      "origin": "tijuana",
+      "destination": "san-diego",
+      "costMs": 2890950
+    },
+    {
+      "origin": "san-diego",
+      "destination": "tijuana",
+      "costMs": null
+    }
+  ],
+  "unqualifiedOtayCrossing": {
+    "sourceExcerptSha256": "d72f26c1f4009c8ca904cd4579aad7081cb5b4659995b2cb4b4ce206c2174d09",
+    "sourceWays": [
+      {
+        "id": 114198229,
+        "tags": {
+          "fixme": "Missing name",
+          "hgv": "designated",
+          "highway": "secondary",
+          "note": "CHP Otay Mesa Inspection Facility",
+          "oneway": "yes"
+        }
+      },
+      {
+        "id": 114198251,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "fixme": "unsure on what type of barrier to add for border crossing checkpoint. also unsure on appropriate access tag value. Also, missing name",
+          "hgv": "designated",
+          "highway": "secondary",
+          "lanes": "2",
+          "layer": "1",
+          "oneway": "yes"
+        }
+      },
+      {
+        "id": 114198254,
+        "tags": {
+          "fixme": "Missing name",
+          "hgv": "designated",
+          "highway": "secondary",
+          "note": "CHP Otay Mesa Inspection Facility",
+          "oneway": "yes"
+        }
+      },
+      {
+        "id": 238843379,
+        "tags": {
+          "access": "no",
+          "bicycle": "no",
+          "fixme": "Missing name",
+          "hgv": "designated",
+          "highway": "secondary",
+          "lanes": "2",
+          "motor_vehicle": "designated",
+          "oneway": "yes"
+        }
+      },
+      {
+        "id": 1468444496,
+        "tags": {
+          "access": "no",
+          "highway": "secondary_link",
+          "motor_vehicle": "designated",
+          "oneway": "yes"
+        }
+      },
+      {
+        "id": 1468444517,
+        "tags": {
+          "access": "no",
+          "highway": "secondary_link",
+          "motor_vehicle": "designated",
+          "oneway": "yes"
+        }
+      }
+    ],
+    "carEligibilityVerified": false,
+    "finding": "Recovered v2 route traverses inspection-facility ways; source way 114198251 explicitly marks missing barrier and uncertain access. No inference that hgv=designated alone excludes cars."
+  },
+  "wideCutFindings": [
+    {
+      "origin": "san-diego",
+      "snapMeters": 0.5141593646978757,
+      "firstCutExitMs": 614768,
+      "fullReachableStates": 715996,
+      "budgets": [
+        {
+          "boundaryReachedWithinBudget": false,
+          "budgetMs": 300000,
+          "reachableStates": 15470,
+          "scannedArcs": 29765
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 900000,
+          "reachableStates": 323099,
+          "scannedArcs": 688466
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 1800000,
+          "reachableStates": 707217,
+          "scannedArcs": 1496978
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 3600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 7200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 21600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 36000000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 43200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        }
+      ]
+    },
+    {
+      "origin": "el-cajon",
+      "snapMeters": 13.585548885436467,
+      "firstCutExitMs": 280140,
+      "fullReachableStates": 715996,
+      "budgets": [
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 300000,
+          "reachableStates": 30568,
+          "scannedArcs": 66277
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 900000,
+          "reachableStates": 257143,
+          "scannedArcs": 542840
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 1800000,
+          "reachableStates": 676518,
+          "scannedArcs": 1432910
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 3600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 7200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 21600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 36000000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 43200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        }
+      ]
+    },
+    {
+      "origin": "tijuana",
+      "snapMeters": 4.5619230495205345,
+      "firstCutExitMs": 356393,
+      "fullReachableStates": 851076,
+      "budgets": [
+        {
+          "boundaryReachedWithinBudget": false,
+          "budgetMs": 300000,
+          "reachableStates": 11995,
+          "scannedArcs": 26635
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 900000,
+          "reachableStates": 112602,
+          "scannedArcs": 244413
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 1800000,
+          "reachableStates": 143141,
+          "scannedArcs": 312036
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 3600000,
+          "reachableStates": 849364,
+          "scannedArcs": 1806550
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 7200000,
+          "reachableStates": 851076,
+          "scannedArcs": 1810248
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 21600000,
+          "reachableStates": 851076,
+          "scannedArcs": 1810248
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 36000000,
+          "reachableStates": 851076,
+          "scannedArcs": 1810248
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 43200000,
+          "reachableStates": 851076,
+          "scannedArcs": 1810248
+        }
+      ]
+    },
+    {
+      "origin": "san-ysidro",
+      "snapMeters": 17.87383867783827,
+      "firstCutExitMs": 1344555,
+      "fullReachableStates": 715996,
+      "budgets": [
+        {
+          "boundaryReachedWithinBudget": false,
+          "budgetMs": 300000,
+          "reachableStates": 8111,
+          "scannedArcs": 16003
+        },
+        {
+          "boundaryReachedWithinBudget": false,
+          "budgetMs": 900000,
+          "reachableStates": 183437,
+          "scannedArcs": 388301
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 1800000,
+          "reachableStates": 688697,
+          "scannedArcs": 1456517
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 3600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 7200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 21600000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 36000000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        },
+        {
+          "boundaryReachedWithinBudget": true,
+          "budgetMs": 43200000,
+          "reachableStates": 715996,
+          "scannedArcs": 1515022
+        }
+      ]
+    }
+  ],
+  "nativeCostComparisons": 33368400,
+  "nativeMembershipComparisons": 29660800,
+  "publicApiCalls": 0,
+  "limits": "Single capped-container observation per import; not a distribution or national memory forecast. Old observations report worker RSS only; new cgroup peaks include other container-accounted memory. Byte equality preserves model behavior, including conservative v2 barriers; it does not prove real-world correctness or complete coverage."
+}

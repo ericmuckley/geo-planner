@@ -1,0 +1,23 @@
+
+> routing:hour
+> node routing/hour-increment.mjs --stage qualify
+
+Frozen sink calibrated: port-incoming / 468334902:1:f: 374 ms
+Frozen sink calibrated: tijuana / 114198251:0:f: 1167889 ms
+sinksCalibrated: 121.27 s; cgroup peak 967827456; anon 375681024; file 1605632; swap max/peak 0/0
+validated: 121.40 s; cgroup peak 967827456; anon 63242240; file 1654784; swap max/peak 0/0
+reloaded: 163.69 s; cgroup peak 1432862720; anon 566054912; file 1654784; swap max/peak 0/0
+Qualified san-diego: 2700226 reachable states; first cut 3904583 ms
+Qualified el-cajon: 2700226 reachable states; first cut 3812295 ms
+Qualified tijuana: 2700226 reachable states; first cut 4382526 ms
+Qualified san-ysidro: 2700226 reachable states; first cut 4653895 ms
+Qualified port-incoming: 2700226 reachable states; first cut 4622333 ms
+fullBoundedQualified: 858.87 s; cgroup peak 1733201920; anon 1080647680; file 17596416; swap max/peak 0/0
+verified: 963.26 s; cgroup peak 1733201920; anon 1049374720; file 17596416; swap max/peak 0/0
+{
+  "graphIdentity": "b50422b83537cecf12f1ecb4f7a3fa4e80df206726796b562135715f3737d048",
+  "costComparisons": 15180620,
+  "boundedCostComparisons": 121444960,
+  "interiorDestinationComparisons": 2,
+  "workerWallMs": 963262.4509390007
+}

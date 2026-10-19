@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "log": "host-routing-tests.log",
+      "logSha256": "9ecf108ff77c0302e8fa7896f9184932c3266826166ba3d1f1659f9777cf179b",
+      "total": 110,
+      "passed": 106,
+      "skipped": 4
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "log": "adapter-tests.log",
+      "logSha256": "f2057559b3fe366a5f4fc5ed56ee24a4882a1650c507329228035a396dd19879",
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "log": "check.log",
+      "logSha256": "6fe96aae8ea988db8ab73762c0903bfdda75172cc76e316aa36282d18c21e2b5",
+      "checkedFiles": 69,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.log",
+      "logSha256": "00e44348c2e53914ce007a2f5343cdea637900322aa69c39ccb1d1771c2fbede",
+      "warnings": [
+        "Existing upstream TanStack directives",
+        "Existing MapLibre chunk size"
+      ]
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test",
+      "exitCode": 0,
+      "log": "linux-tests.log",
+      "logSha256": "32379c45858a3e10ee27734134a9f7f49805f9e1c5cc6f1b215d902f7890172f",
+      "passed": 19,
+      "skipped": 0,
+      "scope": "Selected integrations and changed behaviors; not full Linux discovery."
+    },
+    {
+      "command": "python3 -B docs/evidence/coverage-increment-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "log": "prior-increment-evidence.log",
+      "logSha256": "e53b2412dbd5ce766515156d9e5d1808c366eb90195d62f881cfb70a24b44432"
+    },
+    {
+      "command": "python3 -B docs/evidence/hour-preflight-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "log": "analyze.log",
+      "logSha256": "f93e8221ff336fc6aeb2c684a7564fff75f575380a34b48470dcfa9fecb7af69"
+    }
+  ],
+  "workloads": [
+    {
+      "command": "npm run routing:qualify:lean",
+      "exitCode": 0,
+      "runDirectory": "data/qualification-pilot/virtual-sink-v1",
+      "runId": "64c06f89110376690442e60714db0aa76cb3c197f44117ea6b3e9d09b4138f00",
+      "report": "lean-report.json",
+      "reportSha256": "3a48456c359cfd3c038151e3c8133abc44507a7224560c3fb617ea962695cd5a",
+      "log": "lean.log",
+      "logSha256": "33c18ff3b1e0805a559329815fc6f837432524a06589237f2d7d510d9b7a280a"
+    },
+    {
+      "command": "npm run routing:coverage:hour -- --case calibration",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/hour-calibration-v1",
+      "runId": "bbcea4afa9231f79c87dbfb62d4f8e9aad76895420d56e02e84e5502ce705530",
+      "report": "calibration-report.json",
+      "reportSha256": "1b50b24b43b81b369b2fb110f99efe2460a822f539a7ffe08c81911c9c392119",
+      "log": "calibration.log",
+      "logSha256": "bab687450344c2564a4e48a2c809919d7d09050ca0a867a2b4d15f07bbc98a27"
+    },
+    {
+      "command": "npm run routing:coverage:hour -- --case candidate",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/hour-candidate-v1",
+      "runId": "482d2fe9f9174ffc49da81c2a101c1465037376780d1b0e4ec404288cc844524",
+      "report": "candidate-report.json",
+      "reportSha256": "cebc6f3ade21f24471735ad7f2b7b4a84bb15c488af14b43c3328a040f9df6f2",
+      "log": "candidate.log",
+      "logSha256": "cac3f02ce59c2b5bb5b798a942ccbf743fbb5d340aad1cac31c9bb92e13155ea"
+    }
+  ],
+  "integrity": {
+    "preservedFileCount": 126,
+    "preservedHashesMatch": true,
+    "preservedHashRecord": "preserved-hashes.json",
+    "envLocalIgnored": true,
+    "environmentValuesReadOrModified": false,
+    "stagedFiles": 0,
+    "manualGeneratedRouteEdits": false,
+    "checkedLocalDocumentationLinks": 136,
+    "valhallaContainer": "geo-planner-routing-valhalla-1",
+    "valhallaState": "running healthy",
+    "hostDiskFreeBytes": 257986547712
+  },
+  "scope": {
+    "newRoadOrToolDownloads": 0,
+    "publicRoutingProviderRequests": 0,
+    "newApplicationDependencies": 0,
+    "newNativeRuns": 0,
+    "nativeEvidence": "Reused only by exact graph, field, partial cost, source and binary identity.",
+    "newCandidateGraphBuilt": false,
+    "completeSixtyMinuteCoverageVerified": false,
+    "longRangeRequirementFinished": false,
+    "fullLinuxDiscoveryThisTurn": false,
+    "appProviderOrLimitChanged": false
+  },
+  "measurementCaveats": [
+    "Qualification memory change combines virtual-terminal storage and post-reload checksum cache advice.",
+    "Old/new wall spans have different calibration work and are not a controlled speedup benchmark.",
+    "Cgroup peak and worker/child RSS have different scopes; do not sum them.",
+    "Resource estimate is a heuristic for a capped attempt, not a bound.",
+    "No new HTTP, browser contour or Vercel measurements."
+  ]
+}

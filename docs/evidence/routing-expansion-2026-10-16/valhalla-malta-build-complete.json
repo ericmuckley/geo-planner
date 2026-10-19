@@ -1,0 +1,90 @@
+{
+  "manifest": {
+    "id": "malta-20261014-v1",
+    "image": "ghcr.io/valhalla/valhalla@sha256:8d656eb79874acb39359425e470d8326f0e3aab95a88e4a5c294e9dfcea4cda4",
+    "engineVersion": "3.9.1-7fd2228e5",
+    "engineRevision": "7fd2228e5863b442bc1ac8d25eece6415dd91bff",
+    "osmTimestamp": "2026-10-14T20:21:12Z",
+    "bbox": null,
+    "extractStrategy": "complete_ways",
+    "buildConcurrency": 2,
+    "coverage": "Malta and Gozo source extract; sea and ferry/source boundaries apply; completeness unverified",
+    "knownLimitations": [
+      "This is a country extract, not worldwide coverage. External ferry destinations and roads outside the extract are absent.",
+      "No live traffic, timezone database, or actual ferry schedules; engine default auto preferences apply."
+    ],
+    "sources": [
+      {
+        "file": "malta-261014.osm.pbf",
+        "url": "https://download.geofabrik.de/europe/malta-261014.osm.pbf",
+        "bytes": 8933324,
+        "md5": "f6db7d48827a0fab7f06a0ce33628fe4",
+        "sha256": "996bd058510cf562dd9b4ac7aad45d880a9f89f4a83ec49e9d626588d0b22f79"
+      }
+    ],
+    "license": "OpenStreetMap contributors, ODbL 1.0; extracts by Geofabrik",
+    "sourceBounds": [
+      13.815377,
+      35.51985,
+      14.856099,
+      36.332958
+    ],
+    "maxMinutes": 60,
+    "minimumFreeDiskBytes": 1073741824,
+    "requiredAdmins": [
+      "MT"
+    ],
+    "verificationOrigin": {
+      "lat": 35.8989,
+      "lon": 14.5146
+    },
+    "verificationBudgets": [
+      15,
+      30,
+      60
+    ],
+    "verificationSamples": [
+      [
+        "mdina",
+        35.8858,
+        14.4031
+      ],
+      [
+        "marsaxlokk",
+        35.8417,
+        14.5431
+      ],
+      [
+        "mellieha",
+        35.9564,
+        14.3622
+      ]
+    ]
+  },
+  "completedAt": "2026-10-16T17:17:10.543053+00:00",
+  "admins": [
+    [
+      2,
+      "MT",
+      "Malta"
+    ]
+  ],
+  "artifacts": {
+    "region.osm.pbf": {
+      "bytes": 8933324,
+      "sha256": "996bd058510cf562dd9b4ac7aad45d880a9f89f4a83ec49e9d626588d0b22f79"
+    },
+    "valhalla.json": {
+      "bytes": 9505,
+      "sha256": "b85b4b3e42be5b051a68d5c642e1d61b923a6d77cbd088bb65ee84f7fceb3823"
+    },
+    "admin.sqlite": {
+      "bytes": 7032832,
+      "sha256": "80f325638a7a46e8ec44ff3acb1818a3b47e42fe161f11f3aee76bebfa9d1f28"
+    },
+    "tiles.tar": {
+      "bytes": 13178880,
+      "sha256": "954428c9b3c2d44a9cb725fa81f5a7a715373ed7c5a6e589f01923032bb0a2b3"
+    }
+  }
+}

@@ -1,0 +1,484 @@
+
+> routing:cuts
+> node routing/cut-inventory.mjs
+
+validated: 1.27 s; cgroup peak 1460137984; anon 15843328; file 1439215616; swap max/peak 0/0
+oracleInventory: 30.34 s; cgroup peak 1883951104; anon 428548096; file 1413963776; swap max/peak 0/0
+complete: 39.39 s; cgroup peak 1883951104; anon 175738880; file 1414356992; swap max/peak 0/0
+{
+  "auditedCutNodes": 337,
+  "cutStates": 407,
+  "nodesWithoutBoundaryLinks": 0,
+  "origins": [
+    {
+      "origin": "san-diego",
+      "firstCutExitMs": 2117096,
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 900000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 1800000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 3600000,
+          "reachableCutNodes": 188,
+          "wayOnlyPlausibleOutwardNodes": 187,
+          "bySide": {
+            "north": 130,
+            "east": 30,
+            "south": 28,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 7200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 21600000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 36000000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 43200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        }
+      ]
+    },
+    {
+      "origin": "el-cajon",
+      "firstCutExitMs": 1342449,
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 900000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 1800000,
+          "reachableCutNodes": 2,
+          "wayOnlyPlausibleOutwardNodes": 2,
+          "bySide": {
+            "north": 0,
+            "east": 2,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 3600000,
+          "reachableCutNodes": 184,
+          "wayOnlyPlausibleOutwardNodes": 183,
+          "bySide": {
+            "north": 126,
+            "east": 30,
+            "south": 28,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 7200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 21600000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 36000000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 43200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        }
+      ]
+    },
+    {
+      "origin": "tijuana",
+      "firstCutExitMs": 1478037,
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 900000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 1800000,
+          "reachableCutNodes": 27,
+          "wayOnlyPlausibleOutwardNodes": 26,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 27,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 3600000,
+          "reachableCutNodes": 69,
+          "wayOnlyPlausibleOutwardNodes": 68,
+          "bySide": {
+            "north": 11,
+            "east": 27,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 7200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 21600000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 36000000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 43200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        }
+      ]
+    },
+    {
+      "origin": "san-ysidro",
+      "firstCutExitMs": 1749406,
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 900000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 1800000,
+          "reachableCutNodes": 1,
+          "wayOnlyPlausibleOutwardNodes": 1,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 1,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 3600000,
+          "reachableCutNodes": 126,
+          "wayOnlyPlausibleOutwardNodes": 125,
+          "bySide": {
+            "north": 66,
+            "east": 29,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 7200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 21600000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 36000000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 43200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        }
+      ]
+    },
+    {
+      "origin": "port-incoming",
+      "firstCutExitMs": 1750892,
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 900000,
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 0,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 1800000,
+          "reachableCutNodes": 1,
+          "wayOnlyPlausibleOutwardNodes": 1,
+          "bySide": {
+            "north": 0,
+            "east": 0,
+            "south": 1,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 3600000,
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 136,
+          "bySide": {
+            "north": 77,
+            "east": 29,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 7200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 21600000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 36000000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        },
+        {
+          "budgetMs": 43200000,
+          "reachableCutNodes": 216,
+          "wayOnlyPlausibleOutwardNodes": 214,
+          "bySide": {
+            "north": 132,
+            "east": 53,
+            "south": 31,
+            "west": 0
+          }
+        }
+      ]
+    }
+  ]
+}

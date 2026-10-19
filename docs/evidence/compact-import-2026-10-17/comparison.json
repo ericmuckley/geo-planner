@@ -1,0 +1,278 @@
+{
+  "cases": [
+    {
+      "case": "downtown-v2",
+      "runId": "7f7a5328543f42702474c6c73f61f9bf332676f83dcc37becee3140d4a0571e5",
+      "states": 20332,
+      "arcs": 39171,
+      "workerRssKiB": 71724,
+      "cgroupPeakBytes": 85454848,
+      "limitEvents": 0,
+      "importMs": 1294.5649179964676,
+      "workerWallMs": 1584.0650430036476
+    },
+    {
+      "case": "corridor-v2",
+      "runId": "47ed5854690f05eae9841e7f4d3d37cfbc8faca0f9a9f72454f3ab436cdf36df",
+      "states": 387236,
+      "arcs": 818698,
+      "workerRssKiB": 557312,
+      "cgroupPeakBytes": 819961856,
+      "limitEvents": 0,
+      "importMs": 27888.463636998495,
+      "workerWallMs": 32793.233099000645
+    },
+    {
+      "case": "corridor-v3",
+      "runId": "d95489ecf7a36ec6be7008ed8628376a51c646b925d24a732cd2ac4030a857bc",
+      "states": 387236,
+      "arcs": 819241,
+      "workerRssKiB": 561632,
+      "cgroupPeakBytes": 966373376,
+      "limitEvents": 0,
+      "importMs": 34871.711890998995,
+      "workerWallMs": 42111.65906099632
+    },
+    {
+      "case": "wide-v3",
+      "runId": "e2da1b68981c0a3f7ef9320d1ba8d4736c06e8211c4a8edf3edf1c6d915c1c56",
+      "states": 926900,
+      "arcs": 1957330,
+      "workerRssKiB": 1204148,
+      "cgroupPeakBytes": 2134364160,
+      "limitEvents": 0,
+      "importMs": 107311.9330490008,
+      "workerWallMs": 131221.06130900647
+    },
+    {
+      "case": "buffer-v3",
+      "runId": "b0f015098e253f54e1f3bb5d952f63a4192b6378bb39c188003fc7aa1e380357",
+      "states": 2139131,
+      "arcs": 4534800,
+      "workerRssKiB": 2478776,
+      "cgroupPeakBytes": 4294967296,
+      "limitEvents": 633,
+      "importMs": 247552.18465600046,
+      "workerWallMs": 3094326.835325999
+    }
+  ],
+  "frozenGraphsUnchanged": true,
+  "zeroOomAllRuns": true,
+  "sampledCityCostsUnchanged": true,
+  "nativeBinaryIdenticalToWideV3": true,
+  "swapObservations": [
+    {
+      "memory.swap.current": "0",
+      "memory.swap.max": "4294967296",
+      "memory.swap.peak": "0",
+      "memory.swap.events": "high 0\nmax 0\nfail 0",
+      "observedAt": "2026-10-17T20:20:02.503604+00:00",
+      "sourceRunId": "b0f015098e253f54e1f3bb5d952f63a4192b6378bb39c188003fc7aa1e380357",
+      "workerSwapStatus": [
+        "VmSwap:\t       0 kB"
+      ]
+    },
+    {
+      "memory.swap.current": "0",
+      "memory.swap.max": "4294967296",
+      "memory.swap.peak": "0",
+      "memory.swap.events": "high 0\nmax 0\nfail 0",
+      "memory.current": "3622633472",
+      "memory.peak": "4294967296",
+      "memory.events": "low 0\nhigh 0\nmax 628\noom 0\noom_kill 0\noom_group_kill 0",
+      "observedAt": "2026-10-17T20:37:53.295109+00:00",
+      "sourceRunId": "b0f015098e253f54e1f3bb5d952f63a4192b6378bb39c188003fc7aa1e380357",
+      "workerSwapStatus": [
+        "VmSwap:\t       0 kB"
+      ]
+    },
+    {
+      "memory.swap.current": "0",
+      "memory.swap.max": "4294967296",
+      "memory.swap.peak": "0",
+      "memory.swap.events": "high 0\nmax 0\nfail 0",
+      "memory.current": "3622133760",
+      "memory.peak": "4294967296",
+      "memory.events": "low 0\nhigh 0\nmax 628\noom 0\noom_kill 0\noom_group_kill 0",
+      "observedAt": "2026-10-17T20:42:24.871058+00:00",
+      "sourceRunId": "b0f015098e253f54e1f3bb5d952f63a4192b6378bb39c188003fc7aa1e380357",
+      "workerSwapStatus": [
+        "VmHWM:\t 2478776 kB",
+        "VmSwap:\t       0 kB"
+      ]
+    }
+  ],
+  "reloadResources": {
+    "memory.current": "988119040",
+    "memory.events": {
+      "high": "0",
+      "low": "0",
+      "max": "0",
+      "oom": "0",
+      "oom_group_kill": "0",
+      "oom_kill": "0"
+    },
+    "memory.max": "1073741824",
+    "memory.peak": "1051291648",
+    "workerMaxRssKiB": 357580
+  },
+  "nativeAggregates": [
+    {
+      "budgetMs": 300000,
+      "medianOriginSearchP50Ms": 0.675042,
+      "medianOriginPipeP50Ms": 1.4751250855624676,
+      "cutOrigins": 0
+    },
+    {
+      "budgetMs": 900000,
+      "medianOriginSearchP50Ms": 26.341125,
+      "medianOriginPipeP50Ms": 27.3134580347687,
+      "cutOrigins": 0
+    },
+    {
+      "budgetMs": 1800000,
+      "medianOriginSearchP50Ms": 95.728709,
+      "medianOriginPipeP50Ms": 96.87116695567966,
+      "cutOrigins": 4
+    },
+    {
+      "budgetMs": 3600000,
+      "medianOriginSearchP50Ms": 156.492958,
+      "medianOriginPipeP50Ms": 157.67024992965162,
+      "cutOrigins": 5
+    },
+    {
+      "budgetMs": 7200000,
+      "medianOriginSearchP50Ms": 163.400208,
+      "medianOriginPipeP50Ms": 164.5389588084072,
+      "cutOrigins": 5
+    },
+    {
+      "budgetMs": 21600000,
+      "medianOriginSearchP50Ms": 163.618875,
+      "medianOriginPipeP50Ms": 164.761875057593,
+      "cutOrigins": 5
+    },
+    {
+      "budgetMs": 36000000,
+      "medianOriginSearchP50Ms": 164.98475,
+      "medianOriginPipeP50Ms": 166.04783409275115,
+      "cutOrigins": 5
+    },
+    {
+      "budgetMs": 43200000,
+      "medianOriginSearchP50Ms": 164.750833,
+      "medianOriginPipeP50Ms": 165.8623330295086,
+      "cutOrigins": 5
+    }
+  ],
+  "cutWitnesses": [
+    {
+      "costMs": 2117096,
+      "origin": "san-diego",
+      "road": {
+        "costMs": 3987,
+        "from": 1214310263,
+        "fromPoint": [
+          -117.1261347,
+          33.1983776
+        ],
+        "id": "35600061:2:f",
+        "name": "Avocado Highway",
+        "to": 1214310259,
+        "toPoint": [
+          -117.1267127,
+          33.1993898
+        ],
+        "way": 35600061
+      },
+      "state": 672234
+    },
+    {
+      "costMs": 1342449,
+      "origin": "el-cajon",
+      "road": {
+        "costMs": 3519,
+        "from": 49756764,
+        "fromPoint": [
+          -116.6024152,
+          32.8234933
+        ],
+        "id": "35201714:46:f",
+        "name": "Kumeyaay Highway",
+        "to": 49756766,
+        "toPoint": [
+          -116.6012565,
+          32.823313
+        ],
+        "way": 35201714
+      },
+      "state": 671140
+    },
+    {
+      "costMs": 1478037,
+      "origin": "tijuana",
+      "road": {
+        "costMs": 3506,
+        "from": 8813767502,
+        "fromPoint": [
+          -117.0414936,
+          32.3007125
+        ],
+        "id": "405635321:57:f",
+        "name": "Boulevard Popotla",
+        "to": 7061766242,
+        "toPoint": [
+          -117.0412156,
+          32.3001464
+        ],
+        "way": 405635321
+      },
+      "state": 1038682
+    },
+    {
+      "costMs": 1749406,
+      "origin": "san-ysidro",
+      "road": {
+        "costMs": 3506,
+        "from": 8813767502,
+        "fromPoint": [
+          -117.0414936,
+          32.3007125
+        ],
+        "id": "405635321:57:f",
+        "name": "Boulevard Popotla",
+        "to": 7061766242,
+        "toPoint": [
+          -117.0412156,
+          32.3001464
+        ],
+        "way": 405635321
+      },
+      "state": 1038682
+    },
+    {
+      "costMs": 1750892,
+      "origin": "port-incoming",
+      "road": {
+        "costMs": 3506,
+        "from": 8813767502,
+        "fromPoint": [
+          -117.0414936,
+          32.3007125
+        ],
+        "id": "405635321:57:f",
+        "name": "Boulevard Popotla",
+        "to": 7061766242,
+        "toPoint": [
+          -117.0412156,
+          32.3001464
+        ],
+        "way": 405635321
+      },
+      "state": 1038682
+    }
+  ],
+  "coverageVerified": false,
+  "scope": "Exact frozen parity and qualified costs on a clipped static model; no real-world car eligibility, complete contour or cloud performance claim."
+}

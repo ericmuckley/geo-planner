@@ -1,0 +1,82 @@
+- main:
+  - link "Main workspace":
+    - /url: /
+    - text: Main workspace
+  - paragraph: Geo Planner / Offline experiment
+  - heading "Explore beyond 60 minutes" [level=1]
+  - paragraph: Our local road router · no provider requests · 1–720 minutes
+  - generic: Local router connected
+  - paragraph:
+    - text: Experimental regional coverage
+  - paragraph: Longer budgets are enabled. This dataset currently ends near San Diego and northern Baja. Red markers show reached data edges; routes may continue beyond them. Roads are sampled for display; shaded-area isochrones are not generated.
+  - complementary:
+    - heading "Driving experiment" [level=2]
+    - text: Latitude
+    - textbox "Latitude": "32.7157"
+    - text: Longitude
+    - textbox "Longitude": "-117.1611"
+    - text: Minutes
+    - spinbutton "Minutes": "120"
+    - button "60m"
+    - button "90m"
+    - button "120m" [pressed]
+    - button "6h"
+    - button "12h"
+    - button "Compute reachable roads":
+      - text: Compute reachable roads
+    - region "Experiment results":
+      - heading "120-minute result" [level=2]
+      - paragraph: "Incomplete: dataset boundary reached"
+      - term: Reached data-edge nodes
+      - definition: 115 / 433
+      - term: Directions reached
+      - definition: "north: 88 · east: 6 · south: 21 · west: 0"
+      - term: First reached data edge
+      - definition: 65.1 modeled minutes
+      - term: Reachable directed roads
+      - definition: 2,684,540
+      - term: Displayed road segments (sample)
+      - definition: 29,831 · every 90th reachable road
+      - term: Origin snap distance
+      - definition: 0.5 m
+      - checkbox "Show experimental layers" [checked]
+      - text: Show experimental layers
+      - button "Export result":
+        - text: Export result
+      - generic "Measurements and data" [active]
+      - generic: "Native search loop: 230.4 ms"
+      - generic: "Native pipe round trip: 262.6 ms"
+      - generic: "Origin snapping: 9.3 ms"
+      - generic: "Road display preparation: 3,117.9 ms"
+      - generic: "Worker total: 3,394.2 ms"
+      - generic: "App round trip: 3,534.5 ms"
+      - generic: "Map update to idle: 167.5 ms"
+      - generic: "Graph: b50422b83537cecf12f1ecb4f7a3fa4e80df206726796b562135715f3737d048"
+      - generic: "OSM snapshot: 2026-10-14T20:21:12Z"
+      - generic: "Model: exploratory-static-car-v3"
+      - generic: © OpenStreetMap contributors · ODbL
+      - list:
+        - listitem: "INCOMPLETE: reachable roads hit the dataset boundary. Missing roads can change routes and travel times."
+        - listitem: Experimental static driving model; no traffic, border queues or current crossing-eligibility verification.
+        - listitem: Road geometry is sampled for display. Search and boundary counts use the full graph. This is not a filled isochrone.
+        - listitem: Source coverage and all-origin completeness remain unverified, including eastern/southern source gaps.
+  - region "Reachability map. Click to select an origin, or use the coordinate fields."
+  - img "Map marker":
+  - button "Zoom in"
+  - button "Zoom out"
+  - generic: 10 mi
+  - generic "Toggle attribution"
+  - link "MapLibre":
+    - /url: https://maplibre.org/
+  - text: "|"
+  - link "OpenFreeMap":
+    - /url: https://openfreemap.org
+  - link "© OpenMapTiles":
+    - /url: https://www.openmaptiles.org/
+  - text: Data from
+  - link "OpenStreetMap":
+    - /url: https://www.openstreetmap.org/copyright
+  - paragraph: Click the map to set your origin
+  - paragraph: OpenFreeMap basemap · online
+  - paragraph: "Teal: sampled reachable roads · red: reached data edges · gray: other audited edges · dashed: dataset bounds · orange: snapped origin"
+- button "Open TanStack Devtools":

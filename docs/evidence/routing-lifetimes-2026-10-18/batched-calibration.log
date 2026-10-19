@@ -1,0 +1,55 @@
+
+> routing:lifetime
+> node routing/lifetime-preflight.mjs --mode batched --case calibration
+
+validated: 2.54 s; cgroup peak 888512512; anon 19529728; file 14745600; swap max/peak 0/0
+fixtures: 3.13 s; cgroup peak 888512512; anon 19570688; file 14856192; swap max/peak 0/0
+selectorProcess: 169.88 s; cgroup peak 888512512; anon 19763200; file 14893056; swap max/peak 0/0
+selectorExited: 169.88 s; cgroup peak 888512512; anon 19763200; file 14893056; swap max/peak 0/0
+referenceBatch0: 186.26 s; cgroup peak 2335154176; anon 19578880; file 21323776; swap max/peak 0/0
+referenceBatch1: 202.09 s; cgroup peak 2335154176; anon 19578880; file 22626304; swap max/peak 0/0
+referenceBatch2: 217.84 s; cgroup peak 2335154176; anon 19578880; file 23969792; swap max/peak 0/0
+referenceBatch3: 241.79 s; cgroup peak 2335154176; anon 19578880; file 25366528; swap max/peak 0/0
+mergeReferences: 245.45 s; cgroup peak 2335154176; anon 19578880; file 25366528; swap max/peak 0/0
+checkReferences: 248.40 s; cgroup peak 2335154176; anon 19578880; file 25370624; swap max/peak 0/0
+verified: 265.06 s; cgroup peak 2335154176; anon 55341056; file 25796608; swap max/peak 0/0
+proofsVerified: 266.98 s; cgroup peak 2335154176; anon 55341056; file 26419200; swap max/peak 0/0
+{
+  "case": "calibration",
+  "xmlByteIdentical": true,
+  "candidate": {
+    "sourceNodes": 2334810,
+    "insideNodes": 2327671,
+    "sourceWays": 462588,
+    "wayEligibleDirectedSegments": 3043312,
+    "supportedWays": 462559,
+    "supportedPhysicalSegmentsInside": 2473045,
+    "supportedBoundarySegments": 540,
+    "sourceRelations": 10095,
+    "candidateViaWayRules": 1762,
+    "historyPrefixCeiling": 3884,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 20352,
+      "motorway_link": 24910,
+      "primary": 115119,
+      "primary_link": 7407,
+      "residential": 1322459,
+      "secondary": 155961,
+      "secondary_link": 3595,
+      "service": 911170,
+      "tertiary": 302620,
+      "tertiary_link": 1745,
+      "trunk": 11203,
+      "trunk_link": 5173,
+      "unclassified": 155338
+    },
+    "roadStatesLowerBound": 2955664,
+    "roadStatesUpperBound": 3043312,
+    "historyStatesUpperBound": 3047196,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 31657984
+  },
+  "admission": null,
+  "workerWallMs": 266984.71403900476
+}

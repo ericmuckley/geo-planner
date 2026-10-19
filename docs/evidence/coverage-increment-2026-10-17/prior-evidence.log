@@ -1,0 +1,54 @@
+{
+  "decision": "eligible-for-separate-capped-import",
+  "cappedImportEligible": true,
+  "ratios": {
+    "sourceNodes": 1.3785277921964783,
+    "sourceWays": 1.2119672039830556,
+    "sourceRelations": 1.2183977699672768,
+    "wayEligibleDirectedSegments": 1.3737544990508803,
+    "historyPrefixCeiling": 1.2088390911920324,
+    "candidateViaWayRules": 1.2160110420979986,
+    "roadCeilingToBuiltRoads": 1.378019085286967,
+    "historyCeilingToBuiltStates": 1.3790945949546802
+  },
+  "scalingRatio": 1.3790945949546802,
+  "observedPeaksBytes": {
+    "preparation": 3151962112,
+    "import": 2248441856
+  },
+  "scaledImportPeakBytes": 3100814011,
+  "headroomFactor": 1.25,
+  "wholeWorkloadEstimateWithHeadroomBytes": 3939952640,
+  "capBytes": 4294967296,
+  "limitPressure": false,
+  "exactSourceAndGraphParity": true,
+  "newGraphQualified": false,
+  "coverageVerified": false,
+  "scope": "Heuristic scales measured whole-container import/export by the largest corresponding input/road/history ratio, then takes the maximum with measured candidate preparation and adds margin. Phases are sequential, not summed. Topology/fallback complexity, file cache and runtime noise can change scaling; this authorizes only an isolated capped attempt with preserved failures.",
+  "sourceReportSha256": {
+    "profile": "d36de72476e30a8a9062ca645a8b9620446e6bf2e0025ab5e279571985d2ca34",
+    "import": "8c8571679f6e85eb42fdaa380d9c6efc2ad6a9afddfe3feea1abff39e073dd4a",
+    "calibration": "f174c1982be570bfd078ec545859265bd2e5a50675b1d6945d374e2c7972cb00",
+    "candidate": "c8bed82733e73e72aca7ff312c219bd0f6a73656cbf97f0e3588359fb6fc10ec",
+    "candidate-paged": "cbb9463b528c65412bb331b4664c35e2f1fce764a48e8d44219adf50ad56e23f"
+  },
+  "admissionRuleSha256": "1906bee0ffe5e53fca191759d81f69c9fbfba7a51df736eed5f2c2858f3b0983",
+  "sourceXmlArtifact": {
+    "bytes": 442764751,
+    "sha256": "f7c4bda33bfa33a1f2f6cc7ca0f32257bac68559ebe31c1488f7b8510effa92e"
+  },
+  "profile": {
+    "admissionHeadroomFactor": 1.25,
+    "bbox": [
+      -117.65,
+      32.0,
+      -116.3,
+      33.6
+    ],
+    "cutInventory": "buffer-cut-inventory-v1",
+    "id": "san-diego-baja-increment-preflight-v2",
+    "memoryLimitBytes": 4294967296,
+    "model": "exploratory-static-car-v3",
+    "purpose": "Count a north/east/south expansion around all current cut endpoints, retaining northern Baja and widening the coastal margin. No complete time-budget coverage claim."
+  }
+}

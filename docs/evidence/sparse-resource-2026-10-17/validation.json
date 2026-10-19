@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "result": "99 passed, 4 tool/platform skips; 103 total",
+      "log": "test-routing.log",
+      "logSha256": "a212646eb3bce59715c9ef9e3d383c4e2f9159c3823535f271105d65204f83a7"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "14 passed; no live provider calls",
+      "log": "test-adapters.log",
+      "logSha256": "f2959a4ae8a5e3fd677e58127758228b0bf5bb7973ec606266eb4799c2ef96dd"
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "result": "64 files; existing src/db/index.ts non-null warning",
+      "log": "check.log",
+      "logSha256": "cda185f145cf2247c91a42937eb5bb04b0e40e945814019d3c6d75411078235b"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "passed",
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "passed; existing upstream warnings",
+      "log": "build.log",
+      "logSha256": "e30fb6f280fff42a646247292c2cc41be78ac691fafe40fae323de2909452bdb"
+    },
+    {
+      "command": "python3 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test",
+      "exitCode": 0,
+      "result": "12 passed, no skips; Linux arm64 reader image under network denial",
+      "log": "linux-scoped-tests.log",
+      "logSha256": "177da42aba933d6a3e7d0617f297f296de6b93ececb37d16994c99b29b2a0773"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s /recipe -p '*_test.py'",
+      "exitCode": 1,
+      "result": "97 cases; native_search_test setup error because image lacks C++17 compiler. Mac native tests pass.",
+      "log": "linux-full-tests.log",
+      "logSha256": "e059401b0986fc1c37dfc04cedfbfb0a38e575c84bf1fc082346cf83fbb914d5"
+    },
+    {
+      "command": "python3 -B docs/evidence/sparse-resource-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "result": "source/graph/tooling/run identities and resource admission verified",
+      "log": "analyze.log",
+      "logSha256": "8b4350748436398f7c95a5aef0dcc8827bd0b319113870bebbef252efcbc1f56"
+    },
+    {
+      "command": "python3 -B docs/evidence/cut-buffer-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "result": "prior cut/preflight evidence remains valid",
+      "log": "prior-evidence.log",
+      "logSha256": "c3e8d483bdde6c628d80d7f17bc7de965f9235f95c5b158aa718f348e836bd75"
+    }
+  ],
+  "linuxContainerPrefix": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=$PWD/routing,target=/recipe,readonly --mount type=bind,source=$PWD/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1",
+  "integrity": {
+    "preservedFiles": 89,
+    "allPreservedHashesMatch": true,
+    "documentationLinksChecked": 8,
+    "missingLinks": [],
+    "localEnvIgnored": true,
+    "stagedFiles": [],
+    "diskFreeBytes": 261097734144
+  },
+  "existingValhallaContainerHealth": "healthy",
+  "dockerVmMemoryBytes": 8218034176,
+  "dockerVmCpus": 10,
+  "observations": {
+    "publicRoutingApiCalls": 0,
+    "newRoadDownloads": 0,
+    "toolWheelDownloadBytes": 2354828,
+    "newApplicationDependencies": false,
+    "packageLockPreserved": true,
+    "routeTreePreserved": true,
+    "applicationSourceEdited": false,
+    "localEnvironmentEdited": false,
+    "originalRoutingFilesPreserved": true,
+    "newGraphBuilt": false,
+    "coverageVerified": false,
+    "admission": "eligible-for-separate-capped-import",
+    "completeSixtyMinuteCoverage": false,
+    "tenToTwelveHourCapabilityComplete": false
+  },
+  "scope": "The failed full Linux attempt is retained as an environment limitation, not counted as a pass. Four host skips are covered by the successful scoped Linux suite. No extra live routing queries were made. Memory eligibility is a heuristic for a future capped experiment, not a graph/coverage certification."
+}

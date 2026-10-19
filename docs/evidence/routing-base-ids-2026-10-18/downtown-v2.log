@@ -1,0 +1,50 @@
+
+> routing:base-ids
+> node routing/base-ids-parity.mjs --case downtown-v2
+
+preflight: 0.09 s; cgroup peak 42115072; anon 16527360; file 13651968; swap max/peak 0/0
+fixtures: 0.15 s; cgroup peak 42115072; anon 16605184; file 13565952; swap max/peak 0/0
+parsed: 0.33 s; cgroup peak 49274880; anon 25206784; file 13557760; swap max/peak 0/0
+original:outgoingReady: 0.51 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+original:rulesReady: 0.51 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+original:arcsBuilt: 0.58 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+original:indexesReleased: 0.59 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+original:baseHashed: 0.68 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+originalBase: 0.69 s; cgroup peak 49274880; anon 29294592; file 13557760; swap max/peak 0/0
+pass1:outgoingReady: 0.88 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+pass1:rulesReady: 0.88 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+pass1:arcsBuilt: 0.94 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+pass1:indexesReleased: 0.94 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+pass1:baseHashed: 1.03 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+baseReady1: 1.05 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+lookupReady1: 1.05 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+basePass1: 1.06 s; cgroup peak 49274880; anon 30961664; file 13557760; swap max/peak 0/0
+pass2:outgoingReady: 1.24 s; cgroup peak 49274880; anon 31059968; file 13557760; swap max/peak 0/0
+pass2:rulesReady: 1.24 s; cgroup peak 49274880; anon 31059968; file 13557760; swap max/peak 0/0
+pass2:arcsBuilt: 1.29 s; cgroup peak 49274880; anon 31059968; file 13557760; swap max/peak 0/0
+pass2:indexesReleased: 1.29 s; cgroup peak 49274880; anon 31490048; file 13590528; swap max/peak 0/0
+pass2:baseHashed: 1.39 s; cgroup peak 49274880; anon 31490048; file 13590528; swap max/peak 0/0
+baseReady2: 1.40 s; cgroup peak 49274880; anon 31490048; file 13590528; swap max/peak 0/0
+lookupReady2: 1.41 s; cgroup peak 49274880; anon 31490048; file 13590528; swap max/peak 0/0
+basePass2: 1.41 s; cgroup peak 49274880; anon 31490048; file 13590528; swap max/peak 0/0
+pass3:outgoingReady: 1.61 s; cgroup peak 49274880; anon 32104448; file 13557760; swap max/peak 0/0
+pass3:rulesReady: 1.61 s; cgroup peak 49274880; anon 32104448; file 13557760; swap max/peak 0/0
+pass3:arcsBuilt: 1.66 s; cgroup peak 49274880; anon 32104448; file 13557760; swap max/peak 0/0
+pass3:indexesReleased: 1.67 s; cgroup peak 49274880; anon 32104448; file 13557760; swap max/peak 0/0
+pass3:baseHashed: 1.76 s; cgroup peak 49274880; anon 32104448; file 13557760; swap max/peak 0/0
+baseReady3: 1.78 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+lookupReady3: 1.78 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+basePass3: 1.79 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+inputsReleased: 1.79 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+historyBuilt: 1.88 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+beforeSourceExamples: 1.89 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+sourceEvidence: 1.90 s; cgroup peak 49274880; anon 32153600; file 13557760; swap max/peak 0/0
+exported: 2.10 s; cgroup peak 52699136; anon 32153600; file 13557760; swap max/peak 0/0
+complete: 2.11 s; cgroup peak 53420032; anon 32186368; file 19705856; swap max/peak 0/0
+{
+  "case": "downtown-v2",
+  "states": 20332,
+  "transitions": 39171,
+  "importMs": 1743.7214179954026,
+  "workerWallMs": 2111.9955430040136
+}

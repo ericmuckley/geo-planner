@@ -1,0 +1,1656 @@
+{
+  "graphIdentity": "b50422b83537cecf12f1ecb4f7a3fa4e80df206726796b562135715f3737d048",
+  "roads": 3034771,
+  "states": 3036124,
+  "transitions": 6411757,
+  "viaWayRestrictions": 1160,
+  "rebuildArtifactsIdentical": 7,
+  "cityRouteComparison": [
+    {
+      "origin": "san-diego",
+      "destination": "el-cajon",
+      "oldCostMs": 1119008,
+      "newCostMs": 1119008,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-diego",
+      "destination": "tijuana",
+      "oldCostMs": 1353245,
+      "newCostMs": 1353245,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-diego",
+      "destination": "san-ysidro",
+      "oldCostMs": 1057803,
+      "newCostMs": 1057803,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-diego",
+      "oldCostMs": 1173443,
+      "newCostMs": 1173443,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "tijuana",
+      "oldCostMs": 1988583,
+      "newCostMs": 1988583,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-ysidro",
+      "oldCostMs": 1693141,
+      "newCostMs": 1693141,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-diego",
+      "oldCostMs": 1421952,
+      "newCostMs": 1421952,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "el-cajon",
+      "oldCostMs": 1867086,
+      "newCostMs": 1867086,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-ysidro",
+      "oldCostMs": 484661,
+      "newCostMs": 484661,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "san-diego",
+      "oldCostMs": 1178375,
+      "newCostMs": 1178375,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "el-cajon",
+      "oldCostMs": 1527910,
+      "newCostMs": 1527910,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "tijuana",
+      "oldCostMs": 466546,
+      "newCostMs": 466546,
+      "roadIdsIdentical": true
+    }
+  ],
+  "sourceSnapping": [
+    {
+      "origin": "san-diego",
+      "distanceMeters": 0.5141593646978757,
+      "samePhysicalSegment": true,
+      "sameSnappedCoordinates": true
+    },
+    {
+      "origin": "el-cajon",
+      "distanceMeters": 13.585548885436467,
+      "samePhysicalSegment": true,
+      "sameSnappedCoordinates": true
+    },
+    {
+      "origin": "tijuana",
+      "distanceMeters": 4.5619230495205345,
+      "samePhysicalSegment": true,
+      "sameSnappedCoordinates": true
+    },
+    {
+      "origin": "san-ysidro",
+      "distanceMeters": 17.87383867783827,
+      "samePhysicalSegment": true,
+      "sameSnappedCoordinates": true
+    }
+  ],
+  "priorBarrierDecisionsUnchanged": true,
+  "barrierDecisionCounts": {
+    "car-access-not-permitted": 2404,
+    "conditional": 10,
+    "explicit-car-permission": 1439,
+    "locked-or-unknown": 132,
+    "missing-explicit-car-access": 22682,
+    "outside-bounds": 15,
+    "unmodeled-dimensions": 8,
+    "unmodeled-opening-hours": 17,
+    "unsupported-access-qualifier": 1021,
+    "unsupported-barrier": 1112
+  },
+  "oldCuts": [
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 1,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 1,
+          "wayOnlyPlausibleOutwardNodes": 1
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 26,
+            "north": 88,
+            "south": 5,
+            "west": 0
+          },
+          "reachableCutNodes": 119,
+          "wayOnlyPlausibleOutwardNodes": 118
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        }
+      ],
+      "firstCutExitMs": 3467461,
+      "origin": "san-diego"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 6,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 6,
+          "wayOnlyPlausibleOutwardNodes": 6
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 29,
+            "north": 88,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 131,
+          "wayOnlyPlausibleOutwardNodes": 129
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        }
+      ],
+      "firstCutExitMs": 2535070,
+      "origin": "el-cajon"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 6,
+            "north": 0,
+            "south": 3,
+            "west": 0
+          },
+          "reachableCutNodes": 9,
+          "wayOnlyPlausibleOutwardNodes": 9
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 25,
+            "north": 79,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 118,
+          "wayOnlyPlausibleOutwardNodes": 116
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        }
+      ],
+      "firstCutExitMs": 3442769,
+      "origin": "tijuana"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 7,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 7,
+          "wayOnlyPlausibleOutwardNodes": 7
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 26,
+            "north": 79,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 119,
+          "wayOnlyPlausibleOutwardNodes": 117
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        }
+      ],
+      "firstCutExitMs": 3410297,
+      "origin": "san-ysidro"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 7,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 7,
+          "wayOnlyPlausibleOutwardNodes": 7
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 26,
+            "north": 80,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 120,
+          "wayOnlyPlausibleOutwardNodes": 118
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 29,
+            "north": 94,
+            "south": 14,
+            "west": 0
+          },
+          "reachableCutNodes": 137,
+          "wayOnlyPlausibleOutwardNodes": 135
+        }
+      ],
+      "firstCutExitMs": 3411783,
+      "origin": "port-incoming"
+    }
+  ],
+  "newCuts": [
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 6,
+            "north": 88,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 115,
+          "wayOnlyPlausibleOutwardNodes": 114
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        }
+      ],
+      "firstCutExitMs": 3904583,
+      "origin": "san-diego"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 7,
+            "north": 88,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 116,
+          "wayOnlyPlausibleOutwardNodes": 115
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        }
+      ],
+      "firstCutExitMs": 3812295,
+      "origin": "el-cajon"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 6,
+            "north": 79,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 106,
+          "wayOnlyPlausibleOutwardNodes": 105
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        }
+      ],
+      "firstCutExitMs": 4382526,
+      "origin": "tijuana"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 6,
+            "north": 79,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 106,
+          "wayOnlyPlausibleOutwardNodes": 105
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        }
+      ],
+      "firstCutExitMs": 4653895,
+      "origin": "san-ysidro"
+    },
+    {
+      "budgets": [
+        {
+          "budgetMs": 300000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 900000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 1800000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 3600000,
+          "bySide": {
+            "east": 0,
+            "north": 0,
+            "south": 0,
+            "west": 0
+          },
+          "reachableCutNodes": 0,
+          "wayOnlyPlausibleOutwardNodes": 0
+        },
+        {
+          "budgetMs": 7200000,
+          "bySide": {
+            "east": 6,
+            "north": 80,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 107,
+          "wayOnlyPlausibleOutwardNodes": 106
+        },
+        {
+          "budgetMs": 21600000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 36000000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        },
+        {
+          "budgetMs": 43200000,
+          "bySide": {
+            "east": 34,
+            "north": 94,
+            "south": 21,
+            "west": 0
+          },
+          "reachableCutNodes": 149,
+          "wayOnlyPlausibleOutwardNodes": 148
+        }
+      ],
+      "firstCutExitMs": 4622333,
+      "origin": "port-incoming"
+    }
+  ],
+  "nativeCostComparisons": 136625580,
+  "nativeMembershipComparisons": 121444960,
+  "nativePartialComparisons": 2,
+  "nativeDefaultSixtyMinuteLabels": {
+    "payloadBytes": 24288992,
+    "samples": [
+      {
+        "budgetMs": 3600000,
+        "childRoundTripMs": 210.56033414788544,
+        "complete": false,
+        "encodeMs": 2.650166,
+        "heapPushes": 2454422,
+        "maxRssKiB": 173424,
+        "mode": "labels",
+        "payloadBytes": 24288992,
+        "queuePeak": 13815,
+        "requestId": 32,
+        "scannedArcs": 4716767,
+        "searchMs": 195.155625,
+        "settledStates": 2209709,
+        "sourceSetupMs": 0.333459
+      },
+      {
+        "budgetMs": 3600000,
+        "childRoundTripMs": 210.83816699683666,
+        "complete": false,
+        "encodeMs": 2.651709,
+        "heapPushes": 2454422,
+        "maxRssKiB": 173424,
+        "mode": "labels",
+        "payloadBytes": 24288992,
+        "queuePeak": 13815,
+        "requestId": 33,
+        "scannedArcs": 4716767,
+        "searchMs": 195.161459,
+        "settledStates": 2209709,
+        "sourceSetupMs": 0.342333
+      },
+      {
+        "budgetMs": 3600000,
+        "childRoundTripMs": 221.21150000020862,
+        "complete": false,
+        "encodeMs": 2.80775,
+        "heapPushes": 2454422,
+        "maxRssKiB": 173424,
+        "mode": "labels",
+        "payloadBytes": 24288992,
+        "queuePeak": 13815,
+        "requestId": 34,
+        "scannedArcs": 4716767,
+        "searchMs": 200.006084,
+        "settledStates": 2209709,
+        "sourceSetupMs": 0.355333
+      },
+      {
+        "budgetMs": 3600000,
+        "childRoundTripMs": 215.31154192052782,
+        "complete": false,
+        "encodeMs": 2.683708,
+        "heapPushes": 2454422,
+        "maxRssKiB": 173424,
+        "mode": "labels",
+        "payloadBytes": 24288992,
+        "queuePeak": 13815,
+        "requestId": 35,
+        "scannedArcs": 4716767,
+        "searchMs": 194.308708,
+        "settledStates": 2209709,
+        "sourceSetupMs": 0.348708
+      },
+      {
+        "budgetMs": 3600000,
+        "childRoundTripMs": 212.0285420678556,
+        "complete": false,
+        "encodeMs": 2.676458,
+        "heapPushes": 2454422,
+        "maxRssKiB": 173424,
+        "mode": "labels",
+        "payloadBytes": 24288992,
+        "queuePeak": 13815,
+        "requestId": 36,
+        "scannedArcs": 4716767,
+        "searchMs": 195.276583,
+        "settledStates": 2209709,
+        "sourceSetupMs": 0.334375
+      }
+    ],
+    "sha256": "859e1324ae1953a22ee6114e4e02cde8ccf09f410769d58c7176ff1596c90546",
+    "timings": {
+      "childRoundTripMs": {
+        "p50": 212.0285420678556,
+        "p95": 221.21150000020862
+      },
+      "encodeMs": {
+        "p50": 2.676458,
+        "p95": 2.80775
+      },
+      "searchMs": {
+        "p50": 195.161459,
+        "p95": 200.006084
+      },
+      "sourceSetupMs": {
+        "p50": 0.342333,
+        "p95": 0.355333
+      }
+    }
+  },
+  "nativeVerification": {
+    "workerWallMs": 134817.6937920507,
+    "compactReloadMs": 42686.96245900355,
+    "pythonWorkerMaxRssKiB": 1102928,
+    "nativeStartup": {
+      "arcs": 6411757,
+      "graphBytes": 63438604,
+      "loadValidateMs": 56.076208,
+      "processStartupAndHelloMs": 374.12208318710327,
+      "program": "csr-dijkstra-v1",
+      "states": 3036124
+    },
+    "timingLimits": "Five sequential observations per case/mode; p95 is the largest sample. Search is steady-clock loop wall time. Setup, encoding and local pipe round trips are separate; no HTTP, CPU-only, geographic-completeness, WASM or Vercel claim."
+  },
+  "resources": {
+    "build": {
+      "workerWallMs": 502780.3646879911,
+      "workerMaxRssKiB": 1938536,
+      "cgroupPeakBytes": 3265265664,
+      "limitHits": 0,
+      "sampling": {
+        "highestCurrentSample": {
+          "maxChildRssKiB": 0,
+          "memory.current": "3215400960",
+          "memory.events": {
+            "high": "0",
+            "low": "0",
+            "max": "0",
+            "oom": "0",
+            "oom_group_kill": "0",
+            "oom_kill": "0"
+          },
+          "memory.max": "4294967296",
+          "memory.peak": "3215400960",
+          "memory.stat": {
+            "active_anon": 1425551360,
+            "active_file": 0,
+            "anon": 1416032256,
+            "anon_thp": 717225984,
+            "file": 1780908032,
+            "file_dirty": 0,
+            "file_mapped": 0,
+            "file_thp": 0,
+            "file_writeback": 0,
+            "inactive_anon": 0,
+            "inactive_file": 1780908032,
+            "kernel": 8179712,
+            "kernel_stack": 32768,
+            "pagetables": 2998272,
+            "percpu": 26160,
+            "pgactivate": 0,
+            "pgdeactivate": 0,
+            "pgfault": 559102,
+            "pglazyfree": 0,
+            "pglazyfreed": 0,
+            "pgmajfault": 0,
+            "pgrefill": 0,
+            "pgscan": 0,
+            "pgscan_direct": 0,
+            "pgscan_khugepaged": 0,
+            "pgscan_kswapd": 0,
+            "pgsteal": 0,
+            "pgsteal_direct": 0,
+            "pgsteal_khugepaged": 0,
+            "pgsteal_kswapd": 0,
+            "sec_pagetables": 0,
+            "shmem": 0,
+            "shmem_thp": 0,
+            "slab": 5088952,
+            "slab_reclaimable": 4694984,
+            "slab_unreclaimable": 393968,
+            "sock": 0,
+            "swapcached": 0,
+            "thp_collapse_alloc": 192,
+            "thp_fault_alloc": 2970,
+            "thp_swpout": 0,
+            "thp_swpout_fallback": 0,
+            "unevictable": 0,
+            "vmalloc": 8192,
+            "workingset_activate_anon": 0,
+            "workingset_activate_file": 0,
+            "workingset_nodereclaim": 0,
+            "workingset_refault_anon": 0,
+            "workingset_refault_file": 0,
+            "workingset_restore_anon": 0,
+            "workingset_restore_file": 0,
+            "zswap": 0,
+            "zswapped": 0,
+            "zswpin": 0,
+            "zswpout": 0,
+            "zswpwb": 0
+          },
+          "memory.swap.current": "0",
+          "memory.swap.events": {
+            "fail": 0,
+            "high": 0,
+            "max": 0
+          },
+          "memory.swap.max": "0",
+          "memory.swap.peak": "0",
+          "workerMaxRssKiB": 1938536
+        },
+        "intervalSeconds": 0.2,
+        "maxObservedStatBytes": {
+          "anon": 1942528000,
+          "file": 1780908032,
+          "file_dirty": 0,
+          "file_mapped": 0,
+          "file_writeback": 0,
+          "kernel": 8187904,
+          "pagetables": 3940352,
+          "shmem": 0,
+          "slab": 5097240,
+          "sock": 0
+        },
+        "samples": 1992,
+        "scope": "Periodic samples can miss brief composition peaks. Field maxima are not simultaneous and must not be summed. memory.peak is a separate cumulative kernel counter; host/VM paging is unmeasured."
+      },
+      "importMs": 425700.7192780002
+    },
+    "rebuild": {
+      "workerWallMs": 517502.9926110001,
+      "workerMaxRssKiB": 1947420,
+      "cgroupPeakBytes": 3243671552,
+      "limitHits": 0,
+      "sampling": {
+        "highestCurrentSample": {
+          "maxChildRssKiB": 0,
+          "memory.current": "3221266432",
+          "memory.events": {
+            "high": "0",
+            "low": "0",
+            "max": "0",
+            "oom": "0",
+            "oom_group_kill": "0",
+            "oom_kill": "0"
+          },
+          "memory.max": "4294967296",
+          "memory.peak": "3221266432",
+          "memory.stat": {
+            "active_anon": 1411231744,
+            "active_file": 0,
+            "anon": 1411231744,
+            "anon_thp": 333447168,
+            "file": 1801428992,
+            "file_dirty": 0,
+            "file_mapped": 0,
+            "file_thp": 0,
+            "file_writeback": 0,
+            "inactive_anon": 0,
+            "inactive_file": 1801404416,
+            "kernel": 8220672,
+            "kernel_stack": 32768,
+            "pagetables": 2965504,
+            "percpu": 26160,
+            "pgactivate": 0,
+            "pgdeactivate": 0,
+            "pgfault": 567051,
+            "pglazyfree": 0,
+            "pglazyfreed": 0,
+            "pgmajfault": 0,
+            "pgrefill": 0,
+            "pgscan": 0,
+            "pgscan_direct": 0,
+            "pgscan_khugepaged": 0,
+            "pgscan_kswapd": 0,
+            "pgsteal": 0,
+            "pgsteal_direct": 0,
+            "pgsteal_khugepaged": 0,
+            "pgsteal_kswapd": 0,
+            "sec_pagetables": 0,
+            "shmem": 0,
+            "shmem_thp": 0,
+            "slab": 5169144,
+            "slab_reclaimable": 4777280,
+            "slab_unreclaimable": 391864,
+            "sock": 0,
+            "swapcached": 0,
+            "thp_collapse_alloc": 0,
+            "thp_fault_alloc": 3047,
+            "thp_swpout": 0,
+            "thp_swpout_fallback": 0,
+            "unevictable": 0,
+            "vmalloc": 8192,
+            "workingset_activate_anon": 0,
+            "workingset_activate_file": 0,
+            "workingset_nodereclaim": 0,
+            "workingset_refault_anon": 0,
+            "workingset_refault_file": 0,
+            "workingset_restore_anon": 0,
+            "workingset_restore_file": 0,
+            "zswap": 0,
+            "zswapped": 0,
+            "zswpin": 0,
+            "zswpout": 0,
+            "zswpwb": 0
+          },
+          "memory.swap.current": "0",
+          "memory.swap.events": {
+            "fail": 0,
+            "high": 0,
+            "max": 0
+          },
+          "memory.swap.max": "0",
+          "memory.swap.peak": "0",
+          "workerMaxRssKiB": 1947420
+        },
+        "intervalSeconds": 0.2,
+        "maxObservedStatBytes": {
+          "anon": 1950298112,
+          "file": 1801428992,
+          "file_dirty": 0,
+          "file_mapped": 0,
+          "file_writeback": 0,
+          "kernel": 8220672,
+          "pagetables": 3948544,
+          "shmem": 0,
+          "slab": 5169144,
+          "sock": 0
+        },
+        "samples": 2052,
+        "scope": "Periodic samples can miss brief composition peaks. Field maxima are not simultaneous and must not be summed. memory.peak is a separate cumulative kernel counter; host/VM paging is unmeasured."
+      },
+      "importMs": 439533.0364499969
+    },
+    "qualification": {
+      "workerWallMs": 963262.4509390007,
+      "workerMaxRssKiB": 1681420,
+      "cgroupPeakBytes": 1733201920,
+      "limitHits": 0,
+      "sampling": {
+        "highestCurrentSample": {
+          "maxChildRssKiB": 0,
+          "memory.current": "1701027840",
+          "memory.events": {
+            "high": "0",
+            "low": "0",
+            "max": "0",
+            "oom": "0",
+            "oom_group_kill": "0",
+            "oom_kill": "0"
+          },
+          "memory.max": "4294967296",
+          "memory.peak": "1708384256",
+          "memory.stat": {
+            "active_anon": 1562685440,
+            "active_file": 0,
+            "anon": 1562685440,
+            "anon_thp": 541065216,
+            "file": 17596416,
+            "file_dirty": 0,
+            "file_mapped": 0,
+            "file_thp": 0,
+            "file_writeback": 0,
+            "inactive_anon": 0,
+            "inactive_file": 17596416,
+            "kernel": 4157440,
+            "kernel_stack": 32768,
+            "pagetables": 3198976,
+            "percpu": 26160,
+            "pgactivate": 0,
+            "pgdeactivate": 0,
+            "pgfault": 905852,
+            "pglazyfree": 0,
+            "pglazyfreed": 0,
+            "pgmajfault": 0,
+            "pgrefill": 0,
+            "pgscan": 0,
+            "pgscan_direct": 0,
+            "pgscan_khugepaged": 0,
+            "pgscan_kswapd": 0,
+            "pgsteal": 0,
+            "pgsteal_direct": 0,
+            "pgsteal_khugepaged": 0,
+            "pgsteal_kswapd": 0,
+            "sec_pagetables": 0,
+            "shmem": 0,
+            "shmem_thp": 0,
+            "slab": 863368,
+            "slab_reclaimable": 485256,
+            "slab_unreclaimable": 378112,
+            "sock": 0,
+            "swapcached": 0,
+            "thp_collapse_alloc": 0,
+            "thp_fault_alloc": 1343,
+            "thp_swpout": 0,
+            "thp_swpout_fallback": 0,
+            "unevictable": 0,
+            "vmalloc": 8192,
+            "workingset_activate_anon": 0,
+            "workingset_activate_file": 0,
+            "workingset_nodereclaim": 0,
+            "workingset_refault_anon": 0,
+            "workingset_refault_file": 0,
+            "workingset_restore_anon": 0,
+            "workingset_restore_file": 0,
+            "zswap": 0,
+            "zswapped": 0,
+            "zswpin": 0,
+            "zswpout": 0,
+            "zswpwb": 0
+          },
+          "memory.swap.current": "0",
+          "memory.swap.events": {
+            "fail": 0,
+            "high": 0,
+            "max": 0
+          },
+          "memory.swap.max": "0",
+          "memory.swap.peak": "0",
+          "workerMaxRssKiB": 1657172
+        },
+        "intervalSeconds": 0.2,
+        "maxObservedStatBytes": {
+          "anon": 1676849152,
+          "file": 862023680,
+          "file_dirty": 0,
+          "file_mapped": 0,
+          "file_writeback": 0,
+          "kernel": 4354048,
+          "pagetables": 3399680,
+          "shmem": 0,
+          "slab": 2789976,
+          "sock": 0
+        },
+        "samples": 3592,
+        "scope": "Periodic samples can miss brief composition peaks. Field maxima are not simultaneous and must not be summed. memory.peak is a separate cumulative kernel counter; host/VM paging is unmeasured."
+      },
+      "importMs": null
+    },
+    "cuts": {
+      "workerWallMs": 56567.60356700397,
+      "workerMaxRssKiB": 590748,
+      "cgroupPeakBytes": 1356165120,
+      "limitHits": 0,
+      "sampling": {
+        "highestCurrentSample": {
+          "maxChildRssKiB": 0,
+          "memory.current": "1353367552",
+          "memory.events": {
+            "high": "0",
+            "low": "0",
+            "max": "0",
+            "oom": "0",
+            "oom_group_kill": "0",
+            "oom_kill": "0"
+          },
+          "memory.max": "4294967296",
+          "memory.peak": "1356165120",
+          "memory.stat": {
+            "active_anon": 486785024,
+            "active_file": 0,
+            "anon": 486785024,
+            "anon_thp": 31457280,
+            "file": 861724672,
+            "file_dirty": 0,
+            "file_mapped": 0,
+            "file_thp": 0,
+            "file_writeback": 0,
+            "inactive_anon": 0,
+            "inactive_file": 861724672,
+            "kernel": 4083712,
+            "kernel_stack": 32768,
+            "pagetables": 1089536,
+            "percpu": 26160,
+            "pgactivate": 0,
+            "pgdeactivate": 0,
+            "pgfault": 242845,
+            "pglazyfree": 0,
+            "pglazyfreed": 0,
+            "pgmajfault": 0,
+            "pgrefill": 0,
+            "pgscan": 0,
+            "pgscan_direct": 0,
+            "pgscan_khugepaged": 0,
+            "pgscan_kswapd": 0,
+            "pgsteal": 0,
+            "pgsteal_direct": 0,
+            "pgsteal_khugepaged": 0,
+            "pgsteal_kswapd": 0,
+            "sec_pagetables": 0,
+            "shmem": 0,
+            "shmem_thp": 0,
+            "slab": 2909280,
+            "slab_reclaimable": 2526584,
+            "slab_unreclaimable": 382696,
+            "sock": 0,
+            "swapcached": 0,
+            "thp_collapse_alloc": 1,
+            "thp_fault_alloc": 15,
+            "thp_swpout": 0,
+            "thp_swpout_fallback": 0,
+            "unevictable": 0,
+            "vmalloc": 8192,
+            "workingset_activate_anon": 0,
+            "workingset_activate_file": 0,
+            "workingset_nodereclaim": 0,
+            "workingset_refault_anon": 0,
+            "workingset_refault_file": 0,
+            "workingset_restore_anon": 0,
+            "workingset_restore_file": 0,
+            "zswap": 0,
+            "zswapped": 0,
+            "zswpin": 0,
+            "zswpout": 0,
+            "zswpwb": 0
+          },
+          "memory.swap.current": "0",
+          "memory.swap.events": {
+            "fail": 0,
+            "high": 0,
+            "max": 0
+          },
+          "memory.swap.max": "0",
+          "memory.swap.peak": "0",
+          "workerMaxRssKiB": 489256
+        },
+        "intervalSeconds": 0.2,
+        "maxObservedStatBytes": {
+          "anon": 582074368,
+          "file": 861724672,
+          "file_dirty": 0,
+          "file_mapped": 0,
+          "file_writeback": 0,
+          "kernel": 4083712,
+          "pagetables": 1273856,
+          "shmem": 0,
+          "slab": 2909280,
+          "sock": 0
+        },
+        "samples": 242,
+        "scope": "Periodic samples can miss brief composition peaks. Field maxima are not simultaneous and must not be summed. memory.peak is a separate cumulative kernel counter; host/VM paging is unmeasured."
+      },
+      "importMs": null
+    }
+  },
+  "frozenSinkCalibration": {
+    "graphIdentity": "2f5f816407ba914bda6024fa0bda47c5fa69e381f182b8d5e53086a88613615c",
+    "partialDestinations": [
+      {
+        "costMs": 374,
+        "fraction": "1/2",
+        "oracleMs": 38624.656977000996,
+        "origin": "port-incoming",
+        "roadId": "468334902:1:f"
+      },
+      {
+        "costMs": 1167889,
+        "fraction": "1/2",
+        "oracleMs": 50540.71581500466,
+        "origin": "tijuana",
+        "roadId": "114198251:0:f"
+      }
+    ],
+    "sourceManifestSha256": "d4160bd1f544d88151e51f638a796f5998ad66217464703e0cbd98393ae44227"
+  },
+  "admissionEstimateWithMarginBytes": 4137164740,
+  "observedLargestLinuxPhasePeakBytes": 3265265664,
+  "sameCountsHave25PercentHeadroom": true,
+  "selectedOriginsWithoutSixtyMinutePotentialCuts": [
+    "san-diego",
+    "el-cajon",
+    "tijuana",
+    "san-ysidro",
+    "port-incoming"
+  ],
+  "allSelectedOriginsWithoutSixtyMinutePotentialCuts": true,
+  "completeGeographicCoverageVerified": false,
+  "publicRoutingApiCalls": 0,
+  "newRoadDownloads": 0,
+  "coverageVerified": false,
+  "routeEligibilityVerified": false
+}

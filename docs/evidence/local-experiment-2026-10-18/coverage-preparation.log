@@ -1,0 +1,15 @@
+
+> routing:experiment:coverage
+> node routing/experiment-coverage.mjs
+
+validated: 2.49 s; cgroup peak 893493248; anon 15794176; file 13893632; swap max/peak 0/0
+selectorProcess: 171.88 s; cgroup peak 893493248; anon 15806464; file 13914112; swap max/peak 0/0
+selectorExited: 171.88 s; cgroup peak 893493248; anon 15818752; file 13942784; swap max/peak 0/0
+referenceBatch0: 188.72 s; cgroup peak 2498408448; anon 15708160; file 25718784; swap max/peak 0/0
+referenceBatch1: 204.96 s; cgroup peak 2498408448; anon 15708160; file 28123136; swap max/peak 0/0
+referenceBatch2: 221.16 s; cgroup peak 2498408448; anon 15708160; file 30556160; swap max/peak 0/0
+referenceBatch3: 245.24 s; cgroup peak 2498408448; anon 15712256; file 33120256; swap max/peak 0/0
+mergeReferences: 251.72 s; cgroup peak 2498408448; anon 15716352; file 33120256; swap max/peak 0/0
+checkReferences: 257.22 s; cgroup peak 2498408448; anon 15728640; file 33124352; swap max/peak 0/0
+counted: 284.53 s; cgroup peak 2498408448; anon 58552320; file 33116160; swap max/peak 0/0
+{'candidate': {'sourceNodes': 4038439, 'insideNodes': 4030012, 'sourceWays': 848787, 'wayEligibleDirectedSegments': 5417904, 'supportedWays': 848729, 'supportedPhysicalSegmentsInside': 4346488, 'supportedBoundarySegments': 1428, 'sourceRelations': 25086, 'candidateViaWayRules': 4492, 'historyPrefixCeiling': 10158, 'eligibleSegmentsByHighway': {'living_street': 7441, 'motorway': 31591, 'motorway_link': 45361, 'primary': 212895, 'primary_link': 13257, 'residential': 2319314, 'secondary': 257098, 'secondary_link': 6906, 'service': 1718308, 'tertiary': 504760, 'tertiary_link': 3335, 'trunk': 17964, 'trunk_link': 6472, 'unclassified': 273202}, 'roadStatesLowerBound': 5241105, 'roadStatesUpperBound': 5417904, 'historyStatesUpperBound': 5428062, 'scope': 'Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.', 'sqliteBytes': 55590912}, 'admission': {'eligibleForSeparateBuild': False, 'ratios': {'sourceNodes': 1.7296649406161528, 'sourceWays': 1.8348660146826117, 'sourceRelations': 2.484992570579495, 'wayEligibleDirectedSegments': 1.7802657105153858, 'historyPrefixCeiling': 2.6153450051493308, 'candidateViaWayRules': 2.5493757094211125, 'roadCeiling': 1.7852760554255989, 'historyCeiling': 1.7878261889171851}, 'scalingRatio': 2.6153450051493308, 'estimatedPhasePeaksBytes': {'preparation': 2498408448, 'build': 2982196981, 'qualification': 4532920985}, 'wholeWorkflowWith25PercentMarginBytes': 5666151232, 'capBytes': 4294967296}, 'workerWallMs': 284537.97087899875}

@@ -1,0 +1,51 @@
+
+> routing:lifetime
+> node routing/lifetime-preflight.mjs --mode isolated --case calibration
+
+validated: 2.93 s; cgroup peak 888414208; anon 19529728; file 14745600; swap max/peak 0/0
+fixtures: 3.39 s; cgroup peak 888414208; anon 19558400; file 14811136; swap max/peak 0/0
+selectorProcess: 169.12 s; cgroup peak 888414208; anon 20004864; file 14831616; swap max/peak 0/0
+selectorExited: 169.12 s; cgroup peak 888414208; anon 20004864; file 14831616; swap max/peak 0/0
+completeReferences: 194.89 s; cgroup peak 3103449088; anon 20013056; file 20074496; swap max/peak 0/0
+checkReferences: 198.15 s; cgroup peak 3103449088; anon 20013056; file 20078592; swap max/peak 0/0
+verified: 212.93 s; cgroup peak 3103449088; anon 54837248; file 20328448; swap max/peak 0/0
+proofsVerified: 214.82 s; cgroup peak 3103449088; anon 54837248; file 20951040; swap max/peak 0/0
+{
+  "case": "calibration",
+  "xmlByteIdentical": true,
+  "candidate": {
+    "sourceNodes": 2334810,
+    "insideNodes": 2327671,
+    "sourceWays": 462588,
+    "wayEligibleDirectedSegments": 3043312,
+    "supportedWays": 462559,
+    "supportedPhysicalSegmentsInside": 2473045,
+    "supportedBoundarySegments": 540,
+    "sourceRelations": 10095,
+    "candidateViaWayRules": 1762,
+    "historyPrefixCeiling": 3884,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 20352,
+      "motorway_link": 24910,
+      "primary": 115119,
+      "primary_link": 7407,
+      "residential": 1322459,
+      "secondary": 155961,
+      "secondary_link": 3595,
+      "service": 911170,
+      "tertiary": 302620,
+      "tertiary_link": 1745,
+      "trunk": 11203,
+      "trunk_link": 5173,
+      "unclassified": 155338
+    },
+    "roadStatesLowerBound": 2955664,
+    "roadStatesUpperBound": 3043312,
+    "historyStatesUpperBound": 3047196,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 31657984
+  },
+  "admission": null,
+  "workerWallMs": 214818.3425150055
+}

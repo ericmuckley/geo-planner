@@ -1,0 +1,32 @@
+[
+  {
+    "query": {
+      "origin": {
+        "lat": 40.7,
+        "lon": -74
+      },
+      "budgetMinutes": 90
+    },
+    "status": 400,
+    "body": {
+      "error": "Origin is outside the dataset or no supported road is within 100 m. Choose a point closer to a road inside the regional bounds."
+    }
+  },
+  {
+    "query": {
+      "origin": {
+        "lat": 32.7,
+        "lon": -117
+      },
+      "budgetMinutes": 721
+    },
+    "status": 400,
+    "body": {
+      "error": "Choose valid coordinates and a whole-minute budget from 1 to 720."
+    }
+  },
+  {
+    "hostedProvider": "openrouteservice",
+    "hostedCapMinutes": 60
+  }
+]

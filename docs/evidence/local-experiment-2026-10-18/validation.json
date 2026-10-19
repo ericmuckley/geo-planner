@@ -1,0 +1,187 @@
+{
+  "verifiedAtUtc": "2026-10-18T21:57:40.368236+00:00",
+  "commands": {
+    "localApp": "npm run dev:experiment",
+    "worker": "python3 -B routing/experiment.py --port 8787",
+    "expandedPreparation": "npm run routing:experiment:coverage",
+    "nodeTests": "npm test",
+    "routingTests": "npm run test:routing",
+    "check": "npm run check",
+    "typecheck": "npm run typecheck",
+    "build": "npm run build",
+    "vercelBuild": "npm run build:vercel",
+    "generateRoutes": "npm run generate-routes (then Vite maintains Start route augmentation)"
+  },
+  "results": {
+    "adapterTests": {
+      "total": 20,
+      "passed": 20,
+      "exitCode": 0
+    },
+    "pythonTests": {
+      "total": 180,
+      "passed": 171,
+      "skipped": 9,
+      "exitCode": 0
+    },
+    "check": {
+      "files": 88,
+      "exitCode": 0,
+      "existingWarning": "src/db/index.ts noNonNullAssertion"
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0
+    },
+    "vercelBuild": {
+      "exitCode": 0
+    },
+    "freshApiBudgetsMinutes": [
+      60,
+      90,
+      120,
+      720
+    ],
+    "browserBudgetsMinutes": [
+      90,
+      120
+    ],
+    "browserInvalidBudgetDisabled": 721,
+    "browserLayerToggleVerified": true,
+    "browserApplicationErrors": 0,
+    "browserNotes": "Unrelated installed extension requestProvider errors; no application/MapLibre errors. Superset CLI unavailable; used available Chrome connection."
+  },
+  "preservation": {
+    "preExistingFilesChecked": 220,
+    "changedPreExistingFiles": [
+      "src/components/research-map.tsx",
+      "src/routeTree.gen.ts",
+      "src/routes/index.tsx"
+    ],
+    "allOriginalRoutingRecipesMatch": true,
+    "routeTreeGeneratedByTools": true,
+    "envLocalIgnored": true,
+    "stagedFiles": 0,
+    "localDocLinksChecked": 179,
+    "agentInspectedEnvironmentValues": false,
+    "environmentFileEdited": false
+  },
+  "scope": {
+    "publicRoutingApiCalls": 0,
+    "roadDownloads": 0,
+    "newGraphBuilt": false,
+    "expandedSourcePrepared": true,
+    "largerWorkflowAdmitted": false,
+    "cloudDeploymentPerformed": false,
+    "hostedProvider": "openrouteservice",
+    "hostedCapMinutes": 60,
+    "localCapMinutes": 720,
+    "filledIsochroneGenerated": false,
+    "regionalQualificationReusedOnSameGraph": true,
+    "freshNativeQueries": true,
+    "timingLimits": "Single M4/16 GiB observations; overlap application checks and source preparation. Native loop, local pipe, worker, app/browser HTTP and map-idle scopes are distinct."
+  },
+  "responseArtifacts": {
+    "data/experiment-pilot/local-map-v1/app-san-diego-120.json": {
+      "bytes": 1673232,
+      "sha256": "a6177da671ca12cf2bf2411c5bb9770cd877476b9c3064004fbe60851981a4df"
+    },
+    "data/experiment-pilot/local-map-v1/app-san-diego-60.json": {
+      "bytes": 1674676,
+      "sha256": "391ee0289b3e64bd0864eb0be80c9aa50a7efcaacf8c4dda7645cee467cedf8f"
+    },
+    "data/experiment-pilot/local-map-v1/app-san-diego-720.json": {
+      "bytes": 1682299,
+      "sha256": "4e61ad9cb6ec19344c0d7967e95e7db0e625e1bca2930cb66d57beb77027c3cb"
+    },
+    "data/experiment-pilot/local-map-v1/app-san-diego-90.json": {
+      "bytes": 1664526,
+      "sha256": "624e8fb9b73cad9aa3763f13e513520e2bb1fe9122a7aaf5d120ab3f57d7be42"
+    }
+  },
+  "freeDiskBytesAfterWork": 225630789632,
+  "evidenceArtifacts": {
+    "README.md": {
+      "bytes": 1537,
+      "sha256": "8aa1383a350a3db3bbd0ad4ba47380a21d36691a0efa3ab73a0c6c82e4f3df6b"
+    },
+    "adapter-tests.log": {
+      "bytes": 2088,
+      "sha256": "16a25be5004a1701053d6646e7c700dc88a9d8078fb398b5ea24ca7ba21a6b51"
+    },
+    "api-errors-and-hosted-config.json": {
+      "bytes": 637,
+      "sha256": "f6d9c9e25ee299d6e8c2c4cbc0684ea4775e39ddc696ffa9998142d883147268"
+    },
+    "browser-120.png": {
+      "bytes": 231554,
+      "sha256": "f9977765656996dec45bb6c1b0b9157d74d4b9672486c520e92c6dd66d368de0"
+    },
+    "browser-120.txt": {
+      "bytes": 3738,
+      "sha256": "4ac60287726eb5d762357790ee50fcef48a9bee8b8cd888ff478f5d6a8ca00c1"
+    },
+    "browser-90.png": {
+      "bytes": 224171,
+      "sha256": "74f8b957ab14c55163344368f35bd2a641ca60c47e7ac28fa20287b5eca71c98"
+    },
+    "browser-90.txt": {
+      "bytes": 3136,
+      "sha256": "605641bff503ff46813d9017be21e9b29367d8911b6027c25a481ed725fda6ba"
+    },
+    "browser-console.json": {
+      "bytes": 3644,
+      "sha256": "46bfb14ded8e760d3f149d2000a9e6817cd3e3d0cffe711715e18929a528bf49"
+    },
+    "build.log": {
+      "bytes": 20516,
+      "sha256": "79c77c302571d119f76fe6a38fe62214dcee6f179d342a357f09521956d09c49"
+    },
+    "check-before-format.log": {
+      "bytes": 1751,
+      "sha256": "78224c4c5c61c5e7c5f38a9a07e5baf48ba67ae9b7206ac96b2a352664a711de"
+    },
+    "check.log": {
+      "bytes": 536,
+      "sha256": "94240ce0ee1170473680bff9b18b20248f70d886ef64ff7a22d20370c847dd62"
+    },
+    "coverage-identity.json": {
+      "bytes": 7517,
+      "sha256": "2d3d1ad0b1c018983d80fb689ab7ab0f354124a27498e8788bbf1e70869c64f2"
+    },
+    "coverage-preparation.log": {
+      "bytes": 2747,
+      "sha256": "f7a1d77e2f282ee9cafd9643f6076798918b1c5f053eba04ac4ab8b8c9352ed6"
+    },
+    "coverage-report.json": {
+      "bytes": 28771,
+      "sha256": "119c03e88797ae78fdab47065ee789fa1d629b0d8a93f7873d0b55cd16dfb2d6"
+    },
+    "preserved-sha256.json": {
+      "bytes": 21917,
+      "sha256": "d7785e3a7d10ca44eec63522bf07c8ac5cd88724ee0050830280d400bc7f8afb"
+    },
+    "query-samples.json": {
+      "bytes": 8164,
+      "sha256": "45d4422fdafcc17ac8aa512ae611bae6c83fe7ed3113ab8292c588631da5298d"
+    },
+    "recipe-sha256.json": {
+      "bytes": 1933,
+      "sha256": "0c1cd998506600e3c579af0fb70d0c839f68d347e73450102e983f28fe4536ce"
+    },
+    "routing-tests.log": {
+      "bytes": 392,
+      "sha256": "e9984b1683139c3f2ca8075d2bc38949770844ac90d3e82f1d2c65167bf621ce"
+    },
+    "typecheck.log": {
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "vercel-build.log": {
+      "bytes": 21302,
+      "sha256": "d8f33eab8a475fc952f1af055286841f14af5b6a73252179ba418ad53f874bfa"
+    }
+  }
+}

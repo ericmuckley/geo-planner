@@ -1,0 +1,100 @@
+{
+  "recordedDate": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/compact-input-2026-10-17/analyze.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/compact-import-2026-10-17/analyze.py",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:inputs -- --case downtown-v2 --series input-v1",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:inputs -- --case corridor-v2 --series input-v1",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:inputs -- --case corridor-v3 --series input-v1",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:inputs -- --case wide-v3 --series input-v1",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:inputs -- --case buffer-v3 --series input-v1",
+      "exitCode": 0
+    }
+  ],
+  "pythonCases": 93,
+  "pythonPassed": 91,
+  "pythonSkipped": 2,
+  "skipReason": "Unchanged host Osmium integration tests; host lacks Osmium.",
+  "adapterCases": 14,
+  "adapterPassed": 14,
+  "biomeFiles": 54,
+  "existingWarnings": [
+    "src/db/index.ts non-null assertion",
+    "MapLibre bundle size",
+    "Upstream TanStack module-level directives"
+  ],
+  "parityCases": [
+    "downtown-v2",
+    "corridor-v2",
+    "corridor-v3",
+    "wide-v3",
+    "buffer-v3"
+  ],
+  "identicalExportedArtifacts": 28,
+  "memoryLimitBytes": 4294967296,
+  "containerSwapMaxBytes": 0,
+  "containerSwapPeakBytes": 0,
+  "zeroOomAllRuns": true,
+  "zeroLimitHitEventsAllRuns": true,
+  "bufferWorkerPeakKiB": 1317520,
+  "bufferObservedCgroupPeakBytes": 4292444160,
+  "bufferCgroupAccountingNearCap": true,
+  "anonymousFileDirtyBreakdownMeasured": false,
+  "hostVmPagingMeasured": false,
+  "newSearchOrOracleMeasurements": false,
+  "reusedNativeCostComparisons": 96260895,
+  "reusedNativeMembershipComparisons": 85565240,
+  "reusedPartialDestinations": 2,
+  "publicRoutingApiCalls": 0,
+  "newDownloads": 0,
+  "agentChangedEnvironmentValues": false,
+  "manualGeneratedRouteTreeEdits": false,
+  "frozenModulesAndOriginalWrapperUnchanged": true,
+  "packageLockUnchanged": true,
+  "generatedRouteTreeHashUnchanged": true,
+  "originalBaselineServiceHealthy": true,
+  "temporaryExperimentContainersExited": true,
+  "cloudDeploymentPerformed": false,
+  "complete60MinuteCoverageVerified": false,
+  "complete12HourCoverageVerified": false,
+  "nextRecommendedTask": "Inventory all reachable potential cuts, then preflight a buffered cached-data expansion with explicit no-swap policy and cgroup anonymous/file/dirty accounting through preparation, import and export."
+}

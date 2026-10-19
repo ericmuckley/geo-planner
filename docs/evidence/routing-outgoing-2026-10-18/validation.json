@@ -1,0 +1,340 @@
+{
+  "verifiedAtUtc": "2026-10-18T21:19:55.159893+00:00",
+  "commands": {
+    "hostRoutingTests": "npm run test:routing",
+    "focusedDevelopmentTests": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s routing -p outgoing_index_test.py -v",
+    "linuxRoutingTests": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test cache_lifetime_test range_hash_test member_lookup_test targeted_evidence_test base_ids_test xml_stream_test outgoing_index_test",
+    "adapterTests": "npm test",
+    "biome": "npm run check",
+    "typecheck": "npm run typecheck",
+    "build": "npm run build",
+    "parity": [
+      "npm run routing:outgoing -- --case downtown-v2",
+      "npm run routing:outgoing -- --case corridor-v3",
+      "npm run routing:outgoing -- --case wide-v3",
+      "npm run routing:outgoing -- --case hour-v3"
+    ],
+    "evidenceAnalyzer": "python3 -B docs/evidence/routing-outgoing-2026-10-18/analyze.py",
+    "linuxDevelopmentTests": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest outgoing_index_test -v"
+  },
+  "results": {
+    "hostRouting": {
+      "total": 174,
+      "passed": 165,
+      "skipped": 9,
+      "exitCode": 0
+    },
+    "linuxRouting": {
+      "total": 83,
+      "passed": 83,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    "focusedDevelopmentHostAndLinux": {
+      "totalEach": 12,
+      "passedEach": 12,
+      "exitCode": 0
+    },
+    "adapterTests": {
+      "total": 14,
+      "passed": 14,
+      "exitCode": 0
+    },
+    "check": {
+      "exitCode": 0,
+      "files": 81,
+      "existingWarning": "src/db/index.ts non-null assertion"
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0,
+      "warnings": "Existing MapLibre chunk size and upstream TanStack module directives"
+    },
+    "parity": {
+      "cases": 4,
+      "identicalArtifacts": 24,
+      "freshDistinctImporterFixtures": 17,
+      "fixtureFullCostComparisonsPerWorker": 296,
+      "fixtureBoundedCostComparisonsPerWorker": 888,
+      "controlFixtures": 11,
+      "xmlSourceFixtures": 17,
+      "exitCode": 0
+    },
+    "analyzer": {
+      "exitCode": 0,
+      "savedOutputReproducesExactly": true
+    }
+  },
+  "preservation": {
+    "preExistingFilesChecked": 194,
+    "allFingerprintsMatch": true,
+    "newRecipeFilesFrozen": 7,
+    "environmentValuesReadOrChanged": false,
+    "envLocalIgnored": true,
+    "dataIgnored": true,
+    "stagedFiles": 0,
+    "localDocLinksChecked": 181
+  },
+  "tooling": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "node": "v24.5.0",
+    "npm": "11.6.0",
+    "hostMemoryBytes": 17179869184,
+    "cpu": "Apple M4",
+    "freeDiskBytesAtMetadataCheck": 230383894528,
+    "dockerVersion": "28.3.3",
+    "dockerResources": {
+      "memoryBytes": 8218034176,
+      "cpus": 10
+    },
+    "valhallaState": "running healthy",
+    "toolsImageId": "sha256:6652906bfea590161b144a6e4fac146a41e14cbafae581dcb9e38c74ceaa53a7",
+    "readerImageId": "sha256:025ebba8267c0aad21bc4cb52b40c4726b65a13a1ebe66b8642df5495261ddd5"
+  },
+  "initialFreeDiskBytes": 230805274624,
+  "freeDiskBytesAfterWorkloads": 228621807616,
+  "retainedParitySeriesLogicalBytes": 2087619958,
+  "scope": {
+    "publicApiCalls": 0,
+    "downloads": 0,
+    "freshRegionalSearches": false,
+    "regionalQualificationReusedOnIdenticalBytes": true,
+    "newLargerGraphBuilt": false,
+    "largerGraphAdmitted": false,
+    "browserContourOrHttpTiming": false,
+    "appHostedDrivingCapMinutes": 60
+  },
+  "notes": [
+    "Linux scope avoids compiler-dependent cases because the cached reader lacks a C++ compiler; host compiler tests pass.",
+    "No approval-review rejection; Docker and test compiler/sandbox/IPC required sandbox exceptions.",
+    "All old data, recipes and attempts remain unchanged.",
+    "Application checks and scoped regressions overlap part of the corridor run; the hour run has no deliberately concurrent workload. Host/VM/cache conditions are uncontrolled.",
+    "Construction counts/offsets/buffers/filled checkpoints include temporary cursor overlap. Shallow object sizes, sampled anonymous/file memory and cumulative cgroup/RSS peaks have separate scopes.",
+    "The saved regional qualification remains 1.614 GiB from its original run; qualification/reload memory is the next resource task, not newly measured here."
+  ],
+  "evidenceArtifacts": {
+    "README.md": {
+      "bytes": 1709,
+      "sha256": "2a4e95f6a87d1831c045d727aa1063ccc641272d980bd5f2383bd3608bc7eaa7"
+    },
+    "adapter-tests.log": {
+      "bytes": 1494,
+      "sha256": "af026451f5a5c5556da5a7bc71237eeb523c83d2c3b38edacfe618ffd35a0f47"
+    },
+    "analyze.py": {
+      "bytes": 19943,
+      "sha256": "9307aeafb4870a6811a93c8d091a60c68f6f0416d2323615f7f2f71804910d35"
+    },
+    "build.log": {
+      "bytes": 19732,
+      "sha256": "db5fa1929d9a2d6e2cfebdcf8ab43ca73f519f3c439e83a5d501945024551366"
+    },
+    "check.log": {
+      "bytes": 536,
+      "sha256": "8cd8c1e9e3a8d8e66265383ae0906d9511103fa52a4a41c62c971ded40dd73e8"
+    },
+    "commands.json": {
+      "bytes": 1760,
+      "sha256": "132bfe1c91240701cac1b9d3edd357ffe0bff24ebdcde798de7253e12e2487bb"
+    },
+    "comparison.json": {
+      "bytes": 26882,
+      "sha256": "eb0ded2ed47948d8481bb531e54cba5c7ea83a66212dbaf95d0e54f6e56df85a"
+    },
+    "corridor-v3.log": {
+      "bytes": 7520,
+      "sha256": "796754f20bc65fda078c85aaf6f909382f0be0f3c69c4dfb3206e8415ec05ed6"
+    },
+    "downtown-v2.log": {
+      "bytes": 5568,
+      "sha256": "0eed468909f8e3f66600dfcbcfa76b0bc56e7b1e620539f8e2533ff1d99350d9"
+    },
+    "frozen-native-verification.json": {
+      "bytes": 154483,
+      "sha256": "5afed813ac6087bcfa23f2c9821a40a3524d87403a5683bb4aff279e78557efa"
+    },
+    "frozen-qualification-report.json": {
+      "bytes": 12036,
+      "sha256": "b96594c8964c33b82ca08e1c6bb78dd711124df50a0165c894a50c50a10279ea"
+    },
+    "host-routing-tests.log": {
+      "bytes": 386,
+      "sha256": "7b544d81054824caebfaae158d09e49324c491ac1649a20b66ac8186790f74d7"
+    },
+    "host-tooling.json": {
+      "bytes": 549,
+      "sha256": "c520f063e666f2d299d4314303d0fd32cd54fff53ab0822b0da26906f221d0c7"
+    },
+    "hour-v3.log": {
+      "bytes": 10408,
+      "sha256": "76bab82028d0955dec9c8abf9455f8820c85dc868cb1858a6fd1a9ece7c0f75a"
+    },
+    "indexed-corridor-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "indexed-corridor-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "indexed-corridor-v3-manifest.json": {
+      "bytes": 9116,
+      "sha256": "2953df7462e8cf5b23af3e4a2a37c0c4badaa465f0b7ca9440769541378416d8"
+    },
+    "indexed-corridor-v3-report.json": {
+      "bytes": 124705,
+      "sha256": "1fe1bbe23864276e965b5777fe077b44e3b3518e35a444e0c12d31dd9f180635"
+    },
+    "indexed-corridor-v3-run-identity.json": {
+      "bytes": 7898,
+      "sha256": "e2ab4a6c83a9e47496525353e8b6f63a6b2f0730d6f396a52a1c8818ea07eec6"
+    },
+    "indexed-corridor-v3-xml-fixtures.json": {
+      "bytes": 8409,
+      "sha256": "4a26ff40a2aba1c2e544432b5d31aab41b39f3da30fd82214bf0431a43891d6b"
+    },
+    "indexed-downtown-v2-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "indexed-downtown-v2-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "indexed-downtown-v2-manifest.json": {
+      "bytes": 8496,
+      "sha256": "6e24523fd52352872a54a28bdef8244fa766d64df9d8a7a74f8b620dc2d7acbe"
+    },
+    "indexed-downtown-v2-report.json": {
+      "bytes": 94679,
+      "sha256": "bfaf449d96a8c733300dba983dc5ae986cdf7304c9171e3c3a955488c6833389"
+    },
+    "indexed-downtown-v2-run-identity.json": {
+      "bytes": 7519,
+      "sha256": "ba967e57d293ca6f3fa773bcdba6eb2d342d01a1b82a7b7ec6b2a58cda701279"
+    },
+    "indexed-downtown-v2-xml-fixtures.json": {
+      "bytes": 8409,
+      "sha256": "4a26ff40a2aba1c2e544432b5d31aab41b39f3da30fd82214bf0431a43891d6b"
+    },
+    "indexed-hour-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "indexed-hour-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "indexed-hour-v3-manifest.json": {
+      "bytes": 12233,
+      "sha256": "9357086aec364e0ad7f2d0800e1462cc2f2af04e2d5da6b230d3b367f21bf0df"
+    },
+    "indexed-hour-v3-report.json": {
+      "bytes": 170515,
+      "sha256": "9e5b5a54f5b5dfcb43374d5e235c39fbc5ce829bc19e1916304cc1dfaa7899fd"
+    },
+    "indexed-hour-v3-run-identity.json": {
+      "bytes": 10887,
+      "sha256": "a5af475bd703626fbe6caa9ab0fb1edd5ed1cb0304a9d38c15588cd3b8412e19"
+    },
+    "indexed-hour-v3-xml-fixtures.json": {
+      "bytes": 8409,
+      "sha256": "4a26ff40a2aba1c2e544432b5d31aab41b39f3da30fd82214bf0431a43891d6b"
+    },
+    "indexed-wide-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "indexed-wide-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "indexed-wide-v3-manifest.json": {
+      "bytes": 9268,
+      "sha256": "07f9f1387ba0da2d332690ade9736832902ce222616f159b59724f8960206e77"
+    },
+    "indexed-wide-v3-report.json": {
+      "bytes": 167202,
+      "sha256": "4435693cac0a186ebc1f665d6ad1af6ff34703730a318589ae949e5a6fa979e6"
+    },
+    "indexed-wide-v3-run-identity.json": {
+      "bytes": 7924,
+      "sha256": "d3d25d118556cdd4fa1fe490361732f69ebd0c4facb64f272066ba7f30576bb2"
+    },
+    "indexed-wide-v3-xml-fixtures.json": {
+      "bytes": 8409,
+      "sha256": "4a26ff40a2aba1c2e544432b5d31aab41b39f3da30fd82214bf0431a43891d6b"
+    },
+    "linux-routing-tests.log": {
+      "bytes": 182,
+      "sha256": "ee3fbbb63fd6754c40a8988c24d7a8e6833a71318452dd2940c6609730c3ac41"
+    },
+    "new-recipe-sha256.json": {
+      "bytes": 652,
+      "sha256": "f85ddf6afe6e6320f4fc34d1f524bb861ce6ef8d8c4ffbf64ebb2641a410b762"
+    },
+    "preserved-sha256.json": {
+      "bytes": 19361,
+      "sha256": "109360e92582bbb4e441b5ea24e68e85d144cf3e3d3bedde479c995bb4ffa95e"
+    },
+    "qualified-corridor-v3-manifest.json": {
+      "bytes": 3636,
+      "sha256": "a3841000945270f6a7873395aca7cf7df309e9ed3f3d3e36522f2938aacb5f57"
+    },
+    "qualified-downtown-v2-manifest.json": {
+      "bytes": 3017,
+      "sha256": "acfce7b74cee07121fb979f6a30a2f03ee3df58cef697aec7d9df0e2b8dcb7eb"
+    },
+    "qualified-hour-v3-manifest.json": {
+      "bytes": 9192,
+      "sha256": "5dab6234629eb4166472f715fa03b98e737032e62badfd0caca437f5b6888b6d"
+    },
+    "qualified-wide-v3-manifest.json": {
+      "bytes": 3788,
+      "sha256": "132ebec88ff14eef871bd18648a6a4dbd896bb2a95126c1e333933b28a6ed9ff"
+    },
+    "streamed-corridor-v3-manifest.json": {
+      "bytes": 8489,
+      "sha256": "f2f09973c373e9457abaf548d0baa6dd9835ac33571877ea592d95cb243eb600"
+    },
+    "streamed-corridor-v3-report.json": {
+      "bytes": 94246,
+      "sha256": "d543a126d538c7a8ea48057f3794186a916fdb8b3baad1daaba0cbb85ae9a6d5"
+    },
+    "streamed-downtown-v2-manifest.json": {
+      "bytes": 7870,
+      "sha256": "c0fdddf441fbeb5887515295d77e0f5c3a0360c00a13da433c156734802f44e8"
+    },
+    "streamed-downtown-v2-report.json": {
+      "bytes": 70479,
+      "sha256": "44d712473cf50a1ccd9899ff307dbed0a5902af963ccabc4c297c6a28df46930"
+    },
+    "streamed-hour-v3-manifest.json": {
+      "bytes": 11607,
+      "sha256": "15c951797b0b41aabe0e91d1259a6113b62c7f3aa4e1ae4496996aad10fceb4b"
+    },
+    "streamed-hour-v3-report.json": {
+      "bytes": 127754,
+      "sha256": "a2f13d8238dd70c4c7a5ed34a290712463042a318f2f11176feb4bd2e7134e9a"
+    },
+    "streamed-wide-v3-manifest.json": {
+      "bytes": 8642,
+      "sha256": "b18082cb48ed7ef25f4b971045dcdb14ef74a1bfc46810d7c96295e3ce08beb9"
+    },
+    "streamed-wide-v3-report.json": {
+      "bytes": 124317,
+      "sha256": "b545528edbca32acf601181f297eb41a992f372ea6b4b53b76b7d81505c196c5"
+    },
+    "typecheck.log": {
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "wide-v3.log": {
+      "bytes": 10272,
+      "sha256": "4196ad7ea1c0086bef7a934720212824d3ca3d95e0aa60a701ad2dd48943fadf"
+    }
+  }
+}

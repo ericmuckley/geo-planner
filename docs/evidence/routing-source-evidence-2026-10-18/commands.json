@@ -1,0 +1,16 @@
+{
+  "hostRoutingTests": "npm run test:routing",
+  "focusedDevelopmentTests": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s routing -p targeted_evidence_test.py -v",
+  "linuxRoutingTests": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test cache_lifetime_test range_hash_test member_lookup_test targeted_evidence_test",
+  "adapterTests": "npm test",
+  "biome": "npm run check",
+  "typecheck": "npm run typecheck",
+  "build": "npm run build",
+  "parity": [
+    "npm run routing:evidence -- --case downtown-v2",
+    "npm run routing:evidence -- --case corridor-v3",
+    "npm run routing:evidence -- --case wide-v3",
+    "npm run routing:evidence -- --case hour-v3"
+  ],
+  "evidenceAnalyzer": "python3 -B docs/evidence/routing-source-evidence-2026-10-18/analyze.py"
+}

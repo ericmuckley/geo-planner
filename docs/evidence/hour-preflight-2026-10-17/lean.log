@@ -1,0 +1,22 @@
+
+> routing:qualify:lean
+> node routing/lean-qualification.mjs
+
+validated: 1.33 s; cgroup peak 852332544; anon 16101376; file 1515520; swap max/peak 0/0
+Frozen sink calibrated: port-incoming / 468334902:1:f: 374 ms
+Frozen sink calibrated: tijuana / 114198251:0:f: 1167889 ms
+sinksCalibrated: 123.47 s; cgroup peak 968089600; anon 376856576; file 1941504; swap max/peak 0/0
+reloaded: 164.95 s; cgroup peak 1391529984; anon 552108032; file 1941504; swap max/peak 0/0
+Qualified san-diego: 2637563 reachable states; first cut 3467461 ms
+Qualified el-cajon: 2637563 reachable states; first cut 2535070 ms
+Qualified tijuana: 2637563 reachable states; first cut 3442769 ms
+Qualified san-ysidro: 2637563 reachable states; first cut 3410297 ms
+Qualified port-incoming: 2637563 reachable states; first cut 3411783 ms
+fullBoundedQualified: 809.70 s; cgroup peak 1664774144; anon 1030651904; file 17469440; swap max/peak 0/0
+verified: 898.55 s; cgroup peak 1664774144; anon 1022287872; file 17629184; swap max/peak 0/0
+{
+  "functionalSummaryIdentical": true,
+  "qualificationHeadroomRestored": true,
+  "qualificationPeakWith25PercentMarginBytes": 2080967680,
+  "workerWallMs": 898550.450743991
+}

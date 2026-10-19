@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "log": "host-routing-tests.log",
+      "logSha256": "473342b4cffecd45d50df71ed6a2a7eb53a83375b9a5d350e628132f38599c17",
+      "total": 115,
+      "passed": 110,
+      "skipped": 5
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "log": "adapter-tests.log",
+      "logSha256": "ad009edc7e1df1be0e43f04d709bb69b95b6f9f4fba0347bda57fc5f04a50b82",
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "log": "check.log",
+      "logSha256": "2caee5106ed0de45fa557ff68bd5761ecc3c8209e83e851642d988353bee98df",
+      "checkedFiles": 72,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.log",
+      "logSha256": "bdb368de24987fec26dda9e06ada49e49f2cfaaf6003a1bb436a2fa5b4cf2046",
+      "warnings": [
+        "Existing upstream TanStack directives",
+        "Existing MapLibre chunk size"
+      ]
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test",
+      "exitCode": 0,
+      "log": "linux-tests.log",
+      "logSha256": "c78e60dea14831df2806a5516a45e53a20c291ecc8c58a09b4010e986dbcc660",
+      "passed": 24,
+      "skipped": 0,
+      "scope": "Selected integrations and changed behaviors, not full Linux discovery."
+    },
+    {
+      "command": "python3 -B docs/evidence/two-hour-preflight-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "log": "analyze.log",
+      "logSha256": "65007b8e29b1e9f73420fd8917c0c1ffaeb710c15d246ab3754df1f1c305e206"
+    }
+  ],
+  "workloads": [
+    {
+      "command": "npm run routing:coverage:two-hour -- --case calibration",
+      "exitCode": 0,
+      "directory": "data/coverage-pilot/two-hour-calibration-v1",
+      "runId": "371ae3cc3eb39a475a2febdf1026843f239b4d176bb8a327dc8732f96a091b61",
+      "reportSha256": "d72d6e0bf36e7fd0e3551af52302b85098261a518432336b67af4551b5e4c672",
+      "log": "calibration.log",
+      "logSha256": "3801e69c72669f63aa8717620468c35b64b91026da76fcb625d2df6079ead007"
+    },
+    {
+      "command": "npm run routing:coverage:two-hour -- --case candidate",
+      "exitCode": 0,
+      "directory": "data/coverage-pilot/two-hour-candidate-v1",
+      "runId": "7b7f918fa021648bdcdf4f10f62c0e5cbe0ea0ee4f8696526b41b722b9666eaf",
+      "reportSha256": "6b127fee97604f62f7e0b2d56631d175ab72365833bf539b657c2b52dc2913d8",
+      "log": "candidate.log",
+      "logSha256": "d8e91afa05515e65df60754942e4de3309c57389b7f9a6f62f0dcb8802738941"
+    }
+  ],
+  "integrity": {
+    "preservedFileCount": 139,
+    "allHashesMatch": true,
+    "envLocalIgnored": true,
+    "environmentValuesReadOrModified": false,
+    "stagedFiles": 0,
+    "manualGeneratedRouteEdits": false,
+    "checkedLocalDocLinks": 146,
+    "hostDiskFreeBytes": 252694290432,
+    "valhallaContainer": "geo-planner-routing-valhalla-1",
+    "valhallaState": "running healthy"
+  },
+  "scope": {
+    "newGraphs": 0,
+    "newNativeRuns": 0,
+    "publicRoutingProviderRequests": 0,
+    "newRoadOrToolDownloads": 0,
+    "newApplicationDependencies": 0,
+    "appProviderOrLimitChanged": false,
+    "fullLinuxDiscovery": false,
+    "completeTwoHourCoverageVerified": false,
+    "originalLongRangeRequirementFinished": false
+  },
+  "measurementCaveats": [
+    "Node membership storage is exact; sparse page allocation does not imply bounded national RAM.",
+    "Same-source worker peak falls but whole-container peak rises; reference completion dominates and proof/fixture/cache work differs.",
+    "Candidate preparation completes at the cap with 3750 max events and no OOM/kill/swap; graph admission is held.",
+    "20.64 GiB is a conservative scaled preprocessing forecast with margin, not measured graph/query RAM or minimum required geography.",
+    "Source-envelope clipping and parent road gaps remain separate from resource admission.",
+    "Prior native/full-field evidence is reused by exact identity; no new HTTP, browser, native or Vercel timings."
+  ]
+}

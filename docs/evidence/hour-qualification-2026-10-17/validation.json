@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "log": "host-routing-tests.log",
+      "logSha256": "5f7b2345be9f29f1a10f9a84d9bb62998b6e65bd890774f522f7c02b592b1ccf",
+      "total": 111,
+      "passed": 107,
+      "skipped": 4
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "log": "adapter-tests.log",
+      "logSha256": "f2fc450b851a1ea47cf0f17e2a06e9a46f36f37031855572659aee2f5cc0d54e",
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "log": "check.log",
+      "logSha256": "013fc8bda3d766fa4216013556f098b916334730686c021c710115e6ba4e7901",
+      "checkedFiles": 70,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.log",
+      "logSha256": "4fc6b1e46ec832d48b0a3da9d75d506b6df9f1cd865dde268a4be59801dd0dd1",
+      "warnings": [
+        "Existing upstream TanStack directives",
+        "Existing MapLibre chunk size"
+      ]
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test",
+      "exitCode": 0,
+      "log": "linux-tests.log",
+      "logSha256": "0fa6336822514472e1cb2654bb5df3f4676cb780a45cafbfc652bc5acd7efd55",
+      "passed": 20,
+      "skipped": 0,
+      "scope": "Selected integrations and new profile checks, not full Linux discovery."
+    },
+    {
+      "command": "python3 -B docs/evidence/hour-preflight-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "log": "preflight-analyzer.log",
+      "logSha256": "f93e8221ff336fc6aeb2c684a7564fff75f575380a34b48470dcfa9fecb7af69"
+    },
+    {
+      "command": "python3 -B docs/evidence/hour-qualification-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "log": "analyze.log",
+      "logSha256": "cc8aef4affdc185b9451655d032498a9e0cb199ff612e6f9d097afc60c184002"
+    }
+  ],
+  "workloads": [
+    {
+      "command": "npm run routing:hour",
+      "exitCode": 0,
+      "runDirectory": "data/compact-pilot/hour-v3",
+      "report": "build-report.json",
+      "reportSha256": "2608c6f9d50d134d8bbe523be6d809a9a5506b7663b141e2a05a92f20f31d76e",
+      "log": "build-graph.log",
+      "logSha256": "9af0e18ac9f25b3c2ed753061ecf3d1c08560163a84d9fea1475a3581be90615"
+    },
+    {
+      "command": "npm run routing:hour -- --stage qualify",
+      "exitCode": 0,
+      "runDirectory": "data/compact-pilot/hour-v3",
+      "report": "qualification-report.json",
+      "reportSha256": "b96594c8964c33b82ca08e1c6bb78dd711124df50a0165c894a50c50a10279ea",
+      "log": "qualification.log",
+      "logSha256": "083af63c943b8cbf9255bd1378975de293218e6fa7f8cb585a5c14ecc2bf1a8e"
+    },
+    {
+      "command": "npm run routing:hour -- --stage rebuild",
+      "exitCode": 0,
+      "runDirectory": "data/compact-pilot/hour-v3-rebuild",
+      "report": "build-report.json",
+      "reportSha256": "69ac31cb4ae3bb9f587ba2df02d685cb22af48ac3f56d2a3c5076486a22d4364",
+      "log": "rebuild.log",
+      "logSha256": "a90a45131fbbdede0d45f0b07b4b8dd8ac7dc696bf357ecb48c24834dc16e777"
+    },
+    {
+      "command": "npm run routing:compact:verify -- --run-name hour-v3",
+      "exitCode": 0,
+      "runDirectory": "data/compact-pilot/hour-v3",
+      "report": "native-verification.json",
+      "reportSha256": "5afed813ac6087bcfa23f2c9821a40a3524d87403a5683bb4aff279e78557efa",
+      "log": "native.log",
+      "logSha256": "909105a04e608ba1ad1d583d695044158b4064305655ecca819b0f5ddbea77d8"
+    },
+    {
+      "command": "npm run routing:hour -- --stage cuts",
+      "exitCode": 0,
+      "runDirectory": "data/compact-pilot/hour-v3-cuts",
+      "report": "report.json",
+      "reportSha256": "b072fdd82a68d876bce1d465ee947470315d875e5701a793af55aede3c2be580",
+      "log": "cuts.log",
+      "logSha256": "1bdec8ac6d8667240ad4d54260d511a4c3fcb93bc9a299068cbc086cf245884e"
+    }
+  ],
+  "integrity": {
+    "preservedFileCount": 136,
+    "preservedHashesMatch": true,
+    "envLocalIgnored": true,
+    "environmentValuesReadOrModified": false,
+    "stagedFiles": 0,
+    "manualGeneratedRouteEdits": false,
+    "valhallaContainer": "geo-planner-routing-valhalla-1",
+    "valhallaState": "running healthy",
+    "checkedLocalDocumentationLinks": 143,
+    "hostDiskFreeBytes": 254822248448
+  },
+  "tooling": {
+    "node": "24.5.0",
+    "npm": "11.6.0",
+    "hostPython": "3.13.5",
+    "macOS": "26.3.1 / 25D2128",
+    "compiler": "Apple clang 17.0.0 / arm64-apple-darwin25.3.0",
+    "dockerMemoryBytes": 8218034176,
+    "dockerCpus": 10,
+    "baseImageId": "sha256:6652906bfea590161b144a6e4fac146a41e14cbafae581dcb9e38c74ceaa53a7",
+    "readerImageId": "sha256:025ebba8267c0aad21bc4cb52b40c4726b65a13a1ebe66b8642df5495261ddd5"
+  },
+  "scope": {
+    "publicRoutingProviderRequests": 0,
+    "newRoadOrToolDownloads": 0,
+    "newApplicationDependencies": 0,
+    "newNativeRuns": 1,
+    "fullLinuxDiscoveryThisTurn": false,
+    "appProviderOrLimitChanged": false,
+    "httpOrBrowserOrVercelMeasurements": false,
+    "completeGeographicCoverageVerified": false,
+    "originalLongRangeRequirementFinished": false
+  },
+  "measurementCaveats": [
+    "All Linux jobs use two CPUs/4 GiB/no swap/no network/read-only inputs.",
+    "Native verification is a separate network-denied Mac process without imposed Docker RAM cap and overlaps the independent Linux rebuild.",
+    "Native search is loop wall time, separate from setup, encoding, process startup and local pipe; no HTTP or CPU-only claim.",
+    "Single preprocessing observations include verification reads; host/cache/concurrency uncontrolled.",
+    "Cgroup peak and worker/child/sample maxima have separate scopes and must not be summed.",
+    "Zero potential cuts at sampled origins is separate from source completeness and real crossing eligibility."
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      {
+        "lat": 32.3661,
+        "lon": -117.0618
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "units": "kilometers"
+  },
+  "data": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 32.7157,
+          "lon": -117.1611,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 32.3661,
+          "lon": -117.0618,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive west on East Broadway.",
+              "verbal_succinct_transition_instruction": "Drive west. Then, in 300 meters, Turn right onto 1st Avenue.",
+              "verbal_pre_transition_instruction": "Drive west on East Broadway. Then, in 300 meters, Turn right onto 1st Avenue.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "East Broadway"
+              ],
+              "bearing_after": 270,
+              "time": 16.321,
+              "length": 0.254,
+              "cost": 37.671,
+              "begin_shape_index": 0,
+              "end_shape_index": 16,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto 1st Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto 1st Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto 1st Avenue.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "1st Avenue"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 0,
+              "time": 63.923,
+              "length": 0.761,
+              "cost": 171.33,
+              "begin_shape_index": 16,
+              "end_shape_index": 62,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right toward I 5 South.",
+              "verbal_transition_alert_instruction": "Turn right toward I 5 South.",
+              "verbal_succinct_transition_instruction": "Turn right toward I 5 South.",
+              "verbal_pre_transition_instruction": "Turn right toward I 5 South.",
+              "verbal_post_transition_instruction": "Continue for 21 kilometers.",
+              "street_names": [
+                "I 5 South",
+                "Route 5"
+              ],
+              "bearing_before": 359,
+              "bearing_after": 105,
+              "time": 719.722,
+              "length": 20.975,
+              "cost": 870.156,
+              "begin_shape_index": 62,
+              "end_shape_index": 326,
+              "highway": true,
+              "sign": {},
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 3 on the right onto CA 905 East toward Tocayo Avenue.",
+              "verbal_transition_alert_instruction": "Take exit 3 on the right.",
+              "verbal_pre_transition_instruction": "Take exit 3 on the right onto CA 905 East toward Tocayo Avenue.",
+              "bearing_before": 147,
+              "bearing_after": 153,
+              "time": 13.356,
+              "length": 0.311,
+              "cost": 14.661,
+              "begin_shape_index": 326,
+              "end_shape_index": 327,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "3"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 905 East",
+                    "consecutive_count": 2
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Tocayo Avenue"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take CA 905 East.",
+              "verbal_transition_alert_instruction": "Keep left to take CA 905 East.",
+              "verbal_pre_transition_instruction": "Keep left to take CA 905 East.",
+              "verbal_post_transition_instruction": "Continue for 12 kilometers.",
+              "street_names": [
+                "CA 905 East",
+                "Otay Mesa Freeway"
+              ],
+              "bearing_before": 153,
+              "bearing_after": 151,
+              "time": 403.823,
+              "length": 11.526,
+              "cost": 448.741,
+              "begin_shape_index": 327,
+              "end_shape_index": 437,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 905 East",
+                    "consecutive_count": 2
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on CA 905 East/Otay Mesa Freeway.",
+              "verbal_transition_alert_instruction": "Keep left to stay on CA 905 East.",
+              "verbal_pre_transition_instruction": "Keep left to stay on CA 905 East, Otay Mesa Freeway.",
+              "verbal_post_transition_instruction": "Continue for 2.5 kilometers.",
+              "street_names": [
+                "CA 905 East",
+                "Otay Mesa Freeway"
+              ],
+              "bearing_before": 90,
+              "bearing_after": 90,
+              "time": 754.808,
+              "length": 2.574,
+              "cost": 788.352,
+              "begin_shape_index": 437,
+              "end_shape_index": 475,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 8,
+              "instruction": "Continue on MEX 2D Spur/Boulevard Garita de Otay.",
+              "verbal_transition_alert_instruction": "Continue on MEX 2D Spur.",
+              "verbal_pre_transition_instruction": "Continue on MEX 2D Spur, Boulevard Garita de Otay.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "MEX 2D Spur",
+                "Boulevard Garita de Otay"
+              ],
+              "bearing_before": 176,
+              "bearing_after": 153,
+              "time": 622.291,
+              "length": 0.453,
+              "cost": 632.235,
+              "begin_shape_index": 475,
+              "end_shape_index": 494,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take the Boulevard de las Bellas Artes exit.",
+              "verbal_transition_alert_instruction": "Take the Boulevard de las Bellas Artes exit.",
+              "verbal_pre_transition_instruction": "Take the Boulevard de las Bellas Artes exit.",
+              "verbal_post_transition_instruction": "Continue for 1 kilometer.",
+              "street_names": [
+                "Boulevard de las Bellas Artes"
+              ],
+              "bearing_before": 176,
+              "bearing_after": 182,
+              "time": 64.557,
+              "length": 1.137,
+              "cost": 170.058,
+              "begin_shape_index": 494,
+              "end_shape_index": 539,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "Boulevard de las Bellas Artes"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left to stay on Boulevard de las Bellas Artes.",
+              "verbal_transition_alert_instruction": "Bear left to stay on Boulevard de las Bellas Artes.",
+              "verbal_succinct_transition_instruction": "Bear left. Then Bear left onto MEX 2D.",
+              "verbal_pre_transition_instruction": "Bear left to stay on Boulevard de las Bellas Artes. Then Bear left onto MEX 2D.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Boulevard de las Bellas Artes"
+              ],
+              "bearing_before": 250,
+              "bearing_after": 224,
+              "time": 4.387,
+              "length": 0.047,
+              "cost": 21.307,
+              "begin_shape_index": 539,
+              "end_shape_index": 542,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left onto MEX 2D/Via de la Juventud Oriente.",
+              "verbal_transition_alert_instruction": "Bear left onto MEX 2D.",
+              "verbal_succinct_transition_instruction": "Bear left.",
+              "verbal_pre_transition_instruction": "Bear left onto MEX 2D, Via de la Juventud Oriente.",
+              "verbal_post_transition_instruction": "Continue for 1 kilometer.",
+              "street_names": [
+                "MEX 2D",
+                "Via de la Juventud Oriente"
+              ],
+              "bearing_before": 213,
+              "bearing_after": 186,
+              "time": 60.196,
+              "length": 1.217,
+              "cost": 84.628,
+              "begin_shape_index": 542,
+              "end_shape_index": 562,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left toward Rosarito/Central Camionera.",
+              "verbal_transition_alert_instruction": "Keep left toward Rosarito.",
+              "verbal_pre_transition_instruction": "Keep left toward Rosarito, Central Camionera. Then Keep left to stay on Boulevard Lázaro Cárdenas.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Boulevard Lázaro Cárdenas"
+              ],
+              "bearing_before": 232,
+              "bearing_after": 237,
+              "time": 9.553,
+              "length": 0.193,
+              "cost": 20.383,
+              "begin_shape_index": 562,
+              "end_shape_index": 576,
+              "sign": {},
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on Boulevard Lázaro Cárdenas toward Rosarito/Central Camionera.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Boulevard Lázaro Cárdenas.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Boulevard Lázaro Cárdenas toward Rosarito, Central Camionera.",
+              "verbal_post_transition_instruction": "Continue for 2.5 kilometers.",
+              "street_names": [
+                "Boulevard Lázaro Cárdenas"
+              ],
+              "bearing_before": 257,
+              "bearing_after": 249,
+              "time": 137.039,
+              "length": 2.731,
+              "cost": 177.573,
+              "begin_shape_index": 576,
+              "end_shape_index": 658,
+              "sign": {
+                "exit_toward_elements": [
+                  {
+                    "text": "Rosarito"
+                  },
+                  {
+                    "text": "Central Camionera"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on Boulevard Lázaro Cárdenas.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Boulevard Lázaro Cárdenas.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Boulevard Lázaro Cárdenas.",
+              "verbal_post_transition_instruction": "Continue for 8 kilometers.",
+              "street_names": [
+                "Boulevard Lázaro Cárdenas"
+              ],
+              "bearing_before": 166,
+              "bearing_after": 167,
+              "time": 385.305,
+              "length": 7.709,
+              "cost": 532.037,
+              "begin_shape_index": 658,
+              "end_shape_index": 861,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 21,
+              "instruction": "Take the exit on the left.",
+              "verbal_transition_alert_instruction": "Take the exit on the left.",
+              "verbal_pre_transition_instruction": "Take the exit on the left.",
+              "verbal_post_transition_instruction": "Continue for 13 kilometers.",
+              "street_names": [
+                "MEX 1"
+              ],
+              "bearing_before": 259,
+              "bearing_after": 256,
+              "time": 661.535,
+              "length": 13.469,
+              "cost": 864.712,
+              "begin_shape_index": 861,
+              "end_shape_index": 1257,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Calle Dátil.",
+              "verbal_transition_alert_instruction": "Turn right onto Calle Dátil.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn right onto Calle Durazno.",
+              "verbal_pre_transition_instruction": "Turn right onto Calle Dátil. Then Turn right onto Calle Durazno.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Calle Dátil"
+              ],
+              "bearing_before": 169,
+              "bearing_after": 260,
+              "time": 14.737,
+              "length": 0.138,
+              "cost": 25.4,
+              "begin_shape_index": 1257,
+              "end_shape_index": 1259,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Calle Durazno.",
+              "verbal_transition_alert_instruction": "Turn right onto Calle Durazno.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Calle Durazno.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Calle Durazno"
+              ],
+              "bearing_before": 259,
+              "bearing_after": 349,
+              "time": 20.599,
+              "length": 0.153,
+              "cost": 56.59,
+              "begin_shape_index": 1259,
+              "end_shape_index": 1262,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Privada Piña.",
+              "verbal_transition_alert_instruction": "Turn left onto Privada Piña.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Privada Piña.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Privada Piña"
+              ],
+              "bearing_before": 349,
+              "bearing_after": 260,
+              "time": 18.235,
+              "length": 0.108,
+              "cost": 36.08,
+              "begin_shape_index": 1262,
+              "end_shape_index": 1267,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Privada Manzana.",
+              "verbal_transition_alert_instruction": "Turn right onto Privada Manzana.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Turn right onto Privada Manzana. Then Your destination will be on the left.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "Privada Manzana"
+              ],
+              "bearing_before": 352,
+              "bearing_after": 83,
+              "time": 5.987,
+              "length": 0.031,
+              "cost": 15.851,
+              "begin_shape_index": 1267,
+              "end_shape_index": 1268,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 83,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1268,
+              "end_shape_index": 1268,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 32.364107,
+            "min_lon": -117.163879,
+            "max_lat": 32.724218,
+            "max_lon": -116.938254,
+            "time": 3976.382,
+            "length": 63.791,
+            "cost": 4967.771
+          },
+          "shape": "_zxk}@xf}m~E@vE@bM@`EBjW?`DsAlFYjAkAfS?xE@|J?jA@|D?dE@nj@?n@?vCyB?w_@JkQBo@Bw@?kA@gA?wA@kC?o@@iA?{HBc_@JeA@mEvA}F?yW@uTNgD?OGyDoAkDB{c@VcOHe@?gED}CBeM?aPBkGBmK@eA?sA@aB?oD?kMBcH?gG@mG@gG?aD@u@?eKDgDDeRPkFByCwDOUsBkCs@cBW{AM{AC}AA{AZ_Eb@_E|Bg^iBkJhAeH|BcU|AaYP{IHgJ?wIIwJq@sOiBiToAcKgCuP}BuKsBeJwGkVyO{f@cJeYkFeRaFsTmCcPcC{RoAkPaAoQeD}w@oC}m@wFeoAc@aX\\yVz@eTnCmS~BgMnDsPfG}S|EmMtGsMpJ_NvEcIhIeKdIoHjIsGdHcFvGoErGwD~FiDnPaJrW}LzKwE|LwE~PgGnR}FdUaG`SiEpLyBvMyBdQ{BhRiBdL_AhLy@vKe@bLY|DGvDE`b@OtPCrK?rk@GtfAJ~PGh|CcAriBYh}AQvvB[`MAtJAjMG|MO`GQtGc@~Fk@fFq@pFy@`GiAzIaCrIuCj^gQhI}FfFoE`HkHbJkK~IqLbD{Eh^yk@fIgN~s@{jAfS}[zt@_lAdcAwaBvKeQl]qj@pZcg@zrAyrBnAiB~bB{lCrMgS|JgP`Qi`@rJiVzMki@~G}b@dBa_@`Beb@y@o~@c@ae@aC}jCZyo@fAg`@zDok@bGy`@hE_UxEsVxMmd@|Muc@dTcf@pZ{h@rWca@`SoYtOuWhRkY|\\ah@~C{EnrAmtBpW{b@xh@ay@xVq`@tXo`@jY_\\jRaTfj@ac@fYaR`\\yQdIkC~u@oYxgAc\\bq@uTlAY`sCut@~w@cVz\\wJhViHxRsDd\\yDnb@s@lUhAxTvAtUfCrLxBnKbBzb@hMzgCxaAbg@xMrMjB|QfD~O`CxXhB|{@~AxNFz`@_CpfAwKjiBae@`d@wMnPoFlT}GrT}Gjf@yObmAi_@npCsx@t[iKvh@iPdc@iMdaBgi@|tAqd@jv@eVps@qXhc@sNfrBgp@npAea@bEsAhv@qVdoBci@rOqDbd@mKpzDg}@f|AkYlj@}N`e@qNvkB}l@vH_CrU{G~fCit@jsCoz@ndAkZfa@mL|{J{vCr{A_c@xfCat@r^_KzvDy~@bQaF|j@kM|UmDj]uDxk@}C|u@oEpcI_g@naAkEhqBqKhcFkZbbDgSriC}QhlCiPncD_VvYeAzv@aHpw@eHrj@gEls@cG`i@mEl^oDzAMpr@qG`i@mEl^iCto@gCpf@sAvcA_Cvp@}Bln@kGvJsAfYkFpi@sNvRwFpr@y[jf@cW~SeNjo@ci@thCwlCxNaOxe@y`@vWqTpi@cd@hyBsyA|c@eZdbBslAfzCc~A`cBabAnPcPxNsVvHqV~EwXnC}Z?gQsBiZmBkKw_B_jH{Jye@}AyGiEoQwA}GwBcKiDkT_CyOoB_P}Ck]_@iFiAcSm@{Ls@iWUoWByf@t@unCCo}BJkQJab@BkZLquALwtAPy~@Jca@l@eqBTe~CdAolCM}~@x@ogGN}gAMctNmA}t@q@qUiPaeGsHy{BE{Cu@og@GmRl@{a@nA{_@xCc`@|Ewc@rJgl@nR}y@vW_fAnh@yxBfMgj@|Kif@bEsTjC{QjDg[rCi\\bBoYfAmXb@e[[g[iK{pDyLgpDaA}q@C__@l@sQjCsb@~@}LjAsK~Iso@~EyVlKeb@tiA}_EbLyg@|Hko@bAoM~@aQh@sSHcWY}WqBy`@a_@kmEgEkw@iCiy@?{OAk`AzB{}@hE}_A~Ees@lEmo@pEg~@fCee@lB{d@jA}l@b@ul@rAyqLRqeBBo|DA}hAJidAt@egHAke@NuyARkvDCy{@l@ydGfBil@l@iN|@kRhDa`@`Kew@`Sc_AbXg{@z`@a}@fQu[lRs[bXm]hOwPlIiJ~ZsYb[eWrJ}HzLgKji@of@`bDkvCp_@m[lr@u`@hVuJ`UsG`V{E`UcDre@kCpSS|WWrFXjCLnKTvq@mEvLo@zKo@bBMzBMxQu@hCs@fFiD|BsBpCyBzCqApE_ArVqAt\\_Cj^qDfDYrCSdLw@n`@yBrG_@zMu@jMs@jTiAzHc@zEQh[f@jAEpAA`Y@nd@Nn`@EzENnBR~AdAfBdCnAhD~@fDd@xCd@vGXtDzAfSBn@h@nAv@x@vAd@lAjQx@r\\~@d`@`@nM^bL~Bdt@lBb_@hC`x@a@jRM~BgMztBo@hLqAdR]jFMtBWtDqAlo@EdDD`BDpAN|AVzAV`AZ~@\\n@lFzGdCzB`H|EftBrNz_ArGreDhWtiCtT`CV|AHzV|Afd@zB`PxAfEp@dEfAnDlAjFxB|CdB`DzBvBbBlDhDnEzF|D|FvVtc@|FtMlAdFp@nDf@fEXfEPzCH|DBhCHlOJzJRtIf@|If@zFfAvIhAhG|AjFtBhF~AhDryA`zCvGnNlBlDx@hBvB~Evd@t}@`JnRfC|F~Znn@pLzWj_@`w@xMhXhHxM`NpSvZfe@hNhTnJ~KbKfJ`MbHfKrDzLlCnM~@|JCjK]bNgBhU}DfWmE~Jq@`M?zJnAvI|A~IbD|HbEtLjIfXxThRvO`IbFrHpC`N`CjNzAx\\lDrRtA`[nAxGJl}@xA|b@ZpSXrKAt@E~AGrDUpDg@hFaAzCo@`BWtKqBlKwBvJeC|EiAjEq@fCWdCIhLE|IBbJPnD?jDC|CS~EaAfIuBvVeH`F{Axt@mSnEgAng@sPjh@aPlCk@hSeEz|@{O`I}ArNoCdW_FbZyEjRsDnKsB`n@iKvE}@pFkAhGgAjIeAxLaAhL?nJHrKx@xKpBnHzBlNpE`P~Jv[jTbNtJtN`LzIdGdWxPzVdQvRpOrTzPlCpCrK~HxLpJbKfIdEdDpKdGhc@j]hHtFrSzOp^nXfAfAvU`QhBrA~IrGlGzEzGbFlNjK|GdFlSxOfCjBdP`MpShOnNjKdFfEl@f@bD|B~Y`Tjb@lZfGhErOfL|NjK`TnMrK`Hr`@zYbWbSjRdNjb@`_@dKxIlMlMj_@j_@xWbZjMhSrJlTvHpT`Lxc@lDnNhE~PlF`TjBlHjEpQ|EdUbc@jlBhCxJ~J~a@bAnErNno@~Ohs@jIvZhKl^jPr`@lR~[`VjZle@nd@fC~B|`@d_@zGjGtgArbAtH`Hp~@|aApAvA|HlId@n@fGnGpFfGx@~@fDvD`^`a@xRvTlCxChS`UlGbH~jArqAdWtXroAboAff@fa@~\\jUfQlOfIfI~IrJjQnTxS`ZlX|^vFrHfIlLfMrRte@`v@~IvNrExHbExI~ClIlEtMrN|`@nBjFvBtDrC`E`DrDhGxFrNvLtI~G`JhH~FpFpD~DlF|HlG`J`PzUlB~B`Wz`@tLvRvH~LvMbSpCxGxBxGpBzHpAjG|@bGp@fHT`JLhMWnJaAbJ{BrMuJ|^iItXaSpp@oGhVoLtb@{Ht[}@nDuDtR_BbLs@nHe@`Fe@dM_@rf@j@hYlBdZ|C|WtFvX~G`W~Qjd@jL`TzIfMzDjE`GlGrIhI|HdGtGvEvF~CvG`DjGfCd_@fL|_@|LpOpFnKlFpE~BjLhIxInHlJzJlGrIhJ~NdHjOnExL~Ht]v@tJ~NrbBnA~Hp@pI`Cp^xArNpBdKvEpQnEhMtC|I`FtNxAtDvDvG`FhHrIfJrN~QfJzKhGtE|IzEx[fN~PbHdXpKh[~Nxm@pUrG|Fz\\zLtNhGbMpF`YdMdJzEdLjG|zAry@~R|K|NbHjPvGhHlBtGpAlKnB`L~AnFZbLp@|Ll@|Y|@rMX`FL`GNt]~@nLd@fKf@|Hh@hIbArGfAjHnAvIlBrRnFlV|H|XtIdm@nTvtAl`@zb@nJ~NzBxKxAzQxBvOvAzH`@lZrAzMf@bKb@`GNpUr@hMj@zh@rB~o@`CbXfA|f@dBj^hAzYNlPKfL]nMm@`LiBtI}BtNyE|GuCzFuChGkD|G{E`PgN~KoKpIkIvJoKtNyOfO}OtNoNrN}MdMuMxN_O|PiPnI}HlE}DhG}DzEmCnHcD`GcCjIuB|FqArL_BdJi@jMQfMDbI`@|Gj@pFz@`IjBdFvAvG|CzHnDhPjKlOdK`QpLlNhJpO~JpFpC~ExB~D|AhGtBpElApFpAnGlAnGbAhHx@tI\\nI\\pLVbY~@h_@h@hYz@b_@dAzNb@xUr@bRp@nIZhGRzYbAvUt@~WjArHf@lK~@bJlB`ShF~GpChKfGfNvK|L|LzT~XhIfKhXtZvKpJ`NxKjIfFtJvGbMzGlKhFvNrFvOxFzf@nSxYdO`NrJhDdC|KfK~I`KhJvLlHzLvFjJfK|RnIlQpKtWhHlWrLnd@fJn^tE|T|CpSlCtR|BrThElr@xBp_@x@bMlAnNdBlNfChMvCnKpDjKzEpJdGlItEnFtEfFtFlEtGjEhPlK|g@~ZpQ~Ld^pTj\\`SbVhOdS|MjRlNnEnElEjExPrRxHjKzOtUfOfS`LvMhOpQjYr`@dJtN`JlNfL~RzPb]fNtYhJnS~K`RlEpF|ElF|IpIdFjDfIpGj]xWz]zXlPvLtOjLdTnO~UxPl]|UxZvQj]vRt_@vSrb@bVv^bSbWdO~IfFlStJ`EnBzIfDdRfH~RxHtCfA|UxIb[vL`JjD~ClArLhEpDpAfGvBxDxA`KrD~JrDhZbLdG~BnWxJ|FvB~EhBhOzFx^hMrYbLhS|GpJbDnTdI~FfCzLrFxP`KtWjLpXzNbv@dd@`DdB`ZtQfGvDjOjJfE|BvRjLlObJnHlElEhCdPjK`BfAtq@jc@hGtDfLbHhHjEzHtDdDtArQrGnJvCfYtGtTdEh\\~HlK~AdGhAp`@jHr]rGhDl@r]pGhYhF`LtBfe@vJno@rMvDv@l\\tGzg@jKpXrFzGrAjXbG~RvCzRtDxX`FbAJjb@vDdUvAv`@rBrq@tAjQT`EFpm@fBxYz@lPf@nHRbGNxi@nAjkDrJrSb@zW{@|BIxIe@rJo@nOiBl`@oDnJcB~JgApMi@|GIzJh@fGd@~Fj@`Fz@zDr@bEz@bHfB`HpBfIdCtH~BrIbEfRxK`NnI|EnDnJfG`PzJjiArp@`q@b\\jVpI^FvKrDpZjMxIfDpCbA`H`DlD|AlZxMxHfDlItCvIrBvJnAhHt@nFDvK[`NqApG{@xX{DvT_DXEzMgB`MyA`NaBrQwCtLoBjDk@hH_AjSiCxGeA|WoDpBWfFq@td@iGfGs@jRmC`UwCpB[pK_Bf\\{EhBhUdJfcA}ZpE{[pEk[fEbD|`@Bv@If@WVyZjC_AyS"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 32.364107,
+        "min_lon": -117.163879,
+        "max_lat": 32.724218,
+        "max_lon": -116.938254,
+        "time": 3976.382,
+        "length": 63.791,
+        "cost": 4967.771
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  },
+  "httpBodyMs": 33.03516700000182,
+  "bytes": 16709
+}

@@ -1,0 +1,311 @@
+{
+  "commands": {
+    "hostRoutingTests": "npm run test:routing",
+    "focusedDevelopmentTests": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s routing -p targeted_evidence_test.py -v",
+    "linuxRoutingTests": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test cache_lifetime_test range_hash_test member_lookup_test targeted_evidence_test",
+    "adapterTests": "npm test",
+    "biome": "npm run check",
+    "typecheck": "npm run typecheck",
+    "build": "npm run build",
+    "parity": [
+      "npm run routing:evidence -- --case downtown-v2",
+      "npm run routing:evidence -- --case corridor-v3",
+      "npm run routing:evidence -- --case wide-v3",
+      "npm run routing:evidence -- --case hour-v3"
+    ],
+    "evidenceAnalyzer": "python3 -B docs/evidence/routing-source-evidence-2026-10-18/analyze.py"
+  },
+  "results": {
+    "hostRouting": {
+      "total": 140,
+      "passed": 131,
+      "skipped": 9,
+      "exitCode": 0
+    },
+    "linuxRouting": {
+      "total": 49,
+      "passed": 49,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    "adapterTests": {
+      "total": 14,
+      "passed": 14,
+      "exitCode": 0
+    },
+    "check": {
+      "exitCode": 0,
+      "files": 78,
+      "existingWarning": "src/db/index.ts non-null assertion"
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0,
+      "warnings": "Existing MapLibre chunk size and upstream TanStack module directives"
+    },
+    "parity": {
+      "cases": 4,
+      "exactArtifacts": 24,
+      "freshDistinctSourceEvidenceFixtures": 11,
+      "sourceSuccessCases": 5,
+      "sourceFailureCasesMatched": 6,
+      "freshDistinctImporterFixtures": 17,
+      "fixtureFullCostComparisonsPerWorker": 296,
+      "fixtureBoundedCostComparisonsPerWorker": 888,
+      "exitCode": 0
+    },
+    "analyzer": {
+      "exitCode": 0
+    }
+  },
+  "preservation": {
+    "preExistingFilesChecked": 176,
+    "allFingerprintsMatch": true,
+    "newRecipeFilesFrozen": 5,
+    "environmentValuesReadOrChanged": false,
+    "envLocalIgnored": true,
+    "stagedFiles": 0,
+    "localDocLinksChecked": 168
+  },
+  "tooling": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "node": "v24.5.0",
+    "npm": "11.6.0",
+    "hostMemoryBytes": 17179869184,
+    "cpu": "Apple M4",
+    "freeDiskBytesAtMetadataCheck": 236400500736,
+    "dockerVersion": "28.3.3",
+    "dockerResources": {
+      "memoryBytes": 8218034176,
+      "cpus": 10
+    },
+    "valhallaState": "running healthy",
+    "toolsImageId": "sha256:6652906bfea590161b144a6e4fac146a41e14cbafae581dcb9e38c74ceaa53a7",
+    "readerImageId": "sha256:025ebba8267c0aad21bc4cb52b40c4726b65a13a1ebe66b8642df5495261ddd5"
+  },
+  "initialFreeDiskGiB": 221.16487884521484,
+  "freeDiskBytesAfterWorkloads": 235330650112,
+  "retainedParitySeriesLogicalBytes": 2086382246,
+  "scope": {
+    "publicApiCalls": 0,
+    "downloads": 0,
+    "freshRegionalSearches": false,
+    "regionalQualificationReusedOnIdenticalBytes": true,
+    "newLargerGraphBuilt": false,
+    "largerGraphAdmitted": false,
+    "browserContourOrHttpTiming": false,
+    "appHostedDrivingCapMinutes": 60
+  },
+  "notes": [
+    "Linux test scope avoids compiler-dependent tests because the cached reader has no C++ compiler; host compiler tests pass.",
+    "No approval-review rejections; Docker, test IPC and host hardware metadata needed sandbox exceptions.",
+    "The existing Valhalla service reports running healthy.",
+    "No old data, recipe or failed attempt was overwritten.",
+    "Base construction sets the current cumulative container peak; worker RSS rises slightly despite the lower complete container peak."
+  ],
+  "evidenceArtifacts": {
+    "adapter-tests.log": {
+      "bytes": 1489,
+      "sha256": "351faf1b37a32a6049aa7ee58d9a5402befdb53628b0c40b11bb56cf0f4e5e22"
+    },
+    "analyze.py": {
+      "bytes": 11089,
+      "sha256": "509df66758515292b63e366eaf633bf5ec3e47402c4ea1aae604f8f64dc8eb04"
+    },
+    "build.log": {
+      "bytes": 19732,
+      "sha256": "67eedafca86e288f3bda4de6664e91721b067a3a3b7febb417d07ceaf3e976d5"
+    },
+    "check.log": {
+      "bytes": 536,
+      "sha256": "e358c371cb62b1fbf4888e172f50abdd789c93fae845b874a2c940d8e8773a56"
+    },
+    "commands.json": {
+      "bytes": 1370,
+      "sha256": "f224d566d9c34935ee7314ed1305556fc25c1e936b22ffc35ba5a92644b98ac3"
+    },
+    "comparison.json": {
+      "bytes": 6738,
+      "sha256": "e2bf0fbea41f57ba6564535a29d808cbace57172954de85e852a370a22eca6a5"
+    },
+    "corridor-v3.log": {
+      "bytes": 2862,
+      "sha256": "1f151fa36882f0835dc68bb210687d88dbbc538955645aa22432c74a2ce7b2e0"
+    },
+    "downtown-v2.log": {
+      "bytes": 1941,
+      "sha256": "3ef500b5e98093ec1f97fac146e9e1531e1888793ac81c0bf76bdce4aac2efb7"
+    },
+    "frozen-native-verification.json": {
+      "bytes": 154483,
+      "sha256": "5afed813ac6087bcfa23f2c9821a40a3524d87403a5683bb4aff279e78557efa"
+    },
+    "frozen-qualification-report.json": {
+      "bytes": 12036,
+      "sha256": "b96594c8964c33b82ca08e1c6bb78dd711124df50a0165c894a50c50a10279ea"
+    },
+    "host-routing-tests.log": {
+      "bytes": 352,
+      "sha256": "5b454e1ad1213f503e7cec0673c1b7b23fafccb72e6581cebc4b1d3e033832f9"
+    },
+    "host-tooling.json": {
+      "bytes": 549,
+      "sha256": "56fea7e3075271c417644a6eb04108606d46f1e2b803f3770ca0bd8f9b5f0f19"
+    },
+    "hour-v3.log": {
+      "bytes": 3824,
+      "sha256": "e8924532e0c9b1000a5e3dc696380b85ad6919f8acbf4bd07e0147a601ea7bb5"
+    },
+    "linux-routing-tests.log": {
+      "bytes": 148,
+      "sha256": "20873568f6c2fe11db99ca96dae95b02cd84f8011de61f5a3aea2ac834d7a485"
+    },
+    "members-corridor-v3-manifest.json": {
+      "bytes": 6682,
+      "sha256": "413c0abb15e8ad1a6e97091440debacd5b17ff65073ddeb3942a7888b62c3e49"
+    },
+    "members-corridor-v3-report.json": {
+      "bytes": 37799,
+      "sha256": "ef1cc0bdae452822245cda123369ece0acc86ba89b744213b9d4af8fed9a7116"
+    },
+    "members-downtown-v2-manifest.json": {
+      "bytes": 6063,
+      "sha256": "eafed437464634c07317275762955bbf4e6e5798eb23760114d0ba0b94c1494f"
+    },
+    "members-downtown-v2-report.json": {
+      "bytes": 31596,
+      "sha256": "81f30ad5e7ee2b1889480c43bd99c7c546ccddc8256baa5849b62b225ca6d244"
+    },
+    "members-hour-v3-manifest.json": {
+      "bytes": 9799,
+      "sha256": "8d8d200bdb91b202e10e3d8873573347ae8ae7db2299a1255112af0a47ecb1a7"
+    },
+    "members-hour-v3-report.json": {
+      "bytes": 50607,
+      "sha256": "d80cdafee57f30645608c6b55909e6ae8afa37a927945c1cca8fc4ea813dad6b"
+    },
+    "members-wide-v3-manifest.json": {
+      "bytes": 6834,
+      "sha256": "b166616b9549d2800ac591f62f0c9dbec971893ccfd80e8810715860391c24a0"
+    },
+    "members-wide-v3-report.json": {
+      "bytes": 47477,
+      "sha256": "c43cd13ed280b7fccf2948fd1e1ee5d37401b0bdf708264f8d756a2d903b6679"
+    },
+    "new-recipe-sha256.json": {
+      "bytes": 475,
+      "sha256": "47ab3e93c1a0866c26b9e82ac5034ab645334a0d5c5a157cb475d3b2617b9e1a"
+    },
+    "preserved-sha256.json": {
+      "bytes": 17580,
+      "sha256": "34af05bbf358cd9ccffa4391a2314da0e20e2c2a771ddfc37052834bb717778f"
+    },
+    "qualified-corridor-v3-manifest.json": {
+      "bytes": 3636,
+      "sha256": "a3841000945270f6a7873395aca7cf7df309e9ed3f3d3e36522f2938aacb5f57"
+    },
+    "qualified-downtown-v2-manifest.json": {
+      "bytes": 3017,
+      "sha256": "acfce7b74cee07121fb979f6a30a2f03ee3df58cef697aec7d9df0e2b8dcb7eb"
+    },
+    "qualified-hour-v3-manifest.json": {
+      "bytes": 9192,
+      "sha256": "5dab6234629eb4166472f715fa03b98e737032e62badfd0caca437f5b6888b6d"
+    },
+    "qualified-wide-v3-manifest.json": {
+      "bytes": 3788,
+      "sha256": "132ebec88ff14eef871bd18648a6a4dbd896bb2a95126c1e333933b28a6ed9ff"
+    },
+    "targeted-corridor-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "targeted-corridor-v3-fixture-parity.json": {
+      "bytes": 11141,
+      "sha256": "39a32232116f2ce6333d77485e8c928f1327d03eb0016a0f133a30872e1591be"
+    },
+    "targeted-corridor-v3-manifest.json": {
+      "bytes": 7251,
+      "sha256": "56694a321eff8aa5438a2d908d44314ddd00dfc8364e53365c524990976253f1"
+    },
+    "targeted-corridor-v3-report.json": {
+      "bytes": 48271,
+      "sha256": "e3fdf70fb0a6abe5e823cb3a667c2c94c3e287ab1fb3d1423bc867949fe62a1b"
+    },
+    "targeted-corridor-v3-run-identity.json": {
+      "bytes": 6145,
+      "sha256": "fe0cb56e2880b38cc4d2772537ecd1b21c9482ba6b4ccc545986091fc67c58e0"
+    },
+    "targeted-downtown-v2-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "targeted-downtown-v2-fixture-parity.json": {
+      "bytes": 11141,
+      "sha256": "39a32232116f2ce6333d77485e8c928f1327d03eb0016a0f133a30872e1591be"
+    },
+    "targeted-downtown-v2-manifest.json": {
+      "bytes": 6632,
+      "sha256": "af9b44a2622ed2d516ebb6760ced369cfec6876d6655ea08da311065638f35dd"
+    },
+    "targeted-downtown-v2-report.json": {
+      "bytes": 33223,
+      "sha256": "5ac33a0e0684827cf469e811ec6c5910102560bcb5cb664352c3484c26bac7f0"
+    },
+    "targeted-downtown-v2-run-identity.json": {
+      "bytes": 5766,
+      "sha256": "baafcefaa25af0c5b59e1c2e0a65da379e28f39882792b6e5a180b71bd28af24"
+    },
+    "targeted-hour-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "targeted-hour-v3-fixture-parity.json": {
+      "bytes": 11141,
+      "sha256": "39a32232116f2ce6333d77485e8c928f1327d03eb0016a0f133a30872e1591be"
+    },
+    "targeted-hour-v3-manifest.json": {
+      "bytes": 10368,
+      "sha256": "400f5c9089f3c0b95119c8d9d6dd0114b54ef4a7350bde7316a5ab0428a7ec3f"
+    },
+    "targeted-hour-v3-report.json": {
+      "bytes": 65505,
+      "sha256": "33d14fca6de607ed3c3c216ea56738326ed4f5399973903114ab3b451bd9b8a1"
+    },
+    "targeted-hour-v3-run-identity.json": {
+      "bytes": 9134,
+      "sha256": "c500c541d15f8d8ea88f9e661e371f6865dc7f1fe045d77ed4660b29fea1ff16"
+    },
+    "targeted-wide-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "targeted-wide-v3-fixture-parity.json": {
+      "bytes": 11141,
+      "sha256": "39a32232116f2ce6333d77485e8c928f1327d03eb0016a0f133a30872e1591be"
+    },
+    "targeted-wide-v3-manifest.json": {
+      "bytes": 7403,
+      "sha256": "0bbeb2ee12e6b3e1ee8c829579d586de5df2ab92668963074dfb4c52c9ef4f59"
+    },
+    "targeted-wide-v3-report.json": {
+      "bytes": 62396,
+      "sha256": "2869e60a6a313d36f1d36da7abe4fedf3eb919e039bc65a22ab4cc22010e1022"
+    },
+    "targeted-wide-v3-run-identity.json": {
+      "bytes": 6171,
+      "sha256": "efaec9f586a9e8231ecc1cca01526b9dc53f6cad32e30368f0852538c751e1bc"
+    },
+    "typecheck.log": {
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "wide-v3.log": {
+      "bytes": 3745,
+      "sha256": "3cf8a84691c34bd29f1f6d2d5ff3f3748ccd4d3deb0c10390d5252becaeef16e"
+    }
+  }
+}

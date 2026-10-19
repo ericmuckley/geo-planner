@@ -1,0 +1,401 @@
+{
+  "createdAt": "2026-10-16T17:30:10.841Z",
+  "manifestId": "malta-20261014-v1",
+  "origin": {
+    "lat": 35.8989,
+    "lon": 14.5146
+  },
+  "protocol": "Sequential localhost requests; first sample per budget retained separately, five subsequent samples; no page-cache flush, no isolated graph-search measurement. Route membership is a smoke check against the same engine, not an independent optimality proof.",
+  "status": {
+    "version": "3.9.1-7fd2228e5",
+    "tileset_last_modified": 1792171030,
+    "available_actions": [
+      "route",
+      "locate",
+      "sources_to_targets",
+      "optimized_route",
+      "isochrone",
+      "trace_route",
+      "trace_attributes",
+      "height",
+      "transit_available",
+      "expansion",
+      "centroid",
+      "status",
+      "tile"
+    ]
+  },
+  "config": {
+    "configured": true,
+    "maxMinutes": 60,
+    "graphVersion": "malta-20261014-v1",
+    "engineVersion": "3.9.1-7fd2228e5",
+    "coverage": "Malta and Gozo source extract; sea and ferry/source boundaries apply; completeness unverified",
+    "coverageBounds": [
+      13.815377,
+      35.51985,
+      14.856099,
+      36.332958
+    ],
+    "health": "ready",
+    "checkedAt": "2026-10-16T17:30:10.048Z"
+  },
+  "timings": [
+    {
+      "minutes": 15,
+      "repetition": 0,
+      "engineRoundTripMs": 110.38904200000252,
+      "decodeValidateMs": 2.8206669999999576,
+      "serverTotalMs": 113.99925000000076,
+      "httpBodyMs": 122.272917,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 15,
+      "repetition": 1,
+      "engineRoundTripMs": 70.01004199999807,
+      "decodeValidateMs": 0.5593750000007276,
+      "serverTotalMs": 70.7815840000003,
+      "httpBodyMs": 75.36195900000001,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 15,
+      "repetition": 2,
+      "engineRoundTripMs": 43.69745799999873,
+      "decodeValidateMs": 0.4549169999991136,
+      "serverTotalMs": 44.3760829999992,
+      "httpBodyMs": 50.77658300000007,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 15,
+      "repetition": 3,
+      "engineRoundTripMs": 41.6026660000025,
+      "decodeValidateMs": 0.43479200000001583,
+      "serverTotalMs": 42.18645900000047,
+      "httpBodyMs": 46.47529200000008,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 15,
+      "repetition": 4,
+      "engineRoundTripMs": 34.98595800000112,
+      "decodeValidateMs": 0.42937499999970896,
+      "serverTotalMs": 35.60662500000035,
+      "httpBodyMs": 41.19262500000002,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 15,
+      "repetition": 5,
+      "engineRoundTripMs": 30.61870799999815,
+      "decodeValidateMs": 0.33650000000125146,
+      "serverTotalMs": 31.082957999999053,
+      "httpBodyMs": 34.87654199999997,
+      "upstreamBytes": 26185
+    },
+    {
+      "minutes": 30,
+      "repetition": 0,
+      "engineRoundTripMs": 25.912790999998833,
+      "decodeValidateMs": 0.16520799999852898,
+      "serverTotalMs": 26.195874999997613,
+      "httpBodyMs": 29.86545799999999,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 30,
+      "repetition": 1,
+      "engineRoundTripMs": 24.93262500000128,
+      "decodeValidateMs": 0.17137500000171713,
+      "serverTotalMs": 25.28429099999994,
+      "httpBodyMs": 30.40862500000003,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 30,
+      "repetition": 2,
+      "engineRoundTripMs": 24.924582999999984,
+      "decodeValidateMs": 0.21112500000162981,
+      "serverTotalMs": 25.429292000000714,
+      "httpBodyMs": 36.09979099999998,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 30,
+      "repetition": 3,
+      "engineRoundTripMs": 24.02720799999952,
+      "decodeValidateMs": 0.18441700000039418,
+      "serverTotalMs": 24.40124999999898,
+      "httpBodyMs": 27.981583,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 30,
+      "repetition": 4,
+      "engineRoundTripMs": 23.013999999999214,
+      "decodeValidateMs": 0.19229099999938626,
+      "serverTotalMs": 23.343542000002344,
+      "httpBodyMs": 26.600499999999897,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 30,
+      "repetition": 5,
+      "engineRoundTripMs": 22.987583000001905,
+      "decodeValidateMs": 0.21808299999975134,
+      "serverTotalMs": 23.330416000000696,
+      "httpBodyMs": 26.037500000000023,
+      "upstreamBytes": 10515
+    },
+    {
+      "minutes": 60,
+      "repetition": 0,
+      "engineRoundTripMs": 21.448041999999987,
+      "decodeValidateMs": 0.08800000000337604,
+      "serverTotalMs": 21.672582999999577,
+      "httpBodyMs": 25.235000000000014,
+      "upstreamBytes": 4361
+    },
+    {
+      "minutes": 60,
+      "repetition": 1,
+      "engineRoundTripMs": 21.347666999998182,
+      "decodeValidateMs": 0.09270900000046822,
+      "serverTotalMs": 21.53479199999856,
+      "httpBodyMs": 24.57920899999999,
+      "upstreamBytes": 4361
+    },
+    {
+      "minutes": 60,
+      "repetition": 2,
+      "engineRoundTripMs": 20.20054099999834,
+      "decodeValidateMs": 0.24916599999778555,
+      "serverTotalMs": 20.59087499999805,
+      "httpBodyMs": 26.10779100000002,
+      "upstreamBytes": 4361
+    },
+    {
+      "minutes": 60,
+      "repetition": 3,
+      "engineRoundTripMs": 19.464332999999897,
+      "decodeValidateMs": 0.08650000000125146,
+      "serverTotalMs": 19.639125000001513,
+      "httpBodyMs": 22.75370799999996,
+      "upstreamBytes": 4361
+    },
+    {
+      "minutes": 60,
+      "repetition": 4,
+      "engineRoundTripMs": 22.422207999999955,
+      "decodeValidateMs": 0.2542089999988093,
+      "serverTotalMs": 22.87066699999923,
+      "httpBodyMs": 27.951416999999992,
+      "upstreamBytes": 4361
+    },
+    {
+      "minutes": 60,
+      "repetition": 5,
+      "engineRoundTripMs": 23.8840420000015,
+      "decodeValidateMs": 0.10162499999933061,
+      "serverTotalMs": 24.1340420000015,
+      "httpBodyMs": 27.58716699999991,
+      "upstreamBytes": 4361
+    }
+  ],
+  "routes": [
+    {
+      "name": "mdina",
+      "from": {
+        "lat": 35.8989,
+        "lon": 14.5146
+      },
+      "to": {
+        "lat": 35.8858,
+        "lon": 14.4031
+      },
+      "snappedStart": [
+        14.514489,
+        35.898831
+      ],
+      "snappedEnd": [
+        14.401845,
+        35.885886
+      ],
+      "minutes": 14.552683333333333,
+      "kilometers": 13.199,
+      "httpBodyMs": 27.37166699999989,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "marsaxlokk",
+      "from": {
+        "lat": 35.8989,
+        "lon": 14.5146
+      },
+      "to": {
+        "lat": 35.8417,
+        "lon": 14.5431
+      },
+      "snappedStart": [
+        14.514489,
+        35.898831
+      ],
+      "snappedEnd": [
+        14.543103,
+        35.841709
+      ],
+      "minutes": 13.500233333333334,
+      "kilometers": 11.093,
+      "httpBodyMs": 16.151207999999997,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "mellieha",
+      "from": {
+        "lat": 35.8989,
+        "lon": 14.5146
+      },
+      "to": {
+        "lat": 35.9564,
+        "lon": 14.3622
+      },
+      "snappedStart": [
+        14.514489,
+        35.898831
+      ],
+      "snappedEnd": [
+        14.362157,
+        35.956392
+      ],
+      "minutes": 25.264533333333336,
+      "kilometers": 23.415,
+      "httpBodyMs": 7.724875000000111,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    }
+  ],
+  "diagnostics": [],
+  "monotonicity": [
+    {
+      "lower": 15,
+      "upper": 30,
+      "stepDegrees": 0.025,
+      "lowerMembers": 17,
+      "missingFromUpper": 0,
+      "missingExamples": []
+    },
+    {
+      "lower": 30,
+      "upper": 60,
+      "stepDegrees": 0.025,
+      "lowerMembers": 38,
+      "missingFromUpper": 0,
+      "missingExamples": []
+    }
+  ],
+  "snaps": {
+    "15": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              14.514488,
+              35.898831
+            ]
+          ]
+        }
+      }
+    ],
+    "30": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              14.514488,
+              35.898831
+            ]
+          ]
+        }
+      }
+    ],
+    "60": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              14.514488,
+              35.898831
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "warnings": {
+    "15": [],
+    "30": [],
+    "60": []
+  },
+  "additionalOrigins": []
+}

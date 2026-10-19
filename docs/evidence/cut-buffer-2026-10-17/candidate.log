@@ -1,0 +1,66 @@
+
+> routing:coverage:next
+> node routing/buffer-preflight.mjs --case candidate
+
+validated: 0.83 s; cgroup peak 1180684288; anon 15872000; file 1160634368; swap max/peak 0/0
+fixtures: 0.83 s; cgroup peak 1180684288; anon 15872000; file 1160634368; swap max/peak 0/0
+completeWaysSelect: 24.14 s; cgroup peak 4294967296; anon 15921152; file 206176256; swap max/peak 0/0
+seedFilter: 25.73 s; cgroup peak 4294967296; anon 15937536; file 219144192; swap max/peak 0/0
+completeReferences: 50.85 s; cgroup peak 4294967296; anon 15958016; file 649031680; swap max/peak 0/0
+checkReferences: 53.58 s; cgroup peak 4294967296; anon 15974400; file 206270464; swap max/peak 0/0
+census: 67.48 s; cgroup peak 4294967296; anon 51539968; file 679989248; swap max/peak 0/0
+complete: 67.86 s; cgroup peak 4294967296; anon 51539968; file 829919232; swap max/peak 0/0
+{
+  "matchesFrozenXml": null,
+  "candidate": {
+    "sourceNodes": 2278632,
+    "insideNodes": 2274543,
+    "sourceWays": 456908,
+    "wayEligibleDirectedSegments": 2946180,
+    "supportedWays": 456879,
+    "supportedPhysicalSegmentsInside": 2417197,
+    "supportedBoundarySegments": 396,
+    "sourceRelations": 10053,
+    "candidateViaWayRules": 1762,
+    "historyPrefixCeiling": 3884,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 17212,
+      "motorway_link": 24104,
+      "primary": 111893,
+      "primary_link": 7331,
+      "residential": 1284473,
+      "secondary": 154013,
+      "secondary_link": 3577,
+      "service": 897217,
+      "tertiary": 295327,
+      "tertiary_link": 1702,
+      "trunk": 10570,
+      "trunk_link": 5029,
+      "unclassified": 127472
+    },
+    "roadStatesLowerBound": 2858813,
+    "roadStatesUpperBound": 2946180,
+    "historyStatesUpperBound": 2950064,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 30961664
+  },
+  "capacity": {
+    "ratios": {
+      "sourceNodes": 1.3785277921964783,
+      "sourceWays": 1.2119672039830556,
+      "wayEligibleDirectedSegments": 1.3737544990508803,
+      "historyStatesUpperBound": 1.3735077976303547
+    },
+    "scalingRatio": 1.3785277921964783,
+    "calibrationWorkerPeakBytes": 1349140480,
+    "workerEstimateWithHeadroomBytes": 2324784559,
+    "headroomFactor": 1.25,
+    "capBytes": 4294967296,
+    "workerEstimateFits": true,
+    "decision": "hold-for-import-export-accounting",
+    "fullGraphAdmitted": false,
+    "scope": "Input/state-ratio worker heuristic, not a bound. Prior complete-container export peak was near cap; measured preparation and worker estimates alone do not admit a full build."
+  },
+  "workerWallMs": 67859.47053199925
+}

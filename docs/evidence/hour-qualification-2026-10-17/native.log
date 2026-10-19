@@ -1,0 +1,15 @@
+
+> routing:compact:verify
+> sandbox-exec -f routing/native-network.sb python3 -B routing/compact_native.py --run-name hour-v3
+
+Native v3 qualified: san-diego
+Native v3 qualified: el-cajon
+Native v3 qualified: tijuana
+Native v3 qualified: san-ysidro
+Native v3 qualified: port-incoming
+{
+  "costComparisons": 136625580,
+  "membershipComparisons": 121444960,
+  "interiorDestinationComparisons": 2,
+  "publicApiCalls": 0
+}

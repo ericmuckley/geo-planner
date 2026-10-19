@@ -1,0 +1,65 @@
+{
+  "cutNodes": 337,
+  "boundaryNodesBySide": {
+    "north": 209,
+    "east": 80,
+    "south": 48,
+    "west": 0
+  },
+  "candidateBounds": [
+    -117.65,
+    32.0,
+    -116.3,
+    33.6
+  ],
+  "candidateCounts": {
+    "candidateViaWayRules": 1762,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 17212,
+      "motorway_link": 24104,
+      "primary": 111893,
+      "primary_link": 7331,
+      "residential": 1284473,
+      "secondary": 154013,
+      "secondary_link": 3577,
+      "service": 897217,
+      "tertiary": 295327,
+      "tertiary_link": 1702,
+      "trunk": 10570,
+      "trunk_link": 5029,
+      "unclassified": 127472
+    },
+    "historyPrefixCeiling": 3884,
+    "historyStatesUpperBound": 2950064,
+    "insideNodes": 2274543,
+    "roadStatesLowerBound": 2858813,
+    "roadStatesUpperBound": 2946180,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sourceNodes": 2278632,
+    "sourceRelations": 10053,
+    "sourceWays": 456908,
+    "sqliteBytes": 30961664,
+    "supportedBoundarySegments": 396,
+    "supportedPhysicalSegmentsInside": 2417197,
+    "supportedWays": 456879,
+    "wayEligibleDirectedSegments": 2946180
+  },
+  "capacity": {
+    "calibrationWorkerPeakBytes": 1349140480,
+    "capBytes": 4294967296,
+    "decision": "hold-for-import-export-accounting",
+    "fullGraphAdmitted": false,
+    "headroomFactor": 1.25,
+    "ratios": {
+      "historyStatesUpperBound": 1.3735077976303547,
+      "sourceNodes": 1.3785277921964783,
+      "sourceWays": 1.2119672039830556,
+      "wayEligibleDirectedSegments": 1.3737544990508803
+    },
+    "scalingRatio": 1.3785277921964783,
+    "scope": "Input/state-ratio worker heuristic, not a bound. Prior complete-container export peak was near cap; measured preparation and worker estimates alone do not admit a full build.",
+    "workerEstimateFits": true,
+    "workerEstimateWithHeadroomBytes": 2324784559
+  }
+}

@@ -1,0 +1,63 @@
+GEO PLANNER / RESEARCH WORKSPACE
+
+How far can you go?
+
+Explore driving reachability, one measured query at a time.
+
+Routing not connected
+Define a query
+Latitude
+Longitude
+Reset to San Diego
+Driving time · minutes
+
+Outbound · openrouteservice driving-car · provider defaults. Configured maximum: 60 minutes.
+
+Compute contour
+Save query
+
+Routing service not configured. You can explore the map and save queries now. Set the server-only ORS_API_KEY to compute US driving contours.
+
+Analytical layers
+Reachability contour
+Gas stations
+
+Awaiting OSM import
+
+Public-land overlap
+
+Awaiting PAD-US import
+
+Elevation >5,000 ft
+
+Awaiting numerical DEM mask
+
+10 mi
+MapLibre | OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+
+Click the map to set your origin
+
+OpenFreeMap basemap · online
+
+Run measurements
+No completed run
+Engine round trip
+—
+Decode & validate
+—
+Browser request
+—
+Source → map idle
+—
+
+Engine round trip includes HTTP, graph work, and contouring. Map idle includes source processing and outstanding map resources; it is not a first-paint measurement.
+
+Saved queries & runs
+
+Last 20 in this browser. Successful runs save automatically. Replay computes a new result with the current engine.
+
+Export JSON
+
+Save your first query to make it replayable.
+
+This is a research baseline. Filled contours approximate road-network reachability and do not establish access to every shaded point. Road-distance and combined-budget semantics, verified coverage, spatial layers, and shared PostgreSQL run storage are upcoming work.

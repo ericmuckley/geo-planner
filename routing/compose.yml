@@ -1,0 +1,28 @@
+name: geo-planner-routing
+services:
+  build:
+    profiles: [tools]
+    build: .
+    image: geo-planner-valhalla-tools:7fd2228e5
+    volumes:
+      - ${VALHALLA_DATA_DIR:-../data/valhalla-v2}:/data
+      - ${VALHALLA_SOURCE_DIR:-../data/valhalla/sources}:/data/sources:ro
+      - .:/recipe:ro
+    mem_limit: 4g
+    cpus: 2
+    network_mode: none
+    command: [/usr/bin/time, -v, -o, /data/build-resources.txt, bash, /recipe/build.sh]
+  valhalla:
+    image: ghcr.io/valhalla/valhalla@sha256:8d656eb79874acb39359425e470d8326f0e3aab95a88e4a5c294e9dfcea4cda4
+    ports:
+      - "127.0.0.1:8002:8002"
+    volumes:
+      - ${VALHALLA_DATA_DIR:-../data/valhalla-v2}:/data:ro
+    mem_limit: 2g
+    cpus: 2
+    command: [sh, -c, "test -f /data/build-complete.json && exec valhalla_service /data/valhalla.json 2"]
+    healthcheck:
+      test: [CMD, curl, --fail, --silent, "http://localhost:8002/status"]
+      interval: 10s
+      timeout: 3s
+      retries: 6

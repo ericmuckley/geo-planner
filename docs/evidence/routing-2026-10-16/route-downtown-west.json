@@ -1,0 +1,135 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      {
+        "lat": 32.7157,
+        "lon": -117.1623
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "units": "kilometers"
+  },
+  "data": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 32.7157,
+          "lon": -117.1611,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 32.7157,
+          "lon": -117.1623,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive west on East Broadway.",
+              "verbal_succinct_transition_instruction": "Drive west. Then, in 300 meters, Make a left U-turn onto West Broadway.",
+              "verbal_pre_transition_instruction": "Drive west on East Broadway. Then, in 300 meters, Make a left U-turn onto West Broadway.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "East Broadway"
+              ],
+              "bearing_after": 270,
+              "time": 21.869,
+              "length": 0.342,
+              "cost": 57.653,
+              "begin_shape_index": 0,
+              "end_shape_index": 21,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 13,
+              "instruction": "Make a left U-turn onto West Broadway.",
+              "verbal_transition_alert_instruction": "Make a left U-turn onto West Broadway.",
+              "verbal_succinct_transition_instruction": "Make a left U-turn.",
+              "verbal_pre_transition_instruction": "Make a left U-turn onto West Broadway.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "West Broadway"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 90,
+              "time": 20.213,
+              "length": 0.244,
+              "cost": 59.27,
+              "begin_shape_index": 21,
+              "end_shape_index": 34,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 90,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 34,
+              "end_shape_index": 34,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 32.715638,
+            "min_lon": -117.164735,
+            "max_lat": 32.715784,
+            "max_lon": -117.161085,
+            "time": 42.083,
+            "length": 0.586,
+            "cost": 116.924
+          },
+          "shape": "_zxk}@xf}m~E@vE@bM@`EBjW?`DsAlFYjAkAfS?xE@|J?jA@|D?dE@nj@?n@?vC?fG@r^?dI?x@?xExGC?kEA{^?kI?u@?sG?qCCg_@?iH?aB?iEAyDEy^"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 32.715638,
+        "min_lon": -117.164735,
+        "max_lat": 32.715784,
+        "max_lon": -117.161085,
+        "time": 42.083,
+        "length": 0.586,
+        "cost": 116.924
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  },
+  "httpBodyMs": 8.163416999999754,
+  "bytes": 2349
+}

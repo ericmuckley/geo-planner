@@ -1,0 +1,74 @@
+{
+  "recordedDate": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:compact:reload",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:compact:verify",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/compact-import-2026-10-17/analyze.py",
+      "exitCode": 0
+    }
+  ],
+  "pythonCases": 88,
+  "pythonPassed": 86,
+  "pythonSkipped": 2,
+  "skipReason": "Unchanged host Osmium integration cases; host lacks Osmium.",
+  "adapterCases": 14,
+  "adapterPassed": 14,
+  "biomeFiles": 52,
+  "existingWarnings": [
+    "src/db/index.ts non-null assertion",
+    "MapLibre bundle size",
+    "Upstream TanStack module-level directives"
+  ],
+  "compactParityCases": [
+    "downtown-v2",
+    "corridor-v2",
+    "corridor-v3",
+    "wide-v3"
+  ],
+  "largerGraphQualified": true,
+  "separateReloadRamCapBytes": 1073741824,
+  "graphBuildRamCapBytes": 4294967296,
+  "configuredSwapAllowanceBytes": 4294967296,
+  "swapObservationScope": "Cumulative current/peak zero at recorded live samples through final Otay oracle; swap not disabled, final small writes unobserved.",
+  "fullCostComparisons": 10695655,
+  "boundedCostComparisons": 85565240,
+  "nativeCostComparisons": 96260895,
+  "nativeMembershipComparisons": 85565240,
+  "partialDestinationsCompared": 2,
+  "publicRoutingApiCalls": 0,
+  "newDownloads": 0,
+  "agentChangedEnvironmentValues": false,
+  "manualGeneratedRouteTreeEdits": false,
+  "cloudDeploymentPerformed": false,
+  "complete60MinuteCoverageVerified": false,
+  "complete12HourCoverageVerified": false,
+  "originalBaselineServiceHealthy": true,
+  "temporaryExperimentContainersExited": true
+}

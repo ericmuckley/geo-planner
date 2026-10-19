@@ -1,0 +1,17 @@
+{
+	"id": "downtown-static-v1",
+	"bbox": [-117.18, 32.7, -117.13, 32.74],
+	"origin": { "lat": 32.7157, "lon": -117.1611 },
+	"landmarkCount": 8,
+	"holdoutCount": 8,
+	"budgetsMs": [30000, 60000, 120000, 300000],
+	"model": {
+		"id": "exploratory-static-car-v1",
+		"unit": "integer milliseconds",
+		"signalDelayMs": 5000,
+		"uTurnDelayMs": 20000,
+		"unsupportedRestrictionPolicy": "exclude member ways; if absent block member nodes; audit",
+		"boundaryPolicy": "retain segments whose endpoints are inside bbox; flag reachable cut exits",
+		"borderPolicy": "this downtown extract has no international crossing; national policy remains unqualified"
+	}
+}

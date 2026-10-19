@@ -1,0 +1,32 @@
+
+> test
+> tsx --test src/server/*.test.ts
+
+✔ local experiment is opt-in and disabled on Vercel without contacting any router (8.286334ms)
+✔ malformed budgets, coordinates and extra fields fail before reaching the worker (2.121916ms)
+✔ 90-minute request uses only fixed loopback worker and preserves truncation and separate timings (3.288042ms)
+✔ worker failures and invalid responses produce errors without fallback or retries (1.193666ms)
+✔ off-network origin failure is reported clearly without hosted fallback (0.290584ms)
+✔ health validates local graph identity and does not expose worker URLs or credentials (0.540542ms)
+✔ unconfigured service provides honest status without exposing the URL (15.105375ms)
+✔ malformed JSON and invalid semantics never call the routing service (2.304667ms)
+✔ app limits reject long-range queries before forwarding (0.439584ms)
+✔ declared regional coverage rejects unsupported origins before routing and handles the date line (2.88075ms)
+✔ routing readiness checks reachable isochrone capability and expected engine identity (0.451333ms)
+✔ an unreachable, malformed, or incapable routing service is not advertised ready (0.634375ms)
+✔ adapter sends static outbound time contours and preserves provenance, snaps, and warnings (1.331584ms)
+✔ upstream rejections and malformed polygons produce actionable errors (1.319209ms)
+✔ real Valhalla response retains input Point and snapped MultiPoint alongside polygons (9.305583ms)
+✔ timeouts and cancelled clients have distinct statuses (0.484166ms)
+✔ hosted routing exposes key presence without spending quota or claiming a live health check (0.329209ms)
+✔ hosted driving uses seconds and longitude/latitude, retaining returned provenance without Valhalla settings (0.709833ms)
+✔ hosted driving cap cannot be raised with local-engine settings (0.223ms)
+✔ hosted quota, access and malformed responses fail safely without retries or fallback (0.668333ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 193.946208

@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "result": "106 cases: 102 pass, four host tool/platform skips",
+      "log": "test-routing.log",
+      "logSha256": "55ee2b3d4da21b1e28b892a551e6ac40d11a91ca1e8f7f3b2a0a36c7b99fe445"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "14 pass, no live provider calls",
+      "log": "test-adapters.log",
+      "logSha256": "b2cc8adadf6bb08f02b3a77940f4f1014ddc9d48116faa46764ec030d0c3666e"
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=$PWD/routing,target=/recipe,readonly --mount type=bind,source=$PWD/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test",
+      "exitCode": 0,
+      "result": "15 pass, no skips",
+      "log": "test-linux.log",
+      "logSha256": "9f8b9d39c83db392dc5188fcd5ace7379ebc14498f060676343b26b4d89cf191"
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "result": "66 files; existing database non-null warning",
+      "log": "check.log",
+      "logSha256": "07e268cfdfbbcb9d9e51faf28230c9f7df7d84ef9c18d589d8d32095deb867e1"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "pass",
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "pass, existing upstream warnings",
+      "log": "build-app.log",
+      "logSha256": "6d758fa4f62876d27127dadd1aae419ec1481c5e8c50226b918acfeb0446c967"
+    },
+    {
+      "command": "npm run routing:increment",
+      "exitCode": 0,
+      "result": "admitted graph built under unchanged cap",
+      "log": "build.log",
+      "logSha256": "a32fe3ede862fd96978985c4561c9965f231cd31d83b883101648283c9fa834a"
+    },
+    {
+      "command": "npm run routing:increment:qualify",
+      "exitCode": 0,
+      "result": "five full/eight-budget fields, twelve routes, two independent partial sinks pass",
+      "log": "qualification.log",
+      "logSha256": "d5aa70bbdf7920ff847469e16fef9e4e8d618da4629b58c64b6bdf8d3a745cdd"
+    },
+    {
+      "command": "npm run routing:increment -- --stage rebuild",
+      "exitCode": 0,
+      "result": "all seven graph/audit/packed/source artifacts identical",
+      "log": "rebuild.log",
+      "logSha256": "2c1cc01534f42e596f9f7c874d9c3a124574e2ac70be5f23dc7c32e1ec986715"
+    },
+    {
+      "command": "npm run routing:compact:verify -- --run-name increment-v3",
+      "exitCode": 0,
+      "result": "249814320 cost/membership comparisons + two partial destinations pass",
+      "log": "native.log",
+      "logSha256": "c20beae97c07ee9573aa08e0b1e6af14e212a97f4755293c62b2cb6b5ed9ddeb"
+    },
+    {
+      "command": "npm run routing:increment -- --stage cuts",
+      "exitCode": 0,
+      "result": "309 nodes / 365 history states, zero missing source links",
+      "log": "cuts.log",
+      "logSha256": "7c9a7503415a579f14e11a57574099e12c70f628c871ee41db84cfaf50c1c4e3"
+    },
+    {
+      "command": "python3 -B docs/evidence/coverage-increment-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "result": "canonical identities, artifacts, every cut witness and route replay pass",
+      "log": "analyze.log",
+      "logSha256": "e53b2412dbd5ce766515156d9e5d1808c366eb90195d62f881cfb70a24b44432"
+    },
+    {
+      "command": "python3 -B docs/evidence/sparse-resource-2026-10-17/analyze.py",
+      "exitCode": 0,
+      "result": "prior admission/source/graph evidence remains valid",
+      "log": "prior-evidence.log",
+      "logSha256": "8b4350748436398f7c95a5aef0dcc8827bd0b319113870bebbef252efcbc1f56"
+    }
+  ],
+  "integrity": {
+    "preservedFiles": 118,
+    "allPreservedHashesMatch": true,
+    "stagedFiles": [],
+    "envLocalIgnored": true,
+    "packageLockPreserved": true,
+    "generatedRouteTreePreserved": true,
+    "freeDiskBytes": 258031202304,
+    "documentationFilesLinkChecked": 9,
+    "sourceExcerptCopiesVerified": true,
+    "existingValhallaContainerHealth": "healthy"
+  },
+  "linuxContainerPrefix": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=$PWD/routing,target=/recipe,readonly --mount type=bind,source=$PWD/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1",
+  "sourceGraphIdentity": "e8a6bc98cac1729637f73fd75a22519e7bcfc1f108d1207d7b7a286a09afb3a8",
+  "publicRoutingApiCalls": 0,
+  "newRoadDownloads": 0,
+  "newToolDownloads": 0,
+  "newApplicationDependencies": false,
+  "applicationSourceEdited": false,
+  "environmentValuesEdited": false,
+  "coverageVerified": false,
+  "realCrossingEligibilityVerified": false,
+  "completeSixtyMinuteCoverage": false,
+  "tenToTwelveHourCapabilityComplete": false,
+  "scope": "Build, Python qualification, rebuild and cut inventory use explicit 4 GiB/two CPUs/no-swap/network denial. Native verification uses the unchanged Mac compiler/kernel under network denial with observed RSS, not a Docker RAM cap. Some independent jobs overlap; these are individual wall-time/memory observations, not controlled cold-cache or CPU-only benchmarks. All host skips are covered by scoped Linux tests. The lightweight image lacks a C++ compiler; no full Linux discovery pass is claimed. Source access, border queues/delays and complete reachability remain unverified."
+}

@@ -1,0 +1,94 @@
+
+> routing:coverage:hour
+> node routing/hour-preflight.mjs --case candidate
+
+validated: 2.50 s; cgroup peak 860336128; anon 17022976; file 14483456; swap max/peak 0/0
+fixtures: 2.50 s; cgroup peak 860336128; anon 17022976; file 14483456; swap max/peak 0/0
+nodes10000000: 14.61 s; cgroup peak 860336128; anon 213417984; file 14831616; swap max/peak 0/0
+nodes20000000: 26.01 s; cgroup peak 860336128; anon 291491840; file 14864384; swap max/peak 0/0
+nodes30000000: 37.23 s; cgroup peak 860336128; anon 292847616; file 14901248; swap max/peak 0/0
+nodes40000000: 48.40 s; cgroup peak 860336128; anon 295555072; file 14974976; swap max/peak 0/0
+nodes50000000: 59.92 s; cgroup peak 860336128; anon 343523328; file 14860288; swap max/peak 0/0
+nodes60000000: 71.63 s; cgroup peak 860336128; anon 563658752; file 14839808; swap max/peak 0/0
+nodes70000000: 84.00 s; cgroup peak 1217531904; anon 1005817856; file 14917632; swap max/peak 0/0
+nodes80000000: 95.85 s; cgroup peak 1217531904; anon 1131925504; file 14880768; swap max/peak 0/0
+insideNodes: 107.24 s; cgroup peak 1277431808; anon 1256652800; file 15216640; swap max/peak 0/0
+intersectingWays: 161.55 s; cgroup peak 1656647680; anon 1573380096; file 14528512; swap max/peak 0/0
+selected: 163.11 s; cgroup peak 1656647680; anon 160976896; file 14528512; swap max/peak 0/0
+completeReferences: 188.19 s; cgroup peak 3145691136; anon 160980992; file 189714432; swap max/peak 0/0
+checkReferences: 191.42 s; cgroup peak 3145691136; anon 160980992; file 19763200; swap max/peak 0/0
+verified: 206.23 s; cgroup peak 3145691136; anon 194867200; file 19767296; swap max/peak 0/0
+proofsVerified: 208.06 s; cgroup peak 3145691136; anon 194883584; file 20279296; swap max/peak 0/0
+{
+  "case": "candidate",
+  "xmlByteIdentical": false,
+  "candidate": {
+    "sourceNodes": 2334810,
+    "insideNodes": 2327671,
+    "sourceWays": 462588,
+    "wayEligibleDirectedSegments": 3043312,
+    "supportedWays": 462559,
+    "supportedPhysicalSegmentsInside": 2473045,
+    "supportedBoundarySegments": 540,
+    "sourceRelations": 10095,
+    "candidateViaWayRules": 1762,
+    "historyPrefixCeiling": 3884,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 20352,
+      "motorway_link": 24910,
+      "primary": 115119,
+      "primary_link": 7407,
+      "residential": 1322459,
+      "secondary": 155961,
+      "secondary_link": 3595,
+      "service": 911170,
+      "tertiary": 302620,
+      "tertiary_link": 1745,
+      "trunk": 11203,
+      "trunk_link": 5173,
+      "unclassified": 155338
+    },
+    "roadStatesLowerBound": 2955664,
+    "roadStatesUpperBound": 3043312,
+    "historyStatesUpperBound": 3047196,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 31657984
+  },
+  "admission": {
+    "decision": "eligible-for-separate-capped-build-and-qualification",
+    "cappedExperimentEligible": true,
+    "ratios": {
+      "sourceNodes": 1.0246542662439568,
+      "sourceWays": 1.0124313866248786,
+      "sourceRelations": 1.0041778573560132,
+      "wayEligibleDirectedSegments": 1.0329687934885174,
+      "historyPrefixCeiling": 1.0,
+      "candidateViaWayRules": 1.0,
+      "roadCeilingToBuiltRoads": 1.0359720850655918,
+      "historyCeilingToBuiltStates": 1.0368167045027683
+    },
+    "scalingRatio": 1.0368167045027683,
+    "observedPeaksBytes": {
+      "calibrationPreparation": 3173371904,
+      "candidatePreparation": 3145691136,
+      "build": 3151319040,
+      "rebuild": 3192205312,
+      "qualification": 1664774144
+    },
+    "estimatedPhasePeaksBytes": {
+      "preparation": 3173371904,
+      "importExport": 3309731792,
+      "qualification": 1726065642
+    },
+    "headroomFactor": 1.25,
+    "wholeWorkloadEstimateWithHeadroomBytes": 4137164740,
+    "capBytes": 4294967296,
+    "limitPressure": false,
+    "sourceAndOracleParity": true,
+    "newGraphBuilt": false,
+    "coverageVerified": false,
+    "scope": "Largest corresponding source/road/history ratio scales the worst measured build/rebuild and lean qualification container peaks. Sequential phases take a maximum, not a sum; measured preparation is included, then 25% margin. This is a heuristic for an isolated capped attempt, not a memory bound or a geographic-coverage claim."
+  },
+  "workerWallMs": 208061.3137610053
+}

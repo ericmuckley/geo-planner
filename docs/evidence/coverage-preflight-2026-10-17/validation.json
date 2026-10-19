@@ -1,0 +1,50 @@
+{
+  "recordedDate": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "cases": 83,
+      "passed": 81,
+      "skipped": 2,
+      "skipReason": "Host lacks Osmium; unchanged integration cases run in the cached tools image in prior qualification."
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "cases": 14,
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "files": 50,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "warnings": [
+        "Existing MapLibre bundle size",
+        "Upstream TanStack module-level directives"
+      ]
+    },
+    {
+      "command": "python3 -B docs/evidence/coverage-preflight-2026-10-17/analyze.py",
+      "exitCode": 0
+    }
+  ],
+  "publicRoutingApiCalls": 0,
+  "newDownloads": 0,
+  "fullLargerGraphBuilt": false,
+  "baselineServiceHealthy": true,
+  "dockerVmMemoryBytes": 8218034176,
+  "dockerVmCpus": 10,
+  "scope": "Local preparation/capacity validation only. No new routes, browser contour, cloud execution, or complete 60-minute/12-hour coverage."
+}

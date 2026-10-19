@@ -1,0 +1,18 @@
+
+> routing:coverage:next
+> node routing/buffer-preflight.mjs --case calibration
+
+validated: 0.60 s; cgroup peak 696512512; anon 15437824; file 677982208; swap max/peak 0/0
+Traceback (most recent call last):
+  File "/recipe/buffer_preflight.py", line 129, in <module>
+    run(parser.parse_args())
+  File "/recipe/buffer_preflight.py", line 99, in run
+    fixtures = fixture_checks(output, args.image_id) if args.case == "calibration" else proof["fixtures"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/buffer_preflight.py", line 40, in fixture_checks
+    command(["osmium", "cat", str(raw), "-o", str(directory / "region.osm.pbf")], directory, "toPbf", None)
+  File "/recipe/staged_prepare.py", line 12, in command
+    subprocess.run(["/usr/bin/time", "-v", "-o", str(output / f"{stage}-resources.txt"), *args], stdout=log, stderr=subprocess.STDOUT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/time', '-v', '-o', '/output/fixtures/0/toPbf-resources.txt', 'osmium', 'cat', '/output/fixtures/0/source.osm', '-o', '/output/fixtures/0/region.osm.pbf']' returned non-zero exit status 1.

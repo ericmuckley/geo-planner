@@ -1,0 +1,607 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 32.5149,
+        "lon": -117.0382
+      },
+      {
+        "lat": 32.7157,
+        "lon": -117.1611
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "units": "kilometers"
+  },
+  "data": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 32.5149,
+          "lon": -117.0382,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 32.7157,
+          "lon": -117.1611,
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive northeast on Calle Cañón Zacatecas.",
+              "verbal_succinct_transition_instruction": "Drive northeast. Then Bear left onto Avenida Juan de Dios Peza.",
+              "verbal_pre_transition_instruction": "Drive northeast on Calle Cañón Zacatecas. Then Bear left onto Avenida Juan de Dios Peza.",
+              "verbal_post_transition_instruction": "Continue for 40 meters.",
+              "street_names": [
+                "Calle Cañón Zacatecas"
+              ],
+              "bearing_after": 59,
+              "time": 4.454,
+              "length": 0.037,
+              "cost": 5.345,
+              "begin_shape_index": 0,
+              "end_shape_index": 3,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left onto Avenida Juan de Dios Peza.",
+              "verbal_transition_alert_instruction": "Bear left onto Avenida Juan de Dios Peza.",
+              "verbal_succinct_transition_instruction": "Bear left. Then Turn right onto Calle Bonifácio Avilés.",
+              "verbal_pre_transition_instruction": "Bear left onto Avenida Juan de Dios Peza. Then Turn right onto Calle Bonifácio Avilés.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Avenida Juan de Dios Peza"
+              ],
+              "bearing_before": 71,
+              "bearing_after": 44,
+              "time": 6.141,
+              "length": 0.05,
+              "cost": 20.225,
+              "begin_shape_index": 3,
+              "end_shape_index": 6,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Calle Bonifácio Avilés.",
+              "verbal_transition_alert_instruction": "Turn right onto Calle Bonifácio Avilés.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Bear left to stay on Calle Bonifácio Avilés.",
+              "verbal_pre_transition_instruction": "Turn right onto Calle Bonifácio Avilés. Then Bear left to stay on Calle Bonifácio Avilés.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "Calle Bonifácio Avilés"
+              ],
+              "bearing_before": 15,
+              "bearing_after": 101,
+              "time": 4.635,
+              "length": 0.025,
+              "cost": 19.174,
+              "begin_shape_index": 6,
+              "end_shape_index": 7,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left to stay on Calle Bonifácio Avilés.",
+              "verbal_transition_alert_instruction": "Bear left to stay on Calle Bonifácio Avilés.",
+              "verbal_succinct_transition_instruction": "Bear left. Then Bear left onto Avenida González Bocanegra.",
+              "verbal_pre_transition_instruction": "Bear left to stay on Calle Bonifácio Avilés. Then Bear left onto Avenida González Bocanegra.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "Calle Bonifácio Avilés"
+              ],
+              "bearing_before": 101,
+              "bearing_after": 63,
+              "time": 3.349,
+              "length": 0.025,
+              "cost": 11.549,
+              "begin_shape_index": 7,
+              "end_shape_index": 9,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left onto Avenida González Bocanegra.",
+              "verbal_transition_alert_instruction": "Bear left onto Avenida González Bocanegra.",
+              "verbal_succinct_transition_instruction": "Bear left. Then Bear right onto Calle España.",
+              "verbal_pre_transition_instruction": "Bear left onto Avenida González Bocanegra. Then Bear right onto Calle España.",
+              "verbal_post_transition_instruction": "Continue for 90 meters.",
+              "street_names": [
+                "Avenida González Bocanegra"
+              ],
+              "bearing_before": 61,
+              "bearing_after": 25,
+              "time": 7.929,
+              "length": 0.085,
+              "cost": 24.871,
+              "begin_shape_index": 9,
+              "end_shape_index": 13,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right onto Calle España.",
+              "verbal_transition_alert_instruction": "Bear right onto Calle España.",
+              "verbal_succinct_transition_instruction": "Bear right. Then Turn left onto Avenida Garibaldi.",
+              "verbal_pre_transition_instruction": "Bear right onto Calle España. Then Turn left onto Avenida Garibaldi.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Calle España"
+              ],
+              "bearing_before": 36,
+              "bearing_after": 53,
+              "time": 11.993,
+              "length": 0.133,
+              "cost": 24.913,
+              "begin_shape_index": 13,
+              "end_shape_index": 17,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Avenida Garibaldi.",
+              "verbal_transition_alert_instruction": "Turn left onto Avenida Garibaldi.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Avenida Garibaldi.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Avenida Garibaldi"
+              ],
+              "bearing_before": 86,
+              "bearing_after": 28,
+              "time": 16.398,
+              "length": 0.166,
+              "cost": 46.161,
+              "begin_shape_index": 17,
+              "end_shape_index": 23,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right onto Avenida González Bocanegra.",
+              "verbal_transition_alert_instruction": "Bear right onto Avenida González Bocanegra.",
+              "verbal_succinct_transition_instruction": "Bear right.",
+              "verbal_pre_transition_instruction": "Bear right onto Avenida González Bocanegra.",
+              "verbal_post_transition_instruction": "Continue for 400 meters.",
+              "street_names": [
+                "Avenida González Bocanegra"
+              ],
+              "bearing_before": 27,
+              "bearing_after": 56,
+              "time": 38.785,
+              "length": 0.429,
+              "cost": 75.047,
+              "begin_shape_index": 23,
+              "end_shape_index": 32,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Avenida Ramos Millán.",
+              "verbal_transition_alert_instruction": "Turn right onto Avenida Ramos Millán.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn left onto Boulevard de los Fundadores.",
+              "verbal_pre_transition_instruction": "Turn right onto Avenida Ramos Millán. Then Turn left onto Boulevard de los Fundadores.",
+              "verbal_post_transition_instruction": "Continue for 60 meters.",
+              "street_names": [
+                "Avenida Ramos Millán"
+              ],
+              "bearing_before": 1,
+              "bearing_after": 101,
+              "time": 11.584,
+              "length": 0.059,
+              "cost": 67.81,
+              "begin_shape_index": 32,
+              "end_shape_index": 36,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Boulevard de los Fundadores.",
+              "verbal_transition_alert_instruction": "Turn left onto Boulevard de los Fundadores.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Boulevard de los Fundadores.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "Boulevard de los Fundadores"
+              ],
+              "bearing_before": 78,
+              "bearing_after": 1,
+              "time": 45.944,
+              "length": 0.49,
+              "cost": 193.288,
+              "begin_shape_index": 36,
+              "end_shape_index": 58,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Avenida Juan Sarabia.",
+              "verbal_transition_alert_instruction": "Turn right onto Avenida Juan Sarabia.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Avenida Juan Sarabia.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "Avenida Juan Sarabia"
+              ],
+              "bearing_before": 355,
+              "bearing_after": 85,
+              "time": 26.929,
+              "length": 0.336,
+              "cost": 90.365,
+              "begin_shape_index": 58,
+              "end_shape_index": 69,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on Avenida Juan Sarabia.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Avenida Juan Sarabia.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Avenida Juan Sarabia.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "Avenida Juan Sarabia"
+              ],
+              "bearing_before": 82,
+              "bearing_after": 72,
+              "time": 49.524,
+              "length": 0.641,
+              "cost": 151.065,
+              "begin_shape_index": 69,
+              "end_shape_index": 94,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 26,
+              "instruction": "Enter the roundabout and take the 3rd exit onto Calle Paseo de los Héroes/MEX 1.",
+              "verbal_transition_alert_instruction": "Enter the roundabout and take the 3rd exit onto Calle Paseo de los Héroes.",
+              "verbal_succinct_transition_instruction": "Enter the roundabout and take the 3rd exit.",
+              "verbal_pre_transition_instruction": "Enter the roundabout and take the 3rd exit onto Calle Paseo de los Héroes, MEX 1.",
+              "bearing_before": 37,
+              "bearing_after": 103,
+              "time": 19.633,
+              "length": 0.147,
+              "cost": 34.354,
+              "begin_shape_index": 94,
+              "end_shape_index": 111,
+              "roundabout_exit_count": 3,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 27,
+              "instruction": "Exit the roundabout onto Calle Paseo de los Héroes/MEX 1.",
+              "verbal_succinct_transition_instruction": "Exit the roundabout.",
+              "verbal_pre_transition_instruction": "Exit the roundabout onto Calle Paseo de los Héroes, MEX 1.",
+              "verbal_post_transition_instruction": "Continue for 700 meters.",
+              "street_names": [
+                "Calle Paseo de los Héroes",
+                "MEX 1"
+              ],
+              "bearing_before": 275,
+              "bearing_after": 286,
+              "time": 49.003,
+              "length": 0.71,
+              "cost": 72.431,
+              "begin_shape_index": 111,
+              "end_shape_index": 133,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right toward MEX 1D.",
+              "verbal_transition_alert_instruction": "Bear right toward MEX 1D.",
+              "verbal_succinct_transition_instruction": "Bear right toward MEX 1D.",
+              "verbal_pre_transition_instruction": "Bear right toward MEX 1D.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "MEX 1D",
+                "Avenida Internacional"
+              ],
+              "bearing_before": 331,
+              "bearing_after": 338,
+              "time": 29.549,
+              "length": 0.76,
+              "cost": 44.633,
+              "begin_shape_index": 133,
+              "end_shape_index": 161,
+              "highway": true,
+              "sign": {},
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to stay on MEX 1D/Avenida Internacional.",
+              "verbal_transition_alert_instruction": "Keep right to stay on MEX 1D.",
+              "verbal_pre_transition_instruction": "Keep right to stay on MEX 1D, Avenida Internacional.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "MEX 1D",
+                "Avenida Internacional"
+              ],
+              "bearing_before": 347,
+              "bearing_after": 354,
+              "time": 12.377,
+              "length": 0.305,
+              "cost": 20.151,
+              "begin_shape_index": 161,
+              "end_shape_index": 173,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 16,
+              "instruction": "Bear left onto Linea Normal.",
+              "verbal_transition_alert_instruction": "Bear left onto Linea Normal.",
+              "verbal_succinct_transition_instruction": "Bear left. Then Continue on I 5.",
+              "verbal_pre_transition_instruction": "Bear left onto Linea Normal. Then Continue on I 5.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Linea Normal"
+              ],
+              "bearing_before": 323,
+              "bearing_after": 296,
+              "time": 13.273,
+              "length": 0.2,
+              "cost": 19.707,
+              "begin_shape_index": 173,
+              "end_shape_index": 176,
+              "highway": true,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 8,
+              "instruction": "Continue on I 5.",
+              "verbal_transition_alert_instruction": "Continue on I 5.",
+              "verbal_pre_transition_instruction": "Continue on I 5. Then Turn left to stay on I 5.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "I 5"
+              ],
+              "bearing_before": 307,
+              "bearing_after": 309,
+              "time": 601.092,
+              "length": 0.027,
+              "cost": 601.31,
+              "begin_shape_index": 176,
+              "end_shape_index": 179,
+              "highway": true,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left to stay on I 5.",
+              "verbal_transition_alert_instruction": "Turn left to stay on I 5.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left to stay on I 5.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "I 5"
+              ],
+              "bearing_before": 357,
+              "bearing_after": 272,
+              "time": 23.301,
+              "length": 0.509,
+              "cost": 62.104,
+              "begin_shape_index": 179,
+              "end_shape_index": 198,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take I 5 North/Route 5.",
+              "verbal_transition_alert_instruction": "Keep left to take I 5 North.",
+              "verbal_pre_transition_instruction": "Keep left to take I 5 North, Route 5.",
+              "verbal_post_transition_instruction": "Continue for 25 kilometers.",
+              "street_names": [
+                "I 5 North",
+                "Route 5"
+              ],
+              "bearing_before": 307,
+              "bearing_after": 306,
+              "time": 964.369,
+              "length": 25.208,
+              "cost": 1135.823,
+              "begin_shape_index": 198,
+              "end_shape_index": 450,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 16B on the right onto 6th Avenue toward Downtown San Diego.",
+              "verbal_transition_alert_instruction": "Take exit 16B on the right.",
+              "verbal_pre_transition_instruction": "Take exit 16B on the right onto 6th Avenue toward Downtown San Diego. Then Keep left to take exit 16B.",
+              "bearing_before": 264,
+              "bearing_after": 283,
+              "time": 11.219,
+              "length": 0.26,
+              "cost": 13.093,
+              "begin_shape_index": 450,
+              "end_shape_index": 457,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "16B",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "6th Avenue"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Downtown San Diego"
+                  }
+                ]
+              },
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take exit 16B onto 6th Avenue toward South 6th Avenue/Civic Center/Gaslamp Quarter/Petco Park.",
+              "verbal_transition_alert_instruction": "Keep left to take exit 16B.",
+              "verbal_pre_transition_instruction": "Keep left to take exit 16B onto 6th Avenue toward South 6th Avenue, Civic Center.",
+              "verbal_post_transition_instruction": "Continue for 1 kilometer.",
+              "street_names": [
+                "6th Avenue"
+              ],
+              "bearing_before": 264,
+              "bearing_after": 248,
+              "time": 69.291,
+              "length": 0.959,
+              "cost": 140.922,
+              "begin_shape_index": 457,
+              "end_shape_index": 505,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "16B",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "South 6th Avenue"
+                  },
+                  {
+                    "text": "Civic Center"
+                  },
+                  {
+                    "text": "Gaslamp Quarter"
+                  },
+                  {
+                    "text": "Petco Park"
+                  },
+                  {
+                    "text": "Convention Center"
+                  },
+                  {
+                    "text": "Embarcadero"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto East Broadway.",
+              "verbal_transition_alert_instruction": "Turn right onto East Broadway.",
+              "verbal_succinct_transition_instruction": "Turn right. Then, in 200 meters, You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "Turn right onto East Broadway. Then, in 200 meters, You will arrive at your destination.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "East Broadway"
+              ],
+              "bearing_before": 181,
+              "bearing_after": 271,
+              "time": 20.082,
+              "length": 0.17,
+              "cost": 46.097,
+              "begin_shape_index": 505,
+              "end_shape_index": 511,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 4,
+              "instruction": "You have arrived at your destination.",
+              "verbal_transition_alert_instruction": "You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "You have arrived at your destination.",
+              "bearing_before": 270,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 511,
+              "end_shape_index": 511,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 32.514868,
+            "min_lon": -117.161085,
+            "max_lat": 32.724433,
+            "max_lon": -117.022758,
+            "time": 2040.864,
+            "length": 31.735,
+            "cost": 2920.446
+          },
+          "shape": "grp_}@pdmf~Ee@u@}CwIyA}HiGmHiDaBeIeBtAcOk@sBcD_JqHiDcMuFmK_IgDwCqNsWeEwKcAaIu@q_@oLoG}CsBqCeCoc@yd@wEgCuH{DuIwQoIsFyXcImf@eFmfAwR}@O_n@aEeIc@wHAd@gFp@mGRqF}AwNuCAkb@?k\\o@{HOgMWmCQgD[mQgAgNK_EE_BB{ABiJNkXv@wFP_FVyRdAoOx@qCNoH`@qR`AoDRmCkw@wAsb@SkFkBuFk@yOOyEk@mOS_E{B_d@]}GwA{UqE{VuBcj@SqFpAcQiAy_@O}EeBec@g@}MeAePo@}JYyEs@{Io@{F_AyEmBoFkBmCOQuA{Awj@sf@iDgDkDyCgQeOwCeCkTcRmGqF~@uDXaEMcEs@yD}AkD}BiCwCaBeDq@sCAqCb@gCfA{BlBeBlCeAbDa@pCKtCLtCi@bHiA~Cs@nAg@|@_s@hdAcDhFmBrCo`@|m@gC~DwWfb@_AtAmIpMsAxBqDzFeClEqs@xhAoF`G_HtHmGxGsEpEyIpF{O~IoQ~BkFpBkDhAsPdGqAAcV~IsDfAeDh@cEX_EFqDO_Ec@_E}@aDiAmBqAgIeF}lAkeAcMkJoIiFkLyEkYyIiVkHaS_B{DOwT?eK\\sQnAkJhBoEIy@DwShFsL`EqFrEuI|DuMtJyPtN}BrBiMnLgH~GeWhTk^rjAkAnDgT`a@yBpDmBfDaBDg@rAG~G_BtByOrSqHzJqCpDcApA_HfCwDjBqDp@cDVi@DsFlAgIpDqBlB{CrCuLfRyNhO{iAntBex@z|AyhBtcDc]rm@qYpk@{Pja@i]vpA{fA`bEuKl[ynAdxDyvChgJaxBh}Gqn@nnBwPhh@aRjn@kWzu@aQ|f@cR|b@um@nmAi_AtdBm|D`lHsR|\\iNhV}MbSyJ~NwRdTw[l\\{r@zh@kaBdiAmnCbjBcwAz`Aer@df@cnBdsAodAzy@{EjE{T`Sy_AfaAqS|S}dAvhAkNnMsTnQsHhFoRjN{LbHuXrNmTtKsTlI}n@`Uga@vJsy@bMw_@rD_oB|Dgh@pBmm@fCqwA`Jc_@hEw\\~Cij@tDyt@hH}rAlK{`@vDwlAjJybCbUcoBhLqcCdOieMft@ukD~OmdDxOubApHmh@vCcfBjO_o@bE}YdCqZxEkn@bM_VxFuoDlcA{WtHeoAv]clAbY_oA`]saJtlCa}B`t@ys@|RmpEptAiXjI{g@vO}mAfWa_@jKsv@lTuZ|GijGhyAya@tIam@rO{zAl_@it@|TarA`d@cnBrn@kxAxd@kNvEmlAba@}LfEksDxiAs]vKc[tJysE~uAa~@zWsTnGmK|CcCr@eKxCcVlHgq@lSsaA`Z}v@rKsWvBmUf@}n@Nya@sA}x@eKam@}MifAy`@}S_Isy@_Zwa@gMqSuEiSeCeTcA_RQuS@g\\dAgQfBmQxCoh@dLwgCzv@oeA~WyPpDma@lMwpAja@uQ~FoJ~Cua@rNkd@vP}VrQa^dWoU|ReTxRkU|Zoi@xz@mpBzaDeg@lx@o[rg@i\\fg@{OxUqk@n}@uXtf@_[xo@kNre@oIlWwGnYqB`KmBhMiEdYkD|_@{Aj^kAzr@lAbpAJdf@vCfuBkAlz@cFnj@iEtWsFpUaH|SwXrm@}Q~[mb@`q@uf@lu@mcBnhC{yBhlDm^zq@ou@bnAySt\\q~AjhCgFjIcKnMwNrMyJzH}JnGuH|DmHbDiGtB_L`DkJnBwKnA_Jt@yIF}ZPcFNijAVyu@Rsx@FoqBS}gI|BaL?qs@PoDCeE@wNb@aMd@}N`AiNhAsEf@eLxAwMdBiN|BkM|ByLpCmKpCgQ~EgQxE_LhDoOlHgBz@mOtGeOdHeNfHmI~EeEdCeOdJyWjT{ExEuDbEoIzKsItN{GvMiEbJaExLkDlLwCdM{BxKiBxLiAzKu@dKe@jJY|IIlQ\\dP~@~ThAlUvCvj@hCdk@rCbp@yBdRLr\\F~HhApbAL`Kb@jMz@lS~B|Iv@dF`B|DPPhArAbBbAnDx@~HClFrBjAGlt@qD~^mA|DGfDA`HAdGB|c@ZbDBzBAz@?vDAnEArVEzOC`AApD?tCCxVEr^KzC?tDAd@@lo@C|B?d@?tC@bELfKTrJe@tIm@jSIhA@x@?~@?zBAvKFxh@JtD@ApETjk@@tD?zDFhk@?lE"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 32.514868,
+        "min_lon": -117.161085,
+        "max_lat": 32.724433,
+        "max_lon": -117.022758,
+        "time": 2040.864,
+        "length": 31.735,
+        "cost": 2920.446
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  },
+  "httpBodyMs": 22.283666999999696,
+  "bytes": 17147
+}

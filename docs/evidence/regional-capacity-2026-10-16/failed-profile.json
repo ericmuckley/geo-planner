@@ -1,0 +1,22 @@
+{
+	"id": "san-diego-tijuana-v2",
+	"bbox": [-117.25, 32.48, -116.9, 32.85],
+	"model": {
+		"id": "exploratory-static-car-v2",
+		"signalDelayMs": 5000,
+		"uTurnDelayMs": 20000
+	},
+	"origins": [
+		{ "id": "san-diego", "lon": -117.1611, "lat": 32.7157 },
+		{ "id": "el-cajon", "lon": -116.9625, "lat": 32.7948 },
+		{ "id": "tijuana", "lon": -117.0382, "lat": 32.5149 },
+		{ "id": "san-ysidro", "lon": -117.0431, "lat": 32.551 }
+	],
+	"budgetsMs": [
+		300000, 900000, 1800000, 3600000, 7200000, 21600000, 36000000, 43200000
+	],
+	"destinationFractions": ["1/2"],
+	"nativeRepetitions": 5,
+	"sourceSnapMaxMeters": 100,
+	"borderPolicy": "Static imported access only; no border queue delays or verified crossing availability. Mexico roads retained."
+}

@@ -1,0 +1,83 @@
+
+> routing:xml
+> node routing/xml-parity.mjs --case hour-v3
+
+preflight: 2.93 s; cgroup peak 79736832; anon 18063360; file 40284160; swap max/peak 0/0
+fixtures: 3.03 s; cgroup peak 79736832; anon 18268160; file 40226816; swap max/peak 0/0
+parsed: 47.77 s; cgroup peak 997572608; anon 290885632; file 40214528; swap max/peak 0/0
+original:outgoingReady: 69.34 s; cgroup peak 1014607872; anon 959508480; file 40214528; swap max/peak 0/0
+original:rulesReady: 69.34 s; cgroup peak 1014607872; anon 960745472; file 40222720; swap max/peak 0/0
+original:arcsBuilt: 78.11 s; cgroup peak 1115467776; anon 1069965312; file 40214528; swap max/peak 0/0
+original:indexesReleased: 78.17 s; cgroup peak 1115467776; anon 981467136; file 40214528; swap max/peak 0/0
+original:baseHashed: 92.74 s; cgroup peak 1115467776; anon 980451328; file 40214528; swap max/peak 0/0
+originalBase: 94.90 s; cgroup peak 1115467776; anon 457371648; file 40214528; swap max/peak 0/0
+pass1:outgoingReady: 116.49 s; cgroup peak 1155117056; anon 1100972032; file 40214528; swap max/peak 0/0
+pass1:rulesReady: 116.49 s; cgroup peak 1155117056; anon 1102213120; file 40230912; swap max/peak 0/0
+pass1:arcsBuilt: 125.29 s; cgroup peak 1247858688; anon 1202511872; file 40214528; swap max/peak 0/0
+pass1:indexesReleased: 125.35 s; cgroup peak 1248120832; anon 1110421504; file 40214528; swap max/peak 0/0
+pass1:baseHashed: 140.01 s; cgroup peak 1248120832; anon 1110437888; file 40214528; swap max/peak 0/0
+baseReady1: 141.95 s; cgroup peak 1248120832; anon 1110437888; file 40214528; swap max/peak 0/0
+lookupReady1: 142.51 s; cgroup peak 1248120832; anon 1110437888; file 40214528; swap max/peak 0/0
+basePass1: 142.54 s; cgroup peak 1248120832; anon 1110437888; file 40214528; swap max/peak 0/0
+pass2:outgoingReady: 163.62 s; cgroup peak 1248120832; anon 1165664256; file 40214528; swap max/peak 0/0
+pass2:rulesReady: 163.63 s; cgroup peak 1248120832; anon 1166893056; file 40243200; swap max/peak 0/0
+pass2:arcsBuilt: 172.58 s; cgroup peak 1298681856; anon 1250639872; file 40214528; swap max/peak 0/0
+pass2:indexesReleased: 172.65 s; cgroup peak 1298681856; anon 1158963200; file 40214528; swap max/peak 0/0
+pass2:baseHashed: 187.12 s; cgroup peak 1298681856; anon 1158963200; file 40214528; swap max/peak 0/0
+baseReady2: 189.06 s; cgroup peak 1298681856; anon 1155817472; file 40214528; swap max/peak 0/0
+lookupReady2: 189.61 s; cgroup peak 1298681856; anon 1155817472; file 40214528; swap max/peak 0/0
+basePass2: 189.65 s; cgroup peak 1298681856; anon 1155817472; file 40214528; swap max/peak 0/0
+pass3:outgoingReady: 210.36 s; cgroup peak 1298681856; anon 1181859840; file 40214528; swap max/peak 0/0
+pass3:rulesReady: 210.37 s; cgroup peak 1298681856; anon 1183096832; file 40255488; swap max/peak 0/0
+pass3:arcsBuilt: 219.06 s; cgroup peak 1298681856; anon 1242554368; file 40214528; swap max/peak 0/0
+pass3:indexesReleased: 219.13 s; cgroup peak 1298681856; anon 1153851392; file 40214528; swap max/peak 0/0
+pass3:baseHashed: 233.96 s; cgroup peak 1298681856; anon 1153859584; file 40214528; swap max/peak 0/0
+baseReady3: 235.91 s; cgroup peak 1298681856; anon 1153863680; file 40214528; swap max/peak 0/0
+lookupReady3: 236.56 s; cgroup peak 1298681856; anon 1153863680; file 40214528; swap max/peak 0/0
+basePass3: 236.60 s; cgroup peak 1298681856; anon 1153863680; file 40214528; swap max/peak 0/0
+pass4:outgoingReady: 257.98 s; cgroup peak 1298681856; anon 1195380736; file 40214528; swap max/peak 0/0
+pass4:rulesReady: 257.98 s; cgroup peak 1298681856; anon 1196609536; file 40267776; swap max/peak 0/0
+pass4:arcsBuilt: 266.81 s; cgroup peak 1298681856; anon 1226366976; file 40214528; swap max/peak 0/0
+pass4:indexesReleased: 266.87 s; cgroup peak 1298681856; anon 1138569216; file 40214528; swap max/peak 0/0
+pass4:baseHashed: 281.92 s; cgroup peak 1298681856; anon 1138573312; file 40214528; swap max/peak 0/0
+baseReady4: 284.00 s; cgroup peak 1298681856; anon 1138573312; file 40214528; swap max/peak 0/0
+lookupReady4: 284.58 s; cgroup peak 1298681856; anon 1138573312; file 40214528; swap max/peak 0/0
+basePass4: 284.62 s; cgroup peak 1298681856; anon 1138573312; file 40214528; swap max/peak 0/0
+pass5:outgoingReady: 305.90 s; cgroup peak 1298681856; anon 1173135360; file 40214528; swap max/peak 0/0
+pass5:rulesReady: 305.91 s; cgroup peak 1298681856; anon 1174364160; file 40280064; swap max/peak 0/0
+pass5:arcsBuilt: 314.80 s; cgroup peak 1303179264; anon 1256038400; file 40214528; swap max/peak 0/0
+pass5:indexesReleased: 314.87 s; cgroup peak 1303441408; anon 1170345984; file 40214528; swap max/peak 0/0
+pass5:baseHashed: 329.39 s; cgroup peak 1303441408; anon 1170345984; file 40214528; swap max/peak 0/0
+baseReady5: 331.35 s; cgroup peak 1303441408; anon 1170345984; file 40214528; swap max/peak 0/0
+lookupReady5: 331.90 s; cgroup peak 1303441408; anon 1169297408; file 40214528; swap max/peak 0/0
+basePass5: 331.94 s; cgroup peak 1303441408; anon 1169297408; file 40214528; swap max/peak 0/0
+pass6:outgoingReady: 353.45 s; cgroup peak 1303441408; anon 1181839360; file 40214528; swap max/peak 0/0
+pass6:rulesReady: 353.46 s; cgroup peak 1303441408; anon 1183072256; file 40292352; swap max/peak 0/0
+pass6:arcsBuilt: 362.24 s; cgroup peak 1303441408; anon 1213972480; file 40214528; swap max/peak 0/0
+pass6:indexesReleased: 362.31 s; cgroup peak 1303441408; anon 1127305216; file 40214528; swap max/peak 0/0
+pass6:baseHashed: 376.80 s; cgroup peak 1303441408; anon 1127317504; file 40214528; swap max/peak 0/0
+baseReady6: 378.70 s; cgroup peak 1303441408; anon 1127317504; file 40214528; swap max/peak 0/0
+lookupReady6: 379.29 s; cgroup peak 1303441408; anon 1127317504; file 40214528; swap max/peak 0/0
+basePass6: 379.32 s; cgroup peak 1303441408; anon 1127317504; file 40214528; swap max/peak 0/0
+inputsReleased: 379.36 s; cgroup peak 1303441408; anon 956121088; file 40214528; swap max/peak 0/0
+historyBuilt: 393.23 s; cgroup peak 1303441408; anon 1049264128; file 40214528; swap max/peak 0/0
+beforeSourceExamples: 403.23 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceIndexes: 403.42 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceTransitions: 403.43 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceWayScan: 412.01 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceNodeScan: 420.26 s; cgroup peak 1303441408; anon 1007714304; file 40218624; swap max/peak 0/0
+sourceExcerpt: 420.27 s; cgroup peak 1303441408; anon 1007714304; file 40218624; swap max/peak 0/0
+afterSourceExamples: 420.27 s; cgroup peak 1303441408; anon 1007714304; file 40218624; swap max/peak 0/0
+sourceUncertainties: 436.84 s; cgroup peak 1303441408; anon 1007714304; file 40222720; swap max/peak 0/0
+sourceRoadIds: 438.78 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceBarrierExamples: 440.90 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+sourceEvidence: 440.91 s; cgroup peak 1303441408; anon 1007714304; file 40214528; swap max/peak 0/0
+exported: 473.18 s; cgroup peak 1303441408; anon 1015742464; file 40214528; swap max/peak 0/0
+complete: 474.03 s; cgroup peak 1303441408; anon 1015742464; file 40464384; swap max/peak 0/0
+{
+  "case": "hour-v3",
+  "states": 3036124,
+  "transitions": 6411757,
+  "importMs": 400201.82880500215,
+  "workerWallMs": 474040.3490480094
+}

@@ -1,0 +1,118 @@
+
+> routing:sparse
+> node routing/sparse-prepare.mjs --case candidate
+
+validated: 1.27 s; cgroup peak 1322520576; anon 16359424; file 1301815296; swap max/peak 0/0
+fixtures: 1.27 s; cgroup peak 1322520576; anon 16359424; file 1301815296; swap max/peak 0/0
+nodes10000000: 13.31 s; cgroup peak 1324863488; anon 210452480; file 624480256; swap max/peak 0/0
+nodes20000000: 25.13 s; cgroup peak 1324863488; anon 288235520; file 624693248; swap max/peak 0/0
+nodes30000000: 36.87 s; cgroup peak 1324863488; anon 289566720; file 624467968; swap max/peak 0/0
+nodes40000000: 48.95 s; cgroup peak 1324863488; anon 292208640; file 624676864; swap max/peak 0/0
+nodes50000000: 61.19 s; cgroup peak 1324863488; anon 338042880; file 624508928; swap max/peak 0/0
+nodes60000000: 73.44 s; cgroup peak 1324863488; anon 557166592; file 624488448; swap max/peak 0/0
+nodes70000000: 86.48 s; cgroup peak 1827119104; anon 998653952; file 624566272; swap max/peak 0/0
+nodes80000000: 99.11 s; cgroup peak 1827119104; anon 1123946496; file 624529408; swap max/peak 0/0
+insideNodes: 111.57 s; cgroup peak 1880985600; anon 1249517568; file 624951296; swap max/peak 0/0
+intersectingWays: 169.27 s; cgroup peak 2241470464; anon 1546428416; file 624177152; swap max/peak 0/0
+selected: 171.32 s; cgroup peak 2241470464; anon 160260096; file 624177152; swap max/peak 0/0
+completeReferences: 190.04 s; cgroup peak 3632615424; anon 159223808; file 440336384; swap max/peak 0/0
+checkReferences: 193.01 s; cgroup peak 3632615424; anon 159227904; file 440340480; swap max/peak 0/0
+complete: 207.79 s; cgroup peak 3632615424; anon 192438272; file 914059264; swap max/peak 0/0
+{
+  "case": "candidate",
+  "xmlByteIdentical": true,
+  "selection": {
+    "nodesScanned": 89776916,
+    "waysScanned": 10435256,
+    "relationsScanned": 113780,
+    "insideNodes": 18808209,
+    "intersectingWays": 2599828,
+    "roadSeeds": 456876,
+    "restrictionSeeds": 10053,
+    "selectedRelationsIncludingParents": 21700,
+    "wallMs": 169778.6669109919,
+    "scope": "Sparse sets contain actual original IDs; no location cache, dense highest-ID arrays or remapping. Parent relation closure is recursive; references are completed separately from the original PBF."
+  },
+  "resources": {
+    "workerMaxRssKiB": 1587156,
+    "memory.max": "4294967296",
+    "memory.peak": "3632615424",
+    "memory.current": "1112338432",
+    "memory.events": {
+      "low": "0",
+      "high": "0",
+      "max": "0",
+      "oom": "0",
+      "oom_kill": "0",
+      "oom_group_kill": "0"
+    },
+    "memory.stat": {
+      "anon": 192438272,
+      "file": 914059264,
+      "kernel": 4145152,
+      "kernel_stack": 32768,
+      "pagetables": 544768,
+      "sec_pagetables": 0,
+      "percpu": 26160,
+      "sock": 0,
+      "vmalloc": 8192,
+      "shmem": 0,
+      "zswap": 0,
+      "zswapped": 0,
+      "file_mapped": 0,
+      "file_dirty": 0,
+      "file_writeback": 0,
+      "swapcached": 0,
+      "anon_thp": 0,
+      "file_thp": 0,
+      "shmem_thp": 0,
+      "inactive_anon": 0,
+      "active_anon": 192430080,
+      "inactive_file": 913973248,
+      "active_file": 0,
+      "unevictable": 0,
+      "slab_reclaimable": 3096424,
+      "slab_unreclaimable": 401880,
+      "slab": 3498304,
+      "workingset_refault_anon": 0,
+      "workingset_refault_file": 0,
+      "workingset_activate_anon": 0,
+      "workingset_activate_file": 0,
+      "workingset_restore_anon": 0,
+      "workingset_restore_file": 0,
+      "workingset_nodereclaim": 0,
+      "pgscan": 46144,
+      "pgsteal": 46144,
+      "pgscan_kswapd": 46144,
+      "pgscan_direct": 0,
+      "pgscan_khugepaged": 0,
+      "pgsteal_kswapd": 46144,
+      "pgsteal_direct": 0,
+      "pgsteal_khugepaged": 0,
+      "pgfault": 1302364,
+      "pgmajfault": 0,
+      "pgrefill": 0,
+      "pgactivate": 0,
+      "pgdeactivate": 0,
+      "pglazyfree": 0,
+      "pglazyfreed": 0,
+      "zswpin": 0,
+      "zswpout": 0,
+      "zswpwb": 0,
+      "thp_fault_alloc": 1900,
+      "thp_collapse_alloc": 0,
+      "thp_swpout": 0,
+      "thp_swpout_fallback": 0
+    },
+    "memory.swap.events": {
+      "high": 0,
+      "max": 0,
+      "fail": 0
+    },
+    "memory.swap.max": "0",
+    "memory.swap.current": "0",
+    "memory.swap.peak": "0",
+    "maxChildRssKiB": 2554824,
+    "elapsedMs": 207789.29476099438
+  }
+}

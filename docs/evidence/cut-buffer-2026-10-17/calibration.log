@@ -1,0 +1,50 @@
+
+> routing:coverage:next
+> node routing/buffer-preflight.mjs --case calibration
+
+validated: 0.43 s; cgroup peak 696692736; anon 15716352; file 677982208; swap max/peak 0/0
+fixtures: 0.66 s; cgroup peak 725397504; anon 15781888; file 678088704; swap max/peak 0/0
+completeWaysSelect: 22.71 s; cgroup peak 4061392896; anon 15822848; file 450560; swap max/peak 0/0
+seedFilter: 24.01 s; cgroup peak 4061392896; anon 15835136; file 10731520; swap max/peak 0/0
+completeReferences: 48.24 s; cgroup peak 4061392896; anon 15847424; file 540672; swap max/peak 0/0
+checkReferences: 50.38 s; cgroup peak 4061392896; anon 15859712; file 544768; swap max/peak 0/0
+census: 61.03 s; cgroup peak 4061392896; anon 45232128; file 357371904; swap max/peak 0/0
+complete: 61.33 s; cgroup peak 4061392896; anon 45232128; file 482344960; swap max/peak 0/0
+{
+  "matchesFrozenXml": true,
+  "candidate": {
+    "sourceNodes": 1652946,
+    "insideNodes": 1646965,
+    "sourceWays": 376997,
+    "wayEligibleDirectedSegments": 2144619,
+    "supportedWays": 376971,
+    "supportedPhysicalSegmentsInside": 1761699,
+    "supportedBoundarySegments": 440,
+    "sourceRelations": 8251,
+    "candidateViaWayRules": 1449,
+    "historyPrefixCeiling": 3213,
+    "eligibleSegmentsByHighway": {
+      "living_street": 5672,
+      "motorway": 13100,
+      "motorway_link": 21154,
+      "primary": 80773,
+      "primary_link": 6739,
+      "residential": 936678,
+      "secondary": 119299,
+      "secondary_link": 3215,
+      "service": 648893,
+      "tertiary": 233279,
+      "tertiary_link": 1442,
+      "trunk": 8614,
+      "trunk_link": 4887,
+      "unclassified": 60874
+    },
+    "roadStatesLowerBound": 2071923,
+    "roadStatesUpperBound": 2144619,
+    "historyStatesUpperBound": 2147832,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 23080960
+  },
+  "capacity": null,
+  "workerWallMs": 61330.44265299395
+}

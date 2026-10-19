@@ -1,0 +1,22 @@
+{
+	"id": "san-diego-tijuana-corridor-v2",
+	"bbox": [-117.18, 32.49, -117.0, 32.75],
+	"model": {
+		"id": "exploratory-static-car-v2",
+		"signalDelayMs": 5000,
+		"uTurnDelayMs": 20000
+	},
+	"origins": [
+		{ "id": "san-diego", "lon": -117.1611, "lat": 32.7157 },
+		{ "id": "chula-vista", "lon": -117.0842, "lat": 32.6401 },
+		{ "id": "tijuana", "lon": -117.0382, "lat": 32.5149 },
+		{ "id": "san-ysidro", "lon": -117.0431, "lat": 32.551 }
+	],
+	"budgetsMs": [
+		300000, 900000, 1800000, 3600000, 7200000, 21600000, 36000000, 43200000
+	],
+	"destinationFractions": ["1/2"],
+	"nativeRepetitions": 5,
+	"sourceSnapMaxMeters": 100,
+	"borderPolicy": "Static imported access only; no border queue delays or verified crossing availability. Mexico roads retained."
+}

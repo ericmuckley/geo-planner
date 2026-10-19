@@ -1,0 +1,19 @@
+.............................................................E....................................
+======================================================================
+ERROR: setUpClass (native_search_test.NativeKernelTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/recipe/native_search_test.py", line 48, in setUpClass
+    cls.compilation = compile_kernel(cls.binary)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/native_support.py", line 57, in compile_kernel
+    config = config or compiler_config()
+                       ^^^^^^^^^^^^^^^^^
+  File "/recipe/native_support.py", line 50, in compiler_config
+    raise RuntimeError("A C++17 compiler is required (Clang or GCC); see docs/native-routing-baseline.md")
+RuntimeError: A C++17 compiler is required (Clang or GCC); see docs/native-routing-baseline.md
+
+----------------------------------------------------------------------
+Ran 97 tests in 2.894s
+
+FAILED (errors=1)

@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-16T17:56:42.432Z",
+  "runtime": {
+    "handler": "index.mjs",
+    "launcherType": "Nodejs",
+    "shouldAddHelpers": false,
+    "supportsResponseStreaming": true,
+    "runtime": "nodejs24.x"
+  },
+  "functionBytes": 3255841,
+  "functionFiles": 24,
+  "config": {
+    "version": 3,
+    "framework": {
+      "name": "nitro",
+      "version": "3.0.260610-beta"
+    },
+    "overrides": {},
+    "routes": [
+      {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        },
+        "src": "/assets/(.*)"
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/__server"
+      }
+    ]
+  },
+  "health": {
+    "configured": true,
+    "health": "ready",
+    "checkedAt": "2026-10-16T17:56:41.666Z",
+    "maxMinutes": 120,
+    "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+    "engineVersion": "3.9.1-7fd2228e5",
+    "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+    "coverageBounds": [
+      -119.8,
+      30.8,
+      -114.5,
+      35.5
+    ]
+  },
+  "result": {
+    "id": "fe89dc12-7999-4e38-9da0-83a1059e92dd",
+    "query": {
+      "version": 1,
+      "origin": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "mode": "auto",
+      "direction": "outbound",
+      "metric": "time",
+      "budgetMinutes": 60
+    },
+    "metadata": {
+      "engine": "valhalla",
+      "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+      "engineVersion": "3.9.1-7fd2228e5",
+      "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+      "coverageBounds": [
+        -119.8,
+        30.8,
+        -114.5,
+        35.5
+      ],
+      "coverageVerified": false,
+      "speedTypes": [
+        "freeflow",
+        "constrained"
+      ],
+      "generalizeMeters": 100,
+      "denoise": 0,
+      "upstreamBytes": 137128,
+      "timings": {
+        "engineRoundTripMs": 721.075875,
+        "decodeValidateMs": 17.46920799999998,
+        "serverTotalMs": 739.290708
+      }
+    },
+    "featureCount": 3
+  },
+  "limitations": "Invoked generated Vercel handler locally with the local graph service. Cloud deployment, Linux native bindings, provider credentials, and worldwide routing were not verified."
+}

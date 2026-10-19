@@ -1,0 +1,418 @@
+{
+  "runId": "13f1652082013ac9fd899eeef8a14c53d376affec200504585003d73f8a7a763",
+  "previousWideGraphUnchanged": true,
+  "nativeBinaryUnchanged": true,
+  "roadsPatternsStatesUnchanged": true,
+  "transitionsAdded": 1985,
+  "nodesWithAddedTransitions": 634,
+  "transitionsRemovedOrReweighted": 0,
+  "reproducedArtifacts": [
+    "barrier-roads.osm",
+    "barrier-source-samples.osm",
+    "graph.csr",
+    "graph.csr.gz",
+    "graph.json",
+    "import-audit.json",
+    "uncertain-crossings-source.osm"
+  ],
+  "cutWitnesses": [
+    {
+      "origin": "san-diego",
+      "costMs": 614768,
+      "road": {
+        "costMs": 2197,
+        "from": 49259272,
+        "fromPoint": [
+          -117.2494609,
+          32.753671
+        ],
+        "id": "1077596899:2:f",
+        "name": "West Point Loma Boulevard",
+        "to": 1416492916,
+        "toPoint": [
+          -117.2498077,
+          32.7535688
+        ],
+        "way": 1077596899
+      }
+    },
+    {
+      "origin": "el-cajon",
+      "costMs": 280140,
+      "road": {
+        "costMs": 4733,
+        "from": 49071430,
+        "fromPoint": [
+          -116.954153,
+          32.84855
+        ],
+        "id": "161937728:6:f",
+        "name": "San Vicente Freeway",
+        "to": 49071431,
+        "toPoint": [
+          -116.953087,
+          32.849403
+        ],
+        "way": 161937728
+      }
+    },
+    {
+      "origin": "tijuana",
+      "costMs": 356393,
+      "road": {
+        "costMs": 3022,
+        "from": 7325987736,
+        "fromPoint": [
+          -117.0361845,
+          32.4819119
+        ],
+        "id": "784252846:0:f",
+        "name": "Boulevard de los Fundadores",
+        "to": 365041470,
+        "toPoint": [
+          -117.036287,
+          32.4815058
+        ],
+        "way": 784252846
+      }
+    },
+    {
+      "origin": "san-ysidro",
+      "costMs": 681491,
+      "road": {
+        "costMs": 6602,
+        "from": 7403020925,
+        "fromPoint": [
+          -117.0099843,
+          32.4810072
+        ],
+        "id": "759009548:12:f",
+        "name": "Boulevard Cuauht\u00e9moc Sur",
+        "to": 7403020924,
+        "toPoint": [
+          -117.0104402,
+          32.4801858
+        ],
+        "way": 759009548
+      }
+    },
+    {
+      "origin": "port-incoming",
+      "costMs": 682977,
+      "road": {
+        "costMs": 6602,
+        "from": 7403020925,
+        "fromPoint": [
+          -117.0099843,
+          32.4810072
+        ],
+        "id": "759009548:12:f",
+        "name": "Boulevard Cuauht\u00e9moc Sur",
+        "to": 7403020924,
+        "toPoint": [
+          -117.0104402,
+          32.4801858
+        ],
+        "way": 759009548
+      }
+    }
+  ],
+  "cityRoutes": [
+    {
+      "origin": "san-diego",
+      "destination": "el-cajon",
+      "costMs": 1119008,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1119008,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "san-diego",
+      "destination": "tijuana",
+      "costMs": 1353245,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        9357332258
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 1353245,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "san-diego",
+      "destination": "san-ysidro",
+      "costMs": 1057803,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1057803,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-diego",
+      "costMs": 1173443,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1173443,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "tijuana",
+      "costMs": 1988583,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        9357332258
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 1988583,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-ysidro",
+      "costMs": 1693141,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1693141,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-diego",
+      "costMs": 1421952,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        8181606580
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 1421952,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "tijuana",
+      "destination": "el-cajon",
+      "costMs": 1867086,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        8181606580
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 1867086,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-ysidro",
+      "costMs": 484661,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        8181606580
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 484661,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "san-diego",
+      "costMs": 1178375,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1178375,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "el-cajon",
+      "costMs": 1527910,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [],
+      "reachableInModel": true,
+      "recomputedCostMs": 1527910,
+      "sourceUncertaintyWayIds": []
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "tijuana",
+      "costMs": 466546,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        9357332258
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 466546,
+      "sourceUncertaintyWayIds": []
+    }
+  ],
+  "uncertainBranchRoutes": [
+    {
+      "costMs": 1167889,
+      "carEligibilityVerified": false,
+      "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation.",
+      "qualifiedStaticBarrierNodesTraversed": [
+        7229150207
+      ],
+      "reachableInModel": true,
+      "recomputedCostMs": 1167889,
+      "sourceUncertaintyWayIds": [
+        114198251
+      ]
+    }
+  ],
+  "retainedOtayWitness": {
+    "costMs": 2890950,
+    "reachableInModel": true,
+    "recomputedCostMs": 2890950,
+    "sourceUncertaintyWayIds": [
+      114198251
+    ],
+    "qualifiedStaticBarrierNodesTraversed": [],
+    "carEligibilityVerified": false,
+    "eligibilityScope": "Source hints on this witness only; absence of a hint is not verified real access. No queue/delay/document evaluation."
+  },
+  "cityCrossingNodes": [
+    {
+      "accessKey": "motor_vehicle",
+      "accessValue": "yes",
+      "blockedByModel": false,
+      "id": 8181606580,
+      "open": true,
+      "point": [
+        -117.0307797,
+        32.542817
+      ],
+      "reason": "explicit-car-permission",
+      "tags": {
+        "barrier": "border_control",
+        "foot": "no",
+        "motor_vehicle": "yes"
+      }
+    },
+    {
+      "accessKey": "motorcar",
+      "accessValue": "yes",
+      "blockedByModel": false,
+      "id": 9357332258,
+      "open": true,
+      "point": [
+        -117.0343846,
+        32.5412801
+      ],
+      "reason": "explicit-car-permission",
+      "tags": {
+        "barrier": "border_control",
+        "bicycle": "no",
+        "foot": "no",
+        "motorcar": "yes",
+        "motorcycle": "yes",
+        "name": "Aduanas y Immagration Mexicano, Tijuana"
+      }
+    }
+  ],
+  "cityCrossingSourceWays": [
+    {
+      "id": 879503574,
+      "tags": {
+        "covered": "yes",
+        "cycleway:both": "no",
+        "highway": "motorway",
+        "lanes": "1",
+        "lit": "yes",
+        "name": "All Travelers Lane",
+        "oneway": "yes",
+        "ref": "I 5",
+        "surface": "paved"
+      }
+    },
+    {
+      "id": 1014246484,
+      "tags": {
+        "covered": "yes",
+        "highway": "motorway",
+        "oneway": "yes",
+        "ref": "MEX 1"
+      }
+    }
+  ],
+  "cityCrossingExcerptSha256": "d15ee4284fb9a2b4f459ad6993d6201c5babafff1466c9530b7f5e64f9b23193",
+  "uncertainWayIds": [
+    114198251,
+    185333061,
+    577149752
+  ],
+  "routeAndCutGeojsonSha256": "b99e2692e3ac29a4beefec5d213ac0a372efcc4d7d5b883e9067fb480b6baa1a",
+  "nativeAggregates": [
+    {
+      "budgetMs": 300000,
+      "originsWithCutFlag": 1,
+      "medianOfOriginSearchP50Ms": 0.602792,
+      "medianOfOriginPipeP50Ms": 0.9486249182373285
+    },
+    {
+      "budgetMs": 900000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 24.016708,
+      "medianOfOriginPipeP50Ms": 24.493082892149687
+    },
+    {
+      "budgetMs": 1800000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 67.965417,
+      "medianOfOriginPipeP50Ms": 68.51154193282127
+    },
+    {
+      "budgetMs": 3600000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 69.041208,
+      "medianOfOriginPipeP50Ms": 69.56566707231104
+    },
+    {
+      "budgetMs": 7200000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 68.793791,
+      "medianOfOriginPipeP50Ms": 69.28083300590515
+    },
+    {
+      "budgetMs": 21600000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 68.949333,
+      "medianOfOriginPipeP50Ms": 69.4570830091834
+    },
+    {
+      "budgetMs": 36000000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 68.358833,
+      "medianOfOriginPipeP50Ms": 68.86983290314674
+    },
+    {
+      "budgetMs": 43200000,
+      "originsWithCutFlag": 5,
+      "medianOfOriginSearchP50Ms": 69.326792,
+      "medianOfOriginPipeP50Ms": 69.84954117797315
+    }
+  ],
+  "nativeCostComparisons": 41710500,
+  "nativeMembershipComparisons": 37076000,
+  "nativeInteriorComparisons": 2,
+  "publicApiCalls": 0,
+  "limits": "Exactness refers to the imported v3 model. Source hints are incomplete, commercial context does not establish per-edge car eligibility, border waits/delays are absent, and selected long queries reach cut exits."
+}

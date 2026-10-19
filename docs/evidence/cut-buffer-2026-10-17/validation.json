@@ -1,0 +1,108 @@
+{
+  "recordedDate": "2026-10-17",
+  "checks": [
+    {
+      "command": "npm run routing:cuts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:coverage:next -- --case calibration",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run routing:coverage:next -- --case candidate",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/cut-buffer-2026-10-17/analyze.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/compact-input-2026-10-17/analyze.py",
+      "exitCode": 0
+    }
+  ],
+  "pythonCases": 98,
+  "pythonPassed": 96,
+  "pythonSkipped": 2,
+  "skipReason": "Unchanged host Osmium integration cases; the host lacks Osmium.",
+  "adapterCases": 14,
+  "adapterPassed": 14,
+  "nativePreparationFixtures": 6,
+  "nativeFixtureGraphAndAuditParity": true,
+  "calibrationXmlByteIdentical": true,
+  "biomeFiles": 58,
+  "existingWarnings": [
+    "src/db/index.ts non-null assertion",
+    "MapLibre bundle size",
+    "Upstream TanStack module-level directives"
+  ],
+  "cutEndpoints": 337,
+  "cutStatesIncludingHistory": 407,
+  "allCutEndpointsHaveSourceBoundaryLinks": true,
+  "cutWitnessCostsCheckedAgainstFrozenOracles": true,
+  "newRouteSearches": false,
+  "candidateRoadStateBounds": [
+    2858813,
+    2946180
+  ],
+  "candidateHistoryStateCeiling": 2950064,
+  "candidateFullGraphAdmitted": false,
+  "candidateGraphBuilt": false,
+  "candidateCgroupPeakBytes": 4294967296,
+  "candidateLimitHitEvents": 1056,
+  "candidateMaxChildRssKiB": 3837016,
+  "candidateObservedAnonMaxBytes": 3941556224,
+  "memoryCapBytes": 4294967296,
+  "swapDisabled": true,
+  "zeroOomOrKillEvents": true,
+  "samplingIntervalSeconds": 0.2,
+  "hostVmPagingMeasured": false,
+  "publicRoutingApiCalls": 0,
+  "newRoadDownloads": 0,
+  "newDependencies": false,
+  "originalGraphSourcesRecipesAndEnvironmentPreserved": true,
+  "manualGeneratedRouteTreeEdits": false,
+  "packageLockAndGeneratedRouteTreeHashesUnchanged": true,
+  "originalBaselineHealthy": true,
+  "experimentContainersExited": true,
+  "preservedAttempts": [
+    {
+      "name": "staged-calibration-v2",
+      "outcome": "Missing fixture OSM version header; retained."
+    },
+    {
+      "name": "staged-calibration-v2-r2",
+      "outcome": "Simple selector changes boundary graph; rejected and retained."
+    },
+    {
+      "name": "staged-calibration-v2-r3",
+      "outcome": "Completed equality calibration; superseded with stronger report/source bindings and retained."
+    }
+  ],
+  "currentCalibration": "staged-calibration-v2-r4",
+  "complete60MinuteCoverageVerified": false,
+  "complete12HourCoverageVerified": false,
+  "cloudDeploymentPerformed": false,
+  "nextTask": "Reduce preparation dense-ID memory with exact reference/ID preservation; profile full frozen import/export composition and establish whole-container headroom before admitting the cached candidate."
+}

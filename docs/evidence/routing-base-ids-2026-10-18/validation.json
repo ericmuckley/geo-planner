@@ -1,0 +1,341 @@
+{
+  "commands": {
+    "hostRoutingTests": "npm run test:routing",
+    "focusedDevelopmentTests": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s routing -p base_ids_test.py -v",
+    "linuxRoutingTests": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test cache_lifetime_test range_hash_test member_lookup_test targeted_evidence_test base_ids_test",
+    "adapterTests": "npm test",
+    "biome": "npm run check",
+    "typecheck": "npm run typecheck",
+    "build": "npm run build",
+    "parity": [
+      "npm run routing:base-ids -- --case corridor-v3 --id-mode strings --series base-strings-v1",
+      "npm run routing:base-ids -- --case downtown-v2",
+      "npm run routing:base-ids -- --case corridor-v3",
+      "npm run routing:base-ids -- --case wide-v3",
+      "npm run routing:base-ids -- --case hour-v3"
+    ],
+    "evidenceAnalyzer": "python3 -B docs/evidence/routing-base-ids-2026-10-18/analyze.py"
+  },
+  "results": {
+    "hostRouting": {
+      "total": 151,
+      "passed": 142,
+      "skipped": 9,
+      "exitCode": 0
+    },
+    "linuxRouting": {
+      "total": 60,
+      "passed": 60,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    "adapterTests": {
+      "total": 14,
+      "passed": 14,
+      "exitCode": 0
+    },
+    "check": {
+      "exitCode": 0,
+      "files": 79,
+      "existingWarning": "src/db/index.ts non-null assertion"
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0,
+      "warnings": "Existing MapLibre chunk size and upstream TanStack module directives"
+    },
+    "parity": {
+      "orderedCases": 4,
+      "orderedArtifacts": 24,
+      "profiledStringCases": 1,
+      "profiledStringArtifacts": 6,
+      "freshDistinctSourceEvidenceFixtures": 11,
+      "sourceSuccessCases": 5,
+      "sourceFailureCasesMatched": 6,
+      "freshDistinctImporterFixtures": 17,
+      "fixtureFullCostComparisonsPerWorker": 296,
+      "fixtureBoundedCostComparisonsPerWorker": 888,
+      "exitCode": 0
+    },
+    "analyzer": {
+      "exitCode": 0,
+      "savedOutputReproducesExactly": true
+    }
+  },
+  "preservation": {
+    "preExistingFilesChecked": 181,
+    "allFingerprintsMatch": true,
+    "newRecipeFilesFrozen": 7,
+    "environmentValuesReadOrChanged": false,
+    "envLocalIgnored": true,
+    "dataIgnored": true,
+    "stagedFiles": 0,
+    "localDocLinksChecked": 173
+  },
+  "tooling": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "node": "v24.5.0",
+    "npm": "11.6.0",
+    "hostMemoryBytes": 17179869184,
+    "cpu": "Apple M4",
+    "freeDiskBytesAtMetadataCheck": 234490408960,
+    "dockerVersion": "28.3.3",
+    "dockerResources": {
+      "memoryBytes": 8218034176,
+      "cpus": 10
+    },
+    "valhallaState": "running healthy",
+    "toolsImageId": "sha256:6652906bfea590161b144a6e4fac146a41e14cbafae581dcb9e38c74ceaa53a7",
+    "readerImageId": "sha256:025ebba8267c0aad21bc4cb52b40c4726b65a13a1ebe66b8642df5495261ddd5"
+  },
+  "initialFreeDiskGiB": 219.17382049560547,
+  "freeDiskBytesAfterWorkloads": 232964681728,
+  "retainedParitySeriesLogicalBytes": 2284466187,
+  "scope": {
+    "publicApiCalls": 0,
+    "downloads": 0,
+    "freshRegionalSearches": false,
+    "regionalQualificationReusedOnIdenticalBytes": true,
+    "newLargerGraphBuilt": false,
+    "largerGraphAdmitted": false,
+    "browserContourOrHttpTiming": false,
+    "appHostedDrivingCapMinutes": 60
+  },
+  "notes": [
+    "Linux scope avoids compiler-dependent cases because the cached reader lacks a C++ compiler; host compiler tests pass.",
+    "No approval-review rejection; Docker, test IPC and hardware metadata required sandbox exceptions.",
+    "All old data, recipes and attempts remain unchanged.",
+    "The fresh string-set profile is corridor-only; no current-sized string object inventory was measured.",
+    "ID and outgoing container byte fields are shallow object sizes, separate from cgroup/RSS.",
+    "The complete current peak is now source-evidence XML/file-cache processing."
+  ],
+  "evidenceArtifacts": {
+    "adapter-tests.log": {
+      "bytes": 1491,
+      "sha256": "de530baf1ddc5a90314b36aa8e1521b9f76e8a77a2a83ff2126211c2c0c1dd56"
+    },
+    "analyze.py": {
+      "bytes": 17501,
+      "sha256": "15ef3ff90dcce186720a47a184181d6072d91bb82a65e9b9bb9394a98f5b9f93"
+    },
+    "build.log": {
+      "bytes": 19732,
+      "sha256": "905e4c74a6d9f73454b59f1baff09d349f131b537dc858263d3093efd277dcab"
+    },
+    "check.log": {
+      "bytes": 536,
+      "sha256": "6ac301a2b76f9535b5840c4609d13c76fc77db37f2789a7e0ce5fbda14a4b9b0"
+    },
+    "commands.json": {
+      "bytes": 1465,
+      "sha256": "d4fba918b92f3dcdfd67d4853789d0621a38e4096ad6db18942fe26326778f10"
+    },
+    "comparison.json": {
+      "bytes": 8057,
+      "sha256": "f968b69a46110dd40d53f7f1000193149c62ab87b14a104d4870f9bccff4fbd6"
+    },
+    "corridor-v3.log": {
+      "bytes": 5388,
+      "sha256": "9b2e5bd71475936836fd801638c8cc1008f40a5ac55e9770ee8452baeb321e28"
+    },
+    "downtown-v2.log": {
+      "bytes": 3905,
+      "sha256": "603b5aab1053dd1aaa30d59a5439ec16455539b13282c7a19c20c9854b76a2da"
+    },
+    "frozen-native-verification.json": {
+      "bytes": 154483,
+      "sha256": "5afed813ac6087bcfa23f2c9821a40a3524d87403a5683bb4aff279e78557efa"
+    },
+    "frozen-qualification-report.json": {
+      "bytes": 12036,
+      "sha256": "b96594c8964c33b82ca08e1c6bb78dd711124df50a0165c894a50c50a10279ea"
+    },
+    "host-routing-tests.log": {
+      "bytes": 363,
+      "sha256": "610aa6a25306e256a60a5dc86fbd20ace7d14dc48a266f1c382077aa1fbab3bf"
+    },
+    "host-tooling.json": {
+      "bytes": 549,
+      "sha256": "672dafbebb5084ac88d3beb895fabd4e893e07630822a79ec7920a805c38866a"
+    },
+    "hour-v3.log": {
+      "bytes": 7448,
+      "sha256": "75a44d83c9dfee8c552b022485abd061e7b7080d5e7ea5d8797b7e0aa083c991"
+    },
+    "ids-corridor-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "ids-corridor-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "ids-corridor-v3-manifest.json": {
+      "bytes": 7875,
+      "sha256": "2cc9e6d097a7fcf49610c4cb92917ff5b114fcecfd389d1291b66499e1587331"
+    },
+    "ids-corridor-v3-report.json": {
+      "bytes": 86657,
+      "sha256": "906d944b9ffea6418660ac67fabeed5c4bb33620979bfc61027fe38607098a55"
+    },
+    "ids-corridor-v3-run-identity.json": {
+      "bytes": 6769,
+      "sha256": "dd46937a245543c71cacd150958723a67a6d238b7d6a662ebbd78153eaa899a7"
+    },
+    "ids-downtown-v2-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "ids-downtown-v2-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "ids-downtown-v2-manifest.json": {
+      "bytes": 7256,
+      "sha256": "040d77b13620fc18048ed22a554241bb99fb8a9d1f5b1f45e33eac68a436cee6"
+    },
+    "ids-downtown-v2-report.json": {
+      "bytes": 63567,
+      "sha256": "672a869af965c2906d20c7422ccf63030431cd8eab0bb51ab5db6d401a935436"
+    },
+    "ids-downtown-v2-run-identity.json": {
+      "bytes": 6390,
+      "sha256": "eda486ba5bac868c18b562d95f0920b889de66f21840bfe11885cc3148ac3566"
+    },
+    "ids-hour-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "ids-hour-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "ids-hour-v3-manifest.json": {
+      "bytes": 10993,
+      "sha256": "08773894ed8db2c57d6c7606712546adbac0873053f28d0680a5ac9b67fba246"
+    },
+    "ids-hour-v3-report.json": {
+      "bytes": 119498,
+      "sha256": "55ec52bc5dbaee5b148372030993a9425af3d4b541ef82af1bb7bc836ae3a4bf"
+    },
+    "ids-hour-v3-run-identity.json": {
+      "bytes": 9758,
+      "sha256": "dff2dc648f9cf5535c820b1e76cc3ce33f631ad61b5a599456401972fcdb5f72"
+    },
+    "ids-wide-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "ids-wide-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "851c26d97da14df701a1e67da280e3ec54160359576799f2ea6b73bd7e9d11b8"
+    },
+    "ids-wide-v3-manifest.json": {
+      "bytes": 8028,
+      "sha256": "f538e50a17ab162c4f7e54978ede143ed334eff9e05fd6afa3f14ae8ccb800d8"
+    },
+    "ids-wide-v3-report.json": {
+      "bytes": 116110,
+      "sha256": "5e58c76b9cfdafbda6af3f048f5deb4b2d512cf29007ba76cd44cf00d72345b8"
+    },
+    "ids-wide-v3-run-identity.json": {
+      "bytes": 6795,
+      "sha256": "e8f3296a7aa9fed76431de4623075b4a2ec25d10ea4b6ccc4e200f031ab1ffe5"
+    },
+    "linux-routing-tests.log": {
+      "bytes": 159,
+      "sha256": "9909dc3be620cd5d07a5faf6ddac6901d27931022e31d08a71ab08ceabc90621"
+    },
+    "new-recipe-sha256.json": {
+      "bytes": 636,
+      "sha256": "9b6ae7250e5a9580689898416d81f9b252d85c5b8f8a5b026cdd0b0231a4c86e"
+    },
+    "preserved-sha256.json": {
+      "bytes": 18092,
+      "sha256": "d7945e64bd2d284e42e55ee320f7f92b6e40c6d6dbfc8a655f1be01b429002d7"
+    },
+    "qualified-corridor-v3-manifest.json": {
+      "bytes": 3636,
+      "sha256": "a3841000945270f6a7873395aca7cf7df309e9ed3f3d3e36522f2938aacb5f57"
+    },
+    "qualified-downtown-v2-manifest.json": {
+      "bytes": 3017,
+      "sha256": "acfce7b74cee07121fb979f6a30a2f03ee3df58cef697aec7d9df0e2b8dcb7eb"
+    },
+    "qualified-hour-v3-manifest.json": {
+      "bytes": 9192,
+      "sha256": "5dab6234629eb4166472f715fa03b98e737032e62badfd0caca437f5b6888b6d"
+    },
+    "qualified-wide-v3-manifest.json": {
+      "bytes": 3788,
+      "sha256": "132ebec88ff14eef871bd18648a6a4dbd896bb2a95126c1e333933b28a6ed9ff"
+    },
+    "strings-corridor-v3-evidence-fixtures.json": {
+      "bytes": 6674,
+      "sha256": "f7628ee20e5d1e2c78a24590b8c41b5906fd01f4d3d4e831dc85ce775783faee"
+    },
+    "strings-corridor-v3-fixture-parity.json": {
+      "bytes": 11160,
+      "sha256": "4a3dc3cc346272cb9bd67c3d256aa7ee1f7c0c0715a145182f8210da741b2382"
+    },
+    "strings-corridor-v3-manifest.json": {
+      "bytes": 7879,
+      "sha256": "ab84678d1a8daaed19e19d2791ce1f853da3f1d59bfd97e5d88a91581f3f76ac"
+    },
+    "strings-corridor-v3-report.json": {
+      "bytes": 86859,
+      "sha256": "ff9bc5ccdd756e465410e5d484dee7db6faa062562852b3d169adc42bc90b60e"
+    },
+    "strings-corridor-v3-run-identity.json": {
+      "bytes": 6773,
+      "sha256": "cb5f61e67aa1b29e44a1e056a10537c72687deb0b1f2349213c0508afc57e72f"
+    },
+    "strings-corridor-v3.log": {
+      "bytes": 5430,
+      "sha256": "711e8b8de3422a352ff26a27c2fde40214dfcd01d06e4ec3978455e4dd8d94d3"
+    },
+    "targeted-corridor-v3-manifest.json": {
+      "bytes": 7251,
+      "sha256": "56694a321eff8aa5438a2d908d44314ddd00dfc8364e53365c524990976253f1"
+    },
+    "targeted-corridor-v3-report.json": {
+      "bytes": 48271,
+      "sha256": "e3fdf70fb0a6abe5e823cb3a667c2c94c3e287ab1fb3d1423bc867949fe62a1b"
+    },
+    "targeted-downtown-v2-manifest.json": {
+      "bytes": 6632,
+      "sha256": "af9b44a2622ed2d516ebb6760ced369cfec6876d6655ea08da311065638f35dd"
+    },
+    "targeted-downtown-v2-report.json": {
+      "bytes": 33223,
+      "sha256": "5ac33a0e0684827cf469e811ec6c5910102560bcb5cb664352c3484c26bac7f0"
+    },
+    "targeted-hour-v3-manifest.json": {
+      "bytes": 10368,
+      "sha256": "400f5c9089f3c0b95119c8d9d6dd0114b54ef4a7350bde7316a5ab0428a7ec3f"
+    },
+    "targeted-hour-v3-report.json": {
+      "bytes": 65505,
+      "sha256": "33d14fca6de607ed3c3c216ea56738326ed4f5399973903114ab3b451bd9b8a1"
+    },
+    "targeted-wide-v3-manifest.json": {
+      "bytes": 7403,
+      "sha256": "0bbeb2ee12e6b3e1ee8c829579d586de5df2ab92668963074dfb4c52c9ef4f59"
+    },
+    "targeted-wide-v3-report.json": {
+      "bytes": 62396,
+      "sha256": "2869e60a6a313d36f1d36da7abe4fedf3eb919e039bc65a22ab4cc22010e1022"
+    },
+    "typecheck.log": {
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "wide-v3.log": {
+      "bytes": 7280,
+      "sha256": "79358168e1dc13f0a3553de142c9c5d1bf85e68d42a9d895033b23c426972897"
+    }
+  }
+}

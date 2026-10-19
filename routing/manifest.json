@@ -1,0 +1,33 @@
+{
+	"id": "san-diego-tijuana-20261014-v1",
+	"image": "ghcr.io/valhalla/valhalla@sha256:8d656eb79874acb39359425e470d8326f0e3aab95a88e4a5c294e9dfcea4cda4",
+	"engineVersion": "3.9.1-7fd2228e5",
+	"engineRevision": "7fd2228e5863b442bc1ac8d25eece6415dd91bff",
+	"osmTimestamp": "2026-10-14T20:21:12Z",
+	"bbox": [-118.5, 31.5, -115.5, 34],
+	"extractStrategy": "complete_ways",
+	"buildConcurrency": 2,
+	"coverage": "San Diego–Tijuana bbox [-118.5,31.5,-115.5,34]; Mexico included; US admin polygon missing; cut edges/completeness unverified; no live border waits",
+	"knownLimitations": [
+		"US and California administrative polygons are incomplete in source extracts; country overrides and crossing-cost behavior require repair and revalidation.",
+		"No timezone database, predicted/live traffic, or real border wait times.",
+		"Regional cuts can truncate paths; 120-minute completeness is unverified."
+	],
+	"sources": [
+		{
+			"file": "socal-261014.osm.pbf",
+			"url": "https://download.geofabrik.de/north-america/us/california/socal-261014.osm.pbf",
+			"bytes": 671540119,
+			"md5": "2bdf599c044c0c0a756915f12fc1bb1a",
+			"sha256": "4a0cc652b702142cadb77088f68564545628f7650b378847ec969e0d0a8f9a52"
+		},
+		{
+			"file": "mexico-261014.osm.pbf",
+			"url": "https://download.geofabrik.de/north-america/mexico-261014.osm.pbf",
+			"bytes": 646916392,
+			"md5": "14ada624561988421d9ed2a8bd28769b",
+			"sha256": "a0a4d8e8411fa3960ec56d4790ed5d45e9407acc396dcee05e49decf5255f81d"
+		}
+	],
+	"license": "OpenStreetMap contributors, ODbL 1.0; extracts by Geofabrik"
+}

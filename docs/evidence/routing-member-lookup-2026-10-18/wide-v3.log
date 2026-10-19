@@ -1,0 +1,38 @@
+
+> routing:members
+> node routing/member-parity.mjs --case wide-v3
+
+preflight: 1.00 s; cgroup peak 68075520; anon 16273408; file 30404608; swap max/peak 0/0
+fixtures: 1.02 s; cgroup peak 68075520; anon 16273408; file 30404608; swap max/peak 0/0
+parsed: 16.99 s; cgroup peak 381984768; anon 122585088; file 29978624; swap max/peak 0/0
+originalBase: 31.25 s; cgroup peak 496713728; anon 224833536; file 29978624; swap max/peak 0/0
+baseReady1: 45.38 s; cgroup peak 548507648; anon 479498240; file 29978624; swap max/peak 0/0
+lookupReady1: 45.55 s; cgroup peak 548507648; anon 479498240; file 29990912; swap max/peak 0/0
+basePass1: 45.57 s; cgroup peak 548507648; anon 479498240; file 29990912; swap max/peak 0/0
+baseReady2: 60.21 s; cgroup peak 606015488; anon 539648000; file 29978624; swap max/peak 0/0
+lookupReady2: 60.38 s; cgroup peak 606015488; anon 539648000; file 29978624; swap max/peak 0/0
+basePass2: 60.40 s; cgroup peak 606015488; anon 539648000; file 29978624; swap max/peak 0/0
+baseReady3: 74.70 s; cgroup peak 606015488; anon 510394368; file 29978624; swap max/peak 0/0
+lookupReady3: 74.87 s; cgroup peak 606015488; anon 510394368; file 29978624; swap max/peak 0/0
+basePass3: 74.88 s; cgroup peak 606015488; anon 510394368; file 29978624; swap max/peak 0/0
+baseReady4: 89.09 s; cgroup peak 606015488; anon 523288576; file 29978624; swap max/peak 0/0
+lookupReady4: 89.26 s; cgroup peak 606015488; anon 523288576; file 29978624; swap max/peak 0/0
+basePass4: 89.27 s; cgroup peak 606015488; anon 523288576; file 29978624; swap max/peak 0/0
+baseReady5: 103.52 s; cgroup peak 606015488; anon 527163392; file 29978624; swap max/peak 0/0
+lookupReady5: 103.69 s; cgroup peak 606015488; anon 527163392; file 30007296; swap max/peak 0/0
+basePass5: 103.71 s; cgroup peak 606015488; anon 527163392; file 30007296; swap max/peak 0/0
+baseReady6: 118.12 s; cgroup peak 606015488; anon 513052672; file 29978624; swap max/peak 0/0
+lookupReady6: 118.29 s; cgroup peak 606015488; anon 513052672; file 29978624; swap max/peak 0/0
+basePass6: 118.31 s; cgroup peak 606015488; anon 513052672; file 29978624; swap max/peak 0/0
+inputsReleased: 118.33 s; cgroup peak 606015488; anon 446566400; file 29978624; swap max/peak 0/0
+historyBuilt: 122.47 s; cgroup peak 606015488; anon 446570496; file 29978624; swap max/peak 0/0
+sourceEvidence: 139.01 s; cgroup peak 700669952; anon 429678592; file 29978624; swap max/peak 0/0
+exported: 148.70 s; cgroup peak 700669952; anon 464154624; file 29978624; swap max/peak 0/0
+complete: 148.96 s; cgroup peak 700669952; anon 464154624; file 44568576; swap max/peak 0/0
+{
+  "case": "wide-v3",
+  "states": 926900,
+  "transitions": 1957330,
+  "importMs": 124423.71476600238,
+  "workerWallMs": 148967.7036100038
+}

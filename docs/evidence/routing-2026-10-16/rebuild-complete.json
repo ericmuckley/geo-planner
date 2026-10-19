@@ -1,0 +1,226 @@
+{
+  "manifest": {
+    "id": "san-diego-tijuana-20261014-v1",
+    "image": "ghcr.io/valhalla/valhalla@sha256:8d656eb79874acb39359425e470d8326f0e3aab95a88e4a5c294e9dfcea4cda4",
+    "engineVersion": "3.9.1-7fd2228e5",
+    "engineRevision": "7fd2228e5863b442bc1ac8d25eece6415dd91bff",
+    "osmTimestamp": "2026-10-14T20:21:12Z",
+    "bbox": [
+      -118.5,
+      31.5,
+      -115.5,
+      34
+    ],
+    "extractStrategy": "complete_ways",
+    "buildConcurrency": 2,
+    "coverage": "San Diego\u2013Tijuana bbox [-118.5,31.5,-115.5,34]; Mexico included; US admin polygon missing; cut edges/completeness unverified; no live border waits",
+    "knownLimitations": [
+      "US and California administrative polygons are incomplete in source extracts; country overrides and crossing-cost behavior require repair and revalidation.",
+      "No timezone database, predicted/live traffic, or real border wait times.",
+      "Regional cuts can truncate paths; 120-minute completeness is unverified."
+    ],
+    "sources": [
+      {
+        "file": "socal-261014.osm.pbf",
+        "url": "https://download.geofabrik.de/north-america/us/california/socal-261014.osm.pbf",
+        "bytes": 671540119,
+        "md5": "2bdf599c044c0c0a756915f12fc1bb1a",
+        "sha256": "4a0cc652b702142cadb77088f68564545628f7650b378847ec969e0d0a8f9a52"
+      },
+      {
+        "file": "mexico-261014.osm.pbf",
+        "url": "https://download.geofabrik.de/north-america/mexico-261014.osm.pbf",
+        "bytes": 646916392,
+        "md5": "14ada624561988421d9ed2a8bd28769b",
+        "sha256": "a0a4d8e8411fa3960ec56d4790ed5d45e9407acc396dcee05e49decf5255f81d"
+      }
+    ],
+    "license": "OpenStreetMap contributors, ODbL 1.0; extracts by Geofabrik"
+  },
+  "completedAt": "2026-10-16T14:53:18.747314+00:00",
+  "admins": [
+    [
+      2,
+      "MX",
+      "M\u00e9xico"
+    ],
+    [
+      4,
+      "TLA",
+      "Tlaxcala"
+    ],
+    [
+      4,
+      "CMX",
+      "Ciudad de M\u00e9xico"
+    ],
+    [
+      4,
+      "MOR",
+      "Morelos"
+    ],
+    [
+      4,
+      "MEX",
+      "Estado de M\u00e9xico"
+    ],
+    [
+      4,
+      "HID",
+      "Hidalgo"
+    ],
+    [
+      4,
+      "PUE",
+      "Puebla"
+    ],
+    [
+      4,
+      "NLE",
+      "Nuevo Le\u00f3n"
+    ],
+    [
+      4,
+      "COA",
+      "Coahuila"
+    ],
+    [
+      4,
+      "CHH",
+      "Chihuahua"
+    ],
+    [
+      4,
+      "SON",
+      "Sonora"
+    ],
+    [
+      4,
+      "MIC",
+      "Michoac\u00e1n"
+    ],
+    [
+      4,
+      "QUE",
+      "Quer\u00e9taro"
+    ],
+    [
+      4,
+      "GUA",
+      "Guanajuato"
+    ],
+    [
+      4,
+      "JAL",
+      "Jalisco"
+    ],
+    [
+      4,
+      "COL",
+      "Colima"
+    ],
+    [
+      4,
+      "ZAC",
+      "Zacatecas"
+    ],
+    [
+      4,
+      "DUR",
+      "Durango"
+    ],
+    [
+      4,
+      "TAM",
+      "Tamaulipas"
+    ],
+    [
+      4,
+      "VER",
+      "Veracruz"
+    ],
+    [
+      4,
+      "GRO",
+      "Guerrero"
+    ],
+    [
+      4,
+      "SIN",
+      "Sinaloa"
+    ],
+    [
+      4,
+      "OAX",
+      "Oaxaca"
+    ],
+    [
+      4,
+      "CHP",
+      "Chiapas"
+    ],
+    [
+      4,
+      "TAB",
+      "Tabasco"
+    ],
+    [
+      4,
+      "CAM",
+      "Campeche"
+    ],
+    [
+      4,
+      "BCN",
+      "Baja California"
+    ],
+    [
+      4,
+      "BCS",
+      "Baja California Sur"
+    ],
+    [
+      4,
+      "AGU",
+      "Aguascalientes"
+    ],
+    [
+      4,
+      "ROO",
+      "Quintana Roo"
+    ],
+    [
+      4,
+      "YUC",
+      "Yucat\u00e1n"
+    ],
+    [
+      4,
+      "SLP",
+      "San Luis Potos\u00ed"
+    ],
+    [
+      4,
+      "NAY",
+      "Nayarit"
+    ]
+  ],
+  "artifacts": {
+    "region.osm.pbf": {
+      "bytes": 362411877,
+      "sha256": "d8fd2000542afc278e35cd6ef62d33ecba806760f8a3d1971fbfc7466a4c12da"
+    },
+    "valhalla.json": {
+      "bytes": 9506,
+      "sha256": "837a0bbec863f1b3b65a8520546be8ab2a2f54043643a18371b24c7d2e0d0778"
+    },
+    "admin.sqlite": {
+      "bytes": 19382272,
+      "sha256": "61918c38aa0c8ebfcee9e98c0f5884b92a8efd0a7488278c00df6e8249311128"
+    },
+    "tiles.tar": {
+      "bytes": 508610560,
+      "sha256": "02968ca605dc89461c44839277b8c54257576bd864f06dd4c316576e7cefa928"
+    }
+  }
+}

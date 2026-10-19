@@ -1,0 +1,9 @@
+mkdir -p data/valhalla-rebuild
+cp data/valhalla/sources-verified.json data/valhalla-rebuild/sources-verified.json
+docker run --rm --network none --cpus 2 --memory 4g \
+  -v "$PWD/data/valhalla-rebuild:/data" \
+  -v "$PWD/data/valhalla/sources:/data/sources:ro" \
+  -v "$PWD/routing:/recipe:ro" \
+  geo-planner-valhalla-tools:7fd2228e5 \
+  /usr/bin/time -v -o /data/build-resources.txt bash /recipe/build.sh \
+  > data/valhalla-rebuild/build.log 2>&1

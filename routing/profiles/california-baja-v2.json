@@ -1,0 +1,40 @@
+{
+	"extends": "../manifest.json",
+	"id": "california-baja-roads20261014-admin20261016-v2",
+	"bbox": [-119.8, 30.8, -114.5, 35.5],
+	"maxMinutes": 120,
+	"coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+	"knownLimitations": [
+		"Road data is from 2026-10-14; US/California administrative members were retrieved 2026-10-16 and may differ at boundary edges.",
+		"Regional source coverage is California/Mexico; the bbox is not proof of road coverage in Arizona, Nevada, or beyond the cut.",
+		"No timezone database, predicted/live traffic, or real border wait times.",
+		"Filled contours use a budget-dependent grid and are not exact graph membership."
+	],
+	"adminSupplements": [
+		{
+			"file": "us-20261016.osm",
+			"url": "https://api.openstreetmap.org/api/0.6/relation/148838/full",
+			"bytes": 31646702,
+			"sha256": "bee052b10dec3885175d1d904f517a9305a7abfd97a49c5022f505eef36dd86e",
+			"relationId": 148838,
+			"relationVersion": 1048,
+			"retrievedAt": "2026-10-16"
+		},
+		{
+			"file": "california-20261016.osm",
+			"url": "https://api.openstreetmap.org/api/0.6/relation/165475/full",
+			"bytes": 2091346,
+			"sha256": "481664831be74f0496936edeb54b2f44fb1d990d459de4fefdea162356ba58f0",
+			"relationId": 165475,
+			"relationVersion": 259,
+			"retrievedAt": "2026-10-16"
+		}
+	],
+	"requiredAdmins": ["US", "CA", "MX"],
+	"baseAdminRelations": [114686],
+	"verificationOrigins": [
+		{ "name": "los-angeles", "lat": 34.0522, "lon": -118.2437, "minutes": 60 },
+		{ "name": "bakersfield", "lat": 35.3733, "lon": -119.0187, "minutes": 30 },
+		{ "name": "ensenada", "lat": 31.8667, "lon": -116.5964, "minutes": 60 }
+	]
+}

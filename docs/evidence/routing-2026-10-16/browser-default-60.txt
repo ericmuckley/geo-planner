@@ -1,0 +1,82 @@
+GEO PLANNER / RESEARCH WORKSPACE
+
+How far can you go?
+
+Explore driving reachability, one measured query at a time.
+
+Valhalla configured
+Define a query
+Latitude
+Longitude
+Reset to San Diego
+Driving time · minutes
+
+Outbound · Valhalla auto profile · static speeds. Configured maximum: 120 minutes.
+
+Compute contour
+Save query
+
+Coverage: San Diego–Tijuana bbox [-118.5,31.5,-115.5,34]; Mexico included; US admin polygon missing; cut edges/completeness unverified; no live border waits. Completeness has not been verified.
+
+Analytical layers
+Reachability contour
+Gas stations
+
+Awaiting OSM import
+
+Public-land overlap
+
+Awaiting PAD-US import
+
+Elevation >5,000 ft
+
+Awaiting numerical DEM mask
+
+20 mi
+MapLibre | OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+
+Click the map to set your origin
+
+OpenFreeMap basemap · online
+
+Teal: displayed contour · orange: snapped origin
+
+Run measurements
+60 min · 7:55:32 AM
+Engine round trip
+1250.7 ms
+Decode & validate
+15.1 ms
+Browser request
+1307.0 ms
+Source → map idle
+744.9 ms
+
+Engine round trip includes HTTP, graph work, and contouring. Map idle includes source processing and outstanding map resources; it is not a first-paint measurement.
+
+Graph: san-diego-tijuana-20261014-v1 · Engine: 3.9.1-7fd2228e5 · Upstream GeoJSON: 134.6 KiB
+
+Coverage: San Diego–Tijuana bbox [-118.5,31.5,-115.5,34]; Mexico included; US admin polygon missing; cut edges/completeness unverified; no live border waits · Completeness unverified
+
+Contour simplification: 100 m · Denoise: 0
+
+Saved queries & runs
+
+Last 20 in this browser. Successful runs save automatically. Replay computes a new result with the current engine.
+
+Export JSON
+
+60 min from 32.7157, -117.1611
+
+10/16/2026, 7:55:32 AM · Graph san-diego-tijuana-20261014-v1 · 1307.0 ms browser request
+
+Load
+Replay
+
+60 min from 32.7157, -117.1611
+
+10/16/2026, 6:23:51 AM · Query only
+
+Load
+Replay
+This is a research baseline. Filled contours approximate road-network reachability and do not establish access to every shaded point. Road-distance and combined-budget semantics, verified coverage, spatial layers, and shared PostgreSQL run storage are upcoming work.

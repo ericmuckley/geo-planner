@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-18",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "log": "host-routing-tests.log",
+      "logSha256": "b434539d2dbe118c7a3e18357f3d1cdbd08c44823d072433954d4af90eafad29",
+      "total": 126,
+      "passed": 117,
+      "skipped": 9
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "log": "adapter-tests.log",
+      "logSha256": "c59f3b295e1ab33b9afca12097bfb8b4ac0381e06aa03d07ddc39cbd0c671d85",
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "log": "check.log",
+      "logSha256": "603b285ada789c2ce60f2f2ffba2276b50d42fab9b96d33a852f44e9ba83218e",
+      "checkedFiles": 76,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.log",
+      "logSha256": "b478ba8e3b763a976577a59acd26833b653fe1be13c869dc0b5778ba96593c61",
+      "warnings": [
+        "Existing MapLibre chunk size",
+        "Existing upstream TanStack directives"
+      ]
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test cache_lifetime_test range_hash_test",
+      "exitCode": 0,
+      "log": "linux-tests.log",
+      "logSha256": "d5db3fc3f2acc69a42e1f6b01f890d06ce57f21dee327ea9e8f580a5e00a8751",
+      "passed": 35,
+      "skipped": 0,
+      "scope": "Scoped cached Linux cases; no full Linux discovery or C++ compiler in reader image."
+    },
+    {
+      "command": "python3 -B docs/evidence/routing-io-2026-10-18/analyze.py",
+      "exitCode": 0,
+      "log": "analyze.log",
+      "logSha256": "b2aa224798fadb670528c3808139e4d28e0b9c3fca376b2fb68ef77190da5bba"
+    }
+  ],
+  "workloads": [
+    {
+      "command": "npm run routing:io -- --case downtown-v2",
+      "exitCode": 0,
+      "runDirectory": "data/io-pilot/io-v1-downtown-v2",
+      "report": "io-downtown-v2-report.json",
+      "reportSha256": "750c3540a7fe92bf1ea843a66bfcccba24b891ff4766018863e47270cb31dd71",
+      "log": "io-downtown-v2.log",
+      "logSha256": "e314bb745cccf3f2787dfc628bf2a5f066b53c7f2b24eb35a6f7f379a402283d"
+    },
+    {
+      "command": "npm run routing:io -- --case corridor-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-pilot/io-v1-corridor-v3",
+      "report": "io-corridor-v3-report.json",
+      "reportSha256": "d1299aa0410867c09241f6baff2f235e68edff6af5226816377c7e70c4bf672a",
+      "log": "io-corridor-v3.log",
+      "logSha256": "c1461a51c8854ba060b9d715ed93fc42012c93ab2a2d7e8bf91ec2ba7be59480"
+    },
+    {
+      "command": "npm run routing:io -- --case wide-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-pilot/io-v1-wide-v3",
+      "report": "io-wide-v3-report.json",
+      "reportSha256": "a934a43b82b6748df87aa1982adaa8ac0d81fd25a07200df6a35ce807d29bfea",
+      "log": "io-wide-v3.log",
+      "logSha256": "75f9421462d63b713fc5bf25851430014f192e378b84c44195e38e5a2407a6c4"
+    },
+    {
+      "command": "npm run routing:io -- --case hour-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-pilot/io-v1-hour-v3",
+      "report": "io-hour-v3-report.json",
+      "reportSha256": "4e463f2ddbe784e2d29d17e3f46958342e438aee69d0f6c8f4e9d32a197b4547",
+      "log": "io-hour-v3.log",
+      "logSha256": "8e1d51e3786f5e43c42666f56e1a0b95cf80415210390dd762a865ecaa01dd8b"
+    },
+    {
+      "command": "npm run routing:io:bounded -- --case downtown-v2",
+      "exitCode": 0,
+      "runDirectory": "data/io-bounded-pilot/iob-v1-downtown-v2",
+      "report": "bounded-downtown-v2-report.json",
+      "reportSha256": "7c79fdad070030a5324f89c744906242481b059e9e46c3e854d1001c73ce9a97",
+      "log": "bounded-downtown-v2.log",
+      "logSha256": "8c275695dce903bc1d2035f72773d62b269c40e5c9f6353bbdcd3fcd85f12bcf"
+    },
+    {
+      "command": "npm run routing:io:bounded -- --case corridor-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-bounded-pilot/iob-v1-corridor-v3",
+      "report": "bounded-corridor-v3-report.json",
+      "reportSha256": "fc09c5d5cd3d907db521b1ed5b48e86d9e1a5ebc7576289b55a96a12c6f4f157",
+      "log": "bounded-corridor-v3.log",
+      "logSha256": "faa72cc08f73e0d26e5f1d5eb1ee792fb2367ad03d1bcb458a86e253f79682a2"
+    },
+    {
+      "command": "npm run routing:io:bounded -- --case wide-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-bounded-pilot/iob-v1-wide-v3",
+      "report": "bounded-wide-v3-report.json",
+      "reportSha256": "9ed7c97cae124bbcba75c7cf6909f5ad4b6043f139952260e5d94dde13ee17cd",
+      "log": "bounded-wide-v3.log",
+      "logSha256": "18c5ed621fc841f6af429865ec2d9555e204617874b0e1d27d0d5040133fde82"
+    },
+    {
+      "command": "npm run routing:io:bounded -- --case hour-v3",
+      "exitCode": 0,
+      "runDirectory": "data/io-bounded-pilot/iob-v1-hour-v3",
+      "report": "bounded-hour-v3-report.json",
+      "reportSha256": "ed2a0513e40cb65880f8dd3bd065cb58142584327c2199bce0dd36a05f83a73d",
+      "log": "bounded-hour-v3.log",
+      "logSha256": "b86d5c9d16c37e6eb6616f56825a51f01e16c623edfa9de8e7170225c5b29548"
+    }
+  ],
+  "integrity": {
+    "preservedFileCount": 159,
+    "preservedHashesMatch": true,
+    "envLocalIgnored": true,
+    "environmentValuesInspectedOrModified": false,
+    "stagedFiles": 0,
+    "manualGeneratedRouteEdits": false,
+    "checkedLocalDocumentationLinks": 374,
+    "valhallaContainer": "geo-planner-routing-valhalla-1",
+    "valhallaState": "running healthy",
+    "hostDiskFreeBytes": 239643521024
+  },
+  "tooling": {
+    "node": "v24.5.0",
+    "npm": "11.6.0",
+    "hostPython": "Python 3.13.5",
+    "macOS": "26.3.1",
+    "macOSBuild": "25D2128",
+    "cpu": "Apple M4",
+    "hostMemoryBytes": "17179869184",
+    "architecture": "arm64",
+    "hostDiskFreeBytes": 240618835968,
+    "dockerMemoryBytes": 8218034176,
+    "dockerCpus": 10,
+    "baseImageId": "sha256:6652906bfea590161b144a6e4fac146a41e14cbafae581dcb9e38c74ceaa53a7"
+  },
+  "testSourceSha256": {
+    "routing/cache_lifetime_test.py": "f0b0f898f732a2e5b81a2f58c11dc32705fb1e045c7623058f8677fd12ca3052",
+    "routing/range_hash_test.py": "f36be2af2a9b9ee214b35efb9b7c4878e4d6d837ee88d98b004f7df749a5b86a"
+  },
+  "scope": {
+    "publicRoutingProviderRequests": 0,
+    "newDownloads": 0,
+    "newApplicationDependencies": 0,
+    "freshNativeGraphQualificationRuns": 0,
+    "newLargerGraphs": 0,
+    "fullLinuxDiscovery": false,
+    "appProviderOrLimitChanged": false,
+    "httpBrowserVercelMeasurements": false,
+    "completeCoverageVerified": false,
+    "longRangeRequirementFinished": false
+  },
+  "measurementCaveats": [
+    "All eight parity workflows run sequentially under two CPUs/4 GiB/no swap/no network/read-only inputs.",
+    "Complete cgroup peak includes final verification reads; small final metadata writes, Docker startup and module imports excluded.",
+    "Periodic samples can miss brief peaks and maxima are not simultaneous; worker RSS and complete cgroup peaks have separate scopes.",
+    "Host/cache/VM conditions uncontrolled. Host app tests/typecheck/build overlap the first I/O series; scoped Linux tests also overlap its current graph construction. Bounded series has no overlapping app/test workload.",
+    "Kernel advice is not guaranteed eviction and range counts do not measure physical disk I/O.",
+    "Original full/bounded/partial/native qualification is reused on exact bytes, not freshly measured; host unit tests still exercise small compiler/kernel fixtures.",
+    "A current parity workflow passing 25% headroom does not admit the larger candidate or repair geographic source gaps."
+  ]
+}

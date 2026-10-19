@@ -1,0 +1,1001 @@
+{
+  "createdAt": "2026-10-16T17:13:28.355Z",
+  "manifestId": "california-baja-roads20261014-admin20261016-v2",
+  "origin": {
+    "lat": 32.7157,
+    "lon": -117.1611
+  },
+  "protocol": "Sequential localhost requests; first sample per budget retained separately, five subsequent samples; no page-cache flush, no isolated graph-search measurement. Route membership is a smoke check against the same engine, not an independent optimality proof.",
+  "status": {
+    "version": "3.9.1-7fd2228e5",
+    "tileset_last_modified": 1792170595,
+    "available_actions": [
+      "route",
+      "locate",
+      "sources_to_targets",
+      "optimized_route",
+      "isochrone",
+      "trace_route",
+      "trace_attributes",
+      "height",
+      "transit_available",
+      "expansion",
+      "centroid",
+      "status",
+      "tile"
+    ]
+  },
+  "config": {
+    "configured": true,
+    "maxMinutes": 120,
+    "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+    "engineVersion": "3.9.1-7fd2228e5",
+    "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+    "health": "ready",
+    "checkedAt": "2026-10-16T17:12:59.126Z"
+  },
+  "timings": [
+    {
+      "minutes": 15,
+      "repetition": 0,
+      "engineRoundTripMs": 750.262792,
+      "decodeValidateMs": 9.028583000000253,
+      "serverTotalMs": 760.3598340000003,
+      "httpBodyMs": 768.2118330000001,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 15,
+      "repetition": 1,
+      "engineRoundTripMs": 437.2653330000003,
+      "decodeValidateMs": 1.71612499999992,
+      "serverTotalMs": 439.34108400000014,
+      "httpBodyMs": 447.632292,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 15,
+      "repetition": 2,
+      "engineRoundTripMs": 338.2606659999992,
+      "decodeValidateMs": 3.6239999999997963,
+      "serverTotalMs": 342.20845800000006,
+      "httpBodyMs": 351.08299999999986,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 15,
+      "repetition": 3,
+      "engineRoundTripMs": 392.4078749999999,
+      "decodeValidateMs": 0.9640419999996084,
+      "serverTotalMs": 393.6097499999996,
+      "httpBodyMs": 404.5163749999997,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 15,
+      "repetition": 4,
+      "engineRoundTripMs": 343.8493749999998,
+      "decodeValidateMs": 2.8227090000000317,
+      "serverTotalMs": 347.03850000000057,
+      "httpBodyMs": 356.83958299999995,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 15,
+      "repetition": 5,
+      "engineRoundTripMs": 336.4932920000001,
+      "decodeValidateMs": 1.239042000000154,
+      "serverTotalMs": 337.9579169999997,
+      "httpBodyMs": 346.92724999999973,
+      "upstreamBytes": 59977
+    },
+    {
+      "minutes": 30,
+      "repetition": 0,
+      "engineRoundTripMs": 580.7129170000007,
+      "decodeValidateMs": 3.5545410000004267,
+      "serverTotalMs": 584.7110000000002,
+      "httpBodyMs": 594.3411249999999,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 30,
+      "repetition": 1,
+      "engineRoundTripMs": 559.9625420000002,
+      "decodeValidateMs": 4.359082999999373,
+      "serverTotalMs": 564.6922910000003,
+      "httpBodyMs": 576.1017079999997,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 30,
+      "repetition": 2,
+      "engineRoundTripMs": 457.73229100000026,
+      "decodeValidateMs": 3.762166999999863,
+      "serverTotalMs": 462.01270899999963,
+      "httpBodyMs": 485.1080839999995,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 30,
+      "repetition": 3,
+      "engineRoundTripMs": 484.16999999999916,
+      "decodeValidateMs": 0.9139169999998558,
+      "serverTotalMs": 485.6819169999999,
+      "httpBodyMs": 498.91129100000035,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 30,
+      "repetition": 4,
+      "engineRoundTripMs": 461.3232079999998,
+      "decodeValidateMs": 1.8884999999991123,
+      "serverTotalMs": 463.52991699999893,
+      "httpBodyMs": 467.6939590000002,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 30,
+      "repetition": 5,
+      "engineRoundTripMs": 455.256625,
+      "decodeValidateMs": 2.6028340000011667,
+      "serverTotalMs": 458.21745799999917,
+      "httpBodyMs": 465.3895419999999,
+      "upstreamBytes": 81664
+    },
+    {
+      "minutes": 60,
+      "repetition": 0,
+      "engineRoundTripMs": 750.0577499999999,
+      "decodeValidateMs": 5.364666999999827,
+      "serverTotalMs": 755.8639590000002,
+      "httpBodyMs": 766.6092500000004,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 60,
+      "repetition": 1,
+      "engineRoundTripMs": 657.2378329999992,
+      "decodeValidateMs": 3.6204999999990832,
+      "serverTotalMs": 661.0418330000011,
+      "httpBodyMs": 666.6702500000001,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 60,
+      "repetition": 2,
+      "engineRoundTripMs": 637.4367910000001,
+      "decodeValidateMs": 4.828457999999955,
+      "serverTotalMs": 643.3646669999998,
+      "httpBodyMs": 653.4394170000005,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 60,
+      "repetition": 3,
+      "engineRoundTripMs": 638.3188329999994,
+      "decodeValidateMs": 7.889541000000463,
+      "serverTotalMs": 646.6124999999993,
+      "httpBodyMs": 654.3573329999999,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 60,
+      "repetition": 4,
+      "engineRoundTripMs": 614.6449590000011,
+      "decodeValidateMs": 8.116625000000568,
+      "serverTotalMs": 623.1732909999992,
+      "httpBodyMs": 631.7497089999997,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 60,
+      "repetition": 5,
+      "engineRoundTripMs": 636.9038340000006,
+      "decodeValidateMs": 7.903083000001061,
+      "serverTotalMs": 645.2037909999999,
+      "httpBodyMs": 654.6424999999999,
+      "upstreamBytes": 137128
+    },
+    {
+      "minutes": 120,
+      "repetition": 0,
+      "engineRoundTripMs": 3417.734375,
+      "decodeValidateMs": 14.869999999998981,
+      "serverTotalMs": 3433.0136669999993,
+      "httpBodyMs": 3441.343332999999,
+      "upstreamBytes": 399187
+    },
+    {
+      "minutes": 120,
+      "repetition": 1,
+      "engineRoundTripMs": 2370.672875,
+      "decodeValidateMs": 7.0228749999987485,
+      "serverTotalMs": 2378.027459000001,
+      "httpBodyMs": 2387.946,
+      "upstreamBytes": 399187
+    },
+    {
+      "minutes": 120,
+      "repetition": 2,
+      "engineRoundTripMs": 2338.5465000000004,
+      "decodeValidateMs": 4.38629199999923,
+      "serverTotalMs": 2343.4488329999986,
+      "httpBodyMs": 2351.260957999999,
+      "upstreamBytes": 399187
+    },
+    {
+      "minutes": 120,
+      "repetition": 3,
+      "engineRoundTripMs": 2792.2781250000007,
+      "decodeValidateMs": 3.7654589999983727,
+      "serverTotalMs": 2796.4632920000004,
+      "httpBodyMs": 2810.535582999997,
+      "upstreamBytes": 399187
+    },
+    {
+      "minutes": 120,
+      "repetition": 4,
+      "engineRoundTripMs": 2344.7878340000025,
+      "decodeValidateMs": 12.386249999999563,
+      "serverTotalMs": 2358.0985409999994,
+      "httpBodyMs": 2371.642375000003,
+      "upstreamBytes": 399187
+    },
+    {
+      "minutes": 120,
+      "repetition": 5,
+      "engineRoundTripMs": 2189.0342090000013,
+      "decodeValidateMs": 12.740125000000262,
+      "serverTotalMs": 2202.537250000001,
+      "httpBodyMs": 2214.066208,
+      "upstreamBytes": 399187
+    }
+  ],
+  "routes": [
+    {
+      "name": "balboa-park",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.7311,
+        "lon": -117.1467
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.146295,
+        32.731075
+      ],
+      "minutes": 4.075733333333334,
+      "kilometers": 3.132,
+      "httpBodyMs": 41.50004199999967,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "la-jolla",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.8328,
+        "lon": -117.2713
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.27127,
+        32.832795
+      ],
+      "minutes": 16.91283333333333,
+      "kilometers": 23.219,
+      "httpBodyMs": 20.444791999998415,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "escondido",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 33.1192,
+        "lon": -117.0864
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.086378,
+        33.119169
+      ],
+      "minutes": 30.4303,
+      "kilometers": 48.91,
+      "httpBodyMs": 33.373875000001135,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "carlsbad",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 33.1581,
+        "lon": -117.3506
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.350624,
+        33.158132
+      ],
+      "minutes": 36.3398,
+      "kilometers": 57.565,
+      "httpBodyMs": 32.6919170000001,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "julian",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -116.601943,
+        33.07876
+      ],
+      "minutes": 67.14213333333333,
+      "kilometers": 94.425,
+      "httpBodyMs": 30.13774999999805,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "temecula",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 33.4936,
+        "lon": -117.1484
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.148358,
+        33.493638
+      ],
+      "minutes": 54.947966666666666,
+      "kilometers": 94.367,
+      "httpBodyMs": 35.13520799999969,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "tijuana",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.5149,
+        "lon": -117.0382
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.038169,
+        32.514868
+      ],
+      "minutes": 32.435050000000004,
+      "kilometers": 32.479,
+      "httpBodyMs": 25.558333000000857,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "rosarito",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.3661,
+        "lon": -117.0618
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.06177,
+        32.36588
+      ],
+      "minutes": 66.2043,
+      "kilometers": 63.791,
+      "httpBodyMs": 35.301375000002736,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "ensenada",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 31.8667,
+        "lon": -116.5964
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -116.596326,
+        31.866333
+      ],
+      "minutes": 109.66995,
+      "kilometers": 134.595,
+      "httpBodyMs": 41.65770800000246,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "el-centro",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.792,
+        "lon": -115.5631
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -115.563095,
+        32.791778
+      ],
+      "minutes": 104.73505,
+      "kilometers": 185.249,
+      "httpBodyMs": 30.529082999997627,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "60": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": false
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "name": "downtown-west",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "to": {
+        "lat": 32.7157,
+        "lon": -117.1623
+      },
+      "snappedStart": [
+        -117.161085,
+        32.715696
+      ],
+      "snappedEnd": [
+        -117.1623,
+        32.715646
+      ],
+      "minutes": 0.8079999999999999,
+      "kilometers": 0.586,
+      "httpBodyMs": 8.155209000000468,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "downtown-east",
+      "from": {
+        "lat": 32.7157,
+        "lon": -117.1623
+      },
+      "to": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "snappedStart": [
+        -117.1623,
+        32.715646
+      ],
+      "snappedEnd": [
+        -117.161085,
+        32.715696
+      ],
+      "minutes": 0.12195,
+      "kilometers": 0.114,
+      "httpBodyMs": 6.314915999999357,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    },
+    {
+      "name": "tijuana-return",
+      "from": {
+        "lat": 32.5149,
+        "lon": -117.0382
+      },
+      "to": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "snappedStart": [
+        -117.038169,
+        32.514868
+      ],
+      "snappedEnd": [
+        -117.161085,
+        32.715696
+      ],
+      "minutes": 33.97976666666667,
+      "kilometers": 31.735,
+      "httpBodyMs": 23.788000000000466,
+      "warnings": [],
+      "memberships": {
+        "15": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": true
+        },
+        "30": {
+          "modeledRouteWithinBudget": false,
+          "snappedEndpointInContour": true
+        },
+        "60": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        },
+        "120": {
+          "modeledRouteWithinBudget": true,
+          "snappedEndpointInContour": true
+        }
+      }
+    }
+  ],
+  "monotonicity": [
+    {
+      "lower": 15,
+      "upper": 30,
+      "stepDegrees": 0.025,
+      "lowerMembers": 68,
+      "missingFromUpper": 0,
+      "missingExamples": []
+    },
+    {
+      "lower": 30,
+      "upper": 60,
+      "stepDegrees": 0.025,
+      "lowerMembers": 216,
+      "missingFromUpper": 0,
+      "missingExamples": []
+    },
+    {
+      "lower": 60,
+      "upper": 120,
+      "stepDegrees": 0.025,
+      "lowerMembers": 762,
+      "missingFromUpper": 4,
+      "missingExamples": [
+        [
+          -116.92499999999934,
+          32.6249999999999
+        ],
+        [
+          -117.1499999999994,
+          32.6749999999999
+        ],
+        [
+          -116.69999999999929,
+          32.82499999999989
+        ],
+        [
+          -116.7499999999993,
+          32.99999999999988
+        ]
+      ]
+    }
+  ],
+  "snaps": {
+    "15": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              -117.161085,
+              32.715695
+            ]
+          ]
+        }
+      }
+    ],
+    "30": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              -117.161085,
+              32.715695
+            ]
+          ]
+        }
+      }
+    ],
+    "60": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              -117.161085,
+              32.715695
+            ]
+          ]
+        }
+      }
+    ],
+    "120": [
+      {
+        "type": "Feature",
+        "properties": {
+          "location_index": 0,
+          "type": "snapped"
+        },
+        "geometry": {
+          "type": "MultiPoint",
+          "coordinates": [
+            [
+              -117.161085,
+              32.715695
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "warnings": {
+    "15": [],
+    "30": [],
+    "60": [],
+    "120": []
+  },
+  "additionalOrigins": [
+    {
+      "origin": {
+        "name": "los-angeles",
+        "lat": 34.0522,
+        "lon": -118.2437,
+        "minutes": 60
+      },
+      "metadata": {
+        "engine": "valhalla",
+        "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+        "engineVersion": "3.9.1-7fd2228e5",
+        "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+        "coverageVerified": false,
+        "speedTypes": [
+          "freeflow",
+          "constrained"
+        ],
+        "generalizeMeters": 100,
+        "denoise": 0,
+        "upstreamBytes": 170044,
+        "timings": {
+          "engineRoundTripMs": 2012.0356250000004,
+          "decodeValidateMs": 6.227708000002167,
+          "serverTotalMs": 2018.6960839999992
+        }
+      },
+      "featureCount": 3
+    },
+    {
+      "origin": {
+        "name": "bakersfield",
+        "lat": 35.3733,
+        "lon": -119.0187,
+        "minutes": 30
+      },
+      "metadata": {
+        "engine": "valhalla",
+        "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+        "engineVersion": "3.9.1-7fd2228e5",
+        "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+        "coverageVerified": false,
+        "speedTypes": [
+          "freeflow",
+          "constrained"
+        ],
+        "generalizeMeters": 100,
+        "denoise": 0,
+        "upstreamBytes": 168658,
+        "timings": {
+          "engineRoundTripMs": 142.19029200000296,
+          "decodeValidateMs": 4.432709000000614,
+          "serverTotalMs": 147.03966699999728
+        }
+      },
+      "featureCount": 3
+    },
+    {
+      "origin": {
+        "name": "ensenada",
+        "lat": 31.8667,
+        "lon": -116.5964,
+        "minutes": 60
+      },
+      "metadata": {
+        "engine": "valhalla",
+        "graphVersion": "california-baja-roads20261014-admin20261016-v2",
+        "engineVersion": "3.9.1-7fd2228e5",
+        "coverage": "Southern California and northern Baja; complete US/California/Mexico admin relations; regional cuts and contour accuracy unverified; no live border waits",
+        "coverageVerified": false,
+        "speedTypes": [
+          "freeflow",
+          "constrained"
+        ],
+        "generalizeMeters": 100,
+        "denoise": 0,
+        "upstreamBytes": 70975,
+        "timings": {
+          "engineRoundTripMs": 41.38066600000093,
+          "decodeValidateMs": 0.6006670000024315,
+          "serverTotalMs": 42.1449999999968
+        }
+      },
+      "featureCount": 3
+    }
+  ]
+}

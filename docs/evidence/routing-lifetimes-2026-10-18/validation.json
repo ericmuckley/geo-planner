@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-18",
+  "checks": [
+    {
+      "command": "npm run test:routing",
+      "exitCode": 0,
+      "log": "host-routing-tests.log",
+      "logSha256": "12e46c175a15ee7524f3449e4219f8cac3e2b21677266b95a9b4351d3802b73e",
+      "total": 120,
+      "passed": 113,
+      "skipped": 7
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "log": "adapter-tests.log",
+      "logSha256": "ed13d82f2d01072a3ee1f3cbf995f148d6d3d0221185631fd67348387dc6a860",
+      "passed": 14
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "log": "check.log",
+      "logSha256": "7fc9461361e9f03cd0152c6937a7472ef8a319ace0a26221eb0c041d9e941085",
+      "checkedFiles": 74,
+      "warnings": [
+        "Existing src/db/index.ts non-null assertion"
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log",
+      "logSha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.log",
+      "logSha256": "6ea672ad79cd85c66bd59581703fa94d785ccf511ae4f468cea112c0a12e47b6",
+      "warnings": [
+        "Existing MapLibre chunk size",
+        "Existing upstream TanStack directives"
+      ]
+    },
+    {
+      "command": "docker run --rm --pull never --network none --read-only --tmpfs /tmp:rw,size=256m --memory 4g --memory-swap 4g --cpus 2 --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/routing,target=/recipe,readonly --mount type=bind,source=/Users/eric/Documents/GitHub/geo-planner/data/reference-pilot/downtown-static-v1,target=/reference,readonly -w /recipe --entrypoint python3 geo-planner-osm-sparse:4.3.1-v1 -B -m unittest regional_support_test sparse_select_test paged_io_test resource_admission_test increment_test queue_oracle_test virtual_sink_test hour_admission_test hour_increment_test two_hour_test lifetime_test road_keys_test",
+      "exitCode": 0,
+      "log": "linux-tests.log",
+      "logSha256": "109007c7263134801f09358b3108a8b696e7bf257631af3a99c844b9b15485f6",
+      "passed": 29,
+      "skipped": 0,
+      "scope": "Scoped cached Linux tests; no full Linux discovery or C++ compiler in reader image."
+    },
+    {
+      "command": "python3 -B docs/evidence/routing-lifetimes-2026-10-18/analyze.py",
+      "exitCode": 0,
+      "log": "analyze.log",
+      "logSha256": "29e128c42b8322a055f5c61d95202144e555456e7ebef87d8995fa1f6a7bf69c"
+    }
+  ],
+  "workloads": [
+    {
+      "command": "npm run routing:lifetime -- --mode isolated --case calibration",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/lifetime-isolated-calibration-v1",
+      "report": "isolated-calibration-report.json",
+      "reportSha256": "d5f8beafbb45a9ee0b00c550a2cf20cc3ba87680d913780f76c66f549bf7179b",
+      "log": "isolated-calibration.log",
+      "logSha256": "4170f662c11adb6edb0abeecf7b5c1b2476f785797bb487e11f2f277177d2310"
+    },
+    {
+      "command": "npm run routing:lifetime -- --mode isolated --case candidate",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/lifetime-isolated-candidate-v1",
+      "report": "isolated-candidate-report.json",
+      "reportSha256": "851afa897e202e6b58b59cf313024e7c12c57a61d07c502a8cfa1179d77bf36d",
+      "log": "isolated-candidate.log",
+      "logSha256": "88433a4a184837c5544285b236b394806d0ce75b09f9f39d0bf650b75ba0e703"
+    },
+    {
+      "command": "npm run routing:lifetime -- --mode batched --case calibration",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/lifetime-batched-calibration-v1",
+      "report": "batched-calibration-report.json",
+      "reportSha256": "de0ba8903a206db5d3e75e1a3d6b0af6451dfab545dd203cc3582b0c88b20674",
+      "log": "batched-calibration.log",
+      "logSha256": "52bae74199198be5a2fedf0d610602c623cf0bd5b72c707f2e06d3476670004f"
+    },
+    {
+      "command": "npm run routing:lifetime -- --mode batched --case candidate",
+      "exitCode": 0,
+      "runDirectory": "data/coverage-pilot/lifetime-batched-candidate-v1",
+      "report": "batched-candidate-report.json",
+      "reportSha256": "f149404495dd9d58c5f05225b1e005ac4dd43b7620bac557c2a4de99544a4bf0",
+      "log": "batched-candidate.log",
+      "logSha256": "5182f02b5427b39d150f52e931d697a64473b5d59e82038e9908aa63e4be98e9"
+    },
+    {
+      "command": "npm run routing:keys -- --case downtown-v2",
+      "exitCode": 0,
+      "runDirectory": "data/keyed-pilot/keys-v1-downtown-v2",
+      "report": "keys-downtown-v2-report.json",
+      "reportSha256": "aea685abbc142d65aeec72980c5a5b584f84fc724ef9235b5b01df5f809e7c12",
+      "log": "keys-downtown-v2.log",
+      "logSha256": "30666c850bf121609e030d7f769cd0d8391fd0a5a2c1ea7e1f42d59e886886ff"
+    },
+    {
+      "command": "npm run routing:keys -- --case corridor-v3",
+      "exitCode": 0,
+      "runDirectory": "data/keyed-pilot/keys-v1-corridor-v3",
+      "report": "keys-corridor-v3-report.json",
+      "reportSha256": "edb829d93a821052143d92a90fa7dceb2e1ad18c84f92d90c3a1cbe49898b801",
+      "log": "keys-corridor-v3.log",
+      "logSha256": "f3a9e8fd00f10c4440859e3acb089bbbfcff18a91607bbb145de235e641c00bb"
+    },
+    {
+      "command": "npm run routing:keys -- --case wide-v3",
+      "exitCode": 0,
+      "runDirectory": "data/keyed-pilot/keys-v1-wide-v3",
+      "report": "keys-wide-v3-report.json",
+      "reportSha256": "0c07aab53050481d2b147dbd23b6dfd341a305fc67926761f6dfd96f5763e713",
+      "log": "keys-wide-v3.log",
+      "logSha256": "163fe676d9face5da6e45cd9a51141110ad35d4e414b8a02f5b389ea60ef355e"
+    },
+    {
+      "command": "npm run routing:keys -- --case hour-v3",
+      "exitCode": 0,
+      "runDirectory": "data/keyed-pilot/keys-v1-hour-v3",
+      "report": "keys-hour-v3-report.json",
+      "reportSha256": "7216aa240663ccb0d94831e39ba0ec55be1231ca62d9950c8249d9be12c9024c",
+      "log": "keys-hour-v3.log",
+      "logSha256": "5a1c3f86381abd527d45a5b8e13c799e83d7a47b8530b104477f2198810c8a00"
+    }
+  ],
+  "integrity": {
+    "preservedFileCount": 148,
+    "preservedHashesMatch": true,
+    "envLocalIgnored": true,
+    "environmentValuesInspectedOrModified": false,
+    "stagedFiles": 0,
+    "manualGeneratedRouteEdits": false,
+    "checkedLocalDocumentationLinks": 363,
+    "valhallaContainer": "geo-planner-routing-valhalla-1",
+    "valhallaState": "running healthy",
+    "hostDiskFreeBytes": 243941126144
+  },
+  "tooling": {
+    "node": "v24.5.0",
+    "npm": "11.6.0",
+    "hostPython": "Python 3.13.5",
+    "macOS": "26.3.1",
+    "macOSBuild": "25D2128",
+    "cpu": "Apple M4",
+    "hostMemoryBytes": "17179869184",
+    "architecture": "arm64",
+    "hostDiskFreeBytes": 243948052480,
+    "dockerMemoryBytes": 8218034176,
+    "dockerCpus": 10
+  },
+  "scope": {
+    "publicRoutingProviderRequests": 0,
+    "newDownloads": 0,
+    "newApplicationDependencies": 0,
+    "freshNativeRuns": 0,
+    "newLargerGraphs": 0,
+    "fullLinuxDiscovery": false,
+    "appProviderOrLimitChanged": false,
+    "httpBrowserVercelMeasurements": false,
+    "completeCoverageVerified": false,
+    "longRangeRequirementFinished": false
+  },
+  "measurementCaveats": [
+    "Complete cgroup peak includes child processes and verification reads; small final metadata writes, Docker startup and module imports excluded.",
+    "Periodic composition can miss brief peaks; maxima are not simultaneous and must not be summed.",
+    "Host/cache/VM conditions uncontrolled. Scoped Linux tests overlap the isolated candidate selector; host npm tests/check/typecheck/build overlap the isolated calibration. Preprocessing observations are not controlled causal timings.",
+    "All routing experiments use two CPUs/4 GiB/no swap/no network/read-only inputs; no larger graph admission follows from preparation headroom.",
+    "Current graph full/bounded/partial/native evidence is reused on exact frozen graph/source/CSR identity, not freshly recomputed."
+  ]
+}

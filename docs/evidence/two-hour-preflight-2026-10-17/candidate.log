@@ -1,0 +1,101 @@
+
+> routing:coverage:two-hour
+> node routing/two-hour-preflight.mjs --case candidate
+
+validated: 2.71 s; cgroup peak 888582144; anon 19619840; file 14716928; swap max/peak 0/0
+fixtures: 2.71 s; cgroup peak 888582144; anon 19619840; file 14716928; swap max/peak 0/0
+nodes10000000: 15.36 s; cgroup peak 888582144; anon 82096128; file 15065088; swap max/peak 0/0
+nodes20000000: 29.12 s; cgroup peak 888582144; anon 110321664; file 15106048; swap max/peak 0/0
+nodes30000000: 43.27 s; cgroup peak 888582144; anon 115851264; file 15134720; swap max/peak 0/0
+nodes40000000: 57.27 s; cgroup peak 888582144; anon 123052032; file 15216640; swap max/peak 0/0
+nodes50000000: 71.01 s; cgroup peak 888582144; anon 191414272; file 15159296; swap max/peak 0/0
+nodes60000000: 84.79 s; cgroup peak 888582144; anon 293941248; file 15290368; swap max/peak 0/0
+nodes70000000: 98.99 s; cgroup peak 888582144; anon 327364608; file 15151104; swap max/peak 0/0
+nodes80000000: 112.86 s; cgroup peak 888582144; anon 377769984; file 15114240; swap max/peak 0/0
+insideNodes: 126.33 s; cgroup peak 888582144; anon 498765824; file 15298560; swap max/peak 0/0
+intersectingWays: 158.12 s; cgroup peak 1242357760; anon 1222868992; file 14761984; swap max/peak 0/0
+selected: 160.20 s; cgroup peak 1294172160; anon 540983296; file 14761984; swap max/peak 0/0
+completeReferences: 189.12 s; cgroup peak 4294967296; anon 536801280; file 480292864; swap max/peak 0/0
+checkReferences: 198.95 s; cgroup peak 4294967296; anon 536805376; file 53248; swap max/peak 0/0
+verified: 250.95 s; cgroup peak 4294967296; anon 524247040; file 57344; swap max/peak 0/0
+proofsVerified: 252.81 s; cgroup peak 4294967296; anon 524247040; file 1851392; swap max/peak 0/0
+{
+  "case": "candidate",
+  "xmlByteIdentical": false,
+  "candidate": {
+    "sourceNodes": 7310230,
+    "insideNodes": 7303066,
+    "sourceWays": 1579840,
+    "wayEligibleDirectedSegments": 10121327,
+    "supportedWays": 1579686,
+    "supportedPhysicalSegmentsInside": 7964886,
+    "supportedBoundarySegments": 335,
+    "sourceRelations": 54814,
+    "candidateViaWayRules": 8729,
+    "historyPrefixCeiling": 19450,
+    "eligibleSegmentsByHighway": {
+      "living_street": 9296,
+      "motorway": 59207,
+      "motorway_link": 99002,
+      "primary": 432414,
+      "primary_link": 25176,
+      "residential": 4285811,
+      "secondary": 541117,
+      "secondary_link": 12706,
+      "service": 3166086,
+      "tertiary": 894100,
+      "tertiary_link": 5745,
+      "trunk": 33360,
+      "trunk_link": 9333,
+      "unclassified": 547974
+    },
+    "roadStatesLowerBound": 9733657,
+    "roadStatesUpperBound": 10121327,
+    "historyStatesUpperBound": 10140777,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 101457920
+  },
+  "admission": {
+    "decision": "hold",
+    "cappedExperimentEligible": false,
+    "ratios": {
+      "sourceNodes": 3.1309742548644217,
+      "sourceWays": 3.4152204553511982,
+      "sourceRelations": 5.429816740960872,
+      "wayEligibleDirectedSegments": 3.325760552976494,
+      "historyPrefixCeiling": 5.007723995880536,
+      "candidateViaWayRules": 4.954029511918275,
+      "roadCeilingToBuiltRoads": 3.335120508268993,
+      "historyCeilingToBuiltStates": 3.3400404594805746
+    },
+    "scalingRatio": 5.429816740960872,
+    "observedPeaksBytes": {
+      "calibrationPreparation": 3343458304,
+      "candidatePreparation": 4294967296,
+      "build": 3265265664,
+      "rebuild": 3243671552,
+      "qualification": 1733201920,
+      "inventory": 1356165120
+    },
+    "estimatedPhasePeaksBytes": {
+      "preparation": 4294967296,
+      "importExport": 17729794167,
+      "qualification": 9410968801,
+      "inventory": 7363728073
+    },
+    "headroomFactor": 1.25,
+    "wholeWorkloadEstimateWithHeadroomBytes": 22162242709,
+    "capBytes": 4294967296,
+    "limitPressure": true,
+    "sourceAndOracleParity": true,
+    "sourceEnvelopeContained": false,
+    "sourceEnvelopeClippedSides": [
+      "south",
+      "east"
+    ],
+    "newGraphBuilt": false,
+    "coverageVerified": false,
+    "scope": "Largest source/road/history ratio (at least one) scales worst measured build/rebuild, qualification and inventory peaks; measured preparation included; sequential maximum plus 25%. Heuristic, not a bound. Source-envelope clipping and parent road gaps remain separate from resource admission; no complete two-hour coverage claim."
+  },
+  "workerWallMs": 252813.28932401084
+}

@@ -1,0 +1,60 @@
+
+> routing:coverage:hour
+> node routing/hour-preflight.mjs --case calibration
+
+validated: 2.42 s; cgroup peak 860352512; anon 16928768; file 8556544; swap max/peak 0/0
+fixtures: 2.50 s; cgroup peak 860352512; anon 17719296; file 8585216; swap max/peak 0/0
+nodes10000000: 14.34 s; cgroup peak 860352512; anon 210898944; file 8916992; swap max/peak 0/0
+nodes20000000: 25.43 s; cgroup peak 860352512; anon 288686080; file 9129984; swap max/peak 0/0
+nodes30000000: 36.53 s; cgroup peak 860352512; anon 289984512; file 9138176; swap max/peak 0/0
+nodes40000000: 47.56 s; cgroup peak 860352512; anon 292642816; file 8908800; swap max/peak 0/0
+nodes50000000: 58.76 s; cgroup peak 860352512; anon 338489344; file 8945664; swap max/peak 0/0
+nodes60000000: 70.86 s; cgroup peak 860352512; anon 557608960; file 8925184; swap max/peak 0/0
+nodes70000000: 83.20 s; cgroup peak 1210675200; anon 999104512; file 9003008; swap max/peak 0/0
+nodes80000000: 94.93 s; cgroup peak 1210675200; anon 1124167680; file 8974336; swap max/peak 0/0
+insideNodes: 106.19 s; cgroup peak 1263931392; anon 1249693696; file 9388032; swap max/peak 0/0
+intersectingWays: 158.99 s; cgroup peak 1624223744; anon 1546584064; file 8613888; swap max/peak 0/0
+selected: 160.66 s; cgroup peak 1624223744; anon 158998528; file 8613888; swap max/peak 0/0
+completeReferences: 185.86 s; cgroup peak 3173371904; anon 159322112; file 65077248; swap max/peak 0/0
+checkReferences: 188.83 s; cgroup peak 3173371904; anon 159322112; file 13783040; swap max/peak 0/0
+verified: 203.85 s; cgroup peak 3173371904; anon 192520192; file 13946880; swap max/peak 0/0
+proofsVerified: 205.79 s; cgroup peak 3173371904; anon 192532480; file 14458880; swap max/peak 0/0
+{
+  "case": "calibration",
+  "xmlByteIdentical": true,
+  "candidate": {
+    "sourceNodes": 2278632,
+    "insideNodes": 2274543,
+    "sourceWays": 456908,
+    "wayEligibleDirectedSegments": 2946180,
+    "supportedWays": 456879,
+    "supportedPhysicalSegmentsInside": 2417197,
+    "supportedBoundarySegments": 396,
+    "sourceRelations": 10053,
+    "candidateViaWayRules": 1762,
+    "historyPrefixCeiling": 3884,
+    "eligibleSegmentsByHighway": {
+      "living_street": 6260,
+      "motorway": 17212,
+      "motorway_link": 24104,
+      "primary": 111893,
+      "primary_link": 7331,
+      "residential": 1284473,
+      "secondary": 154013,
+      "secondary_link": 3577,
+      "service": 897217,
+      "tertiary": 295327,
+      "tertiary_link": 1702,
+      "trunk": 10570,
+      "trunk_link": 5029,
+      "unclassified": 127472
+    },
+    "roadStatesLowerBound": 2858813,
+    "roadStatesUpperBound": 2946180,
+    "historyStatesUpperBound": 2950064,
+    "scope": "Measured segment counts, not built states. Road interval excludes all restriction member ways at lower end and none at upper end. History ceiling sums all candidate proper prefixes; mode/relevance/failed candidates may overcount. Node barriers affect transitions, not road records.",
+    "sqliteBytes": 30961664
+  },
+  "admission": null,
+  "workerWallMs": 205797.47992899502
+}

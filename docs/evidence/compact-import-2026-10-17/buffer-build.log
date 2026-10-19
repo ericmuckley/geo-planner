@@ -1,0 +1,32 @@
+
+> routing:compact
+> node routing/compact.mjs --case buffer-v3
+
+preflight: RSS 24936 KiB; container peak 1746141184 bytes
+parsed: RSS 1375596 KiB; container peak 3471441920 bytes
+originalBase: RSS 2073812 KiB; container peak 4187648000 bytes
+basePass1: RSS 2396972 KiB; container peak 4294967296 bytes
+basePass2: RSS 2430052 KiB; container peak 4294967296 bytes
+basePass3: RSS 2430052 KiB; container peak 4294967296 bytes
+basePass4: RSS 2450192 KiB; container peak 4294967296 bytes
+basePass5: RSS 2471548 KiB; container peak 4294967296 bytes
+basePass6: RSS 2478776 KiB; container peak 4294967296 bytes
+inputsReleased: RSS 2478776 KiB; container peak 4294967296 bytes
+historyBuilt: RSS 2478776 KiB; container peak 4294967296 bytes
+sourceEvidence: RSS 2478776 KiB; container peak 4294967296 bytes
+exported: RSS 2478776 KiB; container peak 4294967296 bytes
+Qualified san-diego: 1976413 reachable states; first cut 2117096 ms
+Qualified el-cajon: 1976413 reachable states; first cut 1342449 ms
+Qualified tijuana: 1976413 reachable states; first cut 1478037 ms
+Qualified san-ysidro: 1976413 reachable states; first cut 1749406 ms
+Qualified port-incoming: 1976413 reachable states; first cut 1750892 ms
+complete: RSS 2478776 KiB; container peak 4294967296 bytes
+{
+  "case": "buffer-v3",
+  "roads": 2137982,
+  "states": 2139131,
+  "transitions": 4534800,
+  "importMs": 247552.18465600046,
+  "workerWallMs": 3094326.835325999,
+  "identicalArtifactSha256": {}
+}

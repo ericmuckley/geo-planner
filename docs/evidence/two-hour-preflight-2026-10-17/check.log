@@ -1,0 +1,17 @@
+
+> check
+> biome check
+
+src/db/index.ts:5:27 lint/style/noNonNullAssertion ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Forbidden non-null assertion.
+  
+    3 │ import * as schema from "./schema.ts";
+    4 │ 
+  > 5 │ export const db = drizzle(process.env.DATABASE_URL!, { schema });
+      │                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    6 │ 
+  
+
+Checked 72 files in 91ms. No fixes applied.
+Found 1 warning.

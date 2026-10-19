@@ -1,0 +1,30 @@
+{
+	"extends": "../manifest.json",
+	"id": "malta-20261014-v1",
+	"bbox": null,
+	"sourceBounds": [13.815377, 35.51985, 14.856099, 36.332958],
+	"maxMinutes": 60,
+	"minimumFreeDiskBytes": 1073741824,
+	"coverage": "Malta and Gozo source extract; sea and ferry/source boundaries apply; completeness unverified",
+	"knownLimitations": [
+		"This is a country extract, not worldwide coverage. External ferry destinations and roads outside the extract are absent.",
+		"No live traffic, timezone database, or actual ferry schedules; engine default auto preferences apply."
+	],
+	"sources": [
+		{
+			"file": "malta-261014.osm.pbf",
+			"url": "https://download.geofabrik.de/europe/malta-261014.osm.pbf",
+			"bytes": 8933324,
+			"md5": "f6db7d48827a0fab7f06a0ce33628fe4",
+			"sha256": "996bd058510cf562dd9b4ac7aad45d880a9f89f4a83ec49e9d626588d0b22f79"
+		}
+	],
+	"requiredAdmins": ["MT"],
+	"verificationOrigin": { "lat": 35.8989, "lon": 14.5146 },
+	"verificationBudgets": [15, 30, 60],
+	"verificationSamples": [
+		["mdina", 35.8858, 14.4031],
+		["marsaxlokk", 35.8417, 14.5431],
+		["mellieha", 35.9564, 14.3622]
+	]
+}

@@ -1,0 +1,63 @@
+{
+  "qualificationHeadroomRestored": true,
+  "admission": {
+    "decision": "eligible-for-separate-capped-build-and-qualification",
+    "cappedExperimentEligible": true,
+    "ratios": {
+      "sourceNodes": 1.0246542662439568,
+      "sourceWays": 1.0124313866248786,
+      "sourceRelations": 1.0041778573560132,
+      "wayEligibleDirectedSegments": 1.0329687934885174,
+      "historyPrefixCeiling": 1.0,
+      "candidateViaWayRules": 1.0,
+      "roadCeilingToBuiltRoads": 1.0359720850655918,
+      "historyCeilingToBuiltStates": 1.0368167045027683
+    },
+    "scalingRatio": 1.0368167045027683,
+    "observedPeaksBytes": {
+      "calibrationPreparation": 3173371904,
+      "candidatePreparation": 3145691136,
+      "build": 3151319040,
+      "rebuild": 3192205312,
+      "qualification": 1664774144
+    },
+    "estimatedPhasePeaksBytes": {
+      "preparation": 3173371904,
+      "importExport": 3309731792,
+      "qualification": 1726065642
+    },
+    "headroomFactor": 1.25,
+    "wholeWorkloadEstimateWithHeadroomBytes": 4137164740,
+    "capBytes": 4294967296,
+    "limitPressure": false,
+    "sourceAndOracleParity": true,
+    "newGraphBuilt": false,
+    "coverageVerified": false,
+    "scope": "Largest corresponding source/road/history ratio scales the worst measured build/rebuild and lean qualification container peaks. Sequential phases take a maximum, not a sum; measured preparation is included, then 25% margin. This is a heuristic for an isolated capped attempt, not a memory bound or a geographic-coverage claim.",
+    "candidateSourceArtifact": {
+      "bytes": 451794442,
+      "sha256": "64462b578bd9b688290fa8777bbb2564ea40ed649c47d88146353c72097ab1a1"
+    },
+    "profile": {
+      "admissionHeadroomFactor": 1.25,
+      "bbox": [
+        -117.65,
+        31.9,
+        -116.0,
+        33.6
+      ],
+      "cutInventory": "compact-pilot/increment-v3-cuts",
+      "id": "san-diego-baja-hour-preflight-v1",
+      "memoryLimitBytes": 4294967296,
+      "model": "exploratory-static-car-v3",
+      "purpose": "Preflight eastern and southern 60-minute cut exits using the cached parent; retain existing northern/western margins and northern Baja. No new graph or complete-coverage claim.",
+      "sourceGraph": "compact-pilot/increment-v3"
+    },
+    "sourceReportSha256": {
+      "lean": "3a48456c359cfd3c038151e3c8133abc44507a7224560c3fb617ea962695cd5a",
+      "calibration": "1b50b24b43b81b369b2fb110f99efe2460a822f539a7ffe08c81911c9c392119",
+      "candidate": "cebc6f3ade21f24471735ad7f2b7b4a84bb15c488af14b43c3328a040f9df6f2"
+    },
+    "admissionRuleSha256": "95c65c236a105cba9bce5b2d4632f3aefd0f5cfa1ebd9c599379adad6cf7d7ef"
+  }
+}
