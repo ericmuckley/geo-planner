@@ -1,6 +1,6 @@
 # Offline anchor pilot evidence
 
-October 16, 2026. See [commands, semantics and findings](../../offline-anchor-pilot.md).
+October 16, 2026. See [commands, semantics and findings](../../archive/offline-anchor-pilot.md).
 
 - `manifest-32.json`, `anchors-32.geojson`: source/graph/model/image/worker identity and matrix ordering. No credentials.
 - `partial-32.json`: first eight rows.

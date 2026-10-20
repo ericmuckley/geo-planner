@@ -1,6 +1,6 @@
 # I/O lifetime evidence — October 18, 2026
 
-Read [the findings and reproduction commands](../../routing-io-lifetimes.md). This experiment manages completed file reads/writes against four frozen graphs under the unchanged cap. It uses no provider quota, downloads or new graph coverage.
+Read [the findings and reproduction commands](../../archive/routing-io-lifetimes.md). This experiment manages completed file reads/writes against four frozen graphs under the unchanged cap. It uses no provider quota, downloads or new graph coverage.
 
 ```sh
 python3 -B docs/evidence/routing-io-2026-10-18/analyze.py

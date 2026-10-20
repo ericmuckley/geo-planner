@@ -1,6 +1,6 @@
 # Maneuver-model evidence — October 16, 2026
 
-Read [the model report](../../maneuver-routing-model.md) for scope and limitations. Two `npm run routing:model` runs used the frozen XML/reference and the cached network-disabled Docker image. `npm run routing:model:verify` then checked the repeat graph with the unchanged native kernel in a network-denying macOS sandbox.
+Read [the model report](../../archive/maneuver-routing-model.md) for scope and limitations. Two `npm run routing:model` runs used the frozen XML/reference and the cached network-disabled Docker image. `npm run routing:model:verify` then checked the repeat graph with the unchanged native kernel in a network-denying macOS sandbox.
 
 - `first-summary.json`, `repeat-summary.json`: every source attachment, bounded case, replay, interior target/cost and resource observation.
 - `first-manifest.json`, `repeat-manifest.json`, `first-run-identity.json`: immutable model/source/worker identities and artifact checksums.

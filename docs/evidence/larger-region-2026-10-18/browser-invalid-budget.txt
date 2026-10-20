@@ -1,0 +1,53 @@
+- main:
+  - link "Main workspace":
+    - /url: /
+    - text: Main workspace
+  - paragraph: Geo Planner / Offline experiment
+  - heading "Explore beyond 60 minutes" [level=1]
+  - paragraph: Our local road router · no provider requests · 1–720 minutes
+  - generic: Local router connected
+  - paragraph:
+    - text: Experimental regional coverage
+  - paragraph: Routing uses a downloaded region of Southern California and northern Baja. The basemap extends beyond our routing data. Longer budgets can reach missing roads; red markers show those potential data edges. Roads are sampled for display; shaded-area isochrones are not generated.
+  - paragraph: "Loaded bounds: 31.6°–34° latitude, -118°–-115.5° longitude. The dashed boundary appears with each result."
+  - complementary:
+    - heading "Driving experiment" [level=2]
+    - group "Example origins in the loaded region":
+      - generic: Example origins in the loaded region
+      - button "San Diego"
+      - button "Riverside"
+      - button "Palm Springs"
+      - button "Ensenada"
+    - text: Latitude
+    - textbox "Latitude": "33.8303"
+    - text: Longitude
+    - textbox "Longitude": "-116.5453"
+    - text: Minutes
+    - spinbutton "Minutes" [active]: "721"
+    - button "60m"
+    - button "90m"
+    - button "120m"
+    - button "6h"
+    - button "12h"
+    - button "Compute reachable roads" [disabled]:
+      - text: Compute reachable roads
+    - paragraph: Enter valid coordinates and 1–720 whole minutes.
+  - region "Reachability map. Click to select an origin, or use the coordinate fields."
+  - img "Map marker":
+  - button "Zoom in"
+  - button "Zoom out"
+  - generic: 20 mi
+  - generic "Toggle attribution"
+  - link "MapLibre":
+    - /url: https://maplibre.org/
+  - text: "|"
+  - link "OpenFreeMap":
+    - /url: https://openfreemap.org
+  - link "© OpenMapTiles":
+    - /url: https://www.openmaptiles.org/
+  - text: Data from
+  - link "OpenStreetMap":
+    - /url: https://www.openstreetmap.org/copyright
+  - paragraph: Click the map to set your origin
+  - paragraph: OpenFreeMap basemap · online
+- button "Open TanStack Devtools":

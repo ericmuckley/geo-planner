@@ -1,6 +1,6 @@
 # Cut inventory and next-buffer evidence
 
-See [findings, commands and limitations](../../coverage-increment-preflight.md).
+See [findings, commands and limitations](../../archive/coverage-increment-preflight.md).
 
 `cuts`, `calibration` and `candidate` reports/identities copy the three completed ignored runs. `cut-nodes.json` and `.geojson` contain all 337 endpoints, source boundary links and frozen oracle costs. `parent-fileinfo.json` records the planning inventory of the cached PBF. Stage logs include measured RAM composition; complete reports retain 200 ms sampled maxima, concurrent highest-current sample and cumulative cgroup peaks/events.
 

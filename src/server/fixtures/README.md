@@ -4,4 +4,4 @@
 
 Request: origin `{lat:32.7157,lon:-117.1611}`, `costing:auto`, auto speed types `freeflow,constrained`, one 15-minute contour, `polygons:true`, `show_locations:true`, `reverse:false`, `generalize:100`, `denoise:0`.
 
-This real response exposed the missing `Point` geometry variant in synthetic fixtures. The regression test checks adapter compatibility; replaying a stored fixture does not validate a live graph or measure routing performance. See `docs/regional-routing.md` and `docs/routing-baseline-verification.md` for provenance, resources, and correctness limitations.
+This real response exposed the missing `Point` geometry variant in synthetic fixtures. The regression test checks adapter compatibility; replaying a stored fixture does not validate a live graph or measure routing performance. See `docs/regional-routing.md` and `docs/archive/routing-baseline-verification.md` for provenance, resources, and correctness limitations.

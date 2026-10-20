@@ -1,6 +1,6 @@
 # Compact importer evidence — October 17, 2026
 
-See [implementation, measurements and limits](../../compact-routing-import.md). Everything uses cached OSM and zero public routing requests. The original model/graphs/recipes remain preserved.
+See [implementation, measurements and limits](../../archive/compact-routing-import.md). Everything uses cached OSM and zero public routing requests. The original model/graphs/recipes remain preserved.
 
 Recorded commands, in order:
 

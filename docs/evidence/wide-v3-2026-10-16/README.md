@@ -1,6 +1,6 @@
 # Wider v3 evidence — October 16, 2026
 
-See [model, exact commands, measurements and limitations](../../wide-v3-routing.md). These are experimental static-model results; no provider credentials are included.
+See [model, exact commands, measurements and limitations](../../archive/wide-v3-routing.md). These are experimental static-model results; no provider credentials are included.
 
 - `build-manifest.json`, `build-summary.json`: source/recipe/image identities, artifacts, independent costs, snaps, budgets and complete route witnesses with access diagnostics.
 - `rebuild-verification.json`: seven materialized artifacts reproduced exactly under the same cap; prior oracles checked, not recomputed.

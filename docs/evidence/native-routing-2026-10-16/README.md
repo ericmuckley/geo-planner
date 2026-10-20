@@ -1,6 +1,6 @@
 # Native search evidence — October 16, 2026
 
-Read [the findings and limitations](../../native-routing-baseline.md) first. Two runs of `npm run routing:native` used the same frozen reference, host compiler, network-denying macOS policy and ten repetitions per case/output mode. First-run reports were copied before rerunning; repeat reports were copied afterward. No API key, environment file or private coordinates are included.
+Read [the findings and limitations](../../archive/native-routing-baseline.md) first. Two runs of `npm run routing:native` used the same frozen reference, host compiler, network-denying macOS policy and ten repetitions per case/output mode. First-run reports were copied before rerunning; repeat reports were copied afterward. No API key, environment file or private coordinates are included.
 
 - `first-summary.json`, `repeat-summary.json`: every raw timing sample, cost/membership comparison count, traversal counters, payload hashes, boundary flags, compilation, resource and launch observations.
 - `first-manifest.json`, `repeat-manifest.json`: graph/model/source/worker/compiler identities and artifact checksums, including summary hashes.

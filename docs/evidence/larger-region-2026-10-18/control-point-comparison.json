@@ -1,0 +1,24 @@
+{
+  "preservedFlagDecisions": 28839,
+  "newlyCoveredControlPoints": [
+    {
+      "node": 54646008,
+      "point": [
+        -117.3532981,
+        33.6142733
+      ],
+      "tags": {
+        "access": "yes",
+        "barrier": "gate"
+      },
+      "previousReason": "outside-bounds",
+      "reason": "explicit-car-permission",
+      "scope": "Previously outside the old rectangle; now inside the new rectangle under the same explicit-permission rule. Real operating/access eligibility remains unverified."
+    }
+  ],
+  "identicalSourceNodeExcerpts": {
+    "data/coverage-pilot/hour-candidate-v1/car-roads.osm": "<node id=\"54646008\" version=\"5\" timestamp=\"2019-01-03T23:58:04Z\" lat=\"33.6142733\" lon=\"-117.3532981\">\n    <tag k=\"access\" v=\"yes\" />\n    <tag k=\"barrier\" v=\"gate\" />\n  </node>\n  ",
+    "data/coverage-pilot/experiment-increment-v1/car-roads.osm": "<node id=\"54646008\" version=\"5\" timestamp=\"2019-01-03T23:58:04Z\" lat=\"33.6142733\" lon=\"-117.3532981\">\n    <tag k=\"access\" v=\"yes\" />\n    <tag k=\"barrier\" v=\"gate\" />\n  </node>\n  "
+  },
+  "policyUnchanged": true
+}

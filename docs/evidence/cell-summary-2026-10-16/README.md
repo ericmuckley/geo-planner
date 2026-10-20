@@ -1,6 +1,6 @@
 # Cell-summary experiment evidence
 
-See [commands, proof, measurements and decision](../../cell-routing-experiment.md).
+See [commands, proof, measurements and decision](../../archive/cell-routing-experiment.md).
 
 - `summary.json`, `manifest.json`: warm repeat run, all case-level/candidate samples, verified input/code/image identity and limits.
 - `initial-summary.json`, `initial-manifest.json`: initial index construction and qualification; the app build ran during its early portion.

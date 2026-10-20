@@ -27,12 +27,19 @@ const button =
 	"inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3 py-2 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-45 focus-visible:ring-2 focus-visible:ring-[var(--lagoon-deep)]";
 const number = (value: number) =>
 	value.toLocaleString(undefined, { maximumFractionDigits: 1 });
+const exampleOrigins = [
+	{ name: "San Diego", lat: 32.7157, lon: -117.1611 },
+	{ name: "Riverside", lat: 33.9806, lon: -117.3755 },
+	{ name: "Palm Springs", lat: 33.8303, lon: -116.5453 },
+	{ name: "Ensenada", lat: 31.8667, lon: -116.6 },
+	{ name: "Yuma", lat: 32.6927, lon: -114.6244 },
+];
 
 function ExperimentPage() {
 	const [draft, setDraft] = useState({
 		lat: String(defaultQuery.origin.lat),
 		lon: String(defaultQuery.origin.lon),
-		minutes: "90",
+		minutes: "120",
 	});
 	const [config, setConfig] = useState<ExperimentConfig | null>(null);
 	const [result, setResult] = useState<ExperimentResult | null>(null);
@@ -112,6 +119,7 @@ function ExperimentPage() {
 			if (!response.ok) throw new Error(body.error || "Experiment failed");
 			const next = experimentResultSchema.parse(body);
 			if (sequence.current !== request) return;
+			setConfig(experimentConfigSchema.parse(next.metadata));
 			setClientMs(performance.now() - before);
 			setResult(next);
 		} catch (cause) {
@@ -162,11 +170,11 @@ function ExperimentPage() {
 					<AlertTriangle size={18} /> Experimental regional coverage
 				</p>
 				<p className="mt-1">
-					Routing uses a downloaded region of Southern California and northern
-					Baja. The basemap extends beyond our routing data. Longer budgets can
-					reach missing roads; red markers show those potential data edges.
-					Roads are sampled for display; shaded-area isochrones are not
-					generated.
+					Routing uses downloaded roads inside the loaded bounds. The basemap
+					extends beyond our routing data. Longer budgets and origins near the
+					perimeter can reach missing roads; red markers show those potential
+					data edges. Roads are sampled for display; shaded-area isochrones are
+					not generated.
 				</p>
 				{config && (
 					<p className="mt-2 font-semibold">
@@ -186,6 +194,38 @@ function ExperimentPage() {
 						}}
 					>
 						<h2 className="text-lg font-bold">Driving experiment</h2>
+						{config && (
+							<fieldset>
+								<legend className="mb-2 text-xs font-semibold">
+									Example origins in the loaded region
+								</legend>
+								<div className="flex flex-wrap gap-2">
+									{exampleOrigins
+										.filter(
+											(place) =>
+												place.lon >= config.bounds[0] &&
+												place.lon <= config.bounds[2] &&
+												place.lat >= config.bounds[1] &&
+												place.lat <= config.bounds[3],
+										)
+										.map((place) => (
+											<button
+												key={place.name}
+												type="button"
+												className={cn(button, "px-2 py-1 text-xs")}
+												onClick={() =>
+													update({
+														lat: String(place.lat),
+														lon: String(place.lon),
+													})
+												}
+											>
+												{place.name}
+											</button>
+										))}
+								</div>
+							</fieldset>
+						)}
 						<label className="block text-sm">
 							Latitude
 							<input
@@ -376,7 +416,7 @@ function ExperimentPage() {
 									<div className="break-all">
 										Graph: {metadata.graphIdentity}
 									</div>
-									<div>OSM snapshot: {metadata.sourceDate}</div>
+									<div>Road snapshot: {metadata.sourceDate}</div>
 									<div>Model: {metadata.model}</div>
 									<div>© OpenStreetMap contributors · ODbL</div>
 								</dl>

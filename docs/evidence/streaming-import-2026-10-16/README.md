@@ -1,6 +1,6 @@
 # Streaming-import evidence — October 16, 2026
 
-See [implementation, exact commands, resource scope and limits](../../streaming-import-capacity.md).
+See [implementation, exact commands, resource scope and limits](../../archive/streaming-import-capacity.md).
 
 - `downtown-v2.json`, `corridor-v2.json`, `corridor-v3.json`: graph/audit/packed equality, recipe/input fingerprints, stage counters, worker RSS and fresh-container memory checkpoints.
 - `wide-v2.json`: preserved wider-profile retry, new artifact hashes, independent costs/snaps and cut flags.

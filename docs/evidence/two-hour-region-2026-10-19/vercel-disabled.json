@@ -1,0 +1,25 @@
+{
+  "VERCEL": "1",
+  "LOCAL_ROUTING_EXPERIMENT": "1",
+  "responses": [
+    {
+      "method": "GET",
+      "status": 503,
+      "body": {
+        "error": "Start npm run dev:experiment to use the local router. Hosted routing stays separate."
+      }
+    },
+    {
+      "method": "POST",
+      "status": 503,
+      "body": {
+        "error": "Local experiment is disabled. Start npm run dev:experiment."
+      }
+    }
+  ],
+  "outboundCalls": 0,
+  "functionFiles": 27,
+  "functionBytes": 3284495,
+  "dataAndEnvironmentFilesBundled": false,
+  "scope": "Latest generated Vercel handler invoked locally. No cloud deployment or hosted routing request."
+}

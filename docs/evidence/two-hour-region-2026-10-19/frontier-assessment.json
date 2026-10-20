@@ -1,0 +1,133 @@
+{
+  "retrievedOn": "2026-10-19",
+  "footprints": {
+    "mexico.poly": {
+      "bytes": 8847,
+      "sha256": "0fe2e2b9ecc2d16db4d7e945dd0a13eed1e2384597b2f668b43879b7c93cfc77"
+    },
+    "arizona.poly": {
+      "bytes": 8527,
+      "sha256": "6b51b0ad2601cf92480063a9f334066a951baa223c1daa0b137ce64f004177a1"
+    },
+    "socal.poly": {
+      "bytes": 3119,
+      "sha256": "de8f8c9a2ed5f7e25357c7647ef9690483c82b4d080993d0cc87a8892b0c3749"
+    }
+  },
+  "sampledCirclePerimeters": 101160,
+  "outsideCaliforniaMexicoSamples": 134,
+  "outsideWithArizonaSamples": 0,
+  "beforeExamples": [
+    {
+      "node": 87682977,
+      "point": [
+        -114.62360697011668,
+        32.718985392469676
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.62493765441006,
+        32.706121140327774
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.62653450714129,
+        32.69327836716412
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.62839692862958,
+        32.680460974253286
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.63052423934985,
+        32.66767285348975
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.63291568027387,
+        32.6549178862195
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.63557041323419,
+        32.64219994207696
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.63848752131,
+        32.62952287782718
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.64166600923525,
+        32.61689053621404
+      ],
+      "costMs": 5348893
+    },
+    {
+      "node": 87682977,
+      "point": [
+        -114.64510480382812,
+        32.60430674481447
+      ],
+      "costMs": 5348893
+    }
+  ],
+  "afterExamples": [],
+  "frontier": {
+    "budgetMs": 7200000,
+    "reachedCutNodes": 281,
+    "originCutPairs": 670,
+    "maxSpeedKph": 160,
+    "earthRadiusMeters": 6371008.8,
+    "envelopeBounds": [
+      -118.13166653969877,
+      31.59974301078442,
+      -114.62092468921615,
+      34.61078881280802
+    ],
+    "roundedBounds": [
+      -118.2,
+      31.5,
+      -114.6,
+      34.7
+    ],
+    "candidateBounds": [
+      -118.2,
+      31.5,
+      -114.6,
+      34.7
+    ],
+    "clippedSides": [],
+    "envelopeContainedInParent": true,
+    "coverageVerified": false,
+    "scope": "Remaining-time spherical envelopes for every recorded reachable cut, using the static model's maximum supported speed and nonnegative costs. Retains existing margins, rounds outward to 0.1 degree, then clips to cached parent. Conditional on unchanged interior prefixes/topology; not a coverage certificate. Source gaps and newly restored restrictions/roads require fresh qualification."
+  },
+  "scope": "One-degree bearing samples of each reached cut's maximum remaining-time spherical disk. Current extract footprints; not dated extent proofs, exact containment, land classification, source completeness or a coverage certificate."
+}

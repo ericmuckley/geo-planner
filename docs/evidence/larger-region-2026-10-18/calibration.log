@@ -1,0 +1,18 @@
+validated: 2.14 s; cgroup peak 324956160; anon 16039936; file 1552384; swap max/peak 0/0
+Frozen sink calibrated: port-incoming / 468334902:1:f: 374 ms
+Frozen sink calibrated: tijuana / 114198251:0:f: 1167889 ms
+sinksCalibrated: 149.93 s; cgroup peak 968331264; anon 376897536; file 937984; swap max/peak 0/0
+reloaded: 196.19 s; cgroup peak 1409110016; anon 542769152; file 937984; swap max/peak 0/0
+Qualified san-diego: 2700226 reachable states; first cut 3904583 ms
+Traceback (most recent call last):
+  File "/recipe/regional_qualification.py", line 135, in <module>
+    run(parser.parse_args())
+  File "/recipe/regional_qualification.py", line 99, in run
+    summary = qualify(output, graph, audit, manifest["profile"], fixture, built["barrierExamples"], built["portIncoming"], built["portOutgoing"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/regional_checks.py", line 67, in qualify
+    result = dijkstra(graph.adjacency, origin["seeds"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/state_graph.py", line 123, in dijkstra
+    heapq.heappush(queue, (candidate, target))
+KeyboardInterrupt

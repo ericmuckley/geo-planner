@@ -1,8 +1,27 @@
 import { spawn } from "node:child_process";
+import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { root } from "./settings.mjs";
 
+const options = { graph: "two-hour-region-v2", cuts: null };
+const args = process.argv.slice(2);
+while (args.length) {
+	const option = args.shift();
+	const value = args.shift();
+	if (!/^[a-zA-Z0-9_-]+$/.test(value ?? ""))
+		throw new Error(
+			"Graph names accept letters, numbers, underscores and hyphens",
+		);
+	if (option === "--graph-run") options.graph = value;
+	else if (option === "--cuts-run") options.cuts = value;
+	else
+		throw new Error(
+			"Usage: npm run dev:experiment -- [--graph-run name] [--cuts-run name]",
+		);
+}
+options.cuts ??= `${options.graph}-cuts`;
+let expectedIdentity;
 let worker;
 let app;
 let stopped = false;
@@ -16,26 +35,46 @@ process.on("SIGINT", stop);
 process.on("SIGTERM", stop);
 
 async function ready() {
+	let response;
 	try {
-		const response = await fetch("http://127.0.0.1:8787/health", {
+		response = await fetch("http://127.0.0.1:8787/health", {
 			signal: AbortSignal.timeout(1500),
 		});
-		if (!response.ok || !(await response.json()).ready)
-			throw new Error("Port 8787 is used by another service");
-		return true;
-	} catch (error) {
-		if (error instanceof Error && error.message.includes("another service"))
-			throw error;
+	} catch {
 		return false;
 	}
+	if (!response.ok) throw new Error("Port 8787 is used by another service");
+	const config = await response.json();
+	if (!config.ready || config.graphIdentity !== expectedIdentity)
+		throw new Error(
+			`Port 8787 has a different routing graph. Stop that worker, then restart for ${options.graph}.`,
+		);
+	return true;
 }
 
 try {
+	expectedIdentity = JSON.parse(
+		await readFile(
+			resolve(root, "data/compact-pilot", options.graph, "manifest.json"),
+			"utf8",
+		),
+	).graphIdentity;
 	if (!(await ready())) {
-		worker = spawn("python3", ["-B", resolve(root, "routing/experiment.py")], {
-			cwd: root,
-			stdio: "inherit",
-		});
+		worker = spawn(
+			"python3",
+			[
+				"-B",
+				resolve(root, "routing/experiment.py"),
+				"--graph-run",
+				options.graph,
+				"--cuts-run",
+				options.cuts,
+			],
+			{
+				cwd: root,
+				stdio: "inherit",
+			},
+		);
 		worker.on("error", (error) => {
 			console.error(error.message);
 			stop();

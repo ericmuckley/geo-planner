@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+<link rel="icon" href="https://www.geofabrik.de/favicon.ico" />
+<meta name="description" content="Download OpenStreetMap data for Mexico for self-hosting or data analysis. OSM PBF and Shapefiles available.">
+<meta name="og:description" content="Download OpenStreetMap data for Mexico for self-hosting or data analysis. OSM PBF and Shapefiles available.">
+<meta property="og:image" content="https://www.geofabrik.de/img/geofabrik_logo_notext.svg">
+<meta property="og:site_name" content="Geofabrik Download Server">
+<title>Download OpenStreetMap for Mexico | Geofabrik Download Server</title>
+    <script type="text/javascript" src="//static.geofabrik.de/ol212/OpenLayers.js"></script>
+    <script type="text/javascript">
+        var map, layer, countryLayer;
+        function init()
+        {
+            map = new OpenLayers.Map('map');
+            layer = new OpenLayers.Layer.OSM("",
+                ["https://a.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                 "https://b.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                 "https://c.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                ],
+                { attribution: "", tileOptions : {crossOriginKeyword: null} }
+            ); // attribution in page footer
+            map.addLayer(layer);
+            layer = new OpenLayers.Layer.Vector("KML", {
+            strategies: [new OpenLayers.Strategy.Fixed()],
+            protocol: new OpenLayers.Protocol.HTTP({
+                url: "mexico.kml",
+                format: new OpenLayers.Format.KML({
+                    maxDepth: 2
+                })
+            }),
+            styleMap: new OpenLayers.StyleMap({
+            "default": new OpenLayers.Style({
+                graphicName: "cross",
+                pointRadius: 6,
+                fillOpacity: 0.50,
+                fillColor: "#ffcc66",
+                strokeColor: "#ff9933",
+                strokeWidth: 2
+            })
+            })
+            });
+            layer.events.register("loadend", this, function() { map.zoomToExtent(layer.getDataExtent()); });
+            map.addLayer(layer);
+        }
+        function loadkml(kmlname)
+        {
+            if (countryLayer) map.removeLayer(countryLayer);
+            countryLayer = 
+                new OpenLayers.Layer.Vector("KML", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: kmlname,
+                    format: new OpenLayers.Format.KML({
+                        extractStyles: true,
+                        extractAttributes: true,
+                        maxDepth: 2
+                    })
+                })
+                });
+            map.addLayer(countryLayer);
+        }
+    </script>
+<link rel="stylesheet" type="text/css" href="/download.donation.css">
+</head><body onload='init();'><div id="donation">
+Do you find OpenStreetMap data useful? Consider giving something back in the OSMF's <a href="//supporting.openstreetmap.org">funding campaign!</a>
+</div>
+<div id="download-top">
+   <div id="download-top-right">
+      <img alt="header image" src="/img/geofabrik-downloads.png" height="20">
+   </div>
+</div>
+<div id="download-titlebar">
+<h1>Download OpenStreetMap data for this region:</h1>
+</div>
+<div class="download-main">
+<div class="leftColumn"><h2>Mexico</h2>
+<p><a href="/north-america.html">[one level up]</a></p>    <p class="isPublicInfo">
+        The OpenStreetMap data files provided on this server do <b>not</b> contain the user names, user
+        IDs and changeset IDs of the OSM objects because these fields are assumed to contain personal
+        information about the OpenStreetMap contributors and are therefore subject to data protection regulations
+        in the European Union. 
+        <br>
+        <a href="https://osm-internal.download.geofabrik.de/north-america/mexico.html">Extracts with full metadata</a> are available to OpenStreetMap
+        contributors only.
+    </p>
+<h3>Commonly Used Formats</h3>
+<ul>
+<li><a href="mexico-latest.osm.pbf">mexico-latest.osm.pbf</a>, suitable for
+           Osmium, Osmosis, imposm, osm2pgsql, mkgmap, and others. This file was last 
+           modified 22 hours ago and contains all OSM data up to 2026-10-18T20:25:06Z. File size: 617&nbsp;MB. </li>
+
+<li><a href="mexico-latest-free.shp.zip">mexico-latest-free.shp.zip</a>, yields
+               a number of ESRI compatible shape files when unzipped. <a href="/osm-data-in-gis-formats-free.pdf">(Format description PDF)</a>
+               This file was last modified 14 hours ago. File size: 1.2&nbsp;GB. </li>
+
+<li><a href="mexico-latest-free.gpkg.zip">mexico-latest-free.gpkg.zip</a>, same as
+               shape file but in more modern Geopackage format.
+               This file was last modified 14 hours ago. File size: 1.3&nbsp;GB. </li>
+</ul><h3>Other Formats and Auxiliary Files</h3>
+<ul>
+<li><s>mexico-internal.osh.pbf</s> The history file
+                contains personal data and is available on the
+                <a href="https://osm-internal.download.geofabrik.de/north-america/mexico.html">internal server</a>
+                only. See notice above for further information.
+                </li>
+<li><a href="mexico.poly">.poly file</a> that describes the extent
+               of this region.</li>
+<li><font color="green">experimental</font> <a href="mexico-shortbread-1.0.mbtiles">
+               vector tile package</a> conforming to <a href="https://shortbread-tiles.org/">Shortbread schema</a>
+           for use with MapLibre and other MVT capable software</li>
+<li><a href="mexico-updates">.osc.gz files</a>
+                that contain all changes in this region, suitable e.g. for
+                Osmosis updates</li>
+<li><a href="//taginfo.geofabrik.de/north-america:mexico/">Taginfo statistics for this region</li>
+<li><a href="#" onclick="OpenLayers.Util.getElement('details').style.display='inline';">raw directory index</a> allowing you to
+            see and download older files</li></ul><div id="details" style="display:none"><table id="subregions"><tr><th class="subregion">file</th><th>date</th><th>size</th></tr><tr><td class="subregion"><a href="mexico-140101-free.shp.zip">mexico-140101-free.shp.zip</a></td><td class="subright">2018-04-27 05:01</td><td class="subright">92818708</td></tr>
+<tr><td class="subregion"><a href="mexico-140101-free.shp.zip.md5">mexico-140101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:11</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-140101.osm.pbf">mexico-140101.osm.pbf</a></td><td class="subright">2014-01-01 22:34</td><td class="subright">57917794</td></tr>
+<tr><td class="subregion"><a href="mexico-150101-free.shp.zip">mexico-150101-free.shp.zip</a></td><td class="subright">2018-04-27 05:03</td><td class="subright">127757694</td></tr>
+<tr><td class="subregion"><a href="mexico-150101-free.shp.zip.md5">mexico-150101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:11</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-150101.osm.pbf">mexico-150101.osm.pbf</a></td><td class="subright">2015-01-01 23:23</td><td class="subright">77000025</td></tr>
+<tr><td class="subregion"><a href="mexico-160101-free.shp.zip">mexico-160101-free.shp.zip</a></td><td class="subright">2018-04-27 05:04</td><td class="subright">180479285</td></tr>
+<tr><td class="subregion"><a href="mexico-160101-free.shp.zip.md5">mexico-160101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:11</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-160101.osm.pbf">mexico-160101.osm.pbf</a></td><td class="subright">2016-01-01 23:13</td><td class="subright">107956080</td></tr>
+<tr><td class="subregion"><a href="mexico-170101-free.shp.zip">mexico-170101-free.shp.zip</a></td><td class="subright">2018-04-27 05:02</td><td class="subright">227456453</td></tr>
+<tr><td class="subregion"><a href="mexico-170101-free.shp.zip.md5">mexico-170101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:21</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-170101.osm.pbf">mexico-170101.osm.pbf</a></td><td class="subright">2017-01-01 23:29</td><td class="subright">133353099</td></tr>
+<tr><td class="subregion"><a href="mexico-180101-free.shp.zip">mexico-180101-free.shp.zip</a></td><td class="subright">2018-04-27 05:02</td><td class="subright">318070621</td></tr>
+<tr><td class="subregion"><a href="mexico-180101-free.shp.zip.md5">mexico-180101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:11</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-180101.osm.pbf">mexico-180101.osm.pbf</a></td><td class="subright">2018-01-01 23:04</td><td class="subright">173183527</td></tr>
+<tr><td class="subregion"><a href="mexico-190101-free.shp.zip">mexico-190101-free.shp.zip</a></td><td class="subright">2019-01-01 22:50</td><td class="subright">390779891</td></tr>
+<tr><td class="subregion"><a href="mexico-190101-free.shp.zip.md5">mexico-190101-free.shp.zip.md5</a></td><td class="subright">2019-01-01 22:50</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-190101.osm.pbf">mexico-190101.osm.pbf</a></td><td class="subright">2019-01-01 22:41</td><td class="subright">204890739</td></tr>
+<tr><td class="subregion"><a href="mexico-200101-free.shp.zip">mexico-200101-free.shp.zip</a></td><td class="subright">2020-05-03 02:55</td><td class="subright">504679444</td></tr>
+<tr><td class="subregion"><a href="mexico-200101-free.shp.zip.md5">mexico-200101-free.shp.zip.md5</a></td><td class="subright">2020-05-03 02:55</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-200101.osm.pbf">mexico-200101.osm.pbf</a></td><td class="subright">2020-02-19 16:44</td><td class="subright">265147676</td></tr>
+<tr><td class="subregion"><a href="mexico-210101-free.shp.zip">mexico-210101-free.shp.zip</a></td><td class="subright">2021-01-01 23:52</td><td class="subright">756727927</td></tr>
+<tr><td class="subregion"><a href="mexico-210101-free.shp.zip.md5">mexico-210101-free.shp.zip.md5</a></td><td class="subright">2021-01-01 23:52</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-210101.osm.pbf">mexico-210101.osm.pbf</a></td><td class="subright">2021-01-01 23:31</td><td class="subright">404981332</td></tr>
+<tr><td class="subregion"><a href="mexico-220101-free.shp.zip">mexico-220101-free.shp.zip</a></td><td class="subright">2022-01-02 00:34</td><td class="subright">885520952</td></tr>
+<tr><td class="subregion"><a href="mexico-220101-free.shp.zip.md5">mexico-220101-free.shp.zip.md5</a></td><td class="subright">2022-01-02 00:34</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-220101.osm.pbf">mexico-220101.osm.pbf</a></td><td class="subright">2022-01-01 23:33</td><td class="subright">490548230</td></tr>
+<tr><td class="subregion"><a href="mexico-230101-free.shp.zip">mexico-230101-free.shp.zip</a></td><td class="subright">2023-01-02 00:30</td><td class="subright">1020556415</td></tr>
+<tr><td class="subregion"><a href="mexico-230101-free.shp.zip.md5">mexico-230101-free.shp.zip.md5</a></td><td class="subright">2023-01-02 00:30</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-230101.osm.pbf">mexico-230101.osm.pbf</a></td><td class="subright">2023-01-01 23:22</td><td class="subright">544917551</td></tr>
+<tr><td class="subregion"><a href="mexico-240101-free.shp.zip">mexico-240101-free.shp.zip</a></td><td class="subright">2024-01-02 00:23</td><td class="subright">1066166342</td></tr>
+<tr><td class="subregion"><a href="mexico-240101-free.shp.zip.md5">mexico-240101-free.shp.zip.md5</a></td><td class="subright">2024-01-02 00:23</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-240101.osm.pbf">mexico-240101.osm.pbf</a></td><td class="subright">2024-01-02 00:03</td><td class="subright">565469779</td></tr>
+<tr><td class="subregion"><a href="mexico-250101-free.shp.zip">mexico-250101-free.shp.zip</a></td><td class="subright">2025-01-02 00:20</td><td class="subright">1103407347</td></tr>
+<tr><td class="subregion"><a href="mexico-250101-free.shp.zip.md5">mexico-250101-free.shp.zip.md5</a></td><td class="subright">2025-01-02 00:20</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-250101.osm.pbf">mexico-250101.osm.pbf</a></td><td class="subright">2025-01-01 23:59</td><td class="subright">584434960</td></tr>
+<tr><td class="subregion"><a href="mexico-260101-free.shp.zip">mexico-260101-free.shp.zip</a></td><td class="subright">2026-01-02 01:14</td><td class="subright">1181390085</td></tr>
+<tr><td class="subregion"><a href="mexico-260101-free.shp.zip.md5">mexico-260101-free.shp.zip.md5</a></td><td class="subright">2026-01-02 01:14</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-260101.osm.pbf">mexico-260101.osm.pbf</a></td><td class="subright">2026-01-01 23:48</td><td class="subright">618034586</td></tr>
+<tr><td class="subregion"><a href="mexico-260101.osm.pbf.md5">mexico-260101.osm.pbf.md5</a></td><td class="subright">2026-01-01 23:48</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-260801-free.gpkg.zip">mexico-260801-free.gpkg.zip</a></td><td class="subright">2026-08-02 06:06</td><td class="subright">1338582983</td></tr>
+<tr><td class="subregion"><a href="mexico-260801-free.shp.zip">mexico-260801-free.shp.zip</a></td><td class="subright">2026-08-02 06:04</td><td class="subright">1295667012</td></tr>
+<tr><td class="subregion"><a href="mexico-260801-free.shp.zip.md5">mexico-260801-free.shp.zip.md5</a></td><td class="subright">2026-08-02 06:04</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-260801.osm.pbf">mexico-260801.osm.pbf</a></td><td class="subright">2026-08-02 00:32</td><td class="subright">642761597</td></tr>
+<tr><td class="subregion"><a href="mexico-260801.osm.pbf.md5">mexico-260801.osm.pbf.md5</a></td><td class="subright">2026-08-02 00:32</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-260901-free.gpkg.zip">mexico-260901-free.gpkg.zip</a></td><td class="subright">2026-09-05 17:51</td><td class="subright">1343017786</td></tr>
+<tr><td class="subregion"><a href="mexico-260901-free.shp.zip">mexico-260901-free.shp.zip</a></td><td class="subright">2026-09-05 17:47</td><td class="subright">1299977419</td></tr>
+<tr><td class="subregion"><a href="mexico-260901-free.shp.zip.md5">mexico-260901-free.shp.zip.md5</a></td><td class="subright">2026-09-05 17:47</td><td class="subright">61</td></tr>
+<tr><td class="subregion"><a href="mexico-260901.osm.pbf">mexico-260901.osm.pbf</a></td><td class="subright">2026-09-04 12:50</td><td class="subright">644905927</td></tr>
+<tr><td class="subregion"><a href="mexico-260901.osm.pbf.md5">mexico-260901.osm.pbf.md5</a></td><td class="subright">2026-09-04 12:50</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261001-free.gpkg.zip">mexico-261001-free.gpkg.zip</a></td><td class="subright">2026-10-02 21:21</td><td class="subright">1344414206</td></tr>
+<tr><td class="subregion"><a href="mexico-261001-free.shp.zip">mexico-261001-free.shp.zip</a></td><td class="subright">2026-10-02 21:21</td><td class="subright">1301317172</td></tr>
+<tr><td class="subregion"><a href="mexico-261001.osm.pbf">mexico-261001.osm.pbf</a></td><td class="subright">2026-10-01 22:50</td><td class="subright">646075674</td></tr>
+<tr><td class="subregion"><a href="mexico-261001.osm.pbf.md5">mexico-261001.osm.pbf.md5</a></td><td class="subright">2026-10-01 22:50</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261012-free.gpkg.zip">mexico-261012-free.gpkg.zip</a></td><td class="subright">2026-10-13 07:28</td><td class="subright">1345542543</td></tr>
+<tr><td class="subregion"><a href="mexico-261012-free.shp.zip">mexico-261012-free.shp.zip</a></td><td class="subright">2026-10-13 07:28</td><td class="subright">1302387036</td></tr>
+<tr><td class="subregion"><a href="mexico-261012.osm.pbf">mexico-261012.osm.pbf</a></td><td class="subright">2026-10-13 00:20</td><td class="subright">646696924</td></tr>
+<tr><td class="subregion"><a href="mexico-261012.osm.pbf.md5">mexico-261012.osm.pbf.md5</a></td><td class="subright">2026-10-13 00:20</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261013-free.gpkg.zip">mexico-261013-free.gpkg.zip</a></td><td class="subright">2026-10-14 02:04</td><td class="subright">1345718581</td></tr>
+<tr><td class="subregion"><a href="mexico-261013-free.shp.zip">mexico-261013-free.shp.zip</a></td><td class="subright">2026-10-14 02:04</td><td class="subright">1302599387</td></tr>
+<tr><td class="subregion"><a href="mexico-261013.osm.pbf">mexico-261013.osm.pbf</a></td><td class="subright">2026-10-13 22:49</td><td class="subright">646801472</td></tr>
+<tr><td class="subregion"><a href="mexico-261013.osm.pbf.md5">mexico-261013.osm.pbf.md5</a></td><td class="subright">2026-10-13 22:49</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261014-free.gpkg.zip">mexico-261014-free.gpkg.zip</a></td><td class="subright">2026-10-15 02:51</td><td class="subright">1345993847</td></tr>
+<tr><td class="subregion"><a href="mexico-261014-free.shp.zip">mexico-261014-free.shp.zip</a></td><td class="subright">2026-10-15 02:55</td><td class="subright">1302839830</td></tr>
+<tr><td class="subregion"><a href="mexico-261014.osm.pbf">mexico-261014.osm.pbf</a></td><td class="subright">2026-10-15 02:38</td><td class="subright">646916392</td></tr>
+<tr><td class="subregion"><a href="mexico-261014.osm.pbf.md5">mexico-261014.osm.pbf.md5</a></td><td class="subright">2026-10-15 02:38</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261015-free.gpkg.zip">mexico-261015-free.gpkg.zip</a></td><td class="subright">2026-10-16 03:25</td><td class="subright">1346228247</td></tr>
+<tr><td class="subregion"><a href="mexico-261015-free.shp.zip">mexico-261015-free.shp.zip</a></td><td class="subright">2026-10-16 03:41</td><td class="subright">1303068753</td></tr>
+<tr><td class="subregion"><a href="mexico-261015.osm.pbf">mexico-261015.osm.pbf</a></td><td class="subright">2026-10-16 03:43</td><td class="subright">647008774</td></tr>
+<tr><td class="subregion"><a href="mexico-261015.osm.pbf.md5">mexico-261015.osm.pbf.md5</a></td><td class="subright">2026-10-16 03:43</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261016-free.gpkg.zip">mexico-261016-free.gpkg.zip</a></td><td class="subright">2026-10-17 04:31</td><td class="subright">1346421830</td></tr>
+<tr><td class="subregion"><a href="mexico-261016-free.shp.zip">mexico-261016-free.shp.zip</a></td><td class="subright">2026-10-17 04:30</td><td class="subright">1303247591</td></tr>
+<tr><td class="subregion"><a href="mexico-261016.osm.pbf">mexico-261016.osm.pbf</a></td><td class="subright">2026-10-17 00:57</td><td class="subright">647096756</td></tr>
+<tr><td class="subregion"><a href="mexico-261016.osm.pbf.md5">mexico-261016.osm.pbf.md5</a></td><td class="subright">2026-10-17 00:57</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261017-free.gpkg.zip">mexico-261017-free.gpkg.zip</a></td><td class="subright">2026-10-18 05:54</td><td class="subright">1346568535</td></tr>
+<tr><td class="subregion"><a href="mexico-261017-free.shp.zip">mexico-261017-free.shp.zip</a></td><td class="subright">2026-10-18 05:54</td><td class="subright">1303379727</td></tr>
+<tr><td class="subregion"><a href="mexico-261017.osm.pbf">mexico-261017.osm.pbf</a></td><td class="subright">2026-10-17 22:37</td><td class="subright">647167810</td></tr>
+<tr><td class="subregion"><a href="mexico-261017.osm.pbf.md5">mexico-261017.osm.pbf.md5</a></td><td class="subright">2026-10-17 22:37</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-261018-free.gpkg.zip">mexico-261018-free.gpkg.zip</a></td><td class="subright">2026-10-19 06:23</td><td class="subright">1346598977</td></tr>
+<tr><td class="subregion"><a href="mexico-261018-free.shp.zip">mexico-261018-free.shp.zip</a></td><td class="subright">2026-10-19 06:23</td><td class="subright">1303404033</td></tr>
+<tr><td class="subregion"><a href="mexico-261018.osm.pbf">mexico-261018.osm.pbf</a></td><td class="subright">2026-10-18 22:59</td><td class="subright">647193492</td></tr>
+<tr><td class="subregion"><a href="mexico-261018.osm.pbf.md5">mexico-261018.osm.pbf.md5</a></td><td class="subright">2026-10-18 22:59</td><td class="subright">56</td></tr>
+<tr><td class="subregion"><a href="mexico-updates">mexico-updates</a></td><td class="subright">2026-10-18 23:13</td><td class="subright">4096</td></tr>
+<tr><td class="subregion"><a href="mexico.kml">mexico.kml</a></td><td class="subright">2026-10-18 22:58</td><td class="subright">6842</td></tr>
+<tr><td class="subregion"><a href="mexico.poly">mexico.poly</a></td><td class="subright">2026-10-18 22:59</td><td class="subright">8847</td></tr>
+</table></div><h3>Sub Regions</h3><p>No sub regions are defined for this region.</p></div>
+<div id="download-right">
+   <div id="noscroll">
+   <div id="map"></div>
+
+   <div class="customized_shapes">
+<p>
+      <img alt="small flag of UK" src="/img/en.png">
+Not what you were looking for?
+Geofabrik is a consulting and software development firm based in Karlsruhe, Germany
+specializing in OpenStreetMap services. We're happy to help you with data
+preparation, processing, server setup and the like. <a href="http://www.geofabrik.de/data/shapefiles.html">Check out our web site</a>
+and contact us if we can be of service.
+
+      </p>
+   </div>
+   
+   <div class="customized_shapes">
+      <p>
+      <img alt="small flag of Germany" src="/img/de.png">
+      Nicht das Richtige dabei? 
+Die Geofabrik ist ein auf OpenStreetMap spezialisiertes Beratungs- und Softwareentwicklungsunternehmen in Karlsruhe.
+Gern helfen wir Ihnen bei der Datenaufbereitung, Datenkonvertierung, Serverinstallation und &auml;hnlichen Aufgaben.
+<a href="http://www.geofabrik.de/data/shapefiles.html">Besuchen Sie unsere Webseite</a> und sprechen Sie mit uns, wenn wir Ihnen 
+helfen k&ouml;nnen.
+      </p>
+   </div>
+   </div>
+</div>
+</div>
+<div id="download-copyright">
+Data processed by
+<a href="http://www.geofabrik.de/">Geofabrik GmbH</a>
+and created by 
+<a href="http://www.openstreetmap.org/">OpenStreetMap Contributors</a>
+|
+<a href="http://opendatacommons.org/licenses/odbl/">License: ODbL 1.0</a>
+|
+<a href="http://www.geofabrik.de/geofabrik/contact.html">Contact</a>
+|
+<a href="http://www.geofabrik.de/geofabrik/imprint.html">Legal Notice/Privacy Policy</a>

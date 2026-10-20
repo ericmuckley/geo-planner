@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+<link rel="icon" href="https://www.geofabrik.de/favicon.ico" />
+<meta name="description" content="Download OpenStreetMap data for Utah for self-hosting or data analysis. OSM PBF and Shapefiles available.">
+<meta name="og:description" content="Download OpenStreetMap data for Utah for self-hosting or data analysis. OSM PBF and Shapefiles available.">
+<meta property="og:image" content="https://www.geofabrik.de/img/geofabrik_logo_notext.svg">
+<meta property="og:site_name" content="Geofabrik Download Server">
+<title>Download OpenStreetMap for Utah | Geofabrik Download Server</title>
+    <script type="text/javascript" src="//static.geofabrik.de/ol212/OpenLayers.js"></script>
+    <script type="text/javascript">
+        var map, layer, countryLayer;
+        function init()
+        {
+            map = new OpenLayers.Map('map');
+            layer = new OpenLayers.Layer.OSM("",
+                ["https://a.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                 "https://b.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                 "https://c.tile.geofabrik.de/5f33d2afc5074c6da1a5c2a8a960d501/${z}/${x}/${y}.png",
+                ],
+                { attribution: "", tileOptions : {crossOriginKeyword: null} }
+            ); // attribution in page footer
+            map.addLayer(layer);
+            layer = new OpenLayers.Layer.Vector("KML", {
+            strategies: [new OpenLayers.Strategy.Fixed()],
+            protocol: new OpenLayers.Protocol.HTTP({
+                url: "utah.kml",
+                format: new OpenLayers.Format.KML({
+                    maxDepth: 2
+                })
+            }),
+            styleMap: new OpenLayers.StyleMap({
+            "default": new OpenLayers.Style({
+                graphicName: "cross",
+                pointRadius: 6,
+                fillOpacity: 0.50,
+                fillColor: "#ffcc66",
+                strokeColor: "#ff9933",
+                strokeWidth: 2
+            })
+            })
+            });
+            layer.events.register("loadend", this, function() { map.zoomToExtent(layer.getDataExtent()); });
+            map.addLayer(layer);
+        }
+        function loadkml(kmlname)
+        {
+            if (countryLayer) map.removeLayer(countryLayer);
+            countryLayer = 
+                new OpenLayers.Layer.Vector("KML", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: kmlname,
+                    format: new OpenLayers.Format.KML({
+                        extractStyles: true,
+                        extractAttributes: true,
+                        maxDepth: 2
+                    })
+                })
+                });
+            map.addLayer(countryLayer);
+        }
+    </script>
+<link rel="stylesheet" type="text/css" href="/download.donation.css">
+</head><body onload='init();'><div id="donation">
+Do you find OpenStreetMap data useful? Consider giving something back in the OSMF's <a href="//supporting.openstreetmap.org">funding campaign!</a>
+</div>
+<div id="download-top">
+   <div id="download-top-right">
+      <img alt="header image" src="/img/geofabrik-downloads.png" height="20">
+   </div>
+</div>
+<div id="download-titlebar">
+<h1>Download OpenStreetMap data for this region:</h1>
+</div>
+<div class="download-main">
+<div class="leftColumn"><h2>Utah</h2>
+<p><a href="/north-america/us.html">[one level up]</a></p>    <p class="isPublicInfo">
+        The OpenStreetMap data files provided on this server do <b>not</b> contain the user names, user
+        IDs and changeset IDs of the OSM objects because these fields are assumed to contain personal
+        information about the OpenStreetMap contributors and are therefore subject to data protection regulations
+        in the European Union. 
+        <br>
+        <a href="https://osm-internal.download.geofabrik.de/north-america/us/utah.html">Extracts with full metadata</a> are available to OpenStreetMap
+        contributors only.
+    </p>
+<h3>Commonly Used Formats</h3>
+<ul>
+<li><a href="utah-latest.osm.pbf">utah-latest.osm.pbf</a>, suitable for
+           Osmium, Osmosis, imposm, osm2pgsql, mkgmap, and others. This file was last 
+           modified 21 hours ago and contains all OSM data up to 2026-10-18T20:25:06Z. File size: 162&nbsp;MB. </li>
+
+<li><a href="utah-latest-free.shp.zip">utah-latest-free.shp.zip</a>, yields
+               a number of ESRI compatible shape files when unzipped. <a href="/osm-data-in-gis-formats-free.pdf">(Format description PDF)</a>
+               This file was last modified 13 hours ago. File size: 312&nbsp;MB. </li>
+
+<li><a href="utah-latest-free.gpkg.zip">utah-latest-free.gpkg.zip</a>, same as
+               shape file but in more modern Geopackage format.
+               This file was last modified 12 hours ago. File size: 321&nbsp;MB. </li>
+</ul><h3>Other Formats and Auxiliary Files</h3>
+<ul>
+<li><s>utah-internal.osh.pbf</s> The history file
+                contains personal data and is available on the
+                <a href="https://osm-internal.download.geofabrik.de/north-america/us/utah.html">internal server</a>
+                only. See notice above for further information.
+                </li>
+<li><a href="utah.poly">.poly file</a> that describes the extent
+               of this region.</li>
+<li><font color="green">experimental</font> <a href="utah-shortbread-1.0.mbtiles">
+               vector tile package</a> conforming to <a href="https://shortbread-tiles.org/">Shortbread schema</a>
+           for use with MapLibre and other MVT capable software</li>
+<li><a href="utah-updates">.osc.gz files</a>
+                that contain all changes in this region, suitable e.g. for
+                Osmosis updates</li>
+<li><a href="//taginfo.geofabrik.de/north-america:us:utah/">Taginfo statistics for this region</li>
+<li><a href="#" onclick="OpenLayers.Util.getElement('details').style.display='inline';">raw directory index</a> allowing you to
+            see and download older files</li></ul><div id="details" style="display:none"><table id="subregions"><tr><th class="subregion">file</th><th>date</th><th>size</th></tr><tr><td class="subregion"><a href="utah-140101-free.shp.zip">utah-140101-free.shp.zip</a></td><td class="subright">2018-04-27 05:49</td><td class="subright">52170199</td></tr>
+<tr><td class="subregion"><a href="utah-140101-free.shp.zip.md5">utah-140101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:23</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-140101.osm.pbf">utah-140101.osm.pbf</a></td><td class="subright">2014-01-01 23:59</td><td class="subright">32157894</td></tr>
+<tr><td class="subregion"><a href="utah-150101-free.shp.zip">utah-150101-free.shp.zip</a></td><td class="subright">2018-04-27 06:21</td><td class="subright">57281003</td></tr>
+<tr><td class="subregion"><a href="utah-150101-free.shp.zip.md5">utah-150101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 14:58</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-150101.osm.pbf">utah-150101.osm.pbf</a></td><td class="subright">2015-01-02 00:47</td><td class="subright">34532839</td></tr>
+<tr><td class="subregion"><a href="utah-160101-free.shp.zip">utah-160101-free.shp.zip</a></td><td class="subright">2018-04-27 06:54</td><td class="subright">71775627</td></tr>
+<tr><td class="subregion"><a href="utah-160101-free.shp.zip.md5">utah-160101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:29</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-160101.osm.pbf">utah-160101.osm.pbf</a></td><td class="subright">2016-01-01 23:47</td><td class="subright">41412847</td></tr>
+<tr><td class="subregion"><a href="utah-170101-free.shp.zip">utah-170101-free.shp.zip</a></td><td class="subright">2018-04-27 06:17</td><td class="subright">82179929</td></tr>
+<tr><td class="subregion"><a href="utah-170101-free.shp.zip.md5">utah-170101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 13:31</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-170101.osm.pbf">utah-170101.osm.pbf</a></td><td class="subright">2017-01-01 23:51</td><td class="subright">45962493</td></tr>
+<tr><td class="subregion"><a href="utah-180101-free.shp.zip">utah-180101-free.shp.zip</a></td><td class="subright">2018-04-27 06:03</td><td class="subright">95660515</td></tr>
+<tr><td class="subregion"><a href="utah-180101-free.shp.zip.md5">utah-180101-free.shp.zip.md5</a></td><td class="subright">2018-05-03 15:02</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-180101.osm.pbf">utah-180101.osm.pbf</a></td><td class="subright">2018-01-01 23:23</td><td class="subright">51117409</td></tr>
+<tr><td class="subregion"><a href="utah-190101-free.shp.zip">utah-190101-free.shp.zip</a></td><td class="subright">2019-01-01 22:51</td><td class="subright">112983573</td></tr>
+<tr><td class="subregion"><a href="utah-190101-free.shp.zip.md5">utah-190101-free.shp.zip.md5</a></td><td class="subright">2019-01-01 22:51</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-190101.osm.pbf">utah-190101.osm.pbf</a></td><td class="subright">2019-01-01 22:47</td><td class="subright">58905109</td></tr>
+<tr><td class="subregion"><a href="utah-200101-free.shp.zip">utah-200101-free.shp.zip</a></td><td class="subright">2020-05-03 03:44</td><td class="subright">118913610</td></tr>
+<tr><td class="subregion"><a href="utah-200101-free.shp.zip.md5">utah-200101-free.shp.zip.md5</a></td><td class="subright">2020-05-03 03:44</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-200101.osm.pbf">utah-200101.osm.pbf</a></td><td class="subright">2020-02-19 16:37</td><td class="subright">63382474</td></tr>
+<tr><td class="subregion"><a href="utah-210101-free.shp.zip">utah-210101-free.shp.zip</a></td><td class="subright">2021-01-02 00:14</td><td class="subright">140466245</td></tr>
+<tr><td class="subregion"><a href="utah-210101-free.shp.zip.md5">utah-210101-free.shp.zip.md5</a></td><td class="subright">2021-01-02 00:14</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-210101.osm.pbf">utah-210101.osm.pbf</a></td><td class="subright">2021-01-01 23:39</td><td class="subright">72106690</td></tr>
+<tr><td class="subregion"><a href="utah-220101-free.shp.zip">utah-220101-free.shp.zip</a></td><td class="subright">2022-01-02 00:39</td><td class="subright">160411409</td></tr>
+<tr><td class="subregion"><a href="utah-220101-free.shp.zip.md5">utah-220101-free.shp.zip.md5</a></td><td class="subright">2022-01-02 00:39</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-220101.osm.pbf">utah-220101.osm.pbf</a></td><td class="subright">2022-01-01 23:56</td><td class="subright">84560304</td></tr>
+<tr><td class="subregion"><a href="utah-230101-free.shp.zip">utah-230101-free.shp.zip</a></td><td class="subright">2023-01-01 23:41</td><td class="subright">201255646</td></tr>
+<tr><td class="subregion"><a href="utah-230101-free.shp.zip.md5">utah-230101-free.shp.zip.md5</a></td><td class="subright">2023-01-01 23:41</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-230101.osm.pbf">utah-230101.osm.pbf</a></td><td class="subright">2023-01-01 23:37</td><td class="subright">105102615</td></tr>
+<tr><td class="subregion"><a href="utah-240101-free.shp.zip">utah-240101-free.shp.zip</a></td><td class="subright">2024-01-02 00:43</td><td class="subright">241199370</td></tr>
+<tr><td class="subregion"><a href="utah-240101-free.shp.zip.md5">utah-240101-free.shp.zip.md5</a></td><td class="subright">2024-01-02 00:43</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-240101.osm.pbf">utah-240101.osm.pbf</a></td><td class="subright">2024-01-02 00:16</td><td class="subright">125052094</td></tr>
+<tr><td class="subregion"><a href="utah-250101-free.shp.zip">utah-250101-free.shp.zip</a></td><td class="subright">2025-01-02 00:33</td><td class="subright">269333938</td></tr>
+<tr><td class="subregion"><a href="utah-250101-free.shp.zip.md5">utah-250101-free.shp.zip.md5</a></td><td class="subright">2025-01-02 00:33</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-250101.osm.pbf">utah-250101.osm.pbf</a></td><td class="subright">2025-01-02 00:23</td><td class="subright">139064814</td></tr>
+<tr><td class="subregion"><a href="utah-260101-free.shp.zip">utah-260101-free.shp.zip</a></td><td class="subright">2026-01-02 02:57</td><td class="subright">300944331</td></tr>
+<tr><td class="subregion"><a href="utah-260101-free.shp.zip.md5">utah-260101-free.shp.zip.md5</a></td><td class="subright">2026-01-02 02:57</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-260101.osm.pbf">utah-260101.osm.pbf</a></td><td class="subright">2026-01-01 23:54</td><td class="subright">156092010</td></tr>
+<tr><td class="subregion"><a href="utah-260101.osm.pbf.md5">utah-260101.osm.pbf.md5</a></td><td class="subright">2026-01-01 23:54</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-260801-free.gpkg.zip">utah-260801-free.gpkg.zip</a></td><td class="subright">2026-08-02 02:21</td><td class="subright">330272681</td></tr>
+<tr><td class="subregion"><a href="utah-260801-free.shp.zip">utah-260801-free.shp.zip</a></td><td class="subright">2026-08-02 02:20</td><td class="subright">321239142</td></tr>
+<tr><td class="subregion"><a href="utah-260801-free.shp.zip.md5">utah-260801-free.shp.zip.md5</a></td><td class="subright">2026-08-02 02:20</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-260801.osm.pbf">utah-260801.osm.pbf</a></td><td class="subright">2026-08-02 00:54</td><td class="subright">166765989</td></tr>
+<tr><td class="subregion"><a href="utah-260801.osm.pbf.md5">utah-260801.osm.pbf.md5</a></td><td class="subright">2026-08-02 00:54</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-260901-free.gpkg.zip">utah-260901-free.gpkg.zip</a></td><td class="subright">2026-09-05 19:28</td><td class="subright">332385801</td></tr>
+<tr><td class="subregion"><a href="utah-260901-free.shp.zip">utah-260901-free.shp.zip</a></td><td class="subright">2026-09-05 19:26</td><td class="subright">323251507</td></tr>
+<tr><td class="subregion"><a href="utah-260901-free.shp.zip.md5">utah-260901-free.shp.zip.md5</a></td><td class="subright">2026-09-05 19:26</td><td class="subright">59</td></tr>
+<tr><td class="subregion"><a href="utah-260901.osm.pbf">utah-260901.osm.pbf</a></td><td class="subright">2026-09-04 13:22</td><td class="subright">168016622</td></tr>
+<tr><td class="subregion"><a href="utah-260901.osm.pbf.md5">utah-260901.osm.pbf.md5</a></td><td class="subright">2026-09-04 13:22</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261001-free.gpkg.zip">utah-261001-free.gpkg.zip</a></td><td class="subright">2026-10-02 02:21</td><td class="subright">335370061</td></tr>
+<tr><td class="subregion"><a href="utah-261001-free.shp.zip">utah-261001-free.shp.zip</a></td><td class="subright">2026-10-02 02:34</td><td class="subright">326134655</td></tr>
+<tr><td class="subregion"><a href="utah-261001.osm.pbf">utah-261001.osm.pbf</a></td><td class="subright">2026-10-02 02:14</td><td class="subright">169524685</td></tr>
+<tr><td class="subregion"><a href="utah-261001.osm.pbf.md5">utah-261001.osm.pbf.md5</a></td><td class="subright">2026-10-02 02:14</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261012-free.gpkg.zip">utah-261012-free.gpkg.zip</a></td><td class="subright">2026-10-13 07:28</td><td class="subright">336435006</td></tr>
+<tr><td class="subregion"><a href="utah-261012-free.shp.zip">utah-261012-free.shp.zip</a></td><td class="subright">2026-10-13 07:27</td><td class="subright">327169320</td></tr>
+<tr><td class="subregion"><a href="utah-261012.osm.pbf">utah-261012.osm.pbf</a></td><td class="subright">2026-10-13 01:44</td><td class="subright">170056600</td></tr>
+<tr><td class="subregion"><a href="utah-261012.osm.pbf.md5">utah-261012.osm.pbf.md5</a></td><td class="subright">2026-10-13 01:44</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261013-free.gpkg.zip">utah-261013-free.gpkg.zip</a></td><td class="subright">2026-10-14 00:20</td><td class="subright">336479617</td></tr>
+<tr><td class="subregion"><a href="utah-261013-free.shp.zip">utah-261013-free.shp.zip</a></td><td class="subright">2026-10-14 00:28</td><td class="subright">327218587</td></tr>
+<tr><td class="subregion"><a href="utah-261013.osm.pbf">utah-261013.osm.pbf</a></td><td class="subright">2026-10-13 22:54</td><td class="subright">170077917</td></tr>
+<tr><td class="subregion"><a href="utah-261013.osm.pbf.md5">utah-261013.osm.pbf.md5</a></td><td class="subright">2026-10-13 22:54</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261014-free.gpkg.zip">utah-261014-free.gpkg.zip</a></td><td class="subright">2026-10-15 03:49</td><td class="subright">336525933</td></tr>
+<tr><td class="subregion"><a href="utah-261014-free.shp.zip">utah-261014-free.shp.zip</a></td><td class="subright">2026-10-15 04:08</td><td class="subright">327262953</td></tr>
+<tr><td class="subregion"><a href="utah-261014.osm.pbf">utah-261014.osm.pbf</a></td><td class="subright">2026-10-15 03:22</td><td class="subright">170097345</td></tr>
+<tr><td class="subregion"><a href="utah-261014.osm.pbf.md5">utah-261014.osm.pbf.md5</a></td><td class="subright">2026-10-15 03:22</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261015-free.gpkg.zip">utah-261015-free.gpkg.zip</a></td><td class="subright">2026-10-16 04:22</td><td class="subright">336758192</td></tr>
+<tr><td class="subregion"><a href="utah-261015-free.shp.zip">utah-261015-free.shp.zip</a></td><td class="subright">2026-10-16 04:27</td><td class="subright">327475616</td></tr>
+<tr><td class="subregion"><a href="utah-261015.osm.pbf">utah-261015.osm.pbf</a></td><td class="subright">2026-10-16 04:12</td><td class="subright">170189723</td></tr>
+<tr><td class="subregion"><a href="utah-261015.osm.pbf.md5">utah-261015.osm.pbf.md5</a></td><td class="subright">2026-10-16 04:12</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261016-free.gpkg.zip">utah-261016-free.gpkg.zip</a></td><td class="subright">2026-10-17 01:09</td><td class="subright">336896344</td></tr>
+<tr><td class="subregion"><a href="utah-261016-free.shp.zip">utah-261016-free.shp.zip</a></td><td class="subright">2026-10-17 01:10</td><td class="subright">327605635</td></tr>
+<tr><td class="subregion"><a href="utah-261016.osm.pbf">utah-261016.osm.pbf</a></td><td class="subright">2026-10-17 01:08</td><td class="subright">170253735</td></tr>
+<tr><td class="subregion"><a href="utah-261016.osm.pbf.md5">utah-261016.osm.pbf.md5</a></td><td class="subright">2026-10-17 01:08</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261017-free.gpkg.zip">utah-261017-free.gpkg.zip</a></td><td class="subright">2026-10-18 08:17</td><td class="subright">337042988</td></tr>
+<tr><td class="subregion"><a href="utah-261017-free.shp.zip">utah-261017-free.shp.zip</a></td><td class="subright">2026-10-18 07:00</td><td class="subright">327746524</td></tr>
+<tr><td class="subregion"><a href="utah-261017.osm.pbf">utah-261017.osm.pbf</a></td><td class="subright">2026-10-18 08:21</td><td class="subright">170317790</td></tr>
+<tr><td class="subregion"><a href="utah-261017.osm.pbf.md5">utah-261017.osm.pbf.md5</a></td><td class="subright">2026-10-18 08:21</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-261018-free.gpkg.zip">utah-261018-free.gpkg.zip</a></td><td class="subright">2026-10-19 08:41</td><td class="subright">337124795</td></tr>
+<tr><td class="subregion"><a href="utah-261018-free.shp.zip">utah-261018-free.shp.zip</a></td><td class="subright">2026-10-19 07:50</td><td class="subright">327831558</td></tr>
+<tr><td class="subregion"><a href="utah-261018.osm.pbf">utah-261018.osm.pbf</a></td><td class="subright">2026-10-18 23:10</td><td class="subright">170361341</td></tr>
+<tr><td class="subregion"><a href="utah-261018.osm.pbf.md5">utah-261018.osm.pbf.md5</a></td><td class="subright">2026-10-18 23:10</td><td class="subright">54</td></tr>
+<tr><td class="subregion"><a href="utah-updates">utah-updates</a></td><td class="subright">2026-10-18 23:12</td><td class="subright">4096</td></tr>
+<tr><td class="subregion"><a href="utah.kml">utah.kml</a></td><td class="subright">2026-10-18 23:07</td><td class="subright">1074</td></tr>
+<tr><td class="subregion"><a href="utah.poly">utah.poly</a></td><td class="subright">2026-10-18 23:07</td><td class="subright">943</td></tr>
+</table></div><h3>Sub Regions</h3><p>No sub regions are defined for this region.</p></div>
+<div id="download-right">
+   <div id="noscroll">
+   <div id="map"></div>
+
+   <div class="customized_shapes">
+<p>
+      <img alt="small flag of UK" src="/img/en.png">
+Not what you were looking for?
+Geofabrik is a consulting and software development firm based in Karlsruhe, Germany
+specializing in OpenStreetMap services. We're happy to help you with data
+preparation, processing, server setup and the like. <a href="http://www.geofabrik.de/data/shapefiles.html">Check out our web site</a>
+and contact us if we can be of service.
+
+      </p>
+   </div>
+   
+   <div class="customized_shapes">
+      <p>
+      <img alt="small flag of Germany" src="/img/de.png">
+      Nicht das Richtige dabei? 
+Die Geofabrik ist ein auf OpenStreetMap spezialisiertes Beratungs- und Softwareentwicklungsunternehmen in Karlsruhe.
+Gern helfen wir Ihnen bei der Datenaufbereitung, Datenkonvertierung, Serverinstallation und &auml;hnlichen Aufgaben.
+<a href="http://www.geofabrik.de/data/shapefiles.html">Besuchen Sie unsere Webseite</a> und sprechen Sie mit uns, wenn wir Ihnen 
+helfen k&ouml;nnen.
+      </p>
+   </div>
+   </div>
+</div>
+</div>
+<div id="download-copyright">
+Data processed by
+<a href="http://www.geofabrik.de/">Geofabrik GmbH</a>
+and created by 
+<a href="http://www.openstreetmap.org/">OpenStreetMap Contributors</a>
+|
+<a href="http://opendatacommons.org/licenses/odbl/">License: ODbL 1.0</a>
+|
+<a href="http://www.geofabrik.de/geofabrik/contact.html">Contact</a>
+|
+<a href="http://www.geofabrik.de/geofabrik/imprint.html">Legal Notice/Privacy Policy</a>

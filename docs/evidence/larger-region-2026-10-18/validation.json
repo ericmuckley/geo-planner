@@ -1,0 +1,469 @@
+{
+  "completedAtUtc": "2026-10-19T04:17:03.573438+00:00",
+  "graphIdentity": "07d204dba65950faccf3b328019b80fd5d66e5662b76d8200da07177adccc349",
+  "checks": {
+    "npm test": {
+      "exitCode": 0,
+      "tests": 20,
+      "passed": 20
+    },
+    "npm run test:routing": {
+      "exitCode": 0,
+      "tests": 189,
+      "passed": 180,
+      "existingSkips": 9
+    },
+    "npm run check": {
+      "exitCode": 0,
+      "existingWarnings": 1
+    },
+    "npm run typecheck": {
+      "exitCode": 0
+    },
+    "npm run build": {
+      "exitCode": 0
+    },
+    "npm run build:vercel": {
+      "exitCode": 0
+    }
+  },
+  "graphRelease": {
+    "bytes": 15100,
+    "sha256": "b0c895bfc942ebce0257312ba7aafa68f87641561ebd2f80c70a659c2477c6f6"
+  },
+  "recordedLiveAppCases": 20,
+  "apiBudgetsMinutes": [
+    60,
+    90,
+    120,
+    360,
+    720
+  ],
+  "browser": {
+    "invalidBudgetDisabled": true,
+    "staleResultCleared": true,
+    "graphIdentity": "07d204dba65950faccf3b328019b80fd5d66e5662b76d8200da07177adccc349",
+    "budgetsVerified": [
+      90,
+      120
+    ],
+    "newOriginQueries": [
+      {
+        "name": "Palm Springs",
+        "minutes": 60,
+        "roads": 444536,
+        "cutNodes": 42
+      },
+      {
+        "name": "Ensenada",
+        "minutes": 60,
+        "roads": 204409,
+        "cutNodes": 1
+      }
+    ],
+    "riversideSelectionVerified": true,
+    "default120": {
+      "roads": 3932692,
+      "cutNodes": 246,
+      "nativeSearchMs": 374.4,
+      "nativePipeMs": 417.5,
+      "geometryMs": 4971.1,
+      "workerMs": 5409.9,
+      "appMs": 5660.4,
+      "mapIdleMs": 265.7
+    },
+    "applicationConsoleErrors": 0,
+    "extensionConsoleErrors": 20
+  },
+  "rawResponses": [
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-diego-60.json",
+      "bytes": 1807594,
+      "sha256": "1b19d00bed54c21f7459c5232825516928c3e22a10c95e48c708af694337ed44",
+      "geometrySha256": "614ae50d2c929ccd7ac04e40b34503b7c4e5d6e3a4a36a82be339f58d8130101"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-diego-90.json",
+      "bytes": 1814674,
+      "sha256": "d35cc384855f41879219c08a920c7a8e556accd110f4fa107249644d47347ded",
+      "geometrySha256": "c1a7364ee71bd609cb988796ddf74e96d920f6b645de08c8240889c284cd924f"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-diego-120.json",
+      "bytes": 1809269,
+      "sha256": "6ba0b2fa6b7714b4c4a3d2cd009ef09299a57703ebca83de001b39cda38311f9",
+      "geometrySha256": "da562a49d952fc91e48f609784454a8ea3fe873ef408f837d24cd7025053fe3c"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-diego-360.json",
+      "bytes": 1815232,
+      "sha256": "f076f9bf716ddd3d53c301e78746f47f0c5089b9110b1cf9c5df4ee5891f8082",
+      "geometrySha256": "e2e9edf835a243f3c1e3b3a760c999907bf329e919a6f7b528d4e0428fd60846"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-diego-720.json",
+      "bytes": 1815235,
+      "sha256": "cfaec3184872bf6310c8f052823be2a3f7d361b9de4bac63ade36bfad92f5a89",
+      "geometrySha256": "e2e9edf835a243f3c1e3b3a760c999907bf329e919a6f7b528d4e0428fd60846"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/el-cajon-60.json",
+      "bytes": 1807758,
+      "sha256": "852f2344b1790e65e27adbc24ab218030f760d116a6aef0e3aa37393a641381f",
+      "geometrySha256": "f63ed9241e0f4b03b06d54007d8055379c5e9ef95d35acb9e0edb976bc3ae7bc"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/el-cajon-90.json",
+      "bytes": 1804426,
+      "sha256": "fc22acf8033b994540373c0edb033c0edfefd16c02eac0b4c1da409ccea19c6f",
+      "geometrySha256": "2d1e844263f6cdb609f95564ddd190106c4ba7335138bf9f7fd633acf650e2c0"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/el-cajon-120.json",
+      "bytes": 1806428,
+      "sha256": "536fc8f4c242b8d65c0463d0dd2a5caeefabf440c0aac651416723dbba6b1297",
+      "geometrySha256": "6690236fa51ca26b50a5194a8eef0fc68a24d142192f672fd1a20a32d2311a8d"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/tijuana-60.json",
+      "bytes": 1800446,
+      "sha256": "823d77fda9f6dcc2c9e3c7f61bce1775a6c330d84bcbe7f3e2da5268bacf8797",
+      "geometrySha256": "7dce42a07a6328a0b21c438bef6c6f08525c615f5949ec6a0f97b70758315de8"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/tijuana-90.json",
+      "bytes": 1801537,
+      "sha256": "2d9c5f292cf16d84004440a91afc43458829ce9633494f41e446965e2f1938cb",
+      "geometrySha256": "fa95204c18af749e3359b9c82fd6c89deed7adf68b6230c300970d6267c8fe95"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/tijuana-120.json",
+      "bytes": 1815338,
+      "sha256": "e50d47a5932545d0a8bf8f1d6963c9b4ced423b23af54944fdcfcdcc244e6cba",
+      "geometrySha256": "663798af9450b295b59741dfc1a3d7b7fafb213eed0c47f977361153fe5f2457"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-ysidro-60.json",
+      "bytes": 1799723,
+      "sha256": "d31f9ff4b3a975005eaf19e7d3000459de411fe69e5e6345ba43e194637bce0a",
+      "geometrySha256": "adeac21ee72de7a99391dad4554fe7a554798bf3de65b02e6b3e5d9847c4375e"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-ysidro-90.json",
+      "bytes": 1807492,
+      "sha256": "05571739909fa4a808f9084646857e320084639125bed5d002a1d50ef2a113bb",
+      "geometrySha256": "3b08b6f42c9fedd34331ff7f91294f16f856fb49bfb90ed3bc5b7763ebdbbb31"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-map-v1/san-ysidro-120.json",
+      "bytes": 1813441,
+      "sha256": "ff4dfbd64e54d00c369b853893752e8466e7fc3354bb6dce09e8532c7674d26e",
+      "geometrySha256": "c848cb542145ddea033522de7b4f3cde58457b6015d9b06a8e0aac477091bb2a"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/riverside-60.json",
+      "bytes": 1825152,
+      "sha256": "1a7036b3a3773c496519313fa8b4a82ba14ede97374057b9171735d81b519be0",
+      "geometrySha256": "94032cb191781ffcd7c750b5b608c99644dd6dc8bbb4976a0536f18e0dc6f378"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/riverside-120.json",
+      "bytes": 1814599,
+      "sha256": "3fc10049eabdad495419bc03bbd1260790302d0a25c8b5fab556400fc71a39a3",
+      "geometrySha256": "d5a2b0fe86a7b6b9f19ce47b97bd290286c5bb5f4faacee15cfcf22a752d0b41"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/palm-springs-60.json",
+      "bytes": 1808936,
+      "sha256": "d1619fe026ac9a09cbfb633bac98fe692c66e7c1c1cd4ddb6163778d19b95192",
+      "geometrySha256": "121811fb7c806e6298245738d66b8965441d8942b4a93850783e43a2c1febcc9"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/palm-springs-120.json",
+      "bytes": 1818529,
+      "sha256": "5238918c8d77c9ee5f8fb29744e49c7d1d93cec5714437357e95a6605f7e6c13",
+      "geometrySha256": "8b9d86cb2d13ce6e88c837bd52b197ed322698b31bf8866f225167a07abdb61d"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/ensenada-60.json",
+      "bytes": 1787555,
+      "sha256": "2311204cef7e2f3f54228b94f5923812e3fe78eacce5089026192ca4d43f45c7",
+      "geometrySha256": "2af3aed0a2a6d397569fb7147cd04b9d8e2f3582d1afce586462c49b28815d8c"
+    },
+    {
+      "path": "data/experiment-pilot/expanded-areas-v1/ensenada-120.json",
+      "bytes": 1817398,
+      "sha256": "2cc04d3abe3c29764ab7ec516a53c28ce02326363906cbc40638d49f70e50075",
+      "geometrySha256": "af8170bb98be80834a2db9a2642d84b7f93039ead9d47d4c994172b0b9fe3fe9"
+    }
+  ],
+  "preservation": {
+    "initialFilesChecked": 208,
+    "changedPreexistingFiles": [
+      "routing/experiment.mjs",
+      "routing/experiment.py",
+      "src/routes/experiment.tsx"
+    ],
+    "frozenImportSearchProducersAndLockfileUnchanged": true,
+    "generatedRouteTreeUnchanged": true,
+    "environmentFileReadByAgent": false,
+    "environmentFileEdited": false,
+    "stagedFiles": [],
+    "ignoredPaths": [
+      ".env.local",
+      "data/compact-pilot/experiment-region-v1/graph.json"
+    ]
+  },
+  "localDocumentationLinksChecked": 445,
+  "diskFreeGiB": 202.55228424072266,
+  "publicRoutingApiCalls": 0,
+  "coverageVerified": false,
+  "limitations": [
+    "Every selected two-hour case still reaches a potential data edge.",
+    "New-town costs are API/browser smoke checks; their snaps match full scans, but new full fields are not separately qualified.",
+    "Static model and border access/waits remain uncertain; sampled roads are not filled contours.",
+    "Local mode is disabled on Vercel; no cloud deployment or national/12-hour geographic completeness."
+  ],
+  "evidenceSha256": {
+    "README.md": {
+      "bytes": 2086,
+      "sha256": "b78534c67608336ceb34ec0766c8968048473b7921f078fd5ebc4560aefe06af"
+    },
+    "adapter-tests.log": {
+      "bytes": 2088,
+      "sha256": "7494f0c7871b3622d1072f624c38588783e9b5855e5701bea30cc34863f7daf1"
+    },
+    "app-query-samples.json": {
+      "bytes": 31413,
+      "sha256": "0093b4579d018e7e801efe2da8b1e90b2ad3fa338cb1b5bbdd83310c401a100a"
+    },
+    "app-verification.log": {
+      "bytes": 926,
+      "sha256": "124675b6bd1b7bed1634bd6c64e98eb4b201c6719053be550dfd1732b3af4475"
+    },
+    "browser-120.png": {
+      "bytes": 269112,
+      "sha256": "f9beb7caa77faf415853c9e8c9518194c600dd9c0466af5c2e1860e755093a3c"
+    },
+    "browser-120.txt": {
+      "bytes": 4134,
+      "sha256": "8bd7832d8629878e581c5e49a1fa23e934ad7b469051f8a84e4d54fb095fb572"
+    },
+    "browser-90.png": {
+      "bytes": 233111,
+      "sha256": "eea20b8400dbc0eaf00349875cb015aff483f027f1a35b9e20544ae3eb88ff17"
+    },
+    "browser-90.txt": {
+      "bytes": 3414,
+      "sha256": "9c2b9d08cfcd11d541297bb1e12dffc4ecf43e8423db580b2e8ad2226f1315a5"
+    },
+    "browser-checks.json": {
+      "bytes": 754,
+      "sha256": "4e6f11b73538dc5a2e73034dd34b832b131ec047b404de3db5ad915fc761a906"
+    },
+    "browser-console.json": {
+      "bytes": 12142,
+      "sha256": "7bbf28837f7a0a97ba334b62bf5f86752b3ab23aaf9dc0f5c49296291c24a80b"
+    },
+    "browser-ensenada.png": {
+      "bytes": 225509,
+      "sha256": "9d3a9af56aa241455ed1e61d7010e5dfd32ad6e8bb73c4c50a8a6c5fe1439386"
+    },
+    "browser-ensenada.txt": {
+      "bytes": 3522,
+      "sha256": "a7665573d36d4ec0400b0dacd1df0486490639df72488e753b7a2231d8576dff"
+    },
+    "browser-final.png": {
+      "bytes": 247109,
+      "sha256": "4db298c696ddedfe151aebb58e7dcb1c18b8b18c472f95b61d45811bcfe310d1"
+    },
+    "browser-final.txt": {
+      "bytes": 3536,
+      "sha256": "2a7917291b45c262d7d14c6a919a34a0a74227975578569559dd12d765fe61ff"
+    },
+    "browser-invalid-budget.txt": {
+      "bytes": 2114,
+      "sha256": "e79a297964fa965cab62795a77d7e17b8bf429275c8551d52ea1224d6b11c08b"
+    },
+    "browser-palm-springs.png": {
+      "bytes": 226537,
+      "sha256": "b238847cb7558463a98bccb6e99fb59511e9cd48b3aad59754dbd96893795444"
+    },
+    "browser-palm-springs.txt": {
+      "bytes": 3527,
+      "sha256": "ce21643b67dbd609cfb21134afd5510a7ce188ee46214c7822905264aefed446"
+    },
+    "browser-riverside-selection.txt": {
+      "bytes": 2044,
+      "sha256": "c7c05c0c27909e489e390543d34b9c34da6638550b832d27b8beb60f883c751b"
+    },
+    "build-app.log": {
+      "bytes": 20516,
+      "sha256": "5b2e997aea722c8d1cc56f5119cbafe8645ead14dc26579c4015efb0cdca717c"
+    },
+    "build-report.json": {
+      "bytes": 146271,
+      "sha256": "475c8f56e8f048ae104b1fb578d69cf11490c056e038b175397134b0a3b2d7d1"
+    },
+    "build-vercel.log": {
+      "bytes": 21302,
+      "sha256": "e684d8db55464804c1c7ab04eebd3aef67d5d04a338b69b979401da8058adc9c"
+    },
+    "build.log": {
+      "bytes": 9341,
+      "sha256": "896db3228016bf67a488bf6d4608355478d7bbe817bffc9cd71d8242b28e6858"
+    },
+    "calibration-report.json": {
+      "bytes": 20993,
+      "sha256": "a66105bfba850ce7547a4604b5f711fbed8bce973adeb9f61f09671cd6273c62"
+    },
+    "calibration.log": {
+      "bytes": 1238,
+      "sha256": "24dd655f5ef99fa2f66a3b8ca286fb49b6b0d1befc75aa19faa99d4846630254"
+    },
+    "check-final.log": {
+      "bytes": 537,
+      "sha256": "e003d64d7a7ef3a8377284c10cbab08e60a45fb60df2cf0c971550f6dae4b467"
+    },
+    "check.log": {
+      "bytes": 536,
+      "sha256": "e0c188f63702ad3233674259cf3d1c027868ef2c152af3ab63fa940f2f2e74d0"
+    },
+    "control-point-comparison.json": {
+      "bytes": 1117,
+      "sha256": "a06b7fb8a55fe0d00b95ced047efc808f6148dc84a18aa3e3c6e23f958d68b37"
+    },
+    "coverage-summary.json": {
+      "bytes": 3124,
+      "sha256": "40ee7d140a3258a270d4d41527087838719f3b41bef48f6566bdd531e89b73d8"
+    },
+    "cuts-report.json": {
+      "bytes": 25123,
+      "sha256": "fe9f7698561a4049f017a7cb4659eb58dfc6d8db73166330a2db4e39d92bc703"
+    },
+    "cuts.log": {
+      "bytes": 11411,
+      "sha256": "d446e77e6dfa8f254bc565bac2ef06b0c6585d5ee84025722df57d5a8dc4e5d4"
+    },
+    "expanded-app.log": {
+      "bytes": 336,
+      "sha256": "c45ff017319f5e91b6145e321e231e1871682b278a9a87ff224e6671dd310bbf"
+    },
+    "expanded-smoke.mjs": {
+      "bytes": 2280,
+      "sha256": "1405b73ce17d26c185fad2b3f7f845b25834559e38b7b04e34b5e2c1ff6969ab"
+    },
+    "expanded-snaps.json": {
+      "bytes": 2824,
+      "sha256": "964ca0503378a1fd3ed2147a34d67839b3eba2bf4506ea1e4f62a714a7285622"
+    },
+    "expanded-snaps.py": {
+      "bytes": 2159,
+      "sha256": "b0e6f023e3d8ec28998cb7cd7f71b656548d7eca3c68983838b5128be60a8fd5"
+    },
+    "finalize-evidence.py": {
+      "bytes": 5684,
+      "sha256": "f4d05303acb97d3bce3866bcab1727a3af20b25206705492b84fc5a3cb0348dc"
+    },
+    "launcher-smoke.json": {
+      "bytes": 392,
+      "sha256": "55daea37e1810f0b879cebf565030781a10cd6bb591ec9aa434855a290d2291e"
+    },
+    "launcher-wrong-graph.log": {
+      "bytes": 85,
+      "sha256": "684bad98294f873ba30ed8f299875daae58a46ed4f97051fed4bbbe27f015ad2"
+    },
+    "native-verification.json": {
+      "bytes": 154623,
+      "sha256": "7b09ce4c88c79f17cf384f15e08190142d58f80eeb239e99b9947b2190236243"
+    },
+    "native.log": {
+      "bytes": 292,
+      "sha256": "c696610d94e962ae01bad3cf30507bfe63a78d4df0df211cecc72517e6cfcdb5"
+    },
+    "new-area-query-samples.json": {
+      "bytes": 13800,
+      "sha256": "ddc0cdab527e68471c09720a6079f0a3daef24fee77db8b51d30631c092997f0"
+    },
+    "preserved-sha256.json": {
+      "bytes": 20762,
+      "sha256": "a79c77ba537fa2043714d76d6da1c78845334a276a577b71f0648e86cca7a275"
+    },
+    "qualification-admission.json": {
+      "bytes": 383,
+      "sha256": "e74ec2f1bb6e7fb0ece95cb781c5142f93f8b959ba0fdc24476b377f0c609c9a"
+    },
+    "qualification-report.json": {
+      "bytes": 11887,
+      "sha256": "6eea113713fe022525de1f3793a34fef3d428d2fc49130190162521c632afd4e"
+    },
+    "qualification.log": {
+      "bytes": 1186,
+      "sha256": "9f92b8f730d2b8973ad9263877e1477fa372a9336742c5a326b94e26f0e1e678"
+    },
+    "ranged-calibration.log": {
+      "bytes": 1117,
+      "sha256": "ea82a73c1478592cceb039a0d1b38c25aafc850284fd54646d8755cd9c6b0104"
+    },
+    "rebuild-report.json": {
+      "bytes": 146364,
+      "sha256": "fb026ed7443c043732ae6237306ff3cf9d114eee98d1eb0509e1e9705d22feac"
+    },
+    "rebuild.log": {
+      "bytes": 9343,
+      "sha256": "f6f35951536f012863a1599889e68e25573827c2d407958ee6815140e1e20e81"
+    },
+    "recipe-sha256.json": {
+      "bytes": 2099,
+      "sha256": "3ece74172b21a4bdf0d3439d8db30dd85e7a5dee4088cee90961dbf814028a09"
+    },
+    "release.json": {
+      "bytes": 15100,
+      "sha256": "b0c895bfc942ebce0257312ba7aafa68f87641561ebd2f80c70a659c2477c6f6"
+    },
+    "release.log": {
+      "bytes": 15100,
+      "sha256": "b0c895bfc942ebce0257312ba7aafa68f87641561ebd2f80c70a659c2477c6f6"
+    },
+    "routing-tests-final.log": {
+      "bytes": 401,
+      "sha256": "bc69b2675dbd99aa52fb8faed1a5527e9ceb481db56817c3e10dd2e07435c398"
+    },
+    "service-memory.json": {
+      "bytes": 552,
+      "sha256": "a6edc1e6741579c017e047048ae1dbb18e10065e2ffc0866b16098026b366ccf"
+    },
+    "source-provenance.json": {
+      "bytes": 2846,
+      "sha256": "d118efd3b9f320e0b6a88b65dba0de78c297b94e22a55bdec2f42e3802fbe717"
+    },
+    "summary.json": {
+      "bytes": 157721,
+      "sha256": "8f0134f0c8b06fdc04e221411dca796a78e06b12f34c80df79d13d533adb4379"
+    },
+    "superseded-calibration.json": {
+      "bytes": 418,
+      "sha256": "38fd7ab925aaf00d253ea7a95482c7391fd42589dfaf01e237a6c80969b65e88"
+    },
+    "typecheck.log": {
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    "vercel-disabled-final.json": {
+      "bytes": 648,
+      "sha256": "a7d09201d2c07472ec9a1cb925ab774e946fcf0972c43eb297560152610a8e01"
+    },
+    "vercel-disabled.json": {
+      "bytes": 641,
+      "sha256": "e9121241f1e8caad090b57700916461c2bf8b24872c83f0fe1607f3a402f877e"
+    },
+    "verify-vercel.mjs": {
+      "bytes": 1571,
+      "sha256": "cd7e0f86748fdca78d1607b6fcacdc9c07ae9b02e699dc87c913bc6f7da94e9a"
+    },
+    "worker.log": {
+      "bytes": 2853,
+      "sha256": "19012fbf17b22f02752d3cd1283a56c0ba7d7e8958c6ac180c71384bcaf53786"
+    }
+  }
+}

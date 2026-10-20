@@ -1,6 +1,6 @@
 # Regional capacity evidence — October 16, 2026
 
-Read [findings, commands and limitations](../../regional-routing-capacity.md).
+Read [findings, commands and limitations](../../archive/regional-routing-capacity.md).
 
 - `build-summary.json`, `build-manifest.json`, `build-preparation.json`: completed corridor qualification, identities, source/artifact hashes, source snaps, budget/cut cases, partial targets and sampled route state paths.
 - `build-car-filter.json`, `build-extract-resources.txt`, `build-car-filter-resources.txt`: exact source-filter commands, checksums and child resource measurements.

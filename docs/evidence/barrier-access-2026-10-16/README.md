@@ -1,6 +1,6 @@
 # Barrier-access evidence — October 16, 2026
 
-See [model, exact commands, measurements and limits](../../barrier-access-model.md). These files contain no provider credentials.
+See [model, exact commands, measurements and limits](../../archive/barrier-access-model.md). These files contain no provider credentials.
 
 - `build-manifest.json`: source/recipe/image/profile identities and artifact hashes.
 - `build-summary.json`: original qualification, snaps, budgets, source examples and complete city route-state witnesses.

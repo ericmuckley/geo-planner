@@ -1,6 +1,6 @@
 # Targeted source-evidence records — October 18, 2026
 
-Read [the findings and commands](../../routing-source-evidence.md) or [the plain-language progress summary](../../progress.md).
+Read [the findings and commands](../../archive/routing-source-evidence.md) or [the plain-language progress summary](../../progress.md).
 
 ```sh
 python3 -B docs/evidence/routing-source-evidence-2026-10-18/analyze.py

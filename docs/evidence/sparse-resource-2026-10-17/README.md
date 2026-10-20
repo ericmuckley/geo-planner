@@ -1,6 +1,6 @@
 # Sparse preparation/resource evidence
 
-October 17, 2026. Read [the findings and exact reproduction commands](../../sparse-routing-resources.md). This evidence admits a separate capped candidate import; **no new graph or coverage is qualified**.
+October 17, 2026. Read [the findings and exact reproduction commands](../../archive/sparse-routing-resources.md). This evidence admits a separate capped candidate import; **no new graph or coverage is qualified**.
 
 `*-report.json` and `*-identity.json` copy the five completed jobs: unchanged import profile, advised parity import, sparse calibration, sparse candidate and advised sparse candidate. Matching logs preserve output. `tools-image.json` binds the separate image/base and locked wheel/Dockerfile hashes. Full generated files and script snapshots remain ignored under `data/resource-pilot/`, `data/sparse-pilot/` and `data/tools/`.
 

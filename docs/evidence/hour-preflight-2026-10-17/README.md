@@ -1,6 +1,6 @@
 # Lean qualification and one-hour preflight evidence
 
-Read [findings, provenance, commands and limitations](../../hour-coverage-preflight.md).
+Read [findings, provenance, commands and limitations](../../archive/hour-coverage-preflight.md).
 
 The three report/identity pairs describe the virtual-sink qualification, current-region preparation calibration and new east/south candidate census. Generated graph/field/XML/SQLite products and recipe snapshots remain ignored under `data/`. This evidence does not claim a new regional graph or newly complete coverage.
 

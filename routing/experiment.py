@@ -13,7 +13,7 @@ import time
 import uuid
 
 from anchors import file_hash, load_json
-from compact_load import load_graph
+from scoped_load import load_graph
 from import_roads import distance_m
 from maneuver_graph import source_seeds
 from native_support import NativeClient, UINT64_MAX
@@ -177,8 +177,10 @@ class Experiment:
         self.client = NativeClient(directory / "native_search", directory / "graph.csr", identity)
 
     def config(self):
+        model = self.manifest["profile"]["model"]
         return {"ready": True, "graphIdentity": self.graph.identity, "bounds": self.manifest["profile"]["bbox"], "maxMinutes": 720,
-                "model": self.manifest["profile"]["model"]["id"], "sourceDate": "2026-10-14T20:21:12Z", "publicApiCalls": 0}
+                "model": " / ".join(model[key] for key in ("id", "restrictionGeometryPolicy") if key in model),
+                "sourceDate": "2026-10-14T20:21:12Z", "publicApiCalls": 0}
 
     def query(self, body):
         started = time.perf_counter()
@@ -207,7 +209,7 @@ class Experiment:
                                     costMs=cost if hit else None, sides=row["outsideSides"], blockedByModel=row["blockedByModel"]))
         warnings = ["Experimental static driving model; no traffic, border queues or current crossing-eligibility verification.",
                     "Road geometry is sampled for display. Search and boundary counts use the full graph. This is not a filled isochrone.",
-                    "Source coverage and all-origin completeness remain unverified, including eastern/southern source gaps."]
+                    "Source coverage and all-origin completeness remain unverified beyond this regional dataset."]
         if reached: warnings.insert(0, "INCOMPLETE: reachable roads hit the dataset boundary. Missing roads can change routes and travel times.")
         return {"id": str(uuid.uuid4()), "query": body, "geometry": {"type": "FeatureCollection", "features": features},
                 "metadata": {**self.config(), "coverageVerified": False, "truncated": reached > 0, "reachedCutNodes": reached,
@@ -255,8 +257,8 @@ def serve(experiment, port):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--graph-run", default="hour-v3")
-    parser.add_argument("--cuts-run", default="hour-v3-cuts")
+    parser.add_argument("--graph-run", default="two-hour-region-v2")
+    parser.add_argument("--cuts-run", default="two-hour-region-v2-cuts")
     parser.add_argument("--port", type=int, default=8787)
     args = parser.parse_args()
     for name in (args.graph_run, args.cuts_run):

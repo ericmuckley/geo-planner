@@ -1,0 +1,31 @@
+{
+  "allocatedDiskBytes": {
+    "compact-pilot/two-hour-region-v2": 4399759360,
+    "compact-pilot/two-hour-region-v2-cuts": 2768896,
+    "compact-pilot/two-hour-region-v2-rebuild": 3900489728,
+    "coverage-pilot/six-hour-cached-v1": 6656454656,
+    "coverage-pilot/two-hour-region-v2": 2766790656,
+    "source-pilot/six-hour-cached-v1": 1644986368,
+    "source-pilot/two-hour-parent-v2": 991039488
+  },
+  "dockerVisibleCpuCount": 10,
+  "dockerVmMemoryBytes": 8218034176,
+  "hostFreeDiskBytes": 188363239424,
+  "hostPhysicalMemoryBytes": 17179869184,
+  "observedAt": "2026-10-19T21:58:54.230428+00:00",
+  "partialSourceArtifactDiskForecast": {
+    "fitsCurrentlyFreeDisk": true,
+    "scaledBuildQualificationNativeRebuildCutOutputsBytes": {
+      "compact-pilot/two-hour-region-v2": 12403165250,
+      "compact-pilot/two-hour-region-v2-cuts": 7805672,
+      "compact-pilot/two-hour-region-v2-rebuild": 10995696513
+    },
+    "scope": "Sequential retained outputs are summed for disk, unlike maximum-phase RAM. Uses the same census growth ratio on complete baseline graph/qualification/native, rebuild and cut directories plus measured new merge/preparation. Existing raw caches/tool images and all historical data remain in place and are excluded from incremental additions. This is a partial-source heuristic, not a reservation/bound for missing-source full six-hour coverage or arbitrary failed retries.",
+    "sourceAndPreparationMeasuredBytes": 8301441024,
+    "with25PercentMarginBytes": 39635135574
+  },
+  "phaseCpuLimit": 2,
+  "scope": "Physical host memory and Docker VM capacity are distinct from the per-container 4 GiB/no-swap cap. Host/VM paging and full missing-region demand remain unmeasured; source-merge whole-phase memory is included separately and is below the forecast maximum.",
+  "sourceMergeMeasuredPeakBytes": 2001231872,
+  "sourceMergeWith25PercentMarginBytes": 2501539840
+}

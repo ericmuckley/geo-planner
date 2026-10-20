@@ -1,6 +1,6 @@
 # US routing: start with a free external service
 
-Decision, October 16, 2026: focus on the US, keep one fullstack TanStack Start app on Vercel, and use a free external routing service first. Revisit self-hosting when usage limits or payment requirements become a problem. Worldwide expansion is deferred. The original 10–12-hour driving requirement is still unmet; the user now wants to [brainstorm building that capability ourselves](long-range-routing-brainstorm.md) before Vercel rollout. This free endpoint is the short-range baseline.
+Decision, October 16, 2026: focus on the US, keep one fullstack TanStack Start app on Vercel, and use a free external routing service first. Revisit self-hosting when usage limits or payment requirements become a problem. Worldwide expansion is deferred. The original 10–12-hour driving requirement is still unmet; the user now wants to [brainstorm building that capability ourselves](archive/long-range-routing-brainstorm.md) before Vercel rollout. This free endpoint is the short-range baseline.
 
 **Selected integration: openrouteservice's free Standard plan.** Its current account page lists 500 isochrone requests/day and 20/minute. Hosted driving contours stop at **60 minutes**, so the default query fits; 120-minute and 10–12-hour hosted driving queries do not. The provider maintains its road graph; this app does not need to ship or build a US graph. [Current plans](https://account.heigit.org/info/plans), [range restrictions](https://openrouteservice.org/restrictions/).
 
@@ -37,7 +37,7 @@ The US is our product focus, not a polygon filter: cross-border travel may appea
 
 Required attribution and the result license are shown with hosted results and retained in exported metadata: © openrouteservice by HeiGIT | Data from OpenStreetMap; CC-BY-SA 4.0. The provider prohibits transmitting personal data; current public-location smoke queries send coordinates without account/user identifiers. Review the intended use before sending personal locations. [Provider terms](https://account.heigit.org/info/tos).
 
-**Status:** the user configured the key, and all five US smoke queries succeeded through the real provider. The default 60-minute San Diego contour also rendered in the browser with attribution and reported provenance. See [measured hosted verification](hosted-routing-verification.md). Actual Vercel cloud deployment and independent routing correctness remain unverified. To repeat the five-query smoke run with the configured app:
+**Status:** the user configured the key, and all five US smoke queries succeeded through the real provider. The default 60-minute San Diego contour also rendered in the browser with attribution and reported provenance. See [measured hosted verification](archive/hosted-routing-verification.md). Actual Vercel cloud deployment and independent routing correctness remain unverified. To repeat the five-query smoke run with the configured app:
 
 ```bash
 npm run routing:verify:hosted

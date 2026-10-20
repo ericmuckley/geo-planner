@@ -1,6 +1,6 @@
 # Two-hour preflight evidence
 
-Read [candidate planning, source/tool pins, reproduction commands and limitations](../../two-hour-coverage-preflight.md).
+Read [candidate planning, source/tool pins, reproduction commands and limitations](../../archive/two-hour-coverage-preflight.md).
 
 **Admission: HOLD.** Exact current XML/census and all six fixtures pass; candidate bounds are **9.73–10.12 million road states**. Preparation reaches **4 GiB / 3,750 limit events**, with zero OOM/swap. The **20.64 GiB** forecast includes 25% margin and is not measured graph/query memory. South/east envelope clipping is explicit. No larger graph is built.
 

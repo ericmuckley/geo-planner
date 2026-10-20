@@ -1,6 +1,6 @@
 # Base road-ID storage evidence — October 18, 2026
 
-Read [the findings and commands](../../routing-base-id-storage.md) or [the short progress summary](../../progress.md).
+Read [the findings and commands](../../archive/routing-base-id-storage.md) or [the short progress summary](../../progress.md).
 
 ```sh
 python3 -B docs/evidence/routing-base-ids-2026-10-18/analyze.py

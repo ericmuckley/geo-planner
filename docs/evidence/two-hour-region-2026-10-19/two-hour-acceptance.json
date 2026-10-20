@@ -1,0 +1,142 @@
+{
+  "graphIdentity": "52b34545379adf83ad09175e7d29b5c445b7cf4193fee0f9b5d10afe0904fda1",
+  "selectedTwoHourBoundaryCheckPassed": true,
+  "releaseSha256": "98d4afb845124a07687ce3672a7694dd79d4a3b9c44519dc8b0d5c950f2f3cf2",
+  "previousSummarySha256": "8f0134f0c8b06fdc04e221411dca796a78e06b12f34c80df79d13d533adb4379",
+  "preparationReportSha256": "6ec9b4395302042646cd4c3c200fa2e5876280773fdd547cab22c997445d0e74",
+  "sourceReportSha256": "bc0e1449b2973590a50a89693b35312a02309830be35827727dd5687729312a5",
+  "policyCalibrationReportSha256": "5c64d63931af52700f55b99ba5f0f66b4f1a01cb83114793283f52c805eb400d",
+  "additionalResources": {
+    "sourceMerge": {
+      "peakBytes": 1277341696,
+      "with25PercentMarginBytes": 1596677120,
+      "pressureEvents": 0,
+      "swapBytes": 0
+    },
+    "sourcePreparation": {
+      "peakBytes": 2563608576,
+      "with25PercentMarginBytes": 3204510720,
+      "pressureEvents": 0,
+      "swapBytes": 0
+    }
+  },
+  "origins": [
+    {
+      "origin": "san-diego",
+      "firstCutExitMs": 7684582,
+      "reachedAt120Minutes": 0
+    },
+    {
+      "origin": "el-cajon",
+      "firstCutExitMs": 7845685,
+      "reachedAt120Minutes": 0
+    },
+    {
+      "origin": "tijuana",
+      "firstCutExitMs": 7847556,
+      "reachedAt120Minutes": 0
+    },
+    {
+      "origin": "san-ysidro",
+      "firstCutExitMs": 8118925,
+      "reachedAt120Minutes": 0
+    },
+    {
+      "origin": "port-incoming",
+      "firstCutExitMs": 8120411,
+      "reachedAt120Minutes": 0
+    }
+  ],
+  "cityRouteComparisons": [
+    {
+      "origin": "san-diego",
+      "destination": "el-cajon",
+      "previousCostMs": 1119008,
+      "costMs": 1119008,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-diego",
+      "destination": "tijuana",
+      "previousCostMs": 1353245,
+      "costMs": 1353245,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-diego",
+      "destination": "san-ysidro",
+      "previousCostMs": 1057803,
+      "costMs": 1057803,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-diego",
+      "previousCostMs": 1173443,
+      "costMs": 1173443,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "tijuana",
+      "previousCostMs": 1988583,
+      "costMs": 1988583,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "el-cajon",
+      "destination": "san-ysidro",
+      "previousCostMs": 1693141,
+      "costMs": 1693141,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-diego",
+      "previousCostMs": 1421952,
+      "costMs": 1421952,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "el-cajon",
+      "previousCostMs": 1867086,
+      "costMs": 1867086,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "tijuana",
+      "destination": "san-ysidro",
+      "previousCostMs": 484661,
+      "costMs": 484661,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "san-diego",
+      "previousCostMs": 1178375,
+      "costMs": 1178375,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "el-cajon",
+      "previousCostMs": 1527910,
+      "costMs": 1527910,
+      "roadIdsIdentical": true
+    },
+    {
+      "origin": "san-ysidro",
+      "destination": "tijuana",
+      "previousCostMs": 466546,
+      "costMs": 466546,
+      "roadIdsIdentical": true
+    }
+  ],
+  "newlyCoveredControlPoints": [],
+  "preservedBarrierDecisions": 62797,
+  "workerSha256": "76e1cf272eb408b213879fd9f564711c6ce72766fe4590d90a761a2843155e72",
+  "publicApiCalls": 0,
+  "coverageVerified": false,
+  "scope": "No reached potential rectangular cuts at 120 minutes for these five qualified static-model sources. Does not prove source completeness, every origin, real eligibility, traffic ETAs, national or cloud coverage. App/browser verification is separate."
+}

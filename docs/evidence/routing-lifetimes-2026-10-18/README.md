@@ -1,6 +1,6 @@
 # Routing lifetime evidence — October 18, 2026
 
-Read [the findings and exact commands](../../routing-preparation-lifetimes.md) first. This experiment changes preprocessing memory ownership on frozen cached inputs. It spends no provider quota and builds no larger graph.
+Read [the findings and exact commands](../../archive/routing-preparation-lifetimes.md) first. This experiment changes preprocessing memory ownership on frozen cached inputs. It spends no provider quota and builds no larger graph.
 
 Run the saved comparison from the repository root:
 

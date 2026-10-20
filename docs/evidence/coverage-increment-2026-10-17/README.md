@@ -1,6 +1,6 @@
 # Coverage increment evidence
 
-October 17, 2026. See [source, model, exact commands and limitations](../../regional-coverage-increment.md).
+October 17, 2026. See [source, model, exact commands and limitations](../../archive/regional-coverage-increment.md).
 
 The copied build/rebuild manifests and reports bind the new regional graph to the exact admitted source and code. Qualification adds a separate manifest, five fresh independent oracle fields, bounded checks, twelve city directions and both partial destinations. The unchanged native verifier binds its report to that final manifest. Cut evidence inventories every endpoint/history state and preserves original source boundary links.
 

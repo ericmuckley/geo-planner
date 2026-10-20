@@ -1,0 +1,77 @@
+- main:
+  - link "Main workspace":
+    - /url: /
+    - text: Main workspace
+  - paragraph: Geo Planner / Offline experiment
+  - heading "Explore beyond 60 minutes" [level=1]
+  - paragraph: Our local road router · no provider requests · 1–720 minutes
+  - generic: Local router connected
+  - paragraph:
+    - text: Experimental regional coverage
+  - paragraph: Routing uses a downloaded region of Southern California and northern Baja. The basemap extends beyond our routing data. Longer budgets can reach missing roads; red markers show those potential data edges. Roads are sampled for display; shaded-area isochrones are not generated.
+  - paragraph: "Loaded bounds: 31.6°–34° latitude, -118°–-115.5° longitude. The dashed boundary appears with each result."
+  - complementary:
+    - heading "Driving experiment" [level=2]
+    - group "Example origins in the loaded region":
+      - generic: Example origins in the loaded region
+      - button "San Diego"
+      - button "Riverside"
+      - button "Palm Springs"
+      - button "Ensenada"
+    - text: Latitude
+    - textbox "Latitude": "32.7157"
+    - text: Longitude
+    - textbox "Longitude": "-117.1611"
+    - text: Minutes
+    - spinbutton "Minutes": "90"
+    - button "60m"
+    - button "90m" [pressed]
+    - button "120m"
+    - button "6h"
+    - button "12h"
+    - button "Compute reachable roads":
+      - text: Compute reachable roads
+    - region "Experiment results":
+      - heading "90-minute result" [level=2]
+      - paragraph: No audited boundary reached; coverage unverified
+      - term: Reached data-edge nodes
+      - definition: 0 / 1083
+      - term: Directions reached
+      - definition: "north: 0 · east: 0 · south: 0 · west: 0"
+      - term: First reached data edge
+      - definition: None within this budget
+      - term: Reachable directed roads
+      - definition: 2,787,588
+      - term: Displayed road segments (sample)
+      - definition: 29,977 · every 93th reachable road
+      - term: Origin snap distance
+      - definition: 0.5 m
+      - checkbox "Show experimental layers" [checked]
+      - text: Show experimental layers
+      - button "Export result":
+        - text: Export result
+      - generic "Measurements and data"
+      - list:
+        - listitem: Experimental static driving model; no traffic, border queues or current crossing-eligibility verification.
+        - listitem: Road geometry is sampled for display. Search and boundary counts use the full graph. This is not a filled isochrone.
+        - listitem: Source coverage and all-origin completeness remain unverified, including eastern/southern source gaps.
+  - region "Reachability map. Click to select an origin, or use the coordinate fields."
+  - img "Map marker":
+  - button "Zoom in"
+  - button "Zoom out"
+  - generic: 20 mi
+  - generic "Toggle attribution"
+  - link "MapLibre":
+    - /url: https://maplibre.org/
+  - text: "|"
+  - link "OpenFreeMap":
+    - /url: https://openfreemap.org
+  - link "© OpenMapTiles":
+    - /url: https://www.openmaptiles.org/
+  - text: Data from
+  - link "OpenStreetMap":
+    - /url: https://www.openstreetmap.org/copyright
+  - paragraph: Click the map to set your origin
+  - paragraph: OpenFreeMap basemap · online
+  - paragraph: "Teal: sampled reachable roads · red: reached data edges · gray: other audited edges · dashed: dataset bounds · orange: snapped origin"
+- button "Open TanStack Devtools":

@@ -1,0 +1,14 @@
+validated: 0.70 s; cgroup peak 36184064; anon 15454208; file 442368; swap max/peak 0/0
+arizonaHeader: 0.71 s; cgroup peak 36184064; anon 15454208; file 430080; swap max/peak 0/0
+parentHeader: 0.71 s; cgroup peak 36184064; anon 15454208; file 413696; swap max/peak 0/0
+Traceback (most recent call last):
+  File "/recipe/two_hour_source.py", line 70, in <module>
+    run(parser.parse_args())
+  File "/recipe/two_hour_source.py", line 51, in run
+    commands["merge"] = command(["osmium", "merge", "--simplify", str(parent), str(arizona), "-o", str(destination)], output, "merge", monitor)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/staged_prepare.py", line 12, in command
+    subprocess.run(["/usr/bin/time", "-v", "-o", str(output / f"{stage}-resources.txt"), *args], stdout=log, stderr=subprocess.STDOUT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/time', '-v', '-o', '/output/merge-resources.txt', 'osmium', 'merge', '--simplify', '/data/region.osm.pbf', '/sources/arizona-261014.osm.pbf', '-o', '/output/region.osm.pbf']' returned non-zero exit status 2.

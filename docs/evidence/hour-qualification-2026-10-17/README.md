@@ -1,6 +1,6 @@
 # East/south coverage qualification evidence
 
-Read [source, commands, model, measurement scopes and limitations](../../hour-coverage-qualification.md).
+Read [source, commands, model, measurement scopes and limitations](../../archive/hour-coverage-qualification.md).
 
 All five selected origins now reach **zero potential cuts within 60 minutes**, across **433 source-linked nodes / 538 history states**. The graph has **3,036,124 states**, seven byte-identical rebuild artifacts, **258,070,540 fresh native cost/membership comparisons** and two partial checks. Largest Linux phase peak is **3.04 GiB**, qualification **1.61 GiB**. Two-hour cases still reach 106–116 cuts; complete source/real-world/long-range coverage remains unverified.
 

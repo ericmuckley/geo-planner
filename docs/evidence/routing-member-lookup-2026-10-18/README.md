@@ -1,6 +1,6 @@
 # Restriction-member lookup evidence — October 18, 2026
 
-Read [the findings and reproduction commands](../../routing-member-lookup.md). This experiment retains only restriction-member lookup entries and scans all road geometry for duplicates under the unchanged resource cap. It uses cached files and no provider quota or downloads.
+Read [the findings and reproduction commands](../../archive/routing-member-lookup.md). This experiment retains only restriction-member lookup entries and scans all road geometry for duplicates under the unchanged resource cap. It uses cached files and no provider quota or downloads.
 
 ```sh
 python3 -B docs/evidence/routing-member-lookup-2026-10-18/analyze.py

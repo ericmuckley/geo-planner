@@ -1,0 +1,22 @@
+Frozen sink calibrated: port-incoming / 468334902:1:f: 374 ms
+Frozen sink calibrated: tijuana / 114198251:0:f: 1167889 ms
+sinksCalibrated: 165.90 s; cgroup peak 2363858944; anon 375242752; file 5681152; swap max/peak 0/0
+validated: 166.10 s; cgroup peak 2363858944; anon 69017600; file 5746688; swap max/peak 0/0
+Traceback (most recent call last):
+  File "/recipe/scoped_region_verification.py", line 109, in <module>
+    run(parser.parse_args())
+  File "/recipe/scoped_region_verification.py", line 102, in run
+    qualification(args, output, inputs, monitor)
+  File "/recipe/scoped_region_verification.py", line 67, in qualification
+    graph = load_checked(output, manifest)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/region_verification.py", line 32, in load_checked
+    graph, model = load_graph(directory / "graph.json")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/range_graph.py", line 37, in load_graph
+    return frozen_load_graph(GraphPath(path, **options), block_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/recipe/compact_load.py", line 102, in load_graph
+    if base_id != data["baseIdentity"] or graph_id != data["graphIdentity"]: raise ValueError("Reloaded identity differs")
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Reloaded identity differs

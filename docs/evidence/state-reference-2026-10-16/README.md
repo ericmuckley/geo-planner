@@ -1,6 +1,6 @@
 # Static state-reference evidence
 
-See [commands, model and measured findings](../../state-routing-reference.md).
+See [commands, model and measured findings](../../archive/state-routing-reference.md).
 
 - `summary.json`: final nine-origin/four-budget qualification, timings, snap, source-backed turn examples and explicit limits.
 - `manifest.json`: source/profile/image/code/graph identities, complete landmark format and artifact hashes.

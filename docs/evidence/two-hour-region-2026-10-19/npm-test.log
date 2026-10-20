@@ -1,0 +1,37 @@
+
+> test
+> tsx --test src/server/*.test.ts
+
+✔ local experiment is opt-in and disabled on Vercel without contacting any router (10.276792ms)
+✔ malformed budgets, coordinates and extra fields fail before reaching the worker (2.313708ms)
+✔ 90-minute request uses only fixed loopback worker and preserves truncation and separate timings (3.630875ms)
+✔ worker failures and invalid responses produce errors without fallback or retries (0.997667ms)
+✔ off-network origin failure is reported clearly without hosted fallback (0.275083ms)
+✔ health validates local graph identity and does not expose worker URLs or credentials (0.376291ms)
+✔ unconfigured service provides honest status without exposing the URL (13.35825ms)
+✔ malformed JSON and invalid semantics never call the routing service (2.045667ms)
+✔ app limits reject long-range queries before forwarding (0.405584ms)
+✔ declared regional coverage rejects unsupported origins before routing and handles the date line (2.328916ms)
+✔ routing readiness checks reachable isochrone capability and expected engine identity (0.392ms)
+✔ an unreachable, malformed, or incapable routing service is not advertised ready (0.529417ms)
+✔ adapter sends static outbound time contours and preserves provenance, snaps, and warnings (1.327875ms)
+✔ upstream rejections and malformed polygons produce actionable errors (1.1705ms)
+✔ real Valhalla response retains input Point and snapped MultiPoint alongside polygons (11.578334ms)
+✔ timeouts and cancelled clients have distinct statuses (0.492291ms)
+✔ hosted routing exposes key presence without spending quota or claiming a live health check (0.260875ms)
+✔ hosted driving uses seconds and longitude/latitude, retaining returned provenance without Valhalla settings (0.641083ms)
+✔ hosted driving cap cannot be raised with local-engine settings (0.153083ms)
+✔ hosted quota, access and malformed responses fail safely without retries or fallback (0.499083ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 206.199042
+npm notice
+npm notice New minor version of npm available! 11.6.0 -> 11.21.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.1
+npm notice To update run: npm install -g npm@11.21.1
+npm notice

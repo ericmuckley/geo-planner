@@ -1,6 +1,6 @@
 # Broader-buffer preflight evidence — October 17, 2026
 
-See [findings and interpretation](../../coverage-buffer-preflight.md). This phase prepares data and measures capacity; it does not build/qualify a larger routing graph.
+See [findings and interpretation](../../archive/coverage-buffer-preflight.md). This phase prepares data and measures capacity; it does not build/qualify a larger routing graph.
 
 Recorded commands from the repository root:
 

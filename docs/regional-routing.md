@@ -2,7 +2,7 @@
 
 ## Current default: California and northern Baja v2
 
-Use `routing/profiles/california-baja-v2.json` with ignored `data/valhalla-v2/`. It shares the original pinned engine/road snapshots, expands the requested rectangle to `[-119.8,30.8,-114.5,35.5]`, and repairs complete US/California administrative relations. Read [current measurements and limitations](routing-expansion-verification.md), including the requirement to retain frozen administrative source files. The user has chosen [free external US routing](us-routing-service.md); these local graphs are retained as a fallback. Worldwide expansion is deferred.
+Use `routing/profiles/california-baja-v2.json` with ignored `data/valhalla-v2/`. It shares the original pinned engine/road snapshots, expands the requested rectangle to `[-119.8,30.8,-114.5,35.5]`, and repairs complete US/California administrative relations. Read [current measurements and limitations](archive/routing-expansion-verification.md), including the requirement to retain frozen administrative source files. The user has chosen [free external US routing](us-routing-service.md); these local graphs are retained as a fallback. Worldwide expansion is deferred.
 
 Requirements remain Node 22.12+, npm, Docker Compose v2, curl and at least 10 GiB free disk for this profile. Build cap: 2 CPUs/4 GiB; service cap: 2 CPUs/2 GiB. The measured largest build child used 3.73 GiB RSS. Use a larger data directory/reservation when retaining multiple graphs; do not attempt a planet build with this regional capacity estimate.
 
@@ -65,7 +65,7 @@ npm run routing:down
 npm run routing:up
 ```
 
-The build refuses to overwrite a completed graph. For a clean rebuild, select a new `VALHALLA_DATA_DIR` (for example `data/valhalla-v1-rebuild`) and rerun download/build/up. Keep the shared `data/valhalla/sources/` cache in place to avoid downloading again. A failed build has no `build-complete.json`; correct the error and rerun build. Preserve failure logs before rerunning because build measurements/logs are overwritten. Never run two builds against the same data directory. The final recipe was also verified with an [isolated second build](routing-baseline-verification.md) while preserving the active graph.
+The build refuses to overwrite a completed graph. For a clean rebuild, select a new `VALHALLA_DATA_DIR` (for example `data/valhalla-v1-rebuild`) and rerun download/build/up. Keep the shared `data/valhalla/sources/` cache in place to avoid downloading again. A failed build has no `build-complete.json`; correct the error and rerun build. Preserve failure logs before rerunning because build measurements/logs are overwritten. Never run two builds against the same data directory. The final recipe was also verified with an [isolated second build](archive/routing-baseline-verification.md) while preserving the active graph.
 
 ### V1 pinned inputs and settings
 
@@ -85,6 +85,6 @@ Mexico is included deliberately. The graph covers the Tijuana, Rosarito, Ensenad
 
 North/east/south cuts can truncate longer journeys and paths that leave and re-enter the region. Even a contour that does not visibly touch a cut is not a completeness proof. The app continues to return `coverageVerified: false`; there is no automatic boundary detector. Filled polygons can cross water, restricted land, disconnected roads, and unroutable locations. Generalization, contour-grid resolution, and small retained components further limit geographic membership accuracy. Keep 120 minutes as an exploratory diagnostic, and do not raise the cap for this graph.
 
-See [baseline verification](routing-baseline-verification.md) for measured resource use, routes, timings, browser evidence, and the next recommended task.
+See [baseline verification](archive/routing-baseline-verification.md) for measured resource use, routes, timings, browser evidence, and the next recommended task.
 
 Primary references: [official Valhalla container recipe](https://github.com/valhalla/valhalla/blob/7fd2228e5863b442bc1ac8d25eece6415dd91bff/docker/README.md), [graph pipeline](https://valhalla.github.io/valhalla/contributing/architecture/mjolnir/), [isochrone API](https://valhalla.github.io/valhalla/api/isochrone/), [Osmium extraction](https://docs.osmcode.org/osmium/latest/osmium-extract.html), [Southern California source](https://download.geofabrik.de/north-america/us/california/socal.html), [Mexico source](https://download.geofabrik.de/north-america/mexico.html), [pinned auto costs](https://github.com/valhalla/valhalla/blob/7fd2228e5863b442bc1ac8d25eece6415dd91bff/src/sif/autocost.cc), [pinned transition defaults](https://github.com/valhalla/valhalla/blob/7fd2228e5863b442bc1ac8d25eece6415dd91bff/src/sif/dynamiccost.cc).

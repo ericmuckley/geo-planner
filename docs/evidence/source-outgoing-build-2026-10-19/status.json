@@ -1,0 +1,68 @@
+{
+  "allCurrentFirstBuildPayloadHashesVerified": true,
+  "buildRecipeFiles": 149,
+  "calibrationJobRunning": false,
+  "caps": {
+    "cpus": 2,
+    "inputs": "read-only",
+    "memory": "4g",
+    "network": "none",
+    "swap": 0
+  },
+  "command": "node routing/source-outgoing-region.mjs",
+  "finalEvidenceCollectorExecuted": false,
+  "finalResultVerifierExecuted": false,
+  "firstBuildResources": {
+    "peakBytes": 2592776192,
+    "pressureEvents": 0,
+    "swapBytes": 0,
+    "with25PercentMarginBytes": 3240970240
+  },
+  "firstBuildWorkerWallMs": 1494594.3407260056,
+  "hostHashingScope": "Read-only host checks after the complete capped build; not new Linux resource measurements.",
+  "hostedRoutingCalls": 0,
+  "identicalQualifiedArtifacts": [
+    "graph.json",
+    "import-audit.json",
+    "graph.csr",
+    "graph.csr.gz",
+    "barrier-roads.osm",
+    "barrier-source-samples.osm",
+    "uncertain-crossings-source.osm",
+    "scoped-fixtures.json"
+  ],
+  "largerRegionAdmitted": false,
+  "nextCommand": "node routing/source-outgoing-region.mjs --stage rebuild",
+  "nextCommandsInOrder": [
+    "node routing/source-outgoing-region.mjs --stage rebuild",
+    "python3 -B routing/source_outgoing_result.py",
+    "python3 -B data/resource-pilot/source-outgoing-validation-v1/collect-evidence.py"
+  ],
+  "optimizedForecastRecomputed": false,
+  "originalPartialForecastWithMarginGiB": 9.4,
+  "output": "data/compact-pilot/source-outgoing-v1",
+  "ownerDiagnosticComplete": true,
+  "qualifiedAppGraph": "two-hour-region-v2",
+  "repeatOutput": "data/compact-pilot/source-outgoing-v1-rebuild",
+  "repeatStarted": false,
+  "resume": "Run read-only recovery/owner checks, then the exact repeat; do not rerun the completed owner profile or first build. Larger coverage remains held.",
+  "scope": "Completed first build only. Repeat, final proof binding, revised admission and final collector are pending. No larger graph admitted or released.",
+  "stage": "first-build-complete-rebuild-pending",
+  "tests": {
+    "build": "pass",
+    "check": "pass with existing warning",
+    "existingSkips": 9,
+    "routingPassed": 203,
+    "routingRun": 212,
+    "serverPassed": 20,
+    "typecheck": "pass"
+  },
+  "updatedAt": "2026-10-20T01:49:03.276118+00:00",
+  "validationCommands": [
+    "npm test",
+    "npm run test:routing",
+    "npm run check",
+    "npm run typecheck",
+    "npm run build"
+  ]
+}

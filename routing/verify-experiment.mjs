@@ -3,7 +3,11 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { root } from "./settings.mjs";
 
-const options = { graph: "experiment-region-v1", name: "expanded-map-v1" };
+const options = {
+	graph: "experiment-region-v1",
+	name: "expanded-map-v1",
+	port: 3000,
+};
 const args = process.argv.slice(2);
 while (args.length) {
 	const option = args.shift();
@@ -12,9 +16,16 @@ while (args.length) {
 		throw new Error("Invalid run name");
 	if (option === "--graph-run") options.graph = value;
 	else if (option === "--run-name") options.name = value;
+	else if (
+		option === "--port" &&
+		/^\d+$/.test(value) &&
+		Number(value) > 0 &&
+		Number(value) <= 65535
+	)
+		options.port = Number(value);
 	else
 		throw new Error(
-			"Usage: node routing/verify-experiment.mjs [--graph-run name] [--run-name fresh-name]",
+			"Usage: node routing/verify-experiment.mjs [--graph-run name] [--run-name fresh-name] [--port 3000]",
 		);
 }
 const directory = resolve(root, "data/compact-pilot", options.graph);
@@ -34,9 +45,10 @@ const cuts = JSON.parse(
 		"utf8",
 	),
 );
+await mkdir(resolve(root, "data/experiment-pilot"), { recursive: true });
 await mkdir(output);
 const samples = [];
-const base = "http://127.0.0.1:3000/api/experiment";
+const base = `http://127.0.0.1:${options.port}/api/experiment`;
 const config = await (await fetch(base)).json();
 assert.equal(
 	config.graphIdentity,
@@ -86,8 +98,9 @@ for (const origin of manifest.profile.origins) {
 			]),
 		);
 		let settled = 0;
+		const budget64 = BigInt(budget);
 		for (let offset = 0; offset < labels.byteLength; offset += 8)
-			if (labels.readBigUInt64LE(offset) <= BigInt(budget)) settled++;
+			if (labels.readBigUInt64LE(offset) <= budget64) settled++;
 		assert.deepEqual(result.query, query);
 		assert.equal(metadata.graphIdentity, manifest.graphIdentity);
 		assert.deepEqual(metadata.bounds, manifest.profile.bbox);
