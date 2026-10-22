@@ -9,6 +9,8 @@
 		"ignoreUnknown": false,
 		"includes": [
 			"**/src/**/*",
+			"**/scripts/**/*.ts",
+			"**/scripts/**/*.mjs",
 			"**/routing/**/*.mjs",
 			"**/routing/manifest.json",
 			"**/routing/profiles/*.json",
@@ -16,6 +18,7 @@
 			"**/index.html",
 			"**/vite.config.ts",
 			"!**/src/routeTree.gen.ts",
+			"!**/src/server/data/coarse-grid-v1.json",
 			"!**/src/styles.css"
 		]
 	},

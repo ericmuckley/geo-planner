@@ -95,13 +95,14 @@ export const contoursSchema = z.object({
 
 export const engineConfigSchema = z.object({
 	configured: z.boolean(),
-	provider: z.enum(["valhalla", "openrouteservice"]).optional(),
+	provider: z.enum(["valhalla", "openrouteservice", "coarse"]).optional(),
 	health: z
 		.enum(["unconfigured", "unchecked", "ready", "unavailable", "mismatch"])
 		.optional(),
 	healthMessage: z.string().optional(),
 	checkedAt: z.iso.datetime().optional(),
 	maxMinutes: z.number().int().min(1).max(720),
+	minMinutes: z.number().int().min(1).max(720).optional(),
 	graphVersion: z.string(),
 	engineVersion: z.string(),
 	coverage: z.string(),
@@ -109,7 +110,7 @@ export const engineConfigSchema = z.object({
 });
 
 export const resultMetadataSchema = z.object({
-	engine: z.enum(["valhalla", "openrouteservice"]),
+	engine: z.enum(["valhalla", "openrouteservice", "coarse"]),
 	graphVersion: z.string(),
 	engineVersion: z.string(),
 	coverage: z.string(),
@@ -126,10 +127,21 @@ export const resultMetadataSchema = z.object({
 	generalizeMeters: z.number().optional(),
 	denoise: z.number().optional(),
 	upstreamBytes: z.number().nonnegative(),
+	approximation: z
+		.object({
+			gridDegrees: z.number().positive(),
+			localSpeedKph: z.number().positive(),
+			reachedCells: z.number().int().nonnegative(),
+			attachmentKm: z.number().nonnegative(),
+			sourceRelease: z.string(),
+		})
+		.optional(),
 	timings: z.object({
 		engineRoundTripMs: z.number().nonnegative(),
 		decodeValidateMs: z.number().nonnegative(),
 		serverTotalMs: z.number().nonnegative(),
+		searchMs: z.number().nonnegative().optional(),
+		contourMs: z.number().nonnegative().optional(),
 	}),
 });
 
@@ -145,9 +157,10 @@ export type EngineConfig = z.infer<typeof engineConfigSchema>;
 export type ReachabilityResult = z.infer<typeof resultSchema>;
 
 export const savedRunSchema = z.object({
-	id: z.string(),
+	id: z.string().min(1).max(128),
 	createdAt: z.iso.datetime(),
 	query: querySchema,
+	model: z.enum(["coarse", "connected"]).optional(),
 	metadata: resultMetadataSchema.optional(),
 	clientRequestMs: z.number().nonnegative().optional(),
 	sourceToMapIdleMs: z.number().nonnegative().optional(),

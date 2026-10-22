@@ -1,6 +1,6 @@
 # Local development and routing contract
 
-Recovering a disconnected session: read [the agent handoff](agent-handoff.md) before starting processes or changing environment values. It explains local-only data, the dirty working tree, safe health checks and the current graph. The local experiment and hosted main page use separate APIs.
+Recovering a disconnected session: read [the agent handoff](agent-handoff.md) before starting processes or changing environment values. It explains local-only data, the dirty working tree, safe health checks and the current graph. The main page defaults to the bundled coarse estimator; the hosted provider and local experiment use separate APIs.
 
 ## Start the workspace
 
@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv6 port 3000. No database or routing service is needed to explore the map and save queries. The default basemap uses the network. To configure services, add the relevant entries from `.env.example` to your existing `.env.local`, preserving existing values, then restart Vite. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
+Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv6 port 3000. No database, routing service, API key, Python or Docker is needed to compute coarse 1–12-hour contours, explore the map and save queries. The compact grid is included in source; the large ignored research datasets are unnecessary for this default path. The default basemap uses the network. The cloud `DATABASE_URL` is stored in ignored `.env`; `.env.local` retains the optional routing settings and has no database override. Preserve these values and restart Vite after service configuration changes. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
 
 ```bash
 npm run check
@@ -22,6 +22,40 @@ npm run preview -- --port 4173
 ```
 
 The route generator also runs during Vite builds. Use `npm run generate-routes` if typechecking a newly added route before starting/building Vite. Never edit the generated route tree manually. This sandbox required approval to install packages, use the test runner's IPC socket, and start the preview listener; these are environment restrictions, not application requirements.
+
+## Cloud database configuration
+
+The user configured `DATABASE_URL` in Vercel and ignored local `.env`. The previous localhost value was removed from `.env.local`, preserving the optional routing provider/key. Local development and Drizzle commands now resolve the cloud URL. A read-only `SELECT 1` through `src/db/index.ts` passed on October 22. The additive `drizzle/0000_saved_history.sql` migration is now reviewed and applied to this initially empty cloud database: it creates `saved_histories`, the existing starter `todos` table, and Drizzle migration bookkeeping. No PostgreSQL process was listening on local port 5432 during the switch.
+
+Drizzle loads `.env.local` before `.env`; Vite also gives `.env.local` priority over `.env`. Leave `DATABASE_URL` out of `.env.local`, preserve the provider's connection/SSL parameters, and keep it server-only (no `VITE_` prefix). A pre-existing shell `DATABASE_URL` can override file values. Both env files are ignored by Git and Vercel uploads; the deployed app uses Vercel's configured environment, not the local files. Keep existing local data; no local database data copy or database deletion was performed.
+
+Use `npm run db:generate` to generate a migration from `src/db/schema.ts`, review it, then apply the intended migrations with `npm run db:migrate`. Do not run `db:push` as a connectivity check. Migrations run separately from the web build. The existing configured cloud database already has the initial migration; a new database needs it before cloud history works. The coarse estimator still works independently of database availability.
+
+`npm run db:verify` performs a live integration check: it writes one generated test owner, verifies fresh-request restoration, browser isolation, concurrent merges and the twenty-entry bound, then deletes only that test owner. It needs database network access and is not read-only. After `npm run build:vercel`, `npm run db:verify -- --vercel` repeats the same integration check through the generated Vercel handler locally, including real PostgreSQL queries; it does not deploy a site. Do not print connection strings or browser cookie values. The pool reuses up to three connections per process, with five-second connection/statement timeouts and ten-second idle timeout.
+
+## Coarse estimator checks
+
+```sh
+npm run routing:verify:coarse
+npm run build:vercel
+npm run check:coarse:vercel
+```
+
+The first command runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
+
+## Regenerate the coarse grid
+
+This is optional for normal development/deployment: the prepared JSON is a source file. To reproduce it, use Python 3.11+ standard library and the pinned public-domain Natural Earth inputs (about 68.8 MB downloaded):
+
+```sh
+mkdir -p data/coarse-sources/natural-earth-v5.1.2
+curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
+curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson --output data/coarse-sources/natural-earth-v5.1.2/countries.geojson
+curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson --output data/coarse-sources/natural-earth-v5.1.2/lakes.geojson
+npm run data:coarse
+```
+
+The builder enforces source SHA-256 values before writing `src/server/data/coarse-grid-v1.json`. Expected output: 1,801,439 bytes, SHA-256 `7dfd3b30965c21a57fcca408a97a4d95e455bda33d09ecc7a29953346c23d8c4`. Raw files remain ignored; only the compact artifact belongs in the deployment. [The model report](coarse-estimator.md) records assumptions and provenance. This pipeline is separate from sealed detailed-routing producers.
 
 ## Run the local long-range experiment
 
@@ -37,7 +71,7 @@ To compare the preserved prior graph, stop the current owned worker and run `npm
 
 `node routing/verify-experiment.mjs --graph-run two-hour-region-v2 --run-name fresh-live-check` checks live app results against independent fields and all-cut evidence. It accepts `--port` for another Vite port and only calls loopback. The source/build/rebuild/qualification/native/cut/release commands are in the regional report. Completed runs refuse overwrite; fresh output names alone do not automatically rebind downstream dependencies. No graph download/build occurs in `dev:experiment`.
 
-The [six-hour preflight](six-hour-preflight.md) has separate, versioned offline planning/source/census commands. It reuses cached October 14 roads and pinned Docker tools with two CPUs / 4 GiB / no swap; it does not switch this app graph or spend hosted quota. The owner profile and first storage calibration build are now complete. The exact repeat has not started; use the [memory follow-up commands](six-hour-preflight.md#memory-follow-up) after the handoff recovery checks. Inspect saved reports and process owners before launching anything, and preserve completed outputs.
+The [six-hour preflight](six-hour-preflight.md) has separate, versioned offline planning/source/census commands. It reuses cached October 14 roads and pinned Docker tools with two CPUs / 4 GiB / no swap; it does not switch this app graph or spend hosted quota. The outgoing-index owner profile, exact build/rebuild, result verification and evidence collection are complete. Both builds reproduce the qualified payloads at 2.415/2.416 GiB. The revised partial-source screen remains held at 9.290 GiB with margin; the proposed qualification owner/lifetime diagnostic was never started and is now parked after the user’s coarse nationwide product reset. The coarse nationwide MVP is implemented independently; the next work is persistence integration, real Vercel preview verification and accuracy refinement. Existing services and environment configuration remain unchanged. Read the [memory follow-up](six-hour-preflight.md#memory-follow-up) and [next steps](next-steps.md). Inspect saved reports and process owners before launching anything; do not rerun completed producers or collectors.
 
 ## Connect the selected free hosted service
 
@@ -93,6 +127,24 @@ When `VITE_PMTILES_URL` is set, it takes precedence over `VITE_MAP_STYLE_URL`. O
 
 ## API
 
+### Saved history API
+
+`GET /api/saved-runs` restores this browser's cloud history. With no `DATABASE_URL`, it returns `{ "configured": false, "runs": [] }`, and the UI keeps local history available. A configured database returns `{ "configured": true, "runs": [...] }`. Database failure returns 503 with a useful, credential-free message.
+
+`POST /api/saved-runs` accepts a JSON array of 1–20 validated saved query/run summaries, up to 256 KiB. Each summary has the existing ID, timestamp, query, optional coarse/connected model, optional model metadata and browser timings. Contour geometry is not stored. The server merges IDs, orders newest first and keeps twenty entries under a row lock, preventing concurrent tabs from overwriting saves. Success returns the retained history. Invalid data returns 422, invalid/oversized JSON 400, non-JSON content 415, and cross-origin/cross-site requests 403. Responses use `Cache-Control: private, no-store` and `Vary: Cookie`.
+
+Ownership uses an unguessable server-issued `geo-planner-history` cookie (HttpOnly, SameSite=Lax, path `/`, one-year lifetime; Secure over HTTPS). PostgreSQL stores only its SHA-256 hash and a bounded JSON history row. There is no public global history listing, account or cross-device sync. Clearing cookies loses the browser's cloud-history identity; orphaned histories are not yet purged automatically. The cookie is a bearer credential: never print or commit it.
+
+New query/run saves back up automatically. Existing localStorage entries stay local until the user selects **Back up browser history**. The UI merges cloud and local records, labels Cloud saved/Browser only, keeps export/local saving available, and offers retry when cloud access fails. Failed saves remain queued within the tab; after reload, local-only entries can be uploaded with the backup button. Query model selection survives cloud restoration and controls Load/Replay; old records infer the model from metadata or current selection. Map-idle timing updates remain in the local cache unless that summary is backed up again.
+
+The [saved-history evidence](evidence/saved-history-2026-10-22/README.md) preserves this milestone's measurements. Its source hashes are a dated implementation snapshot, not a frozen routing recipe: product code can evolve normally, and later source differences should be interpreted as changes rather than restored blindly. Preserve the original evidence records and the separately sealed detailed-routing producers.
+
+### Default coarse API
+
+`GET /api/estimate` returns ready configuration with `provider: coarse`, `minMinutes: 60`, `maxMinutes: 720`, grid/model versions and generalized US bounds. `POST /api/estimate` uses the same version-1 query shape as the provider API below, with a whole-minute budget from 60 to 720. It returns filled MultiPolygon GeoJSON, approximation warnings and source/model metadata. Invalid geography/budgets return 422, malformed or oversized JSON returns 400, and an already-cancelled request returns 408. Results/config use `Cache-Control: no-store`.
+
+No environment variables are required. It is enabled on Vercel and never calls a worker, database or routing service. It searches an assumed-speed grid, including overland travel without roads; read [the coarse model](coarse-estimator.md) before interpreting the shading. `searchMs` includes geographic validation and origin attachment; `contourMs` traces the reached cells. Server, HTTP/browser and map-idle timings have distinct scopes.
+
 ### Local experimental API
 
 `GET /api/experiment` returns the qualified worker's nonsecret identity/bounds/range/model metadata. `POST /api/experiment` accepts exactly:
@@ -108,7 +160,7 @@ The app must run with `LOCAL_ROUTING_EXPERIMENT=1`; `npm run dev:experiment` set
 
 The selected graph/cuts, query example, expected edge counts and fresh live-verification flags are in [the handoff](agent-handoff.md). Changing `.env.local` or raising Valhalla/provider limits is unnecessary for this local endpoint.
 
-### Main-page provider API
+### Optional connected-provider API
 
 `GET /api/reachability` returns nonsecret configuration, provider, maximum budget and coverage labels, with `Cache-Control: no-store`. Valhalla checks service status/capability/version. Openrouteservice reports key presence and `health: unchecked`; its public API does not expose the self-hosted status endpoint, and GET deliberately spends no contour quota. Hosted provenance comes from successful responses, not configured local graph labels.
 
@@ -139,7 +191,7 @@ A successful response includes a run ID, timestamp, normalized query, validated 
 
 `engineRoundTripMs` measures fetch through reading the upstream body, including engine search/contouring and network. `decodeValidateMs` measures JSON decoding and Zod validation. `serverTotalMs` ends before response serialization/delivery. `clientRequestMs` includes browser HTTP, JSON parsing, and result validation. `sourceToMapIdleMs` begins immediately before updating the map source and includes pending tile work and camera fitting; it excludes map startup when a result arrives before the map is ready. None is an isolated graph-search or precise first-paint measurement.
 
-History is localStorage, capped at 20 entries, with no geometry or shared persistence. JSON exports contain `{ "version": 1, "runs": [...] }`; there is no import flow yet. Replay uses the current graph/configuration, which may differ from the saved run. Browser storage failures produce a visible message and leave in-memory export available. The API has no authentication, rate limiting, global scheduling, or persistent jobs yet; address these before exposing an expensive routing service to public traffic.
+History uses localStorage plus the optional browser-private PostgreSQL backup described above, capped at 20 summaries per owner, with no geometry. JSON exports contain `{ "version": 1, "runs": [...] }`; there is no import flow yet. Replay uses the current graph/configuration, which may differ from the saved run. Browser storage failures produce a visible message and leave in-memory export available. The API has no authentication, rate limiting, global scheduling, or persistent jobs yet; address these before exposing an expensive routing service to public traffic.
 
 API implementation references: [Valhalla isochrones](https://valhalla.github.io/valhalla/api/isochrone/), [Valhalla costing options](https://valhalla.github.io/valhalla/api/route/api-reference/), [MapLibre installation and Vite worker setup](https://maplibre.org/maplibre-gl-js/docs/), [PMTiles integration](https://docs.protomaps.com/pmtiles/maplibre), [Protomaps styling assets](https://docs.protomaps.com/basemaps/maplibre), and [OpenFreeMap quick start](https://openfreemap.org/quick_start/).
 
@@ -152,4 +204,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-The second command requires the selected real graph service. It invokes the generated Vercel handler locally and saves `vercel-verification.json` in its data directory. No deployment is performed. Graphs and `.env` files are excluded from upload/bundling; Vercel needs a separately reachable routing backend or a qualified native implementation. The selected path is [free hosted US routing](us-routing-service.md); worldwide expansion is deferred.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Actual cloud verification remains open.

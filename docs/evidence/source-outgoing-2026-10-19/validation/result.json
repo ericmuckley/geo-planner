@@ -1,0 +1,102 @@
+{
+  "admission": {
+    "capBytes": 4294967296,
+    "decision": "hold",
+    "eligibleForSeparateBuild": false,
+    "estimatedPhasePeaksBytes": {
+      "build": 7309179647,
+      "cuts": 6666389557,
+      "preparation": 3409403904,
+      "qualification": 7980201787,
+      "rebuild": 7313255685
+    },
+    "limitPressure": false,
+    "observedReferencePeaksBytes": {
+      "build": 2592776192,
+      "cuts": 2364760064,
+      "preparation": 3409403904,
+      "qualification": 2830807040,
+      "rebuild": 2594222080
+    },
+    "ratios": {
+      "candidateViaWayRules": 1.6071532001158413,
+      "historyCeiling": 2.8190553697490124,
+      "historyPrefixCeiling": 1.6345612772361446,
+      "roadCeiling": 2.817864342397047,
+      "sourceNodes": 2.699018462058176,
+      "sourceRelations": 1.6866075761832997,
+      "sourceWays": 2.133325423501256,
+      "wayEligibleDirectedSegments": 2.8085707957426345
+    },
+    "resourceScreenPasses": false,
+    "scalingRatio": 2.8190553697490124,
+    "scope": "Maximum measured source/restriction/road/history growth scales complete reference build, rebuild, qualification and cut peaks. Preparation is measured for this input. Sequential phases use their maximum, then 25% margin. With partial sources this is an early screening forecast, not full-region admission, measured graph RAM, a rigorous lower bound, or a memory guarantee.",
+    "sourceComplete": false,
+    "wholeWorkflowWith25PercentMarginBytes": 9975252234
+  },
+  "buildReportSha256": {
+    "build": "b9f788739a6bd4eb8ec586cd20c7f8153987fb4dc1bc8dcb1a838195386e8e0c",
+    "rebuild": "ac201696f73e56ba659df376e6193883465e4df62bf92f6b67ead0c3dec8b972"
+  },
+  "candidateReportSha256": "7ac15ce087cb89f4e8cc621d874123bc05d996c363d49fdf71a11ded5297a855",
+  "coverageVerified": false,
+  "fixtureArtifacts": {
+    "build": {
+      "bytes": 5289,
+      "sha256": "e9ac817619c978bd108d24481395835b779364b9865da666e54550bf7e6b8d60"
+    },
+    "rebuild": {
+      "bytes": 5289,
+      "sha256": "e9ac817619c978bd108d24481395835b779364b9865da666e54550bf7e6b8d60"
+    }
+  },
+  "graphIdentity": "52b34545379adf83ad09175e7d29b5c445b7cf4193fee0f9b5d10afe0904fda1",
+  "identicalPayloads": [
+    "barrier-roads.osm",
+    "barrier-source-samples.osm",
+    "graph.csr",
+    "graph.csr.gz",
+    "graph.json",
+    "import-audit.json",
+    "scoped-fixtures.json",
+    "uncertain-crossings-source.osm"
+  ],
+  "largerGraphBuilt": false,
+  "producerSha256": "1bf3bdd689a7c8f52c20e7a14bbe56d3c1a55200eba3ff572ce084000b7b2932",
+  "publicApiCalls": 0,
+  "resources": {
+    "build": {
+      "peakBytes": 2592776192,
+      "pressureEvents": 0,
+      "swapBytes": 0,
+      "with25PercentMarginBytes": 3240970240
+    },
+    "rebuild": {
+      "peakBytes": 2594222080,
+      "pressureEvents": 0,
+      "swapBytes": 0,
+      "with25PercentMarginBytes": 3242777600
+    }
+  },
+  "reusedProofs": {
+    "cuts": {
+      "bytes": 28822,
+      "sha256": "842619b99c9da3b92284637517125faff854dfe29e4da04a6bcaf389a9563e2a"
+    },
+    "native": {
+      "bytes": 154736,
+      "sha256": "805855abf71326bc729feb93d2babda7c4fc32b94516c8b976c7054ea6627aa2"
+    },
+    "qualification": {
+      "bytes": 11915,
+      "sha256": "bd4f94fde0ed8f0950172bb902ba585cd2b4a6bb431c4a0ebbb1866b7398e792"
+    },
+    "scope": "Existing independent/native/cut evidence remains valid on the exact graph bytes. These regional searches and their resources were not rerun; only construction storage changed."
+  },
+  "scope": "One exact storage change, fresh full build/rebuild/fixture resources and unchanged regional proof reuse. The partial-source screen is a heuristic, not full six-hour admission or a memory lower bound. Serving graph/code remain unchanged. This host-side checksum analysis is not a new capped Linux construction measurement.",
+  "sourceManifestSha256": "69113830905cdc22827a42994c2e40ccde450023f1336a4b1b519a7bca015b97",
+  "workerWallMs": {
+    "build": 1494594.3407260056,
+    "rebuild": 1555840.051665
+  }
+}

@@ -1,5 +1,7 @@
 # Six-hour coverage preflight
 
+**Product scope update, October 22:** this report preserves the detailed-engine preflight/calibration. Its proposed qualification-memory follow-up and detailed regional expansion are parked after the user prioritized a coarse nationwide Vercel MVP. Use [next steps](next-steps.md) for the active planning task. Original measurements, gates and sealed evidence remain unchanged.
+
 Completed October 19, 2026. **Decision: hold the larger build.** The [qualified two-hour app](two-hour-region.md) remains available. This is an offline source/resource screening experiment; hosted routing quota is untouched.
 
 ## Saved plan and source scope
@@ -109,38 +111,51 @@ The collection command was `python3 -B data/coverage-pilot/six-hour-validation-v
 
 Validation passes: **20 adapter/server tests**, **205 routing tests run (196 pass, nine existing skips)**, `npm run check`, `npm run typecheck`, and `npm run build`. Biome retains the existing database non-null-assertion warning. The first npm-test launch was blocked at tsx's sandbox pipe before tests ran; the permitted retry passed. Previous 87 evidence / 187 recipe bindings remain intact. Documentation links/anchors and `git diff --check` are checked at handoff. A Vercel-target build was not repeated for this offline-recipe-only change; its earlier qualified result remains historical.
 
-The bounded owner profile and first storage calibration build are now complete; see [the memory follow-up below](#memory-follow-up). The original preflight measurements/forecast above remain the sealed result of that named recipe. Exact repeat and a revised admission calculation are still pending, so the larger-build hold remains in force.
+The bounded owner profile and first storage calibration build are now complete; see [the memory follow-up below](#memory-follow-up). The original preflight measurements/forecast above remain the sealed result of that named recipe. The exact repeat and revised admission are now complete: the partial-source screen remains held at 9.290 GiB with margin. The original measurements above remain unchanged.
 
 Keep the two-hour app available. Missing-source acquisition and a complete census remain necessary even if memory improves; the partial screen can never admit a full six-hour graph. Preserve all required directions, history states, Mexico and Otay uncertainties. Full six-hour coverage still requires an independent exact rebuild, native/cut proofs, zero detected cuts for the five sources and live API/browser qualification. See [the ordered queue](next-steps.md). Caching, national anchors, deployment and analytical layers remain deferred.
 
 ## Memory follow-up
 
+Completed October 21, 2026; final handoff/evidence collected October 22. The **storage calibration passes** exact rebuild, fixtures, resource gates and proof binding. **Six-hour admission remains held.** [Final evidence](evidence/source-outgoing-2026-10-19/README.md) records the result; its directory retains the October 19 experiment start date. The [first-build checkpoint](evidence/source-outgoing-build-2026-10-19/README.md) is preserved unchanged.
+
 The bounded diagnostic `node routing/base-memory-profile.mjs` completed at `data/resource-pilot/two-hour-base-owners-v1/`: the final base identity matches, with 8,131,472 roads and 17,655,210 base transitions. Its 175.96 s / 2.400 GiB diagnostic includes source validation, parsing and owner introspection, but omits road-key retention, repeated fallback builds, barrier preparation, maneuver construction, exports and qualification. Never substitute that peak for a complete-phase admission measurement.
 
-The owner census finds about **392 MiB** in the outgoing dictionary plus node keys/ordinals, alongside decoded inputs, road arrays and base adjacency. Array/container allocations are measured; shallow reference sums can count shared objects and do not exhaustively decompose RSS. A focused follow-up replaces the temporary map with numeric offsets indexed by the existing sorted source-node IDs. Road-reference order stays unchanged; generic/unordered/string paths retain the frozen fallback.
+The owner census finds about **392 MiB** in the outgoing dictionary plus node keys/ordinals, alongside decoded inputs, road arrays and base adjacency. Array/container allocations are measured; shallow reference sums can count shared objects and do not exhaustively decompose RSS. The focused change replaces the temporary map with numeric offsets indexed by existing sorted source-node IDs. Road-reference order stays unchanged; generic/unordered/string paths retain the frozen fallback.
 
-The first complete calibration build, `node routing/source-outgoing-region.mjs`, **passed** at `data/compact-pilot/source-outgoing-v1/`. All eight qualified graph/audit/source/CSR payloads are byte-identical, with the same graph identity, model and coverage. Complete worker wall time was **1,494.59 s** and cgroup peak **2,592,776,192 bytes (2.415 GiB)**, or **3.018 GiB with 25% margin**. Pressure/OOM/kill/swap are zero. The previous complete build peak was 2.668 GiB: about **9.5% lower** in this single calibration. Parsing now reaches the peak; later base/history/export stages stay below it. These offline build times are not routing/search timings or production latency statistics.
+Both complete calibration builds reproduce all **eight qualified graph/audit/source/CSR payloads**, the same graph identity, model, restrictions, IDs/order, partial-road and barrier behavior, Mexico and Otay uncertainty. Each also passes 17 fresh scoped fixtures with **416 full / 1,248 bounded / 320 partial** independent cost comparisons; the supplemental fixture payloads match each other. Seven focused unit cases cover the storage paths.
 
-Seven focused unit cases and 17 fresh scoped OSM fixtures pass, with **416 full / 1,248 bounded / 320 partial** independent cost comparisons. Latest checks record **20 server/adapter passes; 212 routing cases (203 pass, nine existing skips); check/typecheck/regular build pass**, with the existing database warning. No Vercel-target build or new browser routing verification was performed for this offline change. Serving graph/app are unchanged and ready, with zero routing-provider calls.
+| Complete affected phase | Worker wall | Cgroup peak | With 25% margin |
+| --- | ---: | ---: | ---: |
+| First build, `source-outgoing-v1` | 1,494.59 s | 2.415 GiB | 3.018 GiB |
+| Exact repeat, `source-outgoing-v1-rebuild` | 1,555.84 s | 2.416 GiB | 3.020 GiB |
 
-**Stopping point: first build complete; exact repeat not started; no calibration job running.** The follow-up is not yet accepted. [First-build handoff evidence](evidence/source-outgoing-build-2026-10-19/README.md) preserves profile/build reports, manifests, fixtures, producer hashes, checks and health. The first build snapshots 149 producer files. `storage-fixtures.json` is supplemental proof, bound separately from the eight payloads; the prepared result helper is not in that build snapshot and must be bound by its own hash.
+The repeat peak is **2,594,222,080 bytes**. Both phases retain two CPUs / 4 GiB / no swap / no network / read-only inputs, and include all artifact verification reads before the final checkpoint; small metadata writes are excluded. Pressure/OOM/kill/swap are zero. The first build's peak is about 9.5% below the previous 2.668 GiB complete build. Parsing reaches the cumulative peak; later base/history/export stages stay below it. These are offline construction wall times, not routing/search or HTTP timings. Periodic composition samples can miss peaks; host/VM paging remains unmeasured.
 
-After the handoff's read-only recovery/owner checks, the next command is:
+`routing/source_outgoing_result.py` passed end to end without revision to its saved pending version. It verifies producer/input bindings, both builds, all eight payload hashes and the supplemental fixtures, then binds the existing independent/native/cut proofs to the identical graph bytes. **Those regional searches and their resources were reused, not rerun or remeasured.** The result is `data/resource-pilot/source-outgoing-validation-v1/result.json`; its producer hash is bound separately from the build's 149-script manifest.
+
+The unchanged 2.819055× partial-source growth ratio now gives:
+
+| Phase | Revised forecast peak, GiB |
+| --- | ---: |
+| Build | 6.807 |
+| Exact rebuild | 6.811 |
+| Independent qualification | 7.432 |
+| Source-linked cut audit | 6.209 |
+| Preparation | 3.175, measured |
+
+The largest sequential phase plus 25% margin is **9.290 GiB (9,975,252,234 bytes)** versus the unchanged **4 GiB** cap. **Resource screen: fail; complete-source admission: hold.** The original 9.400 GiB screen above remains the result of the original recipe. The revised value is still a partial-source heuristic, not measured six-hour graph RAM, a lower bound or a complete-region guarantee. Missing-source demand is unknown, and no larger graph or road acquisition occurred.
+
+The dominant retained phase is **independent qualification at 2.636 GiB**, measured in the original qualified run. Its highest periodic sample contains about **2.453 GiB anonymous / 0.062 GiB file** memory; this sample is not an exact decomposition of the cumulative peak. Static code inspection identifies overlapping full/bounded label fields and the decoded Tijuana field plus virtual-sink oracle as candidates. Exact owner attribution remains unmeasured. The selected next bounded task is a separately versioned qualification owner/lifetime diagnostic, then numeric label storage only if those measurements support it. No new diagnostic or optimization was started. Improving this phase alone would still leave other phases above the larger-region screen. See the saved `validation/next-phase-analysis-2026-10-21.json` and [next steps](next-steps.md).
+
+Fresh October 21 validation passes: **20 server/adapter tests; 212 routing cases (203 pass, nine existing skips); check/typecheck/regular build**. Biome retains the existing database warning. The first server-test launch was blocked by tsx's sandbox IPC socket before tests executed; its permitted retry passed. No Vercel-target build or new browser/search performance verification was performed. After the original listeners disappeared, the documented launcher restored the same qualified two-hour app/worker; final GET checks report ready and zero provider calls. About **167 GiB disk** remains free after the repeat; remeasure before expansion.
+
+Completed commands, preserved for provenance rather than rerunning:
 
 ```sh
 node routing/source-outgoing-region.mjs --stage rebuild
-```
-
-It creates `data/compact-pilot/source-outgoing-v1-rebuild`; do not rerun the completed first build or profile. Preserve two CPUs / 4 GiB / no swap / no network / read-only inputs. A fresh output name alone does not rebind hardcoded source-run dependencies. Expect roughly 25 minutes for the repeat, with resource and exact-byte checks over the complete phase.
-
-Only after that passes:
-
-```sh
 python3 -B routing/source_outgoing_result.py
-# Review result.json, then collect the final evidence:
 python3 -B data/resource-pilot/source-outgoing-validation-v1/collect-evidence.py
 ```
 
-The prepared result helper is syntax-checked but **has not run end to end**. It will verify both builds and supplemental fixtures, bind existing independent/native/cut proofs on identical payloads and recompute the partial-source screen using measured affected phases and retained unaffected-phase peaks. Those regional searches are not rerun or remeasured. Its output is `data/resource-pilot/source-outgoing-validation-v1/result.json`. The prepared, unexecuted collector requires that result and writes `docs/evidence/source-outgoing-2026-10-19/`; it refuses overwrite. Keep the current partial evidence separate and immutable. Fix unexpected verifier failures transparently and record any helper revision; never alter sealed producer/output bytes to satisfy a check.
-
-No revised optimized forecast has been accepted. The original **9.40 GiB** partial-source forecast remains the recorded screen, and complete-source admission is still held. No larger source acquisition, graph promotion, new coverage, deployment or hosted routing call occurred. See [next steps](next-steps.md) for acceptance and deferred work.
+The final collector and result helper ran without changes to their pending checkpoint versions. The separate final evidence bundle binds the profile, build/rebuild manifests/reports, fixtures, result, checks, next-phase analysis and producer hashes. Preserve it, the first-build evidence and all frozen producers. Large ignored data/proof dependencies and environment values remain local-only; this is not a portable data bundle. Serving graph/code and coverage are unchanged. No deployment or hosted routing call occurred. Keep `coverageVerified: false`, clipping visible, and the larger-build hold in force.

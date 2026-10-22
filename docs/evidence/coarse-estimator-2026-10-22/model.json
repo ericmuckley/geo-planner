@@ -1,0 +1,46 @@
+{
+  "version": "natural-earth-5.1.2-road-grid-v1",
+  "bounds": [
+    -125,
+    24,
+    -66,
+    50
+  ],
+  "step": 0.1,
+  "width": 590,
+  "height": 260,
+  "localSpeedKph": 25,
+  "roadSpeedsKph": {
+    "Major Highway": 90,
+    "Beltway": 80,
+    "Bypass": 70,
+    "Secondary Highway": 65,
+    "Road": 45
+  },
+  "roadFeatures": 6391,
+  "landCells": 81450,
+  "roadLinks": 33398,
+  "sources": {
+    "countries": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255"
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9"
+    },
+    "roads": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_roads.geojson",
+      "sha256": "66a0c7b438e92fd124822cc5921cfa11042f48c294ade5e0f03f2c6640fd0248"
+    }
+  },
+  "sourceRelease": "Natural Earth v5.1.2; generalized cartographic roads, not a current routable road inventory",
+  "license": "Public domain",
+  "attribution": "Made with Natural Earth",
+  "artifact": {
+    "path": "src/server/data/coarse-grid-v1.json",
+    "bytes": 1801439,
+    "sha256": "7dfd3b30965c21a57fcca408a97a4d95e455bda33d09ecc7a29953346c23d8c4",
+    "deterministicRebuildMatched": true
+  }
+}

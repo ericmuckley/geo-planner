@@ -1,0 +1,51 @@
+{
+  "resources": {
+    "build": {
+      "peakBytes": 2592776192,
+      "with25PercentMarginBytes": 3240970240,
+      "pressureEvents": 0,
+      "swapBytes": 0
+    },
+    "rebuild": {
+      "peakBytes": 2594222080,
+      "with25PercentMarginBytes": 3242777600,
+      "pressureEvents": 0,
+      "swapBytes": 0
+    }
+  },
+  "admission": {
+    "decision": "hold",
+    "eligibleForSeparateBuild": false,
+    "resourceScreenPasses": false,
+    "sourceComplete": false,
+    "ratios": {
+      "sourceNodes": 2.699018462058176,
+      "sourceWays": 2.133325423501256,
+      "sourceRelations": 1.6866075761832997,
+      "wayEligibleDirectedSegments": 2.8085707957426345,
+      "historyPrefixCeiling": 1.6345612772361446,
+      "candidateViaWayRules": 1.6071532001158413,
+      "roadCeiling": 2.817864342397047,
+      "historyCeiling": 2.8190553697490124
+    },
+    "scalingRatio": 2.8190553697490124,
+    "observedReferencePeaksBytes": {
+      "build": 2592776192,
+      "rebuild": 2594222080,
+      "qualification": 2830807040,
+      "cuts": 2364760064,
+      "preparation": 3409403904
+    },
+    "estimatedPhasePeaksBytes": {
+      "build": 7309179647,
+      "rebuild": 7313255685,
+      "qualification": 7980201787,
+      "cuts": 6666389557,
+      "preparation": 3409403904
+    },
+    "wholeWorkflowWith25PercentMarginBytes": 9975252234,
+    "capBytes": 4294967296,
+    "limitPressure": false,
+    "scope": "Maximum measured source/restriction/road/history growth scales complete reference build, rebuild, qualification and cut peaks. Preparation is measured for this input. Sequential phases use their maximum, then 25% margin. With partial sources this is an early screening forecast, not full-region admission, measured graph RAM, a rigorous lower bound, or a memory guarantee."
+  }
+}

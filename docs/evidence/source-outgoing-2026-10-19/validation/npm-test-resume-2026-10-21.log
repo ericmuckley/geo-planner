@@ -1,0 +1,24 @@
+
+> test
+> tsx --test src/server/*.test.ts
+
+node:net:1918
+      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);
+                    ^
+
+Error: listen EPERM: operation not permitted /var/folders/rn/f31kgw4d1rdfl96p1fxlb9z00000gn/T/tsx-501/1290.pipe
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2119:5)
+    at file:///Users/eric/Documents/GitHub/geo-planner/node_modules/tsx/dist/cli.mjs:53:32174
+    at new Promise (<anonymous>)
+    at createIpcServer (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/tsx/dist/cli.mjs:53:32152)
+    at async file:///Users/eric/Documents/GitHub/geo-planner/node_modules/tsx/dist/cli.mjs:55:542 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/var/folders/rn/f31kgw4d1rdfl96p1fxlb9z00000gn/T/tsx-501/1290.pipe',
+  port: -1
+}
+
+Node.js v24.5.0

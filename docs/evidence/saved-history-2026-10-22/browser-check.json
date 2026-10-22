@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "url": "http://127.0.0.1:3000/",
+  "browser": "Chrome",
+  "flows": [
+    "Save default public San Diego 360-minute query; observe Cloud saved",
+    "Reload; cloud-owned query is still marked Cloud saved",
+    "Switch to connected provider, Load saved query; coarse model and 360 minutes restored",
+    "Replay saved query; filled coarse contour returns and result is Cloud saved",
+    "Fresh final reload; both cloud query/run summaries restore, with older local entries still Browser only"
+  ],
+  "existingLocalEntriesUploaded": false,
+  "hostedRoutingComputations": 0,
+  "console": "Only browser-extension requestProvider.js errors appeared in the inspected recent error log; no app-origin error was observed.",
+  "screenshot": "cloud-saved.jpg",
+  "scope": "Local browser smoke using the default public test origin. The screenshot excludes unrelated pre-existing locations. This is not a deployed-cloud UI check."
+}

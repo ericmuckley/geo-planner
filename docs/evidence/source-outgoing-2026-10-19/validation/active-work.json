@@ -1,0 +1,93 @@
+{
+  "calibrationJobRunning": false,
+  "caps": {
+    "cpus": 2,
+    "inputs": "read-only",
+    "memory": "4g",
+    "network": "none",
+    "swap": 0
+  },
+  "command": "node routing/source-outgoing-region.mjs --stage rebuild",
+  "finalEvidenceCollectorExecuted": true,
+  "finalResultVerifierExecuted": true,
+  "firstBuildResources": {
+    "peakBytes": 2592776192,
+    "pressureEvents": 0,
+    "swapBytes": 0,
+    "with25PercentMarginBytes": 3240970240
+  },
+  "firstBuildWorkerWallMs": 1494594.3407260056,
+  "hostedRoutingCalls": 0,
+  "identicalQualifiedArtifacts": [
+    "graph.json",
+    "import-audit.json",
+    "graph.csr",
+    "graph.csr.gz",
+    "barrier-roads.osm",
+    "barrier-source-samples.osm",
+    "uncertain-crossings-source.osm",
+    "scoped-fixtures.json"
+  ],
+  "largerRegionAdmitted": false,
+  "nextCommand": "Read docs/next-steps.md; create a separately versioned bounded qualification owner/lifetime diagnostic. No diagnostic is implemented yet.",
+  "output": "data/compact-pilot/source-outgoing-v1",
+  "ownerDiagnosticComplete": true,
+  "qualifiedAppGraph": "two-hour-region-v2",
+  "repeatComplete": true,
+  "repeatOutput": "data/compact-pilot/source-outgoing-v1-rebuild",
+  "repeatResources": {
+    "peakBytes": 2594222080,
+    "pressureEvents": 0,
+    "swapBytes": 0,
+    "with25PercentMarginBytes": 3242777600
+  },
+  "repeatStarted": true,
+  "repeatWorkerWallMs": 1555840.051665,
+  "resume": "All outgoing-index calibration producers/result/collector are complete. Do not rerun or edit frozen files. Verify saved evidence and health; larger coverage remains held. Next diagnostic has not started.",
+  "revisedAdmission": {
+    "capBytes": 4294967296,
+    "decision": "hold",
+    "eligibleForSeparateBuild": false,
+    "estimatedPhasePeaksBytes": {
+      "build": 7309179647,
+      "cuts": 6666389557,
+      "preparation": 3409403904,
+      "qualification": 7980201787,
+      "rebuild": 7313255685
+    },
+    "limitPressure": false,
+    "observedReferencePeaksBytes": {
+      "build": 2592776192,
+      "cuts": 2364760064,
+      "preparation": 3409403904,
+      "qualification": 2830807040,
+      "rebuild": 2594222080
+    },
+    "ratios": {
+      "candidateViaWayRules": 1.6071532001158413,
+      "historyCeiling": 2.8190553697490124,
+      "historyPrefixCeiling": 1.6345612772361446,
+      "roadCeiling": 2.817864342397047,
+      "sourceNodes": 2.699018462058176,
+      "sourceRelations": 1.6866075761832997,
+      "sourceWays": 2.133325423501256,
+      "wayEligibleDirectedSegments": 2.8085707957426345
+    },
+    "resourceScreenPasses": false,
+    "scalingRatio": 2.8190553697490124,
+    "scope": "Maximum measured source/restriction/road/history growth scales complete reference build, rebuild, qualification and cut peaks. Preparation is measured for this input. Sequential phases use their maximum, then 25% margin. With partial sources this is an early screening forecast, not full-region admission, measured graph RAM, a rigorous lower bound, or a memory guarantee.",
+    "sourceComplete": false,
+    "wholeWorkflowWith25PercentMarginBytes": 9975252234
+  },
+  "stage": "calibration-complete-six-hour-screen-held",
+  "tests": {
+    "build": "pass",
+    "check": "pass with existing warning",
+    "existingSkips": 9,
+    "routingPassed": 203,
+    "routingRun": 212,
+    "serverPassed": 20,
+    "typecheck": "pass"
+  },
+  "updatedAt": "2026-10-22T08:16:03.123226+00:00"
+}

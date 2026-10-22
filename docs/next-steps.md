@@ -1,32 +1,41 @@
 # Next steps for coding agents
 
-Updated October 19, 2026. Read [AGENTS.md](../AGENTS.md), [the handoff](agent-handoff.md), [current status](implementation-status.md) and [local development](local-development.md). The [six-hour preflight](six-hour-preflight.md) is complete: **hold the larger graph**. The two-hour app remains the qualified default. The owner profile and first storage calibration build passed. **No calibration job is running; the exact rebuild has not started.** Completed producer snapshots are frozen.
+Updated October 22, 2026. Read [AGENTS.md](../AGENTS.md), [the handoff](agent-handoff.md), [current status](implementation-status.md) and [local development](local-development.md).
 
-## 1. Finish the bounded memory calibration
+## Current direction
 
-1. Recover this workspace using the handoff's read-only checks. Preserve the dirty tree, ignored data, environment values, failed attempts and qualified app. Read the [memory follow-up](six-hour-preflight.md#memory-follow-up) and [partial evidence](evidence/source-outgoing-build-2026-10-19/README.md). Do not rerun the completed owner profile or first build.
-2. After checking Docker owners and that no repeat already exists, run `node routing/source-outgoing-region.mjs --stage rebuild`. This creates `data/compact-pilot/source-outgoing-v1-rebuild` from the same admitted two-hour inputs; expect about 25 minutes. Preserve two CPUs / 4 GiB / no swap / no network / read-only inputs, with all verification reads inside the complete phase. Do not edit snapshotted producers, even for formatting.
-3. Require all eight qualified graph/audit/source/CSR payloads to match in both builds, supplemental scoped fixtures to pass, and zero pressure/OOM/kill/swap with 25% margin. Then run `python3 -B routing/source_outgoing_result.py` to verify exact proof bindings and recompute the saved partial-source screen. The helper is prepared and syntax-checked, **not yet executed end to end**. It reuses independent/native/cut proof only on identical payloads; it does not rerun or remeasure those searches.
-4. Review the result before running `python3 -B data/resource-pilot/source-outgoing-validation-v1/collect-evidence.py`. This prepared collector has not run; it expects the completed repeat and `result.json`, refuses overwrite and writes a separate final evidence bundle. Update this queue, the existing report/handoff/status/progress and navigation with actual results. Keep the first-build evidence unchanged.
-5. If the revised screen still fails, record the dominant complete phase and choose the next bounded change from measured owners. Do not automatically begin another optimization or expand geography. The first build saves about 9.5%; it does not resolve the larger-region gate by itself. Complete-source demand is still unknown.
+Ship a simple fullstack Vercel app estimating long isochrones from arbitrary contiguous-US origins, accepting very coarse estimates first and refining later. The first model is implemented: a bundled, road-informed geographic grid, TypeScript search and filled contours, defaulting to six hours with ten-/twelve-hour presets. [Model, sources and evidence](coarse-estimator.md) explain the deliberate approximations. Nationwide smoke checks and local Vercel-handler execution pass; **cloud deployment and travel-time calibration remain unverified**.
 
-This task passes when exact repeat/proof binding, complete affected-phase measurements, meaningful fixtures, checks and revised admission are recorded. The original partial-source forecast is **9.40 GiB with margin**, versus 4 GiB; do not present it as a recomputed optimized result. Do not raise the cap, download bulk roads or launch the larger graph to bypass the hold. Preserve `exploratory-static-car-v3`, **`member-scoped-geometry-v1`**, IDs/order, restrictions, partial roads, barriers, Mexico and Otay uncertainty. Passing a partial screen still cannot admit complete six-hour coverage.
+Cloud saved-query persistence is implemented and verified against PostgreSQL. The reviewed additive migration is applied; browser-private cloud history, local fallback, backup/retry UI and model-aware load/replay work. [Local development](local-development.md#saved-history-api) explains ownership, data and checks. The user configured Vercel `DATABASE_URL` and ignored local `.env`; `.env.local` has no database override. Preserve credentials, routing settings, detailed producers and frozen evidence. Do not spend hosted routing quota for routine checks.
 
-## 2. Complete sources and qualify an admitted six-hour region
+## 1. Prove the app on a Vercel preview
 
-Once a credible resource path exists, reassess the saved official footprints/listings and acquire only the required dated neighbors. The five missing extracts total **1,469,272,053 bytes** in the observed October 14 listings, versus **3,417,392,464** for US West. Current polygons/listing availability are not dated completeness proofs. Pin actual acquired bytes/SHA-256, verify headers/publisher checksums where available, validate overlaps/references, retain Mexico and document every remaining gap. Existing cached roads have already been inventoried and need no repeat download.
+Run the local checks first:
 
-Use the full `data/coverage-pilot/six-hour-plan-v1/plan.json` envelope and `data/compact-pilot/two-hour-region-v2-cuts/cut-nodes.json`: 21,600,000 ms, all five sources, all 805 cut nodes / 1,173 history states, required directions, no cached-parent clipping. Restored topology can change prefixes. Do not modify the sealed `two_hour_frontier.plan()` helper or mistake its two-hour default/clipped result for the six-hour target. Re-census complete source inputs and forecast the entire retained disk/Linux construction workflow with margin before a separate graph attempt. Future host-native/browser resources remain separately unmeasured.
+```sh
+npm run check
+npm run typecheck
+npm test
+npm run db:verify
+npm run routing:verify:coarse
+npm run build
+npm run build:vercel
+npm run check:coarse:vercel
+npm run db:verify -- --vercel
+```
 
-Use fresh versioned source/preparation/build/rebuild/qualification/native/cut outputs. Existing wrappers include rejected attempts and hardcoded two-hour dependencies; fresh output names alone do not rebind them. Acceptance requires exact rebuild bytes, independent full/bounded/partial and native checks, twelve city directions, prior restrictions/barriers, every source-linked cut/history state, complete-phase resource gates, **zero detected cuts within six hours for the five selected sources**, then live API/browser checks before promotion. Zero cuts is not an all-origin/source-completeness or real-access certificate.
+`db:verify` uses the configured real database, creates one temporary test history, checks persistence/isolation/concurrent merges/retention and deletes only that generated test row. The `--vercel` variant uses the generated Vercel handler locally after the build. Both source and generated-handler checks pass against cloud PostgreSQL. Run them when database integration changes; they are not read-only health checks.
 
-Keep `coverageVerified: false` and clipping visible. Record successful and failed cases; separate HTTP round trip, native loop wall time, geometry and browser timings. Do not infer production p50/p95 from a few observations. Update the existing handoff/status/progress and detailed report/evidence at milestones.
+`check:coarse:vercel` invokes the generated handler locally with outbound fetches rejected; it is not a deployment. Use the existing TanStack Start/Nitro Vercel setup, without local Python or regional graphs. Coordinate the concrete preview deployment with the user's hosting project when available. Do not enable `/api/experiment` on Vercel. The current `0000_saved_history` migration is already applied to the configured cloud database; run reviewed migrations separately from the web build when deploying to a different database.
 
-## Deferred work and decisions
+Acceptance on the actual preview: GET `/api/estimate` ready; San Diego 6h, Denver 10h, New York 12h, rural and coastal origins produce filled approximate results; invalid geography/budgets fail clearly; a new query is marked Cloud saved and restores after reload; another browser cannot see it; history/export and map controls work; no routing-service requests occur. Record deployed revision, artifact bytes, observed cold/warm HTTP latency, response bytes, concurrent behavior and memory using target-provided measurements. Report observation scope and failures honestly. Do not call process RSS a peak or local invocation time cloud latency.
 
-- The goal is US-focused **10–12-hour** reachability and one fullstack TanStack Start app on Vercel. Worldwide expansion is deferred. The two-hour local engine is not deployed on Vercel; normal target builds and disabled-route packaging have been checked locally.
-- Keep the selected hosted main page at **60 minutes**, with its existing local key. Do not ask the user for that key again or spend hosted quota during offline experiments. Long-range native/WASM/cloud execution is a later measured task; no architecture decision needs repeating.
-- Filled experimental contours, national/10k-anchor preprocessing, caching, advanced routing research, PostGIS/POIs/public lands/elevation, shared persistence and road-distance/dual-budget semantics stay deferred. See the initial plan and [anchor proposal](archive/anchor-precomputation-proposal.md) when those are resumed.
-- Real crossing queues, documents and current eligibility remain unmodeled. Retain Mexico and Otay source warnings; model connectivity is not permission to cross.
+## 2. Refine the largest observed errors
 
-Earlier proposals, failed admission holds, memory milestones and deployment checklists are preserved in [historical handoff snapshots](archive/handoff-history-2026-10-19.txt) and [historical recipes](archive/historical-routing-recipes.md). They do not override this ordered task.
+Before adding complexity, compare a small set of familiar trips and barriers against an independent reference with explicit permission for any quota-bearing queries. Include mountains, lakes, remote origins and highway corridors. Current tests establish software/model behavior, not real driving-time accuracy. Keep the approximate label and distinguish display resolution from error.
+
+Improve missing links, unrealistic overland travel, assumed speeds or coastal cells as evidence warrants. A later OSM-derived compact network can replace this generalized grid behind the same API. Cross-device account access, sharing/import, inactive-history cleanup and public-write rate limits remain future work. Each anonymous browser currently gets at most twenty stored summaries, but there is no global owner-count cap. Traffic, exact turns, border access, POIs/public lands/elevation, PostGIS, caching, national anchor fields and advanced routing algorithms remain deferred until chosen as product priorities.
+
+## Preserved detailed-engine baseline
+
+The outgoing-index calibration is complete: both builds reproduce eight qualified payloads at 2.415/2.416 GiB, with proof binding/checks passing. The revised partial-source six-hour screen remains 9.290 GiB with margin versus 4 GiB: hold. The qualification owner/lifetime diagnostic never started and is parked. [Final calibration evidence](evidence/source-outgoing-2026-10-19/README.md), [six-hour report](six-hour-preflight.md) and [two-hour baseline](two-hour-region.md) retain the original measurements and recipes. Do not rerun completed producers as health checks.

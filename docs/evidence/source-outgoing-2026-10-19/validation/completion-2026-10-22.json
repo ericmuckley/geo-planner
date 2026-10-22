@@ -1,0 +1,103 @@
+{
+  "admission": {
+    "capBytes": 4294967296,
+    "decision": "hold",
+    "eligibleForSeparateBuild": false,
+    "estimatedPhasePeaksBytes": {
+      "build": 7309179647,
+      "cuts": 6666389557,
+      "preparation": 3409403904,
+      "qualification": 7980201787,
+      "rebuild": 7313255685
+    },
+    "limitPressure": false,
+    "observedReferencePeaksBytes": {
+      "build": 2592776192,
+      "cuts": 2364760064,
+      "preparation": 3409403904,
+      "qualification": 2830807040,
+      "rebuild": 2594222080
+    },
+    "ratios": {
+      "candidateViaWayRules": 1.6071532001158413,
+      "historyCeiling": 2.8190553697490124,
+      "historyPrefixCeiling": 1.6345612772361446,
+      "roadCeiling": 2.817864342397047,
+      "sourceNodes": 2.699018462058176,
+      "sourceRelations": 1.6866075761832997,
+      "sourceWays": 2.133325423501256,
+      "wayEligibleDirectedSegments": 2.8085707957426345
+    },
+    "resourceScreenPasses": false,
+    "scalingRatio": 2.8190553697490124,
+    "scope": "Maximum measured source/restriction/road/history growth scales complete reference build, rebuild, qualification and cut peaks. Preparation is measured for this input. Sequential phases use their maximum, then 25% margin. With partial sources this is an early screening forecast, not full-region admission, measured graph RAM, a rigorous lower bound, or a memory guarantee.",
+    "sourceComplete": false,
+    "wholeWorkflowWith25PercentMarginBytes": 9975252234
+  },
+  "baselineGitHead": "289d08e",
+  "buildAndResultCompletedLocalDate": "2026-10-21",
+  "calibrationAccepted": true,
+  "calibrationJobRunning": false,
+  "completedAt": "2026-10-22T08:16:03.123226+00:00",
+  "coverageVerified": false,
+  "evidenceDateScope": "Directory retains October 19 experiment start date; exact repeat/result completed October 21; final recovery/handoff/collection October 22.",
+  "finalEvidenceDirectory": "docs/evidence/source-outgoing-2026-10-19",
+  "finalHandoffLocalDate": "2026-10-22",
+  "freeDiskBytesAfterRepeat": 178918129664,
+  "freshChecks": {
+    "build": "pass",
+    "check": "pass with existing database warning",
+    "existingSkips": 9,
+    "routingPassed": 203,
+    "routingRun": 212,
+    "serverPassed": 20,
+    "typecheck": "pass",
+    "vercelTargetBuild": "not repeated"
+  },
+  "gitCleanAtRecovery": true,
+  "graphIdentity": "52b34545379adf83ad09175e7d29b5c445b7cf4193fee0f9b5d10afe0904fda1",
+  "largerGraphBuilt": false,
+  "newChangesCommitted": false,
+  "nextAction": "Bounded versioned qualification owner/lifetime diagnostic; not implemented or started. Candidate numeric label storage remains conditional on owner measurements.",
+  "pendingHelpers": {
+    "data/resource-pilot/source-outgoing-validation-v1/collect-evidence.py": {
+      "checkpointSha256": "f9b945a5cb52d6d1b4ff153f28c25989d7a3a824500d9fd0ef9a0d498757123b",
+      "currentSha256": "f9b945a5cb52d6d1b4ff153f28c25989d7a3a824500d9fd0ef9a0d498757123b",
+      "unchanged": true
+    },
+    "routing/source_outgoing_result.py": {
+      "checkpointSha256": "1bf3bdd689a7c8f52c20e7a14bbe56d3c1a55200eba3ff572ce084000b7b2932",
+      "currentSha256": "1bf3bdd689a7c8f52c20e7a14bbe56d3c1a55200eba3ff572ce084000b7b2932",
+      "unchanged": true
+    }
+  },
+  "publicApiCalls": 0,
+  "recovery": {
+    "browserRoutingRerun": false,
+    "finalHealth": "documented npm run dev:experiment launcher restored both; final GETs ready on same identity with zero provider calls",
+    "initialHealth": "ready on qualified graph",
+    "laterHealth": "app/worker listeners disappeared; connection error and empty attempted health capture preserved"
+  },
+  "regionalProofsReusedOnIdenticalPayloads": true,
+  "regionalSearchesRerun": false,
+  "repeatProcessExitCode": 0,
+  "resources": {
+    "build": {
+      "peakBytes": 2592776192,
+      "pressureEvents": 0,
+      "swapBytes": 0,
+      "with25PercentMarginBytes": 3240970240
+    },
+    "rebuild": {
+      "peakBytes": 2594222080,
+      "pressureEvents": 0,
+      "swapBytes": 0,
+      "with25PercentMarginBytes": 3242777600
+    }
+  },
+  "sourceAcquisition": false,
+  "workerWallMs": {
+    "build": 1494594.3407260056,
+    "rebuild": 1555840.051665
+  }
+}

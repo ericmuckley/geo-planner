@@ -12,8 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ExperimentRouteImport } from './routes/experiment'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as ApiEstimateRouteImport } from './routes/api.estimate'
 import { Route as ApiExperimentRouteImport } from './routes/api.experiment'
 import { Route as ApiReachabilityRouteImport } from './routes/api.reachability'
+import { Route as ApiSavedRunsRouteImport } from './routes/api.saved-runs'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -30,6 +32,11 @@ const McpRoute = McpRouteImport.update({
   path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiEstimateRoute = ApiEstimateRouteImport.update({
+  id: '/api/estimate',
+  path: '/api/estimate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiExperimentRoute = ApiExperimentRouteImport.update({
   id: '/api/experiment',
   path: '/api/experiment',
@@ -40,50 +47,78 @@ const ApiReachabilityRoute = ApiReachabilityRouteImport.update({
   path: '/api/reachability',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSavedRunsRoute = ApiSavedRunsRouteImport.update({
+  id: '/api/saved-runs',
+  path: '/api/saved-runs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/experiment': typeof ExperimentRoute
   '/mcp': typeof McpRoute
+  '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
   '/api/reachability': typeof ApiReachabilityRoute
+  '/api/saved-runs': typeof ApiSavedRunsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/experiment': typeof ExperimentRoute
   '/mcp': typeof McpRoute
+  '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
   '/api/reachability': typeof ApiReachabilityRoute
+  '/api/saved-runs': typeof ApiSavedRunsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/experiment': typeof ExperimentRoute
   '/mcp': typeof McpRoute
+  '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
   '/api/reachability': typeof ApiReachabilityRoute
+  '/api/saved-runs': typeof ApiSavedRunsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/experiment' | '/mcp' | '/api/experiment' | '/api/reachability'
+    | '/'
+    | '/experiment'
+    | '/mcp'
+    | '/api/estimate'
+    | '/api/experiment'
+    | '/api/reachability'
+    | '/api/saved-runs'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experiment' | '/mcp' | '/api/experiment' | '/api/reachability'
+  to:
+    | '/'
+    | '/experiment'
+    | '/mcp'
+    | '/api/estimate'
+    | '/api/experiment'
+    | '/api/reachability'
+    | '/api/saved-runs'
   id:
     | '__root__'
     | '/'
     | '/experiment'
     | '/mcp'
+    | '/api/estimate'
     | '/api/experiment'
     | '/api/reachability'
+    | '/api/saved-runs'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ExperimentRoute: typeof ExperimentRoute
   McpRoute: typeof McpRoute
+  ApiEstimateRoute: typeof ApiEstimateRoute
   ApiExperimentRoute: typeof ApiExperimentRoute
   ApiReachabilityRoute: typeof ApiReachabilityRoute
+  ApiSavedRunsRoute: typeof ApiSavedRunsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -109,6 +144,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/estimate': {
+      id: '/api/estimate'
+      path: '/api/estimate'
+      fullPath: '/api/estimate'
+      preLoaderRoute: typeof ApiEstimateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/experiment': {
       id: '/api/experiment'
       path: '/api/experiment'
@@ -123,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiReachabilityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/saved-runs': {
+      id: '/api/saved-runs'
+      path: '/api/saved-runs'
+      fullPath: '/api/saved-runs'
+      preLoaderRoute: typeof ApiSavedRunsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -130,8 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ExperimentRoute: ExperimentRoute,
   McpRoute: McpRoute,
+  ApiEstimateRoute: ApiEstimateRoute,
   ApiExperimentRoute: ApiExperimentRoute,
   ApiReachabilityRoute: ApiReachabilityRoute,
+  ApiSavedRunsRoute: ApiSavedRunsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

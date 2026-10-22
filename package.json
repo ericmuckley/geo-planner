@@ -76,7 +76,11 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:pull": "drizzle-kit pull",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "db:verify": "node --import tsx scripts/verify-saved-history.ts",
+    "data:coarse": "python3 -B scripts/build-coarse-grid.py",
+    "routing:verify:coarse": "node --import tsx scripts/verify-coarse.ts",
+    "check:coarse:vercel": "node scripts/verify-coarse-vercel.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
