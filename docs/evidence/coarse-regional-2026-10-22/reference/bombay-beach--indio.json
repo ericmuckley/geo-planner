@@ -1,0 +1,255 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.3503,
+        "lon": -115.7297
+      },
+      {
+        "lat": 33.7206,
+        "lon": -116.2156
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.3503,
+          "lon": -115.7297,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.7206,
+          "lon": -116.2156,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive north on E Avenue.",
+              "verbal_succinct_transition_instruction": "Drive north. Then Turn left onto 4th Street.",
+              "verbal_pre_transition_instruction": "Drive north on E Avenue. Then Turn left onto 4th Street.",
+              "verbal_post_transition_instruction": "Continue for 40 meters.",
+              "street_names": [
+                "E Avenue"
+              ],
+              "bearing_after": 0,
+              "time": 4.031,
+              "length": 0.039,
+              "cost": 3.527,
+              "begin_shape_index": 0,
+              "end_shape_index": 1,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto 4th Street.",
+              "verbal_transition_alert_instruction": "Turn left onto 4th Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto 4th Street.",
+              "verbal_post_transition_instruction": "Continue for 400 meters.",
+              "street_names": [
+                "4th Street"
+              ],
+              "bearing_before": 0,
+              "bearing_after": 270,
+              "time": 46.661,
+              "length": 0.4,
+              "cost": 66.59,
+              "begin_shape_index": 1,
+              "end_shape_index": 5,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto A Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto A Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto A Avenue.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "A Avenue"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 0,
+              "time": 82.059,
+              "length": 0.777,
+              "cost": 85.43,
+              "begin_shape_index": 5,
+              "end_shape_index": 13,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Route 111/CA 111 North.",
+              "verbal_transition_alert_instruction": "Turn left onto Route 1 11.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Route 1 11, California 1 11 North.",
+              "verbal_post_transition_instruction": "Continue for 58 kilometers.",
+              "street_names": [
+                "Route 111",
+                "CA 111 North"
+              ],
+              "bearing_before": 358,
+              "bearing_after": 247,
+              "time": 2723.493,
+              "length": 58.048,
+              "cost": 2437.84,
+              "begin_shape_index": 13,
+              "end_shape_index": 388,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Grapefruit Boulevard/CA 111 Old.",
+              "verbal_transition_alert_instruction": "Turn right onto Grapefruit Boulevard.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Grapefruit Boulevard, California 1 11 Old.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "Grapefruit Boulevard",
+                "CA 111 Old"
+              ],
+              "bearing_before": 273,
+              "bearing_after": 329,
+              "time": 18.489,
+              "length": 0.335,
+              "cost": 19.131,
+              "begin_shape_index": 388,
+              "end_shape_index": 395,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right toward GRAPEFRUIT BLVD/HWY 111.",
+              "verbal_transition_alert_instruction": "Bear right toward GRAPEFRUIT BLVD.",
+              "verbal_succinct_transition_instruction": "Bear right toward GRAPEFRUIT BLVD, HWY 1 11.",
+              "verbal_pre_transition_instruction": "Bear right toward GRAPEFRUIT BLVD, HWY 1 11.",
+              "verbal_post_transition_instruction": "Continue for 5 kilometers.",
+              "street_names": [
+                "CA 111 Old"
+              ],
+              "bearing_before": 325,
+              "bearing_after": 332,
+              "time": 245.641,
+              "length": 4.923,
+              "cost": 286.334,
+              "begin_shape_index": 395,
+              "end_shape_index": 489,
+              "sign": {},
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right.",
+              "verbal_transition_alert_instruction": "Turn right.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Keep left at the fork.",
+              "verbal_pre_transition_instruction": "Turn right. Then Keep left at the fork.",
+              "verbal_post_transition_instruction": "Continue for 40 meters.",
+              "bearing_before": 323,
+              "bearing_after": 53,
+              "time": 8.844,
+              "length": 0.038,
+              "cost": 87.865,
+              "begin_shape_index": 489,
+              "end_shape_index": 494,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left at the fork.",
+              "verbal_transition_alert_instruction": "Keep left at the fork.",
+              "verbal_pre_transition_instruction": "Keep left at the fork. Then Your destination will be on the left.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_before": 130,
+              "bearing_after": 121,
+              "time": 2.094,
+              "length": 0.011,
+              "cost": 6.117,
+              "begin_shape_index": 494,
+              "end_shape_index": 495,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 121,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 495,
+              "end_shape_index": 495,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 33.350299,
+            "min_lon": -116.216076,
+            "max_lat": 33.720686,
+            "max_lon": -115.72961,
+            "time": 3131.315,
+            "length": 64.573,
+            "cost": 2992.837
+          },
+          "shape": "whpr~@rkqv{E_U?AjbAAdbAEfcA@laAmpBC}WA{\\?c^A{XAmjAAg^A{gBbCrk@h|BbOny@~O|oAnMxbBfCzq@rBxz@^paAuA`aAkDjy@yCdj@kGfy@sMzjAgQpaAei@lmC_t@voDkHp\\mTz_A{ZhkA}Nfh@cQrk@qZz}@o\\d}@{_@j`Acf@rfAu[hp@{\\do@oUpb@m\\`k@sYnd@ui@hy@idErgGm~PreWok@hv@gr@t{@k`@|c@}_@pa@yYpZaX~VwZ`Ye^n[aZdVof@n`@q^xWu`@fXeb@dYsb@`WqyHjjEyIdFqStLe]jS{_@rV_XzPe_@xWm^lXa\\pVmm@zf@em@ri@eh@pf@az@h{@uv@p|@ofAtuAstLbnOixN`_RkpCpnDuzBvoCmc@zc@yR~Rus@vo@us@pm@}_A`t@{u@`h@uh@z[uv@zc@ebBd~@klAvp@w}Id~Em`Ath@qrHzyDg`GzbDiOlIilBtdAk|@rh@yz@`m@y^zX_OtKkgAn_Auj@no@sj@j}@w_HnwMaaIrhOezAhtCi_BnyCkyDrmHwqJzyQw`AbaBc~@voAy}@jfAom@dn@gwA`rA{gHraFkeM|fJgpAd`AuB~Aog@n_@gjBfuAg^jW_BjA}q@vf@ioBf_BwgC`hCiDlDwpAtrAwgDxgDgpDptD_~@h|@et@ph@ko@~_@mbBn`Am[nU{KzIo_@ba@svAt_Bim@lcAmk@llAeEpIeJfRkJnSoIfSiHbS{GdTaIfZkD`Q}C|PkE|YkJzs@gSn}AcH`c@aGnYsG|WyGnUiHlTeIhTkJzTuJtSmKzR}KhR_LfQeLdOmL~NoKxLeFhFoiAjiAu`D``D_iFnhFkq@fo@wiAblAu_@|_@e_@fa@eMdPgWh\\mY~^oVda@a[tk@sWri@}CxHeQ`c@w@jBiErMaTpo@sTtw@qAvEeOfr@aKhk@mFl\\wDlU_LvbAyGn}@kEvr@{B~u@i@jReCd`AwCjfA{OtlGmGreCeHffCqQxpGc@hO_O|_F_@zLMpDk@fR_GpnC}EtyBEzBuC|~AoAjr@qCxaAeAhb@qCbjA{Bj{@gId}CEpAsN~pGE`B}P|hGyProGgJtpD}R||Hs@rW]dMQhJyXnvGsW`jGw`@`pEsi@riDus@ldDg{@t~Cye@luAueCvaHifAl{C_r@jtBiUfr@q{AtbFqoLvg^yaBlvEen@zwAcx@htAuv@vhAcsAjzAulFnoEsl@tf@{gJxxHwBpBiPfOoOlNkCdCsGfFyNhLsYjU_UpQyD~C}D`D_@\\co@`i@idHp}Fat@fo@y_EjdD_xEn|DisCb_CehDlrCgUhQmd@~[a[rVs\\zVihCvqBsiBr{A{a@r\\wAVwdB`uAsi@pc@s_@|ZcPtMgA|@aHxFqCzBe~@zu@gqA`hA}pAbiAoApBilD|uCkc@h^oBjBeUfRs|CvjCso@jd@i@^yzDpzCs^zVglMjrKg}GxxFwg@`_@iUfPgLhI}e@p_@iZrVkIhHkHtFwFlF_HtFgWdTww@`p@_oEttDk~@xt@sGrF_DzBcT~Pmw@vo@{pBt`BqeBpxAw\\rYuK`JyFtEgH`G}M`Mex@|o@}s@rl@{AlAsAjAeWtT{IvHkClDiKnN_h@lm@il@ji@YVwD~CsJbIsx@to@ix@lo@mvCf_CikBhuAmhFfjEg{BdlBsTlQc]tXgG`FaG~E_LhJsmDzvCcx@tp@a`@v[ofDtpCiFjEckGriFom@~g@ie@v`@kp@nj@qFtEkGjFuHpGuFvEyBhBmb@h^qFtEoeBpyAub@n^si@rd@eNnL{r@`m@g_C~pB{Cv@c@HcG~Ekt@`m@op@tj@oGvFyW`T{ApA}]dZgu@xn@s@l@cDjCuV~Rsh@~b@ax@rp@gCtBoQdOsAfA}HrGw]nY_GzEc\\rXyNtLGr@CjBaYvQge@f`@w^tZ{GvFsS~PwIpHaQlNgNtHqVnSwTtPmOlKgL~GuIpGyQrQeNtKwJjIeg@bb@_LpJaW|SuiA``AkJlH_wC~cCwqB~bBex@`q@{x@po@}MbL{c@j_@oFlEmJxHuChCcEnDmcAx|@sq@dk@kdBpwA}qBjcBmFlEaoA|dAepAteAsAhA_BpAgFjEsm@xg@eUpRaCpBsQjOcUvScU~TyCxC{J`KuC`DmU~VwH~IsBbCaGnHgDfEsJ|L}CdEuJnMoOhTyEpH_HrK{CzEcD`FeEtGsJhPiIxNsKpReClE}CbGqKrSySzd@kd@vbAUf@uAzCaAtBwFbMaHpOoNp[qJhTeIrQuFfMgr@`}AeLhW{EtKaEdJyPj`@gp@ryAuBxEgMhYuH|PiGjNk@pAgRrb@_@p@qB~D}DvH_LdPkH|HsItGyPlNsPzNaB{CiAyBMsBj@cCdCeChBsE"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 33.350299,
+        "min_lon": -116.216076,
+        "max_lat": 33.720686,
+        "max_lon": -115.72961,
+        "time": 3131.315,
+        "length": 64.573,
+        "cost": 2992.837
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

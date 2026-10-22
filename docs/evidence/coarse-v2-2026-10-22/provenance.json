@@ -1,0 +1,61 @@
+{
+  "baseCommit": "0ffd6c8eeb2b78a68e66c4f704cd46c7b86e309c",
+  "workingTreeChange": "Uncommitted v2 model and diagnostics; no deployment by this session",
+  "artifact": {
+    "path": "src/server/data/coarse-grid-v2.json",
+    "bytes": 4460777,
+    "sha256": "76d3216310c8c776eab3385b077a1ff6ab85c1f72f542e9a3ff4c7fee852c063",
+    "repeatSha256": "76d3216310c8c776eab3385b077a1ff6ab85c1f72f542e9a3ff4c7fee852c063"
+  },
+  "baselineArtifactSha256": "7dfd3b30965c21a57fcca408a97a4d95e455bda33d09ecc7a29953346c23d8c4",
+  "referenceResponses": {
+    "path": "docs/evidence/coarse-quality-2026-10-22/comparison.json",
+    "sha256": "90dce82c094f41c13de37065ca677650ecc3fe36187008379bcc48950470c96c",
+    "freshRequestsInV2Work": 0
+  },
+  "sourceSnapshots": {
+    "scripts/build-coarse-grid-v2.py": "e4cddabf99d237b0a90f18798b0b7da4eea49610541caada62aa83c808e2697e",
+    "scripts/compare-coarse-v2.ts": "5b84da310df536a0b2468b57e9a4af348bf46bdd90a3cd728bcbed518b5647f5",
+    "src/server/coarse-grid.ts": "5a8c92a257c345800de51cca98dab296f94f71d589657a8e471004cdc197b016",
+    "src/server/coarse-data.server.ts": "d0747ef4d24a5694e04e92ba29975f5d9329075963d22cc0e06cb50dc65dc2c7",
+    "src/server/coarse-estimate.server.ts": "2b29d5009e2d77336538d26e353e51f1f2d040ed001e0ee00f7daa08b1df27a6",
+    "src/server/coarse-estimate.test.ts": "a968a20edc5e057ae5c9e912929ec7c7255e118217da3b7916aac7ddc71fe680",
+    "scripts/coarse_data_test.py": "c64b1183607b40a4bae601edcfaab67f5c1413eca87957340f8dd2e8e29a746f",
+    "scripts/verify-coarse.ts": "cb65b1bad23f5bfcdceb556d0977b5550958121a0eaaf972ebed7dde696f7236",
+    "scripts/verify-coarse-vercel.mjs": "63cd8eecb90c49268b2e4a9368ff066e2a4159cf83ddcbdf491ae1e85fcc691c"
+  },
+  "sourceBindingScope": "Observational snapshots identifying this run, not freezes on future product changes. Preserve evidence records.",
+  "attempts": [
+    {
+      "attempt": "rejected-naive",
+      "localOnlyArtifact": "data/coarse-quality/grid-v2a.json",
+      "bytes": 3642550,
+      "sha256": "e0a2555365d9ccf8238f3e6336fbb94d7eedd46880d820049055ff600e2fd0af",
+      "includedInFreshClone": false
+    },
+    {
+      "attempt": "original-speeds-initial",
+      "localOnlyArtifact": "data/coarse-quality/grid-v2b.json",
+      "bytes": 4460786,
+      "sha256": "d961b59dc4bfe4e8fa665d66473546acaa40546f91bd456334f445817ed1f708",
+      "includedInFreshClone": false
+    }
+  ],
+  "naiveRejection": {
+    "reason": "Within-cell road switches skipped physical distance. Attractive reference differences are invalid.",
+    "sanDiegoToLosAngelesMinutes": 111.92834195993365,
+    "originCellCenter": [
+      -117.15,
+      32.75
+    ],
+    "destinationCellCenter": [
+      -118.25,
+      34.05
+    ],
+    "centerChordKm": 176.97969918955073,
+    "originAttachmentMinutes": 9.486675293265762,
+    "physicalMinimumAtMaximum90KphMinutes": 127.47314141963291
+  },
+  "routingQuotaCalls": 0,
+  "databaseIntegration": "Unchanged; live write integration not rerun. Normal browser computation automatically saved its public San Diego test summary."
+}

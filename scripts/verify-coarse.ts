@@ -40,6 +40,10 @@ for (const [name, lat, lon] of [
 		const result = resultSchema.parse(JSON.parse(text));
 		const cells = result.metadata.approximation?.reachedCells ?? 0;
 		assert.ok(cells >= previousCount);
+		// The ferry-only island may stay isolated. Road-connected sample origins
+		// must not silently collapse to a few cells after attachment changes.
+		if (name !== "Nantucket")
+			assert.ok(cells >= 10, `Degenerate connected-origin estimate: ${name}`);
 		assert.ok(Buffer.byteLength(text) < 1_000_000);
 		previousCount = cells;
 		samples.push({

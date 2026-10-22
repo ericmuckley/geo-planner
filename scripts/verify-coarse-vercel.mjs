@@ -78,6 +78,7 @@ for (const [name, lat, lon, minutes] of [
 	assert.ok(Buffer.byteLength(text) < 1_000_000);
 	const body = JSON.parse(text);
 	assert.equal(body.metadata.engine, "coarse");
+	assert.equal(body.metadata.engineVersion, "coarse-road-grid-v3");
 	assert.ok(body.contours.features[0].geometry.coordinates.length);
 	samples.push({
 		name,
@@ -118,7 +119,7 @@ for (const entry of await readdir(".vercel/output/static/assets")) {
 		`Secret embedded in client file: ${entry}`,
 	);
 	assert.ok(
-		!content.includes("natural-earth-5.1.2-road-grid-v1"),
+		!content.includes("natural-earth-5.1.2-road-grid-"),
 		`Server dataset in client asset: ${entry}`,
 	);
 }

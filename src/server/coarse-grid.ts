@@ -1,5 +1,6 @@
 import type { Origin } from "../lib/reachability";
 import { cellContours, containsPolygon } from "./coarse-contours";
+import { landConnection } from "./coarse-geography";
 
 export type GridData = {
 	bounds: number[];
@@ -10,6 +11,11 @@ export type GridData = {
 	land: Uint8Array;
 	traversable: Uint8Array;
 	links: Uint8Array;
+	roadDeciseconds?: Uint16Array;
+	displayLand?: Uint8Array;
+	anchorOffsets?: Int16Array;
+	shoreLinks?: Uint8Array;
+	roadAccess?: number[][];
 	boundary: number[][][][];
 	lakes: number[][][][];
 };
@@ -24,6 +30,17 @@ export function distanceKm(a: number[], b: number[]) {
 			Math.cos(b[1] * radians) *
 			Math.sin(lon / 2) ** 2;
 	return 12_742 * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+
+export function gridPosition(grid: GridData, cell: number) {
+	return [
+		grid.bounds[0] +
+			((cell % grid.width) + 0.5) * grid.step +
+			(grid.anchorOffsets?.[cell * 2] ?? 0) / 100000,
+		grid.bounds[1] +
+			(Math.floor(cell / grid.width) + 0.5) * grid.step +
+			(grid.anchorOffsets?.[cell * 2 + 1] ?? 0) / 100000,
+	];
 }
 
 function nearBoundary(point: [number, number], polygon: number[][][]) {
@@ -115,6 +132,61 @@ const directions = [
 	[1, -1],
 ];
 
+export function gridAttachments(
+	grid: GridData,
+	origin: Origin,
+): Array<{ cell: number; distanceKm: number }> {
+	const x = Math.floor((origin.lon - grid.bounds[0]) / grid.step);
+	const y = Math.floor((origin.lat - grid.bounds[1]) / grid.step);
+	if (x < 0 || x >= grid.width || y < 0 || y >= grid.height) return [];
+	const cell = y * grid.width + x;
+	const point = [origin.lon, origin.lat];
+	const candidate = (target: number) => ({
+		cell: target,
+		distanceKm: distanceKm(point, gridPosition(grid, target)),
+	});
+	if (!grid.shoreLinks) return [candidate(cell)];
+	const supported = (attachment: { cell: number; distanceKm: number }) =>
+		grid.traversable[attachment.cell] &&
+		landConnection(
+			grid,
+			point,
+			gridPosition(grid, attachment.cell),
+			1 / Math.max(attachment.distanceKm, 1),
+		);
+	const own = candidate(cell);
+	if (supported(own)) return [own];
+	// An adjacent representative is usable only with a continuous land connection.
+	// A known island cannot attach across even a narrow channel to the mainland.
+	const neighborCells = directions.flatMap(([dx, dy]) => {
+		const xx = x + dx,
+			yy = y + dy;
+		return xx >= 0 && xx < grid.width && yy >= 0 && yy < grid.height
+			? [yy * grid.width + xx]
+			: [];
+	});
+	const nearby = neighborCells.map(candidate).filter(supported);
+	const cells = new Set([cell, ...neighborCells]);
+	for (const [target, lon, lat, roadKm] of grid.roadAccess ?? []) {
+		if (!cells.has(target)) continue;
+		const localKm = distanceKm(point, [lon, lat]);
+		if (landConnection(grid, point, [lon, lat], 1 / Math.max(localKm, 1)))
+			nearby.push({ cell: target, distanceKm: localKm + roadKm });
+	}
+	const best = new Map<number, { cell: number; distanceKm: number }>();
+	for (const attachment of nearby)
+		if (
+			attachment.distanceKm <
+			(best.get(attachment.cell)?.distanceKm ?? Infinity)
+		)
+			best.set(attachment.cell, attachment);
+	return [...best.values()].sort((a, b) => a.distanceKm - b.distanceKm);
+}
+
+export function attachGrid(grid: GridData, origin: Origin) {
+	return gridAttachments(grid, origin)[0];
+}
+
 export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 	const started = performance.now();
 	const point: [number, number] = [origin.lon, origin.lat];
@@ -144,17 +216,25 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 	if (x < 0 || x >= width || y < 0 || y >= height)
 		throw new RangeError("Choose a location within the contiguous US grid.");
 	const seed = y * width + x;
-	// A verified coastal/island origin makes its own cell land for this query.
-	// Never move an island origin to the mainland or mutate the shared dataset.
-	const land = grid.land[seed] ? grid.land : grid.land.slice();
-	const traversable = grid.traversable[seed]
-		? grid.traversable
-		: grid.traversable.slice();
-	land[seed] = traversable[seed] = 1;
-	const attachmentKm = distanceKm(point, center(x, y));
-	const initialCost = (attachmentKm / grid.localSpeedKph) * 60;
-	labels[seed] = initialCost;
-	queue.push(seed, initialCost);
+	// Retain legacy seed activation for v1/v2 comparison. V3 uses checked input
+	// access and keeps shared land/traversal masks unchanged.
+	const land =
+		grid.shoreLinks || grid.land[seed] ? grid.land : grid.land.slice();
+	const traversable =
+		grid.shoreLinks || grid.traversable[seed]
+			? grid.traversable
+			: grid.traversable.slice();
+	if (!grid.shoreLinks) land[seed] = traversable[seed] = 1;
+	const attachments = gridAttachments(grid, origin);
+	const attachmentKm = attachments[0]?.distanceKm ?? 0;
+	// Seed every supported fallback: the nearest land patch may be a dead end
+	// while a slightly longer explicit bridge access reaches the road network.
+	for (const attachment of attachments) {
+		const initialCost = (attachment.distanceKm / grid.localSpeedKph) * 60;
+		labels[attachment.cell] = initialCost;
+		queue.push(attachment.cell, initialCost);
+	}
+	if (!attachments.length) labels[seed] = 0; // Display an isolated input cell without expanding it.
 	// Distances depend on latitude and direction, not longitude. Compute once per row.
 	const lengths = Array.from({ length: height }, (_, row) =>
 		directions.map(([dx, dy]) =>
@@ -176,14 +256,29 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 			if (xx < 0 || xx >= width || yy < 0 || yy >= height) continue;
 			const target = yy * width + xx;
 			if (!traversable[target]) continue;
-			const roadSpeed = d < 4 ? links[cell * 4 + d] : links[target * 4 + d - 4];
+			const link = d < 4 ? cell * 4 + d : target * 4 + d - 4;
+			const roadSpeed = links[link];
 			const overland =
-				land[cell] &&
-				land[target] &&
-				(!dx || !dy || (land[cy * width + xx] && land[yy * width + cx]));
-			const speed = Math.max(roadSpeed, overland ? grid.localSpeedKph : 0);
-			if (!speed) continue;
-			const next = cost + (lengths[cy][d] / speed) * 60;
+				!!(
+					(grid.shoreLinks?.[Math.floor(link / 4)] ?? 0) &
+					(1 << (link % 4))
+				) ||
+				(land[cell] &&
+					land[target] &&
+					(!dx || !dy || (land[cy * width + xx] && land[yy * width + cx])));
+			const roadMinutes = grid.roadDeciseconds
+				? (grid.roadDeciseconds[link] || Infinity) / 600
+				: roadSpeed
+					? (lengths[cy][d] / roadSpeed) * 60
+					: Infinity;
+			const localMinutes = overland
+				? ((grid.anchorOffsets
+						? distanceKm(gridPosition(grid, cell), gridPosition(grid, target))
+						: lengths[cy][d]) /
+						grid.localSpeedKph) *
+					60
+				: Infinity;
+			const next = cost + Math.min(roadMinutes, localMinutes);
 			if (next <= budget && next < labels[target]) {
 				labels[target] = next;
 				queue.push(target, next);
@@ -194,7 +289,10 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 	const mask = new Uint8Array(width * height);
 	let reachedCells = 0;
 	for (let i = 0; i < labels.length; i++) {
-		if (land[i] && labels[i] <= budget) {
+		if (
+			(i === seed && grid.shoreLinks) ||
+			((i === seed || (grid.displayLand ?? land)[i]) && labels[i] <= budget)
+		) {
 			mask[i] = 1;
 			reachedCells++;
 		}

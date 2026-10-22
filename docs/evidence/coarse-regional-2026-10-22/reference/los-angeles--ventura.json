@@ -1,0 +1,375 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      {
+        "lat": 34.2746,
+        "lon": -119.229
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 34.0522,
+          "lon": -118.2437,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 34.2746,
+          "lon": -119.229,
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive northwest on West 1st Street.",
+              "verbal_succinct_transition_instruction": "Drive northwest.",
+              "verbal_pre_transition_instruction": "Drive northwest on West 1st Street.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "West 1st Street"
+              ],
+              "bearing_after": 310,
+              "time": 60.736,
+              "length": 0.605,
+              "cost": 119.299,
+              "begin_shape_index": 0,
+              "end_shape_index": 29,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto North Grand Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto North Grand Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto North Grand Avenue.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "North Grand Avenue"
+              ],
+              "bearing_before": 307,
+              "bearing_after": 30,
+              "time": 46.431,
+              "length": 0.614,
+              "cost": 81.543,
+              "begin_shape_index": 29,
+              "end_shape_index": 57,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 19,
+              "instruction": "Turn left to take the US 101 North ramp toward Hollywood Freeway North.",
+              "verbal_transition_alert_instruction": "Turn left to take the U.S. 1 o1 North ramp.",
+              "verbal_pre_transition_instruction": "Turn left to take the U.S. 1 o1 North ramp toward Hollywood Freeway North. Then Keep left to take U.S. 1 o1 North.",
+              "bearing_before": 41,
+              "bearing_after": 313,
+              "time": 6.144,
+              "length": 0.023,
+              "cost": 38.382,
+              "begin_shape_index": 57,
+              "end_shape_index": 59,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "US 101 North",
+                    "consecutive_count": 2
+                  },
+                  {
+                    "text": "I 110"
+                  },
+                  {
+                    "text": "CA 110"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Hollywood Freeway North"
+                  }
+                ]
+              },
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take US 101 North.",
+              "verbal_transition_alert_instruction": "Keep left to take U.S. 1 o1 North.",
+              "verbal_pre_transition_instruction": "Keep left to take U.S. 1 o1 North.",
+              "verbal_post_transition_instruction": "Continue for 16 kilometers.",
+              "street_names": [
+                "US 101 North"
+              ],
+              "bearing_before": 313,
+              "bearing_after": 283,
+              "time": 649.497,
+              "length": 16.023,
+              "cost": 813.933,
+              "begin_shape_index": 59,
+              "end_shape_index": 402,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "US 101 North",
+                    "consecutive_count": 2
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 13 onto US 101 North toward Ventura.",
+              "verbal_transition_alert_instruction": "Take exit 13.",
+              "verbal_pre_transition_instruction": "Take exit 13 onto U.S. 1 o1 North toward Ventura.",
+              "verbal_post_transition_instruction": "Continue for 85 kilometers.",
+              "street_names": [
+                "US 101 North",
+                "Ventura Freeway"
+              ],
+              "bearing_before": 312,
+              "bearing_after": 315,
+              "time": 2943.316,
+              "length": 85.271,
+              "cost": 3144.077,
+              "begin_shape_index": 402,
+              "end_shape_index": 1258,
+              "highway": true,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "13"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "US 101 North",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Ventura"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take the CA 126 East exit toward Santa Clarita.",
+              "verbal_transition_alert_instruction": "Take the California 1 26 East exit.",
+              "verbal_pre_transition_instruction": "Take the California 1 26 East exit toward Santa Clarita.",
+              "verbal_post_transition_instruction": "Continue for 2 kilometers.",
+              "street_names": [
+                "CA 126",
+                "Santa Paula Freeway"
+              ],
+              "bearing_before": 301,
+              "bearing_after": 319,
+              "time": 75.595,
+              "length": 2.081,
+              "cost": 111.89,
+              "begin_shape_index": 1258,
+              "end_shape_index": 1286,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 126 East"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Santa Clarita"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 1 toward Victoria Avenue/Ventura County Government Center.",
+              "verbal_transition_alert_instruction": "Take exit 1.",
+              "verbal_pre_transition_instruction": "Take exit 1 toward Victoria Avenue, Ventura County Government Center.",
+              "bearing_before": 80,
+              "bearing_after": 85,
+              "time": 15.859,
+              "length": 0.395,
+              "cost": 53.182,
+              "begin_shape_index": 1286,
+              "end_shape_index": 1303,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "1"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Victoria Avenue"
+                  },
+                  {
+                    "text": "Ventura County Government Center"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto South Victoria Avenue.",
+              "verbal_transition_alert_instruction": "Turn left onto South Victoria Avenue.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto South Victoria Avenue.",
+              "verbal_post_transition_instruction": "Continue for 900 meters.",
+              "street_names": [
+                "South Victoria Avenue"
+              ],
+              "bearing_before": 78,
+              "bearing_after": 348,
+              "time": 48.371,
+              "length": 0.856,
+              "cost": 79.164,
+              "begin_shape_index": 1303,
+              "end_shape_index": 1338,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Telegraph Road.",
+              "verbal_transition_alert_instruction": "Turn left onto Telegraph Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Telegraph Road.",
+              "verbal_post_transition_instruction": "Continue for 1.5 kilometers.",
+              "street_names": [
+                "Telegraph Road"
+              ],
+              "bearing_before": 350,
+              "bearing_after": 260,
+              "time": 68.797,
+              "length": 1.336,
+              "cost": 125.942,
+              "begin_shape_index": 1338,
+              "end_shape_index": 1357,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left.",
+              "verbal_transition_alert_instruction": "Turn left.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "bearing_before": 260,
+              "bearing_after": 168,
+              "time": 28.493,
+              "length": 0.127,
+              "cost": 85.317,
+              "begin_shape_index": 1357,
+              "end_shape_index": 1367,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right.",
+              "verbal_transition_alert_instruction": "Turn right.",
+              "verbal_succinct_transition_instruction": "Turn right. Then You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "Turn right. Then You will arrive at your destination.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_before": 207,
+              "bearing_after": 269,
+              "time": 2.76,
+              "length": 0.013,
+              "cost": 9.232,
+              "begin_shape_index": 1367,
+              "end_shape_index": 1369,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 4,
+              "instruction": "You have arrived at your destination.",
+              "verbal_transition_alert_instruction": "You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "You have arrived at your destination.",
+              "bearing_before": 269,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1369,
+              "end_shape_index": 1369,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 34.052335,
+            "min_lon": -119.234804,
+            "max_lat": 34.27807,
+            "max_lon": -118.243564,
+            "time": 3946.005,
+            "length": 107.345,
+            "cost": 4661.968
+          },
+          "shape": "}mk}_Avm_p`F}P~XwDhGcGjKs@nAkDrFwClFo@lA_Qb[wLxTwCtEuCpFeTt_@}KvRoC|EkDlGwBfEmDvGQ^eE|HaMpUy@|AaDbGkCbFw@|A}GhNcDvFyMnU{@vA{CvFcGuDyAcAyXeQmMsI}IoG}@m@oJwHkBiByJoKgDmE_BmBoAsA{D{EmUoXoBuBeNgOaE{DyDwDwMoN_FqE}IeIyEgF}CeD{TqUcJaLsT}U_BaBiDqDaDpEyB|C_ArFQ`CiAtc@U`F]zEm@`Fq@rFm@bD{@jEg@rBo@bCgAlDoAfDsA`DyApCkBjDsBfDeE~Ekf@jf@so@ti@c_Alv@uGtF_F`EaIfIaFrFsEtFsFhH{E`HqFnIoFnIqm@`_Aga@bl@mC~Dgu@hkA}LrRyKjRaKzR{I`R}IvSuIhTsHtSaH|T{GpU}FrT}_@|xAkz@niDgOll@k[npA{EpQeF~PwMfa@wRlk@os@`wBaHzScJfWaJjXqI|WmItXsIlY_JbZgFrPoFrP{FzPeGxOkGlOqSde@gCxHaEhL]`AwDdKmDbK_GfRoGlT_FlQmEhP{Q~r@eLzq@_w@t_EwJpi@uFjYuDbTeDbS}C`ScD`UeDtU{L|{@u]ldCyFha@cClRyBjQqBzPqB`R{Eze@eBxPiB`QoCfTgCnRqCzQoClO[fBsNtl@{Ip^eG|Q_GtPqGbPkH|P}h@zlAeHhPqGnOoG~OaHhQ_HpQcHbRkWvs@eLf[gL|[}a@riAcGfPkGnP}GvPuGbOqHhPuCxFyNxY{IrO_JzO_m@bbA{Vpa@{p@lgA{NlVuNdVaIlMwIbNyIjMeJzLeJ|K{J|KoKzKqL|KeLvJwKpIeM`JsLbIwLhHcMzGc|BdjAoM`HeMpGmMnHsLxHkLrIkLtJeL|KmJlKqJpLcJbMcIfMgIxNqeBrbDaItNoH~LiJxNaJbM_KzMyJfLsKnLuKrKmK`K_KvIqKdIqY`Qu^tSka@rScqDvgBmNzH_M~HkLzIuKnJcKlKaKnLkJxL}IvMmHnMeHvNsGlO}FxO{Lb`@kDrR}ClQaClQiB`RqAvRq@~Q_@lRSvQIpOK`USzWa@tRu@bRqAdRuBxRoCtQeDdQ{CxMgDfMmDhLyD~KkE~KqE`KyHxOohAdzBqCnFkpAleC}L|VsT`e@}NhY}Xph@qH`NyH|MoIfNwItMiJnM_JdLaKdL_LjKyJdIgLjImLpHsMdHsLpF}MpFiNvEyMnDuMbDmyCjq@aOfDiNrCwMjCy_AhPwNvCsOzCiN`D_O`EgN`EmNtE{NnFcNpF{MxFcNpGqMtGuMnHkMtHkMlIkMxIuLnIeLbJoF`Eqj@pi@oXhZey@rdAkhAxtA}JzLyJ~KoJxJiKbJqL~IsYrRoLhHy\\xRwLtHuLlIsLnJiLjKgLxKeMfMkhBfiBacAlfA_MnMsm@lo@wKfL}KfLiKtL_KfMiJ~MeIpMeI~NmHnOwGfPoFlOuDxL}HtYuC|MeCbNeDpUeEz[}Kbw@sJpk@{SbaAm]v}AaN|g@sHnUmQl`@cb@zp@wK`QgeAlbBiMbSeLpQwd@lt@cIhMwIvM}I|MeJhMsIbLoIvJ_KbKqLxJiK`IeLxH_MtH_NlHkMjGsMfF}qBrq@mNjF_UlIy]nLaQpGyKzEwNvGuMjIwNpKqKjJ}J`KiFfFyJhLwJhMkIzLkRvZiQxXag@dw@yMbV_NdS_]|b@uXzYcSxOen@da@mN~I}OnJwMzH}LvGsKtF{s@n\\y`@bR}K|FoJvGgIrGkHlHaHjIiGzIaFlIwEhJ}DbJsD`K{BrHqC~KyCbOgB`LqDnO}@|PQ~LBvZx@`zFp@bsGAzRN|{F@~RB|Et@nsFAjWYz]uAp]mCr]{D`[cEzUsE~ToDzMsGhSc{@xzBsKf^mHzZyDzUmAbJoCpS{AtQy@vNo@zOs@zb@MvW?xqHs@|iE@vR_@t|DU|uF`@`^zAt_@zAdXvAtRfCnWfm@zoEtFrp@hBds@N~VFzNMxsCEhVOd_Ec@tsGXtTnAxYdApRvBhV~KblAzBhZBj@x@tQb@nWB`QYvRw@nTsAnTcCvVaBfMcBjLwIda@oK``@mNz`@{Wlu@gHlSwFtPqBtGqB`HoB`HaKjc@{G|[{Ixj@qDz]oErl@uDl}@kBlm@yCd|@yC|j@sCfY_CtQeIde@sT|eAoEtSkUhdAmIhg@gHbo@wCha@iAf[uAv_AhBb_B\\`d@Al]c@vSq@bUsAnN{AzNwCpW_ClMuBzMkHr^uJf`@gPpe@{Rde@sMbWmSjZeQnU_SlTk]b\\ov@ll@gVdR{J`J}JdKeKbNkJ~NgIdOeExIwCzHuBlHcE|PqIj[kE~U{DnVyCtVaC|]i@|POzPCf_@Vvt@\\fjB~G``Q\\rsA?`S[xRs@bP_BvTiA`MiCxTaE~U{EjTiEdP{DdNsFvOqHrQuIhQcp@|kAc`AfbBg}AzqCgVtd@mPr_@iIjU}GbUiN|l@eFdY}DpYsDz_@wD`t@k@zo@V~|RgApcE@dVf@|aEZdhI@tSG`~@]tY}@lXuAnTgDh^_EnZwD~TcF~TwDrOoKl[qGhR_F`P}FfS}BzH_Kl[eIdX{GtWuE~TeEbW{CfXqB~TgAbWi@r^[ho@aAt|AMxZwD``IInSuDleJ_AneDG~UoBlqEs@nzAAhg@Z|_@f@dXfI|{Br@zQnYllH|Djq@xBnVrHno@rFha@vFt]`Idb@lFtUba@z|A|c@|gBlVby@vuAbcFxR`t@~Nho@dNzw@rJzt@bFze@vFxaAzAd^nA|t@Nty@Mf^{@d^gChn@cAnSiEbm@og@z~FuDdg@cOppB{OlfB{A|Q{UlyCy\\duD}MlnB}Fvs@qBr[w@fSc@~RGrXRxW|@vXlBr]fElh@~CnT|D`UdDvQjLz`@jGxR|J~WxHzQxK~TfJfPdKbQ~RrZln@jbAxFtIdVza@vO~[dOb]~XzeAb\\z{A`|AnhHvDlQjNpo@|l@neCj|@deD`cAbwDd`@pzAzJb`@dcAfuD~gBz|GfVp|@lRrl@rf@dzAvsBjkGx{AjqEbVz|@pT|aAvShcAjf@|mC~iA|}FnTjmAjFb^pI|l@rGzs@`Gr{@vBfr@`D~tAtCfeBbFb_CEx^gA|_@}Bv\\sCzVeEpXiGvYuu@byCuNrk@wHp^yDdX{Db]eBl]e@zVc@|`EZv\\dAtZzCn`@dTpkBfAbOp@dJtArZ\\r[Or\\o@`SuA`UsCxY}WrlBgCf[iAd[Db\\`@|YtAjZnCjXrFl^nJhf@bSjm@`J`RpGjKzK|RpUvWze@hg@fcBx}AvfAhdAd^zb@|Xra@xXbh@pd@xaAli@liAnlAldCbW|k@tK~XdT~l@lMna@|XngAdRl{@pa@tjBbPtq@lY|nAhHdg@tHps@pDno@hDngB`EhyBxBhr@dC|f@xEbq@|KluAdEbj@hH|cA~@hY?h]g@`XiB|XqCtX_AbGkC~PqDvP}@lE_G~SeHrSmMtZkUrb@ocC|aEyx@zuAeOb]}Lb_@kHpXcF~VwEt\\cCpUoBlYiAr[Gt`@dAp}C@lQCtOH|^s@`u@wBbj@cCbf@gFzn@a_@nfDolAriKaMn{AuGjfAuBz[[`Fsa@tgGm^zlFmMzsB_RzsCwG|jAiC`x@}@~p@Hrt@jB~s@bG`mBdh@~zO`X~kIz@ho@Avn@_CfmAqC|g@_E~m@iEtb@kFnb@aH`e@oMjr@iW~lAqpBpqJ}hArmFi`ChaLs]vbBoCrNmJ`f@sGlYcIrZiJh[{IhWeLtXeHvO_j@dcAurGr|Ko}@v|Akc@rv@}_FdpIoK~QgMlT_Uba@uj@`aAiOzV}pBtiDgmAjuBiN|TacAheB_|@|{AiLzRieBnyCm\\bp@}JrOkI`PaOl[uP|d@oMza@aHhXqFjW_ElUkE`Y}C~ViElf@_Crf@sMjgEeAhZkJtvC_AvXmA|b@u[hqJkLzaEuCziAqOhsFkAhb@gAr\\iBj_@sD|k@sF|b@}Ixf@gE|R_ElP{Sjo@kwCbvH{|Bp_GaZht@qa@|fAmLt^mHnWiG|YuDlYuChTaDzX_Exd@y@hPm@nRg@~ZOdWPzX`Az`@bLrlC|@`]ZhWjAdiGrAtiLx@d{D\\r}GvA|dGEfRErTc@zQc@`QEbBEdBiBhXiC|[wB|QcC|RmEvWaFtWuGnXiInZya@lqAeOde@gYr}@qj@~eBk]`gAgcDtdKi{AzhEkxAraEaT|h@kP|^aG|KoQ`Z_QtWa|BjgD_Zhd@wb@`o@eKxQatB|oE}HjP}FfNoEtM_E`MkDfN}CvOgCtP}BvR{D|a@GtZPvKb@rNzCvz@t@z[HbQAtUc@vLeApR{@vJkDtU{Xr|A}D~WgEla@q@vJ]`NsNf|G_@lOg@|[]ze@J~Nn@xTrDr_ApE|pAUxf@oAbXwA|U_Dl[wD~TkCbQkEjSoFrRkDpKoJzVoDrIgErIkPzZyPlVk^~^ew@rz@uHtJgGnI}F`JcFzIkLvWsGtPuE~OmErSiH|`@aCfQcApMiAtTWxY?vIZ|Y|DjcA`@hNRjN@zJUvVWbMuDj]iCtPcD`PgEjRsD~KaL`Z_MtUiE|Gq]fd@w{@v_AwUnZ_IbLeJhN_JxNsMfWoFfKwBxE{CzGkHvQeEnKwG`SeGlSaGvUyzCt~MctA~dG}EzSkNnn@yNvp@oJfb@w\\hxAmBzHwClMcHd[_H|\\mGl_@aClR}BfSuFls@_Bt[Wx\\Efq@CzuCLfkFZpN?xh@LllB?hYMphAMzgAMv}@cBji@uAxY}F|i@uE~[aJlj@gEpX}BfOuEjZaRhlAuHhc@oCnS_CxRcCnWoAhTiAtUg@hVYr]_BjiBkAnmAaGtuKs@`dBqAxx@_D`jAmLbqD_m@niRwKpnC{Ab`@sDtx@gHn}AoIvqCeAda@eAda@mCbjAyCx}@{_@~gK}TdcGwAd^_EthA{GzpBgE|pBuJliCwL~xC{EfkAwH`pCoOr|D_B~b@yElnAcCxu@cBzxAs@ro@GhHm@`jHqAzwLBdo@CrX@|R?jOZlcDWpu@Cn^aAbjK?zdCu@noAgFbaC{BldA{@h`@]l^gDnzAwDtfBw@rj@[lXs@|XaBdb@}]rhHwDhv@aId_B}Hj~A{Dxj@uHvr@{Jlo@i_AlrFcJji@oEtWsVlxAaYjfBo^dvB{J|m@gTvrA{FjZgEfRaMnc@kKj[qJnVoKvWma@zv@cWja@{Vb^qSpVsNrP{Q|OcLxIcVvRicAjv@}BhBg_Arp@qlAlcA_a@z[swAtbAkRhP_PxNaNdNeLlMgc@zk@eX|a@_Uvc@aQf`@{N~_@uMjc@mm@fbC_|@lfDmTt{@_f@tlB_Vb_AcMnf@{GtW_Vd_A_ZpjAqT|z@mLhd@}HtXsDjLcInT}JnWqIxTcWfm@gp@l_B}oAryCcQjb@qu@bhBoNf`@{Ofg@gT~r@aR~j@uEpNeQhh@ePbd@se@~aAiQ|\\uLpV_o@plAkTba@gP`[g[rl@wVve@kIjPoIjQuL|W}Pda@ugAnpC}Z`w@ua@plAkmBr}Fud@tnAscBvsEsOxc@ecA~lCaMb\\_s@fhB{GrGqh@tfAgHhMaGpGeI`HwIlEyHzBeK~AiIb@oHGyKoB{GeBkIwDsEaDaFkEgF}F}DiHgRoYcaAeeC{Pee@yQsh@eMsc@eRou@wO{s@uKms@gJww@mEke@giAecOiGqmBBiJt@wLtAuI~BcIrBeExLwO|BwCvAgBnBoElAkFd@cJQqFcAqLEm@c@sE{@mIyCd@ge@dHaq@pI_N`B{NtBaKnAyk@|Hyw@bJiKpAq_@zEwd@bGqDd@kDd@gKhA}Ff@uENeDJgG?mHc@mHo@uDu@uCk@uDg@yBW{BKoEGqB@yBFuDNgDLgLlAcKjAsBVo@HoC^mElFl@zH|Cd`@tUtyCHz@ZzE`@bFfd@`yFd@jFnOpnBzFlt@fEvj@pBjWlApN|@tLb@vIj@vGhN~bBlC~\\hEo@zCg@~KiBtYyDjDh@`A_AnAa@|ADpAt@`ArARhCQdC"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 34.052335,
+        "min_lon": -119.234804,
+        "max_lat": 34.27807,
+        "max_lon": -118.243564,
+        "time": 3946.005,
+        "length": 107.345,
+        "cost": 4661.968
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

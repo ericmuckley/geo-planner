@@ -1,0 +1,226 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.2986,
+        "lon": -115.9561
+      },
+      {
+        "lat": 32.9787,
+        "lon": -115.5303
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.2986,
+          "lon": -115.9561,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 32.9787,
+          "lon": -115.5303,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive southwest on Shore Gem Avenue.",
+              "verbal_succinct_transition_instruction": "Drive southwest. Then Turn left onto Shore Vista Avenue.",
+              "verbal_pre_transition_instruction": "Drive southwest on Shore Gem Avenue. Then Turn left onto Shore Vista Avenue.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Shore Gem Avenue"
+              ],
+              "bearing_after": 214,
+              "time": 11.365,
+              "length": 0.11,
+              "cost": 14.008,
+              "begin_shape_index": 0,
+              "end_shape_index": 3,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Shore Vista Avenue.",
+              "verbal_transition_alert_instruction": "Turn left onto Shore Vista Avenue.",
+              "verbal_succinct_transition_instruction": "Turn left. Then, in 90 meters, Turn right onto Marlin Drive.",
+              "verbal_pre_transition_instruction": "Turn left onto Shore Vista Avenue. Then, in 90 meters, Turn right onto Marlin Drive.",
+              "verbal_post_transition_instruction": "Continue for 90 meters.",
+              "street_names": [
+                "Shore Vista Avenue"
+              ],
+              "bearing_before": 189,
+              "bearing_after": 119,
+              "time": 9.47,
+              "length": 0.092,
+              "cost": 23.336,
+              "begin_shape_index": 3,
+              "end_shape_index": 5,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Marlin Drive.",
+              "verbal_transition_alert_instruction": "Turn right onto Marlin Drive.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Marlin Drive.",
+              "verbal_post_transition_instruction": "Continue for 900 meters.",
+              "street_names": [
+                "Marlin Drive"
+              ],
+              "bearing_before": 119,
+              "bearing_after": 206,
+              "time": 64.161,
+              "length": 0.861,
+              "cost": 86.967,
+              "begin_shape_index": 5,
+              "end_shape_index": 17,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Harbor Drive.",
+              "verbal_transition_alert_instruction": "Turn right onto Harbor Drive.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Harbor Drive.",
+              "verbal_post_transition_instruction": "Continue for 700 meters.",
+              "street_names": [
+                "Harbor Drive"
+              ],
+              "bearing_before": 162,
+              "bearing_after": 239,
+              "time": 56.884,
+              "length": 0.677,
+              "cost": 77.482,
+              "begin_shape_index": 17,
+              "end_shape_index": 24,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Marina Drive.",
+              "verbal_transition_alert_instruction": "Turn left onto Marina Drive.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Marina Drive.",
+              "verbal_post_transition_instruction": "Continue for 1 kilometer.",
+              "street_names": [
+                "Marina Drive"
+              ],
+              "bearing_before": 254,
+              "bearing_after": 163,
+              "time": 82.299,
+              "length": 1.065,
+              "cost": 146.27,
+              "begin_shape_index": 24,
+              "end_shape_index": 50,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto CA 86 South/US 99 Hist/Highway 86/Route 86.",
+              "verbal_transition_alert_instruction": "Turn left onto California 86 South.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto California 86 South, U.S. 99 Hist.",
+              "verbal_post_transition_instruction": "Continue for 58 kilometers.",
+              "street_names": [
+                "CA 86 South",
+                "US 99 Hist",
+                "Route 86"
+              ],
+              "begin_street_names": [
+                "CA 86 South",
+                "US 99 Hist",
+                "Highway 86",
+                "Route 86"
+              ],
+              "bearing_before": 237,
+              "bearing_after": 148,
+              "time": 2130.026,
+              "length": 58.012,
+              "cost": 1953.705,
+              "begin_shape_index": 50,
+              "end_shape_index": 440,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 90,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 440,
+              "end_shape_index": 440,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 32.978555,
+            "min_lon": -115.964369,
+            "max_lat": 33.29866,
+            "max_lon": -115.530299,
+            "time": 2354.208,
+            "length": 60.819,
+            "cost": 2301.77
+          },
+          "shape": "imko~@`~kd|EzItG`b@rWbGl@fJmWtLq\\h]zPnQrJnaAjZve@rJbh@hGhd@dChc@r@hUTzl@wDfNk@tx@sMry@_Vj`Aj`CjY|q@zJrVbMp\\xHt[z[rhBnHre@nMiDnlAk]do@}PdWwGxgAy[dZeHrNkCfOaBzRUhOFvFVbG|@rLjBlHnBvHvCbHzCfHvDpLvGxJbJbJdKtHlLfd@nbAvM~[`@~@`C`GhGpN`FkDjnFsuD~xDseCtd@o[|uBcvAdh@g]lb@}XzOyKnwHslFz|@al@|d@k[`cFokDhuDobCdTaObuAg`AnyA{`AlwIy}FhyEynDjk@s_@p^sUv_EumCddC{bB|sAwiAlcCieCtmHaqHlXoVt{AarArh@_\\|f@cY|fAec@|wDcrAxnKinDhPsF~lOgfFj{[mwKn`Agh@hx@ij@lz@qw@vm@yo@vi@qs@~vQ_yYzq@ahArePwiW~iAqtAz}@uv@dp@ke@fe@iYn`@_Sv`@aQt`@_OvpDwjA`jGyrB~TqHjoVocI|NuEbcQ_zF|nJi~Cv~@sZtUyHncAc]xw@u[bdBi}@njAou@jk@{d@vgA_cArjAqnA|hCa{CdbFeyFxfA}`Bpf@e`A~c@giAx^khAxZkuAlQsiAje@crDvYw{Bfa@geDpPs|BhYerFt~@u}Opq@{sLrAqZfZq~E|AuN`I{t@rPkaAfh@iuB|y@}gCpr@wxBhuB_}FbJkW|q@enBfgGcnPzmB{mFp|@q~C`HwVbo@u|Bt\\{~@hd@_cAjv@apAlfCarDjUu[pbA_{A~~@etBjd@}yA`Ta|@bTkoA|VesB~Li_ArNqx@l_@wzAb[_aAvb@kdAvbAymBns@}tApfAslBdgAo~AfpAqzAzcAy_Af`H_sGzQaOtyEwoEvc@{`@~R{QvvCapCdjAw{@bx@{c@lsBwlAfpDwrB~eAau@ps@_o@tr@gv@jhCiuCxs@wr@fx@ym@ls@ic@v|@_f@`}A}{@xlAgy@v~@e{@voAu}Avx@muA|LgUbNkYl]o}@~]unAt_@yhBzVcqB|Ky~Bv@m|@DsaAa@ejBb@ysFKomB?ixFSo{@`AulDtGq_DtBydAbF_mB|@wlDRqiEl@}oP`@eg\\BeoC`@s}RqLy}G{BqS}AmJj@c`BFgSGmx@C_VAir@A_PGwl@KaeAIm_@AaGEoOAqHEcTEaeAAqQDsYBaJBaQ@kG@uBByK?w@@yH@uF?}@@qLH{o@BgRC{RAiHGgi@CyP?yDA{[A{VAa]Xw_@h@wOR{F~BaYdD}Q|B}KnFwT~Jw]lKmUhHoOnDuF~EyH`A{ApJqLrI_KbKmKlZgUrLoCdFeCj_Aud@`_Aqf@~s@{^xRuKfIqElxA{z@l{@kg@rsA{x@j`BecA|jAms@vaAin@nc@iX~a@oTlf@{U~v@}_@|w@u_@lxAas@b`B{x@tnB{~@niBc}@~wAur@xbBsy@|`Aae@zh@_YhYwPpVmNrOqK`q@qd@boA_{@r{A}eA`uAu~@h}@gm@beA}s@|GqE`MgI`@YxmAqz@fAu@pHgFpJ{G~c@g[vy@ck@x}@wm@ruAaaAjvBkyAjgCgfBpu@{g@vi@u^|{@wm@bnAky@`q@ud@pk@ga@`TkNb[cUvJkH|FaFzBiBfFcExRgQdVsUrYuZdUmYfTeY|RsYnNiUtUua@dUwc@fPu_@lJsUnKiZ`KyZ~Jo\\nJa_@lIc^pFiWnEuXxHki@`E{[pG}l@|Dwm@xAi\\|Aaf@B}KPy^sBoUY_mA@{FDu[F{b@PqrA^_c@LcNx@}c@PmJVuNnCqy@tDs`AjCkl@n@kP~Bom@F_CxA_k@VkKpCm_ABuLBeIZyeAEgE_@{h@KiLAaLSmOAyAEcE_@{g@?mI?aOAyI?ma@AmMCcM@}`@Aa^Ekw@?gD?i{A?}M?uH?eK?mD?{C?Y?}F?gB?cQ?cA?qFAmF?cA?uQAoT?gLAiIAic@?eMHo^?gF@wl@A}UCy]Aa_A?ejAS}v@HehDCacA?}V?u@?iC?iE?a@Dcc@B_OBc[?}EAmL?g@"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 32.978555,
+        "min_lon": -115.964369,
+        "max_lat": 33.29866,
+        "max_lon": -115.530299,
+        "time": 2354.208,
+        "length": 60.819,
+        "cost": 2301.77
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

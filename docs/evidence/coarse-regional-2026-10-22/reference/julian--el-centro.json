@@ -1,0 +1,289 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      {
+        "lat": 32.792,
+        "lon": -115.5631
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.0787,
+          "lon": -116.602,
+          "side_of_street": "right",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 32.792,
+          "lon": -115.5631,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 2,
+              "instruction": "Drive southeast.",
+              "verbal_succinct_transition_instruction": "Drive southeast. Then Turn right onto B Street.",
+              "verbal_pre_transition_instruction": "Drive southeast. Then Turn right onto B Street.",
+              "verbal_post_transition_instruction": "Continue for 90 meters.",
+              "bearing_after": 129,
+              "time": 13.239,
+              "length": 0.091,
+              "cost": 11.915,
+              "begin_shape_index": 0,
+              "end_shape_index": 2,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto B Street.",
+              "verbal_transition_alert_instruction": "Turn right onto B Street.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn left onto Main Street.",
+              "verbal_pre_transition_instruction": "Turn right onto B Street. Then Turn left onto Main Street.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "B Street"
+              ],
+              "bearing_before": 130,
+              "bearing_after": 221,
+              "time": 6.837,
+              "length": 0.045,
+              "cost": 12.165,
+              "begin_shape_index": 2,
+              "end_shape_index": 4,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Main Street/CA 78 East/CA 79. Continue on CA 78 East.",
+              "verbal_transition_alert_instruction": "Turn left onto Main Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Main Street, California 78 East.",
+              "verbal_post_transition_instruction": "Continue on California 78 East for 19 kilometers.",
+              "street_names": [
+                "CA 78 East"
+              ],
+              "begin_street_names": [
+                "Main Street",
+                "CA 78 East",
+                "CA 79"
+              ],
+              "bearing_before": 220,
+              "bearing_after": 131,
+              "time": 811.393,
+              "length": 18.577,
+              "cost": 730.141,
+              "begin_shape_index": 4,
+              "end_shape_index": 519,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Great Southern Overland Stage Route/CR S2. Continue on CR S2.",
+              "verbal_transition_alert_instruction": "Turn right onto Great Southern Overland Stage Route.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Great Southern Overland Stage Route, County Route S2.",
+              "verbal_post_transition_instruction": "Continue on County Route S2 for 76 kilometers.",
+              "street_names": [
+                "CR S2"
+              ],
+              "begin_street_names": [
+                "Great Southern Overland Stage Route",
+                "CR S2"
+              ],
+              "bearing_before": 65,
+              "bearing_after": 139,
+              "time": 3364.693,
+              "length": 76.471,
+              "cost": 2906.997,
+              "begin_shape_index": 519,
+              "end_shape_index": 1583,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 19,
+              "instruction": "Turn left to take the I 8 East ramp.",
+              "verbal_transition_alert_instruction": "Turn left to take the Interstate 8 East ramp.",
+              "verbal_pre_transition_instruction": "Turn left to take the Interstate 8 East ramp.",
+              "verbal_post_transition_instruction": "Continue for 40 kilometers.",
+              "street_names": [
+                "I 8 East",
+                "Kumeyaay Highway",
+                "Route 8"
+              ],
+              "bearing_before": 180,
+              "bearing_after": 65,
+              "time": 1278.365,
+              "length": 39.684,
+              "cost": 1163.025,
+              "begin_shape_index": 1583,
+              "end_shape_index": 1647,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 8 East"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 114 onto Imperial Avenue toward El Centro.",
+              "verbal_transition_alert_instruction": "Take exit 1 14.",
+              "verbal_pre_transition_instruction": "Take exit 1 14 onto Imperial Avenue toward El Centro.",
+              "street_names": [
+                "I 8 BUS"
+              ],
+              "bearing_before": 90,
+              "bearing_after": 107,
+              "time": 55.93,
+              "length": 0.62,
+              "cost": 68.52,
+              "begin_shape_index": 1647,
+              "end_shape_index": 1666,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "114"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "Imperial Avenue"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "El Centro"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto I 8 BUS/South Imperial Avenue.",
+              "verbal_transition_alert_instruction": "Turn left onto Interstate 8 BUS.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Interstate 8 BUS, South Imperial Avenue.",
+              "verbal_post_transition_instruction": "Continue for 2 kilometers.",
+              "street_names": [
+                "I 8 BUS",
+                "South Imperial Avenue"
+              ],
+              "bearing_before": 88,
+              "bearing_after": 359,
+              "time": 142.279,
+              "length": 2.127,
+              "cost": 191.037,
+              "begin_shape_index": 1666,
+              "end_shape_index": 1719,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto West State Street.",
+              "verbal_transition_alert_instruction": "Turn right onto West State Street.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto West State Street.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "West State Street"
+              ],
+              "bearing_before": 359,
+              "bearing_after": 88,
+              "time": 61.222,
+              "length": 0.633,
+              "cost": 106.569,
+              "begin_shape_index": 1719,
+              "end_shape_index": 1730,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 89,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1730,
+              "end_shape_index": 1730,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 32.733682,
+            "min_lon": -116.601942,
+            "max_lat": 33.09766,
+            "max_lon": -115.563094,
+            "time": 5733.962,
+            "length": 138.251,
+            "cost": 5190.374
+          },
+          "shape": "o}}a~@ldyk}EzAiCj]yi@fNvNxBvBhg@iv@bU}]jIqLjGgLdCyK~CkVp@{Ml@yLo@m\\KgUGuKGsPKcUm@wjAe@yoBU{b@Y{g@E}sAaAgPyDySuGyP_H{J_JaJ{JaFeM}DcNaA}v@AwJ_@qH{@yFiAmIcE}QkM{JoFgHeCsHcBiG]iEEsDJwKlA}VjFaDn@{KxBsEn@eDLkDQqDq@cFwBcIaEsDoAwCo@{CKuF^cEdAoD~AcQxMeKbGcLbFgX~Hgh@dFu_@lJsMrEgA^_ObGyR`GmEjC}DtC{DvDoUtYeKvNcD~CwE`CkGz@k`@k@{Kj@uElAqKhF}AnBcAlBy@dCs@`Fa@pHiEj_AqB~c@aBdPy@pC{ArCoBhC}B~B_HfE_OdEeHr@mVb@uFdAgExAoKnHyI`J}FdHiGfH{KtOoF|Io[nh@kFdEsFvCaHjAqENiEO}Ci@{Cy@kE_CgEeEuN{UgIoIaXaR{CgAwDi@cR_@aHe@kGeA{FoBwJoDmD{BgDeD_GyIoEaF{FeEkF{AiZqBeGaAuDyAwE}CiM{K{K_IsQ}JeJwC}IiBsQ{A}IOyJs@iUcBeJwCeEuFkB}I]gNNwNjA_SfCyMpCmJpQuc@~NwYdKeYhGgNjLcRpGwMjMqShKqPxBmK?aHsE_XiBqMVaJhB_HpDsE~Z{K|OgDzKcGxGqHrFiLfDgNpBePl@eO?{LjA}InXaq@nDiWz@iWjBmJ~CqHpLgNhRuZtOuOhNiLrFiCfHkAzL\\jFwCbAkBdEcPdA_Iz@wN|@eFfDoI`GqGvDiCvH_I`CuDhXmt@hG{KpHmJrUwMhMeFjFgD`CuDrA{CbBaF`BiCnIaHbFyB`X?lJ^zFyB`C{BjPkUd`@se@pGcGnNgNjPyW~CuDvIsGnDcF|DiMdE{`@`Iq[|DaIz`@yj@xByBtJgE~CMfIl@dEhB~RxWpHdEfDb@fDc@~Ao@lBiAtDeEfJ_TjFeOjFaSVwCOePt@eOnNcz@rFgNzK{Kf]aSlJgDhHM|JjArFvC|T`HvShC|N`GbW`StDzAtE\\nDe@lDe@zGeE|DaIbA{J?qHaBsQiCyL}@{JkAc{@|@aG`ByCzQcQvCsF|@qGe@qG{AgDeK{KgN_TqBaHu@_I\\yMd@gDhCaGlOoTrQuNpa@ya@bLqHrPqGdJqHzG{KfIgX~BoItFyMfHiLjGqH`MoIxQsE`H_@`SzApEaCbDqBxBwDjAqGT}IsAmiAl@aQbBgOdEiMvCcFdKmJrU}JzKwDfOaHlM_HbEyEnAuHSoKaCuRw@yJtAcJ`D{EtEqC`UcFlEuAlC_C`C_Ex@}EUqG_CaFaIcNiBgFw@uGJoHbAsG|CuGvCuCpDcBnE{@`MCbHw@bH}C`K}GpCmClDqDzDgFvDwGxDeHxCqHjA{GXeFK_Hw@wIgEk]Y{H`@mH|B}GpCgDbGgCjTmCbIuC`DqChCeExA}FXsGu@{NRiFfB_FxBmBfHmCrE}AdDuD|CaJbA}EnBiElCwCfCkAhHm@~Gi@zCkArBkCdBeDf@aI[_MN_I|@wFlB{FbLkSrKqRfCiDtDmC|DgBrEy@bFKvEz@jGtDjCrEdBbItAjQvAdG`ChCdE~AvIn@jJfBrG`CfFnE~DfG`IfOzD`ElEpBrEb@v]Mru@G~Jk@rEyAzCqDpAwEDwHmBuF}EuDmUyF}HaBaGmCkZuTgHcGsF{JcOeZ}ByFmAqH@aId@aR\\sRUaPy@sPEiJdAuHpBcGrDmGzLoNjXi`@bFuIzBaIv@yI{@yHeC{FyD}DwCeBcCyAmJqDmO_GcJqFwDkEsE{FkHcH{H_FcHaGkHqIuPeV{m@kw@qf@so@wHqKeDoJcBgJBcKt@kLh@wK]uJ}AaHoHiMeLgQeGgNoKc[mJmReL}VgEyMgEyRwCsLmEgLsl@elAkHyJqFqFkWoQsHcIyDgGag@sbAeDgHsXcj@_AiB_Woi@}Qq]gLcQoL}MaQ}Oo^iY_Au@aWgScN_NsIqLuHiLiGqMaGaQgF_ScCiLoBmJs^wbBseBubI{O_t@a~AujHs]c}A}_@mgBweBmbIivLydj@_bAulEqx@gzDyQ_z@oSsz@}Tcz@_{AmeF_GcS~AaAdCyBtAwDxQ_sAhPaiAbgBs{L~Gef@|OucAxGc[`HgXtMoc@vDwLl_As}CxHuYfIia@tN_}@bVapAl_@{~An]kiA~N}h@rF}U`F{WhD}QpH_T~NiWllAqpAx]sZtw@il@pLgJxSeT|}@ubAx`AafAfr@_s@trAsnA`R_TtEaHnNwWfb@_gAnIsQ`M}Tdy@_qAti@um@hRsRdT}Svc@yc@j`@_\\dTeP~|@{k@d@[xMmKzPcP|TyWzd@ud@dUaR~NeOln@ar@ln@og@voB_|Ap\\oSr[sPvb@mTz[qSvSeOjnAubA~r@ka@hWgMn]iM`v@mUlOqG~N_Iri@q]tUwNt]aUlRaNbRiQpPwUrT}ZjUoUpYkXnc@o]hz@kk@thAiv@vU_QfCiB~eAmv@z~@_s@hg@ec@zUcQxg@gYfS_IrU{KdPmJdlBqzAt^aSnc@aQj^gOlRcLr_@_XtN{KbiB_vAj[uU~_@qSvr@_Zt[qHfVyB`ZiApo@~@lSy@ngAsPlHwBfGaEbFoFlEwI~LcZvFcMdFeQzCuF|C{C~E}B|GsAtLj@tT`HxsAlYhIpBjDfAzb@|Mfc@fNb|Bfw@biBzu@dfG~mCd~EvuBpkAzj@~_@xQjjBh|@p\\nS|J~HzPnSbG|JzKhWfDvM`ChN|NtwAdFxa@bKhk@xGtY|f@feB|[fiAjGlT~DdYjAxWGrDWlQcAnUgBb]qMhfBaKp|AuIbuAwIztAc@hO\\bMjAxK~EtVjMxf@|QhjA~CxMhDfKzEfKzQpZxFtNzCzM|AfL`Dje@bA`KdCvJhD`HfDxEhEtEzF~DnFnDtHxE~L~KzFrIzEzKrDhR^jE`CtYx@nHrBzR~CtUnC`MdEpKdOdYbDfJdAxH^nKMtd@b@r^UdMq@lIaBvHuGtSkC|K}AxKK|Jp@~ItBpLbFhNxr@jzAdDvKrBvMl@pK?tKmAzf@XnYhArR|AhPvDhRzG`RlQnc@zDjHtDnHtJvPdLnOzm@lv@|K|JnPbJfRbHd\\bJl_@nH~SlDb[vDdVdAzRIpOu@vPqAhMaBtIqAvMuB~b@_Ihm@oMrVuFvPkFhLyEtK{G~LoJ`t@wp@lz@{v@r\\sXbGaEhE}B|LeG`\\qM|MqH~KgIhMwM~PmWxm@}hAbn@aiAt`@kv@`OiVjHaHvKmE|JeBlQi@z}@b@fPHfN}@|UcEfNwExm@uVps@iZpiA}e@hsAmj@la@oPrFqB`yKqiE~a@oPnt@mZbVwJpLoEfX}LzJgFrCwBjG{FbI}JdMuTdFmMrFeS`Jof@nWs`B~Hyj@nFsd@lFgn@lCwd@vB{m@rCe~@jCo`A~DijArFwbB~D}qAlAiRzBeRhP{`AlCaRdAcMZgMK{Oi@kOwAsNqC}N{D{M{HkUkFsMkGcMwFiJwGqIkE{DiiA__AkY{TqP}NwJcKyEiHkBmHi@{FG_ELiYv@mL|BuHtDmFjEmCbEcAjBIfIP~M`CbHtAdDZnKxAxI`BjJxCrK`ElNpDhYvDbKNdIcAdHiCfIcGrOiN~M}OdHkL|CsJz@_J_@sIsAaP[wIFsIn@kHhCkHbGeGnTyN~NmPpMyWnd@}mArs@}lB~Pqd@jP{c@jOyb@dLg^xKia@dL}e@vFuYhLcp@fWsvA~Iag@fkAqsG~VuwAfD{V`CyVfEit@zAoW~Fs`AnGmiA`A}O|Dgv@tA{ThAkOjCgYpHcd@bD}OrFwZ|CwOfCkT`@mJB_JW}IcAeWyCyj@{Aig@Yu`@Gav@Uyb@eAsWiD{r@{@c\\k@a}@eAsSoBgQaGg[m@cDqSqz@iKa`@mH{WaGyOcEiH_FqGaGuGkEmDsLwJoKyGaN_H_XkLcRaJ{M{IoPsMmMgMeOuPyM}QiQ{XuRe]q^ss@yJqT}DwNqBsL_AcUEy\\l@axB@oi@v@qm@l@ad@rAwk@rDejArEijAf@kUo@{a@i@cTiGkiBkBim@oDaiA{@yVW}Ge@oN{FmhBU{GsC}y@yBkt@sBim@_Cws@sAih@?qe@dA{i@jGynBlAg`@n@q_@Dij@e@gtAIsf@AwIe@_v@B}\\h@_RrBu\\`DaVxFwY`HyVpR{c@pL{ThrFuvJzVyd@bTg_@jGyLjHqN`F{NhEeQ|Hmc@hVw`CbDa_@t@}Sd@wYFqQ]s[m@gNuGoy@qL{nA{DaZoIed@_Uc`Ai^u}A}A{JyBqQ}@uPi@aWCwSAmWn@yTdAiOJeBnFa]bLyd@hP{o@f[qpAlP_r@rC_PlAqM`AgQDcOYofAFqvDT__@vP_wHJyIrAkUhB{L`F{NlL}V`V}\\pNiOvXqW|y@sn@zP}JnRcGlK{AdRgA~Ic@`NuAbGuA`HsChPaMnIeIbIsJdJsM`M_SjEcHhF_HtE_FxE_E|FkDfOuIpKgGbPkJ~PcMbJcIne@kf@pX_Y|PwNrKoHtKuFtHuBtLoC~JkAfJy@~Ko@rPo@jJDdR`@dNv@lWpBpKl@hFLzFIpGw@nG_B|KmDpOeI`LoIrF_FvI}KvCcHnBsJvAwL`HuvAx@{NzAkRjFob@`Nwt@hR{|@fDiPlIc^zRiu@nGgRhIoQbTwa@pHqR|GsWnFy`@lAyGtDkOnIqVtFkLvIyMx^ae@|s@kbAjYu\\dUmWbPwQvn@sq@r`@od@dIoLdCaErCeGnB{EpDcLrIq\\lOqp@re@omBfWqeAvLub@hNcd@tEeOtR}m@lLaZ`G_N~FkMxOi[|Ro[~SyWhMoMdRsO`PiKxVqMf^cPr\\aQ|MiJ`K}IdHyHpGqIlQaZrSqZdKiNpaCy{ChAyAnPqV|ImP~H_PjIsRzdAsaCzHiSzGgS|CmLrHmZ|BsLzGch@bIyx@hFy]~DyRvDcNzCgKl@qBbL{Z|H{OnI}Nxr@ujAvgAojBrcAwcB`KcOzK{N~LkNhJgJbPuMdHuEnLuHrb@}Uzl@y[j_@iRfb@uS`e@aT|w@{a@xKcH~KgJxT{T~h@}l@hZg^x]wc@zK{L`IwFlHiDxPqEvXeC|{@iG~VoDhO_Dr]aItp@aQrWgJ~CoBdTcQjJoIbJmK~MiTfP_`@vM}_@~Lw_@bh@m|AxSyj@ln@efB|\\k}@rIgRjNiWdJsPpMmU|_@un@jKqPjNoR`Xu\\rgBkqBvkAm}A~MaR~qA{hBhv@ofA|I{KjGaHvHcGvIeE~HyBze@cGlYkAjVMja@z@nRjAhShC|s@tOz@Rby@`SfJ`AbIHpKaAxLwD|OoHtPyK|q@uf@nTwMz_@aS|d@yVbb@wTviAer@lT{KxfAse@rU}JngEmqBhl@mUdxAaf@vRaI|ZsPzZ}TdPuOzO_SvRm\\|AmC|JwXlEsPvMo^xGuOv]un@tU_^j`@_g@~HaIb[iW~w@mi@|J}IhG_JdK}SzHiUxNqb@vNsb@~IqR|JwMtS_ThIkKnMoTxa@cdA~IcPlDuEdd@gc@fJkK`yB{qClEoFp[m`@xGyHpNmPd_@{`@|IqHdFuDzP_JzJuDnTsFxa@wDbK?v_S~l@vsA~DdwB`HtZm@v]wCpf@{K`RaHdmAmq@nx@kd@xvDwvBl|A}{@p\\cQzz@_g@z|C{bBziCm{Aha@cUlGmDfAm@bh@qYdGgDfAm@fdAak@|uAsw@dVkL`WwNl~@oq@fg@{`@zz@sp@jbBytAtOuO~DcGbKuOfJcQrPk`@bnAakErLa]hMgXlYag@b`@ag@`tAq|ArCcDbF_IlE}J|TecAV_Iu@_IcAgEuF{JeEwDmTkLyQyLiH_ImE}JsAkKu@mTVqR~BoSlAsFvHqRdPa]xG_SbPq{@pMgx@pBuE`HsF`Im@d@VfCrAtEpGjB~IpA~\\wCrz@gDtn@d@~HpCpHtDdEtEhC~Dz@rF?hLyBpHeE`HqGnHuOlFoTrAuOLiMoDaq@EcQ\\{KvCoSjLia@`CaRd@eP}@qpA|@a\\`BgNvIwb@fNso@hCcRt@cQTgw@z@_StEo^tJ{_@|JkV`Xmc@llAonBf_C{uDnrBycDjJkOvQe\\|NyZ`_@k|@bQ}h@dOmj@bjCk}KtB}I`S{t@jKq\\r`@qeAt~@o{B`MmThQ_T|TcQvvAiv@fr@k_@`IcG~MgNvI{KzKaSrJyVraAwsD|BmJvTey@hMik@fyCkdOnHuZjBaGnHoTrGuObVec@voCguDpnC_{DlXck@nNwYvLwS~qAa}C`b@gw@ru@yrAx}FkkK|c@ox@rSe\\rOwN|i@wY`^gRt^qRt_@gSbx@ci@xZuXd_@gc@hkAqaBxgAe}ArFyH`E{FhA}AjmDu_F~iByhCb`Bs~Bda@{k@x`AsoA`_@gh@p^ih@lr@cbAdr@c`Arf@or@ve@sq@px@ciApy@ojAvZ_c@bMeQzgAg}ArhBwhCfhB{gC`}AmyBfo@k~@hl@gy@r}@spA~^uh@|n@i}@jm@i{@b{AcxBr|AkyBz}AczBfn@_|@~_@_j@rIoMjG_K~GaMjEsInFoMfEuK|D{KhEqNdDyLjDgNpFcWvFuXlNer@jNiq@lNup@d]gbB~M_p@rNcr@t|@chErt@{oDnEyTd_@yfBt]wcBhXyqA~UmkApOet@pcBkaIta@{pBfiCydM`D_SjCeQhB}OrAmPv@}PXsKTgSBoREso@KmgFOikACs]ImpACigL{@cyO|@ecCEsm@AcSC}g@A}Z?sQ@yU@qd@?cU@aN@im@@kj@t@wIpAaGdCeHbCqErC{DvEsDjE}BxDuAfF{@bl@MpxI[pgBi@`mBZbZCzy@WnX^nOFf`AHuLkb@sN{d@uKe`@oFiWaE_WsKge@kq@kyE}iE_uZoYiyA_ZyuAoqAg`F}i@knB}[imAwKkg@gNau@aL}p@iMkaAqdAgbNyJquAinDa}g@ehBcdWw_@_mF}vAyrSsiBqvUiyCs`^mbGifr@ovAofPsYkpCs~Dgk\\qjF}nc@kjBskOor@axFieCyzScLyfA{Fss@sDal@wEajA_Awa@_A{c@QmsF?}j@Ykno@eBqz@eFkq@c^{~CwEim@}Bed@a@mXo@qc@HejNt@crQjBkmh@SouMGeUtCkdN}AopX^_~NlEykt@?yqYgAypN]goh@Na{@}Awe]Cw}D|BsMHiR`@kSlAog@x@mStBuS~BeOnC}MfEoM~IoVdL_[fEgNfC{IbCmL|BcS~@_Pl@aSAey@IwHwu@Xyh@PcOFqcCdC_`@`@q@@qCBcDDoA@oB@[@mSLid@ZsDBe`@B__@d@c@@g}@Pgb@\\gSN}@^mEpB{EB_@@ib@V}MJoj@\\mEB_t@j@gu@^eYT_PJiDH{GDsFBc@?wKFoOFeo@VwVJiFByOF{n@Vgw@Zy`@Po@?oRH{HDeKDuIBuGDoXJaFBEeG?aAMaQmAqkBc@yeCYwdABwSBe_@AmCIgUAuA"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 32.733682,
+        "min_lon": -116.601942,
+        "max_lat": 33.09766,
+        "max_lon": -115.563094,
+        "time": 5733.962,
+        "length": 138.251,
+        "cost": 5190.374
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

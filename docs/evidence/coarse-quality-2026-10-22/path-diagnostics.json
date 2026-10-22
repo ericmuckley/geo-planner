@@ -1,0 +1,38 @@
+{
+  "model": "natural-earth-5.1.2-road-grid-v1",
+  "origin": {
+    "lat": 32.7157,
+    "lon": -117.1611
+  },
+  "attachmentKm": 3.952781372194569,
+  "method": "Backtrack v1 destination labels through neighboring transitions whose predecessor cost plus the current road/land step cost matches the label within 1e-6 minutes. The three traced paths use only 90 km/h road steps. Costs include attachment at 25 km/h. This compares different coarse/reference paths and does not isolate rasterization from road selection.",
+  "samples": [
+    {
+      "destination": "Los Angeles",
+      "gridPathKm": 228.75456385147444,
+      "kmBySpeed": {
+        "90": 228.75456385147444
+      },
+      "steps": 21,
+      "coarseMinutes": 161.9897178609137
+    },
+    {
+      "destination": "Bakersfield",
+      "gridPathKm": 440.7284166357054,
+      "kmBySpeed": {
+        "90": 440.7284166357054
+      },
+      "steps": 41,
+      "coarseMinutes": 303.3056197170655
+    },
+    {
+      "destination": "Palm Springs",
+      "gridPathKm": 237.00679744262942,
+      "kmBySpeed": {
+        "90": 237.00679744262942
+      },
+      "steps": 23,
+      "coarseMinutes": 167.49120692168916
+    }
+  ]
+}

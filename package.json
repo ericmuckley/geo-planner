@@ -78,8 +78,13 @@
     "db:pull": "drizzle-kit pull",
     "db:studio": "drizzle-kit studio",
     "db:verify": "node --import tsx scripts/verify-saved-history.ts",
-    "data:coarse": "python3 -B scripts/build-coarse-grid.py",
+    "data:coarse": "python3 -B scripts/build-coarse-grid-v3.py",
+    "test:coarse-data": "python3 -B -m unittest discover -s scripts -p 'coarse_*_test.py'",
     "routing:verify:coarse": "node --import tsx scripts/verify-coarse.ts",
+    "routing:compare:coarse": "node --import tsx scripts/compare-coarse.ts",
+    "routing:compare:coarse:v2": "node --import tsx scripts/compare-coarse-v2.ts",
+    "routing:compare:coarse:regional": "node --import tsx scripts/compare-coarse-regional.ts",
+    "routing:compare:coarse:candidate": "node --import tsx scripts/compare-coarse-candidate.ts",
     "check:coarse:vercel": "node scripts/verify-coarse-vercel.mjs"
   },
   "dependencies": {

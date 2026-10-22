@@ -1,0 +1,204 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.2559,
+        "lon": -116.375
+      },
+      {
+        "lat": 33.0787,
+        "lon": -116.602
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.2559,
+          "lon": -116.375,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.0787,
+          "lon": -116.602,
+          "side_of_street": "right",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive southeast on Borrego Springs Road/CR S3.",
+              "verbal_succinct_transition_instruction": "Drive southeast.",
+              "verbal_pre_transition_instruction": "Drive southeast on Borrego Springs Road, County Route S3.",
+              "verbal_post_transition_instruction": "Continue for 8 kilometers.",
+              "street_names": [
+                "Borrego Springs Road",
+                "CR S3"
+              ],
+              "bearing_after": 149,
+              "time": 334.182,
+              "length": 8.239,
+              "cost": 329.241,
+              "begin_shape_index": 0,
+              "end_shape_index": 79,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Deep Well Trail/CR S3. Continue on CR S3.",
+              "verbal_transition_alert_instruction": "Turn right onto Deep Well Trail.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Deep Well Trail, County Route S3.",
+              "verbal_post_transition_instruction": "Continue on County Route S3 for 11 kilometers.",
+              "street_names": [
+                "CR S3"
+              ],
+              "begin_street_names": [
+                "Deep Well Trail",
+                "CR S3"
+              ],
+              "bearing_before": 92,
+              "bearing_after": 141,
+              "time": 675.011,
+              "length": 11.244,
+              "cost": 600.597,
+              "begin_shape_index": 79,
+              "end_shape_index": 341,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Route 78/CA 78 West. Continue on CA 78 West.",
+              "verbal_transition_alert_instruction": "Turn right onto Route 78.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Route 78, California 78 West.",
+              "verbal_post_transition_instruction": "Continue on California 78 West for 30 kilometers.",
+              "street_names": [
+                "CA 78 West"
+              ],
+              "begin_street_names": [
+                "Route 78",
+                "CA 78 West"
+              ],
+              "bearing_before": 208,
+              "bearing_after": 256,
+              "time": 1359.108,
+              "length": 30.01,
+              "cost": 1190.836,
+              "begin_shape_index": 341,
+              "end_shape_index": 1062,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Washington Street.",
+              "verbal_transition_alert_instruction": "Turn right onto Washington Street.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Washington Street. Then Turn right.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Washington Street"
+              ],
+              "bearing_before": 309,
+              "bearing_after": 43,
+              "time": 6.675,
+              "length": 0.046,
+              "cost": 11.726,
+              "begin_shape_index": 1062,
+              "end_shape_index": 1064,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right.",
+              "verbal_transition_alert_instruction": "Turn right.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_post_transition_instruction": "Continue for 20 meters.",
+              "bearing_before": 42,
+              "bearing_after": 129,
+              "time": 4.796,
+              "length": 0.02,
+              "cost": 15.599,
+              "begin_shape_index": 1064,
+              "end_shape_index": 1065,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 5,
+              "instruction": "Your destination is on the right.",
+              "verbal_transition_alert_instruction": "Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Your destination is on the right.",
+              "bearing_before": 129,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1065,
+              "end_shape_index": 1065,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 33.066308,
+            "min_lon": -116.60244,
+            "max_lat": 33.255873,
+            "max_lon": -116.329963,
+            "time": 2379.773,
+            "length": 49.559,
+            "cost": 2148
+          },
+          "shape": "a{wl~@``~}|EjAq@hCaBnCqBnlDwGr}AeCrgCyEz[k@d|D}Ghh@}@bVa@l`C}Evi@w@lrAi@fsBiAjSOlJAhWNzNlAdR~BxL|D|NbGta@tUz]zOxl@bP|h@pJrh@pGvlAlGx}@|Ax[Drd@Fty@k@vz@}C|o@_EhhBcQ~hAoPlsAoWze@iL|y@yUt^_LfTgHtOgF`QoFdiAoe@d[wN|_Acf@x_Amj@pk@c`@vk@ca@|cAey@`^_\\~QyPdTaVpK}NvU}`@pPo]jM{^~CgK`F_TdF_XbHik@PeD`Bu[n@}h@n@ylCZmpAdAguET}kAb@m|BXweARgf@N}p@Tc|@p@}sBFko@`@s~ApDamK`@gnBz@uaC~A_uBpAUv@Kp@g@rCuI|EqQrKwXvSa]jf@wu@tXyb@jQcQzFeEvNaHpQcGvF{ApP{@tICvLGbk@Cbl@]pG?to@?jy@xApl@v@pDDr}@jApnBhCrsBvCd|DtFta@j@bg@r@|dBbCfJhBbpM`R`\\jApv@|JjLxBrV`Htm@fYzo@n]lPbGlOtDl^vDre@l@v^xBxfDj`@hRvCpg@jKhW~IrmBju@~eBbo@lY`HfYvD|~DpQj`@|@`lDiCbV|@dUfDdPbF|IvDvoCnzAxGtExRrQnRfXbLlUvIvXrPnr@pl@rkCfH~S`IbQzKbQbLfN~HlJpRpRzO|J~gAng@hRpGvoBtd@~N`Hby@bp@fEtElD`GrGrQfCfYl@bo@l@zKjA`HhC`HnH`HfYvNdKfDrwBvWhRxChy@vP`Ex@hMdEdO|J`WtXbb@lj@`Vx^`KpQxGbLnBbDzApCr^zo@fEjK~a@jhBjp@bdBvHrP~DxM~AbIf@`E`@dErAnOj@dGz@|F~AhJhBnKj@lEl@vEf@|Ch@fC|@rDpBnHn@vCn@`E\\|Ch@vEp@jIh@nCp@nBbApBnA|B`B|BpEvGdDzFxBtEdBzEbAnEbAjFr@xEhA`Ip@~ChAdCxAfBpB~A~D`DnCfCdA|Ar@fBl@|B`AxEt@jE|@rDfAjDlAtCpBvCtCzDfBjDl@tBTnBDpBO~BWnCk@|C}AdGqBxIm@dEg@~FWtEQvGK|FDlDd@dEf@hDr@lDpCnKjGbUlAdFr@nEr@dF|@zFtAbF|AhDtBxCfBdBfBlAjBhArCtAdEjC|CpCxApBzAnCv@nCn@vCZjD?vDc@pCo@|BkAlBmAjAaBx@{Bp@gDf@mDv@wBpA_BjBmAfCi@pC[lCChDLjDp@pDjArDbAjC|AvCtBdCdC~BvBrA|ChBlCfA~aAv[hHfDpBhBpCtEbA|J]`HiHjVe@bF\\rF`CpG~O|L|H~FbG~ItJvXt@rFObGeKz_@m@rPrAhMxClK|Oz_@tJdZ~BhLxC~SnIlhAnB|PtA~LrDlTtA`IxH|d@tJtk@PdAfFtZvIb\\|JjUjU~]p\\ja@dQ~QbTnRn_@r]lFzFlDp@jA~Iz@rG|EhWbFdPnN~]dEhMbGvWjFn^vDha@GvY{AbQq[vtB?jVlDzqBNzD\\lGjBhN`ClJdrAdhE~v@h~BbGnTpGt\\bBpLjA`KjKhjAxBz_@^jVGhWrAde@xBb[\\vM?fYe@~SwHv`BFfXlD|_@hC|I~HpRbQfb@jG`SdIt_@tDzTrBfTl@vMm@jjA}Iv~CcBpdBd@|SrB`SrKv`BfIrdA~C|ThCzJnMn^dFbQnHxa@vSh}ClUraCfUd`CxJtdAhQduBxBbX~OjwBTjVm@dc@yA`SiC|T_Idd@yCjL}IvWgNr[wCzKe@vDGjKjUrmBnD~q@hCbQ`CbGjFbFvMxChC?dTwD|P{@dJ\\tOfDpGvCvI|J~HdPvIfMlEfE`MnH~C|@pL\\vc@wCnNLvXpHrFz@`M?tE{@~W{KhMkBjk@{@tTdE|J]tTkL`W}T~SwXxGsF|O}IlIyC|JkAzQ^`MfCrKtE~SvNhRpQbS|XfRhWbgB``CrP`\\lUfY~Mr[jFlTfDlTrF`SlFxLnSj`@~CnIxBlJhBfNl@jLI~Un@fPtBtM|DfMdIzNtq@~z@lJzJ`f@b^vGhIpBbGvEr_@hD|I~CtEfIrFto@dYfJzGrF~HxBdFjAlJ\\vMf@hYlCt]hCxL~IvTbFrPrEbIvJ~EtJlAzZiC~XeEpMl@nItDlEfDtJhMlE~IpL~\\`CjL~CnHxBhCdEvC`NrFzJ|@t_@Oli@iB~MhBbLhCdKbFfI`H~H~In|@f`BlEbGvNdOlTdPzUrLdAb@hMjLlDbGxiCvdHzJbe@xCb[~f@fvKlFnq@~Hxl@nCdO~Nfm@hLf`@nX|_A~G`VrXj_AzGlUdr@x_CvTjv@dB`G~FbS~zAleF|Tbz@nSrz@xQ~y@px@fzD~aAtlEhvLxdj@veBlbI|_@lgBr]b}A`~AtjHzO~s@reBtbIr^vbBnBlJbChLfF~R`G`QhGpMtHhLrIpLbN~M`WfS~@t@n^hY`Q|OnL|MfLbQ|Qp]~Vni@~@hBrXbj@dDfH`g@rbAxDfGrHbIjWnQpFpFjHxJrl@dlAlEfLvCrLfExRfExMdL|VlJlRnKb[dGfNdLfQnHhM|A`H\\tJi@vKu@jLCbKbBfJdDnJvHpKpf@ro@zm@jw@tPdVjHpIbH`GzH~EjHbHrEzFvDjEbJpFlO~FlJpDbCxAvCdBxD|DdCzFz@xHw@xI{B`IcFtIkXh`@{LnNsDlGqBbGeAtHDhJx@rPT`P]rRe@`RA`IlApH|BxFbOdZrFzJfHbGjZtT`GlC|H`BlUxF|EtDlBtFEvHqAvE{CpDsExA_Kj@su@Fw]LsEc@mEqB{DaEaIgO_EgGgFoEsGaCkJgBwIo@eE_BaCiCwAeGuAkQeBcIkCsEkGuDwE{@cFJsEx@}DfBuDlCgChDsKpRcLjSmBzF}@vFO~HZ~Lg@`IeBdDsBjC{CjA_Hh@iHl@gCjAmCvCoBhEcA|E}C`JeDtDsE|AgHlCyBlBgB~EShFt@zNYrGyA|FiCdEaDpCcItCkTlCcGfCqCfD}B|Ga@lHXzHfEj]v@vIJ~GYdFkAzGyCpHyDdHwDvG{DfFmDpDqClCaK|GcH|CcHv@aMBoEz@qDbBwCtC}CtGcArGKnHv@tGhBfF`IbN~B`FTpGy@|EaC~DmC~BmEtAaUbFuEpCaDzEuAbJv@xJ`CtRRnKoAtHcExEmM~GgO`H{KvDsU|JeKlJwCbFeEhMcBfOm@`QrAliAU|IkApGyBvDcDpBqE`CaS{AaH^yQrEaMnIkGpHgHhLuFxM_CnIgIfX{GzKeJpHsPpGcLpHqa@xa@sQtNmOnTiC`Ge@fD]xMt@~HpB`HfN~SdKzKzAfDd@pG}@pGwCrF{QbQaBxC}@`GjAb{@|@zJhCxL`BrQ?pHcAzJ}D`I{GdEmDd@oDd@uE]uD{AcWaS}NaGwSiC}TaHsFwC}JkAiHLmJfDg]`S{KzKsFfNoNbz@u@dONdPWvCkF`SkFdOgJ~SuDdEmBhA_Bn@gDb@gDc@qHeE_SyWeEiBgIm@_DLuJfEyBxB{`@xj@}D`IaIp[eEz`@}DhMoDbFwIrG_DtDkPxWoNfNqGbGe`@re@kPjUaCzB{FxBmJ_@aX?cFxBoI`HaBhCcB`FsAzCaCtDkFfDiMdFsUvMqHlJiGzKiXlt@aCtDwH~HwDhCaGpGgDnI}@dF{@vNeA~HeEbPcAjBkFvC{L]gHjAsFhCiNhLuOtOiRtZqLfN_DpHkBlJ{@hWoDhWoX`q@kA|I?zLm@dOqBdPgDfNsFhLyGpH{KbG}OfD_[zKqDrEiB~GW`JhBpMrE~W?`HyBlKiKpPkMpSqGvMkLbRiGfNeKdY_OvYqQtc@qClJgCxMkA~ROvN\\fNjB|IdEtFdJvChUbBxJr@|INrQzA|IhBdJvCrQ|JzK~HhMzKvE|CtDxAdG`AhZpBjFzAzFdEnE`F~FxIfDdDlDzBvJnDzFnBjGdA`Hd@bR^vDh@zCfA`X`RfInItNzUfEdEjE~BzCx@|Ch@hENpEO`HkArFwCjFeEn[oh@nF}IzKuOhGgH|FeHxIaJnKoHfEyAtFeAlVc@dHs@~NeE~GgE|B_CnBiCzAsCx@qC`BePpB_d@hEk_A`@qHr@aFx@eCbAmB|AoBpKiFtEmAzKk@j`@j@jG{@vEaCbD_DdKwNnUuYzDwD|DuClEkCxRaG~NcGfA_@rMsEt_@mJfh@eFfX_IbLcFdKcGbQyMnD_BbEeAtF_@zCJvCn@rDnAbI`EbFvBpDp@jDPdDMrEo@zKyB`Do@|VkFvKmArDKhEDhG\\rHbBfHdCzJnF|QjMlIbExFhApHz@vJ^|v@@bN`AdM|DzJ`F~I`J~GzJtGxPxDxS`AfPD|sAXzg@Tzb@d@xoBl@vjAJbUFrPFtKJfUn@l\\m@xLq@zM_DjVeCxKkGfLkIpLcU|]ig@hv@gc@ps@eCbEaDuD{LyM`FqI"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 33.066308,
+        "min_lon": -116.60244,
+        "max_lat": 33.255873,
+        "max_lon": -116.329963,
+        "time": 2379.773,
+        "length": 49.559,
+        "cost": 2148
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

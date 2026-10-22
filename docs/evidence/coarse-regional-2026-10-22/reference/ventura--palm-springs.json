@@ -1,0 +1,398 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 34.2746,
+        "lon": -119.229
+      },
+      {
+        "lat": 33.8303,
+        "lon": -116.5453
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 34.2746,
+          "lon": -119.229,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.8303,
+          "lon": -116.5453,
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive northwest.",
+              "verbal_succinct_transition_instruction": "Drive northwest. Then Turn left.",
+              "verbal_pre_transition_instruction": "Drive northwest. Then Turn left.",
+              "verbal_post_transition_instruction": "Continue for 40 meters.",
+              "bearing_after": 331,
+              "time": 7.92,
+              "length": 0.044,
+              "cost": 8.909,
+              "begin_shape_index": 0,
+              "end_shape_index": 8,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left.",
+              "verbal_transition_alert_instruction": "Turn left.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left.",
+              "verbal_post_transition_instruction": "Continue for 90 meters.",
+              "bearing_before": 95,
+              "bearing_after": 4,
+              "time": 21.917,
+              "length": 0.091,
+              "cost": 53.627,
+              "begin_shape_index": 8,
+              "end_shape_index": 12,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Telegraph Road.",
+              "verbal_transition_alert_instruction": "Turn right onto Telegraph Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Telegraph Road.",
+              "verbal_post_transition_instruction": "Continue for 1.5 kilometers.",
+              "street_names": [
+                "Telegraph Road"
+              ],
+              "bearing_before": 348,
+              "bearing_after": 80,
+              "time": 76.24,
+              "length": 1.312,
+              "cost": 125.352,
+              "begin_shape_index": 12,
+              "end_shape_index": 45,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto South Victoria Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto South Victoria Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto South Victoria Avenue.",
+              "verbal_post_transition_instruction": "Continue for 3 kilometers.",
+              "street_names": [
+                "South Victoria Avenue"
+              ],
+              "bearing_before": 80,
+              "bearing_after": 170,
+              "time": 166.376,
+              "length": 2.913,
+              "cost": 360.68,
+              "begin_shape_index": 45,
+              "end_shape_index": 151,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 18,
+              "instruction": "Take the ramp.",
+              "verbal_transition_alert_instruction": "Take the ramp.",
+              "verbal_pre_transition_instruction": "Take the ramp. Then Keep right to take U.S. 1 o1 South.",
+              "bearing_before": 208,
+              "bearing_after": 219,
+              "time": 4.886,
+              "length": 0.069,
+              "cost": 10.429,
+              "begin_shape_index": 151,
+              "end_shape_index": 156,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to take US 101 South toward Los Angeles.",
+              "verbal_transition_alert_instruction": "Keep right to take U.S. 1 o1 South.",
+              "verbal_pre_transition_instruction": "Keep right to take U.S. 1 o1 South toward Los Angeles.",
+              "verbal_post_transition_instruction": "Continue for 82 kilometers.",
+              "street_names": [
+                "US 101 South",
+                "Ventura Freeway"
+              ],
+              "bearing_before": 213,
+              "bearing_after": 255,
+              "time": 2812.557,
+              "length": 81.896,
+              "cost": 3017.009,
+              "begin_shape_index": 156,
+              "end_shape_index": 1031,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "US 101 South",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Los Angeles"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take CA 134 East/Ventura Freeway toward Pasadena.",
+              "verbal_transition_alert_instruction": "Keep left to take California 1 34 East.",
+              "verbal_pre_transition_instruction": "Keep left to take California 1 34 East, Ventura Freeway toward Pasadena.",
+              "verbal_post_transition_instruction": "Continue for 113 kilometers.",
+              "street_names": [
+                "CA 134 East",
+                "Ventura Freeway"
+              ],
+              "bearing_before": 90,
+              "bearing_after": 86,
+              "time": 3921.286,
+              "length": 113.32,
+              "cost": 4444.506,
+              "begin_shape_index": 1031,
+              "end_shape_index": 2137,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 134 East"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Pasadena"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take CA 210 East/Foothill Freeway/Congressman George Edward Brown, Junior Memorial Highway.",
+              "verbal_transition_alert_instruction": "Keep left to take California 2 10 East.",
+              "verbal_pre_transition_instruction": "Keep left to take California 2 10 East, Foothill Freeway.",
+              "verbal_post_transition_instruction": "Continue for 6 kilometers.",
+              "street_names": [
+                "CA 210 East",
+                "Foothill Freeway",
+                "Congressman George Edward Brown, Junior Memorial Highway"
+              ],
+              "bearing_before": 171,
+              "bearing_after": 172,
+              "time": 194.092,
+              "length": 5.658,
+              "cost": 205.693,
+              "begin_shape_index": 2137,
+              "end_shape_index": 2183,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take exit 85B onto I 10 East toward Indio.",
+              "verbal_transition_alert_instruction": "Keep left to take exit 85B.",
+              "verbal_pre_transition_instruction": "Keep left to take exit 85B onto Interstate 10 East toward Indio.",
+              "verbal_post_transition_instruction": "Continue for 56 kilometers.",
+              "street_names": [
+                "I 10",
+                "Pearl Harbor Memorial Highway",
+                "Route 10"
+              ],
+              "bearing_before": 180,
+              "bearing_after": 180,
+              "time": 1819.717,
+              "length": 56.096,
+              "cost": 1861.696,
+              "begin_shape_index": 2183,
+              "end_shape_index": 2622,
+              "highway": true,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "85B"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "I 10 East"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Indio"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to take CA 111 South/Route 111 toward Palm Springs.",
+              "verbal_transition_alert_instruction": "Keep right to take California 1 11 South.",
+              "verbal_pre_transition_instruction": "Keep right to take California 1 11 South, Route 1 11 toward Palm Springs.",
+              "verbal_post_transition_instruction": "Continue for 14 kilometers.",
+              "street_names": [
+                "CA 111 South",
+                "Route 111"
+              ],
+              "bearing_before": 101,
+              "bearing_after": 100,
+              "time": 508.325,
+              "length": 13.946,
+              "cost": 458.846,
+              "begin_shape_index": 2622,
+              "end_shape_index": 2758,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 111"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Palm Springs"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right onto North Palm Canyon Drive/CA 111 South/Route 111. Continue on North Palm Canyon Drive.",
+              "verbal_transition_alert_instruction": "Bear right onto North Palm Canyon Drive.",
+              "verbal_succinct_transition_instruction": "Bear right.",
+              "verbal_pre_transition_instruction": "Bear right onto North Palm Canyon Drive, California 1 11 South.",
+              "verbal_post_transition_instruction": "Continue on North Palm Canyon Drive for 3 kilometers.",
+              "street_names": [
+                "North Palm Canyon Drive"
+              ],
+              "begin_street_names": [
+                "North Palm Canyon Drive",
+                "CA 111 South",
+                "Route 111"
+              ],
+              "bearing_before": 106,
+              "bearing_after": 143,
+              "time": 201.881,
+              "length": 3.451,
+              "cost": 214.063,
+              "begin_shape_index": 2758,
+              "end_shape_index": 2853,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto East Alejo Road.",
+              "verbal_transition_alert_instruction": "Turn left onto East Alejo Road.",
+              "verbal_succinct_transition_instruction": "Turn left. Then, in 100 meters, You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "Turn left onto East Alejo Road. Then, in 100 meters, You will arrive at your destination.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "East Alejo Road"
+              ],
+              "bearing_before": 189,
+              "bearing_after": 88,
+              "time": 16.489,
+              "length": 0.143,
+              "cost": 45.486,
+              "begin_shape_index": 2853,
+              "end_shape_index": 2861,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 4,
+              "instruction": "You have arrived at your destination.",
+              "verbal_transition_alert_instruction": "You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "You have arrived at your destination.",
+              "bearing_before": 91,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 2861,
+              "end_shape_index": 2861,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "level_changes": [
+              [
+                1511,
+                1
+              ]
+            ],
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 33.830259,
+            "min_lon": -119.228856,
+            "max_lat": 34.277944,
+            "max_lon": -116.545298,
+            "time": 9751.692,
+            "length": 278.94,
+            "cost": 10806.302
+          },
+          "shape": "kc~j`AxuclbFuAnB}@^gAFsAWmAaAi@mBSwBt@uCkDi@uYxD_LhB{Cf@gCy[_E_h@s@{IcFcn@Cq@c@sFoDwe@kDic@eDoa@k@oHs@wIM{AsCi]cNweBg@cHqFas@sDwd@gIedA}BsYiI_eAGo@a@gFc@uFmF_r@uB}W{G}z@mAsOKgB}@_MU_Ds@kKI_AYoDxC_@jHy@hNaBbFe@rDQdCIjC?zC@xDRnGp@vFx@|JhA|J\\hHHbGKnDYnJcAhDg@r@M~Ca@p~@wLlaB{SpXoDzJoAh`@oEhq@wIh`@wEzA[fFm@dWyCbbAyLrj@_H`CYrEk@zBWte@gFxc@eErCUvZcCbFc@rIgAbV}Cr@MnEg@vHkAhDc@lSmCdBUvc@_GtWmCzBWzBOj^mD~T}CtSgCnSgCnEk@|x@sKf@K|Eu@fFq@rv@{KxFs@vLoBrG}@j\\gEh^eEh@GdEOrEg@rRiB`J}@xHaAz@MjUeDzJsAbOyB|IoApFs@zh@aHj@GbFs@tFu@fn@_JzASxFg@fCSjCM`GChHR`FNnCPtIfAfARjGxAdElA|EhBbHhDnDbB~CfBbDpBnBjAlIpEpIfFpXbOzCfB|KnKXPvM~Hn@n@v@r@z@rCp@xDe@|FaGpQkExMkNzb@e@p@g@j@m@d@o@^q@Vu@Nu@Hu@?w@Es@Ms@Uq@]m@c@YQy@w@]i@wAcCiBiEqAeE_AuE{@oFa@uEIkECaHJsGn@{FpA_HpB{GfDcIrDwHnEaTrGqMfc@sy@xe@s~@rj@kkAhHgQxSgl@vVuw@zi@{dBho@{bB`^az@|O{_@td@ogAbMeZ`h@cnAvDaJxx@gqBpLqYfLm[jFsPbF}Rta@u~AjWu`AzJw_@rJs_@rJs_@rjAcrEp[}pAfVaaAdO}k@vQ{s@fVo`A|Nuk@lDwMjLe`@~IqUvIqStKsUhNaXjNuUnOiUvN{RlQmTtTmUnNmMpj@uc@`WgRxVyQdnAe|@lm@ad@zdBanAhb@q[fZmV`YsVfn@{q@l]ag@dO{U~Pc^~L_YjFwMhJiZjCsIbNmf@tAsFnIk\\xGsYlL_o@zKcp@dN}|@jEqVxKwo@fMmu@xJwl@tDmTrc@_jCrA{HlE{V|CqQhFmZdl@{jDzHmd@dCaObF_`@lFkh@pEum@t_@gbI|PqtDtEidAdB_p@dByq@lGgtDlCysA~@ei@bHa_Ef@ih@Nmj@ImdAD}q@Fk[Amr@fAkhHvBenAAy{C@oPDuc@|BurNJqkAVqjDPyr@@g{ALyQJea@xAou@zEqqAfKaiCnFw_BdKqkCbHchBzOcjExFmxA`l@mgPdC{n@vYmjIpFazAbDejAjEatAzHcmBdKurCzo@chSxVkwHfBw|@~Bw|C|HasMjBibD\\yZj@mRl@mPlB{[xC}\\jE}]dDwTnCaPpMex@dNg|@~AoI`Mmt@bCwO|CeUxByQhDu`@|AgWrA{`@d@ya@@yu@CudBMip@Fi_AGafAAil@Duo@]u_FFse@Cab@B_\\?qp@Py[lAcZlBsVzCa^tBoQ~CyTpEcZ|Hs]vLij@lXwkAtEmTtNkn@hZcsAvJsa@ts@ubDlZssAvOcq@pGuZvKoe@v^cbBjvAcjGjCyJdIaYvKsZjA{CrGeQlCeGdIkQlNcY`JyNdJiNdHaKnUcZjFaGpAyAhPcQn`@wb@p]gd@tFaJfMaVbLaZpEiNbFkR`D_PlCuQpA}KxAqP`AuP\\eWA}JQiNc@kN}DkcAm@eZAwRPaKv@gSbAiMvAoMtGkb@`AaFF[fAuEvBsIlCsIfCgHxFkN`I{PvMqTfGoItHuJtPqRnMmM~VsXz^q_@~QcXjP}Z|Na^vEmMxE{MnFsR|EoUfDcQhDyUrAoMbAwLpBwXj@_XVeg@iCoo@oAua@cDsq@iA{c@SgMVgf@xA}k@hL}{FjB_l@f@wHv@aJ`CaUfEeYnGa`@dFaW|Hgc@nD_VbA{Jr@yJ`@_KViMFqIAaO]aSuAgj@_A{Xm@iXKuQT_O\\kN`AqOlAyNtA{K|C_R|DaRrFqSfFiNpGmOz]{t@|k@{nAzq@gyAvJcQvb@ao@~Yid@`|BkgD~PuWlQaZxGeMrD_I~JkU|Lg[tK_[|Qqg@jeCcdHfzC_oJjf@cyAxb@ktAhmBqgGzJm`@pIab@~Ek\\bFga@pEeh@dBi^n@eYVcPDmQHop@u@ymBi@ubHg@w`Es@ymEo@_pDgAywK{A}p@oImzBiA_Z_@mKm@qb@ByXVeSz@oYpBe`@zC}]zBaUpBiOxEaZ~CwOvDgPvF_UtGgUtFuQfWkq@dFeMlYau@jO}^rvAeqDj{CezHlVks@fJk[dIk\\vHga@nD{TbEa\\nDqa@bBuXhAcW`Ac\\lAkb@bCox@nQwhFbM_zD~CceA~NkcF~GkzBbAm]~JodDdAiZr@wTtJubDnBue@bCg]|Eee@bJcl@xK{f@|Lgc@zKq[rLiVhSid@tQy^haCgcE`MoTpTa^tjAsqBbz@kwAdm@o`AdgCkqEfOaWddBuxCxJoQ~f@i|@|NuUtD_Gb}@k}AbOuV`h@w{@zjJq`Pr~@o`BnL}U`LeYdOka@lL_^lIu^dGeYpOsy@lLuj@jOas@|dBmfI`}BkyKjlAauFnj@qqCzG}^zHwh@~Ecc@jEqd@bDcf@fDwo@nA}k@d@_j@Mu^a@qb@sDeqAsQkrF_i@m~OaG}hBwB{t@c@_b@E_l@z@ym@~B_s@f[kaFbK}{Ahy@}wLvEau@|AuVl@uL`Ba[pH}jApFuq@fGmo@rjBgdPfGsu@lDq~@fAi_@Zen@GuSGwOcAcmDCs_@x@eYfBuZtCwYrE_[pFiXdIsZhIiVfKmVlNgXtgDuxFhSg^|I{RnI_SzIiVbJg\\fAkFtBcKpDySRyApCqT`C}Y`AeVb@_[KgU}@uZqHmbAeEaj@{LmaBgDwd@kC}e@sBuv@wDonBgDscBqBof@mCm_@cFid@wGib@aKkg@}vAqkGmXgeAgPug@yL_^mQed@cJyRmHmQ{Zkn@k_B}kDin@crAc\\mi@a_@qf@cs@{s@udCi}BeUcTmO}O_QeUqTe]sNe[_L{\\}Hc[iIcc@wDg^aB{[w@_`@LeUtAy\\bCm[fV}hBlBsQnBeUxA{Xv@m`@Y_]qA}\\}BqZkTyfBiD{d@eAyVa@aVDgaAPe_Cp@i^bBq^fDsZjBoLbBiKdG_ZphAerE`G}ZlE}YlCkYtBea@d@}\\Uu`@yAqp@cHijDkEwhBcD{v@aEmj@aIwt@iBaNsCeTaGm_@ka@uzBcRucA}bBswImLaj@uNyj@{ZmeA{aBoaFy`Bq~Emo@umBeW}x@iIgYkFuSqqByqHuu@uuC{oDk~Mol@{aCeMsk@gDaQetBcuJmLkh@iRip@mUoi@iRka@cKiPoH_LyIqNyk@c}@}R{Z_KiQeJkQmL{VwO_c@iG{T{I_^cH{^iEiY}Ck[cCs^{@qYe@eY@mV^}UfAqVpBq[zH_y@~TagCdMezAh^yvE~AwQh`@cmEpHe_Avi@}_HhAuSjCor@p@m[ReZAcd@]kb@gBup@wFs`AqHgx@kJew@mJ{j@oTudAgQcq@gfB_tGgx@_yCsRit@aGaVsI}d@yGq`@sFw`@sKgjA}D{i@iXskHs@mRiHoiBu@w]a@_c@MgYbBmcCz@c_EH}UvDk_IfB{kEJyRtCcgHb@{iAVuy@\\ql@h@_\\h@yRtAsVhDia@bFy`@nFeX~Jg`@dQmi@~N_d@hHkS`JgYpF_UzFwWlFgYzEu\\tCq]`Ba]l@kc@TgeA?oSHewIGqrDBwWAi|CTiaUx@q_@lAuWnB_WjDuZxDeYxGy\\nJo`@|Kq]dMu[nJ_TpMsVjdAgjBlwBoyDrT{`@rN_ZfJaVdHgUhGyUpFmVtD}UxDg`@pBqZr@uUXgUQ_uBoHokU^{e@|As]|A_TvC}XvEeXhDiOdE}OrFqPhHoPnM{UhGmJzHuJzPsQbLcJvN}JlQ_KhHkHfx@gd@|c@kW`KiH~PcPlMmNnKsNpJ_ObBsCjIgQnGiPzI}X`F{R~CwNrAoInA{KdB_Vv@kUVik@Hwa@ByDg@y|@Ew{ETaHbC{e@pCg\\hIco@bM}n@pPqv@|EiT~Jef@vI{b@dGya@jDkZ`CyXvA{Vv@_XhHqoBrAw_@fBk^~Cq_@bEg`@jGea@|FuZzKmc@bEoOfHsT~Xsv@fQkg@`DgJxByG~AeF|AwFvAsFpAgF~AeH|AeHpAuGhAaHjAkH~@oH|@aHt@{Ht@{HtAiSt@{P^wQAg\\UsS_AuTgAiQ{Dw`@kI{{@oAoOiAwQiAu\\Y_Zb@shGLkbEHmV^k~D_Awd@}Ekq@_Gei@{[azBoI}m@cBsMcBmP}AkRwAcV_Bk_@k@_\\r@iwFFg`EBuRRcaEbAezHLo]N_Zn@_S`B}WdCgShCsRbCoNnDiPzDyOxEeQvNk`@pOm_@bXsq@lIeUjGaSzFeXtDyR`F{]zCa`@fAkZh@cW?cTEgWFww@DiaDYw\\BqVq@ozF?kSc@qgEeAag@HajDXy\\bA{XxCeXrDiVvByIzEeRpOwi@vXgcAhKue@tDsPfCyPvAaO`AmVt@oa@pD{kC\\cWmBypAmAal@sDm~AQoHcAec@eAyc@{CksA[mWmAkgABwfAtB{zAXwQvEsyChBs{@`Auc@j@mXf@ow@Tus@}@mx@iAoj@yAib@_B{]_B}Wc@sHe@qHg@aIk@}Hk@mHk@wHo@}Hq@yHo@oHs@qHw@aIq@oH{Ok_BaDe\\oA_MqBmWk@yHe@kHe@yHc@uHa@}H]aIYkH[uHSuHUeIQwHO}HK{HGsHGeHC}FCgHA}I@yHDeID{HHeIHgHNeIZsMFcDTmHT{HZiI\\sH`@_I^kHd@_Id@uHpWkzDj@oHj@yHl@{Hp@yHr@kHl@iGr@uGz@kH|@kH~@_HhAqIhA{Hpb@skClAoIzGeo@`Bmi@F}^gAma@qA{Qk@yHo@mHu@qH{@kHcM_eAWwBa@gDyBqQoh@ekEo@gG_Kqz@ml@i`FaXszB{@wHs@eHs@qHm@sHe@wHa@oH[}HUqHMsHIaIAyHBsHHoHN{HX{HZmHb@eIb@mGb@qF`@mDpLkjAnBuT|Cy^l@oHj@{Hf@wH^qHXuHRaIJ}HDwH@wHC{HIqHO}HW}H[iHc@yHg@oHo@yHu@sH{@yH}@gHeAmHyK{s@}AoKgO_cAu`@ckCuWqfBeAiHgAsHaAkH{@gH{@{Hs@uHq@qHm@oHg@sHa@yH_@sH]uHU{HUyHMsHK}HCwHCwHBsHDqHHaIL{HTkHVeIZsH^{Hb@kHd@oHl@uHl@{Hnb@u|EzLeuAp@}Hl@uHl@wHh@uHd@yH`@oH`@_I^sHZyHXyHVyHPqHPcINsHHuHFqHFgHB_IBeI?sH?ycA@aIDgHLqHX}H`@kHd@sHp@kHx@wHlFw\\pJq^jJcXb}@elBrWcj@vIsRdMkZnGuPvFcRdGeVxDmSjCoP|CmYz@gOt@kULwQMeP]}Sw@}SeAmToCiYmKmu@wIqn@iHmf@_AyGeYwmBwa@wpCgi@azD_Ikk@wEk]mGsf@qKyp@aT{|AyJis@aMkeAaLuoA{A_]gBc_@gAyTuBmrAAw}@T_xA@_}Ae@gaMWagFEg|@Fiq@N{Hv@wb@pDgk@dF{g@zGqf@~H{a@rJgZdFiObB_FtQue@fOq`@~V}b@|b@go@n_@sk@xh@ox@vk@cz@vT}[xX}a@faAo}A~e@s~@|Oa[ni@mlAxNy^zOya@xUyq@pLc_@rUsw@nVu_AdGkW|Ioa@pOcw@nSwnAdIwm@lHan@hOw}AxE{p@rAiS|EmcArCaeAhAqt@`@g]H}YsA_yBeAa`AMkQyD_dCwA}q@gDit@mEge@uBcWyEia@oJcj@kNao@ci@shB{`AoiDqGo\\eEgY}Do_@kBq`@]}b@nCqt@|Dq_@nFmc@bKae@ruAkzDhNkZtPed@dQcf@vsBc{Fna@{hAnN{_@lSom@zP{h@zJw_@fIs^fJkh@|Iur@xEsa@~Csk@`@sIfAqu@Ogi@_Cys@wDkh@yBqVaIqo@qRgbAq`@ubBat@wlCcOgi@oQsi@kIaUiOm\\{[wq@wDaImM}XaJoWoGcUyE{SiNuw@wK{q@wLqbA_Lmu@yLau@wEoQiD}MsEyPiJ_]yJoYkJgVm}A{iDyBaF_h@skAgVeh@ys@}bBoRco@kMsj@gI_e@aGir@aDuv@{@sd@Yeb@EonAFsIdCq|D\\umEUybBNmi@E_jAg@}aB@ep@Jm_GH_`B]wkAiBcn@sGsxA_HibBaFkeBMkPUeZUsc@wBu}DQ{Yc@y`@w@gkAe@crCc@qg@aAaeJY}d@?__@G}\\Akm@uA{kIBie@Hef@Wwe@_@ynCHwR\\wQv@kSrAiW~Dcc@lC}TlGu_@hHq]tKk^zSmp@nRua@fZah@pSkYj\\yd@xWu^lOcV~Vwd@jCiGtAcDrCqGhJuT~HmWnE}O`Ii[nEeWbDsVrBiWvCq[rAsWx@_UNcd@Swd@_CgkC}BooB_Ceu@kEweAoCed@_OkxAgAsSyJwgBuE{_Bk@izBA_`@aAinFd@s`CeBqwJw@quA[y`AEqSgAgvCAoTE_}A]ihDc@a`Dh@mj@\\qd@dCgdApBqs@nByg@zGeiB~MosDbC{s@pAm\\~Cwu@zGak@~Ggc@rF{XvHaY~Lub@nCoHn]o~@jNw^vRch@hGkPfDaIbvActDn{A{dEjF_N|b@_iAr^{aA`LyU~LyT~NcShSwUbMyLj]i^xj@ai@h\\m\\tN}OxV{ZzFsIbGaMzG}MnNi]`I_WlHgY|y@}sDfHiZtZwzAjHob@rDa_@rAkZ\\oYB{NVmX@wKFkVd@geF@{QP}uI@cPBaiBXkoCBcQs@{pBAuHCmaCAeD?uQhAqsEz@ydDz@gsAd@k`AZcV_@ioBcF_vCi@}SO_LeBy`JCkK?aPAg`BDkp@jB}{@pCcj@vGc{@zEyc@~Nm`AxQ_aAtOyz@~ZowBfD_UvF}\\lIqi@|Ium@~Hwf@jC_OnPcu@xYgdAlp@ieCbFiQzkA{vE~a@_aBfS_w@zLgh@zG{`@fJu|@z@mNt@gQh@sZKcYg@c]{Am]iAmPwA}MuAcM_DeW_cBs~KeBkSqBiXGsD]aQAc]b@kZ|@kShEoe@pEa\\xHe`@zHaXfHsS|Rkj@zV{p@dMia@~I}[fKqg@zK}t@pO{lAdImm@rEgWfFuUvKe_@bM}[`MaWzSo]~_@me@~nBkpB~]q]`m@en@~SoT~e@sf@b\\ib@lDaFrR_`@lNa]`Moa@bHuZvGcb@lDuXdDoc@x@wQPyQgAor@iBg_@aFg|@q@gKwC_g@qIwqBeAyg@_Act@EsfBbAwfAx@gnAvC}mCr@m}@dAwhAdAiw@bAa|BeDmgG[cg@_@q}@]ojAj@ynDvAigBnCk`BtCcgAxEujCx@_]lBw{@|B}f@nCm[nJkw@bLcl@zGsVzE}PxAuE|[a~@`[{q@dV{h@vVsm@bKs\\~Jq\\hIg_@bMw|@~Eik@zA_UjC}g@Ryf@e@gm@cCem@wM}bB}Fcw@gCqh@i@uSaAgk@VotBNgeBGgdCIsK`@yd@FsjAHc]@gl@qDw`AeAsQuFce@iIyf@{Mqj@{Sqt@wf@kuAsQ{k@kTks@}HgZ{GyY_He[eVevAeKk_AqB_WeBkVsFaoAg@og@Ka[pAmw@hDylAbBsb@dWsnG`Dg~@nAa\\jLquClAa[|LouC`Cap@~CabAdAkdAf@weADwmAk@yqFG{x@@ec@^_rCXm_BCcUA}L[glD@}JJedGFyw@Cq_@EqhA]wc@Sia@uCksAsAeu@gDomA_Bsx@i@}a@Qiu@r@u`BtBy~@`WytHfGwsCzAe_ADyZ^gn@]mr@k@yl@yAe{@mBc|@MoNsBifAiAydAQepA^oqB|@_pC`B_wD~@cw@pD_pDlBw`CQqq@sAix@aDcu@qE}n@kKabAqDuXuFca@yNqjA}Iq`Ae@iJwEgcAeAmz@f@onArF_aCj@}\\ViMvA_zA|Ao_C~DkaEjCacFf@egAtDciLH}l@pCibGl@czCbA{zC\\wmAb@olA`@ysAb@ysAMyzAi@wh@wAcu@yAot@_Bkr@kAk\\sCwb@gEe`@mDwYoA_IyCuPuJ_e@kI}ZoIkXoJuWsKqWuHePgVgd@ojAqhBgkAojB}R}Ysa@sq@mjAaiBweA_bBa~@qwAyjBctCmaBqkCqo@}rAcq@grBmQsw@q@sDsW}zAsGae@eKunA_Dyj@cBg\\uAymA?ucApAc~Ig@ymHAeUKcwA_AmlOuDakMSqq@aBepJGai@_@gpDd@c_D@qeAIcm@@sHcBcwMqAofEq@_tJqDmjUPceBJ{d@_C}kEgEccDoJemC_DysAqAo]uEadC{GypGaJs|Dq^eeNuB{r@aG}{CaAa`Bg@whAdEexEhB_gBd@_`BYkfBIybCaA_xBi@}kEXiqDHmd@^qpC`BmsIH}x@hBk~HzB}pQbAe_Ip@ckFHq~Bq@qxKCq[y@gmHFu]Fy_B@}aBAm{@Qka@H{b@i@mxG?u[m@}hId@e|DFg^Cao@n@s_CZmeIGom@KmyBMoxCyDeaFUeg@H_vCv@e{AxAg~AHwoALs|Av@clJEs{Jh@ksL}Aa~FM}Ww@{iCEakGGerFj@szI~AemCnCuzDzK}lPrAwjBdB}eGdEgsDdDoaI}B{qLKoc@Ek|FmGijLqFkiCgE}_AgBwo@^icAfCmq@fA_ZjHunArJys@rMot@`Iee@vh@wcDrMs}ArByl@lCot@i@mhAqBa_A}FonA{AkTiBwWkCk_@{Boa@{A}]mAm]c@aUa@qc@Fql@^ak@Xgb@nAag@`Cc_AbI__EpDgiBDqd@g@ml@y@}_@aGmpA}Fs^wKgu@}I}d@qGcYoKy^eR}l@}b@}hAmQc_@_^ml@or@_aAml@km@g]{Z_{@kv@oZuXgAaAw`Ag|@g}@qw@mc@yg@_^ii@mZ_k@uJoTcEyK}HwSmM_a@iM_j@kH{^cIym@kCoa@iBs\\m@qRi@}^McWDcg@mAeaD_AgxFDml@Im{EfEq}KpFytHnBaoGnBarCxBauAtDyhClF_fDzD_zBxBasAnEs`CzHsyE^oUlAs~@rJotCdRegDzIutA|Bi_@`Dok@tGglApIgrAzLwbBjJ}kAxHel@fJwk@lJyd@pJeb@tKea@z`@gxAn^_gAtPqi@nIuXlFaQ|e@waB|v@acCjLg_@~Tws@fe@s{AdPcl@z_@imApr@o~Br`Aw~C~j@ckBleAoaDz\\uiAhP{p@bHk]bGu]xHsk@jFaf@bGccAjAge@`@ie@VeoSBu~@FyX^gXv@aYnA}WbCc]zBoVtCiVfJgm@nKyh@|Lie@xLk_@~Ne`@jPa^tPs[fXic@n^_f@zOmQxPyP~PmO`QcOlQmNnPyK|YcP~YcO`UiKxZkKl]eKnl@mLzX_DnZoChNy@|R[jJE~PM`qEhBxf@Udl@yA`]k@pj@iF~y@{Kzw@iMzeBiXjyAkSju@wHz[oDlW{Abf@{BtaAwA`a@Cvc@f@dv@bCbwA|KtI^dc@|B|lAbHtXhBhzAzJxzAvJhrBbM|qAvGftAjFr{CnHb{BlAtgEn@n~CXvj@]|JDvIDrjBt@tUAnYKx~AVntBZdb@HjlFNrw@D|Ul@~WnA~fApIza@pEnq@~HnTlBjPl@tO?jOIhSu@|SqBhRcCdOoDnPwEbRwGxOcHnSuKdLmHrKgHnQ_OzNwN`OqPjNaShI{L`KoRbKyUhIsTtGmSnJo^lU}~@nLkg@`J_d@dAcFfAyGbHyb@zAcKvDi[fEc^nDek@pBa^z@cc@Nc^Ugm@m@aeD_@cZCka@c@mlEB_n@G_aBv@o]vCau@dGyy@nE{b@~Gyb@z[svAtJg\\bOec@bRyd@hQ_d@v[uy@~d@}iAdYqs@djB{tE~Pkc@p[}v@tX{k@tUsa@hX_`@zRsW`U{Vlc@{a@d^_Z~{@um@pJ}HpSgO~eCwjBd`@mUxV_Mtr@kZjcBmj@rcBih@haCgy@p`@gOlU}KjS_Lpa@cXbc@q[j`@o`@`Zy\\~e@st@jtA{rCtr@uhBpn@a}Bn~AwqIpv@{mD~kA}jDnn@}hBr_AamDjl@eaBfTii@zXqr@dQm`ArMeeBrIq`ArGmx@xWkvC~TcjA`Ww|@nd@uqApHeW@?dHeZlZ}~AdtAoyKvPg}@bVyw@|Yeu@`fFypJj|@_dBvIsOhK{Qp}@_bBz`@seAtQ{p@vTehAtA_QzIyeA~@qiAkAeyAZu|@jCcv@xGsu@px@onGtkBy_OxOqv@r@mDzQ{q@fVwo@fVeg@`\\}h@r^uf@ra@}a@ta@s\\jd@aYh^sRhv@yZzhAeh@zdB{u@pSwHfRuIf{DgfBn]yNjd@kStbAoc@pq@g]t`BkaAdi@u[pvCkhBb^oUhlCw}AdkBoiAdxAew@r`Aoe@t}Agq@nfA_b@ti@_VhmCgeAbbAqa@lw@kf@b^_W~ZmWtq@os@r]}c@pa@eo@p]wo@~]oy@po@slBtWas@~Wii@`\\oi@z]kf@tpAi~AbpAo|Az^sh@nY_e@`f@qaAn\\yz@d]cy@dm@u`BbXcl@vYef@p[_c@by@g_Abu@{{@lb@cn@`yBauDdhFo_JzcAaiB~}@wvArn@w}@xYed@vu@moAbgDyhFrn@oaAxc@wp@d\\ke@tXw[vWyZnQsRnOcOzVsXplAkcAnoBy}Azc@a]`YoTjRaOnqCyxBzz@ws@t[sZlQqRtIwJxIuKzHeKhKcO~HwLjz@gtAfm@s~@pr@qhArZih@|Wmb@bRo\\lO}[rNs^xPqh@~Vky@hB}F~CaKtHkUjCmH~AgEfBiEnBuExBoEjCkFpFcKhEeH|GsKlEqGbCcDvBmCnB}BzMgOvMeOxs@g{@bb@ge@`MwO`JuMhL_RtL{TdKqTlKaZpIaZtFeUrKig@`Mg~@tCkVfA}Ut@q^A}Xw@mwDyB}cBaCg`AiB{cAmGqdBsAw`Ax@s}@x@cgAR}ZxF_zI~GioNdF}kIJoOdOiyJtF_sFfe@}y]lCeaAlGykArMkxA~Cs^tn@olHfBkS|Dsd@tFst@bByu@bAo|DBuYu@avBXo}@Eww@Ry}@DaPZacDZezADijLGejG@aKAipFCmq@i@k`OUusGE}Kk@y~Fs@ydBsCmo@wEumAuIinA_LygAcNgdAqRuxAgPc~@yVi~@s[q`AiNub@wOse@wKco@cIuu@kTynCoGmk@gFc]gh@gjDqBwM}QqmAul@{|Dq_AywGkMs`AaKo_AkHu}@_Cu`@aBoa@m@c[OkYMaZLeZzA{u@xCuhB`Da`BxBmd@hCi]hHcn@rHid@jFmVfBiInLwb@tNwb@|Paa@nWmg@bSs[zfHu{JtEsGlJuMjr@ceAdXyd@dSs`@xYgo@zPib@|R_j@hMca@|Ogh@b`BynFhPex@`Muz@bH{n@`F}o@vBof@pAof@f@mp@EctM?cFZy}LAelIe@_qGsCiiAqEwt@e|@agKyCq]gO_fB_Mo`BeKsuBcGauBoa@w~NmB_f@wDkd@}Dq]yEs\\aIq_@aJe^spCi|JuF{WoEsVuAsJgByPOwAaB}SsBs_@]gg@x@oc@pBe_@lWarCzVwnCjjAu}L`o@u~Gnk@yfGlEqq@rCwp@xAqy@Pgr@{@icAwC}z@mIinAiLqeAqJkq@wo@gdD_qBy~J_G_^uDi[cB}TcAsTIyFY{S@uSP}KReK\\{ITiIlBqUh~@ozIjd@esE~PspB|Lw}AfC}q@nAwYhDid@|DaZhEiTtEoS|Ls^fLmWhSg^jOsStKiMl^e]n_CssBfZ_X|m@ik@lVuWhVg[hZ{d@fR}]hQg`@hOqa@`Mib@pKyc@rIcf@hBaMbDwTzO{zAdRohB`MykAvFie@|Jkm@fJcc@rKqc@`Quk@tRci@`V}i@~V{e@hTm]~bDk{Ej{AwzBbOuUpN_W`Rs^zPm`@xS{i@lQsj@nf@ykBniAilE~Kqc@bjB}iHbNmi@|`@k|ArS{}@bl@esCbK}c@rQcv@dQkt@rUmhAjGo`@`B{S^sPEiSu@wQqByR{C{Q{DwPmMsh@yD_SsC}QiByQgAcRu@cSOqQT{Rf@iRvAeT`DmZdDeR|D{PhFwP|F_PpGeOjIoOtIoNfT{WxLyN~PmS`OqTdNoVdMaWzQk_@jt@izAzFmLzVyg@pI{P|yCieGnjA{~Bj`AemBhq@iuArc@a}@n|GacNntCm|Fb`@}w@z]_v@zZkq@|Pi^|N_V`a@uh@f_@yh@tg@gv@|p@ccA~lAwiB`lAmgBxxFiqInz@}oAlZyd@~\\yk@dWug@rn@mzAncA}dCnOg_@~HwRjnF_tM~f@kmAtBgF~B{Fna@mbAvMoWtNwUfPsTdS_Urj@ug@p[gZHk@x@yFhCwBpDwCvRcRlDeDzLsKptAkpA|LkLtxAirAbZkYrHuHrr@sp@xX{W^YxHmHjWkVfPsOh`@e^pBiBvd@{a@fXiV|x@kv@pQwPlNyM`SeR~DuDv^a]`C}A`HeEfCaBrMqGjAe@|FoBpIiC~Am@lHgBtRyDtLwAbCWz@EtKe@lQItGEvKGdC@vM@pL@fH@zA?lR?~VBxH@nF@dM@lR@jG@n|@AlR@bt@QjZHxOE`G@dPDvCAtIChB?pn@F`N@dJ@jO@tN?fD@tF@`QAxC?b_AGbZLlPFxD@h}@GlSAtC?dD?|s@CvC@dHBfVLzE@~IDjNF|B@`k@J~CDxB?~d@AbD\\`B_ESiTc@aPCcV}BiHN}H?k@B{E"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 33.830259,
+        "min_lon": -119.228856,
+        "max_lat": 34.277944,
+        "max_lon": -116.545298,
+        "time": 9751.692,
+        "length": 278.94,
+        "cost": 10806.302
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

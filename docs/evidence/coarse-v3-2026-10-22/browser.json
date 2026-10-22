@@ -1,0 +1,38 @@
+{
+  "surface": "Chrome local http://127.0.0.1:3000/",
+  "model": "coarse-road-grid-v3",
+  "samples": [
+    {
+      "name": "Shore origin",
+      "origin": {
+        "lat": 33.2986,
+        "lon": -115.9561
+      },
+      "minutes": 360,
+      "reachedCells": 2255,
+      "searchMs": 12.7,
+      "contourMs": 7.1,
+      "browserRequestMs": 56.9,
+      "sourceToMapIdleMs": 637.5,
+      "screenshot": "browser-shore-6h.png"
+    },
+    {
+      "name": "New York",
+      "origin": {
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "minutes": 720,
+      "reachedCells": 11092,
+      "searchMs": 41.7,
+      "contourMs": 1.6,
+      "browserRequestMs": 68.9,
+      "sourceToMapIdleMs": 634.1,
+      "screenshot": "browser-new-york-12h.png"
+    }
+  ],
+  "console": "No application error observed; two pre-existing wallet-extension requestProvider.js errors about window.ethereum.",
+  "captureObservation": "Some glyphs appear clipped in the New York full-page screenshot; DOM readings confirm the recorded text/provenance/timings. The shore screenshot is the presentation proof. No UI source/style change was part of this backend correction.",
+  "privacy": "Screenshots exclude saved history. Only two public test inputs were computed; no bulk historical upload.",
+  "scope": "Single visible local observations, not cloud timing, real-world route accuracy or production percentiles."
+}

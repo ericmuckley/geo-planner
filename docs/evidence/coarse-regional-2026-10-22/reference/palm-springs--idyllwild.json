@@ -1,0 +1,380 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      {
+        "lat": 33.74,
+        "lon": -116.7189
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.8303,
+          "lon": -116.5453,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.74,
+          "lon": -116.7189,
+          "side_of_street": "right",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive west on East Alejo Road.",
+              "verbal_succinct_transition_instruction": "Drive west. Then, in 100 meters, Turn right onto North Palm Canyon Drive.",
+              "verbal_pre_transition_instruction": "Drive west on East Alejo Road. Then, in 100 meters, Turn right onto North Palm Canyon Drive.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "East Alejo Road"
+              ],
+              "bearing_after": 271,
+              "time": 11.892,
+              "length": 0.141,
+              "cost": 26.35,
+              "begin_shape_index": 0,
+              "end_shape_index": 9,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto North Palm Canyon Drive/CA 111 BUS.",
+              "verbal_transition_alert_instruction": "Turn right onto North Palm Canyon Drive.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto North Palm Canyon Drive, California 1 11 BUS.",
+              "verbal_post_transition_instruction": "Continue for 35 kilometers.",
+              "street_names": [
+                "North Palm Canyon Drive"
+              ],
+              "begin_street_names": [
+                "North Palm Canyon Drive",
+                "CA 111 BUS"
+              ],
+              "bearing_before": 260,
+              "bearing_after": 9,
+              "time": 1252.828,
+              "length": 34.901,
+              "cost": 1177.363,
+              "begin_shape_index": 9,
+              "end_shape_index": 353,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 101 toward Hargrave Street/Idyllwild.",
+              "verbal_transition_alert_instruction": "Take exit 1 o1.",
+              "verbal_pre_transition_instruction": "Take exit 1 o1 toward Hargrave Street, Idyllwild.",
+              "bearing_before": 269,
+              "bearing_after": 285,
+              "time": 16.522,
+              "length": 0.408,
+              "cost": 16.503,
+              "begin_shape_index": 353,
+              "end_shape_index": 358,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "101"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Hargrave Street"
+                  },
+                  {
+                    "text": "Idyllwild"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Hargrave Street.",
+              "verbal_transition_alert_instruction": "Turn left onto Hargrave Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Hargrave Street.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "Hargrave Street"
+              ],
+              "bearing_before": 271,
+              "bearing_after": 179,
+              "time": 25.173,
+              "length": 0.323,
+              "cost": 63.214,
+              "begin_shape_index": 358,
+              "end_shape_index": 369,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Lincoln Street.",
+              "verbal_transition_alert_instruction": "Turn right onto Lincoln Street.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Lincoln Street.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "Lincoln Street"
+              ],
+              "bearing_before": 180,
+              "bearing_after": 270,
+              "time": 47.413,
+              "length": 0.804,
+              "cost": 63.705,
+              "begin_shape_index": 369,
+              "end_shape_index": 382,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto San Gorgonio Avenue/CA 243. Continue on CA 243.",
+              "verbal_transition_alert_instruction": "Turn left onto San Gorgonio Avenue.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto San Gorgonio Avenue, California 2 43.",
+              "verbal_post_transition_instruction": "Continue on California 2 43 for 40 kilometers.",
+              "street_names": [
+                "CA 243"
+              ],
+              "begin_street_names": [
+                "San Gorgonio Avenue",
+                "CA 243"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 180,
+              "time": 1756.966,
+              "length": 40.311,
+              "cost": 1577.458,
+              "begin_shape_index": 382,
+              "end_shape_index": 2023,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_transition_alert_instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Saunders Meadow Road"
+              ],
+              "bearing_before": 217,
+              "bearing_after": 135,
+              "time": 23.018,
+              "length": 0.248,
+              "cost": 34.669,
+              "begin_shape_index": 2023,
+              "end_shape_index": 2041,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right to stay on Saunders Meadow Road.",
+              "verbal_transition_alert_instruction": "Turn right to stay on Saunders Meadow Road.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn right onto Country Wood Lane.",
+              "verbal_pre_transition_instruction": "Turn right to stay on Saunders Meadow Road. Then Turn right onto Country Wood Lane.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Saunders Meadow Road"
+              ],
+              "bearing_before": 106,
+              "bearing_after": 165,
+              "time": 4.397,
+              "length": 0.054,
+              "cost": 5.847,
+              "begin_shape_index": 2041,
+              "end_shape_index": 2047,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Country Wood Lane.",
+              "verbal_transition_alert_instruction": "Turn right onto Country Wood Lane.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn right onto Parkview Drive.",
+              "verbal_pre_transition_instruction": "Turn right onto Country Wood Lane. Then Turn right onto Parkview Drive.",
+              "verbal_post_transition_instruction": "Continue for 70 meters.",
+              "street_names": [
+                "Country Wood Lane"
+              ],
+              "bearing_before": 162,
+              "bearing_after": 219,
+              "time": 6.986,
+              "length": 0.074,
+              "cost": 14.326,
+              "begin_shape_index": 2047,
+              "end_shape_index": 2048,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Parkview Drive.",
+              "verbal_transition_alert_instruction": "Turn right onto Parkview Drive.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn left onto Saunders Meadow Road.",
+              "verbal_pre_transition_instruction": "Turn right onto Parkview Drive. Then Turn left onto Saunders Meadow Road.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Parkview Drive"
+              ],
+              "bearing_before": 219,
+              "bearing_after": 343,
+              "time": 17.24,
+              "length": 0.109,
+              "cost": 16.771,
+              "begin_shape_index": 2048,
+              "end_shape_index": 2049,
+              "rough": true,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_transition_alert_instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Saunders Meadow Road.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Saunders Meadow Road"
+              ],
+              "bearing_before": 343,
+              "bearing_after": 264,
+              "time": 17.355,
+              "length": 0.181,
+              "cost": 28.896,
+              "begin_shape_index": 2049,
+              "end_shape_index": 2062,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Banning-Idyllwild Panoramic Highway/CA 243/Esperanza Firefighters Memorial Highway.",
+              "verbal_transition_alert_instruction": "Turn right onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Bear right.",
+              "verbal_pre_transition_instruction": "Turn right onto Banning-Idyllwild Panoramic Highway, California 2 43. Then Bear right.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "Banning-Idyllwild Panoramic Highway",
+                "CA 243",
+                "Esperanza Firefighters Memorial Highway"
+              ],
+              "bearing_before": 315,
+              "bearing_after": 37,
+              "time": 11.217,
+              "length": 0.131,
+              "cost": 19.333,
+              "begin_shape_index": 2062,
+              "end_shape_index": 2067,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right.",
+              "verbal_transition_alert_instruction": "Bear right.",
+              "verbal_succinct_transition_instruction": "Bear right. Then Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Bear right. Then Your destination will be on the right.",
+              "verbal_post_transition_instruction": "Continue for 60 meters.",
+              "bearing_before": 51,
+              "bearing_after": 65,
+              "time": 3.667,
+              "length": 0.06,
+              "cost": 5.717,
+              "begin_shape_index": 2067,
+              "end_shape_index": 2070,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 5,
+              "instruction": "Your destination is on the right.",
+              "verbal_transition_alert_instruction": "Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Your destination is on the right.",
+              "bearing_before": 58,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 2070,
+              "end_shape_index": 2070,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 33.737082,
+            "min_lon": -116.876722,
+            "max_lat": 33.93167,
+            "max_lon": -116.545298,
+            "time": 3194.68,
+            "length": 77.747,
+            "cost": 3050.16
+          },
+          "shape": "m{yo_Adpjh}ECzE?j@O|HkAjHCnTVvJ|A`PLtHb@lFcD]_e@@yB?_DEak@K}BAkNG_JE{EAgVMeHCwCA}s@BeD?uC?mS@i}@FyDAmPGcZMc_AFyC?aQ@uFAgDAuN?kOAeJAaNAqn@GiB?uIBwC@ePEaGAyODkZIct@PmRAo|@@kGAmRAeMAoFAyHA_WCmR?{A?gHAqLAwMAeCAwKFuGDmQHuKd@{@DcCVuLvAuRxDmHfB_Bl@qIhC}FnBkAd@sMpGgC`BaHdEaC|Aw^`]_EtDaSdRmNxMqQvP}x@jv@gXhVwd@za@qBhBi`@d^gPrOkWjVyHlH_@XyXzWsr@rp@sHtHcZjYuxAhrA}LjLqtAjpA{LrKmDdDwRbRqDvCiCvBeDxAe@TirAbpAqKpKcKvLgPrUcKhPkLhTo]tw@sBvE}BlFaYjq@sB`Fs_I~rRwe@~jAgP|_@_Rd`@kWje@yYzd@g[xe@idHplKaeGjbJs]|h@oa@rp@yG|LgDvFaMhTiZtk@k}ErwJmjBbuDoE~IchD`}Ggf@jaAopBh`EypBz_EwxA|vCs\\tn@g|@|}Aw{A|kC}f@z|@cTl_@kMnVcI`TyL~a@}F~ZmGpf@kExe@}Bte@s@~f@`@bp@nBdd@pDnp@zDzx@p@p`@CfTO|Sw@zW}Bdc@gC|Y{Fld@mIhd@seAdgFuKvc@eOvk@wRhu@gNri@qhBrcHyuArpFof@pkBkQtj@qSji@sPx_@gR`_@}MxUaOrU_|Ap{BybDzzEcTp]aWjf@kUnh@iSzi@eQjk@{Kpc@kJ~c@iKdn@oH~m@eMnlAoXnrCyGdh@wGhf@qIhd@uKlc@eMxa@kOra@}Pr_@cSp^eZbd@mP~SuWpYae@vb@oZhXscCfxB}`BnxAuK~KqJrLoHvKcJzOsHnPiElKkDbKcC`IwBzHmF`W}Et[eCf\\{@x[@xRZrR~E~lA|@h\\[ne@kBr[eMz{BwLrjAqf@b`FeFhh@aKvaAqHno@oC~[w@xMs@nUKxJGxPJpSN|F`Dxm@jDj[fFt[jpBz~Jhq@hjD`Jbm@xKhcAjDv`@~Bz`@rCxo@pAho@Zvo@[|o@oAro@uEtbAgDpe@mUjfCyU|dCmn@xzGshAhtLcp@jdHeC~d@k@hf@t@lg@vAv[pD`a@lDpWtAxIdJnd@`gA~{DbiAnaEjNjl@lHrb@`Eh\\bDd]hClc@|PhhGzPzfG~Gz{B~J~rBtKjwApQltBfCt[f}@~eKnGl~@nBjp@`@rRJnUUxrECz~LAzgJDdlL?ng@]jp@kA|f@cClg@{Eno@kD`^iI`m@wHzd@cNdo@yPbp@gmA~{DkOxd@gO|e@iR|h@}P|`@oWll@cVrd@cTt^{X~b@_e@|o@aExFiK|Nah@zs@_hFjkHc\\vg@wVte@mUhj@cUdt@aI|\\gFvTmHxc@oHln@cFdt@}LvjGQxQGv\\Pt\\lAjj@z@zVvCpk@`Gnz@fLpcAvMr`Az`ArwGb`AzoGpi@`fDlItm@dGxg@d\\zxDnC|SbJ|h@nXdaApNbc@fRtj@nUry@hPtz@la@t~CzK`gArIlmAhGloAhCjiAb@zz@cDhVeDpgAm@`a@kArhCCpFrVKhOGfDVrBNlELbMNrBFxNZzi@AbA?|n@BDfdAAha@Ch_@AjZAx_@?zQAnNIlwCBp\\Bpb@B`u@@bN@hZxgBCfFVhDFtwA?hSAjFItK@tK@~oANv_@?|^AvL@la@?nQOhr@k@ph@a@|a@CfHIdLmA~N{C~LgEbL{FrQyKrc@eZ`IsFzuAq_AjJwF~EiChGyBvNmDbIoChHyDpFeEhGmG`F{GhFiJtGiLnFqI|GgHfG_HpFiKlBwH|A}MFoIo@gIaC}Kw[ww@{H_UeC_KyAiKa@sGOaHLuHdA_J|Msf@vEsPhB}FvBqFxCaG|G{JlFwJtBuGjAwHj@aIG{H_AsHqBmIoC{HyGgQ{BiHuAmFy@yFq@sJEuH`@qIbAcJpB{JnD}KjD}K~AoLx@qOdAqOdDuNfFiPfBcJjAsKN}N_BgV[oILqHbAkIzA{FbDmG|EqGfHaGjIuDtIqEpIoGfIuIlFuJhQ_f@zGiTpCyMhBuTnBaN`CwHjFwIpG}ElE{ArHe@tGn@`G~A~LtE~J`EzGfBjIRpG_ApGaCnD{ChDwDfCkFjEqLbGwLlI{JjGkFjLgJjHcKzEwIhEkKpCcFfDyEzMuOxFiGtDeEjDcF|DqIjCkJ|EsSzCcHnEoGdGeFzDsBfFoAnEe@zINnHx@~DdAhD`BxFtE~EbGlCdG|CnKxArP@hOoA`QyC~MoEtJaIbJ_HjEuHzByKReSh@cPpDuOvJmIpI_HfLsFzOyCzPqC~YaCzPaEpO_GjRgIbPoQjYsE~KiCzL{ArMEfKl@nNvGh{@lArQz@|MRdQ_A|McCjLwFpN_E|I{D~KcDnPaAfPNjSRhOu@`KoBdMkEhOyFdViFnU}Gp\\qBdM_@dFL|FfBvK~D|JbEdG`IbEfJ|DlEbBtElC~FnEpFxHlCjIhB`Kp@dOr@dKbArMpClLpDlIhGpHxHxE|HfB|HJxGQjHaCdIeEfGiHvE}IxDeKnEyOfDwQp@kKGiMgB}MmCeK_HoIoF_FoG{C}GsAqHi@cPfAyGFaHgAwGsCiGoE{EeGsC_ImAcJEsJhAsJ|BiJbEiJpQkZfHqPxKs^vHeOpKiM|IeHjL{GxEiEfDoEbGcMdDcLjBaM\\eMs@aQ}@{L{@wLo@uWV_NjAcKrDoNhGyNlFkH`FuEbMcHfIcEtIaChIqAxJoApImBpIwCvSqLbMkGtNeDbMq@|PIvLk@dI_CdKsEdMoFzMyB`Na@|OrAlKhBfSfHlIhA~HDxSWbGd@lKjDpGxDzE|GpE~LbBrLtC`[dDjRlEfLjI~M|LxL~IrFfJrCfNlArNChMiAtJkBtJaExGyFjFcH|GiLtHmQbC}K`B{K~DuU|GeWbJsSzSa^pFeOhD{LZgJu@aKwCmJmHmJaGsFuPoH{EuC{DkDsDyHmBcHu@aI\\uLxC{NvG_XnCcS`@oPq@}PaEs\\[qMj@yKpBoJzE}KdI_IvJ_FzT}BdOU~Hs@nQ_E~DAjDV`GhBpEvDhEpFhCxFhBxGjArJIfJuBvOuK`b@uBxNkAjOGbO`A~M|A~GjBtGpFbKxExEnE|C~F|BfGrApHX|H}@pEsAfEeBbZ}OhP_F|PyCdXsBpJyAlHeD|FgF`GaHpFkIfD{JdB_LVoLU{KaAuQKcR~@}P~BkPhFyPxEcMrHcLxHiIhHyFhIeF`UyKlS}KjGwDrLkHlMsJ~LyKt[y[hMkJfNeIz\\_SnHaIhEgIvCqIvBqK~@_NEwN}@gT[uI@wI|@yNvBgNnDwNp@kO[iMkDsUiBwJy@aLJgOrBmNvZwlAlHgVhK_YvIuRdMmUlSw`@rOa[`IkMtFkHlGyFlMiHlM{DhKsArLmApoBuJtKk@lMgAdFaA~EoAjGcCvG_D`LqGrQaOrQgP|iAkgAhHqFhGqDfHiChJqAhLKzBXnEh@tHdCjGdD`HtFdMvMlGrFtGnDfH|B~IdAtH^|H[tE{@fB]bGsBbGcDzQiMzEoCxGeDjQmD~NoC`PmBrPkBrPkBtPgD`HqBvGgChGyC`GaE~NiJ~HeIxD{ErBiCpQ}VdCuDzUiZxJ_L|JyItP}JdOeG|PaFzImAdFc@xS_AbJDvLx@nKdAhIpArI`CbJzC|PpItX|Pr\\nRnh@j[bMdGnHxBzE~@~BT~BBtK]zEa@|Ds@`G{AhHaD~FcFlFgE`FeFfGaIrIaN~c@wv@dLuOhu@cz@pj@in@|KeMnOePtMoQlPqYjFcP~DgN~J{ZrFuLzGkJnGuGvHkFjHiDrPqFlIiGvHmIhMgQzLyRxYwh@hDeE|D{D|KeIdLyIzJeKbDiE`DoFpDsIpBkHpA_Jz@mMNeJSwMy@{MUsMn@iMbAsI|A{HxC{JxEuJvEuHdEqEhF}D|DcBnIoDhEkB~NiGnHiFlGkHlE}H`DoJnBoL\\cLCeLs@uKwDwg@s@oTJoLbAkKdDkMjCkGpCoE~E{E~EsC|FsCrHgBrKoAfJ_A`J{AnFcDvHqHvE}IfF_QtWscAjDmJlDeHpF}GxHyGbJgElH_B`PiAtGLrSbB~ENxGk@nGyBrF{DrEmFrDyFfC}GdBqHjBoKtDe\\zGim@hByMjBaKjCsJpDyInEcItF}GdFoErFoDvL}Dzf@{P|J_EfGwCtGmExF_GlGkJhE}J~CsLvAkLfCk[xAsIfCcHzCkGvEsFzEeErFeD~HoCjI{AzNwCjGoClFcEpCsDpDaJ|BwHlAcHj@sGHaHq@eJaCaKcIaUwA{FcAeIMuKz@wKbAmFbBgF`EmHrEkFjH}E`E{AfE_AfGWfGFvF`ArFhB~FlDdIxHnGvFdFpC~GjBxD\\|DFnFX~E{@bGcCjEaDfEaEbDgGlBqD~@aDbGySxCiJxDeIpC_FhEeFfE_EtGeErIwCvV{EjIsChFmBbH_DlIsGlFaH~CmEbEuGdCyEvEuL`DsMrFc]`EkZt_@cnCnPikAzDoTzEeVdHwUvIsU~LqYxOoYlbA_cBjHmKrDgG|OcX`hAggBbJiM`GyG~F{ErK_GdHmBfGaB~H[tBU`Gm@rMS~Mz@dg@lGtN~@bMBpKqAjK_AtPmEzJeD~q@_Yhg@mUrPgHfNmG|f@mU`VaJfGmC|R}Ivm@gYhJkDlJuBxB_@dCI~Er@nKfCjb@hQ`Il@xFf@hFs@pDiAfFoBfE{CvDkDhCkFxDqGdDkKrGyStDwMl@uD\\aGb@gKCmO\\qMjA}MvCaLnHgRzHcMtNqQxHgJdFmKtFkOpEwL`GgMfFmHlHkFvJkGzLuDxFeArIU~G`@`Hr@bEtAfE`BxFtDpDdDvIjIpOxQvC~ChOrPrHtElIzC`Jn@zEXxEChJuAvHaCnGiD`FkDrCaDjL}NlHeHnHeExEqBbEi@fG[hIc@te@R|M_ApHeCpEeCtE_ChJqHfJgIjn@qj@hGkE~E{AvGu@xF_AxETfGj@dG~AbJtEzBpAjDrBpZbQ|JtDzI`BzJhApMOrPuArG_A|EeBvv@eRtUiHnL{Cl_@kJ`_@{Ihp@}OjQgGtKaG~IeFfKgIjF_F|MsNtIgLbFeJtFcN`FqOtFyUfDcVfBoVb@wOcAe\\uB{h@_@uJ_Dan@s@mJy@u[LiH|@yGhEsKnEgIrF_HnHqFjEgBjE_AfFaAhIUnIh@|TdGpS`FnE^|E@fAKvEQvN}CrJuCzP_F|i@sRpb@_O`f@yNbMeGxKuIr\\a_@dH_GhJuEzVqJvD{AvDsBpIkHbFyHdDmGrAgDnA}Fd@uBfAwK`@eLUiFWeF_C}PcAeJm@gK?kJ`@mGjAsIzC}KjDiI~EoIxDqGlDmHhDmOpBgObAoNVkI@sEi@mIk@eE}AaG{FaQkLaVm[go@_Yol@eW{d@cLmT{KmVcE}He[}l@yW{f@{DyIq@}AiBaHyAiHy@uIQ}GBaJj@gJhA_IdDmLpFeN|FoQ|AaIdAsIRcKIqLw@oIwByJcD}JkIkRcBgGgA}HYwG?oHv@gI`BcI~CwHnDeFxHmGjLmHrIsE|IcGlGsGbGyItFaLlIySxAkFnB}Or@_NXu`@bAcSbCcMzC}JjF_Lzp@axAxSwf@zAiFlBkHlA{JdAqLn@aPVgQX_a@b@cOz@iNfAwN`BwN|Kek@xAuKh@oK@yIc@{P}Hua@wCmSeAwMTqICeMZcLNwIHuGm@oLwAiHaEcKeEuIcD{EkD}DoAaA}ByB{B_BcIiDwKoCoRgDeV{D_MsEaIkEqKqIwEuG_CmFkEuOw@gLRoMlCgS|DqPdF{HfEmEnMwIl]}QtSmLzMcEhMiC~HkC|DcC|DqDvP_X~HcIlF{CpIqBrI_@rVc@xHqAhHqB|HkE~EmFtFaJ`D_MbAgKIcGuAeKyAaK{BiIuCyIyEwGmFoFwMsJkEwD_GoHkFoIoMeX}DaIyEkGoGkFgPmJaJsGqGwGyF{IeDkLk@iIPwJ`AyG~BoGtEsGzEsCdIuClHw@~D\\hBPxD`AdFhDdDzCzDrFjLhUfEtHdCbDjDlDxEvDjHrDfJ`GjGrFtIdLbNxTvDdE|E|DjJxEdFtBvLfCfMhApf@|C|D`AlFtBdFhDtEpFzMvYzFdK|DbFjUbVfC|DnCnHdA|ILfJeA|GwHfYgAzHc@bLEdIf@f`@CtZXtEb@tHdBhK|CzJfD`IbPtWdEfKtBjJ|B~N|BtK`CbH`ElIbG|IzE|DhHrEpC`A~Dv@lEJvIgAvLsBvFWdFYvFj@tFnAjEjC`G`FvHvLjTn_@lHzIbFzElDpDjFdDbJ`F|LjElOxCzJtAxJI`J_@jIeC`IeC~C{BxEaEhCoD~JsPhIaMvIwHlDoBzCo@~GaBpHLpEVlH`CxEjChH~FjInHpGlGlJzC~KbAbAHxE`@~G_@nH_BnEcBdCiBbEkClD{D`EkFbBeE|AkFdBkKx@aIfAub@hC}R~BsMdDgMpCoG|HeLlGqHpEuEvTaRdO}OfJqLzI{It`@u]bFsGpAgC`FgJpJiTrm@euAtByEt\\ot@zE_KdBsG~@{HVsHK{Hk@eLeGsUmGsNkGmPcEgOoAwKgAmJy@mLTsKdAgPjCkQvEeMtFoNzHoLbL{KzOaMxDmDbGoHtEuHrFuK`DqI|IkUdFkSpBkJ|CoR`@eC|CyRdEcY~DwKnDcGzF_FrFaCbCc@rBB~AHrBL`Cb@tDtAnBzAvDzBbFdF`Lfb@vF|UlDxKdFrKlH~LhGnMvFzM`IxQvGvNrFnG`JfJfKjHjHnDrMvDdP~B`YjA~UdBfFhAvEjBlGzFlEzCnNdL`FjDbIfE~JhCnMlDtS`Elb@`IfGv@nAHzCDzGFzNkAtLgAjJ_BfFo@nEKjF@nFb@dLhCpEt@nD`@fGZrGEvFg@fFaAlK{CdOaF~JiDtGkAbGM|CBrKb@nHEnHmAvHeBhGcCvFqCdDkBtT{RnEmGzA{DnDgIjFgNtEqNfFmShAkDzB{GdE{I|DuGlFqH`FkEfFeDrIeCjEuApEYjDUlJKfZv@fODjPFlEBhE@rFBlA?lJD`TK~g@{@rJj@bHp@jEz@jBt@nM~EdF|AnUnDdBZvGhAfFz@`FrBfKrEpOfK~HfGfIhGlI|C`GdAdELnHaAvFgBrFkBrCkBxIoFvVoRtUmOrMiHtAo@tHwD|LiEtHkC`QqH`EyAlBkAzFyEnFmHhDeI~BmJvAmMr@}NfA{N^yBbB}JzDkLrEsHhGkFhHcDpGcBpGKzFRdJ`CdHzCpkAtg@lMxBhL`@bMg@zJcCzJoEjJeGnAuAhUsT|DuDbJuHzKaFrJsB|Iu@hGA`KVhNfDnJfE~BdAnJbInGdJfDlFhDlIz@xBhCpLnBxSj@rSVhQ^lHbAhHxEbKnDfE~DfDlDpAlDlAtEVbFDpHgA|CeAxEkCnDgDbDqFvBqGnAwIP}EIyGkAcKeCcI_DoIyIwQoSib@sh@ifAsFcIsJuJ_JcIaKkHqKkEy`@aLyFcC}HeFkMsMgF{ImEwJeDgM_BmLcAiMFqOvAwQhCuL`FaSnFgWrAoGLo@xAwIvI__@hBgOz@kMEaMOuHsBmNiAsEyA}FmFyLcJiNgOqR}WqZqY}^i\\c]gPyTmN{VwIyXeC_MaAsJA_Nj@{MXyApBeLxFiRxJwVtBiF`BiEzCaIvEsOrDaT`@aCjBkYc@oOgB}RmBsOyB}QCmBGcEA{@J{Mp@mKrAeIfBaHnFkNzH_MvG{InH_GhJwEfKeKrBaDtBgDjCqFnBgGvBeJdD_P`DeKdC_FbFaGhJsGdO}JhG}E\\_@bFgG^m@zDqGxEuLxBwIbB{IbAiLb@uS^kPh@}HxAqIfCeH~BiEfEiEzE{CdD}@nDs@d\\sBrKq@dTqAjBMzIYrIHzH`AdCx@fCz@vFbDfEnDhKjLnIxLvIdI~Ex@zCp@tCT`AJrCCnHeAbGwA`LgEhEaBzC}@lDeAjEg@dF@lF`@lG|@rFfCbFrD~JrKtIbKjJrL|ItKbF`HrEhIzBnEvCjHbCdHnCxI`EjNdGzXdDfRzChP`BrG~B`GrDbHhDjFlJdOdGrJdH|JxEzEtC|BbFbCdDn@hEd@nCPjCNhJGrK_@xLkA~LuAdMwA`IaAnE_@jLJxCTdGvA~CbAdD|A`FnD`EpEfJnLxDvG`HvKhHtJpKpL~NvMpAkBvCsDbEiDtOmNjKiIbDuCnDoEtB{CzAqDr@yDVeE@aEe@kGiCmTk@aHJmE`@yBt@wAfAaAxAYdG]nFaAxCiAlBi@|^r^ky@jTd@jGA`EWdEs@xD{ApDuBzCoDnEcDtCkKhIuOlNcEhDwCrDqAjB_OwMqKqLiHuJaHwKyDwGeBmHyKaXUg@"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 33.737082,
+        "min_lon": -116.876722,
+        "max_lat": 33.93167,
+        "max_lon": -116.545298,
+        "time": 3194.68,
+        "length": 77.747,
+        "cost": 3050.16
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

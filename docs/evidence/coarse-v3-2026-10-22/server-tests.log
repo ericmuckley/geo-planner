@@ -1,0 +1,47 @@
+✔ coarse search respects water barriers, with crossings only on explicit road links (1.292958ms)
+✔ higher road speeds reduce costs, longer budgets preserve every reached cell (0.155541ms)
+✔ geometry times and consistent road positions charge origin access and road transfers (0.129333ms)
+✔ road-supported shore shading grants no general travel across water (0.299333ms)
+✔ bundled geometry steps cannot teleport, and Calexico's reachable road cell is shaded (77.988042ms)
+✔ small-island origins stay in their own cell without changing shared data (0.331666ms)
+✔ cell contours preserve holes and separate diagonally touching islands (0.2015ms)
+✔ shore links allow bidirectional land-supported travel without enabling open-water neighbors (0.320792ms)
+✔ land connections reject narrow channels, diagonal island contact and water after initial shore tolerance (0.340041ms)
+✔ an island sharing a grid cell with mainland cannot attach across its channel (0.662334ms)
+✔ nationwide shore links stay on continuous land, preserve road costs and restore shore arrival (8193.922041ms)
+✔ fallback seeds retain a road connection when the nearest land representative is isolated (0.203875ms)
+✔ geography-checked attachment preserves road-connected island origins (68.179459ms)
+✔ coarse estimates need no network, credential or local worker, including the Vercel environment (132.625959ms)
+✔ unsupported origins, horizons and malformed queries produce useful errors (2.362084ms)
+✔ local experiment is opt-in and disabled on Vercel without contacting any router (14.024417ms)
+✔ malformed budgets, coordinates and extra fields fail before reaching the worker (3.440209ms)
+✔ 90-minute request uses only fixed loopback worker and preserves truncation and separate timings (5.845333ms)
+✔ worker failures and invalid responses produce errors without fallback or retries (1.088959ms)
+✔ off-network origin failure is reported clearly without hosted fallback (0.400375ms)
+✔ health validates local graph identity and does not expose worker URLs or credentials (1.407375ms)
+✔ unconfigured service provides honest status without exposing the URL (17.805292ms)
+✔ malformed JSON and invalid semantics never call the routing service (5.273333ms)
+✔ app limits reject long-range queries before forwarding (0.81425ms)
+✔ declared regional coverage rejects unsupported origins before routing and handles the date line (5.242416ms)
+✔ routing readiness checks reachable isochrone capability and expected engine identity (1.420167ms)
+✔ an unreachable, malformed, or incapable routing service is not advertised ready (2.390917ms)
+✔ adapter sends static outbound time contours and preserves provenance, snaps, and warnings (3.374583ms)
+✔ upstream rejections and malformed polygons produce actionable errors (3.287083ms)
+✔ real Valhalla response retains input Point and snapped MultiPoint alongside polygons (15.979667ms)
+✔ timeouts and cancelled clients have distinct statuses (0.483084ms)
+✔ hosted routing exposes key presence without spending quota or claiming a live health check (0.262792ms)
+✔ hosted driving uses seconds and longitude/latitude, retaining returned provenance without Valhalla settings (0.674ms)
+✔ hosted driving cap cannot be raised with local-engine settings (0.165458ms)
+✔ hosted quota, access and malformed responses fail safely without retries or fallback (0.503ms)
+✔ cloud history survives a new request and isolates browser owners without storing their raw tokens (12.231625ms)
+✔ history merges by ID, retains query model, and bounds every owner's history to 20 (10.700083ms)
+✔ cross-origin and invalid history requests never reach storage (1.0045ms)
+✔ missing or failing database returns safe local fallback without exposing credentials (0.444042ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8969.98775

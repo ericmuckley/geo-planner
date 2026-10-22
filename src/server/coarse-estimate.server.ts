@@ -4,23 +4,14 @@ import {
 	type ReachabilityResult,
 	resultSchema,
 } from "../lib/reachability";
+import { decodeGrid } from "./coarse-data.server";
 import { estimateGrid, type GridData } from "./coarse-grid";
-import data from "./data/coarse-grid-v1.json";
+import data from "./data/coarse-grid-v3.json";
 
 let grid: GridData | undefined;
 function getGrid() {
 	if (!grid) {
-		grid = {
-			...data,
-			land: new Uint8Array(Buffer.from(data.land, "base64")),
-			traversable: new Uint8Array(Buffer.from(data.traversable, "base64")),
-			links: new Uint8Array(Buffer.from(data.links, "base64")),
-		};
-		if (
-			grid.land.length !== data.width * data.height ||
-			grid.links.length !== data.width * data.height * 4
-		)
-			throw new Error("Invalid bundled coarse-grid data");
+		grid = decodeGrid(data);
 	}
 	return grid;
 }
@@ -31,7 +22,7 @@ const config = engineConfigSchema.parse({
 	health: "ready",
 	minMinutes: 60,
 	maxMinutes: 720,
-	engineVersion: "coarse-road-grid-v1",
+	engineVersion: "coarse-road-grid-v3",
 	graphVersion: data.version,
 	coverage:
 		"Contiguous United States; coarse estimated travel over land and major roads",
@@ -94,11 +85,11 @@ export async function runEstimate(request: Request) {
 				},
 				{
 					description:
-						"Local travel is estimated at 25 km/h, including places without roads. Generalized major roads use assumed 45–90 km/h speeds. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
+						"Local travel is estimated at 25 km/h, including places without roads. Generalized roads use geometry-based times at assumed 55–105 km/h speeds, including approximate transfers within cells. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
 				},
 				{
 					description:
-						"Natural Earth is a generalized cartographic dataset, not a current routable road inventory. US-only road features are used; international crossings and ferries are not modeled. Coasts and lake shores have a 1 km input tolerance; the origin cell is treated as land. Small islands and water crossings can be inaccurate.",
+						"Natural Earth is a generalized cartographic dataset, not a current routable road inventory. US-only road features are used; international crossings and ferries are not modeled. Shore connections require continuous generalized land. Input access allows up to 1 km of initial shore tolerance; unsupported origins remain isolated. Whole-cell shading can extend across borders or water. Small islands and water crossings can be inaccurate.",
 				},
 			],
 		};

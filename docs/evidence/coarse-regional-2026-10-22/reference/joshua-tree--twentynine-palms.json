@@ -1,0 +1,137 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 34.1347,
+        "lon": -116.3131
+      },
+      {
+        "lat": 34.1356,
+        "lon": -116.0542
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 34.1347,
+          "lon": -116.3131,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 34.1356,
+          "lon": -116.0542,
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive north on El Reposo Circle.",
+              "verbal_succinct_transition_instruction": "Drive north. Then Turn right onto 29 Palms Highway.",
+              "verbal_pre_transition_instruction": "Drive north on El Reposo Circle. Then Turn right onto 29 Palms Highway.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "El Reposo Circle"
+              ],
+              "bearing_after": 358,
+              "time": 3.111,
+              "length": 0.03,
+              "cost": 2.955,
+              "begin_shape_index": 0,
+              "end_shape_index": 2,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto 29 Palms Highway/CA 62.",
+              "verbal_transition_alert_instruction": "Turn right onto 29 Palms Highway.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto 29 Palms Highway, California 62.",
+              "verbal_post_transition_instruction": "Continue for 24 kilometers.",
+              "street_names": [
+                "29 Palms Highway",
+                "CA 62"
+              ],
+              "bearing_before": 360,
+              "bearing_after": 90,
+              "time": 908.475,
+              "length": 23.847,
+              "cost": 859.927,
+              "begin_shape_index": 2,
+              "end_shape_index": 250,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 4,
+              "instruction": "You have arrived at your destination.",
+              "verbal_transition_alert_instruction": "You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "You have arrived at your destination.",
+              "bearing_before": 90,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 250,
+              "end_shape_index": 250,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 34.134705,
+            "min_lon": -116.312948,
+            "max_lat": 34.135632,
+            "max_lon": -116.054199,
+            "time": 911.586,
+            "length": 23.877,
+            "cost": 862.882
+          },
+          "shape": "ajlb`Azudz|EkGJkG@AyQCop@@{a@Fsa@Gi`@?k`@MqYDg^?{@AoHAkG?i@Gmc@AcHAcKE}a@@oa@Igv@G{\\E_y@Eyg@A_J?oRAkCOwhBSqqA@go@@eXDumAOqcEIyaA?in@?gvAKmjEm@a~HCc\\E}n@IkxAAmL@i}C@mY?aIAsE?u@ScdAS_{@@eX@eg@Iaq@[giCJmwA?iq@HguAIyq@Ekg@Gim@Ion@e@wqDI_o@B{}E@op@Emt@UmcDG{t@A{aEC}lAGgj@Eud@]u_EIy|@_@imLM}bDCk}AAye@Agh@D_m@?uvAD}fA?eBNq|@Dun@Bed@Dks@H_dAJ_dAFqpANm_EFcm@Nc`CC_aBZgfCLqw@ReqA?aq@CmqA@ue@DegBG}fCUyrGC}j@CqzAQsgCFodADcbAKugC@_aA@ucA@aaABcfAWuhCD}pA?ov@?qs@Aqq@?k_@Hmm@NopBp@a_GHcjALkw@Hw}@Fmp@L{lDp@}dG?}BTsxEDet@@}c@HqcBB}n@HsvAFuY@wa@D{}AF_vBLsmC@_JBqg@?cbAmAgjPIma@g@_lCMox@Gae@Eqb@UidBe@}dCBc^@eMSmyAIuy@AsIQagCU}_BEuXOih@Mil@_AcfC[c_AY}gAg@maAm@eeAUevAKmp@_@{aAg@cfCOwfAA_Ao@ogBg@krA[ak@]{k@nBwFYen@Gmg@AaNkBgGCgKGmi@q@ckAe@ax@BwH@wb@H_MD_{@E{^DcUDgEDe]Fe]E}ZAyB?aGE}WAaHDah@?iQ?k|@QesA@o^Dgw@Ci}@Csb@AyXAiZAg`@?aV@ow@?mFTcp@F_RAsNCqr@Hgq@GabABqfA@yx@?_K?yP@um@?w^@{ZBicBc@msAKyf@Qsq@Sui@Kqg@k@y`C]_aAEcWCcRCiPAo]Oy\\Gw[So\\c@mu@CgESs{@Ki{@Ocz@tAgG?_MAyKAgN{BoI?cL"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 34.134705,
+        "min_lon": -116.312948,
+        "max_lat": 34.135632,
+        "max_lon": -116.054199,
+        "time": 911.586,
+        "length": 23.877,
+        "cost": 862.882
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

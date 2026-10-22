@@ -1,0 +1,34 @@
+{
+  "offlineReplayExactlyMatchesComparison": true,
+  "offlineDiagnosticsExactlyReproduce": true,
+  "all24RawReferenceResponsesPreserved": true,
+  "pairedFiniteCases": 23,
+  "unreachedExplicitlyRetained": true,
+  "referenceSnapWarnings": 0,
+  "referenceBoundaryWarnings": 0,
+  "priorV2SourceBindingsUnchanged": 9,
+  "priorEvidenceFilesUnchanged": {
+    "coarse-estimator-2026-10-22": 11,
+    "saved-history-2026-10-22": 13,
+    "coarse-quality-2026-10-22": 7,
+    "coarse-v2-2026-10-22": 19
+  },
+  "candidateArtifactUnchanged": true,
+  "completedChecks": [
+    "npm run check",
+    "npm run typecheck",
+    "explicit strict TypeScript check for both new diagnostic scripts",
+    "npm run build",
+    "offline capture/replay equality and diagnostics reproduction"
+  ],
+  "notRepeated": [
+    "server/geometry/national smoke tests (no runtime/model change)",
+    "Vercel build/handler checks",
+    "database integration",
+    "browser flow"
+  ],
+  "publicRoutingApiCalls": 0,
+  "modelAdjustment": false,
+  "deployment": false,
+  "scope": "Checks verify diagnostic execution, evidence integrity and unchanged application packaging build. No driving-time accuracy threshold was declared passed."
+}

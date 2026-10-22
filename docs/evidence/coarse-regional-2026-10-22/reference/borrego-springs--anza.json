@@ -1,0 +1,266 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.2559,
+        "lon": -116.375
+      },
+      {
+        "lat": 33.555,
+        "lon": -116.674
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.2559,
+          "lon": -116.375,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.555,
+          "lon": -116.674,
+          "side_of_street": "right",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive southeast on Borrego Springs Road/CR S3.",
+              "verbal_succinct_transition_instruction": "Drive southeast. Then Turn right onto T Anchor Drive.",
+              "verbal_pre_transition_instruction": "Drive southeast on Borrego Springs Road, County Route S3. Then Turn right onto T Anchor Drive.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "Borrego Springs Road",
+                "CR S3"
+              ],
+              "bearing_after": 149,
+              "time": 32.697,
+              "length": 0.795,
+              "cost": 31.915,
+              "begin_shape_index": 0,
+              "end_shape_index": 7,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto T Anchor Drive.",
+              "verbal_transition_alert_instruction": "Turn right onto T Anchor Drive.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto T Anchor Drive.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "T Anchor Drive"
+              ],
+              "bearing_before": 178,
+              "bearing_after": 267,
+              "time": 20.519,
+              "length": 0.18,
+              "cost": 25.125,
+              "begin_shape_index": 7,
+              "end_shape_index": 9,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Country Club Road.",
+              "verbal_transition_alert_instruction": "Turn right onto Country Club Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Country Club Road.",
+              "verbal_post_transition_instruction": "Continue for 1 kilometer.",
+              "street_names": [
+                "Country Club Road"
+              ],
+              "bearing_before": 268,
+              "bearing_after": 358,
+              "time": 91.987,
+              "length": 1.247,
+              "cost": 109.05,
+              "begin_shape_index": 9,
+              "end_shape_index": 53,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Palm Canyon Drive/CR S22.",
+              "verbal_transition_alert_instruction": "Turn left onto Palm Canyon Drive.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Palm Canyon Drive, County Route S22.",
+              "verbal_post_transition_instruction": "Continue for 1.5 kilometers.",
+              "street_names": [
+                "Palm Canyon Drive",
+                "CR S22"
+              ],
+              "bearing_before": 342,
+              "bearing_after": 270,
+              "time": 75.075,
+              "length": 1.44,
+              "cost": 87.486,
+              "begin_shape_index": 53,
+              "end_shape_index": 70,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Montezuma Valley Road/CR S22. Continue on CR S22.",
+              "verbal_transition_alert_instruction": "Turn left onto Montezuma Valley Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Montezuma Valley Road, County Route S22.",
+              "verbal_post_transition_instruction": "Continue on County Route S22 for 28 kilometers.",
+              "street_names": [
+                "CR S22"
+              ],
+              "begin_street_names": [
+                "Montezuma Valley Road",
+                "CR S22"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 179,
+              "time": 1310.556,
+              "length": 28.034,
+              "cost": 1149.589,
+              "begin_shape_index": 70,
+              "end_shape_index": 801,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto San Felipe Valley Road/CR S2.",
+              "verbal_transition_alert_instruction": "Turn right onto San Felipe Valley Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto San Felipe Valley Road, County Route S2.",
+              "verbal_post_transition_instruction": "Continue for 8 kilometers.",
+              "street_names": [
+                "San Felipe Valley Road",
+                "CR S2"
+              ],
+              "bearing_before": 239,
+              "bearing_after": 329,
+              "time": 306.617,
+              "length": 7.528,
+              "cost": 268.336,
+              "begin_shape_index": 801,
+              "end_shape_index": 891,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Route 79/CA 79.",
+              "verbal_transition_alert_instruction": "Turn right onto Route 79.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Route 79, California 79.",
+              "verbal_post_transition_instruction": "Continue for 38 kilometers.",
+              "street_names": [
+                "Route 79",
+                "CA 79"
+              ],
+              "bearing_before": 328,
+              "bearing_after": 54,
+              "time": 2409.329,
+              "length": 37.629,
+              "cost": 2176.915,
+              "begin_shape_index": 891,
+              "end_shape_index": 1589,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Cahuilla Road/CA 371.",
+              "verbal_transition_alert_instruction": "Turn right onto Cahuilla Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Cahuilla Road, California 3 71.",
+              "verbal_post_transition_instruction": "Continue for 24 kilometers.",
+              "street_names": [
+                "Cahuilla Road",
+                "CA 371"
+              ],
+              "bearing_before": 292,
+              "bearing_after": 24,
+              "time": 1152.395,
+              "length": 23.938,
+              "cost": 1028.313,
+              "begin_shape_index": 1589,
+              "end_shape_index": 1861,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 5,
+              "instruction": "Your destination is on the right.",
+              "verbal_transition_alert_instruction": "Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Your destination is on the right.",
+              "bearing_before": 91,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1861,
+              "end_shape_index": 1861,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 33.209724,
+            "min_lon": -116.861778,
+            "max_lat": 33.555199,
+            "max_lon": -116.374587,
+            "time": 5399.179,
+            "length": 100.792,
+            "cost": 4876.731
+          },
+          "shape": "a{wl~@``~}|EjAq@hCaBnCqBnlDwGr}AeCrgCyEz[k@FtE~B|pB}{BdE}T|@qa@rFmTrFsPvF}@XeP~HmJtEiQzKiSdP]ZkK~JgMxOsHhJeJfNyKnRkDnHmFtMuEzMcB|FcBjGeBnHcBfIyCrPuC|QuFxb@}OtkA_DpRcBbH_CtGiDpG{D|FiC`D_C|BgC~BwB|AQHkBlAwBjAqB~@}Bz@}Bp@aGzAiDjAErYHnbD?|eADzaBDrxB@hM?pJBbMCpREvgAAtsBD`_@V|u@BjDTxYNj{@Brx@pAAxXEbXEtRC|pA]pM|@fNxB`\\hMbL~HzPrP|IhM~IpRnDzKxChMnL`g@`N~q@bLnh@vJzb@bYxqApBbHvIbPtJzK|L`I|BjAfNdEhHjAlO\\~NiBxLwDdO}IxCqCzFiGf|@ogAb[m^rViX~vBytBfLqGlJyBrG?~H|@vMbGhH~HrFzKtT~{@ta@dkB|BdK`CrGlElGpF|CjGfBtHd@|GgAnFyBjHuFnE{G|CkKdFih@lCyOzFwOpLmNjJwGvJeCdMgA`k@eCtNlB|RbKpG`GjF`IlClGbCxJjArIb@vMGxjBvAvLzB|G|EjDxHbBlKkAhXmMtF{@|D?`FxBpDdEbGvMd@dF{@fHkDbJcQzZiC|GeAvGGjI`BvIfFpFbJvCnGdAfMYv[sEhIAfI`BzHvFfErFjFlKxBxLMnKgCbMuCxMc@dLbApLtDfItFdGdIvCbGb@`GeArHyBlLcFbH}AxGTvFp@xGnBtEnE~C~HhCrT~@fFt@nCdAjCnAfB|AfB`BfA|CnAfB^`BNdB?jAKlAUjAY`A_@|@c@|AgA|AsA|AiBrAoB~@_BlB_ElC{FlA_CxCqEtC_DrCeCtCgB|Aq@`Be@xBYzBG~CFvC\\rCz@lCtAhCvB|ErFtE~FjGdKfEpIzIhSvCxElBzBtB~AvBhAxBl@nCb@zBNhC@bCYdBi@zBcArCeBlDqC`D_DxG}HxA{BpAaCxEkJzAeC|AoB~A}ArBeArAc@dB[nASvBKlBBbCN|ATbCr@bClAjCdBrV|T|a@v^tFhErFlDxF~BdFlAtDl@pEd@bFT~FDpZC`SPhGN`DXbDd@tCp@fDrAtCzA|CxBnD~CbClCbDhExBrDdCnFhA`Dv@dCj@lCn@|EZdFHvEIjFSzDgD~a@MnBO|BEpBArBBpAFjBLhBXlBr@|CdAdDlArCzArCfB~B`CtCpEzDjPjLhFzDzGnFrCdCrCvCpB`CxAlClArCj@xCZfDHzDMrEQnCw@nFw@nDa@vAs@nBkBvDwClEmPzRcCzCgBxCgBzDoB|FeAbEs@fEi@hEWxDSzF?bDJ~DTjEf@pFr@zFdEdT~AdHf@bEXrEDhFI|F_@rHa@hGaGjo@k@fIg@rRKfBSpBWdB[fBk@xBgBhGcA|Dk@bDSrCE`DRxEZtE\\jDxAbL|C|UhHfh@pAxHrAjGbBbGbCnGdCzEtDlFlGfH|G`HjEzC~BdArBf@dBRfC@fBMfCk@zBiA`CkBnB}BxAeCtA}Dv@wDl@qEZ{Eb@mOZaG^_FfAiKjAcI|AaHxA_FjCgHrCuGdGyKdTs]zSu]zNeVfLiRtGoG`JsDlJ[zKbCpKjJfHxI|ItGlM|D`WhErKnErHfFdFtH~DxK`BzPx@rSvClNrE~HfIzF|b@pUpMxMtD`HtGhR~HpK`HfHlMnFrOlFdNzBfXbDxThDxYdHrJpCvZnFpRzBvMs@jJsDxGuFpIaMhMoU~OgRrMqKpEoBhEkAdFSxEp@|F`DlErFpBrGZ~I{CrPou@dmB_DlNy@lMl@tOhCnLzFvNhW~\\jL`SlDlJ|EbQbQfaAvC~IfD`GjGdF`HhBxF?vIiB|KcFpKeFfIkA~D?pLhB|EjBdJ~HbG`HzJ`RjBbGbA`Gl@jL{@jKwDlJqMbRsFrP{AxLFtOvDdZfCb[dAj`@Fvc@e@fXsAhWyCb\\w^ltCwLr_AkAhXLb[pBfm@rBhk@tDfc@bBxLdJdd@l@bGU`RkBzKgNvc@iCvMyAnTOzKT~HVbF`CtPfHjUnIfOhWfX`JzMxAdCnH~SlEtYr[nmENb[iCfXkGvXwFxNeHhNkKbNyL|JmJrFc|CpeAcVvDiM?kLyBeOcGwN}JcLiMaHgNkFsPyBkL{AqRVik@cAgNyCgOiGeOgDuEsLkLyLaGsPiCeJ?uF|@}NrEgIrGwIhLy[bp@yHlK}^vb@sQdOmY`SeU|S_Y`]eEpGuO`]mJvXcGfY{Eva@sAbRkA`f@d@~g@bA`SrExh@bWhvC~Hli@bGjV`Ml^tE|JrxAfjCrLhMtEvCpGfCjKzBzLLfNkAhMcF|w@yb@vIiB|Jm@|DNjVdEfIfDvHtEfOfMhGzL|EjULdPs@zKsFvXgDb[cBb[MtZjAbP`CxMlEjLhLlT~DtOj@zK]tOcApGoDjLs[hk@uDlJqClKqBvN{@dO?zKjAb[xBfXtEdZzZvlAlOjt@nI|i@nIrp@tE`QpGhNhHzJ|s@~r@lItEnJfDpLl@pM_@jFkA`HwC~MiC|E?|I|@rKdElEfDpH|IhCbGpBpHzAtO?nH}i@thEmE`]yGju@_Dvv@e@hw@d@|^zAvb@bF~q@jL`zBxBli@f@tW^fUh@pWT~{AF~yBFddE?|OHzn@@`Nv@zrEE`n@j@t{F?hN?xBXv|BZboC\\raCDty@HzeA?xFFd~@Bji@Bj[?pB`@|uCVvkB@`HTv`BFfb@BzWVpdCD|g@TtwBLtvACffChAn`EDzcANbzA?nA?dBT`y@DlYgAzaAaCpi@QjDQxB{BvY_@tE}Etc@yG`d@gItf@ePvw@Md@a@dBoaAn`EgMnh@aD~OuDfRoHfc@q@xEq@zEsApJc@zD{G`n@yBtYmDfr@}KzxB{@|^G~S`B~q@pFz|@HnAxBjV`I`o@r@bEnYxbBfDrZ~Bja@TfKDhHHdMs@dd@}@dPoChX}@|HmD|UcEhRoFtSiR`h@unEppIwb@`{@qWli@kPl_@yQzj@{GfYyQj_AeEr[gD~\\yBz`@u@xWNli@hB`f@pBhXzFrd@~Itd@bF~S~Sls@be@ryA~Iha@fD~SbFlh@xB|_@d@lh@Wtz@s@fdA?xr@On^aBli@cBzUiGbe@iH|_@eE`Q{P`h@e[`p@okAjsBaHrPeJhXoIp\\wHxa@aIpp@wWnmD}@bQu@nh@pCpeAhBja@dAbMj@xFvDnS|ErPlDnJ~O|`@`B`EiTnNie@zZc`@b[aH`HqPnVkCpEgh@byAex@bwBy]ns@es@vuAwDlJuIdZeZlrAeZroAqMl_@es@v_Bgv@xeBgOd^oIzUmJz`@yCrPuEre@e@zKMhWTtOhCrf@zFfl@zZvjCpBz`@FbPcAb[cG~g@mEpSwHxViMtYsLrQg]dd@q\\re@yRha@uExMwMha@wShv@ko@hiCeFp[sFhw@{j@lfKmDdZ_E|TuOjk@y\\dcAoHfXyH|^{UdnAqQxk@q`A`cCkVrp@_bA|eCcLl_@yGp[mKju@_Ihb@}DdO{Qre@wl@|rA}Ynh@u_@hk@aWb[wMjVsGdOuJl_@gDpRwg@t_DoSngAiR~{@wIvXgIrQcPfX}JzK{dA|}@_SvXm~@faBiLfPsFzH{L|Pko@t~@oN`QsLjLsfCtaB}HjF_DrByBoEsGoLoMyUcMqUeKyQyM_UiYca@qRsUkOaQoUoUeU{RqS_PcWaQqUaNoZmOyk@aUoXyIk`Cym@wL}D}JqEmLyG{IwGgHaHgGkH{JyMuHgKc|@qnA}gCupD{Ve^eWk]g}@oeAeb@kf@o`DmuD{i@yn@iNkOqNiLcKeG{IkEuKeEsSwEuSmDsL_D_IaDyI}D{NoJ_M_L}IaLqEcH{FoKcBmDoI}UyMee@kg@_hB{Kua@eGaZwEs[mHiz@cMadBkAqNcGa[iDwLmGqPkIyOsJgN_KsLkEcFiR_UaEaFkJwKaPyQuFuGmB}Bip@{u@s^ab@iRwT_SkVcH_JkHeK{L{QmJ{OgKaScKaUoJkVcG}PuHaWgLoe@eFeW}EsYgDaYsBqUkBaZ{IcnBkBiWkBkMyB{I_DaIiCmEqCsDiEwE}FaF_KuFoHqCwFoAoD]}EMiGAmIToJ|@cXlCec@bFcMvB_IlBgJlCgIzCeHzC}GxCcFbCqYjL_Bj@sFlB}K|CcLzC_IrBaLfDcH`C}IbEuJbGuKnJeMxNmGrJ{CdGuErK{EvOyDtQyA~LaA~LcAxQqApQcAvHeBlIiCxH_FfJcLzP}FhJ}FjL{DzLeBlJaBrOiHplAcFx{@eCfc@}@|ZaAlqAg@pMcA`J{BlKmGpQsMn[qGzT{CdRgCdWaJxaAeOpaB{]lbEkFfj@qD~k@_@tPWfTHtVd@rOn@nNlD|a@j@pFzArKdBtKnDhQbFvRpIbYhQz`@bG~LtH|M|MnSnQfY`HvNtHnW`Lzb@xBvIjK`b@lOnk@pKp_@fG|TnFzRlCrPbBvQj@dLR|Kv@dt@@|@`Afy@zGzrFzI`yGEv`@oAbQuBdQwDjR}FdSmPre@cKvXag@ptAii@pzAwdAdwCmZjz@gHlR_E~ImEzHaGfI}IlJiIhHyG`FoHdEsNbFyF`BcGrAwG|@iLfAcc@pBgb@nB_J|@}LzB}LdD{HrC{HrDqSrKmOjImKvFmc@hWwb@b[iv@do@su@hl@kk@n]gaA`f@ohDpeBi\\vMi]~HqWxCyWz@yyAyByQN{Qz@wXfEoXnHoXlKsUfMmy@td@_NrF_JnCgN`Dm_@dEk`@?qVeA}gBwHa{@yBuc@^sLz@ia@fD}x@vMkeAvXqp@|T}_@tOsEfDyCxBaa@xa@qHjLko@jnA_FjLwDhN}AvMw@xLaAhMqAdImBvGuEbJuBpCiFpFuEfCst@|UcPvEedA`ZyOfHwGjEwFnGuChEsNhZqg@lgA_CvDaI`HgM`G{k@hNgkBbZkhAbQcRfEuZ`JsO~EiHfDoIbGyk@li@{FpHyGhMoc@zhAiD|KaFbPib@||Ai@lDo@~D{IveAmBlMyBdKuDzMgHhS}HhQ}EzIsGvIaIbIiSnSogAx_BwSha@a\\hv@mEfNy\\xsB}DvNeFjLaG|IiR~SoI`HyuAtx@iBv@uPfHi@Lml@|NyVtKyKrKcBjCq]~k@eeApiBoFnG}j@dn@uCbDmJxLePfXms@bcBmJrQgYbf@qAzBuz@nyAw]re@cc@hh@kD|Dik@`{@gXha@i]vb@sJ|Jq[r\\gKfMW\\aR`]mJ~Ry[vw@_EfNoH`]cQxv@cLp\\md@z~@gXnh@wSb[eb@|j@a@j@}LpQoNpW_GrKkVre@sHnS{BzHe@|AuChMyApHo@dDsFdXiDvN{ErPaF~MapAv}C}D`HkLvN{J~HsQlJcQfEct@pG{nBbQav@`Gya@fEab@hGaBVawGnvAwt@zPegAvWiq@tOsLl@qM]{i@gGiHw@kLyBaBi@_OyE[KoJ{Cu^cFcQeEqMeFmJiCe[_CcIEgDBeWr@iMTmQKonAuIwXcGw|@c\\gN}IiNmTkUyl@eFqGoNqH{J]sLzAwHfDsh@f[kNxIsGpHgCvCmAjDyA`EoInh@qLfbA{Sj|B}BtPkC~Lkx@p_CwCjKoDxQiBtRgBdWsCjf@sEvy@}Czf@yBjPqHjc@aHz]cF|SaNrc@}K`[cNt`@{GvTkDdNsi@vfCkRx`A_CnVm@zUm@zTc@~QYtTY~LaApNaD`T}EdQuO|_@gSjb@iJtS}DxOiBpM{BpR_YfhEoCx^wS|rCsGrz@_DjVoDbQwXj_AoChMoD`\\aCbf@mJhjA}NtbAu@vYjAhVtT|oC~Dbg@bEri@~`@njFpAvTb@~LKnMc@dGmA|H_BjHuBlGgDxGiGfJeX|YcXbZ{RzQoIhIqM~NmJzLkJ~JaP`P_H|Fud@r\\cc@~Za|@rn@wAhAwMhKcrBlnBwSvMsm@`YmdAxe@md@nSq_Blu@_EtBeYpRqM|Jy[fX}PtPyQnSa`ApoAacDdiE}x@`eAiW~]{@tAwk@b_AiJdOoBbDcAdB_u@lnAm^bp@wItQeg@`eAmGtMyWre@wMrQu_@l^aMbQmOtZqChEmOvU}@bB_MrU_O~]yV`g@aIhLmJbRwC~H_Sj_AeAbQFbPm@tPyBvMcBbGkFxLmv@jgAqTf[_HtHmFxF{A~AwvAzhAwxCv_CyLxMgDbGeE`LiCbMG`AuIfrAa@fFwApP{BvKoD`LyEbL}N|UeRbSkk@pe@iR`Oc[xQgaAbe@_NlKqHzHiCzC{CnEy`ChkDuOdVeA`By`@dn@kLrQU`@eMnSeC`EgDdEcIlHwAnAoNrG_J`Ckg@bNsCv@gCz@sN|Ega@`N_T|IoHdEiPhLwNtICB{FbC{PdFw]`Iop@hNcPnCcNtCmOdEwNpGyK`H{MtI_RxOiKjLwLvNeOxTyMxYuGbScLr\\[z@gA|CwCnIsIvPeLbOwObQgOtKaPvHkZjKgJ`D{JfFkQvO{IpSsIfZW|XbBxSlBjO`HzOfKlOvn@lu@lOba@~Hr[hBdPd@bERpZ_A|ZuCnYwEjR}GpNuMpOmPxJwRzEmX|@cQcD}]_I_[sFyRPiADiK^{YfAyWlIiSvIyHbG}U`S}r@hv@ya@xq@{KbXoRtj@}VpfAwGb_@kG~]qFtw@}CpgAmFvt@gHlt@eFx]uOh_AaElRwDzPoIn\\kHj[wMwFkEmBkTuL_PsKyIgJajA{{AqGqIo[kb@mQ{ViQiSyOmNwQcNyOaI}QuHeXiHiX{DaVeB{X?}Qn@{_@tGum@vMwJ`CiH|A_FfAiz@dRga@`J_@JcGrAyzB~f@o~Cpr@me@jIsXvFmPhAkONi]G_\\_Dco@kIoLgAqX]o]D_WwAuRgD_M{DuN}FaGuDeI_F}FmFiCiB}[g^kf@cl@sn@gu@mXuZuH}GuJ}H{@i@_OcJoJmE}FmBmKcDiKkB_PqC_QwAyL[}CIs\\{@ig@mBsKa@wn@mEg_@_Hwn@oK}r@uSehCscAwVqOySiOsj@ug@wQwL{\\gP}YqMi]iSoPwL_OmLc]w[wb@uf@o[w_@kWa[y\\md@mlCqkD{Vq]}NoUuP}TmLyXgKkXuHaZaIyc@cEk_@yE{^mhA{zIqEsVgAiFuC_Nwa@efAyk@orAc_@wz@}LcVyOsUwq@yz@keAaqAwe@gl@}`@{m@}Qo\\iPqa@qVup@_JkViL{WkTc_@m}@}gAukA}{AyDgG_IeMuH_MeIuR{FgOiJoUcM{e@mAsEoZauAcFuXqn@qeDsNcr@aPcl@mSck@mXqr@cSua@gaA}}A{HyOyIg\\_Ee[uAs[sCclAo@yv@aCioAkBy}@Yqg@s@}T{@cYoB}XqCiVgLmh@{GmWeHaSaK{WoKkSeR_[gYo[k`@a^kx@uc@uzD}sA{`Au`@{j@o^gYwTa}Fe|Ey|CydCug@ic@yZwT{WwPaM{GeP_IsuAaq@o]oRm_Aem@so@mk@kk@mw@gd@}_Ae|A{sFmb@gnA{m@}vAmC}FgIaQkpAypCev@{hAig@}j@oDeD{U{Tg|CwkCkxBmmB}}AmuAuCkD{`@cf@a]ir@iWs|@o@cEaf@maDoHqa@kCgJa^{y@gPgXgTiViXsUav@kg@gKqIuS_V}M}T{LiW_KyZgF}ScF{]iLsdAiEc`@kS_qBqXijCmCgi@aBgq@Tmh@hDswARqLh@m\\IkSI{H[sHQwDmCu^iFsa@ew@izDgK_j@e{@i`EcB}HqjAgzF}W{qAeQa|@}n@w_DmMio@gi@qlCak@wlCuw@maEyiAmxF}Kqd@aEiSgb@{tBwf@adCs`@ktB{Nm~@cMwgAqi@y~EgJa{@_@mD}Iaw@iBgRwHyq@cQm`BuByRme@}hEkSgjBqGsl@wFaw@cAeVg@qYIy`@@cb@dAkoE`@sbB@eYGy}@`@aqB?qZ?_g@A}`AAy}@TiqBDmWAsFJo_@BmI"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 33.209724,
+        "min_lon": -116.861778,
+        "max_lat": 33.555199,
+        "max_lon": -116.374587,
+        "time": 5399.179,
+        "length": 100.792,
+        "cost": 4876.731
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      {
+        "lat": 33.2559,
+        "lon": -116.375
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.0787,
+          "lon": -116.602,
+          "side_of_street": "right",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.2559,
+          "lon": -116.375,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 2,
+              "instruction": "Drive southeast.",
+              "verbal_succinct_transition_instruction": "Drive southeast. Then Turn right onto B Street.",
+              "verbal_pre_transition_instruction": "Drive southeast. Then Turn right onto B Street.",
+              "verbal_post_transition_instruction": "Continue for 90 meters.",
+              "bearing_after": 129,
+              "time": 13.239,
+              "length": 0.091,
+              "cost": 11.915,
+              "begin_shape_index": 0,
+              "end_shape_index": 2,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto B Street.",
+              "verbal_transition_alert_instruction": "Turn right onto B Street.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn left onto Main Street.",
+              "verbal_pre_transition_instruction": "Turn right onto B Street. Then Turn left onto Main Street.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "B Street"
+              ],
+              "bearing_before": 130,
+              "bearing_after": 221,
+              "time": 6.837,
+              "length": 0.045,
+              "cost": 12.165,
+              "begin_shape_index": 2,
+              "end_shape_index": 4,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Main Street/CA 78 East/CA 79. Continue on CA 78 East.",
+              "verbal_transition_alert_instruction": "Turn left onto Main Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Main Street, California 78 East.",
+              "verbal_post_transition_instruction": "Continue on California 78 East for 30 kilometers.",
+              "street_names": [
+                "CA 78 East"
+              ],
+              "begin_street_names": [
+                "Main Street",
+                "CA 78 East",
+                "CA 79"
+              ],
+              "bearing_before": 220,
+              "bearing_after": 131,
+              "time": 1354.828,
+              "length": 29.897,
+              "cost": 1195.183,
+              "begin_shape_index": 4,
+              "end_shape_index": 723,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Yaqui Pass Road/CR S3.",
+              "verbal_transition_alert_instruction": "Turn left onto Yaqui Pass Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Yaqui Pass Road, County Route S3.",
+              "verbal_post_transition_instruction": "Continue for 11 kilometers.",
+              "street_names": [
+                "Yaqui Pass Road",
+                "CR S3"
+              ],
+              "bearing_before": 76,
+              "bearing_after": 28,
+              "time": 646.773,
+              "length": 10.763,
+              "cost": 581.67,
+              "begin_shape_index": 723,
+              "end_shape_index": 971,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take Deep Well Trail/CR S3.",
+              "verbal_transition_alert_instruction": "Keep left to take Deep Well Trail.",
+              "verbal_pre_transition_instruction": "Keep left to take Deep Well Trail, County Route S3.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "Deep Well Trail",
+                "CR S3"
+              ],
+              "bearing_before": 355,
+              "bearing_after": 342,
+              "time": 28.867,
+              "length": 0.48,
+              "cost": 28.427,
+              "begin_shape_index": 971,
+              "end_shape_index": 985,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Borrego Springs Road/CR S3.",
+              "verbal_transition_alert_instruction": "Turn left onto Borrego Springs Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Borrego Springs Road, County Route S3.",
+              "verbal_post_transition_instruction": "Continue for 8 kilometers.",
+              "street_names": [
+                "Borrego Springs Road",
+                "CR S3"
+              ],
+              "bearing_before": 321,
+              "bearing_after": 272,
+              "time": 335.765,
+              "length": 8.252,
+              "cost": 339.014,
+              "begin_shape_index": 985,
+              "end_shape_index": 1064,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 26,
+              "instruction": "Enter Christmas Circle and take the 8th exit onto Borrego Springs Road/CR S3.",
+              "verbal_transition_alert_instruction": "Enter Christmas Circle and take the 8th exit onto Borrego Springs Road.",
+              "verbal_succinct_transition_instruction": "Enter the roundabout and take the 8th exit.",
+              "verbal_pre_transition_instruction": "Enter Christmas Circle and take the 8th exit onto Borrego Springs Road, County Route S3.",
+              "street_names": [
+                "Christmas Circle"
+              ],
+              "bearing_before": 21,
+              "bearing_after": 66,
+              "time": 22.874,
+              "length": 0.393,
+              "cost": 26.448,
+              "begin_shape_index": 1064,
+              "end_shape_index": 1104,
+              "roundabout_exit_count": 8,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 27,
+              "instruction": "Exit the roundabout onto Borrego Springs Road/CR S3.",
+              "verbal_succinct_transition_instruction": "Exit the roundabout. Then Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Exit the roundabout onto Borrego Springs Road, County Route S3. Then Your destination will be on the left.",
+              "verbal_post_transition_instruction": "Continue for 20 meters.",
+              "street_names": [
+                "Borrego Springs Road",
+                "CR S3"
+              ],
+              "bearing_before": 112,
+              "bearing_after": 151,
+              "time": 1.056,
+              "length": 0.015,
+              "cost": 6.634,
+              "begin_shape_index": 1104,
+              "end_shape_index": 1105,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 151,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1105,
+              "end_shape_index": 1105,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": false,
+            "has_ferry": false,
+            "min_lat": 33.066308,
+            "min_lon": -116.601942,
+            "max_lat": 33.257201,
+            "max_lon": -116.329963,
+            "time": 2410.241,
+            "length": 49.939,
+            "cost": 2201.458
+          },
+          "shape": "o}}a~@ldyk}EzAiCj]yi@fNvNxBvBhg@iv@bU}]jIqLjGgLdCyK~CkVp@{Ml@yLo@m\\KgUGuKGsPKcUm@wjAe@yoBU{b@Y{g@E}sAaAgPyDySuGyP_H{J_JaJ{JaFeM}DcNaA}v@AwJ_@qH{@yFiAmIcE}QkM{JoFgHeCsHcBiG]iEEsDJwKlA}VjFaDn@{KxBsEn@eDLkDQqDq@cFwBcIaEsDoAwCo@{CKuF^cEdAoD~AcQxMeKbGcLbFgX~Hgh@dFu_@lJsMrEgA^_ObGyR`GmEjC}DtC{DvDoUtYeKvNcD~CwE`CkGz@k`@k@{Kj@uElAqKhF}AnBcAlBy@dCs@`Fa@pHiEj_AqB~c@aBdPy@pC{ArCoBhC}B~B_HfE_OdEeHr@mVb@uFdAgExAoKnHyI`J}FdHiGfH{KtOoF|Io[nh@kFdEsFvCaHjAqENiEO}Ci@{Cy@kE_CgEeEuN{UgIoIaXaR{CgAwDi@cR_@aHe@kGeA{FoBwJoDmD{BgDeD_GyIoEaF{FeEkF{AiZqBeGaAuDyAwE}CiM{K{K_IsQ}JeJwC}IiBsQ{A}IOyJs@iUcBeJwCeEuFkB}I]gNNwNjA_SfCyMpCmJpQuc@~NwYdKeYhGgNjLcRpGwMjMqShKqPxBmK?aHsE_XiBqMVaJhB_HpDsE~Z{K|OgDzKcGxGqHrFiLfDgNpBePl@eO?{LjA}InXaq@nDiWz@iWjBmJ~CqHpLgNhRuZtOuOhNiLrFiCfHkAzL\\jFwCbAkBdEcPdA_Iz@wN|@eFfDoI`GqGvDiCvH_I`CuDhXmt@hG{KpHmJrUwMhMeFjFgD`CuDrA{CbBaF`BiCnIaHbFyB`X?lJ^zFyB`C{BjPkUd`@se@pGcGnNgNjPyW~CuDvIsGnDcF|DiMdE{`@`Iq[|DaIz`@yj@xByBtJgE~CMfIl@dEhB~RxWpHdEfDb@fDc@~Ao@lBiAtDeEfJ_TjFeOjFaSVwCOePt@eOnNcz@rFgNzK{Kf]aSlJgDhHM|JjArFvC|T`HvShC|N`GbW`StDzAtE\\nDe@lDe@zGeE|DaIbA{J?qHaBsQiCyL}@{JkAc{@|@aG`ByCzQcQvCsF|@qGe@qG{AgDeK{KgN_TqBaHu@_I\\yMd@gDhCaGlOoTrQuNpa@ya@bLqHrPqGdJqHzG{KfIgX~BoItFyMfHiLjGqH`MoIxQsE`H_@`SzApEaCbDqBxBwDjAqGT}IsAmiAl@aQbBgOdEiMvCcFdKmJrU}JzKwDfOaHlM_HbEyEnAuHSoKaCuRw@yJtAcJ`D{EtEqC`UcFlEuAlC_C`C_Ex@}EUqG_CaFaIcNiBgFw@uGJoHbAsG|CuGvCuCpDcBnE{@`MCbHw@bH}C`K}GpCmClDqDzDgFvDwGxDeHxCqHjA{GXeFK_Hw@wIgEk]Y{H`@mH|B}GpCgDbGgCjTmCbIuC`DqChCeExA}FXsGu@{NRiFfB_FxBmBfHmCrE}AdDuD|CaJbA}EnBiElCwCfCkAhHm@~Gi@zCkArBkCdBeDf@aI[_MN_I|@wFlB{FbLkSrKqRfCiDtDmC|DgBrEy@bFKvEz@jGtDjCrEdBbItAjQvAdG`ChCdE~AvIn@jJfBrG`CfFnE~DfG`IfOzD`ElEpBrEb@v]Mru@G~Jk@rEyAzCqDpAwEDwHmBuF}EuDmUyF}HaBaGmCkZuTgHcGsF{JcOeZ}ByFmAqH@aId@aR\\sRUaPy@sPEiJdAuHpBcGrDmGzLoNjXi`@bFuIzBaIv@yI{@yHeC{FyD}DwCeBcCyAmJqDmO_GcJqFwDkEsE{FkHcH{H_FcHaGkHqIuPeV{m@kw@qf@so@wHqKeDoJcBgJBcKt@kLh@wK]uJ}AaHoHiMeLgQeGgNoKc[mJmReL}VgEyMgEyRwCsLmEgLsl@elAkHyJqFqFkWoQsHcIyDgGag@sbAeDgHsXcj@_AiB_Woi@}Qq]gLcQoL}MaQ}Oo^iY_Au@aWgScN_NsIqLuHiLiGqMaGaQgF_ScCiLoBmJs^wbBseBubI{O_t@a~AujHs]c}A}_@mgBweBmbIivLydj@_bAulEqx@gzDyQ_z@oSsz@}Tcz@_{AmeF_GcSeBaGwTkv@er@y_C{GmUsXk_A_HaVoX}_AiLg`@_Ogm@oCeO_Iyl@mFoq@_g@gvKyCc[{Jce@yiCwdHmDcGiMkLeAc@{UsLmTePwNeOmEcGo|@g`B_I_JgIaHeKcFcLiC_NiBmi@hBu_@N{J}@aNsFeEwCyBiC_DoHaCkLqL_]mE_JuJiMmEgDoIuDqMm@_YdE{ZhCuJmAwJ_FsEcIcFsP_JwTiCyLmCu]g@iY]wMkAmJyBeFsF_IgJ{Guo@eYgIsF_DuEiD}IwEs_@qBcGwGiIaf@c^mJ{Juq@_{@eI{N}DgMuBuMo@gPH_Vm@kLiBgNyBmJ_DoIoSk`@mFyLsFaSgDmTkFmT_Ns[mUgYsPa\\cgBa`CgRiWcS}XiRqQ_TwNsKuEaMgC{Q_@}JjAmIxC}O|IyGrF_TvXaW|TuTjL}J\\uTeEkk@z@iMjB_XzKuEz@aM?sF{@wXqHoNMwc@vCqL]_D}@aMoHmEgEwIgM_IePwI}JqGwCuOgDeJ]}Pz@eTvDiC?wMyCkFcFaCcGiCcQoD_r@kUsmBFkKd@wDvC{KfNs[|IwWxCkL~Hed@hC}TxAaSl@ec@UkV_PkwByBcXiQeuByJudAgUe`CmUsaCwSi}CoHya@eFcQoMo^iC{J_D}TgIsdAsKw`BsBaSe@}SbBqdB|Iw~Cl@kjAm@wMsBgTuD{TeIu_@kGaScQgb@_IqRiC}ImD}_@GgXvHw`Bd@_T?gY]wMyBc[sAee@FiW_@kVyB{_@kKijAkAaKcBqLqGu\\cGoT_w@i~BerAehEaCmJkBiN]mGO{DmD{qB?kVp[wtBzAcQFwYwDia@kFo^cGwWeEiMoN_^cFeP}EiW{@sGkA_JmDq@mF{Fo_@s]cToReQ_Rq\\ka@kU_^}JkUwIc\\gFuZQeAuJuk@yH}d@uAaIsDmTuA_MoB}PoImhAyC_T_CiLuJeZ}O{_@yCmKsAiMl@sPdK{_@NcGu@sFuJwXcG_J}H_G_P}LaCqG]sFd@cFhHkV\\aHcA}JqCuEqBiBiHgD_bAw[mCgA}CiBwBsAeC_CuBeC}AwCcAkCkAsDq@qDMkDBiDZmCh@qClAgC~AkBvBqAlDw@fDg@zBq@`By@lAkAjAmBn@}Bb@qC?wD[kDo@wCw@oC{AoCyAqB}CqCeEkCsCuAkBiAgBmAgBeBuByC}AiDuAcF}@{Fs@eFs@oEmAeFkGcUqCoKs@mDg@iDe@eEEmDJ}FPwGVuEf@_Gl@eEpByI|AeGj@}CVoCN_CEqBUoBm@uBgBkDuC{DqBwCmAuCgAkD}@sDu@kEaAyEm@}Bs@gBeA}AoCgC_EaDqB_ByAgBiAeCq@_DiAaIs@yEcAkFcAoEeB{EyBuEeD{FqEwGaB}BoA}BcAqBq@oBi@oCq@kIi@wE]}Co@aEo@wCqBoH}@sDi@gCg@}Cm@wEk@mEiBoK_BiJ{@}Fk@eGsAoOa@eEg@aE_BcI_EyMwHsPkp@cdB_b@khBgEkKs^{o@{AqCoBcDyGcLaKqQaVy^cb@mj@aWuXeO}JiMeEaEy@iy@wPiRyCswBwWeKgDgYwNoHaHiCaHkAaHm@{Km@co@gCgYsGsQmDaGgEuEcy@cp@_OaHwoBud@iRqG_hAog@{O}JqRqR_ImJcLgN{KcQaIcQgH_Tql@skCsPor@wIwXcLmUoRgXyRsQyGuEwoCozA}IwDePcFeUgDcV}@alDhCk`@}@}~DqQgYwDmYaH_fBco@smBku@iW_Jqg@kKiRwCyfDk`@w^yBse@m@m^wDmOuDmPcG{o@o]um@gYsVaHkLyBqv@}Ja\\kAcpMaRgJiB}dBcCcg@s@ua@k@e|DuFssBwCqnBiCs}@kAqDEql@w@ky@yAuo@?qG?cl@\\ck@BwLFuIBqPz@wFzAqQbGwN`H{FdEkQbQuXxb@kf@vu@wS`]sKvX}EpQsCtIq@f@w@JqAT_B~tB{@taCa@fnBqD`mKa@r~AGjo@q@|sBUb|@O|p@Sff@YveAc@l|BU|kAeAfuE[lpAo@xlCo@|h@aBt[QdDcHhk@eF~WaF~S_DfKkMz^qPn]wU|`@qK|NeT`V_RxPa^~[}cAdy@wk@ba@qk@b`@y_Alj@}_Abf@e[vNeiAne@aQnFuOfFgTfHu^~K}y@xU{e@hLmsAnW_iAnPihBbQ}o@~Dwz@|Cuy@j@sd@Gy[Ey}@}AwlAmGsh@qG}h@qJyl@cP{]{Oua@uU}NcGyL}DeR_C{NmAiWOmJ@kSNgsBhAmrAh@wi@v@m`C|EcV`@ih@|@e|D|G{[j@sgCxEs}AdColDvGoDuAwC_AaHiCw@_EmAuDcBgD_B}BUUuAwA{CyBiDyAkFgAqFMoFj@}E`BkEpCoCtCS\\eBnC_B|DeAnEw@~HDrF@rA`A|HvA|Ep@nAbAvBnCjDdDnCvDhBpEhAzEXxEStEcA|@[z@a@hBeAbBqAvCiD~BcE`B}E~@kFxFgD"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": false,
+        "has_ferry": false,
+        "min_lat": 33.066308,
+        "min_lon": -116.601942,
+        "max_lat": 33.257201,
+        "max_lon": -116.329963,
+        "time": 2410.241,
+        "length": 49.939,
+        "cost": 2201.458
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

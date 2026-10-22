@@ -1,0 +1,1341 @@
+{
+  "planId": "coarse-regional-validation-v1",
+  "planSha256": "1dd68557bb0e88cd0f9633921d24242043e8783b36daf28cd1171bd0cb932012",
+  "baselineSha256": "7dfd3b30965c21a57fcca408a97a4d95e455bda33d09ecc7a29953346c23d8c4",
+  "candidateSha256": "76d3216310c8c776eab3385b077a1ff6ab85c1f72f542e9a3ff4c7fee852c063",
+  "mode": "offline replay",
+  "referenceStatus": {
+    "version": "3.9.1-7fd2228e5",
+    "tileset_last_modified": 1792170595,
+    "available_actions": [
+      "route",
+      "locate",
+      "sources_to_targets",
+      "optimized_route",
+      "isochrone",
+      "trace_route",
+      "trace_attributes",
+      "height",
+      "transit_available",
+      "expansion",
+      "centroid",
+      "status",
+      "tile"
+    ]
+  },
+  "samples": [
+    {
+      "id": "los-angeles--bakersfield",
+      "from": "los-angeles",
+      "to": "bakersfield",
+      "category": "corridor",
+      "origin": {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      "destination": {
+        "lat": 35.3733,
+        "lon": -119.0187
+      },
+      "referenceMinutes": 105.95386666666667,
+      "referenceKm": 181.967,
+      "referenceSnapKm": {
+        "origin": 0.01955315022790328,
+        "destination": 0.006226915892175587
+      },
+      "minReferenceBoundaryDistanceKm": 14.09462412175772,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -119.05,
+          35.35
+        ],
+        "cellMinutes": 146.70987137717535,
+        "originAccessMinutes": 1.5116651392910345,
+        "destinationAccessMinutes": 9.223161159595715,
+        "pointMinutes": 155.93303253677107,
+        "originReachedCells": 6879,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -119.03737,
+          35.32653
+        ],
+        "cellMinutes": 119.96148152302679,
+        "originAccessMinutes": 2.4381481896934667,
+        "destinationAccessMinutes": 13.1263201080991,
+        "pointMinutes": 133.0878016311259,
+        "originReachedCells": 10811,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 40.75600471050868,
+      "candidateCellDeltaMinutes": 14.00761485636012,
+      "baselinePointDeltaMinutes": 49.979165870104396,
+      "candidatePointDeltaMinutes": 27.13393496445923
+    },
+    {
+      "id": "los-angeles--ventura",
+      "from": "los-angeles",
+      "to": "ventura",
+      "category": "corridor",
+      "origin": {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      "destination": {
+        "lat": 34.2746,
+        "lon": -119.229
+      },
+      "referenceMinutes": 65.76675,
+      "referenceKm": 107.345,
+      "referenceSnapKm": {
+        "origin": 0.01955315022790328,
+        "destination": 0.037633546127385044
+      },
+      "minReferenceBoundaryDistanceKm": 51.939132213009394,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -119.25,
+          34.25
+        ],
+        "cellMinutes": 77.66361667938457,
+        "originAccessMinutes": 1.5116651392910345,
+        "destinationAccessMinutes": 8.034385557483976,
+        "pointMinutes": 85.69800223686855,
+        "originReachedCells": 6879,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -119.22071,
+          34.2878
+        ],
+        "cellMinutes": 64.29314818969347,
+        "originAccessMinutes": 2.4381481896934667,
+        "destinationAccessMinutes": 3.968719855425274,
+        "pointMinutes": 68.26186804511875,
+        "originReachedCells": 10811,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 11.896866679384573,
+      "candidateCellDeltaMinutes": -1.4736018103065334,
+      "baselinePointDeltaMinutes": 19.931252236868545,
+      "candidatePointDeltaMinutes": 2.495118045118744
+    },
+    {
+      "id": "bakersfield--big-bear-lake",
+      "from": "bakersfield",
+      "to": "big-bear-lake",
+      "category": "mountain",
+      "origin": {
+        "lat": 35.3733,
+        "lon": -119.0187
+      },
+      "destination": {
+        "lat": 34.2439,
+        "lon": -116.9114
+      },
+      "referenceMinutes": 186.82356666666666,
+      "referenceKm": 301.697,
+      "referenceSnapKm": {
+        "origin": 0.006226915892175587,
+        "destination": 0.0075373783935923635
+      },
+      "minReferenceBoundaryDistanceKm": 14.093845757270806,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.95,
+          34.25
+        ],
+        "cellMinutes": 289.408053257654,
+        "originAccessMinutes": 9.223161159595715,
+        "destinationAccessMinutes": 8.669302463556466,
+        "pointMinutes": 298.07735572121044,
+        "originReachedCells": 6588,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.95,
+          34.25
+        ],
+        "cellMinutes": 263.21501035971875,
+        "originAccessMinutes": 13.1263201080991,
+        "destinationAccessMinutes": 8.669302463556466,
+        "pointMinutes": 271.8843128232752,
+        "originReachedCells": 10664,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 102.58448659098732,
+      "candidateCellDeltaMinutes": 76.39144369305208,
+      "baselinePointDeltaMinutes": 111.25378905454377,
+      "candidatePointDeltaMinutes": 85.06074615660853
+    },
+    {
+      "id": "bakersfield--palm-springs",
+      "from": "bakersfield",
+      "to": "palm-springs",
+      "category": "corridor",
+      "origin": {
+        "lat": 35.3733,
+        "lon": -119.0187
+      },
+      "destination": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "referenceMinutes": 205.76595,
+      "referenceKm": 353.847,
+      "referenceSnapKm": {
+        "origin": 0.006226915892175587,
+        "destination": 0.004782273966826725
+      },
+      "minReferenceBoundaryDistanceKm": 14.093845757270806,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.55,
+          33.85
+        ],
+        "cellMinutes": 273.661779781844,
+        "originAccessMinutes": 9.223161159595715,
+        "destinationAccessMinutes": 5.35952456207874,
+        "pointMinutes": 279.02130434392274,
+        "originReachedCells": 6588,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.52204,
+          33.8988
+        ],
+        "cellMinutes": 227.60465344143233,
+        "originAccessMinutes": 13.1263201080991,
+        "destinationAccessMinutes": 18.993200123869904,
+        "pointMinutes": 246.59785356530224,
+        "originReachedCells": 10664,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 67.89582978184401,
+      "candidateCellDeltaMinutes": 21.83870344143233,
+      "baselinePointDeltaMinutes": 73.25535434392273,
+      "candidatePointDeltaMinutes": 40.83190356530224
+    },
+    {
+      "id": "santa-barbara--san-diego",
+      "from": "santa-barbara",
+      "to": "san-diego",
+      "category": "coastal",
+      "origin": {
+        "lat": 34.4208,
+        "lon": -119.6982
+      },
+      "destination": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "referenceMinutes": 204.33083333333335,
+      "referenceKm": 351.348,
+      "referenceSnapKm": {
+        "origin": 0.009379681346479532,
+        "destination": 0.0014721281557130838
+      },
+      "minReferenceBoundaryDistanceKm": 9.331437706938633,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -117.15,
+          32.75
+        ],
+        "cellMinutes": 277.2137271839217,
+        "originAccessMinutes": 13.163352836680307,
+        "destinationAccessMinutes": 9.486675293266964,
+        "pointMinutes": 286.7004024771887,
+        "originReachedCells": 5550,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -117.16126,
+          32.75937
+        ],
+        "cellMinutes": 220.7361188413948,
+        "originAccessMinutes": 16.25445217472811,
+        "destinationAccessMinutes": 11.654173216421494,
+        "pointMinutes": 232.3902920578163,
+        "originReachedCells": 9129,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 72.88289385058837,
+      "candidateCellDeltaMinutes": 16.405285508061468,
+      "baselinePointDeltaMinutes": 82.36956914385533,
+      "candidatePointDeltaMinutes": 28.059458724482965
+    },
+    {
+      "id": "santa-barbara--brawley",
+      "from": "santa-barbara",
+      "to": "brawley",
+      "category": "corridor",
+      "origin": {
+        "lat": 34.4208,
+        "lon": -119.6982
+      },
+      "destination": {
+        "lat": 32.9787,
+        "lon": -115.5303
+      },
+      "referenceMinutes": 272.2386,
+      "referenceKm": 475.726,
+      "referenceSnapKm": {
+        "origin": 0.009379681346479532,
+        "destination": 0.008784894437363897
+      },
+      "minReferenceBoundaryDistanceKm": 9.331437706938633,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.55,
+          32.95
+        ],
+        "cellMinutes": 399.7644823800486,
+        "originAccessMinutes": 13.163352836680307,
+        "destinationAccessMinutes": 8.838446116718158,
+        "pointMinutes": 408.60292849676676,
+        "originReachedCells": 5550,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -115.54552,
+          32.969640000000005
+        ],
+        "cellMinutes": 325.6394521747281,
+        "originAccessMinutes": 16.25445217472811,
+        "destinationAccessMinutes": 4.178106455201319,
+        "pointMinutes": 329.8175586299294,
+        "originReachedCells": 9129,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 127.52588238004859,
+      "candidateCellDeltaMinutes": 53.40085217472807,
+      "baselinePointDeltaMinutes": 136.36432849676675,
+      "candidatePointDeltaMinutes": 57.57895862992939
+    },
+    {
+      "id": "palm-springs--idyllwild",
+      "from": "palm-springs",
+      "to": "idyllwild",
+      "category": "mountain",
+      "origin": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "destination": {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      "referenceMinutes": 53.24466666666667,
+      "referenceKm": 77.747,
+      "referenceSnapKm": {
+        "origin": 0.004782273966826725,
+        "destination": 0.013642879042889907
+      },
+      "minReferenceBoundaryDistanceKm": 174.39033930446115,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.75,
+          33.75
+        ],
+        "cellMinutes": 48.58219011529592,
+        "originAccessMinutes": 5.35952456207874,
+        "destinationAccessMinutes": 7.399271196660907,
+        "pointMinutes": 55.98146131195683,
+        "originReachedCells": 6630,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.78483,
+          33.71463
+        ],
+        "cellMinutes": 80.30653345720322,
+        "originAccessMinutes": 18.993200123869904,
+        "destinationAccessMinutes": 16.12360164832664,
+        "pointMinutes": 96.43013510552986,
+        "originReachedCells": 10293,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": -4.6624765513707445,
+      "candidateCellDeltaMinutes": 27.06186679053655,
+      "baselinePointDeltaMinutes": 2.7367946452901606,
+      "candidatePointDeltaMinutes": 43.18546843886319
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "from": "palm-springs",
+      "to": "big-bear-lake",
+      "category": "mountain",
+      "origin": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "destination": {
+        "lat": 34.2439,
+        "lon": -116.9114
+      },
+      "referenceMinutes": 91.56958333333334,
+      "referenceKm": 131.435,
+      "referenceSnapKm": {
+        "origin": 0.004782273966826725,
+        "destination": 0.0075373783935923635
+      },
+      "minReferenceBoundaryDistanceKm": 138.873901369702,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.95,
+          34.25
+        ],
+        "cellMinutes": 112.25044186389113,
+        "originAccessMinutes": 5.35952456207874,
+        "destinationAccessMinutes": 8.669302463556466,
+        "pointMinutes": 120.91974432744759,
+        "originReachedCells": 6630,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.95,
+          34.25
+        ],
+        "cellMinutes": 123.26240119257997,
+        "originAccessMinutes": 18.993200123869904,
+        "destinationAccessMinutes": 8.669302463556466,
+        "pointMinutes": 131.93170365613645,
+        "originReachedCells": 10293,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 20.680858530557785,
+      "candidateCellDeltaMinutes": 31.69281785924663,
+      "baselinePointDeltaMinutes": 29.350160994114248,
+      "candidatePointDeltaMinutes": 40.36212032280311
+    },
+    {
+      "id": "idyllwild--palm-springs",
+      "from": "idyllwild",
+      "to": "palm-springs",
+      "category": "mountain",
+      "origin": {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      "destination": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "referenceMinutes": 51.98633333333333,
+      "referenceKm": 76.625,
+      "referenceSnapKm": {
+        "origin": 0.013642879042889907,
+        "destination": 0.004782273966826725
+      },
+      "minReferenceBoundaryDistanceKm": 174.4162477223687,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.55,
+          33.85
+        ],
+        "cellMinutes": 50.62193674988131,
+        "originAccessMinutes": 7.399271196660907,
+        "destinationAccessMinutes": 5.35952456207874,
+        "pointMinutes": 55.98146131196005,
+        "originReachedCells": 6230,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.52204,
+          33.8988
+        ],
+        "cellMinutes": 77.43693498165997,
+        "originAccessMinutes": 16.12360164832664,
+        "destinationAccessMinutes": 18.993200123869904,
+        "pointMinutes": 96.43013510552987,
+        "originReachedCells": 9730,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": -1.3643965834520202,
+      "candidateCellDeltaMinutes": 25.450601648326646,
+      "baselinePointDeltaMinutes": 3.9951279786267193,
+      "candidatePointDeltaMinutes": 44.443801772196544
+    },
+    {
+      "id": "idyllwild--temecula",
+      "from": "idyllwild",
+      "to": "temecula",
+      "category": "mountain",
+      "origin": {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      "destination": {
+        "lat": 33.4936,
+        "lon": -117.1484
+      },
+      "referenceMinutes": 60.2767,
+      "referenceKm": 83.257,
+      "referenceSnapKm": {
+        "origin": 0.013642879042889907,
+        "destination": 0.005746535826466794
+      },
+      "minReferenceBoundaryDistanceKm": 194.82274066017828,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -117.15,
+          33.45
+        ],
+        "cellMinutes": 63.77556074407792,
+        "originAccessMinutes": 7.399271196660907,
+        "destinationAccessMinutes": 11.640887342802419,
+        "pointMinutes": 75.41644808688034,
+        "originReachedCells": 6230,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -117.14243,
+          33.440270000000005
+        ],
+        "cellMinutes": 63.80526831499331,
+        "originAccessMinutes": 16.12360164832664,
+        "destinationAccessMinutes": 14.293982943042701,
+        "pointMinutes": 78.09925125803602,
+        "originReachedCells": 9730,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 3.4988607440779234,
+      "candidateCellDeltaMinutes": 3.528568314993315,
+      "baselinePointDeltaMinutes": 15.139748086880338,
+      "candidatePointDeltaMinutes": 17.82255125803602
+    },
+    {
+      "id": "julian--borrego-springs",
+      "from": "julian",
+      "to": "borrego-springs",
+      "category": "remote",
+      "origin": {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      "destination": {
+        "lat": 33.2559,
+        "lon": -116.375
+      },
+      "referenceMinutes": 40.170683333333336,
+      "referenceKm": 49.939,
+      "referenceSnapKm": {
+        "origin": 0.008527398726131336,
+        "destination": 0.006091373107022086
+      },
+      "minReferenceBoundaryDistanceKm": 170.251646063507,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.35,
+          33.25
+        ],
+        "cellMinutes": 75.45533762142324,
+        "originAccessMinutes": 13.187390039875723,
+        "destinationAccessMinutes": 5.797174904638877,
+        "pointMinutes": 81.25251252606212,
+        "originReachedCells": 5350,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.35,
+          33.25
+        ],
+        "cellMinutes": 62.759309493416,
+        "originAccessMinutes": 7.248250489674891,
+        "destinationAccessMinutes": 5.797174904638877,
+        "pointMinutes": 68.55648439805488,
+        "originReachedCells": 8764,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 35.284654288089904,
+      "candidateCellDeltaMinutes": 22.58862616008266,
+      "baselinePointDeltaMinutes": 41.08182919272878,
+      "candidatePointDeltaMinutes": 28.38580106472154
+    },
+    {
+      "id": "julian--el-centro",
+      "from": "julian",
+      "to": "el-centro",
+      "category": "remote",
+      "origin": {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      "destination": {
+        "lat": 32.792,
+        "lon": -115.5631
+      },
+      "referenceMinutes": 95.56603333333334,
+      "referenceKm": 138.251,
+      "referenceSnapKm": {
+        "origin": 0.008527398726131336,
+        "destination": 0.02468969783202886
+      },
+      "minReferenceBoundaryDistanceKm": 99.3727959355718,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.55,
+          32.75
+        ],
+        "cellMinutes": 153.4310542660959,
+        "originAccessMinutes": 13.187390039875723,
+        "destinationAccessMinutes": 11.587505697882149,
+        "pointMinutes": 165.01855996397805,
+        "originReachedCells": 5350,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -115.54544,
+          32.77349
+        ],
+        "cellMinutes": 119.6732504896749,
+        "originAccessMinutes": 7.248250489674891,
+        "destinationAccessMinutes": 6.3324873232383405,
+        "pointMinutes": 126.00573781291324,
+        "originReachedCells": 8764,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 57.865020932762576,
+      "candidateCellDeltaMinutes": 24.107217156341562,
+      "baselinePointDeltaMinutes": 69.45252663064471,
+      "candidatePointDeltaMinutes": 30.439704479579902
+    },
+    {
+      "id": "borrego-springs--anza",
+      "from": "borrego-springs",
+      "to": "anza",
+      "category": "remote",
+      "origin": {
+        "lat": 33.2559,
+        "lon": -116.375
+      },
+      "destination": {
+        "lat": 33.555,
+        "lon": -116.674
+      },
+      "referenceMinutes": 89.98631666666667,
+      "referenceKm": 100.792,
+      "referenceSnapKm": {
+        "origin": 0.006091373107022086,
+        "destination": 0.012566393410341404
+      },
+      "minReferenceBoundaryDistanceKm": 174.31954006303337,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.65,
+          33.55
+        ],
+        "cellMinutes": 110.0900115379468,
+        "originAccessMinutes": 5.797174904638877,
+        "destinationAccessMinutes": 5.501909427376568,
+        "pointMinutes": 115.59192096532337,
+        "originReachedCells": 5110,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.60243000000001,
+          33.58904
+        ],
+        "cellMinutes": 108.96658100114044,
+        "originAccessMinutes": 5.797174904638877,
+        "destinationAccessMinutes": 18.324004347923886,
+        "pointMinutes": 127.29058534906433,
+        "originReachedCells": 8058,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 20.103694871280126,
+      "candidateCellDeltaMinutes": 18.980264334473773,
+      "baselinePointDeltaMinutes": 25.6056042986567,
+      "candidatePointDeltaMinutes": 37.30426868239766
+    },
+    {
+      "id": "borrego-springs--julian",
+      "from": "borrego-springs",
+      "to": "julian",
+      "category": "remote",
+      "origin": {
+        "lat": 33.2559,
+        "lon": -116.375
+      },
+      "destination": {
+        "lat": 33.0787,
+        "lon": -116.602
+      },
+      "referenceMinutes": 39.66288333333333,
+      "referenceKm": 49.559,
+      "referenceSnapKm": {
+        "origin": 0.006091373107022086,
+        "destination": 0.008527398726131336
+      },
+      "minReferenceBoundaryDistanceKm": 170.251646063507,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.65,
+          33.05
+        ],
+        "cellMinutes": 68.06512248618192,
+        "originAccessMinutes": 5.797174904638877,
+        "destinationAccessMinutes": 13.187390039875723,
+        "pointMinutes": 81.25251252605764,
+        "originReachedCells": 5110,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.63437,
+          33.080119999999994
+        ],
+        "cellMinutes": 61.30823390837999,
+        "originAccessMinutes": 5.797174904638877,
+        "destinationAccessMinutes": 7.248250489674891,
+        "pointMinutes": 68.55648439805488,
+        "originReachedCells": 8058,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 28.402239152848587,
+      "candidateCellDeltaMinutes": 21.645350575046656,
+      "baselinePointDeltaMinutes": 41.58962919272431,
+      "candidatePointDeltaMinutes": 28.893601064721544
+    },
+    {
+      "id": "joshua-tree--brawley",
+      "from": "joshua-tree",
+      "to": "brawley",
+      "category": "remote",
+      "origin": {
+        "lat": 34.1347,
+        "lon": -116.3131
+      },
+      "destination": {
+        "lat": 32.9787,
+        "lon": -115.5303
+      },
+      "referenceMinutes": 122.83763333333333,
+      "referenceKm": 203.34,
+      "referenceSnapKm": {
+        "origin": 0.01455268087561997,
+        "destination": 0.008784894437363897
+      },
+      "minReferenceBoundaryDistanceKm": 96.10436490184144,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.55,
+          32.95
+        ],
+        "cellMinutes": 205.9649629916025,
+        "originAccessMinutes": 9.11575066440368,
+        "destinationAccessMinutes": 8.838446116718158,
+        "pointMinutes": 214.80340910832066,
+        "originReachedCells": 6094,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -115.54552,
+          32.969640000000005
+        ],
+        "cellMinutes": 159.05997156480757,
+        "originAccessMinutes": 7.8749715648075895,
+        "destinationAccessMinutes": 4.178106455201319,
+        "pointMinutes": 163.23807802000889,
+        "originReachedCells": 9940,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 83.12732965826918,
+      "candidateCellDeltaMinutes": 36.22233823147424,
+      "baselinePointDeltaMinutes": 91.96577577498734,
+      "candidatePointDeltaMinutes": 40.400444686675556
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "from": "joshua-tree",
+      "to": "twentynine-palms",
+      "category": "remote",
+      "origin": {
+        "lat": 34.1347,
+        "lon": -116.3131
+      },
+      "destination": {
+        "lat": 34.1356,
+        "lon": -116.0542
+      },
+      "referenceMinutes": 15.1931,
+      "referenceKm": 23.877,
+      "referenceSnapKm": {
+        "origin": 0.01455268087561997,
+        "destination": 0.0035582376531232427
+      },
+      "minReferenceBoundaryDistanceKm": 143.04302362903928,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.05,
+          34.15
+        ],
+        "cellMinutes": 34.59867392620082,
+        "originAccessMinutes": 9.11575066440368,
+        "destinationAccessMinutes": 3.953277527623988,
+        "pointMinutes": 38.551951453824806,
+        "originReachedCells": 6094,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.03032,
+          34.13623
+        ],
+        "cellMinutes": 29.861638231474252,
+        "originAccessMinutes": 7.8749715648075895,
+        "destinationAccessMinutes": 5.277503986833688,
+        "pointMinutes": 35.13914221830794,
+        "originReachedCells": 9940,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 19.405573926200816,
+      "candidateCellDeltaMinutes": 14.668538231474253,
+      "baselinePointDeltaMinutes": 23.358851453824805,
+      "candidatePointDeltaMinutes": 19.946042218307937
+    },
+    {
+      "id": "salton-city--bombay-beach",
+      "from": "salton-city",
+      "to": "bombay-beach",
+      "category": "lake",
+      "origin": {
+        "lat": 33.2986,
+        "lon": -115.9561
+      },
+      "destination": {
+        "lat": 33.3503,
+        "lon": -115.7297
+      },
+      "referenceMinutes": 61.267950000000006,
+      "referenceKm": 82.363,
+      "referenceSnapKm": {
+        "origin": 0.012191456415649018,
+        "destination": 0.008359551708137408
+      },
+      "minReferenceBoundaryDistanceKm": 114.20985772397216,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.75,
+          33.35
+        ],
+        "cellMinutes": null,
+        "originAccessMinutes": 13.04099052019268,
+        "destinationAccessMinutes": 4.526019926647134,
+        "pointMinutes": null,
+        "originReachedCells": 5670,
+        "shaded": false
+      },
+      "candidate": {
+        "node": [
+          -115.75,
+          33.35
+        ],
+        "cellMinutes": null,
+        "originAccessMinutes": 13.285370080266626,
+        "destinationAccessMinutes": 4.526019926647134,
+        "pointMinutes": null,
+        "originReachedCells": 9264,
+        "shaded": false
+      },
+      "baselineCellDeltaMinutes": null,
+      "candidateCellDeltaMinutes": null,
+      "baselinePointDeltaMinutes": null,
+      "candidatePointDeltaMinutes": null
+    },
+    {
+      "id": "salton-city--brawley",
+      "from": "salton-city",
+      "to": "brawley",
+      "category": "lake",
+      "origin": {
+        "lat": 33.2986,
+        "lon": -115.9561
+      },
+      "destination": {
+        "lat": 32.9787,
+        "lon": -115.5303
+      },
+      "referenceMinutes": 39.2368,
+      "referenceKm": 60.819,
+      "referenceSnapKm": {
+        "origin": 0.012191456415649018,
+        "destination": 0.008784894437363897
+      },
+      "minReferenceBoundaryDistanceKm": 96.10436490184144,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.55,
+          32.95
+        ],
+        "cellMinutes": 72.75935393291752,
+        "originAccessMinutes": 13.04099052019268,
+        "destinationAccessMinutes": 8.838446116718158,
+        "pointMinutes": 81.59780004963568,
+        "originReachedCells": 5670,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -115.54552,
+          32.969640000000005
+        ],
+        "cellMinutes": 64.37370341359996,
+        "originAccessMinutes": 13.285370080266626,
+        "destinationAccessMinutes": 4.178106455201319,
+        "pointMinutes": 68.55180986880127,
+        "originReachedCells": 9264,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 33.52255393291752,
+      "candidateCellDeltaMinutes": 25.136903413599953,
+      "baselinePointDeltaMinutes": 42.36100004963568,
+      "candidatePointDeltaMinutes": 29.31500986880127
+    },
+    {
+      "id": "bombay-beach--salton-city",
+      "from": "bombay-beach",
+      "to": "salton-city",
+      "category": "lake",
+      "origin": {
+        "lat": 33.3503,
+        "lon": -115.7297
+      },
+      "destination": {
+        "lat": 33.2986,
+        "lon": -115.9561
+      },
+      "referenceMinutes": 61.58226666666667,
+      "referenceKm": 82.459,
+      "referenceSnapKm": {
+        "origin": 0.008359551708137408,
+        "destination": 0.012191456415649018
+      },
+      "minReferenceBoundaryDistanceKm": 114.20985772397216,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -115.95,
+          33.25
+        ],
+        "cellMinutes": 149.80874621438863,
+        "originAccessMinutes": 4.526019926647134,
+        "destinationAccessMinutes": 13.04099052019268,
+        "pointMinutes": 162.8497367345813,
+        "originReachedCells": 5334,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -115.94075000000001,
+          33.2505
+        ],
+        "cellMinutes": 147.7071729049417,
+        "originAccessMinutes": 4.526019926647134,
+        "destinationAccessMinutes": 13.285370080266626,
+        "pointMinutes": 160.99254298520833,
+        "originReachedCells": 8330,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 88.22647954772196,
+      "candidateCellDeltaMinutes": 86.12490623827503,
+      "baselinePointDeltaMinutes": 101.26747006791464,
+      "candidatePointDeltaMinutes": 99.41027631854166
+    },
+    {
+      "id": "bombay-beach--indio",
+      "from": "bombay-beach",
+      "to": "indio",
+      "category": "lake",
+      "origin": {
+        "lat": 33.3503,
+        "lon": -115.7297
+      },
+      "destination": {
+        "lat": 33.7206,
+        "lon": -116.2156
+      },
+      "referenceMinutes": 52.188583333333334,
+      "referenceKm": 64.573,
+      "referenceSnapKm": {
+        "origin": 0.008359551708137408,
+        "destination": 0.007242969698366064
+      },
+      "minReferenceBoundaryDistanceKm": 114.20985772397216,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.25,
+          33.75
+        ],
+        "cellMinutes": 122.84647643129294,
+        "originAccessMinutes": 4.526019926647134,
+        "destinationAccessMinutes": 10.947263428224641,
+        "pointMinutes": 133.7937398595176,
+        "originReachedCells": 5334,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.25223,
+          33.75001
+        ],
+        "cellMinutes": 114.72383957160834,
+        "originAccessMinutes": 4.526019926647134,
+        "destinationAccessMinutes": 11.29982295877675,
+        "pointMinutes": 126.02366253038508,
+        "originReachedCells": 8330,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 70.6578930979596,
+      "candidateCellDeltaMinutes": 62.535256238275004,
+      "baselinePointDeltaMinutes": 81.60515652618426,
+      "candidatePointDeltaMinutes": 73.83507919705175
+    },
+    {
+      "id": "san-clemente--temecula",
+      "from": "san-clemente",
+      "to": "temecula",
+      "category": "coastal",
+      "origin": {
+        "lat": 33.4269,
+        "lon": -117.612
+      },
+      "destination": {
+        "lat": 33.4936,
+        "lon": -117.1484
+      },
+      "referenceMinutes": 50.75438333333333,
+      "referenceKm": 82.011,
+      "referenceSnapKm": {
+        "origin": 0.00021636365362109297,
+        "destination": 0.005746535826466794
+      },
+      "minReferenceBoundaryDistanceKm": 203.04706419365255,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -117.15,
+          33.45
+        ],
+        "cellMinutes": 85.93747778357496,
+        "originAccessMinutes": 10.46974234392128,
+        "destinationAccessMinutes": 11.640887342802419,
+        "pointMinutes": 97.57836512637738,
+        "originReachedCells": 6109,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -117.14243,
+          33.440270000000005
+        ],
+        "cellMinutes": 72.58264050510377,
+        "originAccessMinutes": 10.305973838437094,
+        "destinationAccessMinutes": 14.293982943042701,
+        "pointMinutes": 86.87662344814647,
+        "originReachedCells": 9698,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 35.18309445024163,
+      "candidateCellDeltaMinutes": 21.82825717177044,
+      "baselinePointDeltaMinutes": 46.82398179304405,
+      "candidatePointDeltaMinutes": 36.122240114813145
+    },
+    {
+      "id": "san-clemente--escondido",
+      "from": "san-clemente",
+      "to": "escondido",
+      "category": "coastal",
+      "origin": {
+        "lat": 33.4269,
+        "lon": -117.612
+      },
+      "destination": {
+        "lat": 33.1192,
+        "lon": -117.0864
+      },
+      "referenceMinutes": 40.026066666666665,
+      "referenceKm": 67.608,
+      "referenceSnapKm": {
+        "origin": 0.00021636365362109297,
+        "destination": 0.004009975916343872
+      },
+      "minReferenceBoundaryDistanceKm": 203.04706419365255,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -117.05,
+          33.15
+        ],
+        "cellMinutes": 69.90496183892861,
+        "originAccessMinutes": 10.46974234392128,
+        "destinationAccessMinutes": 11.564120180354402,
+        "pointMinutes": 81.46908201928302,
+        "originReachedCells": 6109,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -117.09281,
+          33.134319999999995
+        ],
+        "cellMinutes": 55.289307171770425,
+        "originAccessMinutes": 10.305973838437094,
+        "destinationAccessMinutes": 4.281805396019502,
+        "pointMinutes": 59.571112567789925,
+        "originReachedCells": 9698,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 29.87889517226195,
+      "candidateCellDeltaMinutes": 15.26324050510376,
+      "baselinePointDeltaMinutes": 41.44301535261636,
+      "candidatePointDeltaMinutes": 19.54504590112326
+    },
+    {
+      "id": "ventura--palm-springs",
+      "from": "ventura",
+      "to": "palm-springs",
+      "category": "corridor",
+      "origin": {
+        "lat": 34.2746,
+        "lon": -119.229
+      },
+      "destination": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "referenceMinutes": 162.5282,
+      "referenceKm": 278.94,
+      "referenceSnapKm": {
+        "origin": 0.037633546127385044,
+        "destination": 0.004782273966826725
+      },
+      "minReferenceBoundaryDistanceKm": 52.479563281895906,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -116.55,
+          33.85
+        ],
+        "cellMinutes": 203.43402178261576,
+        "originAccessMinutes": 8.034385557483976,
+        "destinationAccessMinutes": 5.35952456207874,
+        "pointMinutes": 208.7935463446945,
+        "originReachedCells": 5935,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -116.52204,
+          33.8988
+        ],
+        "cellMinutes": 166.1853865220919,
+        "originAccessMinutes": 3.968719855425274,
+        "destinationAccessMinutes": 18.993200123869904,
+        "pointMinutes": 185.17858664596181,
+        "originReachedCells": 9751,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 40.90582178261576,
+      "candidateCellDeltaMinutes": 3.657186522091905,
+      "baselinePointDeltaMinutes": 46.26534634469451,
+      "candidatePointDeltaMinutes": 22.650386645961817
+    },
+    {
+      "id": "ventura--san-clemente",
+      "from": "ventura",
+      "to": "san-clemente",
+      "category": "coastal",
+      "origin": {
+        "lat": 34.2746,
+        "lon": -119.229
+      },
+      "destination": {
+        "lat": 33.4269,
+        "lon": -117.612
+      },
+      "referenceMinutes": 122.53621666666666,
+      "referenceKm": 208.589,
+      "referenceSnapKm": {
+        "origin": 0.037633546127385044,
+        "destination": 0.00021636365362109297
+      },
+      "minReferenceBoundaryDistanceKm": 52.479563281895906,
+      "referenceOutsideBounds": false,
+      "baseline": {
+        "node": [
+          -117.65,
+          33.45
+        ],
+        "cellMinutes": 153.84675279493936,
+        "originAccessMinutes": 8.034385557483976,
+        "destinationAccessMinutes": 10.46974234392128,
+        "pointMinutes": 164.31649513886063,
+        "originReachedCells": 5935,
+        "shaded": true
+      },
+      "candidate": {
+        "node": [
+          -117.63641000000001,
+          33.45971
+        ],
+        "cellMinutes": 126.78871985542527,
+        "originAccessMinutes": 3.968719855425274,
+        "destinationAccessMinutes": 10.305973838437094,
+        "pointMinutes": 137.09469369386235,
+        "originReachedCells": 9751,
+        "shaded": true
+      },
+      "baselineCellDeltaMinutes": 31.3105361282727,
+      "candidateCellDeltaMinutes": 4.2525031887586096,
+      "baselinePointDeltaMinutes": 41.78027847219397,
+      "candidatePointDeltaMinutes": 14.558477027195693
+    }
+  ],
+  "summary": {
+    "cases": 24,
+    "pairedFiniteCases": 23,
+    "unreachedBaselineCases": 1,
+    "unreachedCandidateCases": 1,
+    "baselineCellMeanAbsoluteDifferenceMinutes": 44.67923231931576,
+    "candidateCellMeanAbsoluteDifferenceMinutes": 27.315736698426598,
+    "baselinePointMeanAbsoluteDifferenceMinutes": 52.99894591307927,
+    "candidatePointMeanAbsoluteDifferenceMinutes": 37.72958431076925,
+    "candidatePointMeanSignedDifferenceMinutes": 37.72958431076925,
+    "improvedCellCases": 19,
+    "improvedPointCases": 18,
+    "candidateFasterThanReferencePointCases": 0,
+    "unshadedCandidateDestinations": 1,
+    "referenceBoundaryWarnings": 0,
+    "referenceSnapWarnings": 0
+  },
+  "categories": {
+    "corridor": {
+      "cases": 5,
+      "pairedFiniteCases": 5,
+      "unreachedBaselineCases": 0,
+      "unreachedCandidateCases": 0,
+      "baselineCellMeanAbsoluteDifferenceMinutes": 57.79608106688032,
+      "candidateCellMeanAbsoluteDifferenceMinutes": 18.87559176098379,
+      "baselinePointMeanAbsoluteDifferenceMinutes": 65.15908945847139,
+      "candidatePointMeanAbsoluteDifferenceMinutes": 30.138060370154285,
+      "candidatePointMeanSignedDifferenceMinutes": 30.138060370154285,
+      "improvedCellCases": 5,
+      "improvedPointCases": 5,
+      "candidateFasterThanReferencePointCases": 0,
+      "unshadedCandidateDestinations": 0,
+      "referenceBoundaryWarnings": 0,
+      "referenceSnapWarnings": 0
+    },
+    "mountain": {
+      "cases": 5,
+      "pairedFiniteCases": 5,
+      "unreachedBaselineCases": 0,
+      "unreachedCandidateCases": 0,
+      "baselineCellMeanAbsoluteDifferenceMinutes": 26.558215800089158,
+      "candidateCellMeanAbsoluteDifferenceMinutes": 32.825059661231045,
+      "baselinePointMeanAbsoluteDifferenceMinutes": 32.49512415189105,
+      "candidatePointMeanAbsoluteDifferenceMinutes": 46.17493758970147,
+      "candidatePointMeanSignedDifferenceMinutes": 46.17493758970147,
+      "improvedCellCases": 1,
+      "improvedPointCases": 1,
+      "candidateFasterThanReferencePointCases": 0,
+      "unshadedCandidateDestinations": 0,
+      "referenceBoundaryWarnings": 0,
+      "referenceSnapWarnings": 0
+    },
+    "coastal": {
+      "cases": 4,
+      "pairedFiniteCases": 4,
+      "unreachedBaselineCases": 0,
+      "unreachedCandidateCases": 0,
+      "baselineCellMeanAbsoluteDifferenceMinutes": 42.31385490034117,
+      "candidateCellMeanAbsoluteDifferenceMinutes": 14.437321593423569,
+      "baselinePointMeanAbsoluteDifferenceMinutes": 53.10421119042743,
+      "candidatePointMeanAbsoluteDifferenceMinutes": 24.571305441903764,
+      "candidatePointMeanSignedDifferenceMinutes": 24.571305441903764,
+      "improvedCellCases": 4,
+      "improvedPointCases": 4,
+      "candidateFasterThanReferencePointCases": 0,
+      "unshadedCandidateDestinations": 0,
+      "referenceBoundaryWarnings": 0,
+      "referenceSnapWarnings": 0
+    },
+    "remote": {
+      "cases": 6,
+      "pairedFiniteCases": 6,
+      "unreachedBaselineCases": 0,
+      "unreachedCandidateCases": 0,
+      "baselineCellMeanAbsoluteDifferenceMinutes": 40.698085471575205,
+      "candidateCellMeanAbsoluteDifferenceMinutes": 23.03538911481552,
+      "baselinePointMeanAbsoluteDifferenceMinutes": 48.84236942392777,
+      "candidatePointMeanAbsoluteDifferenceMinutes": 30.894977032734023,
+      "candidatePointMeanSignedDifferenceMinutes": 30.894977032734023,
+      "improvedCellCases": 6,
+      "improvedPointCases": 5,
+      "candidateFasterThanReferencePointCases": 0,
+      "unshadedCandidateDestinations": 0,
+      "referenceBoundaryWarnings": 0,
+      "referenceSnapWarnings": 0
+    },
+    "lake": {
+      "cases": 4,
+      "pairedFiniteCases": 3,
+      "unreachedBaselineCases": 1,
+      "unreachedCandidateCases": 1,
+      "baselineCellMeanAbsoluteDifferenceMinutes": 64.13564219286637,
+      "candidateCellMeanAbsoluteDifferenceMinutes": 57.93235529671666,
+      "baselinePointMeanAbsoluteDifferenceMinutes": 75.07787554791152,
+      "candidatePointMeanAbsoluteDifferenceMinutes": 67.52012179479823,
+      "candidatePointMeanSignedDifferenceMinutes": 67.52012179479823,
+      "improvedCellCases": 3,
+      "improvedPointCases": 3,
+      "candidateFasterThanReferencePointCases": 0,
+      "unshadedCandidateDestinations": 1,
+      "referenceBoundaryWarnings": 0,
+      "referenceSnapWarnings": 0
+    }
+  },
+  "publicRoutingApiCalls": 0,
+  "localServiceRequests": 0,
+  "scope": "New Southern California route set selected before reference requests, with v2 unchanged. Regional static-model comparison, not national or real-world ETA validation.",
+  "limitations": [
+    "Unreached means no cell arrival within the 720-minute search. Means and improved counts use paired finite cases only; unreached counts remain explicit.",
+    "One static regional reference with incomplete coverage guarantees; boundary proximity is a diagnostic, not a completeness proof.",
+    "Both models attach exact endpoints by straight travel at 25 km/h. This is approximate point access; cell arrivals use different representative positions.",
+    "No new model fitting, national accuracy, cloud deployment or six-hour boundary accuracy claim."
+  ]
+}

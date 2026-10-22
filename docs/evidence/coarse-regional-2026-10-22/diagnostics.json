@@ -1,0 +1,559 @@
+{
+  "missingDestination": {
+    "route": "salton-city--bombay-beach",
+    "referenceMinutes": 61.267950000000006,
+    "cell": {
+      "point": {
+        "lat": 33.3503,
+        "lon": -115.7297
+      },
+      "cell": 54962,
+      "node": [
+        -115.75,
+        33.35
+      ],
+      "nodeAccessKm": 1.8858416361029722,
+      "inputInGeneralizedLake": true,
+      "land": false,
+      "traversable": false,
+      "display": false,
+      "neighbors": [
+        {
+          "dx": -1,
+          "dy": -1,
+          "cell": 54371,
+          "land": false,
+          "traversable": false,
+          "display": false,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": -1,
+          "cell": 54372,
+          "land": false,
+          "traversable": false,
+          "display": false,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": -1,
+          "cell": 54373,
+          "land": false,
+          "traversable": false,
+          "display": false,
+          "roadLinks": []
+        },
+        {
+          "dx": -1,
+          "dy": 0,
+          "cell": 54961,
+          "land": false,
+          "traversable": false,
+          "display": false,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "cell": 54962,
+          "land": false,
+          "traversable": false,
+          "display": false,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": 0,
+          "cell": 54963,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": -1,
+          "dy": 1,
+          "cell": 55551,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": 1,
+          "cell": 55552,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": 1,
+          "cell": 55553,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        }
+      ]
+    },
+    "interpretation": "The destination's center is lake, with no retained road link and no display eligibility. The input lies in the generalized lake but is accepted as an origin within the existing shore tolerance. Query-local seed activation explains why the reverse direction can leave this cell while arrival from another origin is blocked. The local reference snaps to a road within 9 m; generalized lake membership is not actual water truth."
+  },
+  "mountainRegression": {
+    "route": "palm-springs--idyllwild",
+    "referenceMinutes": 53.24466666666667,
+    "baseline": {
+      "originAccessMinutes": 5.35952456207874,
+      "intercellMinutes": 43.22266555321718,
+      "destinationAccessMinutes": 7.399271196660907,
+      "pointMinutes": 55.98146131195683
+    },
+    "candidate": {
+      "originAccessMinutes": 18.993200123869904,
+      "intercellMinutes": 61.31333333333331,
+      "destinationAccessMinutes": 16.12360164832664,
+      "pointMinutes": 96.43013510552986
+    },
+    "origin": {
+      "point": {
+        "lat": 33.8303,
+        "lon": -116.5453
+      },
+      "cell": 57904,
+      "node": [
+        -116.52204,
+        33.8988
+      ],
+      "nodeAccessKm": 7.913833384945794,
+      "inputInGeneralizedLake": false,
+      "land": true,
+      "traversable": true,
+      "display": true,
+      "neighbors": [
+        {
+          "dx": -1,
+          "dy": -1,
+          "cell": 57313,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": -1,
+          "cell": 57314,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": -1,
+          "cell": 57315,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 80
+            },
+            {
+              "direction": 3,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dy": 0,
+          "cell": 57903,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 80
+            },
+            {
+              "direction": 2,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "cell": 57904,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 105
+            },
+            {
+              "direction": 2,
+              "speedKph": 105
+            },
+            {
+              "direction": 4,
+              "speedKph": 80
+            },
+            {
+              "direction": 7,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dy": 0,
+          "cell": 57905,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 105
+            },
+            {
+              "direction": 4,
+              "speedKph": 105
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dy": 1,
+          "cell": 58493,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 105
+            },
+            {
+              "direction": 4,
+              "speedKph": 105
+            },
+            {
+              "direction": 6,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dy": 1,
+          "cell": 58494,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 2,
+              "speedKph": 80
+            },
+            {
+              "direction": 4,
+              "speedKph": 105
+            },
+            {
+              "direction": 6,
+              "speedKph": 105
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dy": 1,
+          "cell": 58495,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        }
+      ]
+    },
+    "destination": {
+      "point": {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      "cell": 57312,
+      "node": [
+        -116.78483,
+        33.71463
+      ],
+      "nodeAccessKm": 6.718167353469434,
+      "inputInGeneralizedLake": false,
+      "land": true,
+      "traversable": true,
+      "display": true,
+      "neighbors": [
+        {
+          "dx": -1,
+          "dy": -1,
+          "cell": 56721,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": -1,
+          "cell": 56722,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 80
+            },
+            {
+              "direction": 2,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dy": -1,
+          "cell": 56723,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 4,
+              "speedKph": 80
+            },
+            {
+              "direction": 6,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": -1,
+          "dy": 0,
+          "cell": 57311,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 80
+            },
+            {
+              "direction": 4,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "cell": 57312,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 4,
+              "speedKph": 80
+            },
+            {
+              "direction": 6,
+              "speedKph": 80
+            }
+          ]
+        },
+        {
+          "dx": 1,
+          "dy": 0,
+          "cell": 57313,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": -1,
+          "dy": 1,
+          "cell": 57901,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": 1,
+          "cell": 57902,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": 1,
+          "cell": 57903,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": [
+            {
+              "direction": 0,
+              "speedKph": 80
+            },
+            {
+              "direction": 2,
+              "speedKph": 80
+            }
+          ]
+        }
+      ]
+    },
+    "interpretation": "V2 representatives add endpoint access and change the intercell distance. This decomposition does not isolate all geometry/transfer effects or prove the overland path is realistic. Do not fix it with a global speed increase."
+  },
+  "largestMountainDifference": {
+    "route": "bakersfield--big-bear-lake",
+    "referenceMinutes": 186.82356666666666,
+    "baseline": {
+      "originAccessMinutes": 9.223161159595715,
+      "intercellMinutes": 280.1848920980583,
+      "destinationAccessMinutes": 8.669302463556466,
+      "pointMinutes": 298.07735572121044
+    },
+    "candidate": {
+      "originAccessMinutes": 13.1263201080991,
+      "intercellMinutes": 250.08869025161965,
+      "destinationAccessMinutes": 8.669302463556466,
+      "pointMinutes": 271.8843128232752
+    },
+    "destination": {
+      "point": {
+        "lat": 34.2439,
+        "lon": -116.9114
+      },
+      "cell": 60260,
+      "node": [
+        -116.95,
+        34.25
+      ],
+      "nodeAccessKm": 3.6122093598151945,
+      "inputInGeneralizedLake": false,
+      "land": true,
+      "traversable": true,
+      "display": true,
+      "neighbors": [
+        {
+          "dx": -1,
+          "dy": -1,
+          "cell": 59669,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": -1,
+          "cell": 59670,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": -1,
+          "cell": 59671,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": -1,
+          "dy": 0,
+          "cell": 60259,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": 0,
+          "cell": 60260,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": 0,
+          "cell": 60261,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": -1,
+          "dy": 1,
+          "cell": 60849,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 0,
+          "dy": 1,
+          "cell": 60850,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        },
+        {
+          "dx": 1,
+          "dy": 1,
+          "cell": 60851,
+          "land": true,
+          "traversable": true,
+          "display": true,
+          "roadLinks": []
+        }
+      ]
+    },
+    "interpretation": "No retained road reaches the destination cell or its eight neighbors. Local overland fallback therefore substitutes for real road access near Big Bear. This supports a missing-road/access investigation, not an assertion that the reference route is ground truth."
+  },
+  "nextCorrection": "Represent land-supported shore cells symmetrically for arrival and departure, with access connections that cannot bridge open water or move isolated islands to the mainland. Preserve v2 and both comparison sets, version a candidate separately, and keep the current class speeds while isolating this correction.",
+  "remainingQueue": [
+    "Investigate representative-position access detours in the four regressed mountain cases.",
+    "Investigate missing generalized road coverage near Big Bear and the east Salton Sea shore before further speed fitting."
+  ],
+  "publicRoutingApiCalls": 0,
+  "localServiceRequests": 0
+}

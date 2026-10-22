@@ -1,0 +1,346 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.4269,
+        "lon": -117.612
+      },
+      {
+        "lat": 33.4936,
+        "lon": -117.1484
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.4269,
+          "lon": -117.612,
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.4936,
+          "lon": -117.1484,
+          "side_of_street": "right",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 1,
+              "instruction": "Drive southeast on South El Camino Real.",
+              "verbal_succinct_transition_instruction": "Drive southeast. Then, in 100 meters, Turn left onto Avenida Presidio.",
+              "verbal_pre_transition_instruction": "Drive southeast on South El Camino Real. Then, in 100 meters, Turn left onto Avenida Presidio.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "South El Camino Real"
+              ],
+              "bearing_after": 141,
+              "time": 10.307,
+              "length": 0.11,
+              "cost": 14.308,
+              "begin_shape_index": 0,
+              "end_shape_index": 5,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Avenida Presidio.",
+              "verbal_transition_alert_instruction": "Turn left onto Avenida Presidio.",
+              "verbal_succinct_transition_instruction": "Turn left. Then Turn right to take the Interstate 5 South ramp.",
+              "verbal_pre_transition_instruction": "Turn left onto Avenida Presidio. Then Turn right to take the Interstate 5 South ramp.",
+              "verbal_post_transition_instruction": "Continue for 60 meters.",
+              "street_names": [
+                "Avenida Presidio"
+              ],
+              "bearing_before": 142,
+              "bearing_after": 42,
+              "time": 11.898,
+              "length": 0.059,
+              "cost": 26.217,
+              "begin_shape_index": 5,
+              "end_shape_index": 7,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 18,
+              "instruction": "Turn right to take the I 5 South ramp toward San Diego.",
+              "verbal_transition_alert_instruction": "Turn right to take the Interstate 5 South ramp.",
+              "verbal_pre_transition_instruction": "Turn right to take the Interstate 5 South ramp toward San Diego.",
+              "verbal_post_transition_instruction": "Continue for 33 kilometers.",
+              "street_names": [
+                "I 5 South",
+                "San Diego Freeway",
+                "Route 5"
+              ],
+              "bearing_before": 25,
+              "bearing_after": 130,
+              "time": 1151.043,
+              "length": 33.383,
+              "cost": 1102.741,
+              "begin_shape_index": 7,
+              "end_shape_index": 172,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 5 South",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "San Diego"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 54A onto CA 76 East.",
+              "verbal_transition_alert_instruction": "Take exit 54A.",
+              "verbal_pre_transition_instruction": "Take exit 54A onto California 76 East.",
+              "verbal_post_transition_instruction": "Continue for 28 kilometers.",
+              "street_names": [
+                "CA 76"
+              ],
+              "bearing_before": 142,
+              "bearing_after": 145,
+              "time": 1150.972,
+              "length": 28.134,
+              "cost": 1254.041,
+              "begin_shape_index": 172,
+              "end_shape_index": 750,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "54A"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 76 East"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 18,
+              "instruction": "Turn right to take the I 15 North ramp.",
+              "verbal_transition_alert_instruction": "Turn right to take the Interstate 15 North ramp.",
+              "verbal_pre_transition_instruction": "Turn right to take the Interstate 15 North ramp.",
+              "verbal_post_transition_instruction": "Continue for 18 kilometers.",
+              "street_names": [
+                "I 15 North",
+                "Route 15"
+              ],
+              "bearing_before": 43,
+              "bearing_after": 77,
+              "time": 575.123,
+              "length": 18.033,
+              "cost": 553.468,
+              "begin_shape_index": 750,
+              "end_shape_index": 957,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 15 North",
+                    "consecutive_count": 1
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 58 onto CA 79 toward Indio/Temecula Parkway.",
+              "verbal_transition_alert_instruction": "Take exit 58.",
+              "verbal_pre_transition_instruction": "Take exit 58 onto California 79 toward Indio, Temecula Parkway.",
+              "bearing_before": 343,
+              "bearing_after": 8,
+              "time": 17.552,
+              "length": 0.441,
+              "cost": 32.45,
+              "begin_shape_index": 957,
+              "end_shape_index": 969,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "58"
+                  }
+                ],
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 79"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Indio"
+                  },
+                  {
+                    "text": "Temecula Parkway"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Temecula Parkway.",
+              "verbal_transition_alert_instruction": "Turn left onto Temecula Parkway.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Temecula Parkway.",
+              "verbal_post_transition_instruction": "Continue for 300 meters.",
+              "street_names": [
+                "Temecula Parkway"
+              ],
+              "bearing_before": 344,
+              "bearing_after": 299,
+              "time": 14.356,
+              "length": 0.307,
+              "cost": 23.969,
+              "begin_shape_index": 969,
+              "end_shape_index": 979,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Old Town Front Street.",
+              "verbal_transition_alert_instruction": "Turn right onto Old Town Front Street.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Old Town Front Street.",
+              "verbal_post_transition_instruction": "Continue for 1.5 kilometers.",
+              "street_names": [
+                "Old Town Front Street"
+              ],
+              "bearing_before": 263,
+              "bearing_after": 7,
+              "time": 102.811,
+              "length": 1.483,
+              "cost": 169.586,
+              "begin_shape_index": 979,
+              "end_shape_index": 1045,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Main Street.",
+              "verbal_transition_alert_instruction": "Turn right onto Main Street.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Main Street. Then Turn right.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Main Street"
+              ],
+              "bearing_before": 313,
+              "bearing_after": 44,
+              "time": 6.738,
+              "length": 0.049,
+              "cost": 16.14,
+              "begin_shape_index": 1045,
+              "end_shape_index": 1048,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right.",
+              "verbal_transition_alert_instruction": "Turn right.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_before": 44,
+              "bearing_after": 137,
+              "time": 4.458,
+              "length": 0.011,
+              "cost": 86.96,
+              "begin_shape_index": 1048,
+              "end_shape_index": 1050,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 5,
+              "instruction": "Your destination is on the right.",
+              "verbal_transition_alert_instruction": "Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Your destination is on the right.",
+              "bearing_before": 133,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1050,
+              "end_shape_index": 1050,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 33.202857,
+            "min_lon": -117.612001,
+            "max_lat": 33.493708,
+            "max_lon": -117.135112,
+            "time": 3045.263,
+            "length": 82.011,
+            "cost": 3279.886
+          },
+          "shape": "e|ew~@b}mi_FvKmKpLgL|DyD`FcFxGcGaE}F{ToKzCwFtF}GpoAecAlI{G`hAqw@l]}LhxAik@h`@}Rlf@q\\hoAigAnHiGnOaKb]}TpO{H|eEc`BnbFmsBjbF{oBjQgH|qPayGp{A{p@`a@wSbMsGzTqK`GuCjU_Lbp@{`@p|Aa_Ats@kh@jkAmz@fkCunBfb@}b@|}@eeAvP{WvTy`@hZ_m@`^i_Als@_bC`x@{fCxe@_iBx[uhA|sAsxEhm@ouB~{BkyHpSse@jZsm@h^yg@lmAowAd[q]zb@sl@xHkLp\\or@hp@axA|~CibHnlFerL`i@m`AxrAyxB`oDqaGz~NsmV~wH{iMxnActB~NyUjl@s_AbeAk_BteHetKvbCitDbiEitGj|EuoHhyEkjHzbJcgNt[c^|]yYr`@wXb\\gQdSeI`a@oMnXoFlb@aGbgAcFjk@mC~sBaJ|LoAl]iC`]kGxZqG|WsGjp@a\\~WcQp\\iWb[uZl_@gc@~iLmeOpiD_oEd`D{aE`PkSniD}nEjiA_|AnXsZd_@q]~]wXz|@yk@td@_\\~lD}bCr~CiyB|kGcjEbeEcvCz}Bk~A|s@eg@zcD}{Bx^uV~\\q]pX_]|h@cz@lw@amAbLgQ|jIw_Ml^gc@bRaR|^sZnm@ed@~eA}s@haIm_G`iBoqAllAm~@naJesGjXaOpi@cWvt@iXreCmy@fj@kUhn@{]b]qVrYcYne@yj@d`@sh@lKaR|^iv@lYcp@frAukCtIiMnhBisBjQeT|o@aw@jvEipFx_KgjLrq@cy@~s@as@|B}BpMgN`OaMlVcSv^yTdP_IrS_Inc@iL|nGaqAz`B_\\hp@yRfo@aZpk@s\\tpCsxA~KmGpkD_kBt]kP`eAas@`fAobAlb@e\\j^ed@vD_D`E{ArDi@nDInEv@~DlAzCbDpCbEvAzDdA`GCpG[dGgCnHgEbGmEbCmDx@kB@cZm@i[gHy{@aLiOgCuOaDm@MwCm@uFyAwN{EcOiG{UuLaMiIoNmKiKgJuKaKsIgJeMqOkIcMeYcd@szA{aCse@mt@s^kl@{HaNwHuNkJ}SuH_TeLg`@eEgSmDsSoF{d@mB}Zm@}OUaVNq]v@sw@zBwoBxAmjAc@qUA_CImB[kHu@_K}Cu_@qE_a@eNibAc_AkyGySsyAwMay@_Kql@yBmMyAiI{jAmvGuW{wA{AoIuA{HqmAiaHoa@ewBcDwP}CqNud@{uB_m@{lCaAgEen@}kCy@mD{Io\\mJy\\kOed@mPgc@cHcQqHaQiJ{RuJ{RyqAmnCkLaXqI_TmAeDwJwWsJyXuGoSoGsSmIi[wHa[aLse@kL}k@yNgv@{C_QyA_IoS_fA}b@q{Bmb@_yBkAcGk`@ctBMaA}AuHcDwOiAyE_Lge@}Kgb@wN}e@{Q}i@eSgk@yRag@k]qv@uA_DkOq]wAaDerAmzCiCaGc_AiwB_CiFkCyFqBoEou@obBsc@c`Aea@iw@ca@{u@yWoe@}X_e@oYme@oY}c@}f@gu@{NwTsTq\\o_@kj@Ya@eCqD{CsE}BkD}~AkaCmk@oz@cq@icA}EwGmFuHyCcF{CsFqCyFiDqHqDwIiDeJ_EsLiE_NkCeKoB_JkEaTkDiUsBwQeAgMw@gM}Bug@Eu@]aIUuIUuHiAq`@}ImaCoAmQkBkSu@_HkB{NeCgNaFkUsFeTcFoPwEcN{Sui@kKwWi\\y{@{Toj@gEoKmCyGw`@saAof@_oAeG_ReFkR}BwJgBwIs@{Ds@iEo@_Ei@wDyByPkLsbAuL{fAyDkZgBcLSqAoA}H_FoYcD_Q}A{HyAeHsHs[uIi\\k^ksAip@}cCql@izBcAqD}`@e|AUu@eBcGaCqJwAgFeJy\\cR{q@ga@atA_Nsc@_Nud@cH{VqG{VcEsQyCqPkC{PaDoXgAqKaA{K_AoMo@}Me@_NW{MoB_qAwDe~BOuJiAua@yE{jCKaKGeK?wKJaMd@aPp@uPlAkOjA_Oz@iIbAeIfAiIjA{HvJgj@zFe]jI}f@bCiPlBoQvAuPhAgRf@eVBkUG{KQmL[wNm@}KsAkRi@qFOqA}@kHwAqJwAuIqByKqBgKoFaUgDoLeDuK_EeKuDyImEsJwDyHgE_IoE_IwEqH}FoIwPkTyb@sh@iRuT{a@{f@w~@yfAiDuDmHaIuGyFqFkEgK}HsJyGwJyFgJ{EuS}IiSqHwCw@_PiEwH}AwHqAiJgAgJ_AoJq@_J_@aKO}FCwGBeN\\wKd@wK`AmMtAgMhB_LzBaLhCmL|CkLhD{x@lV}C~@yLhC{LtB}WrC{G`@{R|@cLB{LE}FMuMo@u]wBa\\{Cse@{Dej@qEeZaDeZuD{k@yHik@yHga@iGeVqD_VoEe\\eGw[{Ii]_MkT{JyMqGySuLcRcM{l@sf@}NcQkNwPsMuP{LcRyKeRmUsf@__@udAaXgw@qKoWwA}CuAsC{A}CsFkKmHsMcI{M{NoTkPsSmPaR{OwO_MuKkLcJ{QqM{OyJsPyIgPcIcLuEuKiEmKkDkKwC}a@{JgQqCgQ{B_K}@kJs@iIg@gIYsIQ}HIoPD_RNkf@fAuq@pBiy@~C}WbAsKVqKHkMGgSu@oJ]_GSUAqIe@kPgBwHeAgOiC_a@gJ}UqGeIwCaDmAqNsFsYuN{TqMwQaLuFwDuFeEoFgEuF_F}BwB_HiG_HwGyB_C}Zq_@sWk^eGoIkEiGkJwMkVc\\aGqHwI{IiMwM}SoR}UiQoRwLyLqHuFoDiRaJ_VqLyToKoRyJaTgLq[wOiYgNoQoImX{Mo]kQ_IiE}HuE_N_JuN_L{SyRcMoMgL}NwZac@a\\ke@yUo]ih@sq@sp@}}@{q@}_Aq\\si@_NcWiLmTeYwn@}r@a_Bss@s`BkGwNgd@idAwa@g~@i]ev@eVej@ubA_{Bsm@_tAiGeNuDyIkKeW}LyYiJgW_HgTmHeUcHyWaGmYqFuZSiAo@gDqFej@]eEi@}Ia@}IOoEkAip@GcYTmZrDw`AvAyXpA_YhAs[^yZSiXm@iXiAmYcC_ZkHul@il@irEmCyXeBi[k@c_@Qk_@Jub@f@{f@N_d@a@k_@w@gViBsWsC{Y}DmYgEiUqFwToMcc@uLi[kQo^{JkPqJoNuW_\\uVkWaEoDiIkHgXiSua@}ZuGyEwOsKgSgPoRcSkNuPeZ}e@_LySuKsTmSik@_DyIkVmu@uA}D}JwXoAgDiGiPcHcO}KeSaK{O}G{J}TuX_KiKcJ{ImTkQiUyOoU}Mqa@aVsRwMiMqIiHiF_CgBiB{AaTiRgHkIiHwIcOiP}\\a_@mQwR_A_AwFqGe\\c^ckAspAaHwHam@qo@aCgCit@sx@wBaCwPeRuS{UWYOk@g@oAK_@Ic@Eg@Ae@?g@Fe@BUBOJe@J]Na@P[RYPWTYRQVSh@a@j@[n@Yl@WnBo@lEoApDu@rDq@tFc@`EQ|DC~DPfE\\hFn@pFnA`FpA`FbBlCpArC`BvBfBzBxCpAnCfAfDp@dET|CBpDI`Bc@dE_@lBe@|Au@rBw@nAeB~BgBjByA`AwAx@mBd@oBT}Gb@mIVsITuIDij@Cuz@fCsc@MqiAm@uw@yA{sDYmoAq@m}@U}xAo@}sBgAweVoIwg@b@}c@xAwe@zBki@pDqw@hIsn@jIcx@bOidAbXmq@`S}m@|Sub@`PeWdKo^pQk[dQcm@nZy`@`U}s@pf@c^pYmv@tm@w]~Zu_@n^c_CdlCq_@rb@yXdXec@n`@kX~Vo`@x\\o`@pZq{@dj@u\\xRyUjN_WfNyVnKawAfm@ub@jPwf@nNamAbZokA`SqZpFm_@lDyeA|Ik}@vDqa@dAimAPmf@m@ymAsFu{AsOunBu\\y|A{a@szAyi@om@gXeYkMsn@e[wf@mVig@oXiqAiv@wd@eZcrAu}@ke@y^wuF}lEaReOwz@wm@syEw|Cem@ac@ymFumDstFirDyqEoqCiv@ce@uZ{RaVcQgWyRwg@{b@}SeRiZwZkTcWuVaYy`ByvBa`A_nAc]ia@aX}ZgT_Umz@}z@q~@gx@c|A_hAex@ee@{U_N}b@kTcjA_i@yh@mSacAe]k_@qLk`AgVmcA{Sel@cN{s@uP}zAs]mQcEgw@_Q}UoFeUsEqgAwT_^cEad@cEub@yBm{@uB_p@^uuAxGsaBhHubArF_w@hDkd@`C{l@zD_v@bEcVlA_i@nC}eApF_v@~Bs^~@gn@h@m`@w@su@iC{c@u@ql@?ye@xAyi@jDob@dCug@jFk[tEwY`Fgh@dKsh@fM}nDb`A_w@lSgrAt[wQxEiLeAgb@hGa]|EcKzAkWdEuOnBwJpAeNvBo]rDq`@`EyD`@qM~C_Pjc@i\\l}@oDlKsCzIkEnMmBjHcBvI_AzG{@`IdAtHgIq@gHA_FNuEl@oDz@sEvAyE`CiE~BaEfBoFnBoEtAoZpH{LtCsFtAaHdBcc@bL}VpGwHfBwQnEyLxCcE`AaCj@cFjA__@bJo^zIqD|@yM~CqFvAk_@dJ}GbBaUtFaYbHmJ~BkXzGcW|FuGzAaIhBsRpEuPnDyJ|BgBb@yIvBsFdFqD`Ag@NsInBeBl@_CnAcCrBqErFiFvGqOlSiH|JwBnCmB~ByNtRqOfS}BzCuBnCgAzAuH|Js@|@yC`EcC`DuPfUmBjCmB_CuLwNiAuAxAeBp@_A"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 33.202857,
+        "min_lon": -117.612001,
+        "max_lat": 33.493708,
+        "max_lon": -117.135112,
+        "time": 3045.263,
+        "length": 82.011,
+        "cost": 3279.886
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

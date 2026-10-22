@@ -1,0 +1,469 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 34.0522,
+        "lon": -118.2437
+      },
+      {
+        "lat": 35.3733,
+        "lon": -119.0187
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 34.0522,
+          "lon": -118.2437,
+          "side_of_street": "left",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 35.3733,
+          "lon": -119.0187,
+          "side_of_street": "left",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 3,
+              "instruction": "Drive northwest on West 1st Street.",
+              "verbal_succinct_transition_instruction": "Drive northwest.",
+              "verbal_pre_transition_instruction": "Drive northwest on West 1st Street.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "West 1st Street"
+              ],
+              "bearing_after": 310,
+              "time": 60.736,
+              "length": 0.605,
+              "cost": 119.299,
+              "begin_shape_index": 0,
+              "end_shape_index": 29,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto North Grand Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto North Grand Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto North Grand Avenue.",
+              "verbal_post_transition_instruction": "Continue for 600 meters.",
+              "street_names": [
+                "North Grand Avenue"
+              ],
+              "bearing_before": 307,
+              "bearing_after": 30,
+              "time": 46.431,
+              "length": 0.614,
+              "cost": 81.543,
+              "begin_shape_index": 29,
+              "end_shape_index": 57,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 19,
+              "instruction": "Turn left to take the I 110/CA 110 ramp toward Hollywood Freeway North.",
+              "verbal_transition_alert_instruction": "Turn left to take the Interstate 1 10 ramp.",
+              "verbal_pre_transition_instruction": "Turn left to take the Interstate 1 10, California 1 10 ramp toward Hollywood Freeway North. Then Keep right to take Interstate 1 10.",
+              "bearing_before": 41,
+              "bearing_after": 313,
+              "time": 6.144,
+              "length": 0.023,
+              "cost": 38.382,
+              "begin_shape_index": 57,
+              "end_shape_index": 59,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 110",
+                    "consecutive_count": 1
+                  },
+                  {
+                    "text": "CA 110",
+                    "consecutive_count": 1
+                  },
+                  {
+                    "text": "US 101 North"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Hollywood Freeway North"
+                  }
+                ]
+              },
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to take I 110/CA 110.",
+              "verbal_transition_alert_instruction": "Keep right to take Interstate 1 10.",
+              "verbal_pre_transition_instruction": "Keep right to take Interstate 1 10, California 1 10.",
+              "street_names": [
+                "US 99 Hist"
+              ],
+              "bearing_before": 313,
+              "bearing_after": 302,
+              "time": 13.303,
+              "length": 0.309,
+              "cost": 20.556,
+              "begin_shape_index": 59,
+              "end_shape_index": 73,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 110",
+                    "consecutive_count": 1
+                  },
+                  {
+                    "text": "CA 110",
+                    "consecutive_count": 1
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to take CA 110 North toward Arroyo Seco Parkway/Pasadena.",
+              "verbal_transition_alert_instruction": "Keep right to take California 1 10 North.",
+              "verbal_pre_transition_instruction": "Keep right to take California 1 10 North toward Arroyo Seco Parkway, Pasadena.",
+              "verbal_post_transition_instruction": "Continue for 3 kilometers.",
+              "street_names": [
+                "CA 110 North",
+                "US 99 Hist",
+                "Arroyo Seco Parkway"
+              ],
+              "bearing_before": 326,
+              "bearing_after": 335,
+              "time": 124.943,
+              "length": 2.849,
+              "cost": 178.727,
+              "begin_shape_index": 73,
+              "end_shape_index": 128,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 110 North",
+                    "consecutive_count": 1
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Arroyo Seco Parkway"
+                  },
+                  {
+                    "text": "Pasadena"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 21,
+              "instruction": "Take the I 5 North exit on the left.",
+              "verbal_transition_alert_instruction": "Take the Interstate 5 North exit on the left.",
+              "verbal_pre_transition_instruction": "Take the Interstate 5 North exit on the left.",
+              "bearing_before": 42,
+              "bearing_after": 26,
+              "time": 20.594,
+              "length": 0.479,
+              "cost": 23.607,
+              "begin_shape_index": 128,
+              "end_shape_index": 143,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 5 North",
+                    "consecutive_count": 2
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take I 5 North.",
+              "verbal_transition_alert_instruction": "Keep left to take Interstate 5 North.",
+              "verbal_pre_transition_instruction": "Keep left to take Interstate 5 North.",
+              "verbal_post_transition_instruction": "Continue for 33 kilometers.",
+              "street_names": [
+                "I 5 North",
+                "Golden State Freeway",
+                "Route 5"
+              ],
+              "bearing_before": 351,
+              "bearing_after": 341,
+              "time": 1147.625,
+              "length": 33.271,
+              "cost": 1371.054,
+              "begin_shape_index": 143,
+              "end_shape_index": 582,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 5 North",
+                    "consecutive_count": 2
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on I 5 North/Golden State Freeway/Route 5.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Interstate 5 North.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Interstate 5 North, Golden State Freeway.",
+              "verbal_post_transition_instruction": "Continue for 4 kilometers.",
+              "street_names": [
+                "I 5 North",
+                "Golden State Freeway",
+                "Route 5"
+              ],
+              "bearing_before": 319,
+              "bearing_after": 321,
+              "time": 124.286,
+              "length": 3.623,
+              "cost": 134.817,
+              "begin_shape_index": 582,
+              "end_shape_index": 602,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on I 5 North/Golden State Freeway/Route 5.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Interstate 5 North.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Interstate 5 North, Golden State Freeway.",
+              "verbal_post_transition_instruction": "Continue for 61 kilometers.",
+              "street_names": [
+                "I 5 North",
+                "Golden State Freeway",
+                "Route 5"
+              ],
+              "bearing_before": 328,
+              "bearing_after": 329,
+              "time": 2077.995,
+              "length": 60.594,
+              "cost": 1947.326,
+              "begin_shape_index": 602,
+              "end_shape_index": 1223,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to stay on I 5 North/Golden State Freeway/Route 5.",
+              "verbal_transition_alert_instruction": "Keep left to stay on Interstate 5 North.",
+              "verbal_pre_transition_instruction": "Keep left to stay on Interstate 5 North, Golden State Freeway.",
+              "verbal_post_transition_instruction": "Continue for 36 kilometers.",
+              "street_names": [
+                "I 5 North",
+                "Golden State Freeway",
+                "Route 5"
+              ],
+              "bearing_before": 358,
+              "bearing_after": 360,
+              "time": 1211.976,
+              "length": 35.881,
+              "cost": 1076.539,
+              "begin_shape_index": 1223,
+              "end_shape_index": 1498,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 24,
+              "instruction": "Keep left to take CA 99 North/US 99 Hist/Golden State Highway.",
+              "verbal_transition_alert_instruction": "Keep left to take California 99 North.",
+              "verbal_pre_transition_instruction": "Keep left to take California 99 North, U.S. 99 Hist.",
+              "verbal_post_transition_instruction": "Continue for 41 kilometers.",
+              "street_names": [
+                "CA 99 North",
+                "US 99 Hist",
+                "Golden State Highway"
+              ],
+              "bearing_before": 346,
+              "bearing_after": 345,
+              "time": 1327.349,
+              "length": 40.824,
+              "cost": 1312.439,
+              "begin_shape_index": 1498,
+              "end_shape_index": 1603,
+              "highway": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 25 toward California Avenue.",
+              "verbal_transition_alert_instruction": "Take exit 25.",
+              "verbal_pre_transition_instruction": "Take exit 25 toward California Avenue.",
+              "bearing_before": 340,
+              "bearing_after": 347,
+              "time": 17.098,
+              "length": 0.398,
+              "cost": 20.895,
+              "begin_shape_index": 1603,
+              "end_shape_index": 1614,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "25"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "California Avenue"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto California Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto California Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto California Avenue.",
+              "verbal_post_transition_instruction": "Continue for 2 kilometers.",
+              "street_names": [
+                "California Avenue"
+              ],
+              "bearing_before": 354,
+              "bearing_after": 84,
+              "time": 131.136,
+              "length": 1.947,
+              "cost": 248.386,
+              "begin_shape_index": 1614,
+              "end_shape_index": 1646,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Chester Avenue.",
+              "verbal_transition_alert_instruction": "Turn left onto Chester Avenue.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Chester Avenue.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "Chester Avenue"
+              ],
+              "bearing_before": 90,
+              "bearing_after": 0,
+              "time": 45.262,
+              "length": 0.541,
+              "cost": 135.065,
+              "begin_shape_index": 1646,
+              "end_shape_index": 1660,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Truxtun Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto Truxtun Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Turn right onto Truxtun Avenue. Then Your destination will be on the left.",
+              "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+              "street_names": [
+                "Truxtun Avenue"
+              ],
+              "bearing_before": 1,
+              "bearing_after": 90,
+              "time": 2.348,
+              "length": 0.006,
+              "cost": 16.039,
+              "begin_shape_index": 1660,
+              "end_shape_index": 1661,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 6,
+              "instruction": "Your destination is on the left.",
+              "verbal_transition_alert_instruction": "Your destination will be on the left.",
+              "verbal_pre_transition_instruction": "Your destination is on the left.",
+              "bearing_before": 90,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1661,
+              "end_shape_index": 1661,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 34.052335,
+            "min_lon": -119.040594,
+            "max_lat": 35.373244,
+            "max_lon": -118.227212,
+            "time": 6357.232,
+            "length": 181.967,
+            "cost": 6724.682
+          },
+          "shape": "}mk}_Avm_p`F}P~XwDhGcGjKs@nAkDrFwClFo@lA_Qb[wLxTwCtEuCpFeTt_@}KvRoC|EkDlGwBfEmDvGQ^eE|HaMpUy@|AaDbGkCbFw@|A}GhNcDvFyMnU{@vA{CvFcGuDyAcAyXeQmMsI}IoG}@m@oJwHkBiByJoKgDmE_BmBoAsA{D{EmUoXoBuBeNgOaE{DyDwDwMoN_FqE}IeIyEgF}CeD{TqUcJaLsT}U_BaBiDqDaDpEyB|CcBpAu@jBaHzj@iCfPgBhHyB~GqDhJ}ExIeDbFqE|F}FdGkBrDa[dWoEhDgCb@_ZrR_GzCqEzAmEv@oEPiEEwDe@eEeAyDeBuDoBeXkQ}QeLoFuEqFmH}FoKkGgM{GuPmQca@wRqzA{BoPaCoNmCgMsDiO_D}JmNm`@{f@gmAmfBymEmHmO{[cm@a[{j@wL}NcIkKaMeJyIeFqO}FiOqDcOyBsz@aPgP_EaPgGwQ_JqUoO{TqRaeBs~AuGgGwg@ij@wNuOuw@uaAo^oe@yNiQ{Zk`@{PmTeo@az@qEcF}IoE{EqB{FcBqFc@yGQmMz@aKrB}IlCud@vTmNtJuG~CaEjAyGx@}kAzLaVrCgQtFcQrKyNtL{OhPcKrMsG~Ju`AfeBoC|EiLrSoIlPqClFqy@`cB_IlZmk@vgAqd@h|@_PhX}_@hl@w[`c@akBpkBokFbkFoGxGwOrNsS~RgpC~lCuR`QkMvKiPfMeIhFim@v^_l@b]_ShLuRxMoR~N}\\f[aZt[}RhWuQlXa`@xp@iL`Rkp@reAoEdHkQzY{SnZeS~Ws\\fi@sRt^{IlQ}Pva@uInSe_B~_E}e@~lAq[fv@em@hnA}y@hyAc\\hi@kTj^iXdb@wOnSySpTgP`NaP~KeQ|JgUrKiPdHcc@bQk[`NaiA~f@}eC`gAqaA`d@{mAve@}UdIq]xJ_b@xKa_@hIs]jHcc@jIkdBjYcbEtv@}kExy@smDtp@_`E|y@ku@pSksAf_@gR`FmSbEa|@dLk|@tJ{rAjPubDxk@iPnCcw@lNaZpHmDdA_PbFoY`MyZ|O_\\`T{T~S}bAxoAuD~GaRza@cIjT}GjT}HzYc@jBsLff@aJn_@eHzXiGjTcG`SaHtReHpRiGfNgMj\\eC`GwEpIgLpS{OdVwQzVgTjW{RvSkXhV_QrNmRlNqS|LwVvNi`@tQirA~n@ci@fW_i@pWeVtLgNvGwKvFa\\~Ro]zVkKtIgKjJuLtLiKjL_MlNkM~Pik@xz@_KjOyyBngDkN~ScTj\\_FtHkFzHmoAxmBkuA~sBcKlOsM`PsLpNkXxW{B`B_OfK_UhMuSdJyIlCwInCa\\dHkTdDwhAhR{VhFmUnGoLhEwKxEkThL}NtJ}PhNkCbCsCdCy@bAuTnVwGnIsDtF{JdP{NpX{I|Pgb@nx@wr@fqAkQb[{Sx\\cYx_@{Yt\\i_@b]iMpKqMrJcNnIau@vc@eOvK{H~F_RxOsTtSwNjOcT|UiTtZsRpYiRl]kT|d@ib@vaAk]bw@kN|XyUr`@}RvZku@niAs`@tl@wZbe@oYbc@iQhWm|@rfAyXp]iv@zcAcVt[iYdf@gFpIia@|r@oFpJeH`NgJhRqSrb@iGhOy[zw@qTbh@iM|WcHxMuJzQor@hjAoUn_@iNbUqUn\\yJzL}MjOwJhJsQ|OsWbSgRfLcRbKg{@td@y`Ajh@yOpJyaCxvAuc@`XemAnt@oM~Hae@zXuc@hYwXhSiPvLc_@|[gMzKeSrRwHfIuMxMuLxMeKjMsUzXsTxXck@xs@sBpCcb@zh@muBfkC}Wb\\yoBteCyX|Zu]z\\w`@n^wG~FyHbHmXfVee@p`@mNtL}MzLiQ|R}RlWwNhUcSpb@eNf_@aKp_@{Hz`@cFn`@aDdb@oA``@_DnsAu@vb@_GnkC{GzzCaEnk@mGhf@{CpOgFfTgKd]_GrOqGfOyDpHoEpIkIrNuIlMoRnWcw@pdAoa@lj@wKzPeItN{ItQ_ElJiG`PiF`PoEnOkEbRqEhU_E`XaEba@aBxVi@fTCbXNnT`D`iBDnIjA|x@r@bc@zExkC|@|k@Vhh@m@b_@cBf^kCv\\aEl\\oGn^sH`\\mKl^aMx]qg@xrAgHlRkbBjpEkL~_@iIh]_Jfc@wEl]gHfq@cCfXaHbw@}O|gBwTjhCqLnsAsIb}@cHtp@mI`v@_Jti@qNhg@yEpO}GnPgVrd@_QtW}u@j_Auu@z_Aem@dt@_Vp[aTdX}Zt_@uUpUej@zl@iNbO}NpOyQdSgGpG{vC~bDmWhXcmBpvByVfVa`@v_@yT|U_a@pc@}_BbfBomC`uCkmAbrAuRnT_zCpcD_oBfxBwuAfzAiLjMilDhvDel@`o@{Zf[sSpQ{PxM}PhM{UnOeTtNmWlOoV|MmxA|w@uYzOkm@v\\um@nb@oU|P_VzTkIhI_RdSaZh\\goA`uA_f@`h@oKhLkMfMeTzRgOfMgTbOiz@pj@ol@r_@eXjPiWlR{\\dXce@bd@yKxLsUlW_jAbnAaSbUy]r_@m]n_@oc@jc@m[nUiWjOcE`C{F~Cs_Bjy@gtAlq@g_@zT}OlKkQtNeXnVmRrRkThXiN|RcU`_@y|BjoEsBzD{Xpf@oPrVeQdU{[p]sVdVk{BrzBsa@pa@}fIhdI}fFddF}JfKiPpQswBprBiCbCoQtPa{BxsBqf@`d@}fBhcBmt@hq@au@vo@uyCnrBy`B|eA}OhK_n@db@{DjCaq@rc@uZvRoNpJe\\bTcf@h`@ya@~^ue@hg@eZf^}QtV{^xi@sJpPkMrTgJdQyb@z|@qTzd@crAvoColAzcCqMdWqIhP}IfOqNrSeStX_SnTuSjS_PjNuPfNwG~EmWbQuWbOsb@tRshAzc@kXvK_fBbq@ooAvf@iOxHmNfIwM|HwMvK_L`I{L`LmMhLgYtX{KfM{JfMgIvKgJnN}JlOiIhNykAxrBmIbOmK~RcJjQ{HbPgHbP{HvQgb@liAuqBpiF}IbVeJ~Y{GdVsG`X}FxYwEbYuDbZsCrW{BpVyTrcDgBrToCzV}CzUgDbUqFtXkGxXkKl^_JxW_JxVaNjZuNdZw]|j@{b@ri@of@jd@kd@t`@a]~\\aVbZmSjYiRl[{Pz[aPr^iNn_@kU~v@saCvsIov@llCkq@raCsMv_@oNn\\gTjb@aVb^qQtWyxFppGm^jZoi@p]ea@fTo]|NeOxEcK`DkiAvTweAnW{`@|I_sAj_@}d@jO_c@jSkdGjdEqsHpeEa}@jg@{xH~aEePxFurExxAmhBdk@qd@hMeaBxf@}b@bLcb@lJk{@zM}x@pL_hH`gAevBzZarBlZkn@nMuc@|L}p@dUmbD~gAg|@jZynDrnAasBfr@agBvn@oWtIyUnHuV`H}V|GqnA|\\_YhIuZ|IcYdJkZlKoZdLunCriA}k@|VmwErqB}o@tXglApg@_{Ado@_HtC{O`HwxA|m@}WdLsSvIiNtG}MnHcLlH{LrIcLvIoMxKsMnLaMrLcHdIm[v^_`CptCceGrsHui@|s@qQbWkPxV}NpViNfWaNxX}MxYg`@rz@eKlVosEp{KcXto@wTzh@cMbYeM|ViMzTsMrSwOnTkPpRiOtR{KhJmApAaYzS}QdNmgEzyCoQhMcSpMuQ~JsRdJuVxKgTzHyTdH}VxGuX~FkVdEmV~C{UnBqWrAsWt@oYUuT@sWgAaXsBqWqC}pC}Z}WyCeXeBqWu@qWOoXZiXrAeX~BuWfDqWzEeWdGsWtHyu@hUsVlG_WdFmW`EgT`CmWbBsWx@_WDsW_@{WqA}WiCkUsCw~NmrB_d@iE{d@aC_e@gAsb@?_e@jAmc@zBkc@lEm_@~E{b@dIgb@fK{a@xL{`@nNa^lOk]zPe\\tQc[dSwj@f_@uzB|{AojDl_Cwa@zXanEhyCsZ~SwvAb`AgYlP_YvMc\\jM_]|Kmj@fQiY~JkXnLoXtMiUbN{RvMuWjTsLhKaW~UsShXedArrAwUxXcU|TcU|QaYdTkkCfeBq{CtuB{i@j\\qwG~vDsVvPuUtSgTvTsRnWcPbYgQd`@oYjx@oQzd@sMbY_QnYecAzyAcUbXcUbV_WnT}UlQqWbNmmTddIkXjMaWlOeVxQ}UbTmSbUwQbWqUx^qVd]wQzRoPdOkS|Ogq@z`@kUvOcUvQqTnUoQlUwPjZkOlVkNdSsNnQsP~QyrCzbCoYdXuXxXc|Ap_BiRlTiRnV_ObUoNbVigA~oBoSb\\qRnY_TnX}UlXgWnVuUvR_iAt{@iWlPiWlM}X`KwY`I}ZjFw^jGkXvGsU`H}U`JeVjMuUvOo`CrfBmSbQiRvR_OlRcPxV_LxSgLbWqJbWue@ntAsMp^cPna@kOb]gGvL}MnWuNlVec@jv@kr@bpAm`@to@{Sx^iCpEkWx]gWtZw_@|\\eb@|Xq]tR}WjMmcAl_@}qAxj@am@`Zg`@hTeDvBmSxM}V`Q_SfSof@xl@u[bg@qYrh@qWzo@ySvq@meBtuGyK|^oMf^mHpQyLjVoJzQqK|Q}QnXmQ|UmNzOqQ`R{OlNaQtNcz@|o@mz@jp@cY`VcMfL{KfLmXr[uZ`c@iqDbyFcPbWgRlWmr@to@uYzUuZ|Qic@nUwe@rPiHlBgd@lLaq@zJgZfCaQ`@wgAhCyv@YcYw@azLkm@ih@yB_n@mAi`AhEcfD~b@qo@hK}l@jDq^z@e^Ig|C`@m`@^qo@~Dyu@hMyl@~Omj@lTaa@`Qia@jQo{HhnDerBt`AgrBx|@s[|OmQrJ{XdR}VnQaR`OuSvQk]n]sXn\\{g@~q@__@zp@iVne@gYlk@aSd\\eRxWqSvVuXdZySnQmTnQmW~QcUxPql@tc@qWxTgQrQq]na@}T|ZkPlYwMvVmPd_@}Ovb@_Ndb@uKbe@kIlc@aF~ZmCbVyCl^{Bt`@qAv^m@jl@kAp`AeBfu@{Clh@{Fff@qDfVeFdXeKde@mLnb@iPnd@cKbVmbDnmHeKbTqKzRsQjZgThZySvWcV~UyZvXg^vYqPdKmQdI_`@vPm[|Ku{MrmEm\\vKem@lQec@pGgj@~Ecg@dBi`CgAeEA{T?oH`@iWtA{m@jGul@zLol@xQar@xZyr@jf@on@vk@kf@pl@uYxd@ij@~`Ag_@|p@iPbZcQpWgH|JmZb]yg@te@e^hVaW|Nud@dUwt@h\\we@dUwe@fWih@t[}OfNgVnViTtUuR|VeRxWeSl[}MnYmPz`@aLh\\gKr]eJb^{G~[}Fn\\aF~Z{J~l@mHhb@uG|^_Hh\\iIr[uIxX{IpUmQfc@iTna@_Tn]_Zj`@}VlWeYvWcX|Ti_@|Ui^rQm\\hOct@fWc]dOa_@lSu]`V_UpQqhL~vJ_TtP_T`OmT~MkU`MqV|KquMv~FaXxKkYnKgZrI}[fIqpCbn@{YxGsYzHmYnIyXlIqXxI}lB`o@iv@|VgiBlm@c^vLujEdxAgW`IiZlHeYjFkXhDgZ`C}XtAwWr@c{P|j@mi@tAgg@t@wd@Hed@Smf@_Acf@uAel@aDuf@kDwg@uEeb^urDih@kEuf@aD}n@uCqx@kByOIcf@?qe@HaaIjFkx@nA{gADsXj@sX~@yWtAqU~B_UnCs`@zFo_@lHs`@vJa`@vL}^jN}[bNka@nRm}CxxAkXtMmg@dWyZbQua@vUo_@xUe\\xTi]lV{]xXor@xk@w`@n]_\\vZc\\z[_\\j\\yZd]s[d_@_Zx^sXz^o\\zd@yZpd@qXdc@_Wza@iXff@_Wte@ubL~yTmcEnfIq]|o@q]fn@}^hm@}[pf@qnDvfFoS~Y_RnZ}Pn\\yOb\\cNd\\{Mz^wLn_@qJn^mIp`@qGn_@mFz`@yDfe@_C~_@yZjjFcf@f_Hmb@twGoDfj@aSpvCk[~bFsz@vyNcCd`@yDz`@{Ed]uFn[oIn_@yJd]yJnYaMxYmNbYiPxXeQxVkR~V_uDzrEm_InvJ_VhY}SnTeUvRqTlPgT`NqUlLyUvJsXtIcY`HmY`F{XtDaXjBgYdAsX?k_@aA_YeDqTkE}[aHs[kK{XaLcYmNc[cSkYmU}VcVmXmYiLwLe}CkcD{j@km@qpFeyFkcGqjGokCqrCy~D{hEwTeUmQwOqRaNoRcLmQaJcSuH{SaHqUaFgWuDsVuBaXi@{XHwW~A{XdEgXfGiWhIqWhKaRlJwUpL}lGhcEcpDfaCwo@pc@ovAjaAscCz_BytNnnJum@xa@ml@zb@cl@fe@if@zb@y`@x_@wd@rd@a`NtiNo{@l|@av@tv@kg@vh@yWpYaj@hq@m\\tc@c`@lj@ki@nz@uk@||@w^th@yXrZqZ`Ym\\|Wk_@`Vob@zSelAzc@ci@xSy^xOu^|SaZnT{TlSwSnUyT|XgQjX_LvS{K~Twn@h~Acv@hnBcx@~qBmb@deA}Wfq@}]r|@eXzn@u\\vo@skArqByz@twA_s@|lA{n@jfAum@|bAuMlQqNbQ}NrPoP|OmSfQ_UfQ_VrOiSjLa\\hOwZbLgUzGsWnGuQ~CuVxD{T`C}{@zIq`ApJ{}AvOsgC`WmZtBqd@jBof@U_]aBmpCiQoh@{Cqb@oAiTQy[fAgYxBmd@`Gu\\dF__@pEa[nEq\\jDi\\rCeVtAkVdAin@p@ii@i@}r@aDgs@uG{c@kGyf@wJkoAmZo}Ag_@}_@uGe\\aF}\\_Ca^Kg`@^m\\tA{[`C_[tEu\\`Ie\\vJw]`NkY`NcYbQ{fKpiG}}At_Am}@li@iV`O{f@`X_\\dPqEvBoGrCyGjC_LfE}NzEcNtDsNrE_OjE_NjDqOrD{NdDeyAx[}_Q|tD}aCzg@}lE``Am_JdnB}{Kr`Cqq@bPytJdpB}pI`jBkpE|dAchFfiAy_@`Ia{EdeA{{Czp@acDlr@cnBx`@g{EzeAik@vLgt@pOm_D|r@kvUheFyo[|zGq}^`eIksGjxAklD`q@kv{@liRcaDxp@ezBpf@cfm@`uM{pEp_Aea@vI}cGxsAeeRz|DcaJhqBgaEn|@clDvs@ikDbx@whMnmCqaPvoDmbAfTe_E`|@ehDfu@su@bN_b@lHgb@rF{U|Co|Ex^oq]`}CsaD`XaaCfT{{El_@obC|T{sDh\\sZbCueCjTsf_@lcDc}J|{@sz@hJky@lKexBt^w_Cla@shXnqE}pQz|Ck~@`O{mF|_A{yB`]otCff@_xDvl@}fDrq@_dHzdAeWhEwq@hLuuFl_AclC|c@ik@`KyaB~YmnArTawGngAmwChg@ooTftDid@`Jyp@~Ko[lF{vAbVqp@dK}`Frw@wyDjp@a}Ft_A_MtB{}GbjAiRhCiEl@qe@nEmCR_YxAua@`AeRCgOAyEAktInBa~C@eV?wvDaAmdEM_aACy`Bo@cgFjAwSFqt@i@ib@[sr@KgyASqnFkBe`@pAa[lBgVfBaVlCw_@vFqSxCmTjD{T~E_MjDaIvBwN|E_cAjRuHbAgGZeG?gG[oBU{yA{PiMGiABkADgCRWwGAWe@kMSqKMwO?_Q?_I@sG?cIEoEDsSZcpBZ{rC\\wsCXcgC?}GBqxAjAq]p@y^ZkvA@iFLavBDw{@@aIJe}@?uE?gFD__@Dqd@Gwb@E{YAqKmHAaGAgA?uAAaLAeB@qJAkG?eGAiFqAcG_@seDS_o@a@{DC?uC"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 34.052335,
+        "min_lon": -119.040594,
+        "max_lat": 35.373244,
+        "max_lon": -118.227212,
+        "time": 6357.232,
+        "length": 181.967,
+        "cost": 6724.682
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

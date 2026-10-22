@@ -1,0 +1,48 @@
+{
+  "baseCommit": "0ffd6c8eeb2b78a68e66c4f704cd46c7b86e309c",
+  "workingTree": "Uncommitted v2/v3 app refinement; no deployment or commit this session",
+  "artifact": {
+    "path": "src/server/data/coarse-grid-v3.json",
+    "bytes": 4673811,
+    "sha256": "8cfa5616b52138c16d5a8cb8f84fd1ee4345f7e4026e88c104365cad25c523e0",
+    "repeatSha256": "8cfa5616b52138c16d5a8cb8f84fd1ee4345f7e4026e88c104365cad25c523e0"
+  },
+  "baseArtifactSha256": "76d3216310c8c776eab3385b077a1ff6ab85c1f72f542e9a3ff4c7fee852c063",
+  "roadSourceSha256": "66a0c7b438e92fd124822cc5921cfa11042f48c294ade5e0f03f2c6640fd0248",
+  "priorArtifactsAndRoadAnchorsUnchanged": true,
+  "sourceSnapshots": {
+    "AGENTS.md": "91c53d78456268ede19dde9369f0be3573629ef399c3cb7891a63f409b6aa739",
+    "src/server/coarse-grid.ts": "c37189c9e34343cf0417f2cf24986dcf3c3b194bc65b7bb1d0851ca522d03cad",
+    "src/server/coarse-geography.ts": "bcd21d92a63f1efecc4b4aeca74751d07dc570a6ddb531241498050d0d8db84b",
+    "src/server/coarse-data.server.ts": "d4c0e67192b4203c976c627925af56d6a2981de3f0d4beaff35fe33f86f110bf",
+    "src/server/coarse-estimate.server.ts": "b6424a384e5fa24bc83dbb38e6c6841c6b302d1c289c1a752401362e3a2c1d6c",
+    "src/server/coarse-estimate.test.ts": "652c3c11906027c95bc340e1a911bc7720d7c2833a22406255d891282aef509b",
+    "scripts/build-coarse-grid-v3.py": "df0e59c7fe56761ad990a39b833e4447fe1dfba1ab288fce6606a5f47e6437cf",
+    "scripts/build-coarse-grid-v2.py": "e4cddabf99d237b0a90f18798b0b7da4eea49610541caada62aa83c808e2697e",
+    "scripts/coarse_data_test.py": "bea9786bf319f8afde6b57edf91dbf38da299da29e10d0a372b4c2eeeaa2eb85",
+    "scripts/compare-coarse-candidate.ts": "de8e2ef1d0894ed2b182dbd8fdec86c328ad124a9e44a3711f717fe8a8e9f984",
+    "scripts/verify-coarse.ts": "c60fff06522112380c6e3fb8161fbc1f68bd27c2485629d83c83c750957993e0",
+    "scripts/verify-coarse-vercel.mjs": "3aca97ec5d3e0a84b259cb9e3314409a07d64b7fb451ce0bfb30f7c0ba1828d3",
+    "package.json": "d797b308ae57dc22afc59f172aea6a0f9a121fcf23eab3dfa69ae8467d756a81"
+  },
+  "sourceBindingScope": "Observational snapshot identifying this result, not a freeze on normal future product changes. Preserve the evidence records.",
+  "prototypes": [
+    {
+      "name": "land-only attachment",
+      "artifactLocalOnly": "data/coarse-quality/grid-v3a.json",
+      "artifactSha256": "ee0f806ae2bb064e4680e38fa16cbb5bb1e94bd93ab9c585ee0a23c9488796c0",
+      "rejectedBecause": "New York one reached cell, Key West two; lacked retained-road geometry access"
+    },
+    {
+      "name": "greedy attachment",
+      "artifactLocalOnly": "data/coarse-quality/grid-v3c.json",
+      "artifactSha256": "8cfa5616b52138c16d5a8cb8f84fd1ee4345f7e4026e88c104365cad25c523e0",
+      "rejectedBecause": "New York restored, Key West still picked a dead-end land patch; final kernel seeds all supported fallbacks"
+    }
+  ],
+  "newRoutingRequests": {
+    "hosted": 0,
+    "localReference": 0
+  },
+  "dataRuntime": "Only active bundled v3 grid, no worker/database/raw sources needed for estimation. Regeneration reads retained v2 and pinned ignored Natural Earth roads."
+}

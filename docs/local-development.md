@@ -36,16 +36,63 @@ Use `npm run db:generate` to generate a migration from `src/db/schema.ts`, revie
 ## Coarse estimator checks
 
 ```sh
+npm run test:coarse-data
 npm run routing:verify:coarse
 npm run build:vercel
 npm run check:coarse:vercel
 ```
 
-The first command runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
+The geometry command runs six small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
+
+## Coarse travel-cost comparison
+
+The active v3 candidate can be compared against unchanged v2 and both saved sets without routing requests:
+
+```sh
+npm run routing:compare:coarse:candidate
+```
+
+An optional artifact path follows `--`. Expected v3: original eleven point costs unchanged; on the same 23 previously finite regional cases, two improve, none regress and mean difference changes 37.7296m → 36.8934m. The formerly missing 24th case is reported separately (145.9848m model / 61.2680m reference). No destination is unshaded. V3 point access uses the same geography-checked direct/retained-road fallback attachments as departure, taking the cheapest supported arrival. These are regression diagnostics, not national accuracy validation. [V3 evidence](evidence/coarse-v3-2026-10-22/README.md).
+
+The broader unchanged-v2 validation is now saved: 24 routes from twelve origins, 23 paired finite arrivals and one unreached shore destination. Replay and inspect it **without any network/service/database**:
+
+```sh
+npm run routing:compare:coarse:regional
+node --import tsx scripts/inspect-coarse-regional.ts
+```
+
+Expected baseline: 24 samples, 23 paired finite cases, one unreached case in each model, 18 improved approximate point cases and five regressions; point mean absolute differences 52.9989m v1 / 37.7296m v2. All means explicitly exclude the unreached case. [Plan, raw references and interpretation](evidence/coarse-regional-2026-10-22/README.md). The command enforces the recorded v2 hash; use a separately versioned run when evaluating another model.
+
+Deliberate new reference acquisition uses `npm run routing:compare:coarse:regional -- --capture <unused-directory>` against fixed loopback port 8002, saving the plan/model identities before requests and recording raw responses exclusively. It makes one status request plus 24 routes with 20-second deadlines, no redirects or hosted fallback. `--resume <incomplete-directory>` reads matching saved records and appends only missing responses, never overwriting a failed/successful response. Do not run capture merely to validate docs. An existing service and ignored regional graph are needed only for capture, not replay; do not build a graph to run routine checks. The first run's sandbox denial/interrupted finite-cost assertion are preserved in its evidence.
+
+For strict diagnostic TypeScript checking (these scripts are outside the app's `tsconfig.json` include list):
+
+```sh
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-coarse-regional.ts scripts/inspect-coarse-regional.ts scripts/compare-coarse-candidate.ts
+```
+
+For the original eleven-case v2 diagnostic, use saved reference responses offline (no service or quota):
+
+```sh
+npm run --silent routing:compare:coarse:v2 > /tmp/geo-planner-coarse-v2-new.json
+```
+
+An optional artifact path follows `--`, e.g. `npm run --silent routing:compare:coarse:v2 -- data/coarse-quality/candidate.json`. Use unused output names. This reproduces v1 cell labels, compares candidate labels at their representative road positions, adds a supplementary 25 km/h straight destination-access comparison for both, and reports shading. The preserved v2 improves all eleven cases under both measures; this is a diagnostic sample that informed the model, not national calibration. [V2 evidence](evidence/coarse-v2-2026-10-22/README.md).
+
+The original live **v1 baseline** command remains available with the retained regional Valhalla service already running on loopback port 8002:
+
+```sh
+curl --fail --silent --max-time 5 http://127.0.0.1:8002/status
+npm run --silent routing:compare:coarse > /tmp/geo-planner-coarse-comparison-new.json
+```
+
+Use an unused output name. The command compares eleven public Southern California destinations from the default San Diego origin with the bundled v1 grid field. It makes one status request and eleven route requests to fixed `127.0.0.1:8002`, with deadlines and no hosted fallback, database access or graph build. Do not start a new graph build to run it. It records raw requests/responses, reference status, cell-center travel costs and whether the destination cell is shaded land. The v1 artifact path is explicit in `scripts/compare-coarse.ts`; when evaluating a new model, select that candidate's artifact deliberately.
+
+These are model-to-model diagnostics, not live driving-time truth or national accuracy validation. Successful execution means the comparison completed, not that accuracy passed. The first run found eleven slower grid estimates and an unshaded Calexico border cell; [preserved baseline findings](coarse-estimator.md#first-regional-travel-cost-comparison). The user reports a working Vercel deployment, but its URL and independent hosted measurements remain pending.
 
 ## Regenerate the coarse grid
 
-This is optional for normal development/deployment: the prepared JSON is a source file. To reproduce it, use Python 3.11+ standard library and the pinned public-domain Natural Earth inputs (about 68.8 MB downloaded):
+This is optional for normal development/deployment: the prepared JSON is a source file. To reproduce it, use Python 3.11+ standard library, the unchanged bundled v2 artifact and pinned public-domain Natural Earth inputs. V3 reads the cached roads and v2 country/lake geometry; the full three-source setup below is about 68.8 MB and also supports older builders. Reuse existing pinned downloads:
 
 ```sh
 mkdir -p data/coarse-sources/natural-earth-v5.1.2
@@ -55,7 +102,13 @@ curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-v
 npm run data:coarse
 ```
 
-The builder enforces source SHA-256 values before writing `src/server/data/coarse-grid-v1.json`. Expected output: 1,801,439 bytes, SHA-256 `7dfd3b30965c21a57fcca408a97a4d95e455bda33d09ecc7a29953346c23d8c4`. Raw files remain ignored; only the compact artifact belongs in the deployment. [The model report](coarse-estimator.md) records assumptions and provenance. This pipeline is separate from sealed detailed-routing producers.
+The v3 builder enforces the unchanged bundled v2 artifact and roads-source hashes before writing `src/server/data/coarse-grid-v3.json`. Expected output: **4,673,811 bytes**, SHA-256 `8cfa5616b52138c16d5a8cb8f84fd1ee4345f7e4026e88c104365cad25c523e0`. To check repeatability without replacing the active file:
+
+```sh
+python3 -B scripts/build-coarse-grid-v3.py --output data/coarse-quality/grid-v3-repeat.json
+```
+
+Preserve v1/v2 artifacts and builders; v3 refuses those output names. It leaves v2 land mask, road anchors, road links/times and speeds unchanged, adding mixed-cell representatives/checked local links and access points from each retained road anchor's own source visit. Raw inputs remain ignored and runtime needs none of them. `python3 -B scripts/build-coarse-grid-v2.py --speed-profile original --output data/coarse-quality/v2-original-speeds-new.json` remains an optional v2 isolation diagnostic; it does not regenerate v3. Do not rerun older builders/producers just to validate docs. [Model and provenance](coarse-estimator.md#v3-general-shore-connectivity).
 
 ## Run the local long-range experiment
 
@@ -71,7 +124,7 @@ To compare the preserved prior graph, stop the current owned worker and run `npm
 
 `node routing/verify-experiment.mjs --graph-run two-hour-region-v2 --run-name fresh-live-check` checks live app results against independent fields and all-cut evidence. It accepts `--port` for another Vite port and only calls loopback. The source/build/rebuild/qualification/native/cut/release commands are in the regional report. Completed runs refuse overwrite; fresh output names alone do not automatically rebind downstream dependencies. No graph download/build occurs in `dev:experiment`.
 
-The [six-hour preflight](six-hour-preflight.md) has separate, versioned offline planning/source/census commands. It reuses cached October 14 roads and pinned Docker tools with two CPUs / 4 GiB / no swap; it does not switch this app graph or spend hosted quota. The outgoing-index owner profile, exact build/rebuild, result verification and evidence collection are complete. Both builds reproduce the qualified payloads at 2.415/2.416 GiB. The revised partial-source screen remains held at 9.290 GiB with margin; the proposed qualification owner/lifetime diagnostic was never started and is now parked after the user’s coarse nationwide product reset. The coarse nationwide MVP is implemented independently; the next work is persistence integration, real Vercel preview verification and accuracy refinement. Existing services and environment configuration remain unchanged. Read the [memory follow-up](six-hour-preflight.md#memory-follow-up) and [next steps](next-steps.md). Inspect saved reports and process owners before launching anything; do not rerun completed producers or collectors.
+The [six-hour preflight](six-hour-preflight.md) has separate, versioned offline planning/source/census commands. It reuses cached October 14 roads and pinned Docker tools with two CPUs / 4 GiB / no swap; it does not switch this app graph or spend hosted quota. The outgoing-index owner profile, exact build/rebuild, result verification and evidence collection are complete. Both builds reproduce the qualified payloads at 2.415/2.416 GiB. The revised partial-source screen remains held at 9.290 GiB with margin; the proposed qualification owner/lifetime diagnostic was never started and is now parked after the user’s coarse nationwide product reset. The coarse nationwide MVP is implemented independently; cloud persistence is implemented, and the current priority is measured accuracy refinement, with independent hosted verification when the URL is available. Existing services and environment configuration remain unchanged. Read the [memory follow-up](six-hour-preflight.md#memory-follow-up) and [next steps](next-steps.md). Inspect saved reports and process owners before launching anything; do not rerun completed producers or collectors.
 
 ## Connect the selected free hosted service
 

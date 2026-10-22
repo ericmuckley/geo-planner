@@ -1,0 +1,484 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      {
+        "lat": 33.4936,
+        "lon": -117.1484
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.74,
+          "lon": -116.7189,
+          "side_of_street": "right",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.4936,
+          "lon": -117.1484,
+          "side_of_street": "right",
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 2,
+              "instruction": "Drive northeast.",
+              "verbal_succinct_transition_instruction": "Drive northeast. Then Turn left onto South Circle Drive.",
+              "verbal_pre_transition_instruction": "Drive northeast. Then Turn left onto South Circle Drive.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_after": 56,
+              "time": 0.609,
+              "length": 0.01,
+              "cost": 0.579,
+              "begin_shape_index": 0,
+              "end_shape_index": 1,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto South Circle Drive.",
+              "verbal_transition_alert_instruction": "Turn left onto South Circle Drive.",
+              "verbal_succinct_transition_instruction": "Turn left. Then Turn left onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_pre_transition_instruction": "Turn left onto South Circle Drive. Then Turn left onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "South Circle Drive"
+              ],
+              "bearing_before": 56,
+              "bearing_after": 285,
+              "time": 9.347,
+              "length": 0.026,
+              "cost": 11.852,
+              "begin_shape_index": 1,
+              "end_shape_index": 5,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Banning-Idyllwild Panoramic Highway/CA 243/Esperanza Firefighters Memorial Highway. Continue on Banning-Idyllwild Panoramic Highway/CA 243.",
+              "verbal_transition_alert_instruction": "Turn left onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Banning-Idyllwild Panoramic Highway, California 2 43.",
+              "verbal_post_transition_instruction": "Continue for 6 kilometers.",
+              "street_names": [
+                "Banning-Idyllwild Panoramic Highway",
+                "CA 243"
+              ],
+              "begin_street_names": [
+                "Banning-Idyllwild Panoramic Highway",
+                "CA 243",
+                "Esperanza Firefighters Memorial Highway"
+              ],
+              "bearing_before": 296,
+              "bearing_after": 216,
+              "time": 341.674,
+              "length": 6.287,
+              "cost": 327.114,
+              "begin_shape_index": 5,
+              "end_shape_index": 338,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Idyllwild National Forest Highway/CA 74 West. Continue on CA 74 West.",
+              "verbal_transition_alert_instruction": "Turn right onto Idyllwild National Forest Highway.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Idyllwild National Forest Highway, California 74 West.",
+              "verbal_post_transition_instruction": "Continue on California 74 West for 23 kilometers.",
+              "street_names": [
+                "CA 74 West"
+              ],
+              "begin_street_names": [
+                "Idyllwild National Forest Highway",
+                "CA 74 West"
+              ],
+              "bearing_before": 177,
+              "bearing_after": 311,
+              "time": 940.021,
+              "length": 22.642,
+              "cost": 821.102,
+              "begin_shape_index": 338,
+              "end_shape_index": 1149,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Fairview Avenue.",
+              "verbal_transition_alert_instruction": "Turn left onto Fairview Avenue.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Fairview Avenue.",
+              "verbal_post_transition_instruction": "Continue for 2 kilometers.",
+              "street_names": [
+                "Fairview Avenue"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 180,
+              "time": 103.29,
+              "length": 2.015,
+              "cost": 131.939,
+              "begin_shape_index": 1149,
+              "end_shape_index": 1178,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto East Stetson Avenue.",
+              "verbal_transition_alert_instruction": "Turn right onto East Stetson Avenue.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto East Stetson Avenue.",
+              "verbal_post_transition_instruction": "Continue for 7 kilometers.",
+              "street_names": [
+                "East Stetson Avenue"
+              ],
+              "bearing_before": 180,
+              "bearing_after": 270,
+              "time": 422.574,
+              "length": 7.322,
+              "cost": 520.884,
+              "begin_shape_index": 1178,
+              "end_shape_index": 1281,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto State Street/CR R3.",
+              "verbal_transition_alert_instruction": "Turn left onto State Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto State Street, County Route R3.",
+              "verbal_post_transition_instruction": "Continue for 3 kilometers.",
+              "street_names": [
+                "State Street",
+                "CR R3"
+              ],
+              "bearing_before": 270,
+              "bearing_after": 180,
+              "time": 183.816,
+              "length": 2.898,
+              "cost": 221.164,
+              "begin_shape_index": 1281,
+              "end_shape_index": 1322,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Domenigoni Parkway.",
+              "verbal_transition_alert_instruction": "Turn right onto Domenigoni Parkway.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Domenigoni Parkway.",
+              "verbal_post_transition_instruction": "Continue for 11 kilometers.",
+              "street_names": [
+                "Domenigoni Parkway"
+              ],
+              "bearing_before": 180,
+              "bearing_after": 270,
+              "time": 393.936,
+              "length": 11.333,
+              "cost": 391.687,
+              "begin_shape_index": 1322,
+              "end_shape_index": 1424,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Winchester Road/CA 79/Route 79.",
+              "verbal_transition_alert_instruction": "Turn left onto Winchester Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Winchester Road, California 79.",
+              "verbal_post_transition_instruction": "Continue for 12 kilometers.",
+              "street_names": [
+                "Winchester Road",
+                "CA 79",
+                "Route 79"
+              ],
+              "bearing_before": 271,
+              "bearing_after": 181,
+              "time": 448.082,
+              "length": 11.924,
+              "cost": 449.95,
+              "begin_shape_index": 1424,
+              "end_shape_index": 1552,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Max Gillis Boulevard.",
+              "verbal_transition_alert_instruction": "Turn right onto Max Gillis Boulevard.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Max Gillis Boulevard.",
+              "verbal_post_transition_instruction": "Continue for 700 meters.",
+              "street_names": [
+                "Max Gillis Boulevard"
+              ],
+              "bearing_before": 216,
+              "bearing_after": 302,
+              "time": 36.449,
+              "length": 0.694,
+              "cost": 46.224,
+              "begin_shape_index": 1552,
+              "end_shape_index": 1570,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Leon Road.",
+              "verbal_transition_alert_instruction": "Turn left onto Leon Road.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Leon Road.",
+              "verbal_post_transition_instruction": "Continue for 500 meters.",
+              "street_names": [
+                "Leon Road"
+              ],
+              "bearing_before": 338,
+              "bearing_after": 250,
+              "time": 27.731,
+              "length": 0.453,
+              "cost": 40.8,
+              "begin_shape_index": 1570,
+              "end_shape_index": 1586,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Clinton Keith Road.",
+              "verbal_transition_alert_instruction": "Turn right onto Clinton Keith Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Clinton Keith Road.",
+              "verbal_post_transition_instruction": "Continue for 4 kilometers.",
+              "street_names": [
+                "Clinton Keith Road"
+              ],
+              "bearing_before": 232,
+              "bearing_after": 316,
+              "time": 196.483,
+              "length": 4.497,
+              "cost": 207.695,
+              "begin_shape_index": 1586,
+              "end_shape_index": 1685,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 18,
+              "instruction": "Turn right to take the I 215 South ramp.",
+              "verbal_transition_alert_instruction": "Turn right to take the Interstate 2 15 South ramp.",
+              "verbal_pre_transition_instruction": "Turn right to take the Interstate 2 15 South ramp.",
+              "verbal_post_transition_instruction": "Continue for 12 kilometers.",
+              "street_names": [
+                "Escondido Freeway"
+              ],
+              "bearing_before": 287,
+              "bearing_after": 331,
+              "time": 396.3,
+              "length": 11.709,
+              "cost": 467.743,
+              "begin_shape_index": 1685,
+              "end_shape_index": 1807,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 215 South"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 20,
+              "instruction": "Take exit 59 toward Rancho California Road/Old Town Front Street.",
+              "verbal_transition_alert_instruction": "Take exit 59.",
+              "verbal_pre_transition_instruction": "Take exit 59 toward Rancho California Road, Old Town Front Street.",
+              "bearing_before": 160,
+              "bearing_after": 180,
+              "time": 14.961,
+              "length": 0.348,
+              "cost": 16.778,
+              "begin_shape_index": 1807,
+              "end_shape_index": 1818,
+              "sign": {
+                "exit_number_elements": [
+                  {
+                    "text": "59"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Rancho California Road"
+                  },
+                  {
+                    "text": "Old Town Front Street"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Rancho California Road.",
+              "verbal_transition_alert_instruction": "Turn right onto Rancho California Road.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Rancho California Road.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Rancho California Road"
+              ],
+              "bearing_before": 168,
+              "bearing_after": 231,
+              "time": 12.758,
+              "length": 0.218,
+              "cost": 59.855,
+              "begin_shape_index": 1818,
+              "end_shape_index": 1825,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Old Town Front Street.",
+              "verbal_transition_alert_instruction": "Turn left onto Old Town Front Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Old Town Front Street.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "Old Town Front Street"
+              ],
+              "bearing_before": 238,
+              "bearing_after": 161,
+              "time": 74.286,
+              "length": 0.818,
+              "cost": 138.215,
+              "begin_shape_index": 1825,
+              "end_shape_index": 1866,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Main Street.",
+              "verbal_transition_alert_instruction": "Turn left onto Main Street.",
+              "verbal_succinct_transition_instruction": "Turn left. Then Turn right.",
+              "verbal_pre_transition_instruction": "Turn left onto Main Street. Then Turn right.",
+              "verbal_post_transition_instruction": "Continue for 50 meters.",
+              "street_names": [
+                "Main Street"
+              ],
+              "bearing_before": 134,
+              "bearing_after": 44,
+              "time": 9.818,
+              "length": 0.049,
+              "cost": 23.34,
+              "begin_shape_index": 1866,
+              "end_shape_index": 1869,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right.",
+              "verbal_transition_alert_instruction": "Turn right.",
+              "verbal_succinct_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Turn right. Then Your destination will be on the right.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_before": 44,
+              "bearing_after": 137,
+              "time": 4.458,
+              "length": 0.011,
+              "cost": 86.96,
+              "begin_shape_index": 1869,
+              "end_shape_index": 1871,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 5,
+              "instruction": "Your destination is on the right.",
+              "verbal_transition_alert_instruction": "Your destination will be on the right.",
+              "verbal_pre_transition_instruction": "Your destination is on the right.",
+              "bearing_before": 133,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 1871,
+              "end_shape_index": 1871,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 33.493397,
+            "min_lon": -117.181688,
+            "max_lat": 33.747917,
+            "max_lon": -116.71601,
+            "time": 3616.602,
+            "length": 83.257,
+            "cost": 3963.89
+          },
+          "shape": "ksij_Ajw}r}EcBqDNnC[jCgArB}@fB`FnD`EpEfJnLxDvG`HvKhHtJpKpL~NvMbDlDtDvDpN~NvE|EnEtEdL~JnNvNpFvFlCdCjc@jb@hPfPxNlNjU|RxHzFtKfIvKnIzS~OxDbBfEnB`GnAzC?tC_@`DuAzBsAzBwCrBwEr@gFHgGa@cFcBaJ_A_IW_KN}Lz@oJ`B}I`DiHbEsF`FuEvNcK~JgHjJsIhTeU`HwHxT_W`H{H|F{EzKwIrH}FrG_ExFwCjEe@zE_@tGKtHCnStAlPzBxo@lL~i@fJnDNlDGxDeAtDyBvGkHvEuDnDeAbFFv@FfARnCpAvBdBjA|BbAdCz@lDVfHArFk@jFuC~Pq@~FJfGVxF`AvEjAnCvCvFbBrCbBdB~An@dDhAtFdAlKdBdPhAbK`@zVDdN~@rF`BrFhBxHpDrOpIfLzKpQjSdGfHnJtSrFbJhDzCbFjBzKtCrIzDhF~D|FpHzCbFnA~A~DzDl@~@zAx@zBpA~Cv@fIB~EuAxEuDbFyFpEgDlE_BdEKjDj@bEjBjD|CrKnPlEtFtF~DvEnB`KnCTHnG`AdGv@|G^bWKtF@`KbBbN~Ctd@nMpNxCjCVpEUlG}A|DoCrDqElBkFx@sH?mEUiEaA}HcEkTqAcJAmHhAoItBsGvMiY|BwJTgHqAcK_EuLwEkOmBgIKcDDeGx@aHhFkP`GaMtJ}RpCqKnBmIzCuObEsIjC{DlDgCjEyBzA_@fDk@rG^fOrDlR|Dd\\rFrNjExKbIpPpJfGrAlHGdGcBhFwDdCaCvD{FlDkLrAcMZyC~Fkm@RmEMgI{@qIsAcJwA}Ii@uGFgJhAsH`CwGdC{EfEmDnFkBrB_@xCUfKUjEk@lE_BnDiBpCyC`CiD|AmEz@sErCcWt@sErCaF~CyBpFkAjF?lD~AlDtBfRrQxEnChCp@rCb@pET|FUxLiAjFOlEt@tDxAdDzBfWhXnM`MbJzGxFtC`IdC|GjBdGtCpE~F`EfFhEtJdEzJ~EdI|FzFpPnLla@dZ~NbLnOzNdC`CzZh^xUhWrJxKlIlJ|CjGdA~IPnHc@vGuCrH{CjF{D|CkInFeBhAyFhFkCvDgBjDuAbEe@tFC`HR|Ft@vFvBtLnFnZl@bHPxHEhHs@jHuBhHyCzFiEbGsHzKkAlEu@xD[pDIhFC`Gp@bIlAfItBzI`CfEdCfCjCtB|BjAlE`AdFd@zE?dF_@|Eo@~FcC|EuChEoCxf@_j@nC_Dv@_ArFoE`DyBjDcBtDaBhCaAtGmA`Hs@hFPrCh@lIbBfFv@~DZbD\\`CNjICj@CtGStFKgGlJaBzC_A~BMd@a@pAoAnFy@bE}@`LMjE@fEPvH~@lFbBdJhDdNzDjOjBtIRhF]~GeA`JsBtLcAdJ@bI`@zGPxHc@bH}@lIeBbJmBrE{ClFgCtCmCdByCbB}HvCiFzCeDfC_EtEsElGcE`J}AfJStFPhGt@pEnCfIrFpJzBtGt@fHBjH_@`ISxJHpB^rF\\rICjGq@xIo@`IYlHBtMTlMXtHr@rIjE|YxB|MnB`H`E~FdExClK~E~MhItHfFfG~BlIbArHz@pFvBrEnDrC~CjFnIvCfExJzJpHjItDhGpBlGt@jFPvEIvDq@dEaAnDcD~GwC~FeBtFs@~E_@hGSlLUrIg@|HuArI_BtF}B|FoB|F}@`GQjGX`IpD`ZtEzb@zBfJnD`HjHdGnHpBnIZxPSlZA|KBtGf@nItBxI`FjM~KtG`I~B|DfBzDdApDr@~Db@bG?pISrJeA`Ny@`GuAvGwBlGqDnGiFhFsDrDwBfDqB~Fu@bGIxEf@xGd@`HEhFe@nEgAzEyAjEsBjEiDzF_CvFyAbF_AfHOfFPfKGpFa@vFwArGsCvHiBdGeArF_@nEIbFRxG^`JBfFQdEm@bEkB`GaAjE[jDKhFX~D`BdHnC|G|MfZdFxJ~E~ExFfBnHRvHMvFf@dElAhE~BfLzK|PlSfF|GnEzHvBdIvArIt@~HjDlb@XjG?bHUfF}@zE_CrG_CtGmAhFi@xFClEd@lFvFj`@^tIA~E]vHw@bI[~FD`G\\lF~@jF~AdFpChExDvCvFbBrG^`Dq@rGyAfPsGzHaCfF_AxEUxFn@dG~BjEpDvC|F|BhHrAlFpAxJV~EGjGc@vE}AhGyDhHkNpT}ExJkBlGq@xHAbFJdGtLp}@rC~LvAtE`CfE`EfDvFpB|Fn@rHO~JgBnF}@zEKjDV|DvArGbFtE`JzAxHRpHQvGuAfIkD`JiHpKcGnGsCxFoBhG}@nGw@|La@tLg@`Io@hF{AdF{BfEmDvD_FpC_F~A{GVkD[_PwFkEsAwGOcCNkG`CuDtDqCfFmBrG_ArHJtJdBbJdGnKtLnMtKzO|EdK|BxI^bHGlEsAzJoEjJ}JtHeM|EeLbCwHReH}@yGmDgFsHuIcTkFaJkGuFuIsDkRaDcIo@yHr@kFfBmG|EuFtJiCdKq@`JIbOx@|L|CvQpEnUdEjTxAhPt@`US`S_AdNiB`NiDvQkIv^oPrs@cE~Q_E|RiIpd@_BbNs@xMAtMPjIh@jI`B`MfBzJrFfTdEnP~A`HTzARnAR|BJ`BF|A?fBCvACpAQ|BSzAUpAc@lBc@xAa@nAw@hBq@fAo@~@_AlAeAdAeAx@aAt@gAr@iAl@sAn@gA`@oA\\mATmAPsANwAByA@iAEoAMwAOoAYkA_@iA_@aAg@aAk@uAcAgAaA_AcAm@u@q@aAe@s@c@{@e@}@a@aAe@sAS{@U}@ScAQgAOeAMmAKuAGqAEuAAiC@_DBsCPcKNmKNuV^en@NwPaAmMyCuMmFgMcHuLcKqNiNsSkEiJcFsM_H{WyDmWoC_\\sEoh@kBaN{CeQeEkOyFsQ_FmQmAoG{@iIQgMd@s[EoOkAoQ{CgRqDgRy@uIIqFFcIh@gKlFy[hAwMTgM{Aet@mBky@_@}Ok@{UiA_VuKw`AeAmJgBuHeC}GkCwE_EwE}FyEqFmCyHkBoI_@yHXeFbAmGdCuGtEqHtG}q@lr@yD`FsChGgBrFcArH[~HNxFnAxJvLj_@vElPbDfOxAnNl@rPUhKq@nImBhMgDjOkDhKuE|IiFtHkFpFsIrHiIdFcMdF{FrCcGrFoE|H}BlJeAfJm@lIMlByBlZwA|OyCdNmD`KwHbOuD~I{BfJaAbNa@`RkAnLyCtJyElKuEtKqDvKmBnK{@tNN`MhAvKbCdMrO~m@fCnLr@rHXfGDrFCvIe@xGm@xFqApGgBhG{B`FgEdGiG~FaHzEgIlDuHhBeKrAqG`AeFxA{FhAgEdCuElDsExIiApI?vFLnHvA`I~ArHzChInMtRzGhGfMlHfOlBnJ`@xNMbKjAbFtBhIhHjEpIrCzKt@|Ji@tKwApHiCpIuEzJgK|MwHzLuHjPyEtQiEbVwCpRkBnLaDdQ}FzToHlToLlWuMdVmMtUaK|PcEvI_DtO{@rLIxJCvWu@tTmB~Q_ExQ{GtTaGhMqGjMgK~McM~LuLvHgSlIqYxJuQxFsN|HcO|LyGrGcFnGiE~CmFfKsIpTkFlTgDhSaA|L[pHEnKN`Rv@zQ~IleAnEvh@v@lPCdNu@|KmDxNgG~KmIlJ_L`IaIpDgJ~BcVnDkM~A_SjA{Hh@aD`AkFfCwElDaEpEuCzEuBpHw@fGOxFf@lQv@`V?rX{@z[cBpVqCvV{CxPkF|U_CzH}Kp[uHtPaQhZeIvLaNdPiQ`Re`@j\\gLxKwJdKiJ`LeIrMcH`O{DzKuE|O{C`N_C|Q}AtRc@fNB`PRhLf@tKnBxPrCvRnAzHz@jHj@~Hd@dR?nRc@zRwAxQyC|RcDvL_DvI}CnHeD~FaJdMiElEey@xw@iVrSgd@`b@eM`NkKbQ}HjWyHn\\wGlRiI`NgNbParAdzAc}@pdAmNbP_PbJcv@l[qF`Ckd@zRyk@~XeWpP}RjNwVfS}P`Oo@j@oP|PgXp^kLhOwG~KwRn]uKtTmG~KeGhHqF|D{KxEiUbKkMxIiMrMaGlLgHpPuE~KkFvKqF|HuEdEkLtIsMpJeGvHmF|JcEzNc`@bpB}@hJe@zMT~LlAxKvGxf@`ApQNlMq@fMqApIiCrLuQnw@cIbc@{E~_@sChc@o@rYUdXd@dXhBhr@dEv}Ax@n[vBxr@Pl[g@rYaAzScD`u@q@bp@`AhdA`@~y@{@fa@aCh`@uCfYeEbXuI~`@y^~pAwRrt@iFxTmF|WuFdZanCzlQiDbUqE|YgCnIiDtRqBxMqWrpBy[zgD}Ct\\oGnv@_J~eAyCb^GjMwM`vAqOv`AaJvd@}Gf]_Nnf@sOnh@oOlf@uH`Vau@`_CcJ`[ya@foAsLh^gUnu@qi@hgBqG~SmBlG_DjK}EzOIZwDfQuBbMe@lCgChQ{ApPs@|JWdD_A|Vi@rJCxCDp}BKndABbYP`fBJbgDDd_@DbIBdX?hHBvc@LjoB@rTBvXBfPJr}@XrgCLfiA@nNBhQNpzADzUHpz@@fG@|HnGA|J?bL?d^?p\\?p_@@fm@?~N?~c@?nE?tkB?ruA?fXLr^IpbB[f[?|e@@`]?fRApNhBpOjC~Gh@fMr@dWP`m@KnFGpRGjt@qAf_FD?xDx@t~J|@ruMDtg@@rJV`uD\\vhFFl^AxFDbhCAxICjf@c@~M}@vJ{C|OoCjJqCvHmRtg@aIlSsG`QiDzMiBzJu@tG_@fGa@hMHpORpFh@pFpAbLp@bDx@vD`ClI`BnEtFrL`GzItGpHxNdQtE~Jz@hBnDlKLtr@^vcCJtvAMbxB?~@?hE@hIKzw@@d`ABbGeArF?jq@@zy@?rDDxFDfgATf{@rAjFBba@HjkAD~r@Djr@Ffy@JjbBNnwB?rMD|c@DdnAFrv@PngCJzgB@tEBn^@dPB`b@Bz]@xn@Cna@Jpm@BvNN`t@BdNRteAFzb@Fnh@LxbBIxgA?~O@|e@Fz\\F`mAj@blB?fHFdk@B`]NxeB?`HD|e@Dnh@@r@Brc@?x@@rGnG?b@ApC?lMChHAlC?lDAnYC`CAzRCbKApYEZ?bj@IpUCzOC^?lDAnE?`@?tZCpoCWn_@CxLA^CtE@pD@b@ChLA`oAQfwBc@vKC|h@EvbBYxD?~REh|Ce@rgImAlOAhdFc@~`@EpHlD^PRHzA`ClAhBCnaAoAhp@kClf@mFff@gKnm@sOhm@_bChbJocBjoGgwBbhIyClIqC~Lii@bpBiWj}@at@f{BmcAb~Cid@rvAaIvZoG`[eHrd@aFre@eC~d@_Ah]?xg@b@jRXjLhDxk@|@lJbA`KHl@lDzVrGj`@zKjn@xe@bpCbh@nwCpZzdBdObn@jRpj@fY~p@tf@jiA`s@p_BfNj]lMjb@jJh`@~EzXhHlj@dDnf@lAjq@^zfEh@z[bCfg@|Epe@fHde@xM|l@xQtj@`Vtj@`Zlg@v]dd@jsAl`BrFpGrCrDrr@hz@v{BnnCx}@nhAhYde@pQt_@`Ot`@nPtl@fHf`@rFv`@jEpf@~Bhp@t@jcAvBxgDh@bz@hEnzG`LtrPr@f]jBx\\tBlVvChVvH`e@fTb_Axr@ryChFdVlEdWlDlVbCpVrChg@v@tc@VfqJ`@t|JDhPx@||@KxdA@hAIlHE`HlIAzHDn~BjA`h@Kx^i@f~@_CfTk@zt@uBhr@kB|Uo@xp@iBvKYpGwCh{@sB|k@oB|~@cCl}@}Bzp@aBpUc@~JC~ODhWXxWf@ro@fB~s@tAxf@`A|f@`Apn@lAhJPzDJxIRvxAzCrj@lA|yCvG~yCnEbFfD~tBS`gGgH`jAs@feHcGzIuBpH?~kAm@nSKtGC~i@YxkAkB`sBkBjfBmA|q@mAj_@_Ab]gAzd@mBpiA{EhdAaEff@kCte@mBhRy@pRy@dM[fMGlY^nZbBhZzBtT`Db\\jGbXnGhjBfc@tLvC~qAt[zk@`NpNrDbVfGpl@`Pr]tLn]zPrStLbVvN~VpRvVxRbb@n]zb@r\\ta@v\\va@t\\h~AzpAdN`Lr\\lXdx@hp@lrA~fA|}AloAp`@n[hFbE|_BdqAr@l@bh@bc@le@`b@tu@to@fr@zj@f@`@XVhCtBzDbDPNnn@xi@`q@xg@nmClyBj~@lu@x@p@PNvEvDrGdFbiB~xAvq@dj@rq@jj@pgB|xAftAjhAbEfDhF|DbvD|zCr{BbiBd~BvkBrPbN`xAbkAzp@|i@tg@~a@nKvIxBdBvGpFoDpIWj@u_@~r@_CxEwSjb@_CxE{JnWcO~d@mHrRiH~NmNlUyMjQsM~NiX|SwM`Iaq@zWa@PgI`DhBbJLh@zQb~@rBbKdAbGtBnLzCbQKtKfFfWjDdQxFnU~DjMpH`R|DvJrL`UbClEwHjJ{LlP{NxUmNdZgBjEuBfFoCnIaEbMeEnOkDnOkC|MwEtZuBrRcAtOw@rP[|OEdz@d@r{A?fFKfoALfc@~Arc@xDxg@rHtk@nJjb@rVzs@lLtWdc@f|@tOf\\tWnl@l_@nbAjI|T|J|XbJf]hNln@xD`R`Ijf@hEb`@jD`a@~Br_@jAbXlA`j@fCh~AbCzgAP|LVrLHjVX|x@@r@JtHB`}Br@~bANdKA~u@?zA?vEe@`hDZxh@Dvi@?xB@`JA|JId_AQ`cA?nx@AxKCnr@AlN?tA?nBEjDAzE@pa@?fK?x`@?`ACxH?lJDhv@?b\\?xDAb[?|M?bB?`BApBKbHOrIWvEa@jGgAdKSlAgBnKqH~c@I`@s@bEwEpYiBzKoOl~@aDlBoC~HyBtEaB`CmCpBkDfAyCLuDUkD{@oAq@kCyBwBaEkAuEUuEB_Dl@mEhB}EtCoDhDgBbGm@~H~@|GtCfMzFfMpF`{@zg@bEUzqAh_Axg@j_@|}AngArXpPzj@j[pq@zZ`n@`U~VtIx\\zJzu@pQns@pMdr@zIfd@bElj@nCr_@dAvv@Pro@PtZQpz@JvYFnu@LxeEk@poJaAhjDIbkB?|gFIrwCO|vAE`c@BnaADt~EbA~HJxg@`Avp@vFly@tIzhAxKjo@lGb_@n@rMGtRM~OWzPg@nQsAlRgCtJsAbKcBbDc@jSyDpLgCxNyDfQiGvOeHhPqH|PoIlSwL|NiJpOqKtHmG~KqJzKqJ`N{NtIoJ|UgZp]{c@`]kc@jJiKhKaKxLsKvQuO|g@g^zfFocDno@a`@dkD}qBtx@oe@h}EosCp|BmpAzq@ua@x_D{lBn]qRtoAcv@p_@cT~dA_m@jKsGhtAyw@~`B{`A|wAgz@zeAwm@hDkBxZcPpk@yWdu@cYfkK_sDpKuDnR}G||Aci@hrAid@tNAnIiBzv@uQf@K~P}DpOsBvNiBll@qE`BY|AU~Do@~[rj@vJlP~FzJ`QfXV^lCjFhCdG~F_BpEsAtOmFRInFsBpDqA~@]lP{F~FqB~CcAvNsEbOmFhNcGbG_D|DwBbJoGLIfGyElGyEvCiFtFwEhMkMdRmVtMsQxByCfB}BpLqOpCwDhB}BpEkGdHqJxAuBtAmBvQwUrI_L|EoGlBiCjB_CpR_WxQgVzAqBmB_CuLwNiAuAxAeBp@_A"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 33.493397,
+        "min_lon": -117.181688,
+        "max_lat": 33.747917,
+        "max_lon": -116.71601,
+        "time": 3616.602,
+        "length": 83.257,
+        "cost": 3963.89
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "request": {
+    "locations": [
+      {
+        "lat": 33.74,
+        "lon": -116.7189
+      },
+      {
+        "lat": 33.8303,
+        "lon": -116.5453
+      }
+    ],
+    "costing": "auto",
+    "costing_options": {
+      "auto": {
+        "speed_types": [
+          "freeflow",
+          "constrained"
+        ]
+      }
+    },
+    "directions_options": {
+      "units": "kilometers"
+    }
+  },
+  "status": 200,
+  "body": {
+    "trip": {
+      "locations": [
+        {
+          "type": "break",
+          "lat": 33.74,
+          "lon": -116.7189,
+          "side_of_street": "right",
+          "original_index": 0
+        },
+        {
+          "type": "break",
+          "lat": 33.8303,
+          "lon": -116.5453,
+          "original_index": 1
+        }
+      ],
+      "legs": [
+        {
+          "maneuvers": [
+            {
+              "type": 2,
+              "instruction": "Drive northeast.",
+              "verbal_succinct_transition_instruction": "Drive northeast. Then Turn left onto South Circle Drive.",
+              "verbal_pre_transition_instruction": "Drive northeast. Then Turn left onto South Circle Drive.",
+              "verbal_post_transition_instruction": "Continue for 10 meters.",
+              "bearing_after": 56,
+              "time": 0.609,
+              "length": 0.01,
+              "cost": 0.579,
+              "begin_shape_index": 0,
+              "end_shape_index": 1,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto South Circle Drive.",
+              "verbal_transition_alert_instruction": "Turn left onto South Circle Drive.",
+              "verbal_succinct_transition_instruction": "Turn left. Then Turn right onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_pre_transition_instruction": "Turn left onto South Circle Drive. Then Turn right onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_post_transition_instruction": "Continue for 30 meters.",
+              "street_names": [
+                "South Circle Drive"
+              ],
+              "bearing_before": 56,
+              "bearing_after": 285,
+              "time": 9.347,
+              "length": 0.026,
+              "cost": 11.852,
+              "begin_shape_index": 1,
+              "end_shape_index": 5,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Banning-Idyllwild Panoramic Highway/CA 243/Esperanza Firefighters Memorial Highway. Continue on CA 243.",
+              "verbal_transition_alert_instruction": "Turn right onto Banning-Idyllwild Panoramic Highway.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Banning-Idyllwild Panoramic Highway, California 2 43.",
+              "verbal_post_transition_instruction": "Continue on California 2 43 for 40 kilometers.",
+              "street_names": [
+                "CA 243"
+              ],
+              "begin_street_names": [
+                "Banning-Idyllwild Panoramic Highway",
+                "CA 243",
+                "Esperanza Firefighters Memorial Highway"
+              ],
+              "bearing_before": 296,
+              "bearing_after": 22,
+              "time": 1739.079,
+              "length": 40.122,
+              "cost": 1555.243,
+              "begin_shape_index": 5,
+              "end_shape_index": 1638,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 10,
+              "instruction": "Turn right onto Lincoln Street.",
+              "verbal_transition_alert_instruction": "Turn right onto Lincoln Street.",
+              "verbal_succinct_transition_instruction": "Turn right.",
+              "verbal_pre_transition_instruction": "Turn right onto Lincoln Street.",
+              "verbal_post_transition_instruction": "Continue for 800 meters.",
+              "street_names": [
+                "Lincoln Street"
+              ],
+              "bearing_before": 360,
+              "bearing_after": 90,
+              "time": 47.413,
+              "length": 0.804,
+              "cost": 65.005,
+              "begin_shape_index": 1638,
+              "end_shape_index": 1651,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto Hargrave Street.",
+              "verbal_transition_alert_instruction": "Turn left onto Hargrave Street.",
+              "verbal_succinct_transition_instruction": "Turn left.",
+              "verbal_pre_transition_instruction": "Turn left onto Hargrave Street.",
+              "verbal_post_transition_instruction": "Continue for 200 meters.",
+              "street_names": [
+                "Hargrave Street"
+              ],
+              "bearing_before": 90,
+              "bearing_after": 0,
+              "time": 20.005,
+              "length": 0.243,
+              "cost": 30.994,
+              "begin_shape_index": 1651,
+              "end_shape_index": 1659,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 18,
+              "instruction": "Turn right to take the I 10 East ramp.",
+              "verbal_transition_alert_instruction": "Turn right to take the Interstate 10 East ramp.",
+              "verbal_pre_transition_instruction": "Turn right to take the Interstate 10 East ramp.",
+              "verbal_post_transition_instruction": "Continue for 18 kilometers.",
+              "street_names": [
+                "I 10",
+                "Pearl Harbor Memorial Highway",
+                "Route 10"
+              ],
+              "bearing_before": 4,
+              "bearing_after": 88,
+              "time": 576.028,
+              "length": 17.878,
+              "cost": 564.331,
+              "begin_shape_index": 1659,
+              "end_shape_index": 1786,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "I 10 East"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 23,
+              "instruction": "Keep right to take CA 111 South/Route 111 toward Palm Springs.",
+              "verbal_transition_alert_instruction": "Keep right to take California 1 11 South.",
+              "verbal_pre_transition_instruction": "Keep right to take California 1 11 South, Route 1 11 toward Palm Springs.",
+              "verbal_post_transition_instruction": "Continue for 14 kilometers.",
+              "street_names": [
+                "CA 111 South",
+                "Route 111"
+              ],
+              "bearing_before": 101,
+              "bearing_after": 100,
+              "time": 508.325,
+              "length": 13.946,
+              "cost": 458.847,
+              "begin_shape_index": 1786,
+              "end_shape_index": 1922,
+              "highway": true,
+              "sign": {
+                "exit_branch_elements": [
+                  {
+                    "text": "CA 111"
+                  }
+                ],
+                "exit_toward_elements": [
+                  {
+                    "text": "Palm Springs"
+                  }
+                ]
+              },
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 9,
+              "instruction": "Bear right onto North Palm Canyon Drive/CA 111 South/Route 111. Continue on North Palm Canyon Drive.",
+              "verbal_transition_alert_instruction": "Bear right onto North Palm Canyon Drive.",
+              "verbal_succinct_transition_instruction": "Bear right.",
+              "verbal_pre_transition_instruction": "Bear right onto North Palm Canyon Drive, California 1 11 South.",
+              "verbal_post_transition_instruction": "Continue on North Palm Canyon Drive for 3 kilometers.",
+              "street_names": [
+                "North Palm Canyon Drive"
+              ],
+              "begin_street_names": [
+                "North Palm Canyon Drive",
+                "CA 111 South",
+                "Route 111"
+              ],
+              "bearing_before": 106,
+              "bearing_after": 143,
+              "time": 201.882,
+              "length": 3.451,
+              "cost": 214.065,
+              "begin_shape_index": 1922,
+              "end_shape_index": 2017,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 15,
+              "instruction": "Turn left onto East Alejo Road.",
+              "verbal_transition_alert_instruction": "Turn left onto East Alejo Road.",
+              "verbal_succinct_transition_instruction": "Turn left. Then, in 100 meters, You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "Turn left onto East Alejo Road. Then, in 100 meters, You will arrive at your destination.",
+              "verbal_post_transition_instruction": "Continue for 100 meters.",
+              "street_names": [
+                "East Alejo Road"
+              ],
+              "bearing_before": 189,
+              "bearing_after": 88,
+              "time": 16.489,
+              "length": 0.143,
+              "cost": 45.487,
+              "begin_shape_index": 2017,
+              "end_shape_index": 2025,
+              "verbal_multi_cue": true,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            },
+            {
+              "type": 4,
+              "instruction": "You have arrived at your destination.",
+              "verbal_transition_alert_instruction": "You will arrive at your destination.",
+              "verbal_pre_transition_instruction": "You have arrived at your destination.",
+              "bearing_before": 91,
+              "time": 0,
+              "length": 0,
+              "cost": 0,
+              "begin_shape_index": 2025,
+              "end_shape_index": 2025,
+              "travel_mode": "drive",
+              "travel_type": "car"
+            }
+          ],
+          "summary": {
+            "has_time_restrictions": false,
+            "has_toll": false,
+            "has_highway": true,
+            "has_ferry": false,
+            "min_lat": 33.740101,
+            "min_lon": -116.876722,
+            "max_lat": 33.931436,
+            "max_lon": -116.545298,
+            "time": 3119.18,
+            "length": 76.625,
+            "cost": 2946.406
+          },
+          "shape": "ksij_Ajw}r}EcBqDNnC[jCgArB}@fBeD}A_DcAeGwAyCUkLKoE^aI`AeMvA_MtAyLjAsK^iJFkCOoCQiEe@eDo@cFcCuC}ByE{EeH}JeGsJmJeOiDkFsDcH_CaGaBsG{CiPeDgReG{XaEkNoCyIcCeHwCkH{BoEsEiIcFaH}IuKkJsLuIcK_KsKcFsDsFgCmG}@mFa@eFAkEf@mDdA{C|@iE`BaLfEcGvAoHdAsCBaAKuCU{Cq@_Fy@wIeIoIyLiKkLgEoDwFcDgC{@eCy@{HaAsII{IXkBLeTpAsKp@e\\rBoDr@eD|@{EzCgEhE_ChEgCdHyApIi@|H_@jPc@tScAhLcBzIyBvIyEtL{DpG_@l@cFfG]^iG|EeO|JiJrGcF`GeC~EaDdKeD~OwBdJoBfGkCpFuBfDsB`DgKdKiJvEoH~FwGzI{H~LoFjNgB`HsAdIq@lKKzM@z@FbEBlBxB|QlBrOfB|Rb@nOkBjYa@`CsD`TwErO{C`IaBhEuBhFyJvVyFhRqBdLYxAk@zM@~M`ArJdC~LvIxXlNzVfPxTh\\b]pY|^|WpZfOpRbJhNlFxLxA|FhArErBlNNtHD`M{@jMiBfOwI~^yAvIMn@sAnGoFfWaF`SiCtLwAvQGpObAhM~AlLdDfMlEvJfFzIjMrM|HdFxFbCx`@`LpKjE`KjH~IbIrJtJrFbIrh@hfAnShb@xIvQ~CnIdCbIjAbKHxGQ|EoAvIwBpGcDpFoDfDyEjC}CdAqHfAcFEuEWmDmAmDqA_EgDoDgEyEcKcAiH_@mHWiQk@sSoBySiCqL{@yBiDmIgDmFoGeJoJcI_CeAoJgEiNgDaKWiG@}It@sJrB{K`FcJtH}DtDiUrToAtAkJdG{JnE{JbCcMf@iLa@mMyBqkAug@eH{CeJaC{FSqGJqGbBiHbDiGjFsErH{DjLcB|J_@xBgAzNs@|NwAlM_ClJiDdIoFlH{FxEmBjAaExAaQpHuHjC}LhEuHvDuAn@sMhHuUlOwVnRyInFsCjBsFjBwFfBoH`AeEMaGeAmI}CgIiG_IgGqOgKgKsEaFsBgF{@wGiAeB[oUoDeF}AoM_FkBu@kE{@cHq@sJk@_h@z@aTJmJEmA?sFCiEAmECkPGgOEgZw@mJJkDTqEXkEtAsIdCgFdDaFjEmFpH}DtGeEzI{BzGiAjDgFlSuEpNkFfNoDfI{AzDoElGuTzReDjBwFpCiGbCwHdBoHlAoHDsKc@}CCcGLuGjA_KhDeO`FmKzCgF`AwFf@sGDgG[oDa@qEu@eLiCoFc@kFAoEJgFn@kJ~AuLfA{NjA{GG{CEoAIgGw@mb@aIuSaEoMmD_KiCcIgEaFkDoNeLmE{CmG{FwEkBgFiA_VeBaYkAeP_CsMwDkHoDgKkHaJgJsFoGwGwNaIyQwF{MiGoMmH_MeFsKmDyKwF}UaLgb@cFeFwD{BoB{AuDuAaCc@sBM_BIsBCcCb@sF`C{F~EoDbG_EvKeEbY}CxRa@dC}CnRqBjJeFjS}IjUaDpIsFtKuEtHcGnHyDlD{O`McLzK{HnLuFnNwEdMkCjQeAfPUrKx@lLfAlJnAvKbEfOjGlPlGrNdGrUj@dLJzHWrH_AzHeBrG{E~Ju\\nt@uBxEsm@duAqJhTaFfJqAfCcFrGu`@t]{IzIgJpLeO|OwT`RqEtEmGpH}HdLqCnGeDfM_CrMiC|RgAtb@y@`IeBjK}AjFcBdEaEjFmDzDcEjCeChBoEbBoH~A_H^yEa@cAI_LcAmJ{CqGmGkIoHiH_GyEkCmHaCqEWqHM_H`B{Cn@mDnBwIvHiI`M_KrPiCnDyE`E_DzBaIdCkIdCaJ^yJH{JuAmOyC}LkEcJaFkFeDmDqDcF{EmH{IkTo_@wHwLaGaFkEkCuFoAwFk@eFXwFVwLrBwIfAmEK_Ew@qCaAiHsE{E}DcG}IaEmIaCcH}BuK}B_OuBkJeEgKcPuWgDaI}C{JeBiKc@uHYuEBuZg@g`@DeIb@cLfA{HvHgYdA}GMgJeA}IoCoHgC}DkUcV}DcF{FeK{MwYuEqFeFiDmFuB}DaAqf@}CgMiAwLgCeFuBkJyE}E}DwDeEcNyTuIeLkGsFgJaGkHsDyEwDkDmDeCcDgEuHkLiU{DsFeD{CeFiDyDaAiBQ_E]mHv@eItC{ErCuErG_CnGaAxGQvJj@hIdDjLxFzIpGvG`JrGfPlJnGjFxEjG|D`InMdXjFnI~FnHjEvDvMrJlFnFxEvGtCxIzBhIxA`KtAdKHbGcAfKaD~LuF`J_FlF}HjEiHpByHpAsVb@sI^qIpBmFzC_IbIwP~W}DpD}DbC_IjCiMhC{MbEuSlLm]|QoMvIgElEeFzH}DpPmCfSSnMv@fLjEtO~BlFvEtGpKpI`IjE~LrEdVzDnRfDvKnCbIhDzB~A|BxBnA`AjD|DbDzEdEtI`EbKvAhHl@nLItGOvI[bLBdMUpIdAvMvClS|Hta@b@zPAxIi@nKyAtK}Kdk@aBvNgAvN{@hNc@bOY~`@WfQo@`PeApLmAzJmBjH{AhFySvf@{p@`xAkF~K{C|JcCbMcAbSYt`@s@~MoB|OyAjFmIxSuF`LcGxImGrG}IbGsIrEkLlHyHlGoDdF_DvHaBbIw@fI?nHXvGfA|HbBfGjIjRbD|JvBxJv@nIHpLSbKeArI}A`I}FnQqFdNeDlLiA~Hk@fJC`JP|Gx@tIxAhHhB`Hp@|AzDxIxWzf@d[|l@bE|HzKlVbLlTdWzd@~Xnl@l[fo@jL`VzF`Q|A`Gj@dEh@lIArEWjIcAnNqBfOiDlOmDlHyDpG_FnIkDhI{C|KkArIa@lG?jJl@fKbAdJ~B|PVdFThFa@dLgAvKe@tBoA|FsAfDeDlGcFxHqIjHwDrBwDzA{VpJiJtEeH~Fs\\`_@yKtIcMdGaf@xNqb@~N}i@rR{P~EsJtCwN|CwEPgAJ}EAoE_@qSaF}TeGoIi@iITgF`AkE~@kEfBoHpFsF~GoEfIiErK}@xGMhHx@t[r@lJ~C`n@^tJtBzh@bAd\\c@vOgBnVgDbVuFxUaFpOuFbNcFdJuIfL}MrNkF~EgKfI_JdFuK`GkQfGip@|Oa_@zIm_@jJoLzCuUhHwv@dR}EdBsG~@sPtAqMN{JiA{IaB}JuDqZcQkDsB{BqAcJuEeG_BgGk@yEUyF~@wGt@_FzAiGjEkn@pj@gJfIiJpHuE~BqEdCqHdC}M~@ue@SiIb@gGZcEh@yEpBoHdEmHdHkL|NsC`DaFjDoGhDwH`CiJtAyEB{EYaJo@mI{CsHuEiOsPwC_DqOyQwIkIqDeDyFuDgEaBcEuAaHs@_Ha@sITyFdA{LtDwJjGmHjFgFlHaGfMqEvLuFjOeFlKyHfJuNpQ{HbMoHfRwC`LkA|M]pMBlOc@fK]`Gm@tDuDvMsGxSeDjKyDpGiCjFwDjDgEzCgFnBqDhAiFr@yFg@aIm@kb@iQoKgC_Fs@eCHyB^mJtBiJjDwm@fY}R|IgGlCaV`J}f@lUgNlGsPfHig@lU_r@~X{JdDuPlEkK~@qKpAcMCuN_Aeg@mG_N{@sMRaGl@uBT_IZgG`BeHlBsK~F_GzEaGxGcJhMahAfgB}ObXsDfGkHlKmbA~bByOnY_MpYwIrUeHvU{EdV{DnToPhkAu_@bnCaEjZsFb]aDrMwEtLeCxEcEtG_DlEmF`HmIrGcH~CiFlBkIrCwVzEsIvCuGdEgE~DiEdFqC~EyDdIyChJcGxS_A`DmBpDcDfGgE`EkE`DcGbC_Fz@oFY}DGyD]_HkBeFqCoGwFeIyH_GmDsFiBwFaAgGGgGVgE~@aEzAkH|EsEjFaElHcBfFcAlF{@vKLtKbAdIvAzFbI`U`C`Kp@dJI`Hk@rGmAbH}BvHqD`JqCrDmFbEkGnC{NvCkIzA_InCsFdD{EdEwErF{CjGgCbHyArIgCj[wAjL_DrLiE|JmGjJyF~FuGlEgGvC}J~D{f@zPwL|DsFnDeFnEuF|GoEbIqDxIkCrJkB`KiBxM{Ghm@uDd\\kBnKeBpHgC|GsDxFsElFsFzDoGxByGj@_FOsScBuGMaPhAmH~AcJfEyHxGqF|GmDdHkDlJuWrcAgF~PwE|IwHpHoFbDaJzAgJ~@sKnAsHfB}FrC_FrC_FzEqCnEkCjGeDjMcAjKKnLr@nTvDvg@r@tKBdL]bLoBnLaDnJmE|HmGjHoHhF_OhGiEjBoInD}DbBiF|DeEpEwEtHyEtJyCzJ}AzHcArIo@hMTrMx@zMRvMOdJ{@lMqA~IqBjHqDrIaDnFcDhE{JdKeLxI}KdI}DzDiDdEyYvh@{LxRiMfQwHlImIhGsPpFkHhDwHjFoGtG{GjJsFtL_KzZ_EfNkFbPmPpYuMnQoOdP}KdMqj@hn@iu@bz@eLtO_d@vv@sI`NgG`IaFdFmFfE_GbFiH`DaGzA}Dr@{E`@uK\\_CC_CU{E_AoHyBcMeGoh@k[s\\oRuX}P}PqIcJ{CsIaCiIqAoKeAwLy@cJEyS~@eFb@{IlA}P`FeOdGuP|J}JxIyJ~K{UhZeCtDqQ|VsBhCyDzE_IdI_OhJaG`EiGxCwGfCaHpBuPfDsPjBsPjBaPlB_OnCkQlDyGdD{EnC{QhMcGbDcGrBgB\\uEz@}HZuH_@_JeAgH}BuGoDmGsFeMwMaHuFkGeDuHeCoEi@{BYiLJiJpAgHhCiGpDiHpF}iAjgAsQfPsQ`OaLpGwG~CkGbC_FnAeF`AmMfAuKj@qoBtJsLlAiKrAmMzDmMhHmGxFuFjHaIjMsO`[mSv`@eMlUwItRiK~XmHfVwZvlAsBlNKfOx@`LhBvJjDrUZhMq@jOoDvNwBfN}@xNAvIZtI|@fTDvN_A~MwBpKwCpIiEfIoH`I{\\~RgNdIiMjJu[x[_MxKmMrJsLjHkGvDmS|KaUxKiIdFiHxFyHhIsHbLyEbMiFxP_CjP_A|PJbR`AtQTzKWnLeB~KgDzJqFjIaG`H}FfFmHdDqJxAeXrB}PxCiP~EcZ|OgEdBqErA}H|@qHYgGsA_G}BoE}CyEyEqFcKkBuG}A_HaA_NFcOjAkOtByNtKab@tBwOHgJkAsJiByGiCyFiEqFqEwDaGiBkDW_E@oQ~D_Ir@eOT{T|BwJ~EeI~H{E|KqBnJk@xKZpM`Er\\p@|Pa@nPoCbSwG~WyCzN]tLt@`IlBbHrDxHzDjDzEtCtPnH`GrFlHlJvClJt@`K[fJiDzLqFdO{S`^cJrS}GdW_EtUaBzKcC|KuHlQ}GhLkFbHyGxFuJ`EuJjBiMhAsNBgNmAgJsC_JsF}LyLkI_NmEgLeDkRuCa[cBsLqE_M{E}GqGyDmKkDcGe@ySV_IEmIiAgSgHmKiB}OsAaN`@{MxBeMnFeKrEeI~BwLj@}PHcMp@uNdDcMjGwSpLqIvCqIlByJnAiIpAuI`CgIbEcMbHaFtEmFjHiGxNsDnNkAbKW~Mn@tWz@vL|@zLr@`Q]dMkB`MeDbLcGbMgDnEyEhEkLzG}IdHqKhMwHdOyKr^gHpPqQjZcEhJ}BhJiArJDrJlAbJrC~HzEdGhGnEvGrC`HfAxGGbPgApHh@|GrAnGzCnF~E~GnIlCdKfB|MFhMq@jKgDvQoExOyDdKwE|IgGhHeIdEkH`CyGP}HK}HgByHyEiGqHqDmIqCmLcAsMs@eKq@eOiBaKmCkIqFyH_GoEuEmCmEcBgJ}DaIcEcEeG_E}JgBwKM}F^eFpBeM|Gq\\hFoUxFeVjEiOnBeMt@aKSiOOkS`AgPbDoPzD_L~D}IvFqNbCkL~@}MSeQ{@}MmAsQwGi{@m@oNDgKzAsMhC{LrE_LnQkYfIcP~FkR`EqO`C{PpC_ZxC{PrF{O~GgLlIqItOwJbPqDdSi@xKStH{B~GkE`IcJnEuJxC_NnAaQAiOyAsP}CoKmCeG_FcGyFuEiDaB_EeAoHy@{IOoEd@gFnA{DrBeGdFoEnG{CbH}ErSkCjJ}DpIkDbFuDdEyFhG{MtOgDxEqCbFiEjK{EvIkHbKkLfJkGjFmIzJcGvLkEpLgCjFiDvDoDzCqG`CqG~@kIS{GgB_KaE_MuEaG_BuGo@sHd@mEzAqG|EkFvIaCvHoB`NiBtTqCxM{GhTiQ~e@mFtJgItIqInGuIpEkItDgH`G}EpGcDlG{AzFcAjIMpHZnI~AfVO|NkArKgBbJgFhPeDtNeApOy@pO_BnLkD|KoD|KqBzJcAbJa@pIDtHp@rJx@xFtAlFzBhHxGfQnCzHpBlI~@rHFzHk@`IkAvHuBtGmFvJ}GzJyC`GwBpFiB|FwErP}Mrf@eA~IMtHN`H`@rGxAhKdC~JzH~Tv[vw@`C|Kn@fIGnI}A|MmBvHqFhKgG~G}GfHoFpIuGhLiFhJaFzGiGlGqFdEiHxDcInCwNlDiGxB_FhCkJvF{uAp_AaIrFsc@dZsQxKcLzF_MfE_OzCeLlAgHH}a@Bqh@`@ir@j@oQNma@?wLA}^@w_@?_pAOuKAuKAkFHiS@uwA?iDGgFWygBBAiZAcNCau@Cqb@Cq\\HmwC@oN?{Q@y_@@kZBi_@@ia@EgdA}n@CcA?{i@@yN[sBGcMOmEMsBOqAakBqP{_GsCmo@wEumAuIinA_LygAcNgdAqRuxAgPc~@yVi~@s[q`AiNub@wOse@wKco@cIuu@kTynCoGmk@gFc]gh@gjDqBwM}QqmAul@{|Dq_AywGkMs`AaKo_AkHu}@_Cu`@aBoa@m@c[OkYMaZLeZzA{u@xCuhB`Da`BxBmd@hCi]hHcn@rHid@jFmVfBiInLwb@tNwb@|Paa@nWmg@bSs[zfHu{JtEsGlJuMjr@ceAdXyd@dSs`@xYgo@zPib@|R_j@hMca@|Ogh@b`BynFhPex@`Muz@bH{n@`F}o@vBof@pAof@f@mp@EctM?cFZy}LAelIe@_qGsCiiAqEwt@e|@agKyCq]gO_fB_Mo`BeKsuBcGauBoa@w~NmB_f@wDkd@}Dq]yEs\\aIq_@aJe^spCi|JuF{WoEsVuAsJgByPOwAaB}SsBs_@]gg@x@oc@pBe_@lWarCzVwnCjjAu}L`o@u~Gnk@yfGlEqq@rCwp@xAqy@Pgr@{@icAwC}z@mIinAiLqeAqJkq@wo@gdD_qBy~J_G_^uDi[cB}TcAsTIyFY{S@uSP}KReK\\{ITiIlBqUh~@ozIjd@esE~PspB|Lw}AfC}q@nAwYhDid@|DaZhEiTtEoS|Ls^fLmWhSg^jOsStKiMl^e]n_CssBfZ_X|m@ik@lVuWhVg[hZ{d@fR}]hQg`@hOqa@`Mib@pKyc@rIcf@hBaMbDwTzO{zAdRohB`MykAvFie@|Jkm@fJcc@rKqc@`Quk@tRci@`V}i@~V{e@hTm]~bDk{Ej{AwzBbOuUpN_W`Rs^zPm`@xS{i@lQsj@nf@ykBniAilE~Kqc@bjB}iHbNmi@|`@k|ArS{}@bl@esCbK}c@rQcv@dQkt@rUmhAjGo`@`B{S^sPEiSu@wQqByR{C{Q{DwPmMsh@yD_SsC}QiByQgAcRu@cSOqQT{Rf@iRvAeT`DmZdDeR|D{PhFwP|F_PpGeOjIoOtIoNfT{WxLyN~PmS`OqTdNoVdMaWzQk_@jt@izAzFmLzVyg@pI{P|yCieGnjA{~Bj`AemBhq@iuArc@a}@n|GacNntCm|Fb`@}w@z]_v@zZkq@|Pi^|N_V`a@uh@f_@yh@tg@gv@|p@ccA~lAwiB`lAmgBxxFiqInz@}oAlZyd@~\\yk@dWug@rn@mzAncA}dCnOg_@~HwRjnF_tM~f@kmAtBgF~B{Fna@mbAvMoWtNwUfPsTdS_Urj@ug@p[gZHk@x@yFhCwBpDwCvRcRlDeDzLsKptAkpA|LkLtxAirAbZkYrHuHrr@sp@xX{W^YxHmHjWkVfPsOh`@e^pBiBvd@{a@fXiV|x@kv@pQwPlNyM`SeR~DuDv^a]`C}A`HeEfCaBrMqGjAe@|FoBpIiC~Am@lHgBtRyDtLwAbCWz@EtKe@lQItGEvKGdC@vM@pL@fH@zA?lR?~VBxH@nF@dM@lR@jG@n|@AlR@bt@QjZHxOE`G@dPDvCAtIChB?pn@F`N@dJ@jO@tN?fD@tF@`QAxC?b_AGbZLlPFxD@h}@GlSAtC?dD?|s@CvC@dHBfVLzE@~IDjNF|B@`k@J~CDxB?~d@AbD\\`B_ESiTc@aPCcV}BiHN}H?k@B{E"
+        }
+      ],
+      "summary": {
+        "has_time_restrictions": false,
+        "has_toll": false,
+        "has_highway": true,
+        "has_ferry": false,
+        "min_lat": 33.740101,
+        "min_lon": -116.876722,
+        "max_lat": 33.931436,
+        "max_lon": -116.545298,
+        "time": 3119.18,
+        "length": 76.625,
+        "cost": 2946.406
+      },
+      "status_message": "Found route between points",
+      "status": 0,
+      "units": "kilometers",
+      "language": "en-US"
+    }
+  }
+}

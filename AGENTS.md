@@ -2,6 +2,8 @@
 
 Prioritize **simplicity, DRY, maintainability, and readability**. Choose the smallest clear solution; share repeated logic without premature abstractions. Keep changes focused and follow existing patterns.
 
+Routing rules must apply generically to arbitrary supported locations and queries. Selected routes/places belong in validation only; never add city-name, coordinate or region-specific exceptions to make examples pass. Regional validation does not establish nationwide accuracy.
+
 - **TanStack Start + React + TypeScript:** Use file-based routes in `src/routes`, typed code, and server functions or server routes for backend logic. Never edit `src/routeTree.gen.ts` manually.
 - **Tailwind CSS v4:** Prefer utilities and existing theme tokens in `src/styles.css`; use `cn()` from `src/lib/utils.ts` to combine classes.
 - **shadcn/ui + Lucide:** Reuse components in `src/components/ui` and Lucide icons. Add components with `npx shadcn@latest add <component>`; preserve accessibility.
