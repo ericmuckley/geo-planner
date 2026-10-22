@@ -11,6 +11,9 @@ spec.loader.exec_module(builder)
 shore_spec = importlib.util.spec_from_file_location("shore_builder", Path(__file__).with_name("build-coarse-grid-v3.py"))
 shore_builder = importlib.util.module_from_spec(shore_spec)
 shore_spec.loader.exec_module(shore_builder)
+access_spec = importlib.util.spec_from_file_location("access_builder", Path(__file__).with_name("build-coarse-grid-v4.py"))
+access_builder = importlib.util.module_from_spec(access_spec)
+access_spec.loader.exec_module(access_builder)
 
 
 class RoadGeometryTests(unittest.TestCase):
@@ -63,6 +66,26 @@ class ShoreGeometryTests(unittest.TestCase):
     def test_diagonal_corner_contact_does_not_connect_separate_islands(self):
         geometry = shore_builder.Geography([self.rectangle(0, .1), self.rectangle(.1, .2, .1, .2)], [], 0, .1, 2)
         self.assertFalse(geometry.land_segment([.05, .05], [.15, .15]))
+
+
+class RoadVisitTests(unittest.TestCase):
+    def test_visit_preserves_bends_and_inserts_the_existing_anchor(self):
+        path = [[.01, .01], [.01, .09], [.09, .09]]
+        visit = builder.road_visits(path, [0, 0, .1, .1], .1, 1, lambda *_: None)[0]
+        center = [.05, .05]
+        anchor = builder.visit_point(visit)
+        offset = [round((anchor[k] - center[k]) * 100000) for k in (0, 1)]
+        index, points = access_builder.visit_geometry(visit, center, offset)
+        self.assertEqual(points[index], offset)
+        self.assertIn([-4000, 4000], points)
+        decoded = [[center[k] + p[k] / 100000 for k in (0, 1)] for p in points]
+        distance = sum(builder.distance_km(a, b) for a, b in zip(decoded, decoded[1:]))
+        self.assertGreater(distance, builder.distance_km(decoded[0], decoded[-1]))
+
+    def test_visit_removes_consecutive_quantized_duplicates_without_losing_anchor(self):
+        visit = [0, 0, 1, [(0, [.05, .05]), (.5, [.05000001, .05]), (1, [.05, .05])]]
+        index, points = access_builder.visit_geometry(visit, [.05, .05], [0, 0])
+        self.assertEqual((index, points), (0, [[0, 0]]))
 
 
 if __name__ == "__main__":

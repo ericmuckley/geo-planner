@@ -14,7 +14,7 @@ import {
 	gridPosition,
 } from "./coarse-grid";
 import v2 from "./data/coarse-grid-v2.json";
-import data from "./data/coarse-grid-v3.json";
+import data from "./data/coarse-grid-v4.json";
 
 function request(origin = defaultQuery.origin, minutes = 360) {
 	return new Request("http://localhost/api/estimate", {
@@ -249,7 +249,11 @@ test("an island sharing a grid cell with mainland cannot attach across its chann
 	// An explicit retained-road access path can connect this island; an unrelated
 	// island still cannot reach that road port across open water.
 	grid.roadAccess = [[1, 0.135, 0.05, 3]];
-	assert.deepEqual(attachGrid(grid, origin), { cell: 1, distanceKm: 3 });
+	assert.deepEqual(attachGrid(grid, origin), {
+		cell: 1,
+		distanceKm: 3,
+		minutes: (3 / 25) * 60,
+	});
 	grid.boundary.push([
 		[
 			[0.17, 0.04],
@@ -312,14 +316,10 @@ test("nationwide shore links stay on continuous land, preserve road costs and re
 		const forward = estimateGrid(grid, origin, budget),
 			reverse = estimateGrid(grid, destination, budget);
 		const outbound = Math.min(
-			...targets.map(
-				(target) => forward.labels[target.cell] + (target.distanceKm / 25) * 60,
-			),
+			...targets.map((target) => forward.labels[target.cell] + target.minutes),
 		);
 		const inbound = Math.min(
-			...starts.map(
-				(start) => reverse.labels[start.cell] + (start.distanceKm / 25) * 60,
-			),
+			...starts.map((start) => reverse.labels[start.cell] + start.minutes),
 		);
 		assert.ok(outbound < budget && outbound > 0);
 		assert.ok(Math.abs(outbound - inbound) < 1e-8);

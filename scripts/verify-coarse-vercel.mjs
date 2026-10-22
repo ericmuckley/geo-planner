@@ -78,7 +78,7 @@ for (const [name, lat, lon, minutes] of [
 	assert.ok(Buffer.byteLength(text) < 1_000_000);
 	const body = JSON.parse(text);
 	assert.equal(body.metadata.engine, "coarse");
-	assert.equal(body.metadata.engineVersion, "coarse-road-grid-v3");
+	assert.equal(body.metadata.engineVersion, "coarse-road-grid-v4");
 	assert.ok(body.contours.features[0].geometry.coordinates.length);
 	samples.push({
 		name,

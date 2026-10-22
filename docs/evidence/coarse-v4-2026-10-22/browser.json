@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:3000/",
+  "engine": "coarse-road-grid-v4",
+  "samples": [
+    {
+      "origin": {
+        "lat": 32.7157,
+        "lon": -117.1611
+      },
+      "minutes": 360,
+      "reachedCells": 2162,
+      "gridSearchMs": 61.3,
+      "contourMs": 6.5,
+      "browserRequestMs": 168.5,
+      "sourceToMapIdleMs": 633.2,
+      "screenshot": "browser-san-diego-6h.png"
+    },
+    {
+      "origin": {
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "minutes": 720,
+      "reachedCells": 11249,
+      "gridSearchMs": 39.6,
+      "contourMs": 2.0,
+      "browserRequestMs": 53.5,
+      "sourceToMapIdleMs": 631.6,
+      "screenshot": "browser-new-york-12h.png"
+    }
+  ],
+  "appConsoleErrorsObserved": 0,
+  "unrelatedExtensionErrors": "Pre-existing wallet requestProvider.js TypeError setting window.ethereum.",
+  "historyScope": "Two public test computations use normal automatic saving; no bulk old-history upload, cookie inspection or live database integration suite.",
+  "scope": "Local dev browser observations, not cloud performance or real-world driving-time accuracy."
+}

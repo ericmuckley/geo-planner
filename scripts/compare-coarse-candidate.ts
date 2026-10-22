@@ -12,28 +12,32 @@ import {
 	gridPosition,
 } from "../src/server/coarse-grid";
 
-const path = process.argv[2] ?? "src/server/data/coarse-grid-v3.json";
+const path = process.argv[2] ?? "src/server/data/coarse-grid-v4.json";
 const raw = await readFile(path, "utf8");
 const data = JSON.parse(raw),
 	candidate = decodeGrid(data);
 const baselineData = JSON.parse(
-	await readFile("src/server/data/coarse-grid-v2.json", "utf8"),
+	await readFile("src/server/data/coarse-grid-v3.json", "utf8"),
 );
 const baseline = decodeGrid(baselineData);
 assert.deepEqual(data.roadSpeedsKph, baselineData.roadSpeedsKph);
-for (const key of ["land", "links", "roadDeciseconds"])
-	assert.equal(data[key], baselineData[key], `${key} must remain unchanged`);
-const regional = JSON.parse(
-	await readFile(
-		"docs/evidence/coarse-regional-2026-10-22/comparison.json",
-		"utf8",
-	),
-);
-const original = JSON.parse(
-	await readFile(
-		"docs/evidence/coarse-quality-2026-10-22/comparison.json",
-		"utf8",
-	),
+for (const key of [
+	"land",
+	"traversable",
+	"links",
+	"roadDeciseconds",
+	"displayLand",
+	"anchorOffsets",
+	"shoreLinks",
+	"roadAccess",
+])
+	assert.deepEqual(
+		data[key],
+		baselineData[key],
+		`${key} must remain unchanged`,
+	);
+const preserved = JSON.parse(
+	await readFile("docs/evidence/coarse-v3-2026-10-22/comparison.json", "utf8"),
 );
 type Sample = {
 	id: string;
@@ -41,14 +45,6 @@ type Sample = {
 	destination: Origin;
 	referenceMinutes: number;
 };
-const originalSamples: Sample[] = original.samples.map(
-	(s: { name: string; destination: Origin; referenceMinutes: number }) => ({
-		id: s.name,
-		origin: original.origin,
-		destination: s.destination,
-		referenceMinutes: s.referenceMinutes,
-	}),
-);
 const fields = new Map<string, ReturnType<typeof estimateGrid>>();
 function measure(
 	grid: GridData,
@@ -69,9 +65,7 @@ function measure(
 	const attachments = gridAttachments(grid, destination);
 	const pointValue = Math.min(
 		...attachments.map(
-			(attachment) =>
-				field.labels[attachment.cell] +
-				(attachment.distanceKm / grid.localSpeedKph) * 60,
+			(attachment) => field.labels[attachment.cell] + attachment.minutes,
 		),
 	);
 	return {
@@ -94,7 +88,7 @@ function measure(
 function compare(samples: Sample[]) {
 	const rows = samples.map((s) => ({
 		...s,
-		baseline: measure(baseline, "v2", s.origin, s.destination),
+		baseline: measure(baseline, "v3", s.origin, s.destination),
 		candidate: measure(candidate, "candidate", s.origin, s.destination),
 	}));
 	const finite = rows.filter(
@@ -147,11 +141,17 @@ function compare(samples: Sample[]) {
 	};
 }
 
-const regionalReport = compare(regional.samples);
-for (const sample of regionalReport.samples) {
-	const preserved = regional.samples.find((s: Sample) => s.id === sample.id);
-	assert.ok(preserved);
-	assert.equal(sample.baseline.pointMinutes, preserved.candidate.pointMinutes);
+const originalReport = compare(preserved.original.samples);
+const regionalReport = compare(preserved.regional.samples);
+for (const [current, previous] of [
+	[originalReport, preserved.original],
+	[regionalReport, preserved.regional],
+]) {
+	for (const sample of current.samples) {
+		const recorded = previous.samples.find((s: Sample) => s.id === sample.id);
+		assert.ok(recorded);
+		assert.equal(sample.baseline.pointMinutes, recorded.candidate.pointMinutes);
+	}
 }
 console.log(
 	JSON.stringify(
@@ -163,12 +163,12 @@ console.log(
 			roadSpeedsKph: data.roadSpeedsKph,
 			shoreLandCells: data.shoreLandCells,
 			shoreLocalLinks: data.shoreLocalLinks,
-			original: compare(originalSamples),
+			original: originalReport,
 			regional: regionalReport,
 			publicRoutingApiCalls: 0,
 			localServiceRequests: 0,
 			scope:
-				"Offline v3 candidate versus preserved v2 on both saved reference sets. Point arrival uses the same geography-checked attachment as departure for v3; common-finite means and newly reached cases remain separate. The reference sets now inform refinement and are not new holdouts or national accuracy validation.",
+				"Offline candidate versus preserved v3 on both saved reference sets. Point arrival uses the same charged geography-checked attachment as departure; common-finite means and reachability remain separate. All v3 baseline costs are checked against preserved results. The reference sets guide refinement and are not new holdouts or national accuracy validation.",
 		},
 		null,
 		2,

@@ -1,0 +1,9 @@
+The first v4 builder attempt stopped before writing an artifact because its
+source-owner/anchor assertion failed. It selected owners from v3 traversable
+cells, including new shore cells whose land representatives replaced formerly
+untraversable positions. Those representatives are not source-road anchors.
+
+The corrected builder uses the pinned v2 traversal membership used during v3's
+road-owner recovery. It still requires every retained source-visit midpoint to
+match its unchanged canonical anchor within 1 metre. No assertion was weakened,
+no existing artifact was overwritten, and no invalid candidate was evaluated.
