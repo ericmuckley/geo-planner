@@ -1,0 +1,2191 @@
+{
+  "version": 1,
+  "model": "natural-earth-census-2026-grid-v8",
+  "artifact": "src/server/data/coarse-grid-v8.json",
+  "artifactSha256": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+  "sites": [
+    {
+      "id": "astoria-or",
+      "lat": 46.1879,
+      "lon": -123.8313,
+      "category": "Pacific coast and hills"
+    },
+    {
+      "id": "missoula-mt",
+      "lat": 46.8721,
+      "lon": -113.994,
+      "category": "Rocky Mountain valley"
+    },
+    {
+      "id": "hays-ks",
+      "lat": 38.8792,
+      "lon": -99.3268,
+      "category": "rural Great Plains"
+    },
+    {
+      "id": "duluth-mn",
+      "lat": 46.7867,
+      "lon": -92.1005,
+      "category": "Great Lakes and northern border"
+    },
+    {
+      "id": "columbus-oh",
+      "lat": 39.9612,
+      "lon": -82.9988,
+      "category": "inland metropolitan"
+    },
+    {
+      "id": "asheville-nc",
+      "lat": 35.5951,
+      "lon": -82.5515,
+      "category": "Appalachian mountains"
+    },
+    {
+      "id": "portland-me",
+      "lat": 43.6591,
+      "lon": -70.2568,
+      "category": "Northeast coast and border"
+    },
+    {
+      "id": "savannah-ga",
+      "lat": 32.0809,
+      "lon": -81.0912,
+      "category": "Atlantic coastal plain"
+    }
+  ],
+  "horizons": [
+    360,
+    600,
+    720
+  ],
+  "queries": [
+    {
+      "id": "astoria-or-360-inside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -120.13269,
+        "lat": 47.81195
+      },
+      "modelCellMinutes": 349.95389834452453,
+      "modelPointMinutes": 349.95389834452453,
+      "preferredSector": 0,
+      "selectedSector": 1,
+      "straightKm": 333.53311118902815,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -120.13269,
+            47.81195
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "astoria-or-360-outside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -119.91124,
+        "lat": 47.91014
+      },
+      "modelCellMinutes": 369.7705650111911,
+      "modelPointMinutes": 369.8472316778578,
+      "preferredSector": 0,
+      "selectedSector": 1,
+      "straightKm": 353.3230667046575,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -119.91124,
+            47.91014
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "astoria-or-600-inside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -120.01171,
+        "lat": 41.55242
+      },
+      "modelCellMinutes": 590.2034651499067,
+      "modelPointMinutes": 590.5401318165734,
+      "preferredSector": 4,
+      "selectedSector": 4,
+      "straightKm": 599.3496184267791,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -120.01171,
+            41.55242
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "astoria-or-600-outside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -118.70764,
+        "lat": 42.29336
+      },
+      "modelCellMinutes": 610.4340388226877,
+      "modelPointMinutes": 610.4357054893544,
+      "preferredSector": 4,
+      "selectedSector": 4,
+      "straightKm": 594.8352062976783,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -118.70764,
+            42.29336
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "astoria-or-720-inside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -121.80236,
+        "lat": 37.26779
+      },
+      "modelCellMinutes": 710.0001318165736,
+      "modelPointMinutes": 710.0017984832402,
+      "preferredSector": 8,
+      "selectedSector": 5,
+      "straightKm": 1005.9634622641315,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -121.80236,
+            37.26779
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "astoria-or-720-outside",
+      "originId": "astoria-or",
+      "category": "Pacific coast and hills",
+      "origin": {
+        "lat": 46.1879,
+        "lon": -123.8313
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -120.51162,
+        "lat": 37.30991
+      },
+      "modelCellMinutes": 729.9767984832399,
+      "modelPointMinutes": 731.0401318165733,
+      "preferredSector": 8,
+      "selectedSector": 5,
+      "straightKm": 1024.6260584860142,
+      "request": {
+        "coordinates": [
+          [
+            -123.8313,
+            46.1879
+          ],
+          [
+            -120.51162,
+            37.30991
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-360-inside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -108.98697,
+        "lat": 47.05684
+      },
+      "modelCellMinutes": 349.98166666666674,
+      "modelPointMinutes": 350.09666666666675,
+      "preferredSector": 1,
+      "selectedSector": 2,
+      "straightKm": 380.4489770642426,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -108.98697,
+            47.05684
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-360-outside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -108.96939,
+        "lat": 48.57573
+      },
+      "modelCellMinutes": 370.0599999999998,
+      "modelPointMinutes": 370.06166666666644,
+      "preferredSector": 1,
+      "selectedSector": 2,
+      "straightKm": 420.7717834331826,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -108.96939,
+            48.57573
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-600-inside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -111.90475,
+        "lat": 39.31708
+      },
+      "modelCellMinutes": 589.9416666666673,
+      "modelPointMinutes": 590.413333333334,
+      "preferredSector": 5,
+      "selectedSector": 5,
+      "straightKm": 856.9479264590632,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -111.90475,
+            39.31708
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-600-outside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -110.79103,
+        "lat": 39.59621
+      },
+      "modelCellMinutes": 609.9366666666667,
+      "modelPointMinutes": 614.1683333333334,
+      "preferredSector": 5,
+      "selectedSector": 5,
+      "straightKm": 849.4349785712378,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -110.79103,
+            39.59621
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-720-inside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -123.29443,
+        "lat": 42.7739
+      },
+      "modelCellMinutes": 709.9383333333346,
+      "modelPointMinutes": 710.606666666668,
+      "preferredSector": 9,
+      "selectedSector": 8,
+      "straightKm": 862.6776861879491,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -123.29443,
+            42.7739
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "missoula-mt-720-outside",
+      "originId": "missoula-mt",
+      "category": "Rocky Mountain valley",
+      "origin": {
+        "lat": 46.8721,
+        "lon": -113.994
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -124.22414,
+        "lat": 43.47093
+      },
+      "modelCellMinutes": 730.0400000000009,
+      "modelPointMinutes": 730.0400000000009,
+      "preferredSector": 9,
+      "selectedSector": 8,
+      "straightKm": 885.7381192496053,
+      "request": {
+        "coordinates": [
+          [
+            -113.994,
+            46.8721
+          ],
+          [
+            -124.22414,
+            43.47093
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-360-inside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -94.4077,
+        "lat": 40.33496
+      },
+      "modelCellMinutes": 349.9985383940081,
+      "modelPointMinutes": 350.18187172734144,
+      "preferredSector": 2,
+      "selectedSector": 2,
+      "straightKm": 451.35018364811503,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -94.4077,
+            40.33496
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-360-outside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -93.21301,
+        "lat": 39.73768
+      },
+      "modelCellMinutes": 369.97527683656745,
+      "modelPointMinutes": 369.9769435032341,
+      "preferredSector": 2,
+      "selectedSector": 2,
+      "straightKm": 534.4889072717982,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -93.21301,
+            39.73768
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-600-inside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -100.11476,
+        "lat": 32.89047
+      },
+      "modelCellMinutes": 590.0069435032336,
+      "modelPointMinutes": 593.334591300279,
+      "preferredSector": 6,
+      "selectedSector": 6,
+      "straightKm": 669.6805133831565,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -100.11476,
+            32.89047
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-600-outside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -100.83945,
+        "lat": 33.15753
+      },
+      "modelCellMinutes": 609.9402768365667,
+      "modelPointMinutes": 610.1986101699,
+      "preferredSector": 6,
+      "selectedSector": 6,
+      "straightKm": 650.5725140282703,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -100.83945,
+            33.15753
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-720-inside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -107.18797,
+        "lat": 44.93187
+      },
+      "modelCellMinutes": 710.0369435032329,
+      "modelPointMinutes": 710.3786101698996,
+      "preferredSector": 10,
+      "selectedSector": 10,
+      "straightKm": 935.1761531009448,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -107.18797,
+            44.93187
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hays-ks-720-outside",
+      "originId": "hays-ks",
+      "category": "rural Great Plains",
+      "origin": {
+        "lat": 38.8792,
+        "lon": -99.3268
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -108.06232,
+        "lat": 43.74105
+      },
+      "modelCellMinutes": 730.0269435032321,
+      "modelPointMinutes": 730.0286101698988,
+      "preferredSector": 10,
+      "selectedSector": 10,
+      "straightKm": 907.2504774443445,
+      "request": {
+        "coordinates": [
+          [
+            -99.3268,
+            38.8792
+          ],
+          [
+            -108.06232,
+            43.74105
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-360-inside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -87.10095,
+        "lat": 45.70282
+      },
+      "modelCellMinutes": 350.09429405079743,
+      "modelPointMinutes": 353.4567879977135,
+      "preferredSector": 3,
+      "selectedSector": 3,
+      "straightKm": 402.82967859767245,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -87.10095,
+            45.70282
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -87.66185,
+        "lat": 45.0997
+      },
+      "modelCellMinutes": 370.0388062476477,
+      "modelPointMinutes": 372.302139580981,
+      "preferredSector": 3,
+      "selectedSector": 3,
+      "straightKm": 391.0387895287612,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -87.66185,
+            45.0997
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -97.10138,
+        "lat": 41.01295
+      },
+      "modelCellMinutes": 590.008806247648,
+      "modelPointMinutes": 590.0104729143146,
+      "preferredSector": 7,
+      "selectedSector": 7,
+      "straightKm": 756.4130665714935,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -97.10138,
+            41.01295
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -99.32231,
+        "lat": 42.94749
+      },
+      "modelCellMinutes": 610.0688062476462,
+      "modelPointMinutes": 610.0688062476462,
+      "preferredSector": 7,
+      "selectedSector": 7,
+      "straightKm": 710.9658447932243,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -99.32231,
+            42.94749
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -105.47339,
+        "lat": 46.67349
+      },
+      "modelCellMinutes": 709.9054729143145,
+      "modelPointMinutes": 711.9788062476479,
+      "preferredSector": 11,
+      "selectedSector": 9,
+      "straightKm": 1018.0894522272421,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -105.47339,
+            46.67349
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "originId": "duluth-mn",
+      "category": "Great Lakes and northern border",
+      "origin": {
+        "lat": 46.7867,
+        "lon": -92.1005
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -104.37019,
+        "lat": 46.19137
+      },
+      "modelCellMinutes": 729.8898396652215,
+      "modelPointMinutes": 729.8898396652215,
+      "preferredSector": 11,
+      "selectedSector": 9,
+      "straightKm": 940.6982640891624,
+      "request": {
+        "coordinates": [
+          [
+            -92.1005,
+            46.7867
+          ],
+          [
+            -104.37019,
+            46.19137
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-360-inside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -80.10748,
+        "lat": 37.46188
+      },
+      "modelCellMinutes": 350.04307038179905,
+      "modelPointMinutes": 350.04307038179905,
+      "preferredSector": 4,
+      "selectedSector": 4,
+      "straightKm": 374.3463858965369,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -80.10748,
+            37.46188
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-360-outside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -80.25191,
+        "lat": 36.25135
+      },
+      "modelCellMinutes": 370.00807038179914,
+      "modelPointMinutes": 370.00807038179914,
+      "preferredSector": 4,
+      "selectedSector": 4,
+      "straightKm": 477.3593987892664,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -80.25191,
+            36.25135
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-600-inside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -92.36316,
+        "lat": 37.38909
+      },
+      "modelCellMinutes": 589.999637511979,
+      "modelPointMinutes": 589.999637511979,
+      "preferredSector": 8,
+      "selectedSector": 8,
+      "straightKm": 861.2430074534328,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -92.36316,
+            37.38909
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-600-outside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -92.91856,
+        "lat": 38.28645
+      },
+      "modelCellMinutes": 609.9864037151327,
+      "modelPointMinutes": 609.9864037151327,
+      "preferredSector": 8,
+      "selectedSector": 8,
+      "straightKm": 875.234425865697,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -92.91856,
+            38.28645
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-720-inside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -73.09165,
+        "lat": 44.03629
+      },
+      "modelCellMinutes": 710.026403715133,
+      "modelPointMinutes": 710.026403715133,
+      "preferredSector": 0,
+      "selectedSector": 1,
+      "straightKm": 934.799150557251,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -73.09165,
+            44.03629
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "columbus-oh-720-outside",
+      "originId": "columbus-oh",
+      "category": "inland metropolitan",
+      "origin": {
+        "lat": 39.9612,
+        "lon": -82.9988
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -73.06746,
+        "lat": 44.88702
+      },
+      "modelCellMinutes": 730.0025441468806,
+      "modelPointMinutes": 730.9490640906922,
+      "preferredSector": 0,
+      "selectedSector": 1,
+      "straightKm": 980.9783691440762,
+      "request": {
+        "coordinates": [
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -73.06746,
+            44.88702
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-360-inside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -82.33716,
+        "lat": 31.97221
+      },
+      "modelCellMinutes": 349.9116666666668,
+      "modelPointMinutes": 349.91333333333347,
+      "preferredSector": 5,
+      "selectedSector": 5,
+      "straightKm": 403.3333462499153,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -82.33716,
+            31.97221
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-360-outside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -81.71193,
+        "lat": 31.46296
+      },
+      "modelCellMinutes": 370.0400000000002,
+      "modelPointMinutes": 370.21833333333353,
+      "preferredSector": 5,
+      "selectedSector": 5,
+      "straightKm": 466.01029815756,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -81.71193,
+            31.46296
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-600-inside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -91.2303,
+        "lat": 36.02922
+      },
+      "modelCellMinutes": 589.9994951680827,
+      "modelPointMinutes": 589.9994951680827,
+      "preferredSector": 9,
+      "selectedSector": 9,
+      "straightKm": 783.8145455150992,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -91.2303,
+            36.02922
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-600-outside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -91.49539,
+        "lat": 36.43675
+      },
+      "modelCellMinutes": 610.0000000000002,
+      "modelPointMinutes": 610.1833333333335,
+      "preferredSector": 9,
+      "selectedSector": 9,
+      "straightKm": 809.543432971106,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -91.49539,
+            36.43675
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-720-inside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -75.93746,
+        "lat": 43.09154
+      },
+      "modelCellMinutes": 710.0099999999998,
+      "modelPointMinutes": 710.4549999999998,
+      "preferredSector": 1,
+      "selectedSector": 1,
+      "straightKm": 1008.3601167464604,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -75.93746,
+            43.09154
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asheville-nc-720-outside",
+      "originId": "asheville-nc",
+      "category": "Appalachian mountains",
+      "origin": {
+        "lat": 35.5951,
+        "lon": -82.5515
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -74.90139,
+        "lat": 42.79735
+      },
+      "modelCellMinutes": 729.9933333333332,
+      "modelPointMinutes": 729.9949999999999,
+      "preferredSector": 1,
+      "selectedSector": 1,
+      "straightKm": 1036.3378996647896,
+      "request": {
+        "coordinates": [
+          [
+            -82.5515,
+            35.5951
+          ],
+          [
+            -74.90139,
+            42.79735
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-360-inside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -74.88889,
+        "lat": 40.92918
+      },
+      "modelCellMinutes": 349.9749999999998,
+      "modelPointMinutes": 350.1633333333331,
+      "preferredSector": 6,
+      "selectedSector": 7,
+      "straightKm": 487.0001425346492,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -74.88889,
+            40.92918
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-360-outside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -75.03865,
+        "lat": 40.73951
+      },
+      "modelCellMinutes": 369.9983333333331,
+      "modelPointMinutes": 369.9999999999998,
+      "preferredSector": 6,
+      "selectedSector": 7,
+      "straightKm": 510.2901612110178,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -75.03865,
+            40.73951
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-600-inside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -78.82475,
+        "lat": 39.59963
+      },
+      "modelCellMinutes": 589.9899999999994,
+      "modelPointMinutes": 589.9899999999994,
+      "preferredSector": 10,
+      "selectedSector": 8,
+      "straightKm": 842.4528140575713,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -78.82475,
+            39.59963
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-600-outside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -79.86222,
+        "lat": 41.14159
+      },
+      "modelCellMinutes": 610.0083333333332,
+      "modelPointMinutes": 610.0083333333332,
+      "preferredSector": 10,
+      "selectedSector": 8,
+      "straightKm": 836.3191671267616,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -79.86222,
+            41.14159
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-720-inside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -78.49399,
+        "lat": 37.63117
+      },
+      "modelCellMinutes": 709.9882519571696,
+      "modelPointMinutes": 709.9899186238363,
+      "preferredSector": 2,
+      "selectedSector": 7,
+      "straightKm": 964.6091635347692,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -78.49399,
+            37.63117
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "portland-me-720-outside",
+      "originId": "portland-me",
+      "category": "Northeast coast and border",
+      "origin": {
+        "lat": 43.6591,
+        "lon": -70.2568
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -80.16304,
+        "lat": 37.26252
+      },
+      "modelCellMinutes": 729.9983333333337,
+      "modelPointMinutes": 730.9933333333336,
+      "preferredSector": 2,
+      "selectedSector": 7,
+      "straightKm": 1097.8350345858569,
+      "request": {
+        "coordinates": [
+          [
+            -70.2568,
+            43.6591
+          ],
+          [
+            -80.16304,
+            37.26252
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-360-inside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -84.66308,
+        "lat": 29.85043
+      },
+      "modelCellMinutes": 349.87000000000006,
+      "modelPointMinutes": 351.6840550523018,
+      "preferredSector": 7,
+      "selectedSector": 7,
+      "straightKm": 421.25820226764324,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -84.66308,
+            29.85043
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-360-outside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 360,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -84.98338,
+        "lat": 30.0638
+      },
+      "modelCellMinutes": 370.0764652385413,
+      "modelPointMinutes": 370.0764652385413,
+      "preferredSector": 7,
+      "selectedSector": 7,
+      "straightKm": 433.2154013476405,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -84.98338,
+            30.0638
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-600-inside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -84.68972,
+        "lat": 38.65655
+      },
+      "modelCellMinutes": 589.9966666666664,
+      "modelPointMinutes": 589.9966666666664,
+      "preferredSector": 11,
+      "selectedSector": 11,
+      "straightKm": 800.4885536970364,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -84.68972,
+            38.65655
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-600-outside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 600,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -81.31799,
+        "lat": 39.86753
+      },
+      "modelCellMinutes": 609.9957427291536,
+      "modelPointMinutes": 609.9974093958202,
+      "preferredSector": 11,
+      "selectedSector": 11,
+      "straightKm": 866.0732827539554,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -81.31799,
+            39.86753
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-720-inside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": true,
+      "destination": {
+        "lon": -74.49153,
+        "lat": 39.41316
+      },
+      "modelCellMinutes": 710.0416825335121,
+      "modelPointMinutes": 710.2399999999998,
+      "preferredSector": 3,
+      "selectedSector": 1,
+      "straightKm": 1009.0058685846949,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -74.49153,
+            39.41316
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "savannah-ga-720-outside",
+      "originId": "savannah-ga",
+      "category": "Atlantic coastal plain",
+      "origin": {
+        "lat": 32.0809,
+        "lon": -81.0912
+      },
+      "budgetMinutes": 720,
+      "expectedMapReachable": false,
+      "destination": {
+        "lon": -74.2366,
+        "lat": 40.42878
+      },
+      "modelCellMinutes": 730.01,
+      "modelPointMinutes": 731.3416666666667,
+      "preferredSector": 3,
+      "selectedSector": 1,
+      "straightKm": 1112.4289653031065,
+      "request": {
+        "coordinates": [
+          [
+            -81.0912,
+            32.0809
+          ],
+          [
+            -74.2366,
+            40.42878
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    }
+  ],
+  "reference": {
+    "endpoint": "https://api.heigit.org/openrouteservice/v2/directions/driving-car/geojson",
+    "method": "POST",
+    "maximumRequests": 48,
+    "minimumIntervalMs": 6500,
+    "timeoutMs": 45000,
+    "retries": 0,
+    "paidSpendCapEuro": 0,
+    "authentication": "Existing server-only ORS_API_KEY, never embedded in this plan",
+    "stopOnStatus": [
+      401,
+      403,
+      429
+    ]
+  },
+  "scope": "Frozen pre-reference frontier probes: eight public non-Southern-California origins, 6/10/12h, one inside/outside pair each. Destinations use existing land-supported Census states, 5–20 model-cell minutes from the horizon; full point attachments must agree on side with a 2-minute margin. Preferred azimuth rotates generically, with deterministic available-sector fallback and cell tie-breaks. These model-conditioned frontier probes are not a random national sample, area accuracy, unseen software inputs, traffic truth or all-origin qualification. No source/service/provider/DB request or API-key read. Routing code never imports these locations."
+}

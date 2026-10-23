@@ -40,7 +40,7 @@ npm run check:coarse:vercel
 
 Checks pass locally, including a generated-handler 30-minute result. For browser QA, reload once after builds/docs finish, confirm default120/min30/max720, click/release the track (375 minutes at its center), observe `Updating area…`, and wait for matching run metadata without using submit. Test Home→30, End→720, rapid End/ArrowLeft→719, reset→120 and keyboard auto-computation, then fixture Cloud saved→reload→Replay. Inspect only new public fixture history. [Evidence](evidence/time-slider-2026-10-23/checks.json).
 
-The public live configuration still advertises min60. After publishing this update, use the existing hosted verifier; it deliberately requires min30. No compute/provider/history request was made during the one configuration observation. Native range controls need no new UI dependency.
+The slider/min30 update is committed at `9b3e83b` (`slider`), user-reported deployed. Fifteen hosted checks pass, plus browser default/minimum/pointer/keyboard/loading/latest-result checks. A first min60 response preceded the subsequent successful observation; retain both. Public responses do not expose the deployed Git SHA. Hosted Save query was rejected by automatic approval review, so persistence writes/replay were not retested. [Latest evidence](evidence/coarse-frontier-tool-2026-10-23/README.md). Native range controls need no new UI dependency.
 
 ## Fixed nonregional frontier plan
 
@@ -53,7 +53,51 @@ npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResoluti
 
 Expected plan SHA `77360fec0906c5a3eeedc533eef55cbe8557659266c25badcc4b924412e4271e`, eight public origins × three horizons × two sides = 48 requests, zero provider/DB calls or key reads. Existing runs `data/coarse-quality/coarse-holdout-plan-v1/` and `-repeat/` match byte for byte. Preparation only searches bundled v8; its diagnostic 750-minute labels supply points outside 720 without changing the public API. No raw sources or Python are needed.
 
-A bounded capture/replay helper is the next implementation task; none exists yet and no fresh references were requested. Obtain explicit authorization for the 48-request, zero-paid-spend cap before calls. The plan records the new HeiGIT Directions endpoint, current public limits/terms, exact bodies, no retries and all scoring/failure denominators. It is a model-conditioned frontier check, not a random national accuracy sample. The optional connected adapter still uses the legacy ORS host, announced for retirement November 2–6, 2026; follow up with a focused endpoint migration and mock checks before relying on it then. [Primary migration notice](https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912).
+The bounded [capture/replay CLI](../scripts/compare-coarse-holdout.ts) is now implemented locally. Safe offline commands (no key/environment read or provider call):
+
+```sh
+node --import tsx scripts/compare-coarse-holdout.ts --check
+node --import tsx --test scripts/coarse-holdout.test.ts
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-holdout.ts scripts/coarse-holdout.test.ts scripts/compare-coarse-holdout.ts
+```
+
+Eleven synthetic tests pass; `--check` expects the plan SHA above and planned48/provider0/keyReadfalse. A retained **synthetic-only** fixture at `data/coarse-quality/coarse-frontier-tool-fixture-v1/` contains one artificial route, one artificial429 and46 skipped cases. Its CLI replay matches [the saved synthetic report](evidence/coarse-frontier-tool-2026-10-23/synthetic-replay.json); these are software fixtures, not real travel measurements. The separate approved live run below is now complete.
+
+**Completed acquisition:** the user approved the exact 48-request / zero-paid-spend / no-retry budget, and all 48 requests succeeded. That single-run budget is consumed; do not run the capture command again, probe auth/status, replace cases or retry without separate authorization. The full credential-free run is preserved in [the measured evidence](evidence/coarse-frontier-reference-2026-10-23/README.md), including [raw capture and checksums](evidence/coarse-frontier-reference-2026-10-23/reference/sha256.json). The ignored original is `data/coarse-quality/coarse-frontier-reference-v1/`; its report is the sibling `coarse-frontier-reference-v1-report.json`. Mean absolute difference is 52.273min; all 48 pair and no snap exceeds 100m.
+
+Offline replay of the existing local capture (writes only a report outside the sealed directory):
+
+```sh
+node --import tsx scripts/compare-coarse-holdout.ts --replay data/coarse-quality/coarse-frontier-reference-v1 > /tmp/coarse-frontier-reference-replay.json
+```
+
+After these files/tools are committed, a fresh clone can restore the saved evidence once into a **new** ignored directory without key/network access:
+
+```sh
+python3 -B - <<'PYTHON'
+from pathlib import Path
+import shutil
+Path('data/coarse-quality').mkdir(parents=True, exist_ok=True)
+shutil.copytree('docs/evidence/coarse-frontier-reference-2026-10-23/reference',
+                'data/coarse-quality/coarse-frontier-reference-restored-v1')
+PYTHON
+node --import tsx scripts/compare-coarse-holdout.ts --replay data/coarse-quality/coarse-frontier-reference-restored-v1 > /tmp/coarse-frontier-restored-report.json
+```
+
+Expected replay is byte-identical to [comparison.json](evidence/coarse-frontier-reference-2026-10-23/comparison.json): 48 attempts/pairs, stopReason null, 23 correct /17 false reachable /five missed reachable /three ambiguous. Capture directories are append-only/sealed; replay rejects changed/incomplete/unsealed files and reads no key. Keep generated reports outside them. Restoring refuses existing destinations; preserve all original/failed evidence.
+
+The [offline inspector](../scripts/inspect-coarse-frontier.ts) reconstructed all 48 point/cell costs and path sums from unchanged v8, using production transitions and a diagnostic 750-minute horizon for outside 720 probes. Outputs are at ignored `data/coarse-quality/coarse-frontier-diagnostic-v1/` and copied into [the evidence](evidence/coarse-frontier-reference-2026-10-23/diagnostic.json). Read existing outputs for readiness; do not rerun completed searches just to check docs. If the diagnostic changes, use a fresh versioned directory:
+
+```sh
+node --import tsx scripts/inspect-coarse-frontier.ts data/coarse-quality/coarse-frontier-reference-v1-report.json data/coarse-quality/coarse-frontier-diagnostic-new
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/inspect-coarse-frontier.ts
+```
+
+[Additional analysis](evidence/coarse-frontier-reference-2026-10-23/analysis.json) reads the saved paths and active artifact without a search or provider request. Road edges dominate time (98.64%); class-dependent timing is the [next proposed experiment](evidence/coarse-frontier-reference-2026-10-23/calibration-plan.json), not an implemented improvement. All 83 now-observed reference routes are development data; no fresh holdout claim follows.
+
+Capture-mode behavior remains: existing server-only `ORS_API_KEY` from process environment, then ignored `.env.local`/`.env` without overriding existing values; fixed endpoint/exact48 bodies, at least6.5s between starts, 45s header/body deadline, no retries/redirects/fallback/probe/paid upgrade, stop on401/403/429 or returned zero quota, 2MB response bound and disk-write stop. Only selected nonsecret headers and redacted response text are stored; fixed diagnostics avoid logging raw exceptions. Any future live run requires a separately authorized budget, fresh directory and preserved failures; interrupted runs cannot resume. No env file was edited or new variable added. [Current next steps](next-steps.md).
+
+The plan uses the new HeiGIT endpoint. Inspection confirms the existing connected adapter and its mock endpoint test already use that host; the previous migration todo was stale. Its separate60-minute limit remains unchanged. This model-conditioned frontier check is not a random national accuracy sample.
 
 ## Speed Insights
 
@@ -549,4 +593,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 is committed at `ee8809f`; one public live configuration read confirms v8/min60, while the min30 slider update is local. Full hosted revision/behavior proof remains pending after its publication; actual connected-provider cloud verification remains open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 and the min30 slider are committed through `9b3e83b`, user-reported deployed; fifteen public hosted checks and automatic slider browser checks pass. Public responses do not independently expose the Git SHA; hosted history writes were not repeated. The subsequent approved 48-route reference run is complete and shows material long-horizon error; its single-run quota budget is consumed. The class-timing candidate is proposed, not implemented. Actual connected-provider contour cloud verification remains separate and open.

@@ -2,7 +2,7 @@
 
 A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse contours from 30 minutes to 12 hours across the contiguous US**, with a two-hour default and a release-to-update time slider.
 
-Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V8 is committed at `ee8809f` (commit message `v7`); the slider/API-range update and validation-plan tooling are local/uncommitted.** A public deployment configuration check confirms v8 with the earlier 60-minute minimum; the new UX still needs publication. Raw sources, detailed graphs and credentials remain local-only.
+Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V8 and the time slider are committed through `9b3e83b` (`slider`) and user-reported deployed.** Fifteen hosted API checks and automatic slider updates pass. The approved 48-route reference run is complete: all succeed, but mean absolute difference is **52.27 minutes** (12-hour probes: **78.77 minutes**). The tool/diagnostic/evidence remain local/uncommitted. [New measurements and next prototype](docs/evidence/coarse-frontier-reference-2026-10-23/README.md). Raw sources, detailed graphs and credentials remain local-only.
 
 ## What works today
 
@@ -13,7 +13,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 Across all 35 saved development references, **29 estimates improve and six worsen** versus v7, at most +3.18 min. Mean absolute reference difference falls **11.58→10.29 min** and **17.21→12.01 min**; all destinations remain reached/shaded. These regional references do not prove national or long-horizon accuracy. [Paired maps, results and limits](docs/evidence/coarse-finer-2026-10-23/README.md).
 
-The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: publish/verify the slider update, then acquire the prepared 48 nonregional frontier references after quota authorization. Detailed research stays parked. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
+The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: prototype a generic road-class timing calibration in a separate candidate and compare it with the preserved v8 baseline; no timing change is implemented yet. Detailed research stays parked. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
 
 ## Run locally
 

@@ -1,0 +1,14 @@
+{
+  "status": "proposed offline candidate; not run or shipped",
+  "rule": "Apply by source road-speed class everywhere: 105 to 95 km/h, 80 to 85 km/h; retain 55/90 km/h classes, 25 km/h local travel, geography, resolution, paid transfers and topology rules.",
+  "derivation": "Long-horizon errors are mostly optimistic and road-edge dominated; the largest optimistic case is dominated by105-tag base links while the largest pessimistic case is dominated by80-tag base links. This supports a two-class calibration experiment, not causal proof or a location-specific correction.",
+  "implementation": "Version a fresh producer/candidate, preserve all sealed producers and v8. Recompute source-geometry road and connector costs under the new class policy, rather than multiplying aggregate edge cost including fixed 25 km/h transfers. No new source/reference/provider request.",
+  "evaluation": "Exact full-search comparisons on all 48 now-observed frontier probes plus the 35 retained regional development routes. These sets guide development and are not fresh holdouts for the candidate. No route replacement or threshold changes.",
+  "admission": {
+    "frontierMeanAbsoluteMinutesMaximum": 47.045788284778304,
+    "frontierP90AbsoluteMinutesMaximum": 116.33153485009313,
+    "regionalMeans": "Neither retained regional-set mean absolute error may worsen relative to exact frozen v8 results.",
+    "other": "All 83 cases retained; all 35 prior reached/shaded destinations remain reached/shaded. Show all per-origin/route regressions. Existing geography, source-distance/cost, path-sum, runtime memory/package/initialization and Vercel compatibility checks must pass before activation."
+  },
+  "ifRejected": "Preserve the failed candidate and investigate source-class or route-geometry causes using existing raw routes; do not relax the admission criteria or add regional exceptions to make it pass."
+}
