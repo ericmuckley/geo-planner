@@ -1,0 +1,122 @@
+{
+  "cases": [
+    {
+      "set": "original",
+      "id": "Borrego Springs",
+      "absoluteErrorChangeMinutes": 5.668466974863435,
+      "baselineErrorMinutes": 31.016933908379954,
+      "candidateErrorMinutes": 36.68540088324339,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -1.98,
+        "roadMinutes": 1.9733333333333718,
+        "intercellLocalMinutes": 6.37513310878192,
+        "destinationAccessMinutes": -0.6999994672518426
+      }
+    },
+    {
+      "set": "original",
+      "id": "Julian",
+      "absoluteErrorChangeMinutes": 1.7883333333333553,
+      "baselineErrorMinutes": 7.441199999999981,
+      "candidateErrorMinutes": 9.229533333333336,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -1.98,
+        "roadMinutes": 4.493333333333368,
+        "intercellLocalMinutes": 0,
+        "destinationAccessMinutes": -0.7249999999999943
+      }
+    },
+    {
+      "set": "regional",
+      "id": "los-angeles--ventura",
+      "absoluteErrorChangeMinutes": 1.8745898953230693,
+      "baselineErrorMinutes": 2.495118045118744,
+      "candidateErrorMinutes": 4.369707940441813,
+      "componentChangesMinutes": {
+        "originAccessMinutes": 1.7485184769731998,
+        "roadMinutes": 0.30833333333333,
+        "intercellLocalMinutes": 0,
+        "destinationAccessMinutes": -0.18226191498344235
+      }
+    },
+    {
+      "set": "regional",
+      "id": "santa-barbara--brawley",
+      "absoluteErrorChangeMinutes": 1.4550293053533778,
+      "baselineErrorMinutes": 54.946399999999926,
+      "candidateErrorMinutes": 56.401429305353304,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -10.345,
+        "roadMinutes": -2.088333333333196,
+        "intercellLocalMinutes": 11.58308802051611,
+        "destinationAccessMinutes": 2.305274618170472
+      }
+    },
+    {
+      "set": "regional",
+      "id": "julian--borrego-springs",
+      "absoluteErrorChangeMinutes": 2.4301336415300625,
+      "baselineErrorMinutes": 24.269217241713328,
+      "candidateErrorMinutes": 26.69935088324339,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -0.7250000000000001,
+        "roadMinutes": -2.5199999999999996,
+        "intercellLocalMinutes": 6.37513310878192,
+        "destinationAccessMinutes": -0.6999994672518639
+      }
+    },
+    {
+      "set": "regional",
+      "id": "borrego-springs--julian",
+      "absoluteErrorChangeMinutes": 2.4301336415300767,
+      "baselineErrorMinutes": 24.777017241713317,
+      "candidateErrorMinutes": 27.207150883243393,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -0.6999994672518586,
+        "roadMinutes": -2.519999999999996,
+        "intercellLocalMinutes": 6.375133108781927,
+        "destinationAccessMinutes": -0.7249999999999943
+      }
+    },
+    {
+      "set": "regional",
+      "id": "salton-city--bombay-beach",
+      "absoluteErrorChangeMinutes": 3.886788008446274,
+      "baselineErrorMinutes": 52.34865077013382,
+      "candidateErrorMinutes": 56.2354387785801,
+      "componentChangesMinutes": {
+        "originAccessMinutes": -3.423693405339658,
+        "roadMinutes": -2.680000000000007,
+        "intercellLocalMinutes": 8.130481413785944,
+        "destinationAccessMinutes": 1.8599999999999994
+      }
+    },
+    {
+      "set": "regional",
+      "id": "bombay-beach--salton-city",
+      "absoluteErrorChangeMinutes": 3.886788008446274,
+      "baselineErrorMinutes": 52.034334103467145,
+      "candidateErrorMinutes": 55.92112211191342,
+      "componentChangesMinutes": {
+        "originAccessMinutes": 1.8600000000000003,
+        "roadMinutes": -2.6799999999999926,
+        "intercellLocalMinutes": 8.130481413785944,
+        "destinationAccessMinutes": -3.4236934053396624
+      }
+    },
+    {
+      "set": "regional",
+      "id": "bombay-beach--indio",
+      "absoluteErrorChangeMinutes": 7.091993785374385,
+      "baselineErrorMinutes": 53.21135077013381,
+      "candidateErrorMinutes": 60.3033445555082,
+      "componentChangesMinutes": {
+        "originAccessMinutes": 1.8600000000000003,
+        "roadMinutes": -37.44999999999999,
+        "intercellLocalMinutes": 44.545327118707704,
+        "destinationAccessMinutes": -1.8633333333333297
+      }
+    }
+  ],
+  "scope": "All nine reused-reference error regressions, reconstructed path-component differences versus v5. Components describe model paths, not isolated real-world error causes. Finer rasterization/anchor selection can remove coarse connections and add local travel; no location-specific corrections, new references or quota were used."
+}

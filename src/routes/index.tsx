@@ -331,7 +331,7 @@ function Home() {
 						</label>
 						{coarse && (
 							<p className="mb-4 text-xs leading-relaxed text-[var(--sea-ink-soft)]">
-								Road-informed grid, about 7–11 km per cell. Local access is
+								Road-informed grid, about 3.5–5.5 km per cell. Local access is
 								estimated; accuracy has not been calibrated. No routing API key
 								needed.
 							</p>

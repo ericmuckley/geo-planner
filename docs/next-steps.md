@@ -1,18 +1,18 @@
 # Next steps for coding agents
 
-Updated October 22, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
+Updated October 23, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
 
-## Current baseline — v5 ready locally
+## Completed: finer nationwide v6
 
-**Nationwide v5 is active locally; production remains verified v4 at `637746c`.** All subsequent runtime/data/tools/tests/evidence/docs are uncommitted. The active 39,977,082-byte v5 artifact must accompany publication; raw sources/candidates/probes remain ignored/local-only. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md), [source preparation](evidence/coarse-national-2026-10-22/README.md), [existing hosted v4](evidence/coarse-hosted-2026-10-22/README.md).
+**V6 is active locally at 0.05° (about 3.5–5.5 km cells); production is user-reported v5 at `08074fb`.** New runtime/data/tools/evidence/docs are uncommitted. [V6 evidence / visible comparisons](evidence/coarse-resolution-2026-10-23/README.md), [handoff](agent-handoff.md), [model](coarse-estimator.md). The new configurable builder rebuilds masks, anchors, roads, shores and visits from existing pinned inputs. It does not resize v5 labels or modify sealed historical producers.
 
-The same rules support arbitrary contiguous-US land inputs at 60–720 whole minutes. Census roads add 36,742 links and lower 73 costs while retaining original roads/anchors/geography. Source notices are finalized and visible. Generic fixed geography indexing retains all validation, reducing first local packaged computation from 22.2 seconds to **2.46–2.47 seconds in three fresh processes**. Full sweeps over 153,477 inputs retain bounded memory (32.44 MB incremental decoded storage; no query cache). These are local observations, not cloud cold-start/peak-memory qualification.
+Active artifact: 68,129,975 bytes / SHA `a1ba5ae3eb7419feb458641f00da1886802fc16ec11af86e3d61d42a3b8b3f99`, with exact source/repeat/version parity. All 35 saved cases remain reached/shaded: 26 improve, nine regress, worst +7.092 min. Original/broader mean absolute reference differences fall 33.0%/24.3%; these reused development sets are not national or long-horizon accuracy proof. All regressions/path components remain visible. No 0.025° candidate exists.
 
-51 server tests, fifteen geometry fixtures, check/typechecks, both builds and generated Vercel handler pass. All 35 costs/path components and 42 national counts match accepted national-v2 exactly. Seven saved cases improve versus v4, 28 unchanged, none regress. Local browser inland 6h/rural 10h/coastal 12h, notices and new fixture cloud save/reload/replay pass. No new env variable, migration, dependency or routing quota is needed. National driving accuracy remains unvalidated; detailed research stays parked.
+First local package computation meets the <5s engineering target in three fresh runs (3.06–3.12s); final active handler is 71,940,272 bytes/28 files with zero outbound calls. Retained decoded storage is 57.30MB; 405,384 inputs retain bounded memory. 51 server tests, nineteen geometry fixtures, full link/shore proofs, 42 active API cases, check/typechecks, both builds, local handler, twelve paired UI scenarios and main-app fixture cloud save/reload/replay pass. Cloud cold starts, peak memory/load capacity remain unmeasured. No new env variable, dependency or migration is required.
 
-## 1. Publish and verify the actual v5 deployment
+## 1. Publish and verify actual v6
 
-Review the existing dirty tree, include the new v5 artifact and publish through the existing Git/Vercel project workflow. Do not reset/clean local work or commit secrets/raw sources. No commit/push/deploy was performed during local activation. Before publication, these are the relevant checks (already passed for the current implementation; repeat only after changes or an unresolved concern):
+Review the dirty tree and publish using the existing Git/Vercel project workflow. Include **`src/server/data/coarse-grid-v6.json`** and the new scripts/templates/evidence; preserve ignored raw sources, credentials and all v1–v5 artifacts. No commit/push/deployment occurred during local activation. Checks below already pass; repeat only after changes or an unresolved concern:
 
 ```sh
 npm run check
@@ -25,33 +25,33 @@ npm run build:vercel
 npm run check:coarse:vercel
 ```
 
-After the new deployment is Ready, identify its actual revision/model and deliberately run:
+When the new deployment is Ready, identify its actual revision and deliberately run:
 
 ```sh
 node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
 ```
 
-**Pass:** actual deployed revision includes v5; config reports `coarse-road-grid-v5` / `natural-earth-census-2026-grid-v5`; fifteen HTTP checks pass with v5 saved cell counts, source notice, validation errors, disabled research and empty no-cookie history. Browser shows an arbitrary public 6/10/12h query, visible Census modified-data notice, a newly created fixture Cloud saved → reload → Replay and working map controls. Use only new fixture history; no private cookies/bulk export. Record revision/URL, response timing scopes and screenshot in a new measured run. Fail version/count mismatches explicitly. Updated verifier intentionally rejects old hosted v4. Do not call connected routing or acquire new references. Do not rerun the full live DB write suite unless persistence changes.
+**Pass:** deployed code includes v6; config reports `coarse-road-grid-v6` / `natural-earth-census-2026-grid-v6`, fifteen app HTTP checks match saved v6 counts/notices, invalid inputs fail, detailed research is disabled and fresh no-cookie history is empty/configured. Verify one arbitrary public 6/10/12h browser query, visible 0.05°/3.5–5.5km source notices and new fixture Cloud saved→reload→Replay/map controls. Inspect only fixture history; no private cookies/bulk export. Record deployed revision/URL and measured timings/screenshots in a new run. Updated verifier intentionally rejects old v5. First/repeat HTTP calls do not establish cold/warm state. Do not redeploy unchanged code merely for documentation or rerun full DB integration unless persistence changes.
 
-HTTP first/repeat calls do not establish cold/warm state; cloud memory/load remains unmeasured. No source acquisition/producer, DB/env/configuration change or detailed-engine run is required. [Exact setup/recovery](local-development.md#nationwide-census-candidate).
+## 2. Refine remaining generic access/transfer error
 
-## 2. Diagnose the next generic accuracy correction
+Use all [35 v6 comparisons](evidence/coarse-resolution-2026-10-23/comparison.json), [reconstructed paths](evidence/coarse-resolution-2026-10-23/path-diagnostics.json) and [nine regressions](evidence/coarse-resolution-2026-10-23/regressions.json). Several regressions add intercell overland travel; one canonical anchor and one supplemental road per cell remain plausible causes to test, not isolated causal error measurements. Choose a small universal correction from evidence before coding. Do not patch named routes/coordinates, raise all speeds or silently drop worse/unreached cases.
 
-Use the saved [v5 comparisons](evidence/coarse-v5-2026-10-22/comparison.json) and [path components](evidence/coarse-v5-2026-10-22/path-diagnostics.json) to rank remaining reference differences and their endpoint/local/road contributions. Reuse existing references; do not spend quota. The current one-supplemental-visit/fixed-anchor model and repeated 25 km/h transfers remain plausible limitations, not established causes of every error. Choose a small universal correction from measured evidence before coding; no named-region/query exceptions or blanket speed increase.
-
-Offline inspection can deliberately rerun these read-only commands when needed (cached Natural Earth roads are needed only for the path diagnostic):
+Existing offline review commands (no source downloads/providers):
 
 ```sh
-node --import tsx scripts/compare-coarse-candidate.ts src/server/data/coarse-grid-v5.json
+node --import tsx scripts/compare-coarse-resolution.ts data/coarse-quality/resolution-005-v2/grid.json
 node --import tsx scripts/inspect-coarse-access.ts \
-  src/server/data/coarse-grid-v5.json \
-  docs/evidence/coarse-v5-2026-10-22/comparison.json
+  data/coarse-quality/resolution-005-v2/grid.json \
+  docs/evidence/coarse-resolution-2026-10-23/comparison.json
 ```
 
-**Acceptance for an ensuing implementation:** preserve existing source/evidence artifacts, physical distance charges, country/lake/shore checks, arbitrary-query behavior and runtime deployment independence. Add meaningful synthetic tests for the chosen general rule; compare every saved cost/path and national count explicitly. Recheck package/initialization/retained storage only when affected. Use a new artifact/recipe if graph geometry/costs change; keep original results distinguishable from interpretation. The existing development sets do not establish national accuracy, so report their limits.
+The comparator deliberately baselines preserved v5 and accepts different dimensions/anchors. The older candidate comparator requires fixed v4 geometry and is unsuitable for cross-resolution comparisons. To compare a subsequent cost correction against v6, add an explicit new baseline/version without overwriting these records. Report all paired errors and every unreachable/unshaded outcome. Add meaningful synthetic fixtures for the chosen generic rule; preserve physical distance, full source/land/country/lake/shore validation and Vercel runtime independence. Recheck affected resource/package behavior, including the existing local <5s initialization target, when storage/runtime changes.
+
+A 0.025° experiment is a possible later product step, after actual v6 feedback. Reuse the configurable builder into a fresh versioned directory and measure size/runtime rather than extrapolating; do not assume accuracy improves just because cells are smaller. [Exact producer/recovery commands](local-development.md#finer-resolution-v6). No completed producer or quota call is needed to validate documentation.
 
 ## Deferred scope
 
-Fresh nonregional driving references need explicit quota authorization. Precise topology/traffic/turns/terrain/access, border eligibility, finer grids/exact coastlines, caching, accounts/sharing/import, history cleanup/rate limits, PostGIS/spatial layers and advanced routing algorithms remain deferred. Overture remains a source alternative without a measured extraction footprint. Keep the useful coarse app working while refining measured gaps.
+Fresh nonregional driving references need explicit quota authorization. Precise topology/traffic/turns/terrain/access, border eligibility, exact coastlines, caching, accounts/sharing/import, history cleanup/rate limits, PostGIS/spatial layers and advanced routing algorithms remain deferred. Overture remains a source alternative without a measured extraction footprint. Keep the useful coarse app working while refining measured gaps.
 
 Detailed outgoing-index calibration is complete: both builds reproduce eight payloads at 2.415/2.416 GiB. Partial-source six-hour forecast remains 9.290 GiB with margin versus 4 GiB: hold. Memory profiling/graph expansion remain parked. [Evidence](evidence/source-outgoing-2026-10-19/README.md), [six-hour report](six-hour-preflight.md), [two-hour baseline](two-hour-region.md). Do not rerun completed producers as health checks.

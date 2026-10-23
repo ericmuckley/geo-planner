@@ -23,6 +23,12 @@ npm run preview -- --port 4173
 
 The route generator also runs during Vite builds. Use `npm run generate-routes` if typechecking a newly added route before starting/building Vite. Never edit the generated route tree manually. This sandbox required approval to install packages, use the test runner's IPC socket, and start the preview listener; these are environment restrictions, not application requirements.
 
+## Speed Insights
+
+The shared root at [src/routes/__root.tsx](../src/routes/__root.tsx) calls `injectSpeedInsights()` from `@vercel/speed-insights` in a mount-only `useEffect`. Effects run only in the browser, and the SDK prevents duplicate scripts. The package and lockfile already include version 2.0.0; no app environment variable is needed.
+
+After deploying the change to Vercel, visit the app and verify a successful `/_vercel/speed-insights/script.js` request in the browser Network panel, then inspect the project's **Speed Insights** dashboard as visitor measurements arrive. The installed SDK uses Vercel's debug script during development. Local checks/builds do not verify hosted collection. See [Vercel's quickstart](https://vercel.com/docs/speed-insights/quickstart).
+
 ## Cloud database configuration
 
 The user configured `DATABASE_URL` in Vercel and ignored local `.env`. The previous localhost value was removed from `.env.local`, preserving the optional routing provider/key. Local development and Drizzle commands now resolve the cloud URL. A read-only `SELECT 1` through `src/db/index.ts` passed on October 22. The additive `drizzle/0000_saved_history.sql` migration is now reviewed and applied to this initially empty cloud database: it creates `saved_histories`, the existing starter `todos` table, and Drizzle migration bookkeeping. No PostgreSQL process was listening on local port 5432 during the switch.
@@ -42,7 +48,7 @@ npm run build:vercel
 npm run check:coarse:vercel
 ```
 
-The geometry command runs fifteen small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
+The geometry command runs nineteen small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
 
 ## Coarse travel-cost comparison
 
@@ -102,14 +108,14 @@ These are model-to-model diagnostics, not live driving-time truth or national ac
 
 ## Hosted v4 verification
 
-[Production](https://geo-planner-orcin.vercel.app) remains verified v4 at `637746c`; [historical results](evidence/coarse-hosted-2026-10-22/README.md) preserve that scope. **The verifier now expects v5** and must run only after the new deployment is ready:
+This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hosted-2026-10-22/README.md) remains unchanged; the user reports v5 live. **The current verifier expects v6**, which is active locally but not yet deployed by this agent. Run deliberately after the new deployment is Ready:
 
 ```sh
 node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
 npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
 ```
 
-It makes fifteen app requests: five origins plus repeat/overlap, configuration/errors, disabled research and no-cookie history. It validates saved v5 counts/model/notices, sends no cookies/history writes and calls no routing-provider endpoint. It needs network but no key/env change. Against old v4 it intentionally fails the model assertion. HTTP times are not isolated graph search, proven cold/warm invocations, load or peak-memory measurements. Do not run it merely to validate docs. The v5 local artifact/package/browser proof is [here](evidence/coarse-v5-2026-10-22/README.md).
+It makes fifteen app requests, checks saved v6 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v5 intentionally fails the version assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v6 proof](evidence/coarse-resolution-2026-10-23/README.md).
 
 ## Offline road-source pilot
 
@@ -200,11 +206,59 @@ node scripts/prepare-coarse-package-probe.mjs data/coarse-quality/census-nationa
 node scripts/verify-coarse-vercel.mjs data/coarse-quality/census-national-v2/package-probe-new coarse-road-grid-candidate
 ```
 
-The handler checker defaults to the active project/v5 without args. Biome excludes ignored `data/`, including isolated source copies and frozen/local assets. The original candidate package took about 22 seconds for first computation; indexed validation now takes 2.46–2.47 seconds in three fresh local processes. V5 is active locally with final notices. No env variable, migration or runtime dependency is added. Preserve all old/failed outputs. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md).
+The handler checker now defaults to active project/v6 without args. Biome excludes ignored `data/`, including isolated source copies and frozen/local assets. The original candidate package took about 22 seconds for first computation; indexed validation now takes 2.46–2.47 seconds in three fresh local processes. V5 was activated at that milestone; v6 below is now active locally. No env variable, migration or runtime dependency is added. Preserve all old/failed outputs. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md).
+
+## Finer-resolution v6
+
+Normal development/deployment uses bundled `src/server/data/coarse-grid-v6.json` and requires no source producer or Python. It is uncommitted in this workspace; include it with publication. Expected: **68,129,975 bytes / SHA `a1ba5ae3eb7419feb458641f00da1886802fc16ec11af86e3d61d42a3b8b3f99`**. The runtime remains TypeScript with no new DB/key/env requirement. [Evidence](evidence/coarse-resolution-2026-10-23/README.md).
+
+For an intentional source rebuild, Python 3.11+, all three pinned NE files, all 49 Census ZIPs/locks, manifest/catalog and the checked PyShp wheel must exist. Current caches already contain them. A fresh clone needs the [Census recovery](#nationwide-census-candidate) and wheel setup above. NE files belong under `data/coarse-sources/natural-earth-v5.1.2/`; source URLs/hashes are in the preserved v5 JSON and enforced by `original.load`. Restore only missing public files, preserving existing caches:
+
+```sh
+mkdir -p data/coarse-sources/natural-earth-v5.1.2
+# Only for missing files on a fresh source-preparation machine:
+test -f data/coarse-sources/natural-earth-v5.1.2/countries.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson --output data/coarse-sources/natural-earth-v5.1.2/countries.geojson
+test -f data/coarse-sources/natural-earth-v5.1.2/lakes.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson --output data/coarse-sources/natural-earth-v5.1.2/lakes.geojson
+test -f data/coarse-sources/natural-earth-v5.1.2/roads.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
+```
+
+Hash/partial-file mismatches are errors to investigate, not permission to overwrite. Build only into a new directory; no completed producer needs rerunning for normal runtime/docs checks:
+
+```sh
+mkdir -p data/coarse-quality
+python3 -B scripts/build-coarse-resolution.py --step 0.05 \
+  --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/resolution-005-replay-new
+```
+
+Expected candidate: **68,129,988 bytes / SHA `b3e65e43e4377f98c7bd21cc7e458f09f9a7ade78ef8d100b345dd1c14c686df`**, 613,600 cells / 168,149 links. Outputs `grid.json`, hash-bound `links.json.gz` and `build.json`; first attempt/repeat at `resolution-005-v1/` / `-v2/` already match. Source rebuild takes about 114s and 2.10GB whole-producer peak RSS in one Mac observation; this is not runtime/Vercel memory. Changing `--step` recomputes the graph and needs a separately versioned evaluation; 0.025° has not been measured.
+
+Existing accepted artifact checks, with no producer/network requests:
+
+```sh
+node --import tsx scripts/verify-coarse-resolution.ts data/coarse-quality/resolution-005-v2/grid.json data/coarse-quality/resolution-005-v2/build.json
+node --import tsx scripts/compare-coarse-resolution.ts data/coarse-quality/resolution-005-v2/grid.json
+node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-quality/resolution-005-v2/grid.json --anchor-inputs
+node scripts/finalize-coarse-grid-v6.mjs data/coarse-quality/resolution-005-v2/grid.json data/coarse-quality/grid-v6-repeat-new.json
+```
+
+The finalizer accepts the pinned qualified hash, changes only version and refuses an existing output. All 35 reference costs and all 42 candidate/active API counts match their saved outputs; comparisons include every regression/unreached case and distinguish cell counts from accuracy. The old fixed-v4 candidate verifier is not a cross-resolution comparator. Full memory sweeps use 405,384 inputs; repeat them only for affected storage/runtime changes, not docs alone. Current reports live under ignored `data/coarse-quality/resolution-evaluation-v1/`; raw proof archives remain local and checksum-bound in the build report.
+
+To regenerate a **new** review page (precomputed validation cases only; no app/API/source/DB requests):
+
+```sh
+node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/resolution-005-v2/grid.json data/coarse-quality/resolution-preview-new
+python3 -B -m http.server 4176 --bind 127.0.0.1 --directory data/coarse-quality/resolution-preview-new
+```
+
+The current existing server instead serves `data/coarse-quality/resolution-evaluation-v1/`; its URL is **http://127.0.0.1:4176/preview-v2/**. Rediscover the listener before starting another server; never kill an unrelated owner. Maps share a camera and expose inland/rural/coastal/mountain 6/10/12h cases. The template/scripts copy installed MapLibre assets, with no dependency installation; online basemap requests remain separate from routing.
+
+An isolated package probe still accepts any candidate/fresh directory through `prepare-coarse-package-probe.mjs`; it now copies active v6 source/wording, changes only the copied import/engine label and never edits the real app. Use it for a new runtime experiment, not to rerun completed package evidence. `npm run check:coarse:vercel` defaults to active v6. Preserve old v1–v5 data and every failed/original output.
 
 ## Regenerate the coarse grid
 
-Normal development/deployment uses the included **v5** artifact and requires no producer or raw data. To intentionally reproduce v5, first recover national-v2 using the preceding source recipe, then finalize notices into an unused output path:
+The historical v5 recipe below is preserved; normal development/deployment uses **v6** above. Historical v5 reproduction uses the included v5 artifact and requires no producer or raw data. To intentionally reproduce v5, first recover national-v2 using the preceding source recipe, then finalize notices into an unused output path:
 
 ```sh
 node scripts/finalize-coarse-grid-v5.mjs \
@@ -212,7 +266,7 @@ node scripts/finalize-coarse-grid-v5.mjs \
   data/coarse-quality/grid-v5-repeat-new.json
 ```
 
-Expected: **39,977,082 bytes**, SHA-256 `b5a53b44fa42073e22575203d4848c7c6185e8eebd4688b504cefa04ff441cd4`. The finalizer requires the national-v2 input hash, changes only five version/notice fields and refuses an existing output. Do not overwrite any bundled or local evidence artifact as a health check. A source/geometry change requires a separately versioned recipe/run. The active v5 file is explicitly included in Git/Vercel and excluded from Biome alongside preserved v1–v4 files.
+Expected: **39,977,082 bytes**, SHA-256 `b5a53b44fa42073e22575203d4848c7c6185e8eebd4688b504cefa04ff441cd4`. The finalizer requires the national-v2 input hash, changes only five version/notice fields and refuses an existing output. Do not overwrite any bundled or local evidence artifact as a health check. A source/geometry change requires a separately versioned recipe/run. The preserved v5 file remains included in Git/Vercel and excluded from Biome alongside earlier artifacts; v6 is the active import.
 
 The commands below regenerate **preserved v4 only**; `npm run data:coarse` still names its historical builder, not current v5. This is optional for normal development/deployment: prepared v4 JSON is included in source. Use Python 3.11+ standard library, unchanged bundled v2/v3 artifacts and pinned public-domain Natural Earth v5.1.2 roads. The cached raw inputs already exist here; do not download them again. A fresh offline-builder setup needs only roads for v4 (older v1/v2 builders also use countries/lakes):
 
@@ -377,4 +431,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v5 is verified locally; hosted production is still verified v4, and actual v5 hosted verification is next; actual connected-provider cloud verification remains open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v6 is locally verified; production is user-reported v5, while independent hosted proof remains v4 and actual v6 HTTP/browser verification is next; actual connected-provider cloud verification remains open.

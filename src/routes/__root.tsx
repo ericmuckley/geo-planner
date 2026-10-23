@@ -1,6 +1,8 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 
@@ -20,6 +22,11 @@ export const Route = createRootRoute({
 		],
 		links: [
 			{
+				rel: "icon",
+				href: "/favicon.ico",
+				type: "image/x-icon",
+			},
+			{
 				rel: "stylesheet",
 				href: appCss,
 			},
@@ -29,6 +36,10 @@ export const Route = createRootRoute({
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+	useEffect(() => {
+		injectSpeedInsights();
+	}, []);
+
 	return (
 		<html lang="en">
 			<head>

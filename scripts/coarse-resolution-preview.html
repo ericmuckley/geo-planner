@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geo Planner · Resolution comparison</title>
+<link rel="stylesheet" href="./maplibre-gl.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f3f7f4; color: #213c40; font: 15px/1.5 system-ui, sans-serif; }
+  header, footer { padding: 20px 28px; }
+  h1 { font-size: 26px; margin: 0 0 8px; }
+  p { margin: 6px 0; }
+  label { display: inline-block; margin: 12px 16px 0 0; }
+  select, button { padding: 8px 12px; font: inherit; border: 1px solid #bacdca; border-radius: 6px; background: white; color: inherit; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 28px; }
+  article { background: white; border: 1px solid #d0dfda; border-radius: 10px; overflow: hidden; }
+  .caption { padding: 12px 16px; }
+  h2 { font-size: 18px; margin: 0; }
+  .map { height: 540px; }
+  .muted { color: #50686c; font-size: 13px; }
+  #status { min-height: 24px; }
+  @media (max-width: 850px) { main { grid-template-columns: 1fr; padding: 0 12px; } .map { height: 380px; } header,footer { padding: 16px; } }
+</style>
+<header>
+  <p class="muted">GEO PLANNER / OFFLINE CANDIDATE REVIEW</p>
+  <h1>Same query. Finer computed grid.</h1>
+  <p>The candidate rebuilds routing at half the cell width. Both maps share the same camera; zoom to inspect boundary detail.</p>
+  <label>Validation origin <select id="origin"><option>Inland</option><option>Rural</option><option>Coastal</option><option>Mountain</option></select></label>
+  <label>Budget <select id="budget"><option value="360">6 hours</option><option value="600">10 hours</option><option value="720">12 hours</option></select></label>
+  <button id="fit" type="button">Fit both contours</button>
+  <p id="status" class="muted" role="status">Loading maps…</p>
+</header>
+<main>
+  <article><div class="caption"><h2>V5 · 0.1°</h2><p class="muted">About 7–11 km cells · active baseline</p><p id="baseline-count" class="muted"></p></div><div id="baseline" class="map" aria-label="V5 baseline map"></div></article>
+  <article><div class="caption"><h2>Candidate · 0.05°</h2><p class="muted">About 3.5–5.5 km cells · independently rebuilt</p><p id="candidate-count" class="muted"></p></div><div id="candidate" class="map" aria-label="Finer candidate map"></div></article>
+</main>
+<footer>
+  <p><strong>Finer resolution does not establish better driving-time accuracy.</strong> These are approximate whole-cell contours with assumed speeds and access.</p>
+  <p class="muted">Natural Earth v5.1.2 + U.S. Census Bureau 2026 TIGER/Line. Geo Planner modifies/repackages Census data into a coarse model; this is not an official or endorsed Census product. Selected locations are validation cases only. Basemap: OpenFreeMap / OpenStreetMap.</p>
+  <p id="model" class="muted"></p>
+</footer>
+<script type="module">
+import * as maplibregl from "./maplibre-gl.mjs";
+maplibregl.setWorkerUrl("./maplibre-gl-worker.mjs");
+const report = __REPORT_JSON__;
+const maps = ["baseline", "candidate"].map(container => {
+  const map = new maplibregl.Map({container,style:"https://tiles.openfreemap.org/styles/liberty",center:[-96.5717,39.1836],zoom:5,renderWorldCopies:false,maxPitch:0});
+  map.addControl(new maplibregl.NavigationControl({showCompass:false}));
+  map.addControl(new maplibregl.ScaleControl({unit:"imperial"}));
+  return map;
+});
+const markers = maps.map(map => new maplibregl.Marker({color:"#23616a"}).setLngLat([-96.5717,39.1836]).addTo(map));
+let syncing = false;
+for (const map of maps) map.on("move", () => {
+  if (syncing) return;
+  syncing = true;
+  for (const other of maps) if (other !== map) other.jumpTo({center:map.getCenter(),zoom:map.getZoom(),bearing:0,pitch:0});
+  syncing = false;
+});
+function current() {
+  return report.scenarios.find(s => s.name === document.querySelector("#origin").value && s.minutes === Number(document.querySelector("#budget").value));
+}
+function fit() {
+  const bounds = new maplibregl.LngLatBounds();
+  for (const result of current().results) for (const polygon of result.geometry.coordinates) for (const ring of polygon) for (const point of ring) bounds.extend(point);
+  maps[0].fitBounds(bounds,{padding:30,duration:0});
+}
+function draw() {
+  const sample = current();
+  maps.forEach((map,i) => {
+    map.getSource("estimate").setData({type:"Feature",properties:{},geometry:sample.results[i].geometry});
+    markers[i].setLngLat([sample.origin.lon,sample.origin.lat]);
+    document.querySelector(i ? "#candidate-count" : "#baseline-count").textContent = `${sample.results[i].cells.toLocaleString()} reached cells · ${sample.results[i].searchMs.toFixed(1)} ms local search`;
+  });
+  fit();
+  document.querySelector("#status").textContent = `${sample.minutes/60} hours from ${sample.origin.lat.toFixed(4)}, ${sample.origin.lon.toFixed(4)} · same camera · counts differ with cell size`;
+}
+Promise.all(maps.map(map => new Promise(resolve => map.on("load", () => {
+  map.addSource("estimate",{type:"geojson",data:{type:"FeatureCollection",features:[]}});
+  map.addLayer({id:"fill",type:"fill",source:"estimate",paint:{"fill-color":"#25838d","fill-opacity":0.2}});
+  map.addLayer({id:"outline",type:"line",source:"estimate",paint:{"line-color":"#23616a","line-width":1.5}});
+  resolve();
+})))).then(() => {
+  draw();
+  for (const id of ["origin","budget"]) document.querySelector(`#${id}`).addEventListener("change",draw);
+  document.querySelector("#fit").addEventListener("click",fit);
+});
+document.querySelector("#model").textContent = `${report.model} · artifact SHA-256 ${report.artifactSha256}`;
+</script>
+</html>

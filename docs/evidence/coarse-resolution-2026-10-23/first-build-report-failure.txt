@@ -1,0 +1,17 @@
+Natural Earth rebuilt: 613600 cells, 58773 owner visits
+Census partitions 1/49
+Census partitions 11/49
+Census partitions 21/49
+Census partitions 31/49
+Census partitions 41/49
+Census partitions 49/49
+Traceback (most recent call last):
+  File "/Users/eric/Documents/GitHub/geo-planner/scripts/build-coarse-resolution.py", line 322, in <module>
+    print(json.dumps(build(args.step, args.source_manifest, args.tool_lock, args.output), indent=2))
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/eric/Documents/GitHub/geo-planner/scripts/build-coarse-resolution.py", line 302, in build
+    report = {"artifact": str((output / "grid.json").relative_to(ROOT)), "artifactSha256": sha256(artifact),
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'data/coarse-quality/resolution-005-v1/grid.json' is not in the subpath of '/Users/eric/Documents/GitHub/geo-planner'

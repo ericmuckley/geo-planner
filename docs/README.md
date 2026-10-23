@@ -1,6 +1,6 @@
 # Geo Planner documentation
 
-For a new coding agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). V5 is active locally with nationwide Census + Natural Earth data; production remains independently verified v4 at `637746c`. All later runtime/data/diagnostic/evidence/doc work is uncommitted. The new v5 artifact belongs in Git/Vercel; raw inputs, ignored candidates/probes, detailed research graphs and secrets remain local-only.
+For a new coding agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). V6 is active locally at 0.05° (about 3.5–5.5 km cells), with a new independently rebuilt nationwide graph. It is uncommitted; a fresh clone and user-reported production remain v5 at `08074fb`. Raw inputs, ignored candidates/probes, detailed research graphs and secrets remain local-only. Include the v6 dataset when publishing.
 
 ## Current documents
 
@@ -9,7 +9,7 @@ For a new coding agent or disconnected session, read [AGENTS.md](../AGENTS.md), 
 | [Agent handoff](agent-handoff.md) | Recovery checks, graph/data locations, restart commands and resume prompt |
 | [Implementation status](implementation-status.md) | Current capabilities, limits, code map and validation |
 | [Local development](local-development.md) | App setup and the separate experimental/provider APIs |
-| [Next steps](next-steps.md) | Verify actual v5 deployment, then diagnose remaining coarse-model errors; detailed research is parked |
+| [Next steps](next-steps.md) | Publish/verify v6, then refine residual generic access/transfer errors; detailed research is parked |
 | [Coarse estimator](coarse-estimator.md) | Implemented nationwide grid model, assumptions, sources and local Vercel evidence |
 | [Six-hour preflight](six-hour-preflight.md) | Unclipped planning, source gaps and the current resource screen |
 | [Two-hour regional baseline](two-hour-region.md) | Current graph's exact recipes, provenance, measurements and evidence |
@@ -18,7 +18,7 @@ For a new coding agent or disconnected session, read [AGENTS.md](../AGENTS.md), 
 | [US service setup](us-routing-service.md) | Selected hosted main-page provider and recorded limits |
 | [Retained Valhalla recipe](regional-routing.md) | Separate local Valhalla build/service reference |
 
-**October 22 milestone:** nationwide v5 is active locally, with a reproducible **39,977,082-byte** model and **43,779,085-byte** local Vercel function. It adds 36,742 Census road links while preserving v4 anchors, geography and original roads. Fixed geography indexing retains every validation check and reduces first local packaged computation from 22.2 seconds to 2.46–2.47 seconds in three fresh processes. All 35 saved costs/paths and 42 national counts match the accepted candidate, with seven improvements/no regressions versus v4. Three complete memory sweeps retain bounded storage. 51 server tests, fifteen geometry fixtures, checks/typechecks, both builds, local handler and arbitrary inland/rural/coastal browser flows/history pass. Source credit and modified-data notices are visible. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md), [national preparation](evidence/coarse-national-2026-10-22/README.md), [model](coarse-estimator.md). These measurements do not qualify national driving accuracy, cloud cold starts or peak memory. [Production proof](evidence/coarse-hosted-2026-10-22/README.md) remains v4; actual v5 deployment verification is next.
+**October 23 milestone:** v6 halves cell width from 0.1° to 0.05° by rebuilding masks, anchors, roads, shores and visits. The 68.13 MB artifact reproduces exactly; the final local Vercel function is 71.94 MB. Twenty-six of 35 saved estimates improve, nine worsen (worst +7.09 min), all remain reached/shaded. Regional mean absolute differences fall 33.0% / 24.3%; national accuracy remains unvalidated. A generic geometry-index refinement reduces first packaged computation to 3.06–3.12 seconds in three fresh processes, with bounded retention over 405,384 inputs. 51 server tests, nineteen geometry fixtures, 42 active API cases, checks/typechecks, both builds and local handler/browser/history checks pass. [V6 evidence and side-by-side maps](evidence/coarse-resolution-2026-10-23/README.md), [model](coarse-estimator.md), [next steps](next-steps.md). Production is user-reported v5; cloud v6 verification remains next.
 
 The preserved local experiment defaults to 120 minutes; five reference sources reach no detected cuts within two hours. It remains regional/static, and six-to-twelve-hour queries still clip. The optional hosted model remains capped at 60 minutes. The detailed six-hour preflight is complete; its storage calibration reproduces all eight qualified payloads at 2.415/2.416 GiB. [Final evidence](evidence/source-outgoing-2026-10-19/README.md) is complete; its partial-source expansion screen remains held at 9.290 GiB with margin against 4 GiB. No calibration job is running. These limits do not apply to the separate coarse grid.
 

@@ -6,6 +6,9 @@ type IndexedRing = {
 	points: number[][];
 	firstBand: number;
 	bands: number[][];
+	west: number;
+	east: number;
+	roundingGuard: number;
 };
 type IndexedPolygon = IndexedRing[];
 const indexes = new WeakMap<
@@ -27,9 +30,13 @@ export function prepareGeography(geography: Geography) {
 			const rings = polygon.map((points) => {
 				let firstBand = Infinity;
 				let lastBand = -Infinity;
+				let west = Infinity;
+				let east = -Infinity;
 				for (const point of points) {
 					firstBand = Math.min(firstBand, band(point[1]));
 					lastBand = Math.max(lastBand, band(point[1]));
+					west = Math.min(west, point[0]);
+					east = Math.max(east, point[0]);
 					Object.freeze(point);
 				}
 				const bands = Array.from(
@@ -41,8 +48,23 @@ export function prepareGeography(geography: Geography) {
 					const high = band(Math.max(points[i][1], points[j][1]));
 					for (let y = low; y <= high; y++) bands[y - firstBand].push(i);
 				}
+				const edgeEast = (i: number) =>
+					Math.max(points[i][0], points[i ? i - 1 : points.length - 1][0]);
+				for (const candidates of bands)
+					candidates.sort((a, b) => edgeEast(b) - edgeEast(a));
+				// Conservative candidate bounds only; exact geometry checks still decide
+				// membership. Cover floating-point interpolation rounding at vertices.
+				const roundingGuard =
+					Number.EPSILON * Math.max(1, Math.abs(west), Math.abs(east)) * 16;
 				Object.freeze(points);
-				return { points, firstBand, bands };
+				return {
+					points,
+					firstBand,
+					bands,
+					west: west - roundingGuard,
+					east: east + roundingGuard,
+					roundingGuard,
+				};
 			});
 			Object.freeze(polygon);
 			return rings;
@@ -67,10 +89,12 @@ function geographyIndex(geography: Geography) {
 }
 
 function containsIndexedRing([x, y]: number[], ring: IndexedRing) {
+	if (x < ring.west || x > ring.east) return false;
 	let inside = false;
 	for (const i of ring.bands[band(y) - ring.firstBand] ?? []) {
 		const [xi, yi] = ring.points[i];
 		const [xj, yj] = ring.points[i ? i - 1 : ring.points.length - 1];
+		if (Math.max(xi, xj) + ring.roundingGuard < x) break;
 		if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)
 			inside = !inside;
 	}
@@ -94,8 +118,12 @@ function* crossingEdges(geography: Geography, a: number[], b: number[]) {
 	}
 	const first = band(Math.min(a[1], b[1]));
 	const last = band(Math.max(a[1], b[1]));
+	const west = Math.min(a[0], b[0]);
+	const east = Math.max(a[0], b[0]);
 	for (const polygon of [...index.boundary, ...index.lakes])
-		for (const { points, firstBand, bands } of polygon)
+		for (const ring of polygon) {
+			const { points, firstBand, bands } = ring;
+			if (east < ring.west || west > ring.east) continue;
 			for (
 				let y = Math.max(first, firstBand);
 				y <= Math.min(last, firstBand + bands.length - 1);
@@ -105,9 +133,11 @@ function* crossingEdges(geography: Geography, a: number[], b: number[]) {
 					if (!i) continue; // The original crossing scan excludes the implicit closing edge.
 					const c = points[i - 1],
 						d = points[i];
+					if (Math.max(c[0], d[0]) + ring.roundingGuard < west) break;
 					// An edge spanning several bands is tested exactly once.
 					if (y === first || y === band(Math.min(c[1], d[1]))) yield [c, d];
 				}
+		}
 }
 
 // Partition at every polygon crossing: sampling alone can skip narrow channels.
@@ -133,14 +163,13 @@ export function landConnection(
 				);
 	if (!onLand(b)) return false;
 	if (index) {
-		const source = index.boundary.filter((polygon) =>
-			containsIndexedPolygon(a, polygon),
-		);
-		if (
-			source.length &&
-			!source.some((polygon) => containsIndexedPolygon(b, polygon))
-		)
-			return false;
+		let hasSource = false;
+		const shared = index.boundary.some((polygon) => {
+			if (!containsIndexedPolygon(a, polygon)) return false;
+			hasSource = true;
+			return containsIndexedPolygon(b, polygon);
+		});
+		if (hasSource && !shared) return false;
 	} else {
 		const source = geography.boundary.filter((polygon) =>
 			containsPolygon([a[0], a[1]], polygon),

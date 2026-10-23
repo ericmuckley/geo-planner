@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "vite dev --port 3000",
-	"dev:experiment": "node routing/experiment.mjs",
-	"routing:experiment:coverage": "node routing/experiment-coverage.mjs",
+    "dev:experiment": "node routing/experiment.mjs",
+    "routing:experiment:coverage": "node routing/experiment-coverage.mjs",
     "generate-routes": "tsr generate",
     "build": "vite build",
     "build:vercel": "NITRO_PRESET=vercel vite build",
@@ -95,6 +95,7 @@
     "@tanstack/react-router": "1.170.44",
     "@tanstack/react-router-devtools": "1.167.2",
     "@tanstack/react-start": "1.169.2",
+    "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drizzle-kit": "^0.31.9",

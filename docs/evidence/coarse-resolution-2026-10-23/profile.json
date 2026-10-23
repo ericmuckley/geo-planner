@@ -1,0 +1,140 @@
+{
+  "profiles": [
+    {
+      "path": "data/coarse-quality/resolution-evaluation-v1/profile/CPU.20261023.064959.3756.0.001.cpuprofile",
+      "sha256": "03fdf7d767906e24f553f6d8d363801cc6602bdc123c31b221174c74048f277e",
+      "samples": 5460,
+      "topFunctions": [
+        {
+          "function": "containsIndexedRing",
+          "file": "coarse-geography.ts",
+          "samples": 2435
+        },
+        {
+          "function": "crossingEdges",
+          "file": "coarse-geography.ts",
+          "samples": 1075
+        },
+        {
+          "function": "landConnection",
+          "file": "coarse-geography.ts",
+          "samples": 628
+        },
+        {
+          "function": "",
+          "file": "coarse-data.server.ts",
+          "samples": 359
+        },
+        {
+          "function": "",
+          "file": "coarse-geography.ts",
+          "samples": 222
+        },
+        {
+          "function": "decodeVisit",
+          "file": "coarse-data.server.ts",
+          "samples": 166
+        },
+        {
+          "function": "containsIndexedPolygon",
+          "file": "coarse-geography.ts",
+          "samples": 125
+        },
+        {
+          "function": "(program)",
+          "file": "",
+          "samples": 85
+        },
+        {
+          "function": "distanceKm",
+          "file": "coarse-grid.ts",
+          "samples": 73
+        },
+        {
+          "function": "decodeGrid",
+          "file": "coarse-data.server.ts",
+          "samples": 57
+        },
+        {
+          "function": "(garbage collector)",
+          "file": "",
+          "samples": 48
+        },
+        {
+          "function": "waitForWorker",
+          "file": "hooks",
+          "samples": 23
+        }
+      ]
+    },
+    {
+      "path": "data/coarse-quality/resolution-evaluation-v1/profile/CPU.20261023.064959.3756.1.002.cpuprofile",
+      "sha256": "0f083dcbc249cd91e0b980b0ded25551af101faa7bdd3a28c45c9509e5af9a0c",
+      "samples": 5199,
+      "topFunctions": [
+        {
+          "function": "(idle)",
+          "file": "",
+          "samples": 5159
+        },
+        {
+          "function": "compileForInternalLoader",
+          "file": "realm",
+          "samples": 10
+        },
+        {
+          "function": "compileFunction",
+          "file": "",
+          "samples": 4
+        },
+        {
+          "function": "read",
+          "file": "",
+          "samples": 3
+        },
+        {
+          "function": "(program)",
+          "file": "",
+          "samples": 2
+        },
+        {
+          "function": "compileSourceTextModule",
+          "file": "utils",
+          "samples": 2
+        },
+        {
+          "function": "parseCJS",
+          "file": "lexer",
+          "samples": 2
+        },
+        {
+          "function": "parseSource",
+          "file": "lexer",
+          "samples": 2
+        },
+        {
+          "function": "deprecate",
+          "file": "util",
+          "samples": 1
+        },
+        {
+          "function": "setupModuleWorker",
+          "file": "worker",
+          "samples": 1
+        },
+        {
+          "function": "import",
+          "file": "loader",
+          "samples": 1
+        },
+        {
+          "function": "defaultLoad",
+          "file": "load",
+          "samples": 1
+        }
+      ]
+    }
+  ],
+  "beforeGeographySha256": "da322c481ed818bf459f42227651f030e175d802148eb7a3124b83b955862e5f",
+  "scope": "Local V8 self-sample counts including separately idle loader worker. Raw profiles and source snapshot remain ignored; not cloud timing."
+}
