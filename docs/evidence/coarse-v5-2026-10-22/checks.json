@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "files": 139
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "node --import tsx --test src/server/*.test.ts",
+      "exitCode": 0,
+      "tests": 51
+    },
+    {
+      "command": "npm run test:coarse-data",
+      "exitCode": 0,
+      "fixtures": 15
+    },
+    {
+      "command": "strict standalone TypeScript check of compare, physical, memory, national, API and deployment diagnostics (exact flags in local-development/next-steps)",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": "build.txt"
+    },
+    {
+      "command": "npm run build:vercel",
+      "exitCode": 0,
+      "log": "build-vercel.txt"
+    },
+    {
+      "command": "node scripts/verify-coarse-vercel.mjs",
+      "exitCode": 0,
+      "output": "vercel-handler.json"
+    },
+    {
+      "command": "node --import tsx scripts/verify-coarse.ts",
+      "exitCode": 0,
+      "cases": 42,
+      "output": "national-smoke.json"
+    },
+    {
+      "command": "national-v2 physical checks / comparison / national smoke / explicit-GC full sweeps",
+      "exitCode": 0,
+      "scope": "Original artifact remains hash-bound; outputs in this directory"
+    },
+    {
+      "command": "active-v5 comparison and reconstructed path diagnostics",
+      "exitCode": 0,
+      "cases": 35
+    },
+    {
+      "command": "independent artifact byte/field, comparison, paths and API-count parity",
+      "exitCode": 0,
+      "output": "metadata-parity.json"
+    },
+    {
+      "command": "old sealed evidence checksum verification",
+      "exitCode": 0,
+      "files": 253
+    },
+    {
+      "command": "preserved artifact hash verification",
+      "exitCode": 0,
+      "artifacts": 7
+    },
+    {
+      "command": "Git/Vercel literal include/exclude rule checks for v5/data/env/evidence",
+      "exitCode": 0
+    }
+  ],
+  "fullLiveDatabaseSuiteRepeated": false,
+  "localBrowserFixtureAutosaveReplay": true,
+  "newRoutingReferenceRequests": 0,
+  "routingProviderRequests": 0,
+  "sourceProducerReruns": 0,
+  "deployments": 0,
+  "scope": "Completed local implementation and package checks. Test runner equivalence uses node --import tsx to avoid CLI IPC sandbox restrictions. No cloud cold-start, peak-memory, national-accuracy or actual deployment claim."
+}

@@ -1,0 +1,36 @@
+
+> check:coarse:vercel
+> node scripts/verify-coarse-vercel.mjs
+
+{
+  "functionFiles": 27,
+  "functionBytes": 13452189,
+  "samples": [
+    {
+      "name": "San Diego",
+      "minutes": 360,
+      "bytes": 7340,
+      "localHandlerMs": 65.786542
+    },
+    {
+      "name": "Denver",
+      "minutes": 600,
+      "bytes": 15711,
+      "localHandlerMs": 20.967208
+    },
+    {
+      "name": "New York",
+      "minutes": 720,
+      "bytes": 13610,
+      "localHandlerMs": 16.956458000000026
+    }
+  ],
+  "outboundCalls": 0,
+  "coarseRouteEnabledOnVercel": true,
+  "detailedExperimentDisabled": true,
+  "serverDatasetInClientAssets": false,
+  "secretsEmbeddedInOutput": false,
+  "localHistoryFallbackWithoutDatabase": true,
+  "rawSourcesOrEnvironmentFilesBundled": false,
+  "scope": "Generated Vercel handler invoked locally with network calls rejected. This proves packaging and handler behavior, not a cloud deployment, cloud cold start, concurrency or peak memory."
+}

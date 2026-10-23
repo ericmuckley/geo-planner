@@ -7,6 +7,12 @@ export type RoadVisit = {
 	anchorIndex: number;
 	points: number[][];
 	cumulativeKm: number[];
+	transferKm?: number;
+};
+
+export type RoadVisits = Iterable<[number, RoadVisit]> & {
+	readonly size: number;
+	get(cell: number): RoadVisit | undefined;
 };
 
 export type GridAttachment = {
@@ -30,7 +36,8 @@ export type GridData = {
 	anchorOffsets?: Int16Array;
 	shoreLinks?: Uint8Array;
 	roadAccess?: number[][];
-	roadVisits?: Map<number, RoadVisit>;
+	roadVisits?: RoadVisits;
+	supplementalRoadVisits?: RoadVisits;
 	boundary: number[][][][];
 	lakes: number[][][][];
 };
@@ -175,7 +182,8 @@ export function gridAttachments(
 		);
 	const own = candidate(cell);
 	const ownSupported = supported(own);
-	if (ownSupported && !grid.roadVisits) return [own];
+	if (ownSupported && !grid.roadVisits && !grid.supplementalRoadVisits)
+		return [own];
 	// An adjacent representative is usable only with a continuous land connection.
 	// A known island cannot attach across even a narrow channel to the mainland.
 	const neighborCells = directions.flatMap(([dx, dy]) => {
@@ -201,6 +209,9 @@ export function gridAttachments(
 	}
 	const visit = grid.roadVisits?.get(cell);
 	if (visit) nearby.push(...roadAttachments(grid, point, cell, visit));
+	const supplemental = grid.supplementalRoadVisits?.get(cell);
+	if (supplemental)
+		nearby.push(...roadAttachments(grid, point, cell, supplemental));
 	const best = new Map<number, GridAttachment>();
 	for (const attachment of nearby)
 		if (attachment.minutes < (best.get(attachment.cell)?.minutes ?? Infinity))
@@ -214,7 +225,9 @@ function roadAttachments(
 	cell: number,
 	visit: RoadVisit,
 ): GridAttachment[] {
-	const result = [];
+	const result: Array<
+		GridAttachment & { projected: number[]; localKm: number }
+	> = [];
 	const scale = Math.cos(point[1] * radians);
 	for (let i = 1; i < visit.points.length; i++) {
 		const a = visit.points[i - 1],
@@ -237,8 +250,6 @@ function roadAttachments(
 		for (const part of new Set([0, t, 1])) {
 			const projected = [a[0] + (b[0] - a[0]) * part, a[1] + dy * part];
 			const localKm = distanceKm(point, projected);
-			if (!landConnection(grid, point, projected, 1 / Math.max(localKm, 1)))
-				continue;
 			const roadKm =
 				i <= visit.anchorIndex
 					? visit.cumulativeKm[visit.anchorIndex] -
@@ -248,17 +259,27 @@ function roadAttachments(
 						visit.cumulativeKm[visit.anchorIndex] +
 						distanceKm(a, projected);
 			result.push({
+				projected,
+				localKm,
 				cell,
-				distanceKm: localKm + roadKm,
+				distanceKm: localKm + roadKm + (visit.transferKm ?? 0),
 				minutes:
 					Math.ceil(
-						(localKm / grid.localSpeedKph + roadKm / visit.speedKph) * 36000,
+						((localKm + (visit.transferKm ?? 0)) / grid.localSpeedKph +
+							roadKm / visit.speedKph) *
+							36000,
 					) / 600,
 				roadKm,
 			});
 		}
 	}
-	return result;
+	// Only the cheapest valid attachment to this cell can survive. Checking in
+	// cost order avoids thousands of polygon scans for dense source geometry.
+	result.sort((a, b) => a.minutes - b.minutes);
+	for (const { projected, localKm, ...attachment } of result)
+		if (landConnection(grid, point, projected, 1 / Math.max(localKm, 1)))
+			return [attachment];
+	return [];
 }
 
 export function attachGrid(grid: GridData, origin: Origin) {

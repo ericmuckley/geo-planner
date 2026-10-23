@@ -1,0 +1,28 @@
+{
+  "passedServerTests": 49,
+  "passedDataGeometryTests": 12,
+  "activeV4NationalCasesUnchanged": 42,
+  "comparisonAndCompletePathJsonIdenticalCases": 35,
+  "productionArtifactUnchanged": true,
+  "pilotArtifactUnchanged": true,
+  "sourceDownloads": 0,
+  "publicRoutingApiCalls": 0,
+  "localRoutingServiceRequests": 0,
+  "deployed": false,
+  "commands": [
+    "node --import tsx --test src/server/*.test.ts",
+    "npm run test:coarse-data",
+    "npm run check",
+    "npm run typecheck",
+    "npx tsc --ignoreConfig --noEmit --target es2022 --module esnext --moduleResolution bundler --allowImportingTsExtensions --resolveJsonModule --esModuleInterop --strict --skipLibCheck --types node scripts/compare-coarse-candidate.ts scripts/verify-coarse-augmentation.ts scripts/verify-coarse-memory.ts",
+    "node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-quality/census-augmentation-pilot-v1/grid.json",
+    "node --import tsx scripts/verify-coarse-augmentation.ts data/coarse-quality/census-augmentation-pilot-v1/grid.json docs/evidence/coarse-augmentation-2026-10-22/build.json",
+    "node --import tsx scripts/compare-coarse-candidate.ts data/coarse-quality/census-augmentation-pilot-v1/grid.json",
+    "node --import tsx scripts/inspect-coarse-access.ts data/coarse-quality/census-augmentation-pilot-v1/grid.json /private/tmp/geo-planner-lazy-comparison.json",
+    "node --import tsx scripts/verify-coarse.ts",
+    "npm run build",
+    "npm run build:vercel",
+    "npm run check:coarse:vercel"
+  ],
+  "limitation": "Local single-source-partition representation/refinement checks. The same artifact and costs preserve earlier large route errors. Encoded inputs, transient allocations and whole-process RSS remain separate; no Vercel peak memory, isolated decoder/query peak, cloud latency/load, national resource/size/accuracy or new DB integration/browser verification claim."
+}

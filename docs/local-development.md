@@ -42,17 +42,17 @@ npm run build:vercel
 npm run check:coarse:vercel
 ```
 
-The geometry command runs eight small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
+The geometry command runs fifteen small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
 
 ## Coarse travel-cost comparison
 
-The active v3 candidate can be compared against unchanged v2 and both saved sets without routing requests:
+The candidate comparison now requires an explicit artifact path and uses **v4** as its baseline. It checks all 35 v4 point costs against the preserved v4 evidence before comparing both saved sets, without routing requests. The [offline candidate](#offline-augmentation-candidate) must exist first:
 
 ```sh
-npm run routing:compare:coarse:candidate
+npm run routing:compare:coarse:candidate -- data/coarse-quality/census-augmentation-pilot-v1/grid.json
 ```
 
-An optional candidate artifact path follows `--`; the baseline is now preserved v3. Expected v4: all eleven original cases improve (point mean absolute reference difference 31.3810m → 22.1808m). On **all 24** broader common-finite cases, twenty improve, four stay unchanged and none regress (38.8860m → 34.2337m). Every destination remains reached/shaded. The 24-case denominator includes the shore destination v3 restored, so it differs from older 23-case reports. Baseline labels are checked against preserved v3 results. [V4 evidence](evidence/coarse-v4-2026-10-22/README.md).
+Expected pilot: one of eleven original cases improves, ten unchanged (22.181 → 21.944 min mean absolute reference difference); six of all 24 broader cases improve, eighteen unchanged (34.234 → 31.204 min). None regress and all remain reached/shaded. These development sets do not establish national accuracy. The earlier v3 → v4 comparison remains in [preserved v4 evidence](evidence/coarse-v4-2026-10-22/README.md).
 
 For the completed access diagnosis, use the existing pinned roads cache (no download or routing service):
 
@@ -98,11 +98,123 @@ npm run --silent routing:compare:coarse > /tmp/geo-planner-coarse-comparison-new
 
 Use an unused output name. The command compares eleven public Southern California destinations from the default San Diego origin with the bundled v1 grid field. It makes one status request and eleven route requests to fixed `127.0.0.1:8002`, with deadlines and no hosted fallback, database access or graph build. Do not start a new graph build to run it. It records raw requests/responses, reference status, cell-center travel costs and whether the destination cell is shaded land. The v1 artifact path is explicit in `scripts/compare-coarse.ts`; when evaluating a new model, select that candidate's artifact deliberately.
 
-These are model-to-model diagnostics, not live driving-time truth or national accuracy validation. Successful execution means the comparison completed, not that accuracy passed. The first run found eleven slower grid estimates and an unshaded Calexico border cell; [preserved baseline findings](coarse-estimator.md#first-regional-travel-cost-comparison). V3 is committed at `887ab50` and the user reports the current deployment looks fine; independent cloud measurements remain open.
+These are model-to-model diagnostics, not live driving-time truth or national accuracy validation. Successful execution means the comparison completed, not that accuracy passed. The first run found eleven slower grid estimates and an unshaded Calexico border cell; [preserved baseline findings](coarse-estimator.md#first-regional-travel-cost-comparison). V4 is committed at `637746c` and independently verified on Vercel; cloud peak memory and cold/warm classification remain unmeasured.
+
+## Hosted v4 verification
+
+[Production](https://geo-planner-orcin.vercel.app) remains verified v4 at `637746c`; [historical results](evidence/coarse-hosted-2026-10-22/README.md) preserve that scope. **The verifier now expects v5** and must run only after the new deployment is ready:
+
+```sh
+node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
+```
+
+It makes fifteen app requests: five origins plus repeat/overlap, configuration/errors, disabled research and no-cookie history. It validates saved v5 counts/model/notices, sends no cookies/history writes and calls no routing-provider endpoint. It needs network but no key/env change. Against old v4 it intentionally fails the model assertion. HTTP times are not isolated graph search, proven cold/warm invocations, load or peak-memory measurements. Do not run it merely to validate docs. The v5 local artifact/package/browser proof is [here](evidence/coarse-v5-2026-10-22/README.md).
+
+## Offline road-source pilot
+
+This optional historical source-coverage/size diagnostic changes no active dataset. Python 3.11+ reads a pinned Census ZIP and imports a hash-verified PyShp 2.3.1 wheel directly from ignored data; no pip/global/app installation or env variable is required. Both files are already cached. On a fresh clone, fetch only missing files at the recorded lock paths:
+
+```sh
+mkdir -p data/coarse-sources/tiger-2026 data/coarse-tools/tiger-2026
+test -f data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip || curl --fail --location --proto '=https' https://www2.census.gov/geo/tiger/TIGER2026/PRISECROADS/tl_2026_06_prisecroads.zip --output data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip
+test -f data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl || curl --fail --location --proto '=https' https://files.pythonhosted.org/packages/98/2f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py2.py3-none-any.whl --output data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl
+python3 -B scripts/inspect-coarse-road-source.py \
+  --source-lock docs/evidence/coarse-source-2026-10-22/source.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json
+```
+
+The script checks both hashes before import/read, preserves multipart boundaries and verifies geographic NAD83/record counts. Expected: 7,350 records, 1,245,029 points, 19/23 nearer endpoints and four farther; raw selected owner geometry is 4,497,541 JSON bytes for this one state. These are approximate source observations, not a new routing graph/ETA or national-size proof. [Findings, locks, source alternatives and next implementation](evidence/coarse-source-2026-10-22/README.md). Preserve current cached files; a mismatch is an error to investigate rather than overwrite.
+
+## Offline augmentation candidate
+
+The generic Census adapter and packed geometry pilot are preserved historical inputs; they change no active import. The ignored candidate already exists at `data/coarse-quality/census-augmentation-pilot-v1/grid.json`, with an identical repeat under `census-augmentation-pilot-v1-repeat/`. Fresh clones need the cached ZIP/wheel from the previous section. Build into a new directory; overwrites and production-data output paths are refused:
+
+```sh
+mkdir -p data/coarse-quality/census-augmentation-replay-new
+python3 -B scripts/build-coarse-augmentation.py \
+  --source-lock docs/evidence/coarse-source-2026-10-22/source.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/census-augmentation-replay-new/grid.json \
+  > data/coarse-quality/census-augmentation-replay-new/build.json
+node --import tsx scripts/verify-coarse-augmentation.ts \
+  data/coarse-quality/census-augmentation-replay-new/grid.json \
+  data/coarse-quality/census-augmentation-replay-new/build.json
+node --import tsx scripts/compare-coarse-candidate.ts \
+  data/coarse-quality/census-augmentation-replay-new/grid.json \
+  > data/coarse-quality/census-augmentation-replay-new/comparison.json
+node --import tsx scripts/inspect-coarse-access.ts \
+  data/coarse-quality/census-augmentation-replay-new/grid.json \
+  data/coarse-quality/census-augmentation-replay-new/comparison.json
+node --expose-gc --import tsx docs/evidence/coarse-augmentation-2026-10-22/measure-decoding.mjs \
+  data/coarse-quality/census-augmentation-replay-new/grid.json
+node --expose-gc --import tsx scripts/verify-coarse-memory.ts \
+  data/coarse-quality/census-augmentation-replay-new/grid.json
+```
+
+Expected: 7,788,709 bytes / SHA-256 `aca0fe8f62e463f3dee1ac64c2c3f993d1424ad9ca1c06715aa11cec3ad4e1f5`; 1,004 new links / eight lowered costs / 2,212 supplemental visits / 346,989 points. Source locks can be repeated for additional partitions; no place/region rule exists in the adapter or runtime. All v4 anchors/masks/shore paths remain intact. Census edges pay source arc/class time plus continuous-land transfers at 25 km/h; supplemental access pays the same physical transfer. No dependency installation, env change, DB or routing service is needed.
+
+[Evidence and measured limits](evidence/coarse-augmentation-2026-10-22/README.md) include the exact repeat, all 35 point/path sums, all changed-edge checks, packing bytes and local memory/query observations. Packing is lossless relative to the existing quantized visits; it does not remove source bends. Packed decoding now retains buffers plus a fixed cell index and materializes only a requested visit, with no cache. Load still validates every visit; legacy v4 JSON visits keep their Map path. The new explicit-GC memory verifier checks low decoded heap and bounded retention across three full supplemental-input sweeps. [Memory evidence](evidence/coarse-memory-2026-10-22/README.md) records 51.91 → 6.88 MB retained heap + buffers and identical routes. The national source pass below and v5 local activation are complete. Preserve the pilot and all original artifacts/evidence; it remains a historical development candidate.
+
+## Nationwide Census candidate
+
+The accepted ignored artifact/repeat are `data/coarse-quality/census-national-v2/grid.json` and `census-national-v2-repeat/grid.json`. Expected: **39,976,621 bytes / SHA-256 `119a463d0a876bc83761efb235e1a8a7d9f9105c990b720c9751699c7076b95d`**, 36,742 added links, 73 lowered existing costs, 51,159 supplemental visits / 6,220,841 points. All 49 ZIPs/sidecar locks live in `data/coarse-sources/tiger-2026/`; their pinned catalog/manifest is under `national-v1/`. That directory name identifies acquisition, while the accepted model is v2. Rejected national-v1 outputs and failed compatibility attempts stay preserved.
+
+On a fresh clone, restore the captured catalog/manifest without replacing existing local files; restore the pinned PyShp wheel from the earlier source-pilot section. This acquires only missing public files (289.2 MB total), checks expected hashes before installing, and verifies existing caches:
+
+```sh
+mkdir -p data/coarse-sources/tiger-2026/national-v1
+test -f data/coarse-sources/tiger-2026/national-v1/catalog.html || cp docs/evidence/coarse-national-2026-10-22/catalog.html data/coarse-sources/tiger-2026/national-v1/catalog.html
+test -f data/coarse-sources/tiger-2026/national-v1/sources.json || cp docs/evidence/coarse-national-2026-10-22/sources.json data/coarse-sources/tiger-2026/national-v1/sources.json
+node scripts/acquire-coarse-census.mjs data/coarse-sources/tiger-2026/national-v1 --download
+# Existing complete caches: offline verification, no downloads.
+node scripts/acquire-coarse-census.mjs data/coarse-sources/tiger-2026/national-v1
+```
+
+Missing files without `--download`, hash mismatches or unpinned cached files are errors to investigate, not permission to overwrite. The catalog's FIPS selection is offline scope preparation; runtime has no state/region branches. Multipart geometry stays separate, exact geometry/class dedup is direction-independent and shared grid anchors merge partition links with paid land transfers. The national recipe also bounds interpolated source arcs by their physical chord. Legacy `--source-lock` defaults preserve the earlier pilot hash; `--deduplicate` enables the newer source preparation explicitly.
+
+Build only for an intentional new source/recipe run into an unused path; ordinary runtime work can read the existing candidate:
+
+```sh
+mkdir -p data/coarse-quality/census-national-replay-new
+python3 -B scripts/build-coarse-augmentation.py \
+  --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/census-national-replay-new/grid.json \
+  > data/coarse-quality/census-national-replay-new/build.json
+node --import tsx scripts/verify-coarse-augmentation.ts \
+  data/coarse-quality/census-national-v2/grid.json \
+  docs/evidence/coarse-national-2026-10-22/build.json --anchor-inputs
+node --import tsx scripts/compare-coarse-candidate.ts data/coarse-quality/census-national-v2/grid.json
+node --import tsx scripts/verify-coarse-national.ts data/coarse-quality/census-national-v2/grid.json
+node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-quality/census-national-v2/grid.json --anchor-inputs
+```
+
+`--anchor-inputs` samples guaranteed on-land source-visit anchors for physical/memory query checks; the default first-vertex mode can include generalized water. Populations and their timing scopes differ. Three complete national sweeps can take several minutes; run them for justified implementation/resource changes, not docs alone. [National evidence](evidence/coarse-national-2026-10-22/README.md) records the original 35 saved paths, 42 national cases, retained storage, rejected v1 and exact repeat. V5 below completes initialization and notices.
+
+An isolated package probe copies source/config plus the candidate (no env files, credentials or raw sources), symlinks existing `node_modules` and changes only the copied estimator import/engine label. This never switches the real app or deploys. Use a fresh directory:
+
+```sh
+node scripts/prepare-coarse-package-probe.mjs data/coarse-quality/census-national-v2/grid.json data/coarse-quality/census-national-v2/package-probe-new
+(cd data/coarse-quality/census-national-v2/package-probe-new && npm run build:vercel)
+node scripts/verify-coarse-vercel.mjs data/coarse-quality/census-national-v2/package-probe-new coarse-road-grid-candidate
+```
+
+The handler checker defaults to the active project/v5 without args. Biome excludes ignored `data/`, including isolated source copies and frozen/local assets. The original candidate package took about 22 seconds for first computation; indexed validation now takes 2.46–2.47 seconds in three fresh local processes. V5 is active locally with final notices. No env variable, migration or runtime dependency is added. Preserve all old/failed outputs. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md).
 
 ## Regenerate the coarse grid
 
-This is optional for normal development/deployment: prepared v4 JSON is included in source. Use Python 3.11+ standard library, unchanged bundled v2/v3 artifacts and pinned public-domain Natural Earth v5.1.2 roads. The cached raw inputs already exist here; do not download them again. A fresh offline-builder setup needs only roads for v4 (older v1/v2 builders also use countries/lakes):
+Normal development/deployment uses the included **v5** artifact and requires no producer or raw data. To intentionally reproduce v5, first recover national-v2 using the preceding source recipe, then finalize notices into an unused output path:
+
+```sh
+node scripts/finalize-coarse-grid-v5.mjs \
+  data/coarse-quality/census-national-v2/grid.json \
+  data/coarse-quality/grid-v5-repeat-new.json
+```
+
+Expected: **39,977,082 bytes**, SHA-256 `b5a53b44fa42073e22575203d4848c7c6185e8eebd4688b504cefa04ff441cd4`. The finalizer requires the national-v2 input hash, changes only five version/notice fields and refuses an existing output. Do not overwrite any bundled or local evidence artifact as a health check. A source/geometry change requires a separately versioned recipe/run. The active v5 file is explicitly included in Git/Vercel and excluded from Biome alongside preserved v1–v4 files.
+
+The commands below regenerate **preserved v4 only**; `npm run data:coarse` still names its historical builder, not current v5. This is optional for normal development/deployment: prepared v4 JSON is included in source. Use Python 3.11+ standard library, unchanged bundled v2/v3 artifacts and pinned public-domain Natural Earth v5.1.2 roads. The cached raw inputs already exist here; do not download them again. A fresh offline-builder setup needs only roads for v4 (older v1/v2 builders also use countries/lakes):
 
 ```sh
 mkdir -p data/coarse-sources/natural-earth-v5.1.2
@@ -265,4 +377,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Actual cloud verification remains open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v5 is verified locally; hosted production is still verified v4, and actual v5 hosted verification is next; actual connected-provider cloud verification remains open.

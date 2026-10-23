@@ -1,0 +1,9 @@
+The first archive acquisition used Python urllib. Its local certificate store
+could not verify the Census issuer, and it stopped before downloading/writing
+any source or reader file. Node's normal TLS verification succeeded for the
+same official URL; no verification was disabled and no system trust changed.
+
+Only the California Census archive and a PyPI SHA-256-verified PyShp 2.3.1 wheel
+were acquired. Existing sources, artifacts, producers and evidence were not
+overwritten. The wheel is imported directly from its ignored local file, not
+installed into the app or globally.

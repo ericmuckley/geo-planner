@@ -156,7 +156,121 @@ test("road visits reject malformed anchors, speeds, duplicated cells and points"
 		const raw = fixture();
 		mutate(raw);
 		assert.throws(() => decodeGrid(raw), /road visit|Road visit/);
+		assert.throws(
+			() => decodeGrid({ ...raw, roadVisits: packed(raw.roadVisits) }),
+			/road visit|Road visit/,
+		);
 	}
+});
+
+function packed(rows: ReturnType<typeof fixture>["roadVisits"]) {
+	const cells = Buffer.alloc(rows.length * 4);
+	const anchors = Buffer.alloc(rows.length * 4);
+	const starts = Buffer.alloc((rows.length + 1) * 4);
+	const offsets = Buffer.alloc(
+		rows.reduce((sum, row) => sum + row.offsets.length * 4, 0),
+	);
+	let point = 0;
+	for (const [i, row] of rows.entries()) {
+		cells.writeUInt32LE(row.cell, i * 4);
+		anchors.writeUInt32LE(row.anchorIndex, i * 4);
+		starts.writeUInt32LE(point, i * 4);
+		for (const p of row.offsets) {
+			offsets.writeInt16LE(p[0], point * 4);
+			offsets.writeInt16LE(p[1], point * 4 + 2);
+			point++;
+		}
+	}
+	starts.writeUInt32LE(point, rows.length * 4);
+	return {
+		encoding: "cell-visits-le-v1",
+		cells: cells.toString("base64"),
+		anchors: anchors.toString("base64"),
+		starts: starts.toString("base64"),
+		offsets: offsets.toString("base64"),
+		speeds: Buffer.from(rows.map((r) => r.speedKph)).toString("base64"),
+	};
+}
+
+test("packed visits preserve all v4 anchors, bends and cumulative distances exactly", () => {
+	const visits = decodeGrid({
+		...data,
+		roadVisits: packed(data.roadVisits),
+	}).roadVisits;
+	const baseline = decodeGrid(data).roadVisits;
+	assert.equal(visits?.size, baseline?.size);
+	for (const [cell, visit] of visits ?? [])
+		assert.deepEqual(visit, baseline?.get(cell));
+});
+
+test("packed visits materialize independent values without retaining query mutations", () => {
+	const raw = fixture();
+	const visits = decodeGrid({
+		...raw,
+		roadVisits: packed(raw.roadVisits),
+	}).roadVisits;
+	assert.ok(visits);
+	const first = visits.get(0);
+	assert.ok(first);
+	const original = structuredClone(first);
+	first.points[0][0] = 100;
+	first.cumulativeKm[0] = 100;
+	assert.deepEqual(visits.get(0), original);
+	assert.deepEqual([...visits], [[0, original]]);
+	for (const cell of [-1, 1, 0.5, Infinity, NaN])
+		assert.equal(visits.get(cell), undefined);
+});
+
+test("packed visits reject truncated arrays, invalid ranges and unknown encoding", () => {
+	for (const mutation of [
+		{ cells: "" },
+		{ anchors: "" },
+		{ offsets: "AA==" },
+		{ starts: Buffer.alloc(8).toString("base64") },
+		{ encoding: "unknown" },
+	]) {
+		const raw = fixture();
+		assert.throws(
+			() =>
+				decodeGrid({
+					...raw,
+					roadVisits: { ...packed(raw.roadVisits), ...mutation },
+				}),
+			/packed road visit/,
+		);
+	}
+});
+
+test("a supplemental road pays its land transfer to the fixed canonical anchor", () => {
+	const raw = fixture();
+	const supplemental = [
+		{
+			...raw.roadVisits[0],
+			anchorIndex: 1,
+			offsets: [
+				[-4000, -4000],
+				[-4000, 0],
+			],
+		},
+	];
+	raw.roadVisits = [];
+	const grid = decodeGrid({
+		...raw,
+		supplementalRoadVisits: packed(supplemental),
+	});
+	const [attachment] = gridAttachments(grid, { lon: 0.01, lat: 0.01 });
+	const transfer = distanceKm([0.01, 0.05], [0.05, 0.05]);
+	const road = distanceKm([0.01, 0.01], [0.01, 0.05]);
+	assert.ok(Math.abs(attachment.distanceKm - road - transfer) < 1e-8);
+	assert.equal(
+		attachment.minutes,
+		Math.ceil((transfer / 25 + road / 80) * 36000) / 600,
+	);
+	raw.lakes = [rectangle(0.04, 0.041)];
+	assert.throws(
+		() => decodeGrid({ ...raw, supplementalRoadVisits: packed(supplemental) }),
+		/transfer crosses/,
+	);
 });
 
 test("all retained source visits own unchanged v3 anchors and satisfy physical-distance bounds", () => {

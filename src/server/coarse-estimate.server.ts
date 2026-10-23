@@ -6,7 +6,7 @@ import {
 } from "../lib/reachability";
 import { decodeGrid } from "./coarse-data.server";
 import { estimateGrid, type GridData } from "./coarse-grid";
-import data from "./data/coarse-grid-v4.json";
+import data from "./data/coarse-grid-v5.json";
 
 let grid: GridData | undefined;
 function getGrid() {
@@ -22,7 +22,7 @@ const config = engineConfigSchema.parse({
 	health: "ready",
 	minMinutes: 60,
 	maxMinutes: 720,
-	engineVersion: "coarse-road-grid-v4",
+	engineVersion: "coarse-road-grid-v5",
 	graphVersion: data.version,
 	coverage:
 		"Contiguous United States; coarse estimated travel over land and major roads",
@@ -85,11 +85,11 @@ export async function runEstimate(request: Request) {
 				},
 				{
 					description:
-						"Local travel is estimated at 25 km/h, including places without roads. Input access can follow its cell's retained road geometry at the existing road-class speed after checked local access. Generalized roads use geometry-based times at assumed 55–105 km/h speeds, including approximate transfers within cells. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
+						"Local travel is estimated at 25 km/h, including places without roads. Input access can follow retained road geometry at its assumed class speed after checked local access. Road times charge source geometry at assumed 55–105 km/h speeds and local transfers to shared cell anchors at 25 km/h. Nearby roads and crossings merge within cells. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
 				},
 				{
 					description:
-						"Natural Earth is a generalized cartographic dataset, not a current routable road inventory. US-only road features are used; international crossings and ferries are not modeled. Shore connections require continuous generalized land. Input access allows up to 1 km of initial shore tolerance; unsupported origins remain isolated. Whole-cell shading can extend across borders or water. Small islands and water crossings can be inaccurate.",
+						"Natural Earth and U.S. Census Bureau 2026 TIGER/Line primary/secondary road linework form a modified coarse model, not an official Census product or a routable road inventory. International crossings and ferries are not modeled. Shore connections and road transfers require continuous generalized land. Input access allows up to 1 km of initial shore tolerance; unsupported origins remain isolated. Whole-cell shading can extend across borders or water. Small islands and water crossings can be inaccurate.",
 				},
 			],
 		};

@@ -1,0 +1,169 @@
+{
+  "profiles": [
+    {
+      "localPath": "data/coarse-quality/census-startup-v1/CPU.20261022.205036.68556.1.002.cpuprofile",
+      "sha256": "552a04ab1b8c5600f14969fd47029888c3483ba1652e9fdb3c85cec1e3b57180",
+      "samples": 16730,
+      "topFunctions": [
+        {
+          "function": "(idle)",
+          "file": "",
+          "samples": 16685
+        },
+        {
+          "function": "compileForInternalLoader",
+          "file": "realm",
+          "samples": 9
+        },
+        {
+          "function": "(program)",
+          "file": "",
+          "samples": 6
+        },
+        {
+          "function": "compileFunction",
+          "file": "",
+          "samples": 2
+        },
+        {
+          "function": "internalBinding",
+          "file": "realm",
+          "samples": 2
+        },
+        {
+          "function": "parseSource",
+          "file": "lexer",
+          "samples": 2
+        },
+        {
+          "function": "",
+          "file": "require-CBjy4Foe.mjs",
+          "samples": 2
+        },
+        {
+          "function": "popAsyncContext",
+          "file": "async_hooks",
+          "samples": 2
+        },
+        {
+          "function": "",
+          "file": "node:buffer",
+          "samples": 1
+        },
+        {
+          "function": "wrappedFn",
+          "file": "errors",
+          "samples": 1
+        },
+        {
+          "function": "",
+          "file": "messageport",
+          "samples": 1
+        },
+        {
+          "function": "debugWithTimer",
+          "file": "debuglog",
+          "samples": 1
+        },
+        {
+          "function": "",
+          "file": "resolve",
+          "samples": 1
+        },
+        {
+          "function": "defaultResolve",
+          "file": "resolve",
+          "samples": 1
+        },
+        {
+          "function": "getPathFromURLPosix",
+          "file": "url",
+          "samples": 1
+        }
+      ]
+    },
+    {
+      "localPath": "data/coarse-quality/census-startup-v1/CPU.20261022.205036.68556.0.001.cpuprofile",
+      "sha256": "b412e25c35484a036ff7832992bd8a6c2893017df30c9798076f86a3d0db535b",
+      "samples": 18188,
+      "topFunctions": [
+        {
+          "function": "containsRing",
+          "file": "coarse-contours.ts",
+          "samples": 12909
+        },
+        {
+          "function": "landConnection",
+          "file": "coarse-geography.ts",
+          "samples": 4437
+        },
+        {
+          "function": "",
+          "file": "coarse-data.server.ts",
+          "samples": 254
+        },
+        {
+          "function": "(garbage collector)",
+          "file": "",
+          "samples": 231
+        },
+        {
+          "function": "decodeVisit",
+          "file": "coarse-data.server.ts",
+          "samples": 110
+        },
+        {
+          "function": "distanceKm",
+          "file": "coarse-grid.ts",
+          "samples": 59
+        },
+        {
+          "function": "",
+          "file": "coarse-geography.ts",
+          "samples": 26
+        },
+        {
+          "function": "waitForWorker",
+          "file": "hooks",
+          "samples": 23
+        },
+        {
+          "function": "decodeGrid",
+          "file": "coarse-data.server.ts",
+          "samples": 16
+        },
+        {
+          "function": "makeSyncRequest",
+          "file": "hooks",
+          "samples": 15
+        },
+        {
+          "function": "",
+          "file": "measure-decoding.mjs",
+          "samples": 13
+        },
+        {
+          "function": "update",
+          "file": "hash",
+          "samples": 10
+        },
+        {
+          "function": "(program)",
+          "file": "",
+          "samples": 7
+        },
+        {
+          "function": "(idle)",
+          "file": "",
+          "samples": 7
+        },
+        {
+          "function": "compileForInternalLoader",
+          "file": "realm",
+          "samples": 6
+        }
+      ]
+    }
+  ],
+  "scope": "Fresh local Node V8 CPU sampling during national-v2 decode. Includes loader worker idle samples separately; raw profiles remain ignored/local-only. Counts are sampled self time, not a benchmark or cloud performance."
+}

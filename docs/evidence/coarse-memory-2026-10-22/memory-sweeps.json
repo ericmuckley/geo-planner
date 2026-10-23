@@ -1,0 +1,74 @@
+{
+  "artifact": "data/coarse-quality/census-augmentation-pilot-v1/grid.json",
+  "artifactSha256": "aca0fe8f62e463f3dee1ac64c2c3f993d1424ad9ca1c06715aa11cec3ad4e1f5",
+  "decodeMs": 1038.2525409999998,
+  "before": {
+    "rss": 117178368,
+    "heapTotal": 34291712,
+    "heapUsed": 15865264,
+    "external": 10253179,
+    "arrayBuffers": 7813804
+  },
+  "decoded": {
+    "rss": 138772480,
+    "heapTotal": 51068928,
+    "heapUsed": 16109368,
+    "external": 18760852,
+    "arrayBuffers": 14441926
+  },
+  "retainedHeapDeltaBytes": 244104,
+  "retainedArrayBufferDeltaBytes": 6628122,
+  "retainedHeapAndBufferDeltaBytes": 6872226,
+  "sweeps": [
+    {
+      "inputs": 2212,
+      "attachments": 2220,
+      "points": 346989,
+      "attachmentMedianMs": 1.2880410000002485,
+      "attachmentMaxMs": 313.74845900000037,
+      "memory": {
+        "rss": 266321920,
+        "heapTotal": 156188672,
+        "heapUsed": 16235104,
+        "external": 16920052,
+        "arrayBuffers": 14441926
+      },
+      "heapGrowthBytes": 125736,
+      "bufferGrowthBytes": 0
+    },
+    {
+      "inputs": 2212,
+      "attachments": 2220,
+      "points": 346989,
+      "attachmentMedianMs": 1.2733330000000933,
+      "attachmentMaxMs": 313.59250000000065,
+      "memory": {
+        "rss": 274350080,
+        "heapTotal": 156450816,
+        "heapUsed": 16236504,
+        "external": 16920052,
+        "arrayBuffers": 14441926
+      },
+      "heapGrowthBytes": 127136,
+      "bufferGrowthBytes": 0
+    },
+    {
+      "inputs": 2212,
+      "attachments": 2220,
+      "points": 346989,
+      "attachmentMedianMs": 1.2814170000001468,
+      "attachmentMaxMs": 322.58495799999946,
+      "memory": {
+        "rss": 275087360,
+        "heapTotal": 157237248,
+        "heapUsed": 16237304,
+        "external": 16920052,
+        "arrayBuffers": 14441926
+      },
+      "heapGrowthBytes": 127936,
+      "bufferGrowthBytes": 0
+    }
+  ],
+  "processMaxRssKiB": 272608,
+  "scope": "Local explicit-GC observations in one Node process, with already-parsed encoded input retained. Load checks less than 2 MiB retained heap beyond packed buffers; three complete supplemental-input sweeps check bounded retained growth (2 MiB heap / 64 KiB buffers allowance), not Vercel memory, a cloud capacity budget, latency percentiles or a nationwide forecast. RSS is whole-process lifetime, not isolated decoder/query peak."
+}

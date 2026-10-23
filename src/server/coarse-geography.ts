@@ -2,6 +2,114 @@ import { containsPolygon } from "./coarse-contours";
 
 type Geography = { boundary: number[][][][]; lakes: number[][][][] };
 
+type IndexedRing = {
+	points: number[][];
+	firstBand: number;
+	bands: number[][];
+};
+type IndexedPolygon = IndexedRing[];
+const indexes = new WeakMap<
+	Geography,
+	{
+		boundary: IndexedPolygon[];
+		lakes: IndexedPolygon[];
+		sourceBoundary: Geography["boundary"];
+		sourceLakes: Geography["lakes"];
+	}
+>();
+const band = (latitude: number) => Math.floor(latitude * 10);
+
+// Bundled geography is immutable. Index edge candidates, never query results;
+// the original coordinates and intersection arithmetic remain unchanged.
+export function prepareGeography(geography: Geography) {
+	const polygons = (source: number[][][][]) => {
+		const indexed = source.map((polygon) => {
+			const rings = polygon.map((points) => {
+				let firstBand = Infinity;
+				let lastBand = -Infinity;
+				for (const point of points) {
+					firstBand = Math.min(firstBand, band(point[1]));
+					lastBand = Math.max(lastBand, band(point[1]));
+					Object.freeze(point);
+				}
+				const bands = Array.from(
+					{ length: lastBand - firstBand + 1 },
+					() => [] as number[],
+				);
+				for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
+					const low = band(Math.min(points[i][1], points[j][1]));
+					const high = band(Math.max(points[i][1], points[j][1]));
+					for (let y = low; y <= high; y++) bands[y - firstBand].push(i);
+				}
+				Object.freeze(points);
+				return { points, firstBand, bands };
+			});
+			Object.freeze(polygon);
+			return rings;
+		});
+		Object.freeze(source);
+		return indexed;
+	};
+	indexes.set(geography, {
+		boundary: polygons(geography.boundary),
+		lakes: polygons(geography.lakes),
+		sourceBoundary: geography.boundary,
+		sourceLakes: geography.lakes,
+	});
+}
+
+function geographyIndex(geography: Geography) {
+	const index = indexes.get(geography);
+	return index?.sourceBoundary === geography.boundary &&
+		index.sourceLakes === geography.lakes
+		? index
+		: undefined;
+}
+
+function containsIndexedRing([x, y]: number[], ring: IndexedRing) {
+	let inside = false;
+	for (const i of ring.bands[band(y) - ring.firstBand] ?? []) {
+		const [xi, yi] = ring.points[i];
+		const [xj, yj] = ring.points[i ? i - 1 : ring.points.length - 1];
+		if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)
+			inside = !inside;
+	}
+	return inside;
+}
+
+function containsIndexedPolygon(point: number[], polygon: IndexedPolygon) {
+	return (
+		containsIndexedRing(point, polygon[0]) &&
+		!polygon.slice(1).some((ring) => containsIndexedRing(point, ring))
+	);
+}
+
+function* crossingEdges(geography: Geography, a: number[], b: number[]) {
+	const index = geographyIndex(geography);
+	if (!index) {
+		for (const polygon of [...geography.boundary, ...geography.lakes])
+			for (const ring of polygon)
+				for (let i = 1; i < ring.length; i++) yield [ring[i - 1], ring[i]];
+		return;
+	}
+	const first = band(Math.min(a[1], b[1]));
+	const last = band(Math.max(a[1], b[1]));
+	for (const polygon of [...index.boundary, ...index.lakes])
+		for (const { points, firstBand, bands } of polygon)
+			for (
+				let y = Math.max(first, firstBand);
+				y <= Math.min(last, firstBand + bands.length - 1);
+				y++
+			)
+				for (const i of bands[y - firstBand]) {
+					if (!i) continue; // The original crossing scan excludes the implicit closing edge.
+					const c = points[i - 1],
+						d = points[i];
+					// An edge spanning several bands is tested exactly once.
+					if (y === first || y === band(Math.min(c[1], d[1]))) yield [c, d];
+				}
+}
+
 // Partition at every polygon crossing: sampling alone can skip narrow channels.
 // A tolerated water prefix applies only at an input point, never inside a link.
 export function landConnection(
@@ -10,48 +118,61 @@ export function landConnection(
 	b: number[],
 	maxWaterPrefix = 0,
 ) {
+	const index = geographyIndex(geography);
 	const onLand = (point: number[]) =>
-		geography.boundary.some((polygon) =>
-			containsPolygon([point[0], point[1]], polygon),
-		) &&
-		!geography.lakes.some((polygon) =>
-			containsPolygon([point[0], point[1]], polygon),
-		);
+		index
+			? index.boundary.some((polygon) =>
+					containsIndexedPolygon(point, polygon),
+				) &&
+				!index.lakes.some((polygon) => containsIndexedPolygon(point, polygon))
+			: geography.boundary.some((polygon) =>
+					containsPolygon([point[0], point[1]], polygon),
+				) &&
+				!geography.lakes.some((polygon) =>
+					containsPolygon([point[0], point[1]], polygon),
+				);
 	if (!onLand(b)) return false;
-	const sourcePolygons = geography.boundary.filter((polygon) =>
-		containsPolygon([a[0], a[1]], polygon),
-	);
-	if (
-		sourcePolygons.length &&
-		!sourcePolygons.some((polygon) => containsPolygon([b[0], b[1]], polygon))
-	)
-		return false;
+	if (index) {
+		const source = index.boundary.filter((polygon) =>
+			containsIndexedPolygon(a, polygon),
+		);
+		if (
+			source.length &&
+			!source.some((polygon) => containsIndexedPolygon(b, polygon))
+		)
+			return false;
+	} else {
+		const source = geography.boundary.filter((polygon) =>
+			containsPolygon([a[0], a[1]], polygon),
+		);
+		if (
+			source.length &&
+			!source.some((polygon) => containsPolygon([b[0], b[1]], polygon))
+		)
+			return false;
+	}
 	const dx = b[0] - a[0],
 		dy = b[1] - a[1];
 	if (!dx && !dy) return true;
 	const cuts = [0, 1];
-	for (const polygon of [...geography.boundary, ...geography.lakes])
-		for (const ring of polygon)
-			for (let i = 1; i < ring.length; i++) {
-				const c = ring[i - 1],
-					d = ring[i];
-				if (
-					Math.max(c[0], d[0]) < Math.min(a[0], b[0]) ||
-					Math.min(c[0], d[0]) > Math.max(a[0], b[0]) ||
-					Math.max(c[1], d[1]) < Math.min(a[1], b[1]) ||
-					Math.min(c[1], d[1]) > Math.max(a[1], b[1])
-				)
-					continue;
-				const ex = d[0] - c[0],
-					ey = d[1] - c[1];
-				const denominator = dx * ey - dy * ex;
-				if (Math.abs(denominator) < 1e-15) continue;
-				const cx = c[0] - a[0],
-					cy = c[1] - a[1];
-				const t = (cx * ey - cy * ex) / denominator;
-				const u = (cx * dy - cy * dx) / denominator;
-				if (t >= 0 && t <= 1 && u >= 0 && u <= 1) cuts.push(t);
-			}
+	for (const [c, d] of crossingEdges(geography, a, b)) {
+		if (
+			Math.max(c[0], d[0]) < Math.min(a[0], b[0]) ||
+			Math.min(c[0], d[0]) > Math.max(a[0], b[0]) ||
+			Math.max(c[1], d[1]) < Math.min(a[1], b[1]) ||
+			Math.min(c[1], d[1]) > Math.max(a[1], b[1])
+		)
+			continue;
+		const ex = d[0] - c[0],
+			ey = d[1] - c[1];
+		const denominator = dx * ey - dy * ex;
+		if (Math.abs(denominator) < 1e-15) continue;
+		const cx = c[0] - a[0],
+			cy = c[1] - a[1];
+		const t = (cx * ey - cy * ex) / denominator;
+		const u = (cx * dy - cy * dx) / denominator;
+		if (t >= 0 && t <= 1 && u >= 0 && u <= 1) cuts.push(t);
+	}
 	cuts.sort((x, y) => x - y);
 	let reachedLand = false;
 	for (let i = 1; i < cuts.length; i++) {

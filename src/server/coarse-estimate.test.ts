@@ -389,6 +389,8 @@ test("coarse estimates need no network, credential or local worker, including th
 		assert.equal(config.provider, "coarse");
 		assert.equal(config.health, "ready");
 		assert.equal(config.maxMinutes, 720);
+		assert.equal(config.engineVersion, "coarse-road-grid-v5");
+		assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v5");
 		for (const [lat, lon] of [
 			[32.7157, -117.1611],
 			[47.6062, -122.3321],
@@ -407,6 +409,15 @@ test("coarse estimates need no network, credential or local worker, including th
 			);
 			const result = resultSchema.parse(await response.json());
 			assert.equal(result.metadata.engine, "coarse");
+			assert.equal(result.metadata.engineVersion, config.engineVersion);
+			assert.match(
+				result.metadata.attribution ?? "",
+				/modified and repackaged Census data/,
+			);
+			assert.match(
+				result.metadata.approximation?.sourceRelease ?? "",
+				/2026 TIGER\/Line/,
+			);
 			assert.equal(result.metadata.coverageVerified, false);
 			assert.ok(result.metadata.approximation?.reachedCells);
 			assert.equal(result.metadata.upstreamBytes, 0);

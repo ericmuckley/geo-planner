@@ -1,6 +1,6 @@
 # Geo Planner documentation
 
-For a new coding agent or a disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). V3, cloud history and prior evidence are committed at `887ab50`; the user accepted that deployment visually. The active v4 road attachment, access diagnostics/evidence and current-doc updates are uncommitted and not deployed. Compact datasets are included in source; detailed research datasets and keys remain local-only.
+For a new coding agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). V5 is active locally with nationwide Census + Natural Earth data; production remains independently verified v4 at `637746c`. All later runtime/data/diagnostic/evidence/doc work is uncommitted. The new v5 artifact belongs in Git/Vercel; raw inputs, ignored candidates/probes, detailed research graphs and secrets remain local-only.
 
 ## Current documents
 
@@ -9,7 +9,7 @@ For a new coding agent or a disconnected session, read [AGENTS.md](../AGENTS.md)
 | [Agent handoff](agent-handoff.md) | Recovery checks, graph/data locations, restart commands and resume prompt |
 | [Implementation status](implementation-status.md) | Current capabilities, limits, code map and validation |
 | [Local development](local-development.md) | App setup and the separate experimental/provider APIs |
-| [Next steps](next-steps.md) | Deploy v4, then assess compact road-source completeness; detailed optimization is parked |
+| [Next steps](next-steps.md) | Verify actual v5 deployment, then diagnose remaining coarse-model errors; detailed research is parked |
 | [Coarse estimator](coarse-estimator.md) | Implemented nationwide grid model, assumptions, sources and local Vercel evidence |
 | [Six-hour preflight](six-hour-preflight.md) | Unclipped planning, source gaps and the current resource screen |
 | [Two-hour regional baseline](two-hour-region.md) | Current graph's exact recipes, provenance, measurements and evidence |
@@ -18,7 +18,7 @@ For a new coding agent or a disconnected session, read [AGENTS.md](../AGENTS.md)
 | [US service setup](us-routing-service.md) | Selected hosted main-page provider and recorded limits |
 | [Retained Valhalla recipe](regional-routing.md) | Separate local Valhalla build/service reference |
 
-**Coarse MVP, October 22:** the main page computes filled 1–12-hour estimates with 6/10/12h presets, optional private PostgreSQL history, local fallback and export. The user accepted the earlier deployed v3 baseline. Active local v4 adds charged source-road access while preserving the graph and shoreline correction. It improves 31 of 35 saved point comparisons, four unchanged and none regressed; all destinations remain reached. The 8.00 MB artifact and 13.45 MB generated Vercel function pass local checks with no outbound routing requests. National accuracy remains unvalidated; missing roads and access through other roads in a cell remain. Next deploy v4, then prioritize compact source completeness. [V4 model/evidence](coarse-estimator.md#v4-charged-road-attachment), [saved-history milestone](implementation-status.md#saved-history-verification), [next steps](next-steps.md). Detailed-engine expansion and memory work remain parked.
+**October 22 milestone:** nationwide v5 is active locally, with a reproducible **39,977,082-byte** model and **43,779,085-byte** local Vercel function. It adds 36,742 Census road links while preserving v4 anchors, geography and original roads. Fixed geography indexing retains every validation check and reduces first local packaged computation from 22.2 seconds to 2.46–2.47 seconds in three fresh processes. All 35 saved costs/paths and 42 national counts match the accepted candidate, with seven improvements/no regressions versus v4. Three complete memory sweeps retain bounded storage. 51 server tests, fifteen geometry fixtures, checks/typechecks, both builds, local handler and arbitrary inland/rural/coastal browser flows/history pass. Source credit and modified-data notices are visible. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md), [national preparation](evidence/coarse-national-2026-10-22/README.md), [model](coarse-estimator.md). These measurements do not qualify national driving accuracy, cloud cold starts or peak memory. [Production proof](evidence/coarse-hosted-2026-10-22/README.md) remains v4; actual v5 deployment verification is next.
 
 The preserved local experiment defaults to 120 minutes; five reference sources reach no detected cuts within two hours. It remains regional/static, and six-to-twelve-hour queries still clip. The optional hosted model remains capped at 60 minutes. The detailed six-hour preflight is complete; its storage calibration reproduces all eight qualified payloads at 2.415/2.416 GiB. [Final evidence](evidence/source-outgoing-2026-10-19/README.md) is complete; its partial-source expansion screen remains held at 9.290 GiB with margin against 4 GiB. No calibration job is running. These limits do not apply to the separate coarse grid.
 

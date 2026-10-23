@@ -1,0 +1,186 @@
+{
+  "baseUrl": "https://geo-planner-orcin.vercel.app",
+  "startedAt": "2026-10-23T00:55:30.217Z",
+  "finishedAt": "2026-10-23T00:55:35.644Z",
+  "requests": 15,
+  "config": {
+    "configured": true,
+    "provider": "coarse",
+    "health": "ready",
+    "healthMessage": "Ready without a routing service or API key. Rough planning estimates; travel-time accuracy has not been calibrated.",
+    "maxMinutes": 720,
+    "minMinutes": 60,
+    "graphVersion": "natural-earth-5.1.2-road-grid-v4",
+    "engineVersion": "coarse-road-grid-v4",
+    "coverage": "Contiguous United States; coarse estimated travel over land and major roads",
+    "coverageBounds": [
+      -125,
+      24,
+      -66,
+      50
+    ]
+  },
+  "samples": [
+    {
+      "name": "San Diego",
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "minutes": 360,
+      "status": 200,
+      "bytes": 7334,
+      "httpRoundTripMs": 725.446833,
+      "reachedCells": 2162,
+      "serverTimings": {
+        "engineRoundTripMs": 525.888886,
+        "decodeValidateMs": 19.610059000000092,
+        "serverTotalMs": 545.5153400000002,
+        "searchMs": 191.67173200000002,
+        "contourMs": 46.78508000000011
+      }
+    },
+    {
+      "name": "Denver",
+      "lat": 39.7392,
+      "lon": -104.9903,
+      "minutes": 600,
+      "status": 200,
+      "bytes": 15711,
+      "httpRoundTripMs": 312.9369999999999,
+      "reachedCells": 15210,
+      "serverTimings": {
+        "engineRoundTripMs": 109.3898680000002,
+        "decodeValidateMs": 10.326910999999882,
+        "serverTotalMs": 119.72694300000012,
+        "searchMs": 100.20843300000001,
+        "contourMs": 8.79729599999996
+      }
+    },
+    {
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "minutes": 720,
+      "status": 200,
+      "bytes": 13619,
+      "httpRoundTripMs": 232.0828330000004,
+      "reachedCells": 11249,
+      "serverTimings": {
+        "engineRoundTripMs": 129.74632100000008,
+        "decodeValidateMs": 0.9530829999998787,
+        "serverTotalMs": 130.7007749999998,
+        "searchMs": 113.28326900000002,
+        "contourMs": 15.997307000000092
+      }
+    },
+    {
+      "name": "Rural Utah",
+      "lat": 38.5,
+      "lon": -110.7,
+      "minutes": 360,
+      "status": 200,
+      "bytes": 6141,
+      "httpRoundTripMs": 119.88570900000013,
+      "reachedCells": 1703,
+      "serverTimings": {
+        "engineRoundTripMs": 16.87653599999976,
+        "decodeValidateMs": 0.5136870000001181,
+        "serverTotalMs": 17.391675999999734,
+        "searchMs": 5.876451999999972,
+        "contourMs": 10.6165060000003
+      }
+    },
+    {
+      "name": "Key West",
+      "lat": 24.5551,
+      "lon": -81.78,
+      "minutes": 720,
+      "status": 200,
+      "bytes": 6403,
+      "httpRoundTripMs": 238.99729200000002,
+      "reachedCells": 1762,
+      "serverTimings": {
+        "engineRoundTripMs": 132.20185600000013,
+        "decodeValidateMs": 0.6069910000001073,
+        "serverTotalMs": 132.81031100000018,
+        "searchMs": 129.38992199999984,
+        "contourMs": 2.42913499999986
+      }
+    }
+  ],
+  "repeat": {
+    "name": "San Diego",
+    "lat": 32.7157,
+    "lon": -117.1611,
+    "minutes": 360,
+    "status": 200,
+    "bytes": 7332,
+    "httpRoundTripMs": 176.14679100000012,
+    "reachedCells": 2162,
+    "serverTimings": {
+      "engineRoundTripMs": 63.75520600000027,
+      "decodeValidateMs": 0.4643940000000839,
+      "serverTotalMs": 64.22163,
+      "searchMs": 52.38394100000005,
+      "contourMs": 11.045598000000155
+    }
+  },
+  "concurrent": [
+    {
+      "name": "Denver",
+      "lat": 39.7392,
+      "lon": -104.9903,
+      "minutes": 600,
+      "status": 200,
+      "bytes": 15712,
+      "httpRoundTripMs": 183.45908299999974,
+      "reachedCells": 15210,
+      "serverTimings": {
+        "engineRoundTripMs": 55.592891999999665,
+        "decodeValidateMs": 0.9142990000000282,
+        "serverTotalMs": 56.50876500000004,
+        "searchMs": 52.70730400000002,
+        "contourMs": 2.5669659999998657
+      }
+    },
+    {
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "minutes": 720,
+      "status": 200,
+      "bytes": 13616,
+      "httpRoundTripMs": 297.12266599999975,
+      "reachedCells": 11249,
+      "serverTimings": {
+        "engineRoundTripMs": 78.19136200000003,
+        "decodeValidateMs": 0.7278309999996964,
+        "serverTotalMs": 78.92061399999966,
+        "searchMs": 74.4583819999998,
+        "contourMs": 3.3494940000000497
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "malformed JSON",
+      "status": 400
+    },
+    {
+      "name": "below minimum",
+      "status": 422
+    },
+    {
+      "name": "above maximum",
+      "status": 422
+    },
+    {
+      "name": "unsupported geography",
+      "status": 422
+    }
+  ],
+  "researchDisabled": true,
+  "freshHistoryConfiguredAndEmpty": true,
+  "routingProviderRequestsByVerifier": 0,
+  "historyWritesByVerifier": 0,
+  "scope": "Live HTTP observations from this development machine, including network/JSON delivery. First and repeat calls are not proven cold/warm invocations. Two overlapping requests are a smoke check, not load qualification. Saved national cell counts/version metadata match; this is not real-world driving accuracy or a cloud peak-memory measurement. No cookies or existing history are read or printed, and no routing-provider endpoint is called."
+}

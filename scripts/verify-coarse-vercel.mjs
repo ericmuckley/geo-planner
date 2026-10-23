@@ -18,7 +18,9 @@ const secretValues = [...secrets].filter((value) => value && value.length > 8);
 
 process.env.VERCEL = "1";
 process.env.LOCAL_ROUTING_EXPERIMENT = "1";
-const directory = resolve(".vercel/output/functions/__server.func");
+const root = process.argv[2] ?? ".";
+const expectedEngine = process.argv[3] ?? "coarse-road-grid-v5";
+const directory = resolve(root, ".vercel/output/functions/__server.func");
 let functionBytes = 0;
 let functionFiles = 0;
 async function inspect(path) {
@@ -78,7 +80,19 @@ for (const [name, lat, lon, minutes] of [
 	assert.ok(Buffer.byteLength(text) < 1_000_000);
 	const body = JSON.parse(text);
 	assert.equal(body.metadata.engine, "coarse");
-	assert.equal(body.metadata.engineVersion, "coarse-road-grid-v4");
+	assert.equal(body.metadata.engineVersion, expectedEngine);
+	if (expectedEngine === "coarse-road-grid-v5") {
+		assert.equal(
+			body.metadata.graphVersion,
+			"natural-earth-census-2026-grid-v5",
+		);
+		assert.match(
+			body.metadata.attribution,
+			/modified and repackaged Census data/,
+		);
+		assert.match(body.metadata.approximation.sourceRelease, /2026 TIGER\/Line/);
+		assert.equal(body.metadata.coverageVerified, false);
+	}
 	assert.ok(body.contours.features[0].geometry.coordinates.length);
 	samples.push({
 		name,
@@ -108,12 +122,10 @@ assert.equal(unsaved.status, 503);
 if (previousDatabaseUrl !== undefined)
 	process.env.DATABASE_URL = previousDatabaseUrl;
 assert.equal(outboundCalls, 0);
-for (const entry of await readdir(".vercel/output/static/assets")) {
+const clientDirectory = resolve(root, ".vercel/output/static/assets");
+for (const entry of await readdir(clientDirectory)) {
 	if (!entry.endsWith(".js")) continue;
-	const content = await readFile(
-		join(".vercel/output/static/assets", entry),
-		"utf8",
-	);
+	const content = await readFile(join(clientDirectory, entry), "utf8");
 	assert.ok(
 		!secretValues.some((secret) => content.includes(secret)),
 		`Secret embedded in client file: ${entry}`,
@@ -122,6 +134,8 @@ for (const entry of await readdir(".vercel/output/static/assets")) {
 		!content.includes("natural-earth-5.1.2-road-grid-"),
 		`Server dataset in client asset: ${entry}`,
 	);
+	assert.ok(!content.includes("natural-earth-census-2026-"));
+	assert.ok(!content.includes("cell-visits-le-v1"));
 }
 console.log(
 	JSON.stringify(

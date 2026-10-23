@@ -12,20 +12,19 @@ import {
 	gridPosition,
 } from "../src/server/coarse-grid";
 
-const path = process.argv[2] ?? "src/server/data/coarse-grid-v4.json";
+const path = process.argv[2];
+assert.ok(path, "Pass an offline candidate artifact path");
 const raw = await readFile(path, "utf8");
 const data = JSON.parse(raw),
 	candidate = decodeGrid(data);
 const baselineData = JSON.parse(
-	await readFile("src/server/data/coarse-grid-v3.json", "utf8"),
+	await readFile("src/server/data/coarse-grid-v4.json", "utf8"),
 );
 const baseline = decodeGrid(baselineData);
 assert.deepEqual(data.roadSpeedsKph, baselineData.roadSpeedsKph);
 for (const key of [
 	"land",
 	"traversable",
-	"links",
-	"roadDeciseconds",
 	"displayLand",
 	"anchorOffsets",
 	"shoreLinks",
@@ -37,7 +36,7 @@ for (const key of [
 		`${key} must remain unchanged`,
 	);
 const preserved = JSON.parse(
-	await readFile("docs/evidence/coarse-v3-2026-10-22/comparison.json", "utf8"),
+	await readFile("docs/evidence/coarse-v4-2026-10-22/comparison.json", "utf8"),
 );
 type Sample = {
 	id: string;
@@ -88,7 +87,7 @@ function measure(
 function compare(samples: Sample[]) {
 	const rows = samples.map((s) => ({
 		...s,
-		baseline: measure(baseline, "v3", s.origin, s.destination),
+		baseline: measure(baseline, "v4", s.origin, s.destination),
 		candidate: measure(candidate, "candidate", s.origin, s.destination),
 	}));
 	const finite = rows.filter(
@@ -160,6 +159,10 @@ console.log(
 			artifactBytes: Buffer.byteLength(raw),
 			artifactSha256: createHash("sha256").update(raw).digest("hex"),
 			model: data.version,
+			baselineModel: baselineData.version,
+			baselineSha256: createHash("sha256")
+				.update(await readFile("src/server/data/coarse-grid-v4.json"))
+				.digest("hex"),
 			roadSpeedsKph: data.roadSpeedsKph,
 			shoreLandCells: data.shoreLandCells,
 			shoreLocalLinks: data.shoreLocalLinks,
@@ -168,7 +171,7 @@ console.log(
 			publicRoutingApiCalls: 0,
 			localServiceRequests: 0,
 			scope:
-				"Offline candidate versus preserved v3 on both saved reference sets. Point arrival uses the same charged geography-checked attachment as departure; common-finite means and reachability remain separate. All v3 baseline costs are checked against preserved results. The reference sets guide refinement and are not new holdouts or national accuracy validation.",
+				"Offline candidate versus preserved v4 on both saved reference sets. Point arrival uses the same charged geography-checked attachment as departure; common-finite means and reachability remain separate. All 35 v4 baseline costs are checked against preserved results. Baseline masks, positions, shore paths and speeds remain unchanged. The reference sets guide refinement and are not new holdouts or national accuracy validation.",
 		},
 		null,
 		2,

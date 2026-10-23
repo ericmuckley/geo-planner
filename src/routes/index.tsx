@@ -651,21 +651,38 @@ function Home() {
 									Coverage: {result.metadata.coverage} · Completeness unverified
 								</p>
 								{result.metadata.engine === "coarse" ? (
-									<p>
-										{result.metadata.approximation?.reachedCells.toLocaleString()}{" "}
-										estimated land cells ·{" "}
-										{result.metadata.approximation?.gridDegrees}° grid ·
-										estimated local travel{" "}
-										{result.metadata.approximation?.localSpeedKph} km/h. Made
-										with{" "}
-										<a
-											className="underline"
-											href="https://www.naturalearthdata.com/"
-										>
-											Natural Earth
-										</a>{" "}
-										(public domain).
-									</p>
+									<>
+										<p>
+											{result.metadata.approximation?.reachedCells.toLocaleString()}{" "}
+											estimated land cells ·{" "}
+											{result.metadata.approximation?.gridDegrees}° grid ·
+											estimated local travel{" "}
+											{result.metadata.approximation?.localSpeedKph} km/h.
+										</p>
+										<p>{result.metadata.attribution}</p>
+										<p>
+											<a
+												className="underline"
+												href="https://www.naturalearthdata.com/"
+											>
+												Natural Earth
+											</a>{" "}
+											{result.metadata.approximation?.sourceRelease.includes(
+												"Census",
+											) && (
+												<>
+													{" "}
+													·{" "}
+													<a
+														className="underline"
+														href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
+													>
+														U.S. Census Bureau 2026 TIGER/Line
+													</a>
+												</>
+											)}
+										</p>
+									</>
 								) : result.metadata.engine === "valhalla" ? (
 									<p>
 										Contour simplification: {result.metadata.generalizeMeters} m
