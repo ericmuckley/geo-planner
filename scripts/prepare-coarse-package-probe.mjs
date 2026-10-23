@@ -40,13 +40,13 @@ for (const path of [
 await symlink(resolve("node_modules"), join(output, "node_modules"), "dir");
 const route = join(output, "src/server/coarse-estimate.server.ts");
 const original = await readFile(route, "utf8");
-assert.ok(original.includes("./data/coarse-grid-v6.json"));
-assert.ok(original.includes('"coarse-road-grid-v6"'));
+assert.ok(original.includes("./data/coarse-grid-v8.json"));
+assert.ok(original.includes('"coarse-road-grid-v8"'));
 await writeFile(
 	route,
 	original
-		.replace("./data/coarse-grid-v6.json", "./data/coarse-grid-candidate.json")
-		.replace('"coarse-road-grid-v6"', '"coarse-road-grid-candidate"'),
+		.replace("./data/coarse-grid-v8.json", "./data/coarse-grid-candidate.json")
+		.replace('"coarse-road-grid-v8"', '"coarse-road-grid-candidate"'),
 );
 const record = {
 	artifact,

@@ -6,7 +6,13 @@ import { resolve } from "node:path";
 import { decodeGrid } from "../src/server/coarse-data.server";
 import { estimateGrid } from "../src/server/coarse-grid";
 
-const [artifact, output] = process.argv.slice(2);
+const [artifact, output, flag] = process.argv.slice(2);
+assert.ok(
+	!flag || ["--baseline-v6", "--baseline-v7"].includes(flag),
+	"Unknown baseline option",
+);
+const roadConnections = flag === "--baseline-v6";
+const baselineVersion = flag === "--baseline-v7" ? 7 : roadConnections ? 6 : 5;
 assert.ok(
 	artifact && output,
 	"Pass candidate artifact and fresh preview directory",
@@ -15,9 +21,13 @@ assert.ok(resolve(output).startsWith(`${resolve("data/coarse-quality")}/`));
 await mkdir(output);
 const raw = await readFile(artifact);
 const data = JSON.parse(raw.toString());
-const baseline = decodeGrid(
-	JSON.parse(await readFile("src/server/data/coarse-grid-v5.json", "utf8")),
+const baselineData = JSON.parse(
+	await readFile(
+		`src/server/data/coarse-grid-v${baselineVersion}.json`,
+		"utf8",
+	),
 );
+const baseline = decodeGrid(baselineData);
 const candidate = decodeGrid(data);
 const scenarios = [];
 for (const [name, lat, lon, category] of [
@@ -43,7 +53,8 @@ const report = {
 	artifact,
 	artifactSha256: createHash("sha256").update(raw).digest("hex"),
 	model: data.version,
-	baselineModel: "natural-earth-census-2026-grid-v5",
+	baselineModel: baselineData.version,
+	roadConnections,
 	scenarios,
 	scope:
 		"Precomputed offline same-query visual comparison. Both geometries use production search/contour code on independently built graphs. Validation locations do not enter routing rules. Cell counts across resolutions are not accuracy measures; no driving references/provider/database calls. Local timing observations only. Basemap uses network independently.",

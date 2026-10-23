@@ -108,14 +108,14 @@ These are model-to-model diagnostics, not live driving-time truth or national ac
 
 ## Hosted v4 verification
 
-This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hosted-2026-10-22/README.md) remains unchanged; the user reports v5 live. **The current verifier expects v6**, which is active locally but not yet deployed by this agent. Run deliberately after the new deployment is Ready:
+This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hosted-2026-10-22/README.md) remains unchanged; the user reports v6 committed/verified live at `ffd7fec`. **The current verifier expects v8**, which is local/uncommitted. Run deliberately after the new deployment is Ready:
 
 ```sh
 node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
 npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
 ```
 
-It makes fifteen app requests, checks saved v6 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v5 intentionally fails the version assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v6 proof](evidence/coarse-resolution-2026-10-23/README.md).
+It makes fifteen app requests, checks saved v8 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v6/v7 intentionally fail the version assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v8 proof](evidence/coarse-finer-2026-10-23/README.md).
 
 ## Offline road-source pilot
 
@@ -206,11 +206,11 @@ node scripts/prepare-coarse-package-probe.mjs data/coarse-quality/census-nationa
 node scripts/verify-coarse-vercel.mjs data/coarse-quality/census-national-v2/package-probe-new coarse-road-grid-candidate
 ```
 
-The handler checker now defaults to active project/v6 without args. Biome excludes ignored `data/`, including isolated source copies and frozen/local assets. The original candidate package took about 22 seconds for first computation; indexed validation now takes 2.46–2.47 seconds in three fresh local processes. V5 was activated at that milestone; v6 below is now active locally. No env variable, migration or runtime dependency is added. Preserve all old/failed outputs. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md).
+The handler checker now defaults to active project/v8 without args. Biome excludes ignored `data/`, including isolated source copies and frozen/local assets. The original candidate package took about 22 seconds for first computation; indexed validation now takes 2.46–2.47 seconds in three fresh local processes. V5 was activated at that milestone; v8 below is now active locally. No env variable, migration or runtime dependency is added. Preserve all old/failed outputs. [V5 evidence](evidence/coarse-v5-2026-10-22/README.md).
 
 ## Finer-resolution v6
 
-Normal development/deployment uses bundled `src/server/data/coarse-grid-v6.json` and requires no source producer or Python. It is uncommitted in this workspace; include it with publication. Expected: **68,129,975 bytes / SHA `a1ba5ae3eb7419feb458641f00da1886802fc16ec11af86e3d61d42a3b8b3f99`**. The runtime remains TypeScript with no new DB/key/env requirement. [Evidence](evidence/coarse-resolution-2026-10-23/README.md).
+This historical recipe reproduces preserved `src/server/data/coarse-grid-v6.json`, committed at `ffd7fec` and user-reported verified live. Normal development/deployment now uses v8 below and needs no source producer or Python. Expected: **68,129,975 bytes / SHA `a1ba5ae3eb7419feb458641f00da1886802fc16ec11af86e3d61d42a3b8b3f99`**. The runtime remains TypeScript with no new DB/key/env requirement. [Evidence](evidence/coarse-resolution-2026-10-23/README.md).
 
 For an intentional source rebuild, Python 3.11+, all three pinned NE files, all 49 Census ZIPs/locks, manifest/catalog and the checked PyShp wheel must exist. Current caches already contain them. A fresh clone needs the [Census recovery](#nationwide-census-candidate) and wheel setup above. NE files belong under `data/coarse-sources/natural-earth-v5.1.2/`; source URLs/hashes are in the preserved v5 JSON and enforced by `original.load`. Restore only missing public files, preserving existing caches:
 
@@ -254,11 +254,97 @@ python3 -B -m http.server 4176 --bind 127.0.0.1 --directory data/coarse-quality/
 
 The current existing server instead serves `data/coarse-quality/resolution-evaluation-v1/`; its URL is **http://127.0.0.1:4176/preview-v2/**. Rediscover the listener before starting another server; never kill an unrelated owner. Maps share a camera and expose inland/rural/coastal/mountain 6/10/12h cases. The template/scripts copy installed MapLibre assets, with no dependency installation; online basemap requests remain separate from routing.
 
-An isolated package probe still accepts any candidate/fresh directory through `prepare-coarse-package-probe.mjs`; it now copies active v6 source/wording, changes only the copied import/engine label and never edits the real app. Use it for a new runtime experiment, not to rerun completed package evidence. `npm run check:coarse:vercel` defaults to active v6. Preserve old v1–v5 data and every failed/original output.
+An isolated package probe still accepts any candidate/fresh directory through `prepare-coarse-package-probe.mjs`; it now copies active v8 source/wording, changes only the copied import/engine label and never edits the real app. Use it for a new runtime experiment, not to rerun completed package evidence. `npm run check:coarse:vercel` defaults to active v8. Preserve old v1–v6 data and every failed/original output.
+
+## Census road states v7
+
+Historical v7 comparison artifact `src/server/data/coarse-grid-v7.json`: **79,584,626 bytes / SHA `988d1ef988e0ca587b60cb3ee4d688eed37629bdb62f344d7f49e8f6f6349379`**. Include this currently uncommitted comparison artifact with v8 when publishing. Normal app/deployment now uses v8 below. No raw source, Python, DB, new dependency or env variable is required at runtime. [Complete evidence](evidence/coarse-connections-2026-10-23/README.md).
+
+The completed source runs are `data/coarse-quality/road-layer-v1/` and `road-layer-v1-repeat/`, each containing `grid.json`, `build.json` and `links.json.gz`. Candidate SHA **`d2f220d90d3d27caaf6d19aab63e2fb0365ea3f29a06398be3ff365b921c3c73`**, 79,584,632 bytes; proof SHA **`fc71016fd7fbbcba10bc0a512499133c0d199027a1cb5d4dd6e02873111049f5`**, 10,226,099 bytes. Both repeat byte for byte. Evaluation/memory/paths/finalization/preview are under `data/coarse-quality/road-layer-evaluation-v1/`; candidate package probe under `road-layer-v1/package-probe/`.
+
+Only if intentionally rebuilding, use Python 3.11+, bundled pinned v6, all 49 cached Census ZIPs/locks and manifest, three NE files and the pinned PyShp wheel described above. The default recipe requires v6's exact hash and reuses pure source helpers without running old producers. The v8 recipe below supplies an explicit base path/hash pair. It refuses existing output directories:
+
+```sh
+python3 -B scripts/build-coarse-road-layer.py \
+  --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/road-layer-replay-new
+```
+
+Expected: 135,128 Census states, 159,189 new links, same candidate/proof hashes. Existing completed passes take about 70s locally. No completed producer needs rerunning for runtime/docs validation. Recovery checks below read existing artifacts and call no routing provider, DB or source service; run only affected checks after changes:
+
+```sh
+node --import tsx scripts/verify-coarse-road-layer.ts data/coarse-quality/road-layer-v1/grid.json data/coarse-quality/road-layer-v1/build.json
+node --import tsx scripts/compare-coarse-resolution.ts data/coarse-quality/road-layer-v1/grid.json --baseline-v6
+node --import tsx scripts/inspect-coarse-access.ts data/coarse-quality/road-layer-v1/grid.json docs/evidence/coarse-connections-2026-10-23/comparison.json
+node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-quality/road-layer-v1/grid.json --anchor-inputs
+node scripts/finalize-coarse-grid-v7.mjs data/coarse-quality/road-layer-v1/grid.json data/coarse-quality/grid-v7-repeat-new.json
+```
+
+Expected: all new link/transfer proofs and preserved v6 fields pass; 42 cases lose no v6 cells; all 35 baseline costs match sealed v6 evidence, 21 improve/14 unchanged/zero regress and every destination is reached/shaded. Original/broader mean absolute reference differences 14.712→11.579 / 23.615→17.211 min. These are development comparisons, not national accuracy. State IDs are base cell indices or `width * height + cell` for Census; path/attachment diagnostics retain these IDs. Contour arrivals use the minimum across both states. Full source validation remains; no growing decoded/query cache.
+
+Finalization accepts only the qualified candidate hash, changes only version and refuses overwrite. Existing active/repeat bytes match; no producer or sweep is needed to recheck documentation. Default `routing:verify:coarse` and hosted verifier now require v8 counts/version. Both builds and local handler remain the normal app release checks.
+
+For a fresh offline paired review directory:
+
+```sh
+node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/road-layer-v1/grid.json data/coarse-quality/road-layer-preview-new --baseline-v6
+python3 -B -m http.server 4177 --bind 127.0.0.1 --directory data/coarse-quality/road-layer-preview-new
+```
+
+The existing server instead serves `data/coarse-quality/road-layer-evaluation-v1/` at **http://127.0.0.1:4177/preview/**. Rediscover listeners before starting/stopping one. Twelve inland/rural/coastal/mountain cases at 6/10/12h share a camera, resolution and speeds; basemap requests are separate. Some full-page browser captures rendered only part of WebGL canvases; use a normal viewport capture and inspect it. Initial captures are preserved under ignored evaluation outputs. Main app remains `http://127.0.0.1:3000/` with v8, source notices and normal history/replay. Full DB write tests need not repeat for this unchanged persistence layer.
+
+## Finer-resolution v8
+
+Normal app/deployment needs only bundled `src/server/data/coarse-grid-v8.json`: **61,208,381 bytes / SHA `2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910`**. V7/v8 are uncommitted; include both artifacts and accumulated changes. No new env, dependency, migration, raw source or Python is required at runtime. [Complete v8 evidence](evidence/coarse-finer-2026-10-23/README.md).
+
+Completed ignored source directories: `resolution-0025-base-v1/` / `resolution-0025-base-v1-repeat/` and `resolution-0025-road-v1/` / `resolution-0025-road-v1-repeat/`, all under `data/coarse-quality/`. Each has grid/build/compressed link proofs. Evaluation/packed/repeat/finalization/profile/preview and intermediate package probes are in `resolution-0025-evaluation-v1/`; final qualified package is `package-probe-direct-arrays/`. Preserve all intermediate failures/marginal runs.
+
+Only for an intentional source rebuild, reuse the Python 3.11+/pinned NE/49 Census ZIP/manifest/PyShp prerequisites above. Fresh output paths refuse overwrite:
+
+```sh
+python3 -B scripts/build-coarse-resolution.py --step 0.025 \
+  --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/resolution-0025-base-new
+python3 -B scripts/build-coarse-road-layer.py \
+  --base data/coarse-quality/resolution-0025-base-new/grid.json \
+  --base-sha256 01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56 \
+  --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
+  --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
+  --output data/coarse-quality/resolution-0025-road-new
+node scripts/pack-coarse-grid.mjs data/coarse-quality/resolution-0025-road-new/grid.json data/coarse-quality/grid-0025-packed-new.json
+```
+
+Expected base: **134,107,947 bytes / SHA `01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56`**, 2,454,400 cells / 378,515 links. Road-state model: **179,924,201 bytes / SHA `3dfdb35c180be2e998c65ea57d56c686117bda1431891093b24cc1819d4576f6`**, 317,586 Census states / 346,821 layer links. Packed: **61,208,393 bytes / SHA `f5dd46f223fc4a6d601235adc4c59cb8a31326aa416c6fe0da522e34a14dbb5a`** using the recorded Node/zlib version. All independent outputs/proofs match. Base source pass is ~142s / 2.57GB native peak RSS on this Mac; this is offline producer scope, not runtime/Vercel memory.
+
+Existing artifacts can be checked without any producer/network/provider/DB requests; run only affected checks after changes:
+
+```sh
+node --import tsx scripts/verify-coarse-resolution.ts data/coarse-quality/resolution-0025-base-v1/grid.json data/coarse-quality/resolution-0025-base-v1/build.json
+node --import tsx scripts/verify-coarse-road-layer.ts data/coarse-quality/resolution-0025-road-v1/grid.json data/coarse-quality/resolution-0025-road-v1/build.json
+node --import tsx scripts/compare-coarse-resolution.ts data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json --baseline-v7
+node --import tsx scripts/inspect-coarse-access.ts data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json docs/evidence/coarse-finer-2026-10-23/comparison.json
+node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json --anchor-inputs
+node scripts/finalize-coarse-grid-v8.mjs data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json data/coarse-quality/grid-v8-repeat-new.json
+```
+
+Expect full source/shore/transfer checks, 42 horizon-monotonic software cases and all 35 exact preserved v7 baseline costs; 29 improve/six regress (worst +3.180 min), every destination reached/shaded. Cross-resolution cell counts are not accuracy scores. The memory command performs 952,758 inputs: final retained decoded storage 158.04MB; declared fixed-load heap allowance 4MiB, post-load query growth limits unchanged at 2MiB heap/64KiB buffers. Earlier 2MiB fixed-load failure and all marginal startup runs remain preserved. No growing source-visit/query cache. Finalization changes only version and refuses overwrite. Completed producers and sweeps are unnecessary for documentation checks.
+
+The loader recognizes `gzip:` prefixes only on binary-array fields, uses built-in zlib with a 256MB per-field inflate bound, and retains all full geometry/visit checks. Aligned native word views avoid copying/converting dense arrays; the fallback reads little-endian words explicitly. A fixed 0.01° geography index with compact band views/flat ring list preserves exact checks. No new package or runtime environment variable is needed.
+
+Fresh review page (public precomputed cases; no routing references):
+
+```sh
+node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json data/coarse-quality/resolution-0025-preview-new --baseline-v7
+python3 -B -m http.server 4178 --bind 127.0.0.1 --directory data/coarse-quality/resolution-0025-preview-new
+```
+
+The existing server serves `resolution-0025-evaluation-v1/` at **http://127.0.0.1:4178/preview/**. Rediscover listeners before starting/stopping one; never stop an unrelated owner. Normal viewport screenshots render WebGL reliably here. Main app is `http://127.0.0.1:3000/`, with v8 and visible 0.025° / 1.8–2.8km notices. [Publication/hosted verification](next-steps.md#1-publish-and-verify-latest-v8).
 
 ## Regenerate the coarse grid
 
-The historical v5 recipe below is preserved; normal development/deployment uses **v6** above. Historical v5 reproduction uses the included v5 artifact and requires no producer or raw data. To intentionally reproduce v5, first recover national-v2 using the preceding source recipe, then finalize notices into an unused output path:
+The historical v5 recipe below is preserved; normal development/deployment uses **v8** above. Historical v5 reproduction uses the included v5 artifact and requires no producer or raw data. To intentionally reproduce v5, first recover national-v2 using the preceding source recipe, then finalize notices into an unused output path:
 
 ```sh
 node scripts/finalize-coarse-grid-v5.mjs \
@@ -266,9 +352,9 @@ node scripts/finalize-coarse-grid-v5.mjs \
   data/coarse-quality/grid-v5-repeat-new.json
 ```
 
-Expected: **39,977,082 bytes**, SHA-256 `b5a53b44fa42073e22575203d4848c7c6185e8eebd4688b504cefa04ff441cd4`. The finalizer requires the national-v2 input hash, changes only five version/notice fields and refuses an existing output. Do not overwrite any bundled or local evidence artifact as a health check. A source/geometry change requires a separately versioned recipe/run. The preserved v5 file remains included in Git/Vercel and excluded from Biome alongside earlier artifacts; v6 is the active import.
+Expected: **39,977,082 bytes**, SHA-256 `b5a53b44fa42073e22575203d4848c7c6185e8eebd4688b504cefa04ff441cd4`. The finalizer requires the national-v2 input hash, changes only five version/notice fields and refuses an existing output. Do not overwrite any bundled or local evidence artifact as a health check. A source/geometry change requires a separately versioned recipe/run. The preserved v5 file remains included in Git/Vercel and excluded from Biome alongside earlier artifacts; v8 is the active import.
 
-The commands below regenerate **preserved v4 only**; `npm run data:coarse` still names its historical builder, not current v5. This is optional for normal development/deployment: prepared v4 JSON is included in source. Use Python 3.11+ standard library, unchanged bundled v2/v3 artifacts and pinned public-domain Natural Earth v5.1.2 roads. The cached raw inputs already exist here; do not download them again. A fresh offline-builder setup needs only roads for v4 (older v1/v2 builders also use countries/lakes):
+The commands below regenerate **preserved v4 only**; `npm run data:coarse` still names its historical builder, not current v8. This is optional for normal development/deployment: prepared v4 JSON is included in source. Use Python 3.11+ standard library, unchanged bundled v2/v3 artifacts and pinned public-domain Natural Earth v5.1.2 roads. The cached raw inputs already exist here; do not download them again. A fresh offline-builder setup needs only roads for v4 (older v1/v2 builders also use countries/lakes):
 
 ```sh
 mkdir -p data/coarse-sources/natural-earth-v5.1.2
@@ -431,4 +517,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v6 is locally verified; production is user-reported v5, while independent hosted proof remains v4 and actual v6 HTTP/browser verification is next; actual connected-provider cloud verification remains open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 is locally verified/uncommitted; production is user-reported verified v6 at `ffd7fec`, independent agent-hosted proof remains v4 and actual v8 publication/verification is next; actual connected-provider cloud verification remains open.

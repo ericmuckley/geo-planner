@@ -9,7 +9,7 @@ const { runEstimate } = await import("../src/server/coarse-estimate.server");
 const moduleLoadMs = performance.now() - started;
 const expected = JSON.parse(
 	await readFile(
-		"docs/evidence/coarse-resolution-2026-10-23/national-candidate.json",
+		"docs/evidence/coarse-finer-2026-10-23/national-candidate.json",
 		"utf8",
 	),
 ).samples as Array<{ name: string; minutes: number; cells: number }>;
@@ -32,7 +32,7 @@ for (const [name, lat, lon] of coarseSmokeOrigins) {
 		assert.equal(response.status, 200, text);
 		const result = resultSchema.parse(JSON.parse(text));
 		const cells = result.metadata.approximation?.reachedCells ?? 0;
-		assert.equal(result.metadata.engineVersion, "coarse-road-grid-v6");
+		assert.equal(result.metadata.engineVersion, "coarse-road-grid-v8");
 		assert.equal(
 			cells,
 			expected.find((s) => s.name === name && s.minutes === minutes)?.cells,

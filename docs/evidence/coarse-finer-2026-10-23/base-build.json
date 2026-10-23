@@ -1,0 +1,42 @@
+{
+  "artifact": "data/coarse-quality/resolution-0025-base-v1/grid.json",
+  "artifactSha256": "01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56",
+  "artifactBytes": 134107947,
+  "step": 0.025,
+  "width": 2360,
+  "height": 1040,
+  "landCells": 1303144,
+  "roadLinks": 378515,
+  "roadVisits": 123116,
+  "supplementalVisits": 317586,
+  "supplementalPoints": 10762067,
+  "shoreLandCells": 10936,
+  "shoreLocalLinks": 36325,
+  "counts": {
+    "sourceParts": 261862,
+    "sourcePoints": 27774778,
+    "duplicateParts": 38470,
+    "visitRejectedTransfer": 5757,
+    "edgeRejectedTransfer": 5835,
+    "edgeRejectedUntraversable": 779
+  },
+  "linkProof": {
+    "path": "data/coarse-quality/resolution-0025-base-v1/links.json.gz",
+    "sha256": "153e6a6d925ea35efb9ae7828c00139e75f957967f6af100aa11d5c41448567f",
+    "bytes": 23696295
+  },
+  "sourceManifestSha256": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+  "tool": {
+    "name": "pyshp",
+    "version": "2.3.1",
+    "url": "https://files.pythonhosted.org/packages/98/2f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py2.py3-none-any.whl",
+    "path": "data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl",
+    "bytes": 46537,
+    "sha256": "67024c0ccdc352ba5db777c4e968483782dfa78f8e200672a90d2d30fd8b7b49",
+    "scope": "Build/diagnostic only; no installation or app dependency change"
+  },
+  "wallSeconds": 142.06839633383788,
+  "processMaxRssNative": 2566569984,
+  "platform": "darwin",
+  "scope": "New offline resolution candidate, no activation/download/reference/service. RSS is whole producer (native units: bytes on macOS, KiB on Linux), not runtime/Vercel memory. Original artifacts/producers remain unchanged."
+}

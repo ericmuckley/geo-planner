@@ -6,7 +6,7 @@ import {
 } from "../lib/reachability";
 import { decodeGrid } from "./coarse-data.server";
 import { estimateGrid, type GridData } from "./coarse-grid";
-import data from "./data/coarse-grid-v6.json";
+import data from "./data/coarse-grid-v8.json";
 
 let grid: GridData | undefined;
 function getGrid() {
@@ -22,7 +22,7 @@ const config = engineConfigSchema.parse({
 	health: "ready",
 	minMinutes: 60,
 	maxMinutes: 720,
-	engineVersion: "coarse-road-grid-v6",
+	engineVersion: "coarse-road-grid-v8",
 	graphVersion: data.version,
 	coverage:
 		"Contiguous United States; coarse estimated travel over land and major roads",
@@ -81,7 +81,7 @@ export async function runEstimate(request: Request) {
 			warnings: [
 				{
 					description:
-						"Very coarse estimate: 0.05° cells (about 3.5–5.5 km) merge nearby roads and crossings. This is display resolution, not a measured accuracy bound.",
+						"Very coarse estimate: 0.025° cells (about 1.8–2.8 km) merge nearby roads and crossings. This is display resolution, not a measured accuracy bound.",
 				},
 				{
 					description:

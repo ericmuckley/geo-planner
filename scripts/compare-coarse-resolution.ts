@@ -8,22 +8,54 @@ import {
 	estimateGrid,
 	type GridData,
 	gridAttachments,
+	gridCellMinutes,
 } from "../src/server/coarse-grid";
 
 const artifact = process.argv[2];
 assert.ok(artifact, "Pass a fresh resolution candidate artifact");
-const baselinePath = "src/server/data/coarse-grid-v5.json";
+const againstV6 = process.argv.includes("--baseline-v6");
+const againstV7 = process.argv.includes("--baseline-v7");
+assert.ok(!(againstV6 && againstV7), "Choose one baseline");
+const baselineVersion = againstV7 ? "v7" : againstV6 ? "v6" : "v5";
+const baselinePath = `src/server/data/coarse-grid-${baselineVersion}.json`;
 const [raw, baselineRaw, preservedRaw] = await Promise.all([
 	readFile(artifact),
 	readFile(baselinePath),
-	readFile("docs/evidence/coarse-v5-2026-10-22/comparison.json", "utf8"),
+	readFile(
+		againstV7
+			? "docs/evidence/coarse-connections-2026-10-23/comparison.json"
+			: againstV6
+				? "docs/evidence/coarse-resolution-2026-10-23/comparison.json"
+				: "docs/evidence/coarse-v5-2026-10-22/comparison.json",
+		"utf8",
+	),
 ]);
 const data = JSON.parse(raw.toString());
 const baselineData = JSON.parse(baselineRaw.toString());
 const candidate = decodeGrid(data),
 	baseline = decodeGrid(baselineData);
 assert.deepEqual(candidate.bounds, baseline.bounds);
-assert.ok(candidate.step < baseline.step);
+assert.ok(
+	againstV6 ? candidate.step === baseline.step : candidate.step < baseline.step,
+);
+if (againstV6)
+	for (const key of [
+		"bounds",
+		"width",
+		"height",
+		"step",
+		"land",
+		"traversable",
+		"displayLand",
+		"links",
+		"roadDeciseconds",
+		"anchorOffsets",
+		"shoreLinks",
+		"roadAccess",
+		"roadVisits",
+		"supplementalRoadVisits",
+	])
+		assert.deepEqual(data[key], baselineData[key], `${key} changed from v6`);
 assert.deepEqual(data.roadSpeedsKph, baselineData.roadSpeedsKph);
 assert.deepEqual(data.censusRoadSpeedsKph, baselineData.censusRoadSpeedsKph);
 assert.deepEqual(data.sources, baselineData.sources);
@@ -52,17 +84,15 @@ function measure(grid: GridData, model: string, sample: Sample) {
 	const y = Math.floor((destination.lat - grid.bounds[1]) / grid.step);
 	const cell = y * grid.width + x;
 	const attachments = gridAttachments(grid, destination);
+	const cellMinutes = gridCellMinutes(grid, field.labels, cell);
 	const point = Math.min(
 		...attachments.map((a) => field.labels[a.cell] + a.minutes),
 	);
 	return {
 		pointMinutes: Number.isFinite(point) ? point : null,
-		cellMinutes: Number.isFinite(field.labels[cell])
-			? field.labels[cell]
-			: null,
+		cellMinutes: Number.isFinite(cellMinutes) ? cellMinutes : null,
 		shaded:
-			Number.isFinite(field.labels[cell]) &&
-			!!(grid.displayLand ?? grid.land)[cell],
+			Number.isFinite(cellMinutes) && !!(grid.displayLand ?? grid.land)[cell],
 		attachments,
 	};
 }
@@ -81,7 +111,7 @@ function compare(samples: Sample[]) {
 		assert.equal(
 			base.pointMinutes,
 			sample.candidate.pointMinutes,
-			`Changed preserved v5 cost: ${sample.id}`,
+			`Changed preserved ${baselineVersion} cost: ${sample.id}`,
 		);
 		const error = (value: number | null) =>
 			value === null ? null : value - sample.referenceMinutes;
@@ -170,8 +200,7 @@ console.log(
 			regional: compare(preserved.regional.samples),
 			publicRoutingApiCalls: 0,
 			localServiceRequests: 0,
-			scope:
-				"Same geographic queries across independently rebuilt resolutions, all preserved v5 point costs checked exactly. Paired finite errors and all unreached/unshaded outcomes reported separately. Reused regional development references are not national driving accuracy or frontier validation. No provider, database or source request.",
+			scope: `Same geographic queries against explicit ${baselineVersion}; all preserved baseline point costs checked exactly. Paired finite errors and all unreached/unshaded outcomes reported separately. Reused regional development references are not national driving accuracy or frontier validation. No provider, database or source request.`,
 		},
 		null,
 		2,

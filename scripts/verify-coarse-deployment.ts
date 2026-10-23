@@ -13,7 +13,7 @@ assert.ok(!base.username && !base.password && base.pathname === "/");
 const startedAt = new Date().toISOString();
 const expected = JSON.parse(
 	await readFile(
-		"docs/evidence/coarse-resolution-2026-10-23/national-api.json",
+		"docs/evidence/coarse-finer-2026-10-23/national-api.json",
 		"utf8",
 	),
 ).samples as Array<{ name: string; minutes: number; cells: number }>;
@@ -41,8 +41,8 @@ async function request(path: string, body?: string) {
 const configResponse = await request("/api/estimate");
 assert.equal(configResponse.status, 200);
 const config = engineConfigSchema.parse(configResponse.body);
-assert.equal(config.engineVersion, "coarse-road-grid-v6");
-assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v6");
+assert.equal(config.engineVersion, "coarse-road-grid-v8");
+assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v8");
 assert.equal(config.health, "ready");
 assert.equal(config.minMinutes, 60);
 assert.equal(config.maxMinutes, 720);

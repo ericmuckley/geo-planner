@@ -8,6 +8,7 @@ import {
 	estimateGrid,
 	gridAttachments,
 	gridPosition,
+	gridTransitions,
 } from "../src/server/coarse-grid";
 
 const artifact = process.argv[2] ?? "src/server/data/coarse-grid-v3.json";
@@ -32,48 +33,8 @@ type Sample = {
 	referenceMinutes: number;
 	candidate: { pointMinutes: number };
 };
-const directions = [
-	[1, 0],
-	[1, 1],
-	[0, 1],
-	[-1, 1],
-	[-1, 0],
-	[-1, -1],
-	[0, -1],
-	[1, -1],
-];
-
-// Reconstruct a shortest path from the production labels instead of introducing
-// a second search implementation. Every edge and the complete sum are checked.
-function edge(cell: number, direction: number) {
-	const x = cell % grid.width,
-		y = Math.floor(cell / grid.width);
-	const [dx, dy] = directions[direction];
-	const xx = x + dx,
-		yy = y + dy;
-	if (xx < 0 || xx >= grid.width || yy < 0 || yy >= grid.height) return;
-	const target = yy * grid.width + xx;
-	if (!grid.traversable[target]) return;
-	const key = direction < 4 ? cell * 4 + direction : target * 4 + direction - 4;
-	const overland =
-		!!((grid.shoreLinks?.[Math.floor(key / 4)] ?? 0) & (1 << (key % 4))) ||
-		(grid.land[cell] &&
-			grid.land[target] &&
-			(!dx ||
-				!dy ||
-				(grid.land[y * grid.width + xx] && grid.land[yy * grid.width + x])));
-	const km = distanceKm(gridPosition(grid, cell), gridPosition(grid, target));
-	const roadMinutes = (grid.roadDeciseconds?.[key] || Infinity) / 600;
-	const localMinutes = overland ? (km / grid.localSpeedKph) * 60 : Infinity;
-	return {
-		cell,
-		target,
-		minutes: Math.min(roadMinutes, localMinutes),
-		kind: roadMinutes <= localMinutes ? "road" : "local",
-		chordKm: km,
-	};
-}
-
+// Trace production transitions so canonical and Census states use the same
+// physical costs, without maintaining a second search/neighbor implementation.
 const fields = new Map<string, ReturnType<typeof estimateGrid>>();
 function trace(sample: Sample) {
 	const originKey = JSON.stringify(sample.origin);
@@ -101,26 +62,33 @@ function trace(sample: Sample) {
 		);
 		if (seed) break;
 		// Edges are bidirectional; trace a lower-cost neighbor using the same key.
-		const next = directions
-			.map((_, d) => edge(cell, d))
-			.find(
-				(e) =>
-					e &&
-					labels[e.target] < labels[cell] &&
-					Math.abs(labels[e.target] + e.minutes - labels[cell]) < 1e-8,
-			);
+		const next = [...gridTransitions(grid, cell)].find(
+			(e) =>
+				e &&
+				labels[e.target] < labels[cell] &&
+				Math.abs(labels[e.target] + e.minutes - labels[cell]) < 1e-8,
+		);
 		assert.ok(next, `No predecessor for ${sample.id}, cell ${cell}`);
 		reversePath.push(next);
 		cell = next.target;
 	}
 	assert.ok(seed, `No origin attachment for ${sample.id}`);
-	const path = reversePath
-		.reverse()
-		.map((e) => ({ ...e, cell: e.target, target: e.cell }));
+	const path = reversePath.reverse().map((e) => ({
+		...e,
+		cell: e.target,
+		target: e.cell,
+		chordKm: distanceKm(
+			gridPosition(grid, e.cell),
+			gridPosition(grid, e.target),
+		),
+	}));
 	const originAccessMinutes = seed.minutes;
 	const destinationAccessMinutes = arrival.minutes - labels[arrival.cell];
 	const roadMinutes = path
 		.filter((e) => e.kind === "road")
+		.reduce((sum, e) => sum + e.minutes, 0);
+	const transferMinutes = path
+		.filter((e) => e.kind === "transfer")
 		.reduce((sum, e) => sum + e.minutes, 0);
 	const localMinutes = path
 		.filter((e) => e.kind === "local")
@@ -130,6 +98,7 @@ function trace(sample: Sample) {
 			originAccessMinutes +
 				roadMinutes +
 				localMinutes +
+				transferMinutes +
 				destinationAccessMinutes -
 				arrival.minutes,
 		) < 1e-8,
@@ -146,6 +115,16 @@ function trace(sample: Sample) {
 		originAccessLocalKm: seed.distanceKm - (seed.roadKm ?? 0),
 		roadMinutes,
 		intercellLocalMinutes: localMinutes,
+		...(grid.roadLayer
+			? {
+					roadLayerTransferMinutes: transferMinutes,
+					roadLayerRoadMinutes: path
+						.filter(
+							(e) => e.kind === "road" && e.cell >= grid.width * grid.height,
+						)
+						.reduce((sum, e) => sum + e.minutes, 0),
+				}
+			: {}),
 		destinationAccessMinutes,
 		destinationAccessRoadKm: arrival.roadKm ?? 0,
 		destinationAccessLocalKm: arrival.distanceKm - (arrival.roadKm ?? 0),

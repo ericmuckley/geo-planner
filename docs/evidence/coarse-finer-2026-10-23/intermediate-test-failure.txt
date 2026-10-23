@@ -1,0 +1,47 @@
+✔ indexed crossings match the full scan at band boundaries, holes and open rings (32.5465ms)
+✔ indexed national geography matches unindexed checks for arbitrary segments and exact vertices (6804.523125ms)
+✔ compressed arrays preserve graph costs, source access and contours (6.604417ms)
+✔ a continuous road pays transfers when switching states, not in every cell (0.544166ms)
+✔ all legacy attachment and route options remain available alongside the road state (0.329042ms)
+✔ road states acquire no implicit overland links (0.10975ms)
+✖ road-layer data rejects undercharged transfers, changed anchors and dangling links (1.083208ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7113.866459
+
+✖ failing tests:
+
+test at src/server/coarse-road-layer.test.ts:1:4938
+✖ road-layer data rejects undercharged transfers, changed anchors and dangling links (1.083208ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Road layer|road layer/. Input:
+  
+  'Error: Invalid grid word array length'
+  
+      at TestContext.<anonymous> (/Users/eric/Documents/GitHub/geo-planner/src/server/coarse-road-layer.test.ts:221:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1081:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:763:18)
+      at Test.postRun (node:internal/test_runner/test:1210:19)
+      at Test.run (node:internal/test_runner/test:1138:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:763:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Invalid grid word array length
+        at gridWords (/Users/eric/Documents/GitHub/geo-planner/src/server/coarse-data.server.ts:43:9)
+        at decodeGrid (/Users/eric/Documents/GitHub/geo-planner/src/server/coarse-data.server.ts:259:21)
+        at <anonymous> (/Users/eric/Documents/GitHub/geo-planner/src/server/coarse-road-layer.test.ts:221:23)
+        at getActual (node:assert:530:5)
+        at strict.throws (node:assert:676:24)
+        at TestContext.<anonymous> (/Users/eric/Documents/GitHub/geo-planner/src/server/coarse-road-layer.test.ts:221:10)
+        at Test.runInAsyncScope (node:async_hooks:214:14)
+        at Test.run (node:internal/test_runner/test:1081:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:763:18)
+        at Test.postRun (node:internal/test_runner/test:1210:19),
+    expected: /Road layer|road layer/,
+    operator: 'throws'
+  }

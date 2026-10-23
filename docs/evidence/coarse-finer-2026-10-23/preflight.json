@@ -1,0 +1,25 @@
+{
+  "baseline": "src/server/data/coarse-grid-v7.json",
+  "baselineSha256": "988d1ef988e0ca587b60cb3ee4d688eed37629bdb62f344d7f49e8f6f6349379",
+  "baselineArtifactBytes": 79584626,
+  "baselineCells": 613600,
+  "targetStep": 0.025,
+  "targetWidth": 2360,
+  "targetHeight": 1040,
+  "targetCells": 2454400,
+  "baselineDenseBase64Bytes": {
+    "land": 818136,
+    "traversable": 818136,
+    "displayLand": 818136,
+    "links": 3272536,
+    "roadDeciseconds": 6545068,
+    "anchorOffsets": 3272536,
+    "shoreLinks": 818136,
+    "roadLayer.anchorOffsets": 3272536,
+    "roadLayer.roadDeciseconds": 6545068,
+    "roadLayer.transferDeciseconds": 1636268
+  },
+  "targetDenseBase64BytesFloor": 111266224,
+  "availableDiskBytes": 173703176192,
+  "scope": "Pre-build storage accounting: four times as many cells makes dense base64 alone exceed 100 million bytes, before source visits/geometry/metadata. This is a schema-derived floor, not a measured finer artifact or runtime/accuracy forecast. Existing v7 remains active."
+}

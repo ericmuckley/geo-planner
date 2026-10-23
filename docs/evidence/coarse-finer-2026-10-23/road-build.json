@@ -1,0 +1,34 @@
+{
+  "artifact": "data/coarse-quality/resolution-0025-road-v1/grid.json",
+  "artifactSha256": "3dfdb35c180be2e998c65ea57d56c686117bda1431891093b24cc1819d4576f6",
+  "artifactBytes": 179924201,
+  "baseSha256": "01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56",
+  "sourceManifestSha256": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+  "roadStates": 317586,
+  "roadLinks": 346821,
+  "counts": {
+    "parts": 261862,
+    "points": 27774778,
+    "sourceEdgeVisits": 724156,
+    "missingRoadState": 18415,
+    "duplicateParts": 38470,
+    "rejectedLandTransfer": 934
+  },
+  "linkProof": {
+    "path": "data/coarse-quality/resolution-0025-road-v1/links.json.gz",
+    "sha256": "93227cb018c52fcf9c425c5d823be5bae265fb4774d7f5c3e14a183087bff464",
+    "bytes": 21855061
+  },
+  "tool": {
+    "name": "pyshp",
+    "version": "2.3.1",
+    "url": "https://files.pythonhosted.org/packages/98/2f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py2.py3-none-any.whl",
+    "path": "data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl",
+    "bytes": 46537,
+    "sha256": "67024c0ccdc352ba5db777c4e968483782dfa78f8e200672a90d2d30fd8b7b49",
+    "scope": "Build/diagnostic only; no installation or app dependency change"
+  },
+  "wallSeconds": 89.95201104180887,
+  "scope": "New offline additive Census road-state graph at unchanged input-base resolution/anchors/masks/speeds. Full pinned national source pass, no source download, old producer rerun, activation, reference/provider/DB request. All base options remain available; new links/transfers pay physical geometry.",
+  "baseArtifact": "data/coarse-quality/resolution-0025-base-v1/grid.json"
+}

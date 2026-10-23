@@ -1,0 +1,10 @@
+{
+  "originalLoadHeapBudgetBytes": 2097152,
+  "initialFailedStage": "0.01-degree compact bands / native words",
+  "subsequentLoadOnlyHeapBytes": 2756888,
+  "finalLoadHeapBudgetBytes": 4194304,
+  "finalMeasuredHeapBytes": 3862960,
+  "queryGrowthHeapBudgetBytes": 2097152,
+  "queryGrowthBufferBudgetBytes": 65536,
+  "interpretation": "The finer fixed geometry index adds bounded view/index heap. Final load allowance explicitly accommodates it; all source visits remain packed and every visit is validated. Three whole-input query-growth guards remain unchanged. Intermediate 0.005-degree band experiment retained more fixed heap and did not meet startup target; its records remain ignored/local. Original load-guard failure and initial test error-message mismatch are preserved, not treated as passing runs."
+}

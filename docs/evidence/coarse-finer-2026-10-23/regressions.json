@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "set": "original",
+      "id": "Santa Barbara",
+      "absoluteErrorChangeMinutes": 1.6783333333335122,
+      "baselineErrorMinutes": 8.859733333333281,
+      "candidateErrorMinutes": 10.538066666666793,
+      "componentChanges": {
+        "pointMinutes": 1.6783333333335122,
+        "originAccessMinutes": -0.4999999999999998,
+        "roadMinutes": 9.383333333333525,
+        "intercellLocalMinutes": 0,
+        "roadLayerTransferMinutes": -6.513333333333334,
+        "roadLayerRoadMinutes": 4.223333333333333,
+        "destinationAccessMinutes": -0.6916666666666629
+      }
+    },
+    {
+      "set": "original",
+      "id": "Borrego Springs",
+      "absoluteErrorChangeMinutes": 3.179534354467364,
+      "baselineErrorMinutes": 27.499397261821983,
+      "candidateErrorMinutes": 30.678931616289347,
+      "componentChanges": {
+        "pointMinutes": 3.179534354467364,
+        "originAccessMinutes": -0.46833333333333327,
+        "roadMinutes": -3.8266666666666964,
+        "intercellLocalMinutes": 7.757232611421667,
+        "roadLayerTransferMinutes": 1.8783333333333336,
+        "roadLayerRoadMinutes": 37.36000000000001,
+        "destinationAccessMinutes": -2.1610315902875783
+      }
+    },
+    {
+      "set": "original",
+      "id": "Calexico",
+      "absoluteErrorChangeMinutes": 0.5599999999999454,
+      "baselineErrorMinutes": 8.017733333333354,
+      "candidateErrorMinutes": 8.577733333333299,
+      "componentChanges": {
+        "pointMinutes": 0.5599999999999454,
+        "originAccessMinutes": -0.46833333333333327,
+        "roadMinutes": -0.603333333333353,
+        "intercellLocalMinutes": 0,
+        "roadLayerTransferMinutes": 2.381666666666667,
+        "roadLayerRoadMinutes": 1.36,
+        "destinationAccessMinutes": -0.75
+      }
+    },
+    {
+      "set": "regional",
+      "id": "santa-barbara--san-diego",
+      "absoluteErrorChangeMinutes": 1.6783333333331427,
+      "baselineErrorMinutes": 10.450833333333378,
+      "candidateErrorMinutes": 12.12916666666652,
+      "componentChanges": {
+        "pointMinutes": 1.6783333333331427,
+        "originAccessMinutes": -0.6916666666666669,
+        "roadMinutes": 9.383333333333098,
+        "intercellLocalMinutes": 0,
+        "roadLayerTransferMinutes": -6.513333333333334,
+        "roadLayerRoadMinutes": 4.223333333333333,
+        "destinationAccessMinutes": -0.5
+      }
+    },
+    {
+      "set": "regional",
+      "id": "julian--borrego-springs",
+      "absoluteErrorChangeMinutes": 2.534534354467418,
+      "baselineErrorMinutes": 17.513347261822,
+      "candidateErrorMinutes": 20.047881616289416,
+      "componentChanges": {
+        "pointMinutes": 2.534534354467418,
+        "originAccessMinutes": -1.26,
+        "roadMinutes": -0.7633333333333319,
+        "intercellLocalMinutes": 7.757232611421667,
+        "roadLayerTransferMinutes": -1.0383333333333333,
+        "roadLayerRoadMinutes": -4.33,
+        "destinationAccessMinutes": -2.1610315902875854
+      }
+    },
+    {
+      "set": "regional",
+      "id": "borrego-springs--julian",
+      "absoluteErrorChangeMinutes": 2.5345343544674037,
+      "baselineErrorMinutes": 18.021147261821994,
+      "candidateErrorMinutes": 20.555681616289398,
+      "componentChanges": {
+        "pointMinutes": 2.5345343544674037,
+        "originAccessMinutes": -2.1610315902875863,
+        "roadMinutes": -0.7633333333333319,
+        "intercellLocalMinutes": 7.757232611421667,
+        "roadLayerTransferMinutes": -1.0383333333333333,
+        "roadLayerRoadMinutes": -4.33,
+        "destinationAccessMinutes": -1.259999999999998
+      }
+    }
+  ],
+  "scope": "All six saved absolute-error regressions; component deltas describe changed model paths, not isolated causes of real-world error. Road-layer road time is a subset of total road time, not additive to it. Both complete paths are retained."
+}

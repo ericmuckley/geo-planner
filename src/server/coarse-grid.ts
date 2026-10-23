@@ -38,6 +38,11 @@ export type GridData = {
 	roadAccess?: number[][];
 	roadVisits?: RoadVisits;
 	supplementalRoadVisits?: RoadVisits;
+	roadLayer?: {
+		anchorOffsets: Int16Array;
+		roadDeciseconds: Uint16Array;
+		transferDeciseconds: Uint16Array;
+	};
 	boundary: number[][][][];
 	lakes: number[][][][];
 };
@@ -55,14 +60,30 @@ export function distanceKm(a: number[], b: number[]) {
 }
 
 export function gridPosition(grid: GridData, cell: number) {
+	const size = grid.width * grid.height;
+	const offsets =
+		cell >= size && grid.roadLayer
+			? grid.roadLayer.anchorOffsets
+			: grid.anchorOffsets;
+	if (cell >= size && grid.roadLayer) cell -= size;
 	return [
 		grid.bounds[0] +
 			((cell % grid.width) + 0.5) * grid.step +
-			(grid.anchorOffsets?.[cell * 2] ?? 0) / 100000,
+			(offsets?.[cell * 2] ?? 0) / 100000,
 		grid.bounds[1] +
 			(Math.floor(cell / grid.width) + 0.5) * grid.step +
-			(grid.anchorOffsets?.[cell * 2 + 1] ?? 0) / 100000,
+			(offsets?.[cell * 2 + 1] ?? 0) / 100000,
 	];
+}
+
+export function gridCellMinutes(
+	grid: GridData,
+	labels: Float64Array,
+	cell: number,
+) {
+	return grid.roadLayer
+		? Math.min(labels[cell], labels[grid.width * grid.height + cell])
+		: labels[cell];
 }
 
 function nearBoundary(point: [number, number], polygon: number[][][]) {
@@ -212,6 +233,13 @@ export function gridAttachments(
 	const supplemental = grid.supplementalRoadVisits?.get(cell);
 	if (supplemental)
 		nearby.push(...roadAttachments(grid, point, cell, supplemental));
+	if (supplemental && grid.roadLayer?.transferDeciseconds[cell])
+		nearby.push(
+			...roadAttachments(grid, point, grid.width * grid.height + cell, {
+				...supplemental,
+				transferKm: 0,
+			}),
+		);
 	const best = new Map<number, GridAttachment>();
 	for (const attachment of nearby)
 		if (attachment.minutes < (best.get(attachment.cell)?.minutes ?? Infinity))
@@ -286,6 +314,89 @@ export function attachGrid(grid: GridData, origin: Origin) {
 	return gridAttachments(grid, origin)[0];
 }
 
+// Base states are cell indices. Census states are size + cell, connected only
+// by explicit source-road links and positive, paid transfers to the base state.
+export function* gridTransitions(
+	grid: GridData,
+	node: number,
+	lengths?: number[][],
+) {
+	const { width, height, roadLayer } = grid;
+	const size = width * height;
+	const inRoadLayer = node >= size;
+	const cell = inRoadLayer ? node - size : node;
+	const transfer = roadLayer?.transferDeciseconds[cell];
+	if (transfer)
+		yield {
+			cell: node,
+			target: inRoadLayer ? cell : size + cell,
+			minutes: transfer / 600,
+			kind: "transfer" as const,
+		};
+	const x = cell % width,
+		y = Math.floor(cell / width);
+	for (let d = 0; d < directions.length; d++) {
+		const [dx, dy] = directions[d];
+		const xx = x + dx,
+			yy = y + dy;
+		if (xx < 0 || xx >= width || yy < 0 || yy >= height) continue;
+		const target = yy * width + xx;
+		const link = d < 4 ? cell * 4 + d : target * 4 + d - 4;
+		if (inRoadLayer) {
+			const time = roadLayer?.roadDeciseconds[link];
+			if (time)
+				yield {
+					cell: node,
+					target: size + target,
+					minutes: time / 600,
+					kind: "road" as const,
+				};
+			continue;
+		}
+		if (!grid.traversable[target]) continue;
+		const overland =
+			!!((grid.shoreLinks?.[Math.floor(link / 4)] ?? 0) & (1 << (link % 4))) ||
+			(grid.land[cell] &&
+				grid.land[target] &&
+				(!dx ||
+					!dy ||
+					(grid.land[y * width + xx] && grid.land[yy * width + x])));
+		const length =
+			lengths?.[y][d] ??
+			distanceKm(
+				[
+					grid.bounds[0] + 0.5 * grid.step,
+					grid.bounds[1] + (y + 0.5) * grid.step,
+				],
+				[
+					grid.bounds[0] + (dx + 0.5) * grid.step,
+					grid.bounds[1] + (y + dy + 0.5) * grid.step,
+				],
+			);
+		const roadMinutes = grid.roadDeciseconds
+			? (grid.roadDeciseconds[link] || Infinity) / 600
+			: grid.links[link]
+				? (length / grid.links[link]) * 60
+				: Infinity;
+		const localMinutes = overland
+			? ((grid.anchorOffsets
+					? distanceKm(gridPosition(grid, cell), gridPosition(grid, target))
+					: length) /
+					grid.localSpeedKph) *
+				60
+			: Infinity;
+		const minutes = Math.min(roadMinutes, localMinutes);
+		if (Number.isFinite(minutes))
+			yield {
+				cell: node,
+				target,
+				minutes,
+				kind:
+					roadMinutes <= localMinutes ? ("road" as const) : ("local" as const),
+			};
+	}
+}
+
 export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 	const started = performance.now();
 	const point: [number, number] = [origin.lon, origin.lat];
@@ -303,14 +414,16 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 			"Choose a land location in the contiguous United States.",
 		);
 	const [west, south] = grid.bounds;
-	const { width, height, step, links } = grid;
+	const { width, height, step } = grid;
 	const center = (x: number, y: number) => [
 		west + (x + 0.5) * step,
 		south + (y + 0.5) * step,
 	];
 	const x = Math.floor((origin.lon - west) / step);
 	const y = Math.floor((origin.lat - south) / step);
-	const labels = new Float64Array(width * height).fill(Infinity);
+	const labels = new Float64Array(
+		width * height * (grid.roadLayer ? 2 : 1),
+	).fill(Infinity);
 	const queue = new Queue();
 	if (x < 0 || x >= width || y < 0 || y >= height)
 		throw new RangeError("Choose a location within the contiguous US grid.");
@@ -324,6 +437,10 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 			? grid.traversable
 			: grid.traversable.slice();
 	if (!grid.shoreLinks) land[seed] = traversable[seed] = 1;
+	const searchGrid =
+		land === grid.land && traversable === grid.traversable
+			? grid
+			: { ...grid, land, traversable };
 	const attachments = gridAttachments(grid, origin);
 	const attachmentKm = attachments[0]?.distanceKm ?? 0;
 	// Seed every supported fallback: the nearest land patch may be a dead end
@@ -346,38 +463,12 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 		if (cost !== labels[cell]) continue;
 		if (cost > budget) break;
 		settled++;
-		const cx = cell % width;
-		const cy = Math.floor(cell / width);
-		for (let d = 0; d < directions.length; d++) {
-			const [dx, dy] = directions[d];
-			const xx = cx + dx;
-			const yy = cy + dy;
-			if (xx < 0 || xx >= width || yy < 0 || yy >= height) continue;
-			const target = yy * width + xx;
-			if (!traversable[target]) continue;
-			const link = d < 4 ? cell * 4 + d : target * 4 + d - 4;
-			const roadSpeed = links[link];
-			const overland =
-				!!(
-					(grid.shoreLinks?.[Math.floor(link / 4)] ?? 0) &
-					(1 << (link % 4))
-				) ||
-				(land[cell] &&
-					land[target] &&
-					(!dx || !dy || (land[cy * width + xx] && land[yy * width + cx])));
-			const roadMinutes = grid.roadDeciseconds
-				? (grid.roadDeciseconds[link] || Infinity) / 600
-				: roadSpeed
-					? (lengths[cy][d] / roadSpeed) * 60
-					: Infinity;
-			const localMinutes = overland
-				? ((grid.anchorOffsets
-						? distanceKm(gridPosition(grid, cell), gridPosition(grid, target))
-						: lengths[cy][d]) /
-						grid.localSpeedKph) *
-					60
-				: Infinity;
-			const next = cost + Math.min(roadMinutes, localMinutes);
+		for (const { target, minutes } of gridTransitions(
+			searchGrid,
+			cell,
+			lengths,
+		)) {
+			const next = cost + minutes;
 			if (next <= budget && next < labels[target]) {
 				labels[target] = next;
 				queue.push(target, next);
@@ -387,10 +478,11 @@ export function estimateGrid(grid: GridData, origin: Origin, budget: number) {
 	const searchMs = performance.now() - started;
 	const mask = new Uint8Array(width * height);
 	let reachedCells = 0;
-	for (let i = 0; i < labels.length; i++) {
+	for (let i = 0; i < width * height; i++) {
 		if (
 			(i === seed && grid.shoreLinks) ||
-			((i === seed || (grid.displayLand ?? land)[i]) && labels[i] <= budget)
+			((i === seed || (grid.displayLand ?? land)[i]) &&
+				gridCellMinutes(grid, labels, i) <= budget)
 		) {
 			mask[i] = 1;
 			reachedCells++;

@@ -24,8 +24,11 @@ const decoded = snapshot();
 assert.ok(grid.supplementalRoadVisits?.size, "Expected supplemental visits");
 const heapDelta = decoded.heapUsed - before.heapUsed;
 const bufferDelta = decoded.arrayBuffers - before.arrayBuffers;
+// The fixed, finer latitude index retains small per-band views. Eagerly
+// expanding all source visits would exceed this heap allowance by orders of magnitude.
+const loadHeapBudgetBytes = 4 * 1024 * 1024;
 assert.ok(
-	heapDelta < 2 * 1024 * 1024,
+	heapDelta < loadHeapBudgetBytes,
 	"Packed geometry expanded eagerly on load",
 );
 
@@ -82,6 +85,7 @@ console.log(
 				: "First retained source vertices (may include generalized water)",
 			artifactSha256: createHash("sha256").update(raw).digest("hex"),
 			decodeMs,
+			loadHeapBudgetBytes,
 			before,
 			decoded,
 			retainedHeapDeltaBytes: heapDelta,

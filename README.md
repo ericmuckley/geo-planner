@@ -2,18 +2,18 @@
 
 A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse 1–12-hour contours across the contiguous US**, with six-/ten-/twelve-hour presets.
 
-Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V6 is active locally; production is user-reported v5 at `08074fb`.** The new finer dataset/runtime/tools/evidence/docs are uncommitted. Include the v6 artifact when publishing; raw sources, ignored candidates, detailed graphs and credentials remain local-only.
+Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V8 is active locally; v7/v8 changes are uncommitted.** V6 at `ffd7fec` is the committed baseline and user-reported verified live. Include both new artifacts when publishing; raw sources, candidates, detailed graphs and credentials remain local-only.
 
 ## What works today
 
 - Filled 1–12-hour estimates from arbitrary supported contiguous-US land origins, with 6/10/12h presets and the same rules everywhere.
-- A genuinely rebuilt **0.05° grid, about 3.5–5.5 km cells**, half v5's cell width. Nationwide Census roads augment Natural Earth; routing runs in TypeScript without a provider, DB or worker.
+- **0.025° cells, about 1.8–2.8 km**, half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
 - MapLibre controls, source/model notices, timings, browser-private PostgreSQL history with local fallback, replay and export.
-- A 68.13 MB bundled model and locally checked 71.94 MB Vercel function; first local packaged computation is about 3.1 seconds, with zero routing fetches.
+- Lossless storage puts the finer model in a **61.21 MB** bundled file and **65.02 MB** local Vercel function. First packaged computation is about **3.6s after config**, with zero routing fetches.
 
-Across all 35 saved development references, **26 estimates improve and nine worsen** versus v5, with no unreachable/unshaded sample destinations. Mean absolute reference difference falls 21.94 → 14.71 min in the original set and 31.20 → 23.61 min in the broader set; worst regression is +7.09 min. These reused regional references do not prove nationwide or long-horizon accuracy. [Side-by-side maps, results and limits](docs/evidence/coarse-resolution-2026-10-23/README.md).
+Across all 35 saved development references, **29 estimates improve and six worsen** versus v7, at most +3.18 min. Mean absolute reference difference falls **11.58→10.29 min** and **17.21→12.01 min**; all destinations remain reached/shaded. These regional references do not prove national or long-horizon accuracy. [Paired maps, results and limits](docs/evidence/coarse-finer-2026-10-23/README.md).
 
-The model still merges crossings, assumes overland travel without roads and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: publish/verify v6, then refine remaining generic access/transfer errors. Detailed research stays parked; 0.025° is not built. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
+The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: publish/verify v8, then prepare independent nonregional long-horizon validation. Detailed research stays parked. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
 
 ## Run locally
 

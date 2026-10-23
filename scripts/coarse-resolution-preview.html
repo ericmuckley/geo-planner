@@ -23,19 +23,19 @@
 </style>
 <header>
   <p class="muted">GEO PLANNER / OFFLINE CANDIDATE REVIEW</p>
-  <h1>Same query. Finer computed grid.</h1>
-  <p>The candidate rebuilds routing at half the cell width. Both maps share the same camera; zoom to inspect boundary detail.</p>
+  <h1 id="heading">Same query. Finer computed grid.</h1>
+  <p id="description">The candidate rebuilds routing at half the cell width. Both maps share the same camera; zoom to inspect boundary detail.</p>
   <label>Validation origin <select id="origin"><option>Inland</option><option>Rural</option><option>Coastal</option><option>Mountain</option></select></label>
   <label>Budget <select id="budget"><option value="360">6 hours</option><option value="600">10 hours</option><option value="720">12 hours</option></select></label>
   <button id="fit" type="button">Fit both contours</button>
   <p id="status" class="muted" role="status">Loading maps…</p>
 </header>
 <main>
-  <article><div class="caption"><h2>V5 · 0.1°</h2><p class="muted">About 7–11 km cells · active baseline</p><p id="baseline-count" class="muted"></p></div><div id="baseline" class="map" aria-label="V5 baseline map"></div></article>
-  <article><div class="caption"><h2>Candidate · 0.05°</h2><p class="muted">About 3.5–5.5 km cells · independently rebuilt</p><p id="candidate-count" class="muted"></p></div><div id="candidate" class="map" aria-label="Finer candidate map"></div></article>
+  <article><div class="caption"><h2 id="baseline-heading">V5 · 0.1°</h2><p id="baseline-description" class="muted">About 7–11 km cells · preserved baseline</p><p id="baseline-count" class="muted"></p></div><div id="baseline" class="map" aria-label="Baseline map"></div></article>
+  <article><div class="caption"><h2 id="candidate-heading">Candidate · 0.05°</h2><p id="candidate-description" class="muted">About 3.5–5.5 km cells · independently rebuilt</p><p id="candidate-count" class="muted"></p></div><div id="candidate" class="map" aria-label="Candidate map"></div></article>
 </main>
 <footer>
-  <p><strong>Finer resolution does not establish better driving-time accuracy.</strong> These are approximate whole-cell contours with assumed speeds and access.</p>
+  <p><strong id="caution">Finer resolution does not establish better driving-time accuracy.</strong> These are approximate whole-cell contours with assumed speeds and access.</p>
   <p class="muted">Natural Earth v5.1.2 + U.S. Census Bureau 2026 TIGER/Line. Geo Planner modifies/repackages Census data into a coarse model; this is not an official or endorsed Census product. Selected locations are validation cases only. Basemap: OpenFreeMap / OpenStreetMap.</p>
   <p id="model" class="muted"></p>
 </footer>
@@ -43,6 +43,22 @@
 import * as maplibregl from "./maplibre-gl.mjs";
 maplibregl.setWorkerUrl("./maplibre-gl-worker.mjs");
 const report = __REPORT_JSON__;
+const baselineName = report.baselineModel.match(/grid-(v\d+)$/)?.[1].toUpperCase() ?? "Baseline";
+const [baselineStep, candidateStep] = report.scenarios[0].results.map(result => result.step);
+const cellRange = step => `${(step * 71).toFixed(1)}–${(step * 111).toFixed(1)} km`;
+document.querySelector("#baseline-heading").textContent = `${baselineName} · ${baselineStep}°`;
+document.querySelector("#baseline-description").textContent = `About ${cellRange(baselineStep)} cells · preserved baseline`;
+document.querySelector("#candidate-heading").textContent = `Candidate · ${candidateStep}°`;
+document.querySelector("#candidate-description").textContent = `About ${cellRange(candidateStep)} cells · independently rebuilt`;
+if (report.roadConnections) {
+  document.title = "Geo Planner · Road connection comparison";
+  document.querySelector("#heading").textContent = "Same grid. More continuous road travel.";
+  document.querySelector("#description").textContent = "The candidate keeps a separate Census road position in each supported cell, reducing detours through the base anchor. Both maps share the same camera.";
+  document.querySelector("#baseline-heading").textContent = "V6 · 0.05°";
+  document.querySelector("#baseline-description").textContent = "About 3.5–5.5 km cells · preserved baseline";
+  document.querySelector("#candidate-description").textContent = "Same cells and speeds · added Census road states";
+  document.querySelector("#caution").textContent = "Larger contours do not establish better driving-time accuracy.";
+}
 const maps = ["baseline", "candidate"].map(container => {
   const map = new maplibregl.Map({container,style:"https://tiles.openfreemap.org/styles/liberty",center:[-96.5717,39.1836],zoom:5,renderWorldCopies:false,maxPitch:0});
   map.addControl(new maplibregl.NavigationControl({showCompass:false}));
@@ -73,7 +89,7 @@ function draw() {
     document.querySelector(i ? "#candidate-count" : "#baseline-count").textContent = `${sample.results[i].cells.toLocaleString()} reached cells · ${sample.results[i].searchMs.toFixed(1)} ms local search`;
   });
   fit();
-  document.querySelector("#status").textContent = `${sample.minutes/60} hours from ${sample.origin.lat.toFixed(4)}, ${sample.origin.lon.toFixed(4)} · same camera · counts differ with cell size`;
+  document.querySelector("#status").textContent = `${sample.minutes/60} hours from ${sample.origin.lat.toFixed(4)}, ${sample.origin.lon.toFixed(4)} · same camera · ${report.roadConnections ? "same cell size" : "counts differ with cell size"}`;
 }
 Promise.all(maps.map(map => new Promise(resolve => map.on("load", () => {
   map.addSource("estimate",{type:"geojson",data:{type:"FeatureCollection",features:[]}});

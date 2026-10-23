@@ -1,3 +1,4 @@
+import { gunzipSync } from "node:zlib";
 import { landConnection, prepareGeography } from "./coarse-geography";
 import {
 	distanceKm,
@@ -25,16 +26,47 @@ type EncodedVisits =
 			offsets: string;
 	  };
 
+function gridBytes(value: string) {
+	return value.startsWith("gzip:")
+		? gunzipSync(Buffer.from(value.slice(5), "base64"), {
+				maxOutputLength: 256_000_000,
+			})
+		: Buffer.from(value, "base64");
+}
+
+const littleEndian = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
+function gridWords(value: string, count: number): Uint16Array;
+function gridWords(value: string, count: number, signed: true): Int16Array;
+function gridWords(
+	value: string,
+	count: number,
+	signed = false,
+): Uint16Array | Int16Array {
+	const raw = gridBytes(value);
+	if (raw.length !== count * 2)
+		throw new Error("Invalid grid word array length");
+	const Words = signed ? Int16Array : Uint16Array;
+	if (littleEndian && raw.byteOffset % 2 === 0)
+		return new Words(raw.buffer, raw.byteOffset, count);
+	const result = new Words(count);
+	const view = new DataView(raw.buffer, raw.byteOffset, raw.byteLength);
+	for (let i = 0; i < count; i++)
+		result[i] = signed
+			? view.getInt16(i * 2, true)
+			: view.getUint16(i * 2, true);
+	return result;
+}
+
 function packedVisits(
 	data: Exclude<EncodedVisits, VisitRow[]>,
 	grid: GridData,
 	supplemental: boolean,
 ): RoadVisits {
-	const cells = Buffer.from(data.cells, "base64");
-	const speeds = Buffer.from(data.speeds, "base64");
-	const anchors = Buffer.from(data.anchors, "base64");
-	const starts = Buffer.from(data.starts, "base64");
-	const offsets = Buffer.from(data.offsets, "base64");
+	const cells = gridBytes(data.cells);
+	const speeds = gridBytes(data.speeds);
+	const anchors = gridBytes(data.anchors);
+	const starts = gridBytes(data.starts);
+	const offsets = gridBytes(data.offsets);
 	const count = speeds.length;
 	if (
 		data.encoding !== "cell-visits-le-v1" ||
@@ -123,6 +155,18 @@ function decodeVisit(
 	if (supplemental) {
 		if (!landConnection(grid, points[anchorIndex], anchor))
 			throw new Error("Road visit transfer crosses water or country boundary");
+		if (
+			grid.roadLayer &&
+			(grid.roadLayer.transferDeciseconds[cell] !==
+				Math.max(1, Math.ceil((transferKm / grid.localSpeedKph) * 36000)) ||
+				distanceKm(
+					points[anchorIndex],
+					gridPosition(grid, grid.width * grid.height + cell),
+				) > 1e-7)
+		)
+			throw new Error(
+				"Road layer does not match its source visit or paid transfer",
+			);
 	} else if (transferKm > 1e-7)
 		throw new Error("Road visit does not own its anchor");
 	const cumulativeKm = [0];
@@ -151,6 +195,7 @@ type EncodedGrid = Omit<
 	| "shoreLinks"
 	| "roadVisits"
 	| "supplementalRoadVisits"
+	| "roadLayer"
 > & {
 	land: string;
 	traversable: string;
@@ -161,10 +206,16 @@ type EncodedGrid = Omit<
 	shoreLinks?: string;
 	roadVisits?: EncodedVisits;
 	supplementalRoadVisits?: EncodedVisits;
+	roadLayer?: {
+		encoding: string;
+		anchorOffsets: string;
+		roadDeciseconds: string;
+		transferDeciseconds: string;
+	};
 };
 
 export function decodeGrid(data: EncodedGrid): GridData {
-	const bytes = (value: string) => new Uint8Array(Buffer.from(value, "base64"));
+	const bytes = (value: string) => new Uint8Array(gridBytes(value));
 	const grid = {
 		...data,
 		land: bytes(data.land),
@@ -176,6 +227,7 @@ export function decodeGrid(data: EncodedGrid): GridData {
 		anchorOffsets: undefined as Int16Array | undefined,
 		roadVisits: undefined as RoadVisits | undefined,
 		supplementalRoadVisits: undefined as RoadVisits | undefined,
+		roadLayer: undefined as GridData["roadLayer"],
 	};
 	const size = data.width * data.height;
 	if (
@@ -187,30 +239,10 @@ export function decodeGrid(data: EncodedGrid): GridData {
 	)
 		throw new Error("Invalid bundled coarse-grid data");
 	if (data.roadDeciseconds) {
-		const encoded = bytes(data.roadDeciseconds);
-		if (encoded.length !== size * 8)
-			throw new Error("Invalid bundled road times");
-		const view = new DataView(
-			encoded.buffer,
-			encoded.byteOffset,
-			encoded.byteLength,
-		);
-		grid.roadDeciseconds = Uint16Array.from({ length: size * 4 }, (_, i) =>
-			view.getUint16(i * 2, true),
-		);
+		grid.roadDeciseconds = gridWords(data.roadDeciseconds, size * 4);
 	}
 	if (data.anchorOffsets) {
-		const encoded = bytes(data.anchorOffsets);
-		if (encoded.length !== size * 4)
-			throw new Error("Invalid bundled road anchors");
-		const view = new DataView(
-			encoded.buffer,
-			encoded.byteOffset,
-			encoded.byteLength,
-		);
-		grid.anchorOffsets = Int16Array.from({ length: size * 2 }, (_, i) =>
-			view.getInt16(i * 2, true),
-		);
+		grid.anchorOffsets = gridWords(data.anchorOffsets, size * 2, true);
 	}
 	const decodeVisits = (encoded: EncodedVisits, supplemental: boolean) => {
 		if (!Array.isArray(encoded))
@@ -223,6 +255,15 @@ export function decodeGrid(data: EncodedGrid): GridData {
 		}
 		return visits;
 	};
+	if (data.roadLayer) {
+		if (data.roadLayer.encoding !== "census-road-layer-le-v1")
+			throw new Error("Invalid road layer encoding");
+		grid.roadLayer = {
+			anchorOffsets: gridWords(data.roadLayer.anchorOffsets, size * 2, true),
+			roadDeciseconds: gridWords(data.roadLayer.roadDeciseconds, size * 4),
+			transferDeciseconds: gridWords(data.roadLayer.transferDeciseconds, size),
+		};
+	}
 	prepareGeography(grid);
 	if (data.roadVisits) grid.roadVisits = decodeVisits(data.roadVisits, false);
 	if (data.supplementalRoadVisits)
@@ -230,5 +271,35 @@ export function decodeGrid(data: EncodedGrid): GridData {
 			data.supplementalRoadVisits,
 			true,
 		);
+	if (grid.roadLayer) {
+		const transfers = grid.roadLayer.transferDeciseconds;
+		let states = 0;
+		for (const transfer of transfers) if (transfer) states++;
+		if (states !== grid.supplementalRoadVisits?.size)
+			throw new Error("Road layer source visits differ");
+		const roads = grid.roadLayer.roadDeciseconds;
+		const directions = [
+			[1, 0],
+			[1, 1],
+			[0, 1],
+			[-1, 1],
+		];
+		for (let key = 0; key < roads.length; key++) {
+			if (!roads[key]) continue;
+			const cell = Math.floor(key / 4),
+				[dx, dy] = directions[key % 4];
+			const x = (cell % grid.width) + dx,
+				y = Math.floor(cell / grid.width) + dy;
+			if (
+				x < 0 ||
+				x >= grid.width ||
+				y < 0 ||
+				y >= grid.height ||
+				!transfers[cell] ||
+				!transfers[y * grid.width + x]
+			)
+				throw new Error("Road layer link has no source state");
+		}
+	}
 	return grid;
 }

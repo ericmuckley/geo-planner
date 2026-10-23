@@ -21,6 +21,8 @@ class ResolutionTests(unittest.TestCase):
         fine = list(builder.rasterize(polygon, [0, 0, .2, .2], .05, 4, 4))
         self.assertEqual(coarse, [1, 2, 3])
         self.assertEqual(fine, [0, 1, 2, 3, 4, 7, 8, 11, 12, 13, 14, 15])
+        finer = list(builder.rasterize(polygon, [0, 0, .2, .2], .025, 8, 8))
+        self.assertEqual(len(finer), 48)
 
     def test_road_visits_rebuild_from_source_rather_than_upsample_labels(self):
         path = [[.001, .025], [.199, .025]]

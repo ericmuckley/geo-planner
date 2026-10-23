@@ -27,7 +27,9 @@ test("indexed crossings match the full scan at band boundaries, holes and open r
 	const indexed = structuredClone(geography);
 	prepareGeography(indexed);
 	const values = [
-		-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.09999, 0.1, 0.10001, 0.2, 0.3, 0.4, 0.5,
+		-0.5, -0.4, -0.3, -0.2, -0.1, -0.025, 0, 0.00999, 0.01, 0.01001, 0.02499,
+		0.025, 0.02501, 0.04999, 0.05, 0.05001, 0.09999, 0.1, 0.10001, 0.2, 0.3,
+		0.4, 0.5,
 	];
 	for (const x of values)
 		for (const y of values) {

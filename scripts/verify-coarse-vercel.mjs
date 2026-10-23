@@ -19,7 +19,7 @@ const secretValues = [...secrets].filter((value) => value && value.length > 8);
 process.env.VERCEL = "1";
 process.env.LOCAL_ROUTING_EXPERIMENT = "1";
 const root = process.argv[2] ?? ".";
-const expectedEngine = process.argv[3] ?? "coarse-road-grid-v6";
+const expectedEngine = process.argv[3] ?? "coarse-road-grid-v8";
 const directory = resolve(root, ".vercel/output/functions/__server.func");
 let functionBytes = 0;
 let functionFiles = 0;
@@ -81,10 +81,10 @@ for (const [name, lat, lon, minutes] of [
 	const body = JSON.parse(text);
 	assert.equal(body.metadata.engine, "coarse");
 	assert.equal(body.metadata.engineVersion, expectedEngine);
-	if (expectedEngine === "coarse-road-grid-v6") {
+	if (expectedEngine === "coarse-road-grid-v8") {
 		assert.equal(
 			body.metadata.graphVersion,
-			"natural-earth-census-2026-grid-v6",
+			"natural-earth-census-2026-grid-v8",
 		);
 		assert.match(
 			body.metadata.attribution,

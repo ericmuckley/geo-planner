@@ -5,7 +5,7 @@ type Geography = { boundary: number[][][][]; lakes: number[][][][] };
 type IndexedRing = {
 	points: number[][];
 	firstBand: number;
-	bands: number[][];
+	bands: Uint32Array[];
 	west: number;
 	east: number;
 	roundingGuard: number;
@@ -16,11 +16,12 @@ const indexes = new WeakMap<
 	{
 		boundary: IndexedPolygon[];
 		lakes: IndexedPolygon[];
+		rings: IndexedRing[];
 		sourceBoundary: Geography["boundary"];
 		sourceLakes: Geography["lakes"];
 	}
 >();
-const band = (latitude: number) => Math.floor(latitude * 10);
+const band = (latitude: number) => Math.floor(latitude * 100);
 
 // Bundled geography is immutable. Index edge candidates, never query results;
 // the original coordinates and intersection arithmetic remain unchanged.
@@ -50,8 +51,11 @@ export function prepareGeography(geography: Geography) {
 				}
 				const edgeEast = (i: number) =>
 					Math.max(points[i][0], points[i ? i - 1 : points.length - 1][0]);
-				for (const candidates of bands)
-					candidates.sort((a, b) => edgeEast(b) - edgeEast(a));
+				const packedBands = bands.map((candidates) =>
+					Uint32Array.from(
+						candidates.sort((a, b) => edgeEast(b) - edgeEast(a)),
+					),
+				);
 				// Conservative candidate bounds only; exact geometry checks still decide
 				// membership. Cover floating-point interpolation rounding at vertices.
 				const roundingGuard =
@@ -60,7 +64,7 @@ export function prepareGeography(geography: Geography) {
 				return {
 					points,
 					firstBand,
-					bands,
+					bands: packedBands,
 					west: west - roundingGuard,
 					east: east + roundingGuard,
 					roundingGuard,
@@ -72,9 +76,12 @@ export function prepareGeography(geography: Geography) {
 		Object.freeze(source);
 		return indexed;
 	};
+	const boundary = polygons(geography.boundary);
+	const lakes = polygons(geography.lakes);
 	indexes.set(geography, {
-		boundary: polygons(geography.boundary),
-		lakes: polygons(geography.lakes),
+		boundary,
+		lakes,
+		rings: [...boundary.flat(), ...lakes.flat()],
 		sourceBoundary: geography.boundary,
 		sourceLakes: geography.lakes,
 	});
@@ -120,24 +127,23 @@ function* crossingEdges(geography: Geography, a: number[], b: number[]) {
 	const last = band(Math.max(a[1], b[1]));
 	const west = Math.min(a[0], b[0]);
 	const east = Math.max(a[0], b[0]);
-	for (const polygon of [...index.boundary, ...index.lakes])
-		for (const ring of polygon) {
-			const { points, firstBand, bands } = ring;
-			if (east < ring.west || west > ring.east) continue;
-			for (
-				let y = Math.max(first, firstBand);
-				y <= Math.min(last, firstBand + bands.length - 1);
-				y++
-			)
-				for (const i of bands[y - firstBand]) {
-					if (!i) continue; // The original crossing scan excludes the implicit closing edge.
-					const c = points[i - 1],
-						d = points[i];
-					if (Math.max(c[0], d[0]) + ring.roundingGuard < west) break;
-					// An edge spanning several bands is tested exactly once.
-					if (y === first || y === band(Math.min(c[1], d[1]))) yield [c, d];
-				}
-		}
+	for (const ring of index.rings) {
+		const { points, firstBand, bands } = ring;
+		if (east < ring.west || west > ring.east) continue;
+		for (
+			let y = Math.max(first, firstBand);
+			y <= Math.min(last, firstBand + bands.length - 1);
+			y++
+		)
+			for (const i of bands[y - firstBand]) {
+				if (!i) continue; // The original crossing scan excludes the implicit closing edge.
+				const c = points[i - 1],
+					d = points[i];
+				if (Math.max(c[0], d[0]) + ring.roundingGuard < west) break;
+				// An edge spanning several bands is tested exactly once.
+				if (y === first || y === band(Math.min(c[1], d[1]))) yield [c, d];
+			}
+	}
 }
 
 // Partition at every polygon crossing: sampling alone can skip narrow channels.
