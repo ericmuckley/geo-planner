@@ -1,0 +1,31 @@
+# Fixed nonregional frontier check
+
+Prepared October 23, 2026, before any new routing-reference requests. [Frozen 48 queries](plan.json), [source/repeat binding](preparation.json). Both offline preparations are byte-identical. This is a validation fixture only; the application does not import these coordinates.
+
+Eight public origins: Astoria OR, Missoula MT, Hays KS, Duluth MN, Columbus OH, Asheville NC, Portland ME and Savannah GA. Each has one predicted-inside / predicted-outside pair at 6, 10 and 12 hours. They cover several geographic settings outside the existing Southern California reference set. Some may resemble prior software smoke locations; these are new independent-reference cases, not a statistical national sample.
+
+The generic selection algorithm uses v8's land-supported Census anchors with model cell-arrival costs 5–20 minutes from each horizon. Full point attachments must agree on side with at least two minutes margin. Azimuth preference rotates and falls back deterministically to an available sector. Eight best candidates per sector/side are retained during preparation. No provider result guided selection; no failed origin is replaced silently. Diagnostic search extends labels to 750 minutes to sample outside the 720-minute contour, without changing the public API limit. The current 48 point proxies are 6.54–14.17 minutes from the horizons.
+
+These model-conditioned frontier probes examine where the current model places its boundary. They do not estimate national reachable area, random destination accuracy, traffic ground truth or all-origin completeness. Keep the full denominator and every acquisition/model failure visible.
+
+## Proposed reference acquisition
+
+Use the existing server-only `ORS_API_KEY` for **at most 48 POST requests** to the fixed new HeiGIT Directions endpoint in the plan. Requests use public fixture coordinates, driving-car/fastest, explicit 350m endpoint radiuses, no instructions, no ferries and no border crossings. Request GeoJSON so endpoint snaps and routing geometry can be inspected. No geocoding, isochrone, matrix, status/auth probe, retry, fallback provider or additional request is included in the budget. Minimum interval 6.5 seconds, timeout 45 seconds; stop on 401/403/429 or exhausted quota. No paid spending or account/plan change.
+
+Current [Standard plan](https://account.heigit.org/info/plans) lists free access with Directions 2,000/day and 40/minute, independently corroborated by the [official FAQ](https://giscience.github.io/openrouteservice/frequently-asked-questions#when-and-how-does-my-quota-reset). Available quota for this particular key has not been read. Published [restrictions](https://openrouteservice.org/restrictions/) distinguish 6,000km driving Directions from the one-hour driving Isochrone cap; these probes use Directions. [Routing options](https://giscience.github.io/openrouteservice/api-reference/endpoints/directions/routing-options) document the explicit ferry/border exclusions. Endpoint snap failure or distance rejection remains an outcome, never an invitation to retry with a different query.
+
+The provider's [migration announcement](https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912) schedules retirement of the old API host for November 2–6, 2026 and specifies the new `api.heigit.org/openrouteservice/v2/` prefix with existing keys. The app's optional connected adapter still uses the legacy host; migrate that adapter with mock tests before relying on it after retirement. No connected-provider migration or routing call occurred during this preparation.
+
+[Terms](https://account.heigit.org/info/tos) and the public plans page were read in the browser on October 23 because the main site currently reports an outage. Terms require attribution and identify ORS results as CC-BY-SA 4.0. Reference artifacts should carry `© openrouteservice by HeiGIT | Data from OpenStreetMap` and their own license/provenance, separate from the NE/Census shipped grid. Only public fixtures are proposed, not personal travel/history. No new account or agreement was accepted. These are recorded provider conditions, not legal advice or a claim that the user's remaining quota is known.
+
+## Frozen scoring and evidence protocol
+
+For every planned request, preserve ID, exact body/hash, UTC start/end, HTTP status, elapsed scope, bounded raw response, selected nonsecret quota headers, returned reference engine/data version and endpoint snaps. Never save the API key, request Authorization header, browser cookies or unrelated history. Use a fresh append-only capture directory and seal all results, including failures. No automatic retries; any separately authorized retry is a new run with a separate budget.
+
+For valid reference routes, record minutes, distance and snap distances. Compare the frozen v8 point proxy with reference duration: signed difference, absolute difference, median, mean and 90th percentile overall and by horizon/origin. Report paired-finite denominators explicitly. Keep failed/unroutable/skipped requests in the original 48-case ledger.
+
+For map classification, use the frozen whole-cell prediction and reference duration. At a horizon T, reference duration < T−5 minutes counts inside; > T+5 counts outside; the five-minute boundary band is reported as ambiguous. Report false-reachable, missed-reachable, correct and ambiguous counts with all denominators. Endpoint snap >100m is a quality flag: retain it in the primary results and show a separate sensitivity subset, not silent exclusion. Do not call these sparse point probes an area/contour accuracy measurement. Do not change routes, thresholds, speeds or queries after seeing outcomes; preserve v8 and use a separately versioned development run for any generic correction.
+
+## State and next action
+
+**No provider request has been made.** Fresh reference quota needs explicit authorization under the current project plan. After approval, implement/review the bounded capture/replay command around this sealed query set, then execute within the 48-request cap. Preserve raw responses and all failures; do not modify the sealed plan. No database migration, source download, national graph expansion or main-app provider fallback is required. [Current next steps](../../next-steps.md).

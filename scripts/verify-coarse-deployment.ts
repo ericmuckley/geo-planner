@@ -44,7 +44,7 @@ const config = engineConfigSchema.parse(configResponse.body);
 assert.equal(config.engineVersion, "coarse-road-grid-v8");
 assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v8");
 assert.equal(config.health, "ready");
-assert.equal(config.minMinutes, 60);
+assert.equal(config.minMinutes, 30);
 assert.equal(config.maxMinutes, 720);
 
 const cases = [
@@ -96,7 +96,7 @@ for (const [name, body, status] of [
 	["malformed JSON", "{", 400],
 	[
 		"below minimum",
-		JSON.stringify({ ...defaultQuery, budgetMinutes: 59 }),
+		JSON.stringify({ ...defaultQuery, budgetMinutes: 29 }),
 		422,
 	],
 	[

@@ -5,6 +5,7 @@ import {
 	CloudUpload,
 	Download,
 	Fuel,
+	LoaderCircle,
 	MapPin,
 	Mountain,
 	Play,
@@ -51,10 +52,21 @@ function toDraft(query: ReachabilityQuery) {
 	};
 }
 
+function formatDuration(minutes: number) {
+	const hours = Math.floor(minutes / 60);
+	const remainder = minutes % 60;
+	return [
+		hours ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "",
+		remainder ? `${remainder} min` : "",
+	]
+		.filter(Boolean)
+		.join(" ");
+}
+
 function Home() {
 	const [model, setModel] = useState<"coarse" | "connected">("coarse");
 	const [draft, setDraft] = useState(
-		toDraft({ ...defaultQuery, budgetMinutes: 360 }),
+		toDraft({ ...defaultQuery, budgetMinutes: 120 }),
 	);
 	const [config, setConfig] = useState<EngineConfig | null>(null);
 	const [configError, setConfigError] = useState<string | null>(null);
@@ -79,6 +91,7 @@ function Home() {
 		(config.health === "ready" || config.health === "unchecked");
 	const controller = useRef<AbortController | null>(null);
 	const sequence = useRef(0);
+	const pendingMinutes = useRef<string | null>(null);
 	const parsed = querySchema.safeParse({
 		...defaultQuery,
 		origin: {
@@ -92,10 +105,12 @@ function Home() {
 		lon: draft.lon.trim() ? Number(draft.lon) : NaN,
 	});
 	const origin = parsedOrigin.success ? parsedOrigin.data : defaultQuery.origin;
+	const minMinutes = config?.minMinutes ?? (coarse ? 30 : 1);
+	const maxMinutes = config?.maxMinutes ?? (coarse ? 720 : 60);
 	const withinLimits =
 		parsed.success &&
-		parsed.data.budgetMinutes >= (config?.minMinutes ?? (coarse ? 60 : 1)) &&
-		parsed.data.budgetMinutes <= (config?.maxMinutes ?? (coarse ? 720 : 60));
+		parsed.data.budgetMinutes >= minMinutes &&
+		parsed.data.budgetMinutes <= maxMinutes;
 
 	useEffect(() => {
 		const abort = new AbortController();
@@ -142,6 +157,7 @@ function Home() {
 
 	const updateDraft = useCallback(
 		(patch: Partial<ReturnType<typeof toDraft>>) => {
+			pendingMinutes.current = null;
 			sequence.current += 1;
 			controller.current?.abort();
 			setRunning(false);
@@ -175,6 +191,23 @@ function Home() {
 		setSavedRuns((runs) => mergeSavedRuns([run], runs));
 		setHistoryDirty(true);
 		cloudHistory.save(run);
+	}
+
+	function commitDrivingTime() {
+		const value = pendingMinutes.current;
+		pendingMinutes.current = null;
+		if (value === null || !canCompute) return;
+		if (!parsedOrigin.success) {
+			setError("Enter valid coordinates before estimating an area.");
+			return;
+		}
+		const budgetMinutes = Number(value);
+		if (budgetMinutes < minMinutes || budgetMinutes > maxMinutes) return;
+		void runQuery({
+			...defaultQuery,
+			origin: parsedOrigin.data,
+			budgetMinutes,
+		});
 	}
 
 	async function runQuery(query: ReachabilityQuery, selectedModel = model) {
@@ -320,7 +353,7 @@ function Home() {
 								onChange={(event) => {
 									const next =
 										event.target.value === "coarse" ? "coarse" : "connected";
-									updateDraft({ minutes: next === "coarse" ? "360" : "60" });
+									updateDraft({ minutes: next === "coarse" ? "120" : "60" });
 									setConfig(null);
 									setModel(next);
 								}}
@@ -389,7 +422,7 @@ function Home() {
 									updateDraft(
 										toDraft({
 											...defaultQuery,
-											budgetMinutes: coarse ? 360 : 60,
+											budgetMinutes: coarse ? 120 : 60,
 										}),
 									)
 								}
@@ -400,42 +433,55 @@ function Home() {
 								className="mt-5 block space-y-2 text-sm font-semibold"
 								htmlFor="minutes"
 							>
-								<span className="flex items-center gap-2">
-									<Clock3 size={16} /> Driving time · minutes
+								<span className="flex items-center justify-between gap-2">
+									<span className="flex items-center gap-2">
+										<Clock3 size={16} /> Driving time
+									</span>
+									<span
+										id="driving-time-value"
+										className="tabular-nums text-[var(--lagoon-deep)]"
+									>
+										{formatDuration(Number(draft.minutes))}
+									</span>
 								</span>
 								<input
 									id="minutes"
-									className={fieldClass}
-									type="number"
-									required
-									min={config?.minMinutes ?? (coarse ? 60 : 1)}
-									max={config?.maxMinutes ?? (coarse ? 720 : 60)}
+									className="h-7 w-full cursor-pointer accent-[var(--lagoon-deep)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lagoon-deep)] disabled:cursor-wait disabled:opacity-50"
+									type="range"
+									aria-label="Driving time"
+									aria-valuetext={formatDuration(Number(draft.minutes))}
+									aria-describedby="driving-time-hint"
+									min={minMinutes}
+									max={maxMinutes}
 									step={1}
 									value={draft.minutes}
-									onChange={(event) =>
-										updateDraft({ minutes: event.target.value })
+									disabled={!config}
+									onChange={(event) => {
+										const minutes = event.currentTarget.value;
+										pendingMinutes.current = minutes;
+										setDraft((previous) => ({ ...previous, minutes }));
+									}}
+									onPointerDown={(event) =>
+										event.currentTarget.setPointerCapture(event.pointerId)
 									}
+									onPointerUp={commitDrivingTime}
+									onKeyUp={commitDrivingTime}
+									onBlur={commitDrivingTime}
+									onPointerCancel={() => {
+										pendingMinutes.current = null;
+									}}
 								/>
+								<span className="flex justify-between text-xs font-normal text-[var(--sea-ink-soft)]">
+									<span>{formatDuration(minMinutes)}</span>
+									<span>{formatDuration(maxMinutes)}</span>
+								</span>
 							</label>
-							{coarse && (
-								<fieldset className="mt-2 flex gap-2">
-									<legend className="sr-only">Long-range budgets</legend>
-									{[360, 600, 720].map((minutes) => (
-										<button
-											key={minutes}
-											className={cn(
-												buttonClass,
-												Number(draft.minutes) === minutes && "bg-[var(--foam)]",
-											)}
-											type="button"
-											aria-pressed={Number(draft.minutes) === minutes}
-											onClick={() => updateDraft({ minutes: String(minutes) })}
-										>
-											{minutes / 60} hours
-										</button>
-									))}
-								</fieldset>
-							)}
+							<output
+								id="driving-time-hint"
+								className="mt-1 block text-xs text-[var(--sea-ink-soft)]"
+							>
+								{running ? "Updating area…" : "Release to update the map."}
+							</output>
 							<p className="mt-2 text-xs leading-relaxed text-[var(--sea-ink-soft)]">
 								Outbound ·{" "}
 								{coarse
@@ -443,7 +489,7 @@ function Home() {
 									: hosted
 										? "openrouteservice driving-car · provider defaults"
 										: "Valhalla auto profile · static speeds"}
-								. Maximum: {config?.maxMinutes ?? (coarse ? 720 : 60)} minutes.
+								. Maximum: {formatDuration(maxMinutes)}.
 							</p>
 							<button
 								className={cn(
@@ -566,13 +612,26 @@ function Home() {
 					</section>
 				</aside>
 				<div className="grid min-w-0 gap-4 lg:grid-rows-[minmax(440px,1fr)_auto]">
-					<ResearchMap
-						origin={origin}
-						result={result}
-						showContour={showContour}
-						onOriginChange={selectOrigin}
-						onMapIdle={onMapIdle}
-					/>
+					<div className="relative min-h-[440px]" aria-busy={running}>
+						<ResearchMap
+							origin={origin}
+							result={result}
+							showContour={showContour}
+							onOriginChange={selectOrigin}
+							onMapIdle={onMapIdle}
+						/>
+						{running && (
+							<div
+								aria-hidden="true"
+								className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-2xl bg-white/70"
+							>
+								<span className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-semibold shadow-sm">
+									<LoaderCircle className="animate-spin" size={18} /> Updating
+									area…
+								</span>
+							</div>
+						)}
+					</div>
 					<section
 						className="island-shell rounded-2xl p-5"
 						aria-labelledby="timing-heading"

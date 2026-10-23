@@ -389,6 +389,7 @@ test("coarse estimates need no network, credential or local worker, including th
 		assert.equal(config.provider, "coarse");
 		assert.equal(config.health, "ready");
 		assert.equal(config.maxMinutes, 720);
+		assert.equal(config.minMinutes, 30);
 		assert.equal(config.engineVersion, "coarse-road-grid-v8");
 		assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v8");
 		for (const [lat, lon] of [
@@ -430,6 +431,10 @@ test("coarse estimates need no network, credential or local worker, including th
 			assert.ok(result.contours.warnings?.length);
 		}
 		assert.equal(fetchMock.mock.callCount(), 0);
+		assert.equal(
+			(await runEstimate(request(defaultQuery.origin, 30))).status,
+			200,
+		);
 	} finally {
 		fetchMock.mock.restore();
 		if (previous === undefined) delete process.env.VERCEL;
@@ -445,7 +450,7 @@ test("unsupported origins, horizons and malformed queries produce useful errors"
 		{ lat: 32, lon: -130 },
 	])
 		assert.equal((await runEstimate(request(origin))).status, 422);
-	for (const minutes of [0, 59, 720.5, 721])
+	for (const minutes of [0, 29, 720.5, 721])
 		assert.equal(
 			(await runEstimate(request(defaultQuery.origin, minutes))).status,
 			422,

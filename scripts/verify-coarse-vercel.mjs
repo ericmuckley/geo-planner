@@ -53,12 +53,15 @@ const configResponse = await handler.fetch(
 	new Request("http://localhost/api/estimate"),
 );
 assert.equal(configResponse.status, 200);
-assert.equal((await configResponse.json()).maxMinutes, 720);
+const config = await configResponse.json();
+assert.equal(config.minMinutes, 30);
+assert.equal(config.maxMinutes, 720);
 const samples = [];
 for (const [name, lat, lon, minutes] of [
 	["San Diego", 32.7157, -117.1611, 360],
 	["Denver", 39.7392, -104.9903, 600],
 	["New York", 40.7128, -74.006, 720],
+	["San Diego", 32.7157, -117.1611, 30],
 ]) {
 	const started = performance.now();
 	const response = await handler.fetch(

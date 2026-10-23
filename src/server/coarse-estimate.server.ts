@@ -20,7 +20,7 @@ const config = engineConfigSchema.parse({
 	provider: "coarse",
 	configured: true,
 	health: "ready",
-	minMinutes: 60,
+	minMinutes: 30,
 	maxMinutes: 720,
 	engineVersion: "coarse-road-grid-v8",
 	graphVersion: data.version,
@@ -53,11 +53,11 @@ export async function runEstimate(request: Request) {
 		return json({ error: "Expected a JSON query." }, 400);
 	}
 	const parsed = querySchema.safeParse(input);
-	if (!parsed.success || parsed.data.budgetMinutes < 60)
+	if (!parsed.success || parsed.data.budgetMinutes < 30)
 		return json(
 			{
 				error:
-					"Choose valid coordinates and a whole-minute budget from 60 to 720.",
+					"Choose valid coordinates and a whole-minute budget from 30 to 720.",
 			},
 			422,
 		);

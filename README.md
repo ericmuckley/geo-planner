@@ -1,19 +1,19 @@
 # Geo Planner
 
-A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse 1–12-hour contours across the contiguous US**, with six-/ten-/twelve-hour presets.
+A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse contours from 30 minutes to 12 hours across the contiguous US**, with a two-hour default and a release-to-update time slider.
 
-Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V8 is active locally; v7/v8 changes are uncommitted.** V6 at `ffd7fec` is the committed baseline and user-reported verified live. Include both new artifacts when publishing; raw sources, candidates, detailed graphs and credentials remain local-only.
+Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). **V8 is committed at `ee8809f` (commit message `v7`); the slider/API-range update and validation-plan tooling are local/uncommitted.** A public deployment configuration check confirms v8 with the earlier 60-minute minimum; the new UX still needs publication. Raw sources, detailed graphs and credentials remain local-only.
 
 ## What works today
 
-- Filled 1–12-hour estimates from arbitrary supported contiguous-US land origins, with 6/10/12h presets and the same rules everywhere.
+- Filled 30-minute–12-hour estimates from arbitrary supported contiguous-US land origins, with the same rules everywhere. The time slider starts at two hours and recalculates on pointer/key release with loading feedback.
 - **0.025° cells, about 1.8–2.8 km**, half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
 - MapLibre controls, source/model notices, timings, browser-private PostgreSQL history with local fallback, replay and export.
 - Lossless storage puts the finer model in a **61.21 MB** bundled file and **65.02 MB** local Vercel function. First packaged computation is about **3.6s after config**, with zero routing fetches.
 
 Across all 35 saved development references, **29 estimates improve and six worsen** versus v7, at most +3.18 min. Mean absolute reference difference falls **11.58→10.29 min** and **17.21→12.01 min**; all destinations remain reached/shaded. These regional references do not prove national or long-horizon accuracy. [Paired maps, results and limits](docs/evidence/coarse-finer-2026-10-23/README.md).
 
-The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: publish/verify v8, then prepare independent nonregional long-horizon validation. Detailed research stays parked. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
+The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: publish/verify the slider update, then acquire the prepared 48 nonregional frontier references after quota authorization. Detailed research stays parked. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
 
 ## Run locally
 

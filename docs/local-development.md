@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv6 port 3000. No database, routing service, API key, Python or Docker is needed to compute coarse 1–12-hour contours, explore the map and save queries. The compact grid is included in source; the large ignored research datasets are unnecessary for this default path. The default basemap uses the network. The cloud `DATABASE_URL` is stored in ignored `.env`; `.env.local` retains the optional routing settings and has no database override. Preserve these values and restart Vite after service configuration changes. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
+Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv6 port 3000. No database, routing service, API key, Python or Docker is needed to compute coarse 30-minute–12-hour contours, explore the map and save queries. The compact grid is included in source; the large ignored research datasets are unnecessary for this default path. The default basemap uses the network. The cloud `DATABASE_URL` is stored in ignored `.env`; `.env.local` retains the optional routing settings and has no database override. Preserve these values and restart Vite after service configuration changes. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
 
 ```bash
 npm run check
@@ -22,6 +22,38 @@ npm run preview -- --port 4173
 ```
 
 The route generator also runs during Vite builds. Use `npm run generate-routes` if typechecking a newly added route before starting/building Vite. Never edit the generated route tree manually. This sandbox required approval to install packages, use the test runner's IPC socket, and start the preview listener; these are environment restrictions, not application requirements.
+
+## Time slider
+
+The main page defaults to **120 minutes** and uses one native slider from **30 to 720 whole minutes** for the coarse model. Pointer movement/key repeats preview the human-readable time without requests; pointer release/key-up/blur commits a pending value once. Pointer capture covers release outside the control. Automatic requests use the existing cancellation/sequence guard and show loading on the map/status. The optional submit button remains for coordinate edits/retry. The connected model keeps its own provider minimum/maximum and valid default.
+
+`GET /api/estimate` now reports `minMinutes: 30`; `POST` accepts 30 and rejects 29. No graph/data/hash, env, dependency, schema or migration change. Existing saved queries/replay still work. The unchanged persistence suite need not repeat.
+
+```sh
+npm run check
+npm run typecheck
+node --import tsx --test src/server/*.test.ts
+npm run build
+npm run build:vercel
+npm run check:coarse:vercel
+```
+
+Checks pass locally, including a generated-handler 30-minute result. For browser QA, reload once after builds/docs finish, confirm default120/min30/max720, click/release the track (375 minutes at its center), observe `Updating area…`, and wait for matching run metadata without using submit. Test Home→30, End→720, rapid End/ArrowLeft→719, reset→120 and keyboard auto-computation, then fixture Cloud saved→reload→Replay. Inspect only new public fixture history. [Evidence](evidence/time-slider-2026-10-23/checks.json).
+
+The public live configuration still advertises min60. After publishing this update, use the existing hosted verifier; it deliberately requires min30. No compute/provider/history request was made during the one configuration observation. Native range controls need no new UI dependency.
+
+## Fixed nonregional frontier plan
+
+[The frozen 48-query plan](evidence/coarse-holdout-plan-2026-10-23/README.md) and its hashes are prepared before reference calls. Reproduce offline into a fresh ignored directory only when preparation changes:
+
+```sh
+node --import tsx scripts/prepare-coarse-holdout.ts data/coarse-quality/coarse-holdout-plan-new
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/prepare-coarse-holdout.ts
+```
+
+Expected plan SHA `77360fec0906c5a3eeedc533eef55cbe8557659266c25badcc4b924412e4271e`, eight public origins × three horizons × two sides = 48 requests, zero provider/DB calls or key reads. Existing runs `data/coarse-quality/coarse-holdout-plan-v1/` and `-repeat/` match byte for byte. Preparation only searches bundled v8; its diagnostic 750-minute labels supply points outside 720 without changing the public API. No raw sources or Python are needed.
+
+A bounded capture/replay helper is the next implementation task; none exists yet and no fresh references were requested. Obtain explicit authorization for the 48-request, zero-paid-spend cap before calls. The plan records the new HeiGIT Directions endpoint, current public limits/terms, exact bodies, no retries and all scoring/failure denominators. It is a model-conditioned frontier check, not a random national accuracy sample. The optional connected adapter still uses the legacy ORS host, announced for retirement November 2–6, 2026; follow up with a focused endpoint migration and mock checks before relying on it then. [Primary migration notice](https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912).
 
 ## Speed Insights
 
@@ -108,14 +140,14 @@ These are model-to-model diagnostics, not live driving-time truth or national ac
 
 ## Hosted v4 verification
 
-This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hosted-2026-10-22/README.md) remains unchanged; the user reports v6 committed/verified live at `ffd7fec`. **The current verifier expects v8**, which is local/uncommitted. Run deliberately after the new deployment is Ready:
+This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hosted-2026-10-22/README.md) remains unchanged; v8 is committed at `ee8809f` and a public configuration read confirms its model with the prior 60-minute minimum. **The current verifier expects v8 with the new 30-minute minimum**, so run after publishing the local slider update. Run deliberately after the new deployment is Ready:
 
 ```sh
 node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
 npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
 ```
 
-It makes fifteen app requests, checks saved v8 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v6/v7 intentionally fail the version assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v8 proof](evidence/coarse-finer-2026-10-23/README.md).
+It makes fifteen app requests, checks saved v8 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v6/v7 fail the version assertion; pre-slider v8 fails the updated minimum assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v8 proof](evidence/coarse-finer-2026-10-23/README.md).
 
 ## Offline road-source pilot
 
@@ -258,7 +290,7 @@ An isolated package probe still accepts any candidate/fresh directory through `p
 
 ## Census road states v7
 
-Historical v7 comparison artifact `src/server/data/coarse-grid-v7.json`: **79,584,626 bytes / SHA `988d1ef988e0ca587b60cb3ee4d688eed37629bdb62f344d7f49e8f6f6349379`**. Include this currently uncommitted comparison artifact with v8 when publishing. Normal app/deployment now uses v8 below. No raw source, Python, DB, new dependency or env variable is required at runtime. [Complete evidence](evidence/coarse-connections-2026-10-23/README.md).
+Historical v7 comparison artifact `src/server/data/coarse-grid-v7.json`: **79,584,626 bytes / SHA `988d1ef988e0ca587b60cb3ee4d688eed37629bdb62f344d7f49e8f6f6349379`**. This comparison artifact is committed with v8 at `ee8809f`. Normal app/deployment now uses v8 below. No raw source, Python, DB, new dependency or env variable is required at runtime. [Complete evidence](evidence/coarse-connections-2026-10-23/README.md).
 
 The completed source runs are `data/coarse-quality/road-layer-v1/` and `road-layer-v1-repeat/`, each containing `grid.json`, `build.json` and `links.json.gz`. Candidate SHA **`d2f220d90d3d27caaf6d19aab63e2fb0365ea3f29a06398be3ff365b921c3c73`**, 79,584,632 bytes; proof SHA **`fc71016fd7fbbcba10bc0a512499133c0d199027a1cb5d4dd6e02873111049f5`**, 10,226,099 bytes. Both repeat byte for byte. Evaluation/memory/paths/finalization/preview are under `data/coarse-quality/road-layer-evaluation-v1/`; candidate package probe under `road-layer-v1/package-probe/`.
 
@@ -296,7 +328,7 @@ The existing server instead serves `data/coarse-quality/road-layer-evaluation-v1
 
 ## Finer-resolution v8
 
-Normal app/deployment needs only bundled `src/server/data/coarse-grid-v8.json`: **61,208,381 bytes / SHA `2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910`**. V7/v8 are uncommitted; include both artifacts and accumulated changes. No new env, dependency, migration, raw source or Python is required at runtime. [Complete v8 evidence](evidence/coarse-finer-2026-10-23/README.md).
+Normal app/deployment needs only bundled `src/server/data/coarse-grid-v8.json`: **61,208,381 bytes / SHA `2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910`**. V7/v8 artifacts are committed at `ee8809f`; preserve them when publishing the current UX/planning changes. No new env, dependency, migration, raw source or Python is required at runtime. [Complete v8 evidence](evidence/coarse-finer-2026-10-23/README.md).
 
 Completed ignored source directories: `resolution-0025-base-v1/` / `resolution-0025-base-v1-repeat/` and `resolution-0025-road-v1/` / `resolution-0025-road-v1-repeat/`, all under `data/coarse-quality/`. Each has grid/build/compressed link proofs. Evaluation/packed/repeat/finalization/profile/preview and intermediate package probes are in `resolution-0025-evaluation-v1/`; final qualified package is `package-probe-direct-arrays/`. Preserve all intermediate failures/marginal runs.
 
@@ -517,4 +549,4 @@ npm run build:vercel
 npm run check:vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 is locally verified/uncommitted; production is user-reported verified v6 at `ffd7fec`, independent agent-hosted proof remains v4 and actual v8 publication/verification is next; actual connected-provider cloud verification remains open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 is committed at `ee8809f`; one public live configuration read confirms v8/min60, while the min30 slider update is local. Full hosted revision/behavior proof remains pending after its publication; actual connected-provider cloud verification remains open.
