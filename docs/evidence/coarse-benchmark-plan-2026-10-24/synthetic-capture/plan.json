@@ -1,0 +1,974 @@
+{
+  "version": 1,
+  "status": "prepared offline; new 29-request budget not authorized",
+  "selection": "Exact set/id-sorted complement of all35 old OD pairs minus saved6; reuse all48 frontier results. No query replacement or routing exceptions.",
+  "inputs": {
+    "docs/evidence/coarse-class-calibration-2026-10-23/comparison.json": "cb31b7f281a737afe6b19d4e8410f533de2ddd7832f552602944a81e376b07ba",
+    "docs/evidence/coarse-control-reference-2026-10-24/comparison.json": "6b9c0278e41c9c11b6eee8dc5104f4aba36393dcddb108caa8467c062caebb2b",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/comparison.json": "ea9ece78749832afee47c07a6b6359799dc6c97fcd6899292c405967bcce316c",
+    "docs/evidence/coarse-control-reference-2026-10-24/reference/sha256.json": "65966b8de287ee8b424b7720f79df8d7135df25b51427237825fbfc2116eb5d7",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/reference/sha256.json": "09d38037f943bb303175feeb8604a90d1ae4061d585f3ebb413edd1ee47194eb",
+    "docs/evidence/coarse-quality-2026-10-22/comparison.json": "90dce82c094f41c13de37065ca677650ecc3fe36187008379bcc48950470c96c",
+    "docs/evidence/coarse-regional-2026-10-22/comparison.json": "acb588585be88a4d2adfd64028fff8fb462325054c989c70cf0a757f31bd782c"
+  },
+  "reference": {
+    "endpoint": "https://api.heigit.org/openrouteservice/v2/directions/driving-car/geojson",
+    "maximumRequests": 29,
+    "minimumIntervalMs": 6500,
+    "timeoutMs": 45000,
+    "maximumBodyBytes": 2000000,
+    "retries": 0,
+    "paidSpendCapEuro": 0,
+    "stopOnStatus": [
+      401,
+      403,
+      429
+    ]
+  },
+  "reuse": {
+    "control": [
+      "regional/joshua-tree--twentynine-palms",
+      "regional/idyllwild--palm-springs",
+      "original/Julian",
+      "original/Idyllwild",
+      "original/Big Bear Lake",
+      "regional/santa-barbara--brawley"
+    ],
+    "frontier": [
+      "frontier/astoria-or-360-inside",
+      "frontier/astoria-or-360-outside",
+      "frontier/astoria-or-600-inside",
+      "frontier/astoria-or-600-outside",
+      "frontier/astoria-or-720-inside",
+      "frontier/astoria-or-720-outside",
+      "frontier/missoula-mt-360-inside",
+      "frontier/missoula-mt-360-outside",
+      "frontier/missoula-mt-600-inside",
+      "frontier/missoula-mt-600-outside",
+      "frontier/missoula-mt-720-inside",
+      "frontier/missoula-mt-720-outside",
+      "frontier/hays-ks-360-inside",
+      "frontier/hays-ks-360-outside",
+      "frontier/hays-ks-600-inside",
+      "frontier/hays-ks-600-outside",
+      "frontier/hays-ks-720-inside",
+      "frontier/hays-ks-720-outside",
+      "frontier/duluth-mn-360-inside",
+      "frontier/duluth-mn-360-outside",
+      "frontier/duluth-mn-600-inside",
+      "frontier/duluth-mn-600-outside",
+      "frontier/duluth-mn-720-inside",
+      "frontier/duluth-mn-720-outside",
+      "frontier/columbus-oh-360-inside",
+      "frontier/columbus-oh-360-outside",
+      "frontier/columbus-oh-600-inside",
+      "frontier/columbus-oh-600-outside",
+      "frontier/columbus-oh-720-inside",
+      "frontier/columbus-oh-720-outside",
+      "frontier/asheville-nc-360-inside",
+      "frontier/asheville-nc-360-outside",
+      "frontier/asheville-nc-600-inside",
+      "frontier/asheville-nc-600-outside",
+      "frontier/asheville-nc-720-inside",
+      "frontier/asheville-nc-720-outside",
+      "frontier/portland-me-360-inside",
+      "frontier/portland-me-360-outside",
+      "frontier/portland-me-600-inside",
+      "frontier/portland-me-600-outside",
+      "frontier/portland-me-720-inside",
+      "frontier/portland-me-720-outside",
+      "frontier/savannah-ga-360-inside",
+      "frontier/savannah-ga-360-outside",
+      "frontier/savannah-ga-600-inside",
+      "frontier/savannah-ga-600-outside",
+      "frontier/savannah-ga-720-inside",
+      "frontier/savannah-ga-720-outside"
+    ]
+  },
+  "queries": [
+    {
+      "id": "original/Bakersfield",
+      "existingValhallaMinutes": 216.4545,
+      "existingValhallaKm": 374.292,
+      "v8Minutes": 230.41824122620824,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -119.0187,
+            35.3733
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Borrego Springs",
+      "existingValhallaMinutes": 101.74296666666667,
+      "existingValhallaKm": 139.694,
+      "v8Minutes": 132.42189828295602,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -116.375,
+            33.2559
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Calexico",
+      "existingValhallaMinutes": 112.08726666666666,
+      "existingValhallaKm": 199.499,
+      "v8Minutes": 120.66499999999996,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -115.4989,
+            32.6789
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Los Angeles",
+      "existingValhallaMinutes": 115.13608333333333,
+      "existingValhallaKm": 195.816,
+      "v8Minutes": 121.73,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -118.2437,
+            34.0522
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Palm Springs",
+      "existingValhallaMinutes": 120.42438333333332,
+      "existingValhallaKm": 198.723,
+      "v8Minutes": 133.95833333333334,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -116.5453,
+            33.8303
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Riverside",
+      "existingValhallaMinutes": 93.94615,
+      "existingValhallaKm": 157.937,
+      "v8Minutes": 97.165,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -117.3962,
+            33.9533
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Santa Barbara",
+      "existingValhallaMinutes": 205.92193333333336,
+      "existingValhallaKm": 352.864,
+      "v8Minutes": 216.46000000000015,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -119.6982,
+            34.4208
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Temecula",
+      "existingValhallaMinutes": 54.947966666666666,
+      "existingValhallaKm": 94.367,
+      "v8Minutes": 57.686666666666675,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -117.1484,
+            33.4936
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/bakersfield--big-bear-lake",
+      "existingValhallaMinutes": 186.82356666666666,
+      "existingValhallaKm": 301.697,
+      "v8Minutes": 215.16824122620815,
+      "request": {
+        "coordinates": [
+          [
+            -119.0187,
+            35.3733
+          ],
+          [
+            -116.9114,
+            34.2439
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/bakersfield--palm-springs",
+      "existingValhallaMinutes": 205.76595,
+      "existingValhallaKm": 353.847,
+      "v8Minutes": 205.4232412262082,
+      "request": {
+        "coordinates": [
+          [
+            -119.0187,
+            35.3733
+          ],
+          [
+            -116.5453,
+            33.8303
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/bombay-beach--indio",
+      "existingValhallaMinutes": 52.188583333333334,
+      "existingValhallaKm": 64.573,
+      "v8Minutes": 76.68785351485236,
+      "request": {
+        "coordinates": [
+          [
+            -115.7297,
+            33.3503
+          ],
+          [
+            -116.2156,
+            33.7206
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/bombay-beach--salton-city",
+      "existingValhallaMinutes": 61.58226666666667,
+      "existingValhallaKm": 82.459,
+      "v8Minutes": 83.29301179159387,
+      "request": {
+        "coordinates": [
+          [
+            -115.7297,
+            33.3503
+          ],
+          [
+            -115.9561,
+            33.2986
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/borrego-springs--anza",
+      "existingValhallaMinutes": 89.98631666666667,
+      "existingValhallaKm": 100.792,
+      "v8Minutes": 109.30781199727338,
+      "request": {
+        "coordinates": [
+          [
+            -116.375,
+            33.2559
+          ],
+          [
+            -116.674,
+            33.555
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/borrego-springs--julian",
+      "existingValhallaMinutes": 39.66288333333333,
+      "existingValhallaKm": 49.559,
+      "v8Minutes": 60.21856494962273,
+      "request": {
+        "coordinates": [
+          [
+            -116.375,
+            33.2559
+          ],
+          [
+            -116.602,
+            33.0787
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/idyllwild--temecula",
+      "existingValhallaMinutes": 60.2767,
+      "existingValhallaKm": 83.257,
+      "v8Minutes": 60.14166666666666,
+      "request": {
+        "coordinates": [
+          [
+            -116.7189,
+            33.74
+          ],
+          [
+            -117.1484,
+            33.4936
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/joshua-tree--brawley",
+      "existingValhallaMinutes": 122.83763333333333,
+      "existingValhallaKm": 203.34,
+      "v8Minutes": 146.05499999999992,
+      "request": {
+        "coordinates": [
+          [
+            -116.3131,
+            34.1347
+          ],
+          [
+            -115.5303,
+            32.9787
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/julian--borrego-springs",
+      "existingValhallaMinutes": 40.170683333333336,
+      "existingValhallaKm": 49.939,
+      "v8Minutes": 60.21856494962275,
+      "request": {
+        "coordinates": [
+          [
+            -116.602,
+            33.0787
+          ],
+          [
+            -116.375,
+            33.2559
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/julian--el-centro",
+      "existingValhallaMinutes": 95.56603333333334,
+      "existingValhallaKm": 138.251,
+      "v8Minutes": 107.19679171311152,
+      "request": {
+        "coordinates": [
+          [
+            -116.602,
+            33.0787
+          ],
+          [
+            -115.5631,
+            32.792
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/los-angeles--bakersfield",
+      "existingValhallaMinutes": 105.95386666666667,
+      "existingValhallaKm": 181.967,
+      "v8Minutes": 118.27324122620821,
+      "request": {
+        "coordinates": [
+          [
+            -118.2437,
+            34.0522
+          ],
+          [
+            -119.0187,
+            35.3733
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/los-angeles--ventura",
+      "existingValhallaMinutes": 65.76675,
+      "existingValhallaKm": 107.345,
+      "v8Minutes": 69.38499999999999,
+      "request": {
+        "coordinates": [
+          [
+            -118.2437,
+            34.0522
+          ],
+          [
+            -119.229,
+            34.2746
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/palm-springs--big-bear-lake",
+      "existingValhallaMinutes": 91.56958333333334,
+      "existingValhallaKm": 131.435,
+      "v8Minutes": 96.7933763707696,
+      "request": {
+        "coordinates": [
+          [
+            -116.5453,
+            33.8303
+          ],
+          [
+            -116.9114,
+            34.2439
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/palm-springs--idyllwild",
+      "existingValhallaMinutes": 53.24466666666667,
+      "existingValhallaKm": 77.747,
+      "v8Minutes": 50.77385510082236,
+      "request": {
+        "coordinates": [
+          [
+            -116.5453,
+            33.8303
+          ],
+          [
+            -116.7189,
+            33.74
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/salton-city--bombay-beach",
+      "existingValhallaMinutes": 61.267950000000006,
+      "existingValhallaKm": 82.363,
+      "v8Minutes": 83.29301179159387,
+      "request": {
+        "coordinates": [
+          [
+            -115.9561,
+            33.2986
+          ],
+          [
+            -115.7297,
+            33.3503
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/salton-city--brawley",
+      "existingValhallaMinutes": 39.2368,
+      "existingValhallaKm": 60.819,
+      "v8Minutes": 50.43833333333333,
+      "request": {
+        "coordinates": [
+          [
+            -115.9561,
+            33.2986
+          ],
+          [
+            -115.5303,
+            32.9787
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/san-clemente--escondido",
+      "existingValhallaMinutes": 40.026066666666665,
+      "existingValhallaKm": 67.608,
+      "v8Minutes": 40.60833333333334,
+      "request": {
+        "coordinates": [
+          [
+            -117.612,
+            33.4269
+          ],
+          [
+            -117.0864,
+            33.1192
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/san-clemente--temecula",
+      "existingValhallaMinutes": 50.75438333333333,
+      "existingValhallaKm": 82.011,
+      "v8Minutes": 59.318333333333335,
+      "request": {
+        "coordinates": [
+          [
+            -117.612,
+            33.4269
+          ],
+          [
+            -117.1484,
+            33.4936
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/santa-barbara--san-diego",
+      "existingValhallaMinutes": 204.33083333333335,
+      "existingValhallaKm": 351.348,
+      "v8Minutes": 216.45999999999987,
+      "request": {
+        "coordinates": [
+          [
+            -119.6982,
+            34.4208
+          ],
+          [
+            -117.1611,
+            32.7157
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/ventura--palm-springs",
+      "existingValhallaMinutes": 162.5282,
+      "existingValhallaKm": 278.94,
+      "v8Minutes": 164.53500000000005,
+      "request": {
+        "coordinates": [
+          [
+            -119.229,
+            34.2746
+          ],
+          [
+            -116.5453,
+            33.8303
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/ventura--san-clemente",
+      "existingValhallaMinutes": 122.53621666666666,
+      "existingValhallaKm": 208.589,
+      "v8Minutes": 125.75999999999999,
+      "request": {
+        "coordinates": [
+          [
+            -119.229,
+            34.2746
+          ],
+          [
+            -117.612,
+            33.4269
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    }
+  ],
+  "reportPolicy": {
+    "planned": {
+      "original": 11,
+      "regional": 24,
+      "frontier": 48,
+      "total": 83
+    },
+    "signedDifference": "Model minus ORS; percentage divides by ORS minutes. Older-route ORS minus Valhalla is reported separately.",
+    "metrics": "All83 case ledger, signed/absolute/percentage differences, MAE/median/p90 nearest-rank, v8/candidate gains/regressions, sets, frontier horizons and origin groups; no combined mean can replace a failing group.",
+    "quality": "Snap>100m remains primary with a separately denominated <=100m sensitivity. Preserve all missing/error/skipped cases; no replacements.",
+    "versions": "Always stratify by full engine/build/graph/OSM metadata. Pooled primary summaries require all83 finite with complete identical metadata matching saved references. Any mismatch/missing metadata leaves primary null; report cohorts and every case instead.",
+    "interpretation": "Observed development benchmark only, not traffic truth, nationwide/area accuracy or a fresh holdout. Compare saved candidate descriptively; original rejection/gates stay unchanged. No new model acceptance policy or correction is selected; preregister any future candidate/gates before producing it.",
+    "synthetic": "Injected transport is labeled synthetic; mixed saved-live/synthetic reports never qualify as a completed live benchmark."
+  }
+}

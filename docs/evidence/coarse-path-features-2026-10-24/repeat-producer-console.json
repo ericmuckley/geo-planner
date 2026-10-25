@@ -1,0 +1,46 @@
+{
+  "artifact": "data/coarse-quality/connector-timing-candidate-repeat-v1/grid.json",
+  "artifactSha256": "2904d0b72e4f15537abd69f5bb9cbc05358c1dacb18d041360e7df10c131b39b",
+  "artifactBytes": 61225528,
+  "baselineSha256": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+  "baselineCostAndSpeedTagReproduction": true,
+  "planSha256": "5a990ab557251ef75fb98b17381c307a32679ddbd3ccf270f775e8d80baf6a81",
+  "speedMapping": {
+    "55": 55,
+    "80": 85,
+    "90": 90,
+    "105": 105
+  },
+  "proofs": {
+    "base": {
+      "path": "data/coarse-quality/connector-timing-candidate-repeat-v1/base-links.json.gz",
+      "sha256": "dcd8c893240f137af276adc629d83ee7a9cb9868371363bea8f1977709bf4262",
+      "links": 378515
+    },
+    "layer": {
+      "path": "data/coarse-quality/connector-timing-candidate-repeat-v1/layer-links.json.gz",
+      "sha256": "0046acde801dc2d59c9da6341aa157d9119371185b973b02c916203fb3cb65a8",
+      "links": 346821
+    }
+  },
+  "counts": {
+    "sourceParts": 261862,
+    "sourcePoints": 27774778,
+    "duplicateParts": 38470,
+    "rejectedBaseConnector": 5835,
+    "rejectedLayerConnector": 934
+  },
+  "tool": {
+    "name": "pyshp",
+    "version": "2.3.1",
+    "url": "https://files.pythonhosted.org/packages/98/2f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py2.py3-none-any.whl",
+    "path": "data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl",
+    "bytes": 46537,
+    "sha256": "67024c0ccdc352ba5db777c4e968483782dfa78f8e200672a90d2d30fd8b7b49",
+    "scope": "Build/diagnostic only; no installation or app dependency change"
+  },
+  "wallSeconds": 125.21564441593364,
+  "processMaxRssNative": 1433141248,
+  "platform": "darwin",
+  "scope": "New offline road105/85 and NE-connector55 cost experiment on frozen v8 geometry. All old source alternatives reproduce v8 exactly before repricing. No runtime activation, download, provider/key/env/DB access. RSS measures the producer, not Vercel."
+}

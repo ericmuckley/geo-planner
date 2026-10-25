@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "scope": "Read-only features for all83 saved v8 paths and their exact saved ORS counterparts; no new graph/query/provider/key/env/DB read or candidate fitting.",
+  "inputs": {
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/comparison.json": "d79ade80d4cc3834cac7cdc7d6cb0810de40ef9588801f6a8a8688de8fc6d48e",
+    "docs/evidence/coarse-class-calibration-2026-10-23/paths.json.gz": "15d6e08c6a9b27adb38355d09e90fb6afcb9e04cbe609c372c51141df37766b3",
+    "docs/evidence/coarse-finer-2026-10-23/paths.json": "239d086f5d443502fe0fd0aa6a56a38aaf912abd6263cab9408d0af1d1c2f83d",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/paths.json.gz": "f561d55d6b180b39c9496835e910142d906356b4d9fa09906082fc1a4e7db86b",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/diagnostic.json": "a376645d596dbccc18e589f80937cc72b47e84418d1a8516b498f9bf0e48047b",
+    "docs/evidence/coarse-finer-2026-10-23/base-build.json": "1a0ce966c590f0a7aa1474968140e580bd14c7db736fac66cfcba84540c66ee6",
+    "docs/evidence/coarse-finer-2026-10-23/road-build.json": "7740c4c5b56718bed2ae7ff257f4556bd3912613e398358ca78fa7b735fd2108",
+    "src/server/data/coarse-grid-v8.json": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/reference/sha256.json": "09d38037f943bb303175feeb8604a90d1ae4061d585f3ebb413edd1ee47194eb",
+    "docs/evidence/coarse-control-reference-2026-10-24/reference/sha256.json": "65966b8de287ee8b424b7720f79df8d7135df25b51427237825fbfc2116eb5d7",
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/reference/sha256.json": "a9d3d5ef03d609b86fd74503604b3d1693efcdf2f8d855022cc83d9e89771f6a"
+  },
+  "corridor": {
+    "sampleStepKm": 1,
+    "radiiKm": [
+      1,
+      3
+    ],
+    "segmentIndexDegrees": 0.05,
+    "measure": "Length-weighted midpoint samples, nearest projected point on reference segments checked with haversine distance, both directions. Proximity is not road identity or area accuracy; outside-radius samples remain unmatched, never replaced."
+  },
+  "features": [
+    "source arc/chord ratio",
+    "NE and Census source-road/connector distances and paid minutes",
+    "NE connector distance per100 source-road km",
+    "model-anchor-polyline and ORS length/corridor proximity",
+    "modeled source+connector/reference distance ratio",
+    "source-class shares",
+    "descriptive correlations/cohorts by signed residual and set; all cases retained"
+  ],
+  "counterfactualBasis": {
+    "connectorSpeedsKph": [
+      25,
+      55
+    ],
+    "purpose": "Report connector-only charging differences at the existing local25 and minimum-retained-road55 speeds; no new candidate ETA, road repricing or search. No sweep or accepted policy."
+  },
+  "cohorts": {
+    "residualNearZeroMinutes": 5,
+    "majorDominatedRoadTimeShare": 0.9
+  },
+  "interpretation": "Observed development paths can have different geometry/choices and repeated origins. No causal ETA decomposition, national inference, unseen holdout claim, region/coordinate/fixture exception or parameter optimization. Any new candidate needs its own frozen rule and prospective gates before production."
+}

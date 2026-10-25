@@ -390,8 +390,8 @@ test("coarse estimates need no network, credential or local worker, including th
 		assert.equal(config.health, "ready");
 		assert.equal(config.maxMinutes, 720);
 		assert.equal(config.minMinutes, 30);
-		assert.equal(config.engineVersion, "coarse-road-grid-v8");
-		assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v8");
+		assert.equal(config.engineVersion, "coarse-road-grid-v9");
+		assert.equal(config.graphVersion, "natural-earth-census-2026-grid-v9");
 		for (const [lat, lon] of [
 			[32.7157, -117.1611],
 			[47.6062, -122.3321],

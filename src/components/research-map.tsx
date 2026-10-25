@@ -1,16 +1,60 @@
 import type { GeoJSONSource, Map as MapLibreMap, Marker } from "maplibre-gl";
-import { useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 import type { ExperimentResult } from "../lib/experiment";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
+import { cn } from "../lib/utils";
 
 type Props = {
 	origin: Origin;
 	result: ReachabilityResult | null;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
+	fullscreen?: boolean;
+	overlayRef?: RefObject<HTMLElement | null>;
 	onOriginChange: (origin: Origin) => void;
 	onMapIdle: (id: string, milliseconds: number) => void;
 };
+
+function fitResult(
+	map: MapLibreMap,
+	props: Pick<Props, "result" | "experiment" | "overlayRef">,
+) {
+	if (!props.experiment && !props.result) return;
+	let west = 180;
+	let south = 90;
+	let east = -180;
+	let north = -90;
+	for (const feature of (props.experiment?.geometry ?? props.result?.contours)
+		?.features ?? []) {
+		const geometry = feature.geometry;
+		const positions =
+			geometry.type === "Point"
+				? [geometry.coordinates]
+				: geometry.type === "LineString" || geometry.type === "MultiPoint"
+					? geometry.coordinates
+					: geometry.type === "MultiPolygon"
+						? geometry.coordinates.flat(2)
+						: geometry.coordinates.flat();
+		for (const [lon, lat] of positions) {
+			west = Math.min(west, lon);
+			south = Math.min(south, lat);
+			east = Math.max(east, lon);
+			north = Math.max(north, lat);
+		}
+	}
+	map.fitBounds(
+		[
+			[west, south],
+			[east, north],
+		],
+		{
+			padding: props.overlayRef ? map.getPadding() : 48,
+			absolutePadding: Boolean(props.overlayRef),
+			maxZoom: 11,
+			duration: 0,
+		},
+	);
+}
 
 export function ResearchMap(props: Props) {
 	const container = useRef<HTMLDivElement>(null);
@@ -140,8 +184,30 @@ export function ResearchMap(props: Props) {
 					});
 					setReady(true);
 				});
-				resize = new ResizeObserver(() => map.resize());
+				resize = new ResizeObserver(() => {
+					map.resize();
+					const overlay = current.current.overlayRef?.current;
+					if (!overlay || !container.current) return;
+					const bounds = container.current.getBoundingClientRect();
+					const panel = overlay.getBoundingClientRect();
+					// Keep the map's focus and fitted contours clear of the floating panel.
+					map.setPadding({
+						top:
+							panel.width > bounds.width / 2
+								? panel.bottom - bounds.top + 24
+								: 32,
+						left:
+							panel.width > bounds.width / 2
+								? 24
+								: panel.right - bounds.left + 24,
+						right: 48,
+						bottom: 48,
+					});
+					fitResult(map, current.current);
+				});
 				resize.observe(container.current);
+				if (current.current.overlayRef?.current)
+					resize.observe(current.current.overlayRef.current);
 			})
 			.catch(() => {
 				if (!disposed)
@@ -176,41 +242,18 @@ export function ResearchMap(props: Props) {
 		source?.setData(data ?? { type: "FeatureCollection", features: [] });
 		const result = props.experiment ?? props.result;
 		if (!result) return;
-		let west = 180;
-		let south = 90;
-		let east = -180;
-		let north = -90;
-		for (const feature of data?.features ?? []) {
-			const geometry = feature.geometry;
-			const positions =
-				geometry.type === "Point"
-					? [geometry.coordinates]
-					: geometry.type === "LineString" || geometry.type === "MultiPoint"
-						? geometry.coordinates
-						: geometry.type === "MultiPolygon"
-							? geometry.coordinates.flat(2)
-							: geometry.coordinates.flat();
-			for (const [lon, lat] of positions) {
-				west = Math.min(west, lon);
-				south = Math.min(south, lat);
-				east = Math.max(east, lon);
-				north = Math.max(north, lat);
-			}
-		}
-		map.fitBounds(
-			[
-				[west, south],
-				[east, north],
-			],
-			{ padding: 48, maxZoom: 11, duration: 0 },
-		);
+		fitResult(map, {
+			result: props.result,
+			experiment: props.experiment,
+			overlayRef: props.overlayRef,
+		});
 		const onIdle = () =>
 			current.current.onMapIdle(result.id, performance.now() - started);
 		map.once("idle", onIdle);
 		return () => {
 			map.off("idle", onIdle);
 		};
-	}, [props.result, props.experiment, ready]);
+	}, [props.result, props.experiment, props.overlayRef, ready]);
 
 	useEffect(() => {
 		if (!ready) return;
@@ -231,42 +274,62 @@ export function ResearchMap(props: Props) {
 	}, [props.showContour, ready]);
 
 	return (
-		<div className="relative min-h-[440px] h-full overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--sand)]">
+		<div
+			className={cn(
+				"relative h-full overflow-hidden bg-[var(--sand)]",
+				!props.fullscreen &&
+					"min-h-[440px] rounded-2xl border border-[var(--line)]",
+			)}
+		>
 			{/* MapLibre's unlayered CSS overrides Tailwind's position utility. */}
 			<div ref={container} style={{ position: "absolute", inset: 0 }} />
 			{!ready && !error && (
-				<output className="absolute left-4 top-4 rounded-lg bg-white/95 px-4 py-2 text-sm">
+				<output
+					className={cn(
+						"absolute rounded-lg bg-white/95 px-4 py-2 text-sm",
+						props.fullscreen ? "bottom-14 right-4" : "left-4 top-4",
+					)}
+				>
 					Loading map…
 				</output>
 			)}
 			{error && (
-				<output className="absolute left-4 right-14 top-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950">
+				<output
+					className={cn(
+						"absolute rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950",
+						props.fullscreen
+							? "bottom-14 right-4 left-4 sm:left-auto sm:max-w-sm"
+							: "left-4 right-14 top-4",
+					)}
+				>
 					{error}
 				</output>
 			)}
-			<div className="pointer-events-none absolute bottom-10 left-3 max-w-[260px] rounded-lg bg-white/95 p-3 text-xs text-[var(--sea-ink)] shadow-sm">
-				<p className="font-bold">Click the map to set your origin</p>
-				<p className="mt-1">
-					{import.meta.env.VITE_PMTILES_URL
-						? "Regional PMTiles basemap"
-						: "OpenFreeMap basemap · online"}
-				</p>
-				{props.experiment && (
+			{!props.fullscreen && (
+				<div className="pointer-events-none absolute bottom-10 left-3 max-w-[260px] rounded-lg bg-white/95 p-3 text-xs text-[var(--sea-ink)] shadow-sm">
+					<p className="font-bold">Click the map to set your origin</p>
 					<p className="mt-1">
-						Teal: sampled reachable roads · red: reached data edges · gray:
-						other audited edges · dashed: dataset bounds · orange: snapped
-						origin
+						{import.meta.env.VITE_PMTILES_URL
+							? "Regional PMTiles basemap"
+							: "OpenFreeMap basemap · online"}
 					</p>
-				)}
-				{props.result && !props.experiment && (
-					<p className="mt-1">
-						Teal: displayed contour
-						{props.result.contours.features.some(
-							(feature) => feature.properties?.type === "snapped",
-						) && " · orange: snapped origin"}
-					</p>
-				)}
-			</div>
+					{props.experiment && (
+						<p className="mt-1">
+							Teal: sampled reachable roads · red: reached data edges · gray:
+							other audited edges · dashed: dataset bounds · orange: snapped
+							origin
+						</p>
+					)}
+					{props.result && !props.experiment && (
+						<p className="mt-1">
+							Teal: displayed contour
+							{props.result.contours.features.some(
+								(feature) => feature.properties?.type === "snapped",
+							) && " · orange: snapped origin"}
+						</p>
+					)}
+				</div>
+			)}
 		</div>
 	);
 }

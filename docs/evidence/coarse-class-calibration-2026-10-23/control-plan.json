@@ -1,0 +1,205 @@
+{
+  "status": "prepared, no provider call authorized or made",
+  "maximumRequests": 6,
+  "endpoint": "https://api.heigit.org/openrouteservice/v2/directions/driving-car/geojson",
+  "selection": "Six evenly spaced ranks0,6,13,20,27,34 after sorting all35 regional routes by referenceKm, then set/id. Named places are validation only; no query replacement after results.",
+  "minimumIntervalMs": 6500,
+  "timeoutMs": 45000,
+  "retries": 0,
+  "paidSpendCapEuro": 0,
+  "stopOnStatus": [
+    401,
+    403,
+    429
+  ],
+  "queries": [
+    {
+      "id": "regional/joshua-tree--twentynine-palms",
+      "rankZeroBased": 0,
+      "existingValhallaMinutes": 15.1931,
+      "existingValhallaKm": 23.877,
+      "v8Minutes": 18.048333333333336,
+      "request": {
+        "coordinates": [
+          [
+            -116.3131,
+            34.1347
+          ],
+          [
+            -116.0542,
+            34.1356
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/idyllwild--palm-springs",
+      "rankZeroBased": 6,
+      "existingValhallaMinutes": 51.98633333333333,
+      "existingValhallaKm": 76.625,
+      "v8Minutes": 50.77385510082237,
+      "request": {
+        "coordinates": [
+          [
+            -116.7189,
+            33.74
+          ],
+          [
+            -116.5453,
+            33.8303
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Julian",
+      "rankZeroBased": 13,
+      "existingValhallaMinutes": 67.14213333333333,
+      "existingValhallaKm": 94.425,
+      "v8Minutes": 75.77085959131655,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -116.602,
+            33.0787
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Idyllwild",
+      "rankZeroBased": 20,
+      "existingValhallaMinutes": 109.85998333333333,
+      "existingValhallaKm": 171.764,
+      "v8Minutes": 115.63000000000002,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -116.7189,
+            33.74
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "original/Big Bear Lake",
+      "rankZeroBased": 27,
+      "existingValhallaMinutes": 150.4128,
+      "existingValhallaKm": 234.021,
+      "v8Minutes": 159.34000000000003,
+      "request": {
+        "coordinates": [
+          [
+            -117.1611,
+            32.7157
+          ],
+          [
+            -116.9114,
+            34.2439
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional/santa-barbara--brawley",
+      "rankZeroBased": 34,
+      "existingValhallaMinutes": 272.2386,
+      "existingValhallaKm": 475.726,
+      "v8Minutes": 303.2750000000001,
+      "request": {
+        "coordinates": [
+          [
+            -119.6982,
+            34.4208
+          ],
+          [
+            -115.5303,
+            32.9787
+          ]
+        ],
+        "instructions": false,
+        "preference": "fastest",
+        "radiuses": [
+          350,
+          350
+        ],
+        "options": {
+          "avoid_borders": "all",
+          "avoid_features": [
+            "ferries"
+          ]
+        }
+      }
+    }
+  ],
+  "purpose": "Compare two independent reference engines on identical public OD pairs before choosing another generic timing rule. No automatic model correction or new accuracy qualification. Requires a separate explicit request budget and bounded tested capture helper.",
+  "interpretation": "Report every ORS-minus-Valhalla difference and percentage, median/mean absolute difference, engine/data versions and snaps. Flag material positive profile/data discrepancy if at least4 of6 valid pairs have ORS at least5min longer AND median signed gap at least5min. This is an exploratory control, not proof of which engine is correct, an accuracy gate or a statistical national inference. Fewer valid pairs or any snap>100m remains visible and limits interpretation; no replacement calls."
+}

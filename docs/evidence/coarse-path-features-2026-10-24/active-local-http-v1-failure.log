@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   configured: false,
+-   configured: true,
+    runs: []
+  }
+
+    at <anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/verify-coarse-deployment-v9.ts:121:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: { configured: false, runs: [] },
+  expected: { configured: true, runs: [] },
+  operator: 'deepStrictEqual'
+}
+
+Node.js v24.5.0

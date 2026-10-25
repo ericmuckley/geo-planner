@@ -1,0 +1,201 @@
+{
+  "requests": 29,
+  "statuses": {
+    "200": 29
+  },
+  "stopReason": null,
+  "minimumStartIntervalMs": 6500.0,
+  "firstStart": "2026-10-24T20:24:10.359Z",
+  "lastFinish": "2026-10-24T20:27:13.486Z",
+  "returnedQuotaRemaining": [
+    1999,
+    1998,
+    1997,
+    1996,
+    1995,
+    1994,
+    1993,
+    1992,
+    1991,
+    1990,
+    1989,
+    1988,
+    1987,
+    1986,
+    1985,
+    1984,
+    1983,
+    1982,
+    1981,
+    1980,
+    1979,
+    1978,
+    1977,
+    1976,
+    1975,
+    1974,
+    1973,
+    1972,
+    1971
+  ],
+  "maximumResponseBytes": 65474,
+  "httpAndBodyMsRange": [
+    443,
+    3138
+  ],
+  "bodyRedactions": 0,
+  "maximumSnapMetersAll83": 79.63446722784605,
+  "engineBuildGraphOsmCohorts": [
+    [
+      "9.10.0",
+      "2026-08-13T11:53:14Z",
+      "2026-09-21T10:31:27Z",
+      "2026-09-13T23:59:59Z"
+    ]
+  ],
+  "groups": {
+    "overall": {
+      "planned": 83,
+      "paired": 83,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -24.331095574419546,
+          "meanAbsoluteMinutes": 34.61236355114804,
+          "medianAbsoluteMinutes": 21.29500000000064,
+          "p90AbsoluteMinutes": 93.69666666666683
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": -4.091451342387031,
+          "meanAbsoluteMinutes": 23.567280269994452,
+          "medianAbsoluteMinutes": 13.628333333333558,
+          "p90AbsoluteMinutes": 56.72986818342633
+        }
+      },
+      "candidateChanges": {
+        "improve": 54,
+        "regress": 29,
+        "unchanged": 0
+      }
+    },
+    "original": {
+      "planned": 11,
+      "paired": 11,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -7.391121293895668,
+          "meanAbsoluteMinutes": 11.212834846793712,
+          "medianAbsoluteMinutes": 11.523333333333326,
+          "p90AbsoluteMinutes": 15.821666666666658
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": 2.8738053356179445,
+          "meanAbsoluteMinutes": 6.092593214405817,
+          "medianAbsoluteMinutes": 5.0566666666666436,
+          "p90AbsoluteMinutes": 10.484999999999985
+        }
+      },
+      "candidateChanges": {
+        "improve": 8,
+        "regress": 3,
+        "unchanged": 0
+      }
+    },
+    "regional": {
+      "planned": 24,
+      "paired": 24,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -2.822996348942668,
+          "meanAbsoluteMinutes": 10.015678454543668,
+          "medianAbsoluteMinutes": 11.080651043745469,
+          "p90AbsoluteMinutes": 16.517811997273384
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": 1.0023508732795818,
+          "meanAbsoluteMinutes": 8.516979802857273,
+          "medianAbsoluteMinutes": 8.353959842234403,
+          "p90AbsoluteMinutes": 14.536666666666669
+        }
+      },
+      "candidateChanges": {
+        "improve": 14,
+        "regress": 10,
+        "unchanged": 0
+      }
+    },
+    "frontier": {
+      "planned": 48,
+      "paired": 48,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -38.9672226264447,
+          "meanAbsoluteMinutes": 52.273098094198104,
+          "medianAbsoluteMinutes": 37.254353174338576,
+          "p90AbsoluteMinutes": 116.33153485009313
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": -8.234557105596478,
+          "meanAbsoluteMinutes": 35.097046287135434,
+          "medianAbsoluteMinutes": 32.60416666666646,
+          "p90AbsoluteMinutes": 70.16500000000019
+        }
+      },
+      "candidateChanges": {
+        "improve": 32,
+        "regress": 16,
+        "unchanged": 0
+      }
+    }
+  },
+  "olderOrsMinusValhalla": {
+    "planned": 35,
+    "paired": 35,
+    "meanSignedMinutes": 15.490758095238094,
+    "medianSignedMinutes": 14.458249999999992,
+    "positive": 35,
+    "negative": 0
+  },
+  "largestCandidateRegressions": [
+    {
+      "id": "frontier/hays-ks-720-inside",
+      "absoluteErrorChangeMinutes": 71.5466666666664
+    },
+    {
+      "id": "frontier/missoula-mt-600-inside",
+      "absoluteErrorChangeMinutes": 56.58166666666682
+    },
+    {
+      "id": "frontier/missoula-mt-600-outside",
+      "absoluteErrorChangeMinutes": 49.875000000000455
+    },
+    {
+      "id": "frontier/hays-ks-720-outside",
+      "absoluteErrorChangeMinutes": 45.880000000000564
+    },
+    {
+      "id": "frontier/duluth-mn-720-inside",
+      "absoluteErrorChangeMinutes": 27.140000000000555
+    },
+    {
+      "id": "frontier/hays-ks-360-outside",
+      "absoluteErrorChangeMinutes": 26.37333333333271
+    },
+    {
+      "id": "frontier/duluth-mn-600-inside",
+      "absoluteErrorChangeMinutes": 24.88261249529603
+    },
+    {
+      "id": "frontier/duluth-mn-600-outside",
+      "absoluteErrorChangeMinutes": 24.0676124952937
+    },
+    {
+      "id": "frontier/astoria-or-600-inside",
+      "absoluteErrorChangeMinutes": 23.295000000000186
+    },
+    {
+      "id": "frontier/astoria-or-600-outside",
+      "absoluteErrorChangeMinutes": 22.596666666665556
+    }
+  ],
+  "scope": "Independent raw-reference and frozen-model arithmetic/protocol audit, no new search, key/env read or provider call. Same-provider observed development cases do not establish traffic truth or national accuracy. Saved candidate remains historically rejected; HTTP-plus-body elapsed is not engine search time."
+}

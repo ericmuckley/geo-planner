@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-24",
+  "baseCommit": "37ff14b",
+  "state": "Runner ready; explicit six-request authorization pending; no live control result",
+  "syntheticTests": 13,
+  "syntheticTestsPassed": 13,
+  "biomeFiles": 158,
+  "appTypecheck": true,
+  "strictDiagnosticTypecheck": true,
+  "ordinaryBuild": true,
+  "planSha256": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+  "plannedRequests": 6,
+  "providerRequests": 0,
+  "actualKeyRead": false,
+  "accountRemainingQuotaRead": false,
+  "newQuotaAuthorization": false,
+  "original48BudgetConsumed": true,
+  "retries": 0,
+  "paidSpendCapEuro": 0,
+  "cliInspectionOffline": true,
+  "cliReplayOffline": true,
+  "syntheticCliReplayByteIdentical": true,
+  "freshCloneFixtureRestoreReplayByteIdentical": true,
+  "syntheticCaptureMode": "synthetic",
+  "syntheticCaptureFiles": 22,
+  "activeGraphSha256": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+  "activeGraphBytes": 61208381,
+  "routingModelOrApplicationLogicChangedByThisTask": false,
+  "concurrentFloatingMapUiPreserved": true,
+  "envSchemaDependenciesChanged": false,
+  "commitOrDeploymentByThisTask": false,
+  "producerFiles": {
+    "scripts/coarse-control.ts": "33b68ac16955091f46b55c870ccd2397e16d4d090600a92a37796f0be6c78c60",
+    "scripts/compare-coarse-control.ts": "39a30162a3a527e826489045a8e3c4258d9d9ad35230dbe8db527b7de8a6a562",
+    "scripts/coarse-control.test.ts": "7dd7e99e0120edd34b114f53fe413cf6c5d57e27e32ea2ae6cd7253b0dbd9276",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "scripts/coarse-holdout.ts": "53eab4c01da6fdc33468ca848ca932bb50e7d39be675096e6d26e9c430010de6"
+  },
+  "referenceFiles": {
+    "docs/evidence/coarse-class-calibration-2026-10-23/control-plan.json": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+    "docs/evidence/coarse-quality-2026-10-22/comparison.json": "90dce82c094f41c13de37065ca677650ecc3fe36187008379bcc48950470c96c",
+    "docs/evidence/coarse-regional-2026-10-22/comparison.json": "acb588585be88a4d2adfd64028fff8fb462325054c989c70cf0a757f31bd782c"
+  },
+  "sealedEvidenceVerified": {
+    "coarse-class-calibration-2026-10-23": {
+      "filesVerified": 27,
+      "producerFilesVerified": 13,
+      "manifestSha256": "78cc9629a51cb6246a8712f73a4c8c0871d438d13a57fc16567888e6629078ab"
+    },
+    "coarse-frontier-reference-2026-10-23": {
+      "filesVerified": 160,
+      "producerFilesVerified": 6,
+      "manifestSha256": "b1febb70689ce37ad3c6a87bf3e8b24437590982ad44d3c5bc3db76ad005516a"
+    },
+    "coarse-frontier-tool-2026-10-23": {
+      "filesVerified": 11,
+      "producerFilesVerified": 0,
+      "manifestSha256": "ee65a238e3fdd26e27bbb929fd2b4cb35c099277bb7e6f5e56182b315f3cc43f"
+    }
+  },
+  "scope": "Synthetic transport and offline inspection/replay only. No live ORS measurement, real-world truth, nationwide accuracy, deployed model improvement or cloud runtime claim. App checks include existing floating-map UI changes. Existing producer/DB/Vercel suites were not rerun.",
+  "documentationChecks": {
+    "pages": 9,
+    "localLinks": 312,
+    "markdownAnchors": 51,
+    "errors": 0,
+    "gitDiffCheck": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "status": "Frozen before new connector55 producer and full-search results; not accepted/activated",
+  "hypothesis": "Charge NE artificial source-to-canonical connections by their measured length at existing minor-road55 speed, preserving major-road105 instead of uniformly slowing it. Reuse the earlier secondary85 hypothesis with geometry-dependent charging. No location/query/region exception or parameter sweep.",
+  "speedMapping": {
+    "55": 55,
+    "80": 85,
+    "90": 90,
+    "105": 105
+  },
+  "naturalEarthConnectorKph": 55,
+  "censusConnectorKph": 25,
+  "localSpeedKph": 25,
+  "diagnosticBasis": {
+    "featureProtocolSha256": "f1991760d513160c22bbd897487373399e8f1c57a124d453306a68e77fc20e72",
+    "featuresSha256": "9cc6608c41facd88dd5aaf6693efc2bf6a111e91925aa9b43fa1b9ddec3d3e64",
+    "frontierConnectorResidualCorrelation": -0.5218057536608738,
+    "all83ConnectorResidualCorrelation": -0.22561385286923638,
+    "majorDominatedConnectorResidualCorrelation": 0.07517908653037235,
+    "limitations": "Different selected paths, repeated origins, weak/heterogeneous aggregate association and only2 slower major-dominated cases. Descriptive signal supports testing, not causal proof or a guaranteed prediction.55 is existing minimum retained road speed, not a fitted optimum or known real connector speed."
+  },
+  "inputs": {
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/comparison.json": "d79ade80d4cc3834cac7cdc7d6cb0810de40ef9588801f6a8a8688de8fc6d48e",
+    "src/server/data/coarse-grid-v8.json": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+    "docs/evidence/coarse-class-calibration-2026-10-23/comparison.json": "cb31b7f281a737afe6b19d4e8410f533de2ddd7832f552602944a81e376b07ba",
+    "data/coarse-sources/tiger-2026/national-v1/sources.json": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+    "docs/evidence/coarse-source-2026-10-22/tool.json": "56a3e5e0f9fd91db9c3ccd05ecfdb07cbbf3433c123aea5c6ac07ebfc03c9a8e",
+    "docs/evidence/coarse-path-features-2026-10-24/features.json": "9cc6608c41facd88dd5aaf6693efc2bf6a111e91925aa9b43fa1b9ddec3d3e64",
+    "docs/evidence/coarse-path-features-2026-10-24/protocol.json": "f1991760d513160c22bbd897487373399e8f1c57a124d453306a68e77fc20e72"
+  },
+  "charging": "NE: roadKm/mappedSourceSpeed + connectorKm/55. Census: roadKm/mappedSourceSpeed + connectorKm/25. Input local/layer transfers remain25. Recompute every source alternative, visits and tags on unchanged v8 geometry/topology/masks/owners/eligibility; never scale an aggregate edge cost. Artificial NE connections are model assumptions, not verified drivable roads.",
+  "primaryReferencePolicy": "Frozen complete83-case ORS9.10/engine/build/graph/OSM-matched cohort, established by benchmark plan before29 capture. It is a development comparison, not truth/national/area accuracy/fresh holdout.",
+  "valhallaPolicy": "Separate sensitivity on all35 original Valhalla routes; original95/85 and100/82 decisions/gates remain immutable. This is a prospective, different geometry-based charging experiment, not retroactive acceptance.",
+  "admission": {
+    "overallMeanAbsoluteMaximum": 31.151127196033247,
+    "frontierMeanAbsoluteMaximum": 47.045788284778304,
+    "setMeansMaximum": {
+      "original": 11.212834846793712,
+      "regional": 10.015678454543666
+    },
+    "frontierP90Maximum": 116.33153485009313,
+    "horizonMeansMaximum": {
+      "360": 33.9845845700234,
+      "600": 44.060008700704834,
+      "720": 78.77470101186609
+    },
+    "horizonP90Maximum": {
+      "360": 76.5516666666669,
+      "600": 93.69666666666683,
+      "720": 131.6217480428303
+    },
+    "maximumFrontierAbsoluteErrorIncreaseMinutes": 40,
+    "maximumOlderAbsoluteErrorIncreaseMinutes": 10,
+    "maximumFrontierDefiniteClassificationErrors": 20,
+    "maximumFrontierMissedReachable": 5,
+    "maximum12hMissedReachable": 2,
+    "all83Finite": true,
+    "all166PathSums": true,
+    "all35OlderDestinationsShadedAt720": true,
+    "rationale": "Require>=10% overall/frontier mean gain, no regional/horizon/tail worsening, worst losses<=40 frontier/10 older, definite classification errors<=20 versus baseline22, and NO increase over v8 missed counts(5 overall,2 at12h). All83 finite,166 sums,35 older shaded. Prospective engineering guards, not statistical/national accuracy guarantees."
+  },
+  "qualificationAfterAccuracyPass": {
+    "sourceAndGeometry": "Independent full source/link/connector/paid-cost/path checks and topology/visit parity; reproduce every v8 cost/tag before repricing. Preserve original failed evidence.",
+    "software": "Meaningful policy/encoding/server/API checks, npm check/typecheck/build, strict diagnostic checks.",
+    "runtime": "Retained decoded storage within v8+4MiB and existing bounded-retention guards; first local packaged compute after config<=5s, package<=70MB and server-only/no-fetch/database-free fallback; ordinary/Vercel builds and generated handler. These are local gates, not cloud capacity/cold-start guarantees.",
+    "visual": "Shared-camera examples include largest gains/regressions and arbitrary inland/rural/coastal6/10/12h; no new live DB writes needed."
+  },
+  "onFailure": "Preserve outputs; stop activation qualification. No retuning, replacement, threshold changes or second candidate in this frozen run.",
+  "scope": "One offline105/85 source-road plusNE-connector55 candidate using existing data; no provider/key/env/DB read, source download or model activation before all gates."
+}

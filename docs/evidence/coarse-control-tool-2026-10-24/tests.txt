@@ -1,0 +1,21 @@
+✔ six exact requests, hard cap, spacing/deadline and redaction; deterministic signed/percentage offline comparison (36.215291ms)
+✔ HTTP401 stops once and retains five skipped cases (6.006917ms)
+✔ HTTP403 stops once and retains five skipped cases (5.750917ms)
+✔ HTTP429 stops once and retains five skipped cases (5.839333ms)
+✔ returned zero quota stops after preserving the final successful response (4.634708ms)
+✔ network exceptions, invalid JSON/routes and HTTP failures retain their original denominators without retries (11.9665ms)
+✔ deadlines cover fetch/body and pre-aborted signals; partial bodies survive (21.649ms)
+✔ response bound stops acquisition and retains its bounded prefix (14.077917ms)
+✔ disk failure stops before another request (2.007542ms)
+✔ all pairs and >100m snaps remain primary; sensitivity and incomplete-pair limits are explicit (24.319917ms)
+✔ replay rejects changed, incomplete and unsealed captures (11.132ms)
+✔ replay rejects a checksum-bound seventh request file outside its ledger (6.594ms)
+✔ CLI inspection is offline; capture cannot bypass the six-request confirmation argument (358.200416ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 681.298541

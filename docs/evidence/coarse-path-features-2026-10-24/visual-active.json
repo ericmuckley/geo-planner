@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "engine": "coarse-road-grid-v9",
+  "graph": "natural-earth-census-2026-grid-v9",
+  "checks": [
+    "reload defaults120",
+    "Home commits30 without submit",
+    "keyboard commit360 without submit",
+    "rendered35867cells",
+    "run metadata and explicit NE connector55 notice visible"
+  ],
+  "providerRequests": 0,
+  "databaseWrites": 0,
+  "console": [
+    {
+      "level": "error",
+      "message": "TypeError: Cannot set property ethereum of #<Window> which has only a getter\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589075\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589255\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589259\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589263",
+      "timestamp": "2026-10-24T22:19:03.698Z",
+      "url": "chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js"
+    },
+    {
+      "level": "error",
+      "message": "TypeError: Cannot set property ethereum of #<Window> which has only a getter\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589075\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589255\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589259\n    at chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js:2:589263",
+      "timestamp": "2026-10-25T17:22:55.611Z",
+      "url": "chrome-extension://hnfanknocfeofbddgcijnmhnfnkdnaad/requestProvider.js"
+    }
+  ],
+  "scope": "Final compiled package, local browser validation. Only unrelated wallet-extension error observed; no app error. No Save query or cloud history write."
+}

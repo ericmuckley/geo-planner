@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-24",
+  "baseCommit": "37ff14b",
+  "state": "Six approved requests completed; budget consumed; no further calls authorized",
+  "plannedRequests": 6,
+  "attemptedRequests": 6,
+  "http200": 6,
+  "finitePairs": 6,
+  "retries": 0,
+  "paidUpgrade": false,
+  "paidSpendCapEuro": 0,
+  "authOrStatusProbes": 0,
+  "captureTransport": "live",
+  "realKeyReadOnlyByCapture": true,
+  "additionalCallsAuthorized": false,
+  "original48AndNew6BudgetsConsumed": true,
+  "planSha256": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+  "twoActualCliReplaysByteIdentical": true,
+  "preservedCaptureRestorationReplayByteIdentical": true,
+  "independentArithmeticAndProtocolAudit": true,
+  "independentAnalysisRepeatByteIdentical": true,
+  "allSixAndPrior48EngineGraphOsmMetadataMatch": true,
+  "sixPrimaryAndSnapSensitivityCasesRetained": true,
+  "maximumSnapMeters": 14.920572069008797,
+  "minimumStartIntervalMs": 6501.0,
+  "returnedQuotaRemaining": [
+    1951,
+    1950,
+    1949,
+    1948,
+    1947,
+    1946
+  ],
+  "materialPositiveDiscrepancy": true,
+  "meanOrsMinusValhallaMinutes": 15.969508333333337,
+  "medianOrsMinusValhallaMinutes": 15.524341666666679,
+  "postHocSensitivityOnly": {
+    "cases": 6,
+    "means": {
+      "v8AbsoluteToOrsMinutes": 8.0867229706379,
+      "candidateAbsoluteToOrsMinutes": 8.2717229706379,
+      "v8AbsoluteToValhallaMinutes": 9.738342415082384,
+      "candidateAbsoluteToValhallaMinutes": 15.002786859526804
+    },
+    "improveAgainstOrs": 2,
+    "regressAgainstOrs": 4,
+    "scope": "Post hoc reuse of saved candidate timings; not a predeclared gate, new search or model acceptance. Original rejection unchanged."
+  },
+  "originalCandidateRejectionUnchanged": true,
+  "activeV8Sha256": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+  "routingOrAppLogicChanged": false,
+  "uiFilesUnchangedSinceAuthorization": {
+    "src/routes/index.tsx": "a99d1c63225fa7ad88ed021933c00492dd40aca9e4f5967ffddb1977fce9bed3",
+    "src/components/research-map.tsx": "4d871c37a59af0de8b9a62eed4806fb9104aad9007f90aa1f405c9fbb4c96135"
+  },
+  "envSchemaDependenciesChanged": false,
+  "commitPushOrDeployment": false,
+  "previousToolTests": {
+    "passed": 13,
+    "rerun": false,
+    "readinessEvidence": "docs/evidence/coarse-control-tool-2026-10-24/checks.json"
+  },
+  "previousAppChecks": {
+    "biomeFiles": 158,
+    "appTypecheck": true,
+    "diagnosticTypecheck": true,
+    "build": true,
+    "rerun": false,
+    "reason": "Acquisition and reporting do not change app implementation or sealed tool source."
+  },
+  "producerFiles": {
+    "scripts/coarse-control.ts": "33b68ac16955091f46b55c870ccd2397e16d4d090600a92a37796f0be6c78c60",
+    "scripts/compare-coarse-control.ts": "39a30162a3a527e826489045a8e3c4258d9d9ad35230dbe8db527b7de8a6a562",
+    "scripts/coarse-control.test.ts": "7dd7e99e0120edd34b114f53fe413cf6c5d57e27e32ea2ae6cd7253b0dbd9276",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "scripts/coarse-holdout.ts": "53eab4c01da6fdc33468ca848ca932bb50e7d39be675096e6d26e9c430010de6",
+    "docs/evidence/coarse-control-reference-2026-10-24/analyze.py": "2109dd98b6bfbdd293e6bba870247d65536c11072dd74a9693d3a149296e0312"
+  },
+  "referenceFiles": {
+    "docs/evidence/coarse-class-calibration-2026-10-23/control-plan.json": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+    "docs/evidence/coarse-class-calibration-2026-10-23/comparison.json": "cb31b7f281a737afe6b19d4e8410f533de2ddd7832f552602944a81e376b07ba",
+    "docs/evidence/coarse-quality-2026-10-22/comparison.json": "90dce82c094f41c13de37065ca677650ecc3fe36187008379bcc48950470c96c",
+    "docs/evidence/coarse-regional-2026-10-22/comparison.json": "acb588585be88a4d2adfd64028fff8fb462325054c989c70cf0a757f31bd782c"
+  },
+  "priorSealedEvidenceVerified": {
+    "coarse-class-calibration-2026-10-23": {
+      "files": 27,
+      "manifestSha256": "78cc9629a51cb6246a8712f73a4c8c0871d438d13a57fc16567888e6629078ab"
+    },
+    "coarse-frontier-reference-2026-10-23": {
+      "files": 160,
+      "manifestSha256": "b1febb70689ce37ad3c6a87bf3e8b24437590982ad44d3c5bc3db76ad005516a"
+    },
+    "coarse-control-tool-2026-10-24": {
+      "files": 28,
+      "manifestSha256": "101d3405629a6f6e30a69d9d55a46ed61c7a6c0314642409931060455dba09eb"
+    }
+  },
+  "nextProposal": {
+    "remainingOlderOdPairs": 29,
+    "alreadyMatched": 6,
+    "allOlderDistinctPairs": 35,
+    "reuseFrontierCases": 48,
+    "newPlanToolPrepared": false,
+    "newQuotaAuthorized": false
+  },
+  "scope": "Selected matched OD provider/profile/data/date comparison, not traffic truth or national accuracy. Post hoc candidate comparison does not change any original gate or rejection. HTTP-plus-body elapsed is not engine search time.",
+  "documentationChecks": {
+    "pages": 9,
+    "localLinks": 322,
+    "markdownAnchors": 52,
+    "errors": [],
+    "gitDiffCheck": true
+  }
+}

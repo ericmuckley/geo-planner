@@ -1,0 +1,136 @@
+{
+  "requests": 6,
+  "statuses": {
+    "200": 6
+  },
+  "minimumStartIntervalMs": 6501.0,
+  "firstStart": "2026-10-24T19:37:06.672Z",
+  "lastFinish": "2026-10-24T19:37:41.600Z",
+  "returnedQuotaRemaining": [
+    1951,
+    1950,
+    1949,
+    1948,
+    1947,
+    1946
+  ],
+  "maximumResponseBytes": 75327,
+  "httpAndBodyMs": [
+    737,
+    819,
+    827,
+    990,
+    2161,
+    2422
+  ],
+  "bodyRedactions": 0,
+  "maxSnapMeters": 14.920572069008797,
+  "orsEngineMetadata": [
+    {
+      "build_date": "2026-08-13T11:53:14Z",
+      "graph_date": "2026-09-21T10:31:27Z",
+      "osm_date": "2026-09-13T23:59:59Z",
+      "version": "9.10.0"
+    }
+  ],
+  "orsMinusValhalla": {
+    "meanMinutes": 15.969508333333337,
+    "medianMinutes": 15.524341666666679,
+    "minimumMinutes": 4.274533333333338,
+    "maximumMinutes": 32.28473333333335,
+    "allSixPositive": true,
+    "atLeastFiveMinutes": 4,
+    "materialPositiveDiscrepancy": true,
+    "percentageRange": [
+      6.366394871774511,
+      29.718973305864722
+    ]
+  },
+  "postHocCandidateSensitivity": {
+    "cases": 6,
+    "means": {
+      "v8AbsoluteToOrsMinutes": 8.0867229706379,
+      "candidateAbsoluteToOrsMinutes": 8.2717229706379,
+      "v8AbsoluteToValhallaMinutes": 9.738342415082384,
+      "candidateAbsoluteToValhallaMinutes": 15.002786859526804
+    },
+    "improveAgainstOrs": 2,
+    "regressAgainstOrs": 4,
+    "scope": "Post hoc reuse of saved candidate timings; not a predeclared gate, new search or model acceptance. Original rejection unchanged."
+  },
+  "cases": [
+    {
+      "id": "regional/joshua-tree--twentynine-palms",
+      "v8Minutes": 18.048333333333336,
+      "rejectedCandidateMinutes": 16.99166666666667,
+      "orsMinutes": 19.708333333333332,
+      "valhallaMinutes": 15.1931,
+      "orsMinusValhallaMinutes": 4.515233333333333,
+      "v8AbsoluteToOrsMinutes": 1.6599999999999966,
+      "candidateAbsoluteToOrsMinutes": 2.7166666666666615,
+      "v8AbsoluteToValhallaMinutes": 2.855233333333336,
+      "candidateAbsoluteToValhallaMinutes": 1.7985666666666713
+    },
+    {
+      "id": "regional/idyllwild--palm-springs",
+      "v8Minutes": 50.77385510082237,
+      "rejectedCandidateMinutes": 50.582188434155704,
+      "orsMinutes": 61.443333333333335,
+      "valhallaMinutes": 51.98633333333333,
+      "orsMinusValhallaMinutes": 9.457000000000008,
+      "v8AbsoluteToOrsMinutes": 10.669478232510968,
+      "candidateAbsoluteToOrsMinutes": 10.861144899177631,
+      "v8AbsoluteToValhallaMinutes": 1.2124782325109607,
+      "candidateAbsoluteToValhallaMinutes": 1.4041448991776235
+    },
+    {
+      "id": "original/Julian",
+      "v8Minutes": 75.77085959131655,
+      "rejectedCandidateMinutes": 76.36085959131654,
+      "orsMinutes": 71.41666666666667,
+      "valhallaMinutes": 67.14213333333333,
+      "orsMinusValhallaMinutes": 4.274533333333338,
+      "v8AbsoluteToOrsMinutes": 4.35419292464988,
+      "candidateAbsoluteToOrsMinutes": 4.944192924649869,
+      "v8AbsoluteToValhallaMinutes": 8.628726257983217,
+      "candidateAbsoluteToValhallaMinutes": 9.218726257983207
+    },
+    {
+      "id": "original/Idyllwild",
+      "v8Minutes": 115.63000000000002,
+      "rejectedCandidateMinutes": 120.9666666666667,
+      "orsMinutes": 131.45166666666668,
+      "valhallaMinutes": 109.85998333333333,
+      "orsMinusValhallaMinutes": 21.59168333333335,
+      "v8AbsoluteToOrsMinutes": 15.821666666666658,
+      "candidateAbsoluteToOrsMinutes": 10.484999999999985,
+      "v8AbsoluteToValhallaMinutes": 5.770016666666692,
+      "candidateAbsoluteToValhallaMinutes": 11.106683333333365
+    },
+    {
+      "id": "original/Big Bear Lake",
+      "v8Minutes": 159.34000000000003,
+      "rejectedCandidateMinutes": 169.05,
+      "orsMinutes": 174.10666666666665,
+      "valhallaMinutes": 150.4128,
+      "orsMinusValhallaMinutes": 23.69386666666665,
+      "v8AbsoluteToOrsMinutes": 14.766666666666623,
+      "candidateAbsoluteToOrsMinutes": 5.0566666666666436,
+      "v8AbsoluteToValhallaMinutes": 8.927200000000028,
+      "candidateAbsoluteToValhallaMinutes": 18.637200000000007
+    },
+    {
+      "id": "regional/santa-barbara--brawley",
+      "v8Minutes": 303.2750000000001,
+      "rejectedCandidateMinutes": 320.09,
+      "orsMinutes": 304.52333333333337,
+      "valhallaMinutes": 272.2386,
+      "orsMinusValhallaMinutes": 32.28473333333335,
+      "v8AbsoluteToOrsMinutes": 1.248333333333278,
+      "candidateAbsoluteToOrsMinutes": 15.566666666666606,
+      "v8AbsoluteToValhallaMinutes": 31.03640000000007,
+      "candidateAbsoluteToValhallaMinutes": 47.851399999999956
+    }
+  ],
+  "scope": "Six selected matched OD controls; ORS/Valhalla profile/data/route/date differences are not separable here. Neither engine is traffic truth. No national inference, model activation or new correction fitted. HTTP-plus-body elapsed is not graph-search time."
+}

@@ -1,0 +1,4605 @@
+{
+  "protocolSha256": "f1991760d513160c22bbd897487373399e8f1c57a124d453306a68e77fc20e72",
+  "cases": 83,
+  "summary": {
+    "all": {
+      "cases": 83,
+      "correlationWithSignedResidual": {
+        "sourceArcChordRatio": 0.20185588884480068,
+        "neConnectorKmPer100RoadKm": -0.22561385286923638,
+        "modeledDistanceRatio": -0.07305372089881886,
+        "modelWithin1KmOfOrs": -0.01795644794934509,
+        "orsWithin1KmOfModel": -0.0207694889799824,
+        "modelWithin3KmOfOrs": 0.023372882956910018,
+        "orsWithin3KmOfModel": 0.01861495904859532
+      },
+      "cohorts": {
+        "v8Faster": {
+          "cases": 54,
+          "medianNeConnectorKmPer100RoadKm": 3.9391857013420495,
+          "medianModelWithin3KmOfOrs": 0.8818638769501116
+        },
+        "nearZero": {
+          "cases": 11,
+          "medianNeConnectorKmPer100RoadKm": 3.0933934998832293,
+          "medianModelWithin3KmOfOrs": 0.8978298192458779
+        },
+        "v8Slower": {
+          "cases": 18,
+          "medianNeConnectorKmPer100RoadKm": 2.001537796828191,
+          "medianModelWithin3KmOfOrs": 1.0
+        }
+      }
+    },
+    "frontier": {
+      "cases": 48,
+      "correlationWithSignedResidual": {
+        "sourceArcChordRatio": -0.06845627862937767,
+        "neConnectorKmPer100RoadKm": -0.5218057536608738,
+        "modeledDistanceRatio": 0.11836303526601409,
+        "modelWithin1KmOfOrs": 0.1038481349168857,
+        "orsWithin1KmOfModel": 0.11878458840663503,
+        "modelWithin3KmOfOrs": 0.10208005163884105,
+        "orsWithin3KmOfModel": 0.12064435755562443
+      },
+      "cohorts": {
+        "v8Faster": {
+          "cases": 35,
+          "medianNeConnectorKmPer100RoadKm": 3.391846527166185,
+          "medianModelWithin3KmOfOrs": 0.9049843936371439
+        },
+        "nearZero": {
+          "cases": 2,
+          "medianNeConnectorKmPer100RoadKm": 1.849244096771396,
+          "medianModelWithin3KmOfOrs": 0.7030012814722986
+        },
+        "v8Slower": {
+          "cases": 11,
+          "medianNeConnectorKmPer100RoadKm": 2.208251113371145,
+          "medianModelWithin3KmOfOrs": 0.9867128850636329
+        }
+      }
+    },
+    "majorDominated": {
+      "cases": 30,
+      "correlationWithSignedResidual": {
+        "sourceArcChordRatio": -0.0034479409587799717,
+        "neConnectorKmPer100RoadKm": 0.07517908653037235,
+        "modeledDistanceRatio": 0.5934004788505329,
+        "modelWithin1KmOfOrs": 0.17988688949460838,
+        "orsWithin1KmOfModel": 0.2278250582135351,
+        "modelWithin3KmOfOrs": 0.38271181102025065,
+        "orsWithin3KmOfModel": 0.44235034128475864
+      },
+      "cohorts": {
+        "v8Faster": {
+          "cases": 26,
+          "medianNeConnectorKmPer100RoadKm": 5.059533772592303,
+          "medianModelWithin3KmOfOrs": 0.9095743189121113
+        },
+        "nearZero": {
+          "cases": 2,
+          "medianNeConnectorKmPer100RoadKm": 8.127267450502291,
+          "medianModelWithin3KmOfOrs": 0.948914909622939
+        },
+        "v8Slower": {
+          "cases": 2,
+          "medianNeConnectorKmPer100RoadKm": 1.4287087724646765,
+          "medianModelWithin3KmOfOrs": 0.9850758308651233
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "frontier/astoria-or-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -49.742768322142126,
+      "v8Minutes": 349.95389834452453,
+      "orsMinutes": 399.69666666666666,
+      "orsKm": 530.2188000000001,
+      "sourceRoadKm": 504.6781752134022,
+      "internalConnectorKm": 22.95562453014682,
+      "sourceArcChordRatio": 1.0107965433870363,
+      "neConnectorKm": 22.950073519983995,
+      "neConnectorKmPer100RoadKm": 4.547467009105278,
+      "neConnectorPaidMinutes": 14.865115796731605,
+      "connectorOnlyAdditionalMinutesAt55": 10.171328043250934,
+      "connectorOnlyAdditionalMinutesAt25": 40.21506065122999,
+      "endpointMinutes": 1.2951318165732548,
+      "endpointKm": 0.5396382569055903,
+      "nonroadMinutes": 9.542099861284603,
+      "sourceRoundingMinutes": 0.21566937652733031,
+      "modeledDistanceRatio": 1.0036409741462515,
+      "modelAnchorPolylineKm": 519.0789424634487,
+      "orsPolylineKm": 530.2190035034442,
+      "majorRoadMinuteShare": 0.536678625841647,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 186.90200121016463,
+          "connectorKm": 9.804413197748195,
+          "roadMinutes": 140.17650090762348,
+          "connectorMinutes": 7.353309898311146,
+          "recordedMinutes": 147.61166666666668
+        },
+        "natural-earth/105": {
+          "roadKm": 305.1220051097955,
+          "connectorKm": 13.145660322235802,
+          "roadMinutes": 174.35543149131195,
+          "connectorMinutes": 7.51180589842046,
+          "recordedMinutes": 181.99666666666656
+        },
+        "census-layer/80": {
+          "roadKm": 12.654168893442067,
+          "connectorKm": 0.00555101016282566,
+          "roadMinutes": 9.49062667008155,
+          "connectorMinutes": 0.013322424390781584,
+          "recordedMinutes": 9.508333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9172633614045165,
+      "orsWithin1KmOfModel": 0.9164367051010124,
+      "modelWithin3KmOfOrs": 0.995387999684623,
+      "orsWithin3KmOfModel": 0.9987727340248996
+    },
+    {
+      "id": "frontier/astoria-or-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -48.299434988808855,
+      "v8Minutes": 369.8472316778578,
+      "orsMinutes": 418.14666666666665,
+      "orsKm": 555.7263,
+      "sourceRoadKm": 522.5920538675125,
+      "internalConnectorKm": 31.623167516130383,
+      "sourceArcChordRatio": 1.011110119751639,
+      "neConnectorKm": 31.44890145110519,
+      "neConnectorKmPer100RoadKm": 6.017868281456517,
+      "neConnectorPaidMinutes": 21.2392367450725,
+      "connectorOnlyAdditionalMinutesAt55": 13.068655747042254,
+      "connectorOnlyAdditionalMinutesAt25": 54.23812673757995,
+      "endpointMinutes": 1.2967984832399377,
+      "endpointKm": 0.5396382569077018,
+      "nonroadMinutes": 9.210433194617936,
+      "sourceRoundingMinutes": 0.2245566392672913,
+      "modeledDistanceRatio": 1.0051576470976953,
+      "modelAnchorPolylineKm": 543.0417022940248,
+      "orsPolylineKm": 555.7212394523299,
+      "majorRoadMinuteShare": 0.5064748334910296,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 209.30707609824879,
+          "connectorKm": 18.303241128869388,
+          "roadMinutes": 156.98030707368656,
+          "connectorMinutes": 13.72743084665204,
+          "recordedMinutes": 170.80000000000004
+        },
+        "natural-earth/105": {
+          "roadKm": 305.1220051097955,
+          "connectorKm": 13.145660322235802,
+          "roadMinutes": 174.35543149131195,
+          "connectorMinutes": 7.51180589842046,
+          "recordedMinutes": 181.99666666666656
+        },
+        "census/80": {
+          "roadKm": 1.7125541277054288,
+          "connectorKm": 0.17150271030898373,
+          "roadMinutes": 1.2844155957790715,
+          "connectorMinutes": 0.41160650474156096,
+          "recordedMinutes": 1.6966666666666668
+        },
+        "census-layer/80": {
+          "roadKm": 6.450418531762778,
+          "connectorKm": 0.0027633547162109577,
+          "roadMinutes": 4.837813898822084,
+          "connectorMinutes": 0.006632051318906299,
+          "recordedMinutes": 4.846666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8966428297270683,
+      "orsWithin1KmOfModel": 0.890001397034321,
+      "modelWithin3KmOfOrs": 0.9955915130712175,
+      "orsWithin3KmOfModel": 0.9988290536762772
+    },
+    {
+      "id": "frontier/astoria-or-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -35.471534850093235,
+      "v8Minutes": 590.5401318165734,
+      "orsMinutes": 626.0116666666667,
+      "orsKm": 790.1494,
+      "sourceRoadKm": 784.0455997974934,
+      "internalConnectorKm": 22.27119558416388,
+      "sourceArcChordRatio": 1.0120804305715707,
+      "neConnectorKm": 21.10043838355603,
+      "neConnectorKmPer100RoadKm": 2.6912259170902737,
+      "neConnectorPaidMinutes": 15.634366395561313,
+      "connectorOnlyAdditionalMinutesAt55": 7.384293659227081,
+      "connectorOnlyAdditionalMinutesAt25": 35.00668572497315,
+      "endpointMinutes": 1.6317984832401908,
+      "endpointKm": 0.8038122214864785,
+      "nonroadMinutes": 0.67,
+      "sourceRoundingMinutes": 0.344995388822781,
+      "modeledDistanceRatio": 1.0218317881021115,
+      "modelAnchorPolylineKm": 794.1002358841115,
+      "orsPolylineKm": 790.149449277944,
+      "majorRoadMinuteShare": 0.1120095879504623,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 634.440359023118,
+          "connectorKm": 14.866156881139087,
+          "roadMinutes": 475.83026926733834,
+          "connectorMinutes": 11.149617660854318,
+          "recordedMinutes": 487.2533333333336
+        },
+        "natural-earth/105": {
+          "roadKm": 110.7501877564933,
+          "connectorKm": 4.4588498407646115,
+          "roadMinutes": 63.285821575139025,
+          "connectorMinutes": 2.5479141947226362,
+          "recordedMinutes": 65.88833333333335
+        },
+        "census/80": {
+          "roadKm": 1.9184949028795777,
+          "connectorKm": 1.1590228899411381,
+          "roadMinutes": 1.4388711771596834,
+          "connectorMinutes": 2.7816549358587315,
+          "recordedMinutes": 4.221666666666667
+        },
+        "natural-earth/55": {
+          "roadKm": 3.4958694073642445,
+          "connectorKm": 1.7754316616523298,
+          "roadMinutes": 3.8136757171246307,
+          "connectorMinutes": 1.9368345399843596,
+          "recordedMinutes": 5.751666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 33.44068870763826,
+          "connectorKm": 0.011734310666712744,
+          "roadMinutes": 25.08051653072869,
+          "connectorMinutes": 0.028162345600110585,
+          "recordedMinutes": 25.123333333333328
+        }
+      },
+      "modelWithin1KmOfOrs": 0.23684947598774106,
+      "orsWithin1KmOfModel": 0.24118222719077761,
+      "modelWithin3KmOfOrs": 0.25491692026383045,
+      "orsWithin3KmOfModel": 0.2601908414822878
+    },
+    {
+      "id": "frontier/astoria-or-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -22.042627843978835,
+      "v8Minutes": 610.4357054893544,
+      "orsMinutes": 632.4783333333332,
+      "orsKm": 784.4586999999999,
+      "sourceRoadKm": 766.514778860431,
+      "internalConnectorKm": 21.27749278165643,
+      "sourceArcChordRatio": 1.0157913752396819,
+      "neConnectorKm": 17.970694411817952,
+      "neConnectorKmPer100RoadKm": 2.3444680921266494,
+      "neConnectorPaidMinutes": 12.681797623012656,
+      "connectorOnlyAdditionalMinutesAt55": 6.922596280788746,
+      "connectorOnlyAdditionalMinutesAt25": 30.44786896535043,
+      "endpointMinutes": 1.2967984832400674,
+      "endpointKm": 0.5396382569077912,
+      "nonroadMinutes": 33.07724033944852,
+      "sourceRoundingMinutes": 0.3342880529488639,
+      "modeledDistanceRatio": 1.0225064664000354,
+      "modelAnchorPolylineKm": 786.2738956150702,
+      "orsPolylineKm": 784.4503907477236,
+      "majorRoadMinuteShare": 0.11437722234598746,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 498.1350228662817,
+          "connectorKm": 13.51184457105334,
+          "roadMinutes": 373.60126714971096,
+          "connectorMinutes": 10.13388342829002,
+          "recordedMinutes": 383.9566666666663
+        },
+        "natural-earth/105": {
+          "roadKm": 110.7501877564933,
+          "connectorKm": 4.4588498407646115,
+          "roadMinutes": 63.285821575139025,
+          "connectorMinutes": 2.5479141947226362,
+          "recordedMinutes": 65.88833333333335
+        },
+        "census-layer/80": {
+          "roadKm": 156.673982780439,
+          "connectorKm": 0.9218577288401522,
+          "roadMinutes": 117.50548708532926,
+          "connectorMinutes": 2.212458549216366,
+          "recordedMinutes": 119.775
+        },
+        "census/80": {
+          "roadKm": 0.9555854572169247,
+          "connectorKm": 2.3849406409983285,
+          "roadMinutes": 0.7166890929126934,
+          "connectorMinutes": 5.723857538395988,
+          "recordedMinutes": 6.441666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8851015404693805,
+      "orsWithin1KmOfModel": 0.9079130081246171,
+      "modelWithin3KmOfOrs": 0.9098003748597904,
+      "orsWithin3KmOfModel": 0.936558372891187
+    },
+    {
+      "id": "frontier/astoria-or-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -116.33153485009313,
+      "v8Minutes": 710.0017984832402,
+      "orsMinutes": 826.3333333333334,
+      "orsKm": 1210.8935,
+      "sourceRoadKm": 1172.5057781281714,
+      "internalConnectorKm": 27.451557103457006,
+      "sourceArcChordRatio": 1.0088163499458584,
+      "neConnectorKm": 27.450250523610926,
+      "neConnectorKmPer100RoadKm": 2.3411612152081203,
+      "neConnectorPaidMinutes": 16.44046535840969,
+      "connectorOnlyAdditionalMinutesAt55": 13.505262485529503,
+      "connectorOnlyAdditionalMinutesAt25": 49.440135898256536,
+      "endpointMinutes": 1.2967984832400345,
+      "endpointKm": 0.5396382569063803,
+      "nonroadMinutes": 1.1766666666666667,
+      "sourceRoundingMinutes": 0.47048175504596657,
+      "modeledDistanceRatio": 0.9918190586259753,
+      "modelAnchorPolylineKm": 1185.5356880129536,
+      "orsPolylineKm": 1210.893920370935,
+      "majorRoadMinuteShare": 0.8731028439379338,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 115.42131238803952,
+          "connectorKm": 4.225804331539298,
+          "roadMinutes": 86.56598429102961,
+          "connectorMinutes": 3.169353248654475,
+          "recordedMinutes": 89.78333333333332
+        },
+        "natural-earth/105": {
+          "roadKm": 1052.46695740415,
+          "connectorKm": 23.22444619207163,
+          "roadMinutes": 601.409689945228,
+          "connectorMinutes": 13.271112109755215,
+          "recordedMinutes": 615.1016666666666
+        },
+        "census-layer/105": {
+          "roadKm": 4.617508335981945,
+          "connectorKm": 0.0013065798460775526,
+          "roadMinutes": 2.6385761919896833,
+          "connectorMinutes": 0.0031357916305861265,
+          "recordedMinutes": 2.6433333333333335
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9350544147817336,
+      "orsWithin1KmOfModel": 0.9371390742899383,
+      "modelWithin3KmOfOrs": 0.95214580462517,
+      "orsWithin3KmOfModel": 0.9609167293725622
+    },
+    {
+      "id": "frontier/astoria-or-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "signedMinutes": -118.65986818342674,
+      "v8Minutes": 731.0401318165733,
+      "orsMinutes": 849.7,
+      "orsKm": 1247.1834,
+      "sourceRoadKm": 1215.0478692760453,
+      "internalConnectorKm": 21.89255500164987,
+      "sourceArcChordRatio": 1.0090995797979005,
+      "neConnectorKm": 21.89255500164987,
+      "neConnectorKmPer100RoadKm": 1.8017853909487518,
+      "neConnectorPaidMinutes": 13.264639345860509,
+      "connectorOnlyAdditionalMinutesAt55": 10.618147928666623,
+      "connectorOnlyAdditionalMinutesAt25": 39.277492658099185,
+      "endpointMinutes": 2.358465149906806,
+      "endpointKm": 1.219710039583803,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.4930105223446617,
+      "modeledDistanceRatio": 0.9927650851649237,
+      "modelAnchorPolylineKm": 1221.9265089531336,
+      "orsPolylineKm": 1247.1837984141198,
+      "majorRoadMinuteShare": 0.8767866169269162,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 115.42131238803952,
+          "connectorKm": 4.225804331539298,
+          "roadMinutes": 86.56598429102961,
+          "connectorMinutes": 3.169353248654475,
+          "recordedMinutes": 89.78333333333332
+        },
+        "natural-earth/105": {
+          "roadKm": 1099.6265568880058,
+          "connectorKm": 17.666750670110574,
+          "roadMinutes": 628.3580325074317,
+          "connectorMinutes": 10.095286097206033,
+          "recordedMinutes": 638.8983333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9339436473548551,
+      "orsWithin1KmOfModel": 0.9381256077300996,
+      "modelWithin3KmOfOrs": 0.9535709749953699,
+      "orsWithin3KmOfModel": 0.9620539531934635
+    },
+    {
+      "id": "frontier/missoula-mt-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": 39.07833333333343,
+      "v8Minutes": 350.09666666666675,
+      "orsMinutes": 311.0183333333333,
+      "orsKm": 471.4703,
+      "sourceRoadKm": 455.29473190320647,
+      "internalConnectorKm": 14.767669773517706,
+      "sourceArcChordRatio": 1.014276254689418,
+      "neConnectorKm": 14.754113036159769,
+      "neConnectorKmPer100RoadKm": 3.240563090744574,
+      "neConnectorPaidMinutes": 10.695446137111556,
+      "connectorOnlyAdditionalMinutesAt55": 5.3999499023354645,
+      "connectorOnlyAdditionalMinutesAt25": 24.714425149671886,
+      "endpointMinutes": 1.8316666666666879,
+      "endpointKm": 1.212983235078772,
+      "nonroadMinutes": 0.395,
+      "sourceRoundingMinutes": 0.20466950987031396,
+      "modeledDistanceRatio": 0.9999356656084938,
+      "modelAnchorPolylineKm": 460.1868816976974,
+      "orsPolylineKm": 471.47047478312385,
+      "majorRoadMinuteShare": 0.0452228322840908,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 1.6752829059469931,
+          "connectorKm": 0.012043253047144474,
+          "roadMinutes": 0.957304517683996,
+          "connectorMinutes": 0.028903807313146738,
+          "recordedMinutes": 0.9866666666666667
+        },
+        "natural-earth/105": {
+          "roadKm": 23.713441260708294,
+          "connectorKm": 2.0727763840463376,
+          "roadMinutes": 13.550537863261884,
+          "connectorMinutes": 1.1844436480264786,
+          "recordedMinutes": 14.745000000000001
+        },
+        "natural-earth/80": {
+          "roadKm": 426.02063018656526,
+          "connectorKm": 12.681336652113432,
+          "roadMinutes": 319.51547263992387,
+          "connectorMinutes": 9.511002489085078,
+          "recordedMinutes": 329.21833333333325
+        },
+        "census-layer/80": {
+          "roadKm": 3.8853775499859022,
+          "connectorKm": 0.0015134843107922863,
+          "roadMinutes": 2.9140331624894267,
+          "connectorMinutes": 0.0036323623459014872,
+          "recordedMinutes": 2.92
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9466486178385025,
+      "orsWithin1KmOfModel": 0.9494326694235127,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "frontier/missoula-mt-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": 32.606666666666456,
+      "v8Minutes": 370.06166666666644,
+      "orsMinutes": 337.455,
+      "orsKm": 500.4014,
+      "sourceRoadKm": 483.1248347777416,
+      "internalConnectorKm": 13.097994526436727,
+      "sourceArcChordRatio": 1.0093082924368253,
+      "neConnectorKm": 13.07154256556429,
+      "neConnectorKmPer100RoadKm": 2.7056242247570994,
+      "neConnectorPaidMinutes": 9.433518284164947,
+      "connectorOnlyAdditionalMinutesAt55": 4.826346332814277,
+      "connectorOnlyAdditionalMinutesAt25": 21.93818387318935,
+      "endpointMinutes": 1.83333333333336,
+      "endpointKm": 1.212983235079562,
+      "nonroadMinutes": 0.7,
+      "sourceRoundingMinutes": 0.22140500381362926,
+      "modeledDistanceRatio": 0.9946564482152219,
+      "modelAnchorPolylineKm": 490.3431351178691,
+      "orsPolylineKm": 500.40136562404297,
+      "majorRoadMinuteShare": 0.042803956157575186,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 1.6752829059469931,
+          "connectorKm": 0.012043253047144474,
+          "roadMinutes": 0.957304517683996,
+          "connectorMinutes": 0.028903807313146738,
+          "recordedMinutes": 0.9866666666666667
+        },
+        "natural-earth/105": {
+          "roadKm": 23.713441260708294,
+          "connectorKm": 2.0727763840463376,
+          "roadMinutes": 13.550537863261884,
+          "connectorMinutes": 1.1844436480264786,
+          "recordedMinutes": 14.745000000000001
+        },
+        "natural-earth/80": {
+          "roadKm": 418.43575502391093,
+          "connectorKm": 10.998766181517952,
+          "roadMinutes": 313.8268162679332,
+          "connectorMinutes": 8.249074636138468,
+          "recordedMinutes": 322.26833333333326
+        },
+        "census-layer/80": {
+          "roadKm": 39.30035558717541,
+          "connectorKm": 0.014408707825292664,
+          "roadMinutes": 29.475266690381563,
+          "connectorMinutes": 0.03458089878070239,
+          "recordedMinutes": 29.528333333333325
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9668100507276167,
+      "orsWithin1KmOfModel": 0.9677336374065165,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "frontier/missoula-mt-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": 21.29500000000064,
+      "v8Minutes": 590.413333333334,
+      "orsMinutes": 569.1183333333333,
+      "orsKm": 1020.7121999999999,
+      "sourceRoadKm": 992.9249862570783,
+      "internalConnectorKm": 19.78841919508126,
+      "sourceArcChordRatio": 1.0033224599814095,
+      "neConnectorKm": 19.01843124343986,
+      "neConnectorKmPer100RoadKm": 1.9153945672302575,
+      "neConnectorPaidMinutes": 11.16194664504398,
+      "connectorOnlyAdditionalMinutesAt55": 9.585432893254051,
+      "connectorOnlyAdditionalMinutesAt25": 34.48228833921168,
+      "endpointMinutes": 2.303333333333371,
+      "endpointKm": 1.673485680237648,
+      "nonroadMinutes": 0.28,
+      "sourceRoundingMinutes": 0.3829715731134229,
+      "modeledDistanceRatio": 0.9939173430072296,
+      "modelAnchorPolylineKm": 1005.3417054917354,
+      "orsPolylineKm": 1020.7119944561925,
+      "majorRoadMinuteShare": 0.9474961581863234,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 1.6752829059469931,
+          "connectorKm": 0.012043253047144474,
+          "roadMinutes": 0.957304517683996,
+          "connectorMinutes": 0.028903807313146738,
+          "recordedMinutes": 0.9866666666666667
+        },
+        "natural-earth/105": {
+          "roadKm": 949.7759753179697,
+          "connectorKm": 17.370510010201087,
+          "roadMinutes": 542.7291287531253,
+          "connectorMinutes": 9.9260057201149,
+          "recordedMinutes": 553.0250000000003
+        },
+        "census/105": {
+          "roadKm": 1.9858641475489875,
+          "connectorKm": 0.757944698594257,
+          "roadMinutes": 1.1347795128851357,
+          "connectorMinutes": 1.8190672766262168,
+          "recordedMinutes": 2.955
+        },
+        "natural-earth/80": {
+          "roadKm": 39.48786388561264,
+          "connectorKm": 1.6479212332387723,
+          "roadMinutes": 29.61589791420947,
+          "connectorMinutes": 1.2359409249290794,
+          "recordedMinutes": 30.863333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8836908188855904,
+      "orsWithin1KmOfModel": 0.8752644823999691,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "frontier/missoula-mt-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": 34.76166666666677,
+      "v8Minutes": 614.1683333333334,
+      "orsMinutes": 579.4066666666666,
+      "orsKm": 1032.521,
+      "sourceRoadKm": 1002.5701275478463,
+      "internalConnectorKm": 24.144374186725603,
+      "sourceArcChordRatio": 1.004781436205561,
+      "neConnectorKm": 22.139266003901824,
+      "neConnectorKmPer100RoadKm": 2.208251113371145,
+      "neConnectorPaidMinutes": 13.839947754353007,
+      "connectorOnlyAdditionalMinutesAt55": 10.311978795358074,
+      "connectorOnlyAdditionalMinutesAt25": 39.29429065501137,
+      "endpointMinutes": 1.8333333333333317,
+      "endpointKm": 1.2129832350799896,
+      "nonroadMinutes": 1.4183333333333334,
+      "sourceRoundingMinutes": 0.4006628190682022,
+      "modeledDistanceRatio": 0.9961235240657326,
+      "modelAnchorPolylineKm": 1014.4776199850531,
+      "orsPolylineKm": 1032.5209881170013,
+      "majorRoadMinuteShare": 0.8564997953894423,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 1.6752829059469931,
+          "connectorKm": 0.012043253047144474,
+          "roadMinutes": 0.957304517683996,
+          "connectorMinutes": 0.028903807313146738,
+          "recordedMinutes": 0.9866666666666667
+        },
+        "natural-earth/105": {
+          "roadKm": 892.6961285024317,
+          "connectorKm": 15.481209792010786,
+          "roadMinutes": 510.11207342996056,
+          "connectorMinutes": 8.846405595434728,
+          "recordedMinutes": 519.3083333333335
+        },
+        "census/105": {
+          "roadKm": 1.9858641475489875,
+          "connectorKm": 0.757944698594257,
+          "roadMinutes": 1.1347795128851357,
+          "connectorMinutes": 1.8190672766262168,
+          "recordedMinutes": 2.955
+        },
+        "natural-earth/80": {
+          "roadKm": 104.03376050099617,
+          "connectorKm": 6.65805621189104,
+          "roadMinutes": 78.02532037574709,
+          "connectorMinutes": 4.993542158918279,
+          "recordedMinutes": 83.06666666666668
+        },
+        "census-layer/80": {
+          "roadKm": 2.1790914909223265,
+          "connectorKm": 1.235120231182375,
+          "roadMinutes": 1.6343186181917448,
+          "connectorMinutes": 2.9642885548377,
+          "recordedMinutes": 4.6
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8837405077048636,
+      "orsWithin1KmOfModel": 0.8758964121308517,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "frontier/missoula-mt-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": -72.40166666666528,
+      "v8Minutes": 710.606666666668,
+      "orsMinutes": 783.0083333333333,
+      "orsKm": 1244.7588999999998,
+      "sourceRoadKm": 1183.1991217628056,
+      "internalConnectorKm": 25.03546496008602,
+      "sourceArcChordRatio": 1.0072886683993718,
+      "neConnectorKm": 24.518323457297953,
+      "neConnectorKmPer100RoadKm": 2.072206022327754,
+      "neConnectorPaidMinutes": 14.57802113123755,
+      "connectorOnlyAdditionalMinutesAt55": 12.169240822178397,
+      "connectorOnlyAdditionalMinutesAt25": 44.265955166277536,
+      "endpointMinutes": 1.8333333333333908,
+      "endpointKm": 1.2129832350801755,
+      "nonroadMinutes": 1.9783333333333335,
+      "sourceRoundingMinutes": 0.5258639448114764,
+      "modeledDistanceRatio": 0.972294213372186,
+      "modelAnchorPolylineKm": 1193.9477249113208,
+      "orsPolylineKm": 1244.7580604439609,
+      "majorRoadMinuteShare": 0.9113840175251176,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 46.28300989046334,
+          "connectorKm": 0.517141502788069,
+          "roadMinutes": 26.4474342231219,
+          "connectorMinutes": 1.2411396066913656,
+          "recordedMinutes": 27.715
+        },
+        "natural-earth/105": {
+          "roadKm": 1056.6334397366613,
+          "connectorKm": 21.34004018572128,
+          "roadMinutes": 603.7905369923784,
+          "connectorMinutes": 12.194308677555046,
+          "recordedMinutes": 616.4466666666666
+        },
+        "natural-earth/80": {
+          "roadKm": 80.28267213568084,
+          "connectorKm": 3.178283271576673,
+          "roadMinutes": 60.21200410176063,
+          "connectorMinutes": 2.3837124536825045,
+          "recordedMinutes": 62.633333333333326
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9477212111670024,
+      "orsWithin1KmOfModel": 0.930414017227086,
+      "modelWithin3KmOfOrs": 0.9988301826031878,
+      "orsWithin3KmOfModel": 0.9914556828739189
+    },
+    {
+      "id": "frontier/missoula-mt-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "signedMinutes": -69.57999999999913,
+      "v8Minutes": 730.0400000000009,
+      "orsMinutes": 799.62,
+      "orsKm": 1227.6692,
+      "sourceRoadKm": 1167.465699405311,
+      "internalConnectorKm": 27.528146436465203,
+      "sourceArcChordRatio": 1.0066285365194012,
+      "neConnectorKm": 27.077957498144144,
+      "neConnectorKmPer100RoadKm": 2.3193792770046464,
+      "neConnectorPaidMinutes": 16.781248616723886,
+      "connectorOnlyAdditionalMinutesAt55": 12.758341381251544,
+      "connectorOnlyAdditionalMinutesAt25": 48.205849378822066,
+      "endpointMinutes": 1.831666666666612,
+      "endpointKm": 1.212983235078772,
+      "nonroadMinutes": 2.9783333333333335,
+      "sourceRoundingMinutes": 0.5301294362398039,
+      "modeledDistanceRatio": 0.9753831091462399,
+      "modelAnchorPolylineKm": 1181.5763434917726,
+      "orsPolylineKm": 1227.669361306473,
+      "majorRoadMinuteShare": 0.7622777141964144,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 48.80742753067014,
+          "connectorKm": 0.4483525976421182,
+          "roadMinutes": 27.88995858895436,
+          "connectorMinutes": 1.076046234341084,
+          "recordedMinutes": 28.993333333333332
+        },
+        "natural-earth/105": {
+          "roadKm": 896.2547663992615,
+          "connectorKm": 19.752429238551702,
+          "roadMinutes": 512.1455807995778,
+          "connectorMinutes": 11.287102422029555,
+          "recordedMinutes": 523.833333333333
+        },
+        "natural-earth/80": {
+          "roadKm": 215.00034897589524,
+          "connectorKm": 7.32552825959244,
+          "roadMinutes": 161.2502617319214,
+          "connectorMinutes": 5.49414619469433,
+          "recordedMinutes": 166.84499999999997
+        },
+        "census-layer/80": {
+          "roadKm": 7.403156499484183,
+          "connectorKm": 0.001836340678943211,
+          "roadMinutes": 5.552367374613136,
+          "connectorMinutes": 0.004407217629463707,
+          "recordedMinutes": 5.558333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8446333898586568,
+      "orsWithin1KmOfModel": 0.8266778531302271,
+      "modelWithin3KmOfOrs": 0.8977578596401431,
+      "orsWithin3KmOfModel": 0.885556873085518
+    },
+    {
+      "id": "frontier/hays-ks-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": -11.524794939325261,
+      "v8Minutes": 350.18187172734144,
+      "orsMinutes": 361.7066666666667,
+      "orsKm": 576.9046999999999,
+      "sourceRoadKm": 552.6435195516527,
+      "internalConnectorKm": 14.005012483890171,
+      "sourceArcChordRatio": 1.0043953040374949,
+      "neConnectorKm": 14.005012483890171,
+      "neConnectorKmPer100RoadKm": 2.5341855985667077,
+      "neConnectorPaidMinutes": 8.891095891997224,
+      "connectorOnlyAdditionalMinutesAt55": 6.3870995449738714,
+      "connectorOnlyAdditionalMinutesAt25": 24.720934069339187,
+      "endpointMinutes": 5.3952768365669135,
+      "endpointKm": 2.2847011257530374,
+      "nonroadMinutes": 2.919928224107971,
+      "sourceRoundingMinutes": 0.220518060674749,
+      "modeledDistanceRatio": 0.988291254901097,
+      "modelAnchorPolylineKm": 565.4611462520692,
+      "orsPolylineKm": 576.9048863147091,
+      "majorRoadMinuteShare": 0.7558014820592829,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 444.3855686473796,
+          "connectorKm": 7.461090059165025,
+          "roadMinutes": 253.93461065564557,
+          "connectorMinutes": 4.263480033808586,
+          "recordedMinutes": 258.38333333333344
+        },
+        "natural-earth/90": {
+          "roadKm": 28.476253438269943,
+          "connectorKm": 3.3639115242626465,
+          "roadMinutes": 18.98416895884663,
+          "connectorMinutes": 2.242607682841764,
+          "recordedMinutes": 21.236666666666665
+        },
+        "natural-earth/80": {
+          "roadKm": 79.78169746600315,
+          "connectorKm": 3.1800109004625,
+          "roadMinutes": 59.836273099502364,
+          "connectorMinutes": 2.3850081753468753,
+          "recordedMinutes": 62.24666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9341107637793201,
+      "orsWithin1KmOfModel": 0.9296424114414622,
+      "modelWithin3KmOfOrs": 0.9948920594999756,
+      "orsWithin3KmOfModel": 0.9877817949576779
+    },
+    {
+      "id": "frontier/hays-ks-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": 12.296943503234104,
+      "v8Minutes": 369.9769435032341,
+      "orsMinutes": 357.68,
+      "orsKm": 604.5564,
+      "sourceRoadKm": 588.5880090190586,
+      "internalConnectorKm": 15.746474485590767,
+      "sourceArcChordRatio": 1.0025995228091384,
+      "neConnectorKm": 15.368121940987116,
+      "neConnectorKmPer100RoadKm": 2.611015125265573,
+      "neConnectorPaidMinutes": 9.432063767544246,
+      "connectorOnlyAdditionalMinutesAt55": 7.333160168078063,
+      "connectorOnlyAdditionalMinutesAt25": 27.451428890824833,
+      "endpointMinutes": 5.213610169900182,
+      "endpointKm": 2.171643126348509,
+      "nonroadMinutes": 1.48,
+      "sourceRoundingMinutes": 0.2506456178748522,
+      "modeledDistanceRatio": 1.00424508498738,
+      "modelAnchorPolylineKm": 599.3649666027516,
+      "orsPolylineKm": 604.5562561197638,
+      "majorRoadMinuteShare": 0.8012249392118169,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 488.6409097784738,
+          "connectorKm": 11.726555053898101,
+          "roadMinutes": 279.223377016271,
+          "connectorMinutes": 6.700888602227485,
+          "recordedMinutes": 286.13000000000005
+        },
+        "census-layer/105": {
+          "roadKm": 8.350292192724034,
+          "connectorKm": 0.06958296012958962,
+          "roadMinutes": 4.771595538699448,
+          "connectorMinutes": 0.16699910431101506,
+          "recordedMinutes": 4.941666666666666
+        },
+        "natural-earth/80": {
+          "roadKm": 82.91880989225639,
+          "connectorKm": 3.641566887089015,
+          "roadMinutes": 62.1891074191923,
+          "connectorMinutes": 2.7311751653167615,
+          "recordedMinutes": 64.96000000000002
+        },
+        "census-layer/80": {
+          "roadKm": 8.677997155604393,
+          "connectorKm": 0.30876958447405994,
+          "roadMinutes": 6.508497866703294,
+          "connectorMinutes": 0.7410470027377438,
+          "recordedMinutes": 7.251666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8728555008737336,
+      "orsWithin1KmOfModel": 0.8722197013587023,
+      "modelWithin3KmOfOrs": 0.9716301160550945,
+      "orsWithin3KmOfModel": 0.9680185959670177
+    },
+    {
+      "id": "frontier/hays-ks-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": 34.13125796694578,
+      "v8Minutes": 593.334591300279,
+      "orsMinutes": 559.2033333333333,
+      "orsKm": 769.7882,
+      "sourceRoadKm": 750.0625521831244,
+      "internalConnectorKm": 20.2860141181803,
+      "sourceArcChordRatio": 1.0069553098856894,
+      "neConnectorKm": 18.86372194740407,
+      "neConnectorKmPer100RoadKm": 2.514953171905398,
+      "neConnectorPaidMinutes": 14.147677725176303,
+      "connectorOnlyAdditionalMinutesAt55": 6.430928035628137,
+      "connectorOnlyAdditionalMinutesAt25": 31.125254948593465,
+      "endpointMinutes": 8.539591300279032,
+      "endpointKm": 3.5581630417828713,
+      "nonroadMinutes": 4.685,
+      "sourceRoundingMinutes": 0.2642862024013084,
+      "modeledDistanceRatio": 1.0078860817513453,
+      "modelAnchorPolylineKm": 764.8337753957834,
+      "orsPolylineKm": 769.7882285498583,
+      "majorRoadMinuteShare": 0.001448001241143921,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1.4693239387883352,
+          "connectorKm": 0.0006369181098896027,
+          "roadMinutes": 0.8396136793076202,
+          "connectorMinutes": 0.00036395320565120156,
+          "recordedMinutes": 0.84
+        },
+        "natural-earth/80": {
+          "roadKm": 691.688455992439,
+          "connectorKm": 18.86308502929418,
+          "roadMinutes": 518.7663419943291,
+          "connectorMinutes": 14.147313771970651,
+          "recordedMinutes": 533.1516666666664
+        },
+        "census-layer/80": {
+          "roadKm": 56.904772251896986,
+          "connectorKm": 1.4222921707762302,
+          "roadMinutes": 42.67857918892274,
+          "connectorMinutes": 3.413501209862952,
+          "recordedMinutes": 46.11833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.651998555140538,
+      "orsWithin1KmOfModel": 0.6436595338215705,
+      "modelWithin3KmOfOrs": 0.7048480527845873,
+      "orsWithin3KmOfModel": 0.6948356473762405
+    },
+    {
+      "id": "frontier/hays-ks-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": 42.421943503233365,
+      "v8Minutes": 610.1986101699,
+      "orsMinutes": 567.7766666666666,
+      "orsKm": 801.5118,
+      "sourceRoadKm": 775.6579839111703,
+      "internalConnectorKm": 21.246517073925233,
+      "sourceArcChordRatio": 1.0074439497278687,
+      "neConnectorKm": 19.824224903149002,
+      "neConnectorKmPer100RoadKm": 2.5557946046255493,
+      "neConnectorPaidMinutes": 14.868054941985005,
+      "connectorOnlyAdditionalMinutesAt55": 6.758372225086635,
+      "connectorOnlyAdditionalMinutesAt25": 32.710084825572594,
+      "endpointMinutes": 5.470276836566941,
+      "endpointKm": 2.410660807748468,
+      "nonroadMinutes": 4.685,
+      "sourceRoundingMinutes": 0.28066852289066446,
+      "modeledDistanceRatio": 0.9996948830025676,
+      "modelAnchorPolylineKm": 789.5231594452506,
+      "orsPolylineKm": 801.5118507590055,
+      "majorRoadMinuteShare": 0.0013998988961908313,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1.4693239387883352,
+          "connectorKm": 0.0006369181098896027,
+          "roadMinutes": 0.8396136793076202,
+          "connectorMinutes": 0.00036395320565120156,
+          "recordedMinutes": 0.84
+        },
+        "natural-earth/80": {
+          "roadKm": 717.2838877204849,
+          "connectorKm": 19.82358798503911,
+          "roadMinutes": 537.962915790364,
+          "connectorMinutes": 14.867690988779353,
+          "recordedMinutes": 553.0849999999996
+        },
+        "census-layer/80": {
+          "roadKm": 56.904772251896986,
+          "connectorKm": 1.4222921707762302,
+          "roadMinutes": 42.67857918892274,
+          "connectorMinutes": 3.413501209862952,
+          "recordedMinutes": 46.11833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.537406005604361,
+      "orsWithin1KmOfModel": 0.5277464631501451,
+      "modelWithin3KmOfOrs": 0.5947702535583158,
+      "orsWithin3KmOfModel": 0.5838643820291144
+    },
+    {
+      "id": "frontier/hays-ks-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": 21.913610169899584,
+      "v8Minutes": 710.3786101698996,
+      "orsMinutes": 688.465,
+      "orsKm": 1250.0495,
+      "sourceRoadKm": 1221.060094495372,
+      "internalConnectorKm": 11.558169423952618,
+      "sourceArcChordRatio": 1.002569227885919,
+      "neConnectorKm": 11.502666661660697,
+      "neConnectorKmPer100RoadKm": 0.9420229776990958,
+      "neConnectorPaidMinutes": 6.572952378091835,
+      "connectorOnlyAdditionalMinutesAt55": 5.975411252810743,
+      "connectorOnlyAdditionalMinutesAt25": 21.03344760989384,
+      "endpointMinutes": 5.2119435032335755,
+      "endpointKm": 2.171643126347294,
+      "nonroadMinutes": 0.22833333333333333,
+      "sourceRoundingMinutes": 0.4835488998138544,
+      "modeledDistanceRatio": 0.9878689171385299,
+      "modelAnchorPolylineKm": 1229.152566695848,
+      "orsPolylineKm": 1250.0491404972126,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1216.4379538765818,
+          "connectorKm": 11.502666661660697,
+          "roadMinutes": 695.1074022151893,
+          "connectorMinutes": 6.572952378091835,
+          "recordedMinutes": 702.1616666666661
+        },
+        "census-layer/105": {
+          "roadKm": 4.622140618790086,
+          "connectorKm": 0.055502762291921276,
+          "roadMinutes": 2.641223210737192,
+          "connectorMinutes": 0.1332066295006111,
+          "recordedMinutes": 2.776666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9387883064212676,
+      "orsWithin1KmOfModel": 0.9309908030951544,
+      "modelWithin3KmOfOrs": 0.9701516617302465,
+      "orsWithin3KmOfModel": 0.9669017541686397
+    },
+    {
+      "id": "frontier/hays-ks-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "signedMinutes": 22.220276836565517,
+      "v8Minutes": 730.0286101698988,
+      "orsMinutes": 707.8083333333333,
+      "orsKm": 1205.7008,
+      "sourceRoadKm": 1180.7612559283639,
+      "internalConnectorKm": 15.36586308367592,
+      "sourceArcChordRatio": 1.0023431280358779,
+      "neConnectorKm": 15.362920063023967,
+      "neConnectorKmPer100RoadKm": 1.3011029948594475,
+      "neConnectorPaidMinutes": 9.748221949382655,
+      "connectorOnlyAdditionalMinutesAt55": 7.011327210279854,
+      "connectorOnlyAdditionalMinutesAt25": 27.122786201874867,
+      "endpointMinutes": 5.213610169900227,
+      "endpointKm": 2.171643126348084,
+      "nonroadMinutes": 0.6183333333333333,
+      "sourceRoundingMinutes": 0.4867434533028927,
+      "modeledDistanceRatio": 0.9940744843391301,
+      "modelAnchorPolylineKm": 1193.2385527050924,
+      "orsPolylineKm": 1205.7009638020547,
+      "majorRoadMinuteShare": 0.7666955108879266,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 961.0513020184042,
+          "connectorKm": 9.934221348157811,
+          "roadMinutes": 549.1721725819453,
+          "connectorMinutes": 5.676697913233039,
+          "recordedMinutes": 555.2383333333324
+        },
+        "natural-earth/80": {
+          "roadKm": 211.47315630885623,
+          "connectorKm": 5.428698714866155,
+          "roadMinutes": 158.60486723164203,
+          "connectorMinutes": 4.071524036149616,
+          "recordedMinutes": 162.77166666666662
+        },
+        "census-layer/80": {
+          "roadKm": 8.236797601103486,
+          "connectorKm": 0.002943020651953644,
+          "roadMinutes": 6.177598200827615,
+          "connectorMinutes": 0.007063249564688746,
+          "recordedMinutes": 6.1866666666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9343824197685617,
+      "orsWithin1KmOfModel": 0.9319372359938946,
+      "modelWithin3KmOfOrs": 0.9692532884453819,
+      "orsWithin3KmOfModel": 0.9706297804112208
+    },
+    {
+      "id": "frontier/duluth-mn-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": -22.581545335619808,
+      "v8Minutes": 353.4567879977135,
+      "orsMinutes": 376.0383333333333,
+      "orsKm": 465.5647,
+      "sourceRoadKm": 446.53225334927095,
+      "internalConnectorKm": 11.217102227485526,
+      "sourceArcChordRatio": 1.0081682534487708,
+      "neConnectorKm": 11.217102227485526,
+      "neConnectorKmPer100RoadKm": 2.512047482203189,
+      "neConnectorPaidMinutes": 8.211718952016742,
+      "connectorOnlyAdditionalMinutesAt55": 4.025119841603832,
+      "connectorOnlyAdditionalMinutesAt25": 18.70932639394852,
+      "endpointMinutes": 6.376300194564042,
+      "endpointKm": 2.656791747735049,
+      "nonroadMinutes": 8.62048780314947,
+      "sourceRoundingMinutes": 0.2312908263596114,
+      "modeledDistanceRatio": 0.9966348764037961,
+      "modelAnchorPolylineKm": 457.45394430496157,
+      "orsPolylineKm": 465.56474952771043,
+      "majorRoadMinuteShare": 0.04810514290216471,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 419.19193452342626,
+          "connectorKm": 10.090899003340095,
+          "roadMinutes": 314.39395089256953,
+          "connectorMinutes": 7.5681742525050675,
+          "recordedMinutes": 322.1783333333334
+        },
+        "natural-earth/105": {
+          "roadKm": 27.340318825844694,
+          "connectorKm": 1.1262032241454305,
+          "roadMinutes": 15.623039329054109,
+          "connectorMinutes": 0.6435446995116746,
+          "recordedMinutes": 16.281666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9614318397074624,
+      "orsWithin1KmOfModel": 0.9530481754812664,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.9932345863973954
+    },
+    {
+      "id": "frontier/duluth-mn-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": -25.044527085685615,
+      "v8Minutes": 372.302139580981,
+      "orsMinutes": 397.34666666666664,
+      "orsKm": 588.7916,
+      "sourceRoadKm": 484.2460794110367,
+      "internalConnectorKm": 12.093413790607022,
+      "sourceArcChordRatio": 1.0064604018524845,
+      "neConnectorKm": 12.093413790607022,
+      "neConnectorKmPer100RoadKm": 2.4973694790292593,
+      "neConnectorPaidMinutes": 8.868895983409477,
+      "connectorOnlyAdditionalMinutesAt55": 4.323919060889093,
+      "connectorOnlyAdditionalMinutesAt25": 20.155297114047375,
+      "endpointMinutes": 5.277139580981327,
+      "endpointKm": 2.40688424957549,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.23425168864798707,
+      "modeledDistanceRatio": 0.8470677527519401,
+      "modelAnchorPolylineKm": 491.25280651680464,
+      "orsPolylineKm": 588.791870942111,
+      "majorRoadMinuteShare": 0.04768067570329001,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 454.7749189211601,
+          "connectorKm": 10.966893377150631,
+          "roadMinutes": 341.08118919086985,
+          "connectorMinutes": 8.225170032862968,
+          "recordedMinutes": 349.5249999999998
+        },
+        "natural-earth/105": {
+          "roadKm": 29.471160489876585,
+          "connectorKm": 1.12652041345639,
+          "roadMinutes": 16.840663137072333,
+          "connectorMinutes": 0.6437259505465085,
+          "recordedMinutes": 17.5
+        }
+      },
+      "modelWithin1KmOfOrs": 0.06442459244910552,
+      "orsWithin1KmOfModel": 0.05142838771536227,
+      "modelWithin3KmOfOrs": 0.07972969630804455,
+      "orsWithin3KmOfModel": 0.06254273377694572
+    },
+    {
+      "id": "frontier/duluth-mn-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": -14.8445270856854,
+      "v8Minutes": 590.0104729143146,
+      "orsMinutes": 604.855,
+      "orsKm": 979.4055,
+      "sourceRoadKm": 956.6719043582689,
+      "internalConnectorKm": 33.81596800070243,
+      "sourceArcChordRatio": 1.0038142735862714,
+      "neConnectorKm": 28.03991394187203,
+      "neConnectorKmPer100RoadKm": 2.9309854103723336,
+      "neConnectorPaidMinutes": 16.265161741344247,
+      "connectorOnlyAdditionalMinutesAt55": 14.323835286152512,
+      "connectorOnlyAdditionalMinutesAt25": 51.03063171914863,
+      "endpointMinutes": 3.0154729143145778,
+      "endpointKm": 1.2557526031886632,
+      "nonroadMinutes": 2.165,
+      "sourceRoundingMinutes": 0.3653881368945804,
+      "modeledDistanceRatio": 1.0135186174628317,
+      "modelAnchorPolylineKm": 981.1996151910522,
+      "orsPolylineKm": 979.4055171208638,
+      "majorRoadMinuteShare": 0.9194609259670902,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 7.036146763371851,
+          "connectorKm": 1.3571811375372886,
+          "roadMinutes": 5.277110072528887,
+          "connectorMinutes": 1.0178858531529662,
+          "recordedMinutes": 6.298333333333333
+        },
+        "natural-earth/105": {
+          "roadKm": 913.7352441735434,
+          "connectorKm": 26.68273280433474,
+          "roadMinutes": 522.1344252420241,
+          "connectorMinutes": 15.24727588819128,
+          "recordedMinutes": 537.7283333333334
+        },
+        "census-layer/80": {
+          "roadKm": 35.90051342135362,
+          "connectorKm": 5.776054058830405,
+          "roadMinutes": 26.92538506601522,
+          "connectorMinutes": 13.862529741192972,
+          "recordedMinutes": 40.803333333333335
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8670416171271531,
+      "orsWithin1KmOfModel": 0.8752709653457429,
+      "modelWithin3KmOfOrs": 0.9479095240352648,
+      "orsWithin3KmOfModel": 0.9551362105022503
+    },
+    {
+      "id": "frontier/duluth-mn-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": -3.4561937523537836,
+      "v8Minutes": 610.0688062476462,
+      "orsMinutes": 613.525,
+      "orsKm": 925.8345,
+      "sourceRoadKm": 978.7136687059018,
+      "internalConnectorKm": 18.558286076781705,
+      "sourceArcChordRatio": 1.0052321238004245,
+      "neConnectorKm": 16.426321098466975,
+      "neConnectorKmPer100RoadKm": 1.6783581984899196,
+      "neConnectorPaidMinutes": 9.976820780777523,
+      "connectorOnlyAdditionalMinutesAt55": 7.942802235731904,
+      "connectorOnlyAdditionalMinutesAt25": 29.446349855543218,
+      "endpointMinutes": 3.013806247647905,
+      "endpointKm": 1.2557526031866808,
+      "nonroadMinutes": 0.04833333333333333,
+      "sourceRoundingMinutes": 0.3706849335787865,
+      "modeledDistanceRatio": 1.0785381688355307,
+      "modelAnchorPolylineKm": 990.4387423728903,
+      "orsPolylineKm": 925.8341893944717,
+      "majorRoadMinuteShare": 0.7640333439500939,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 124.3124940269501,
+          "connectorKm": 3.305968857259859,
+          "roadMinutes": 93.23437052021258,
+          "connectorMinutes": 2.479476642944894,
+          "recordedMinutes": 95.76000000000006
+        },
+        "natural-earth/105": {
+          "roadKm": 797.9597165404066,
+          "connectorKm": 13.120352241207117,
+          "roadMinutes": 455.9769808802319,
+          "connectorMinutes": 7.497344137832628,
+          "recordedMinutes": 463.77333333333206
+        },
+        "census-layer/80": {
+          "roadKm": 56.44145813854513,
+          "connectorKm": 2.131964978314728,
+          "roadMinutes": 42.33109360390885,
+          "connectorMinutes": 5.116715947955346,
+          "recordedMinutes": 47.47333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.39699867859128884,
+      "orsWithin1KmOfModel": 0.42795106093687346,
+      "modelWithin3KmOfOrs": 0.43783853610231765,
+      "orsWithin3KmOfModel": 0.47250667557189696
+    },
+    {
+      "id": "frontier/duluth-mn-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": 28.747139580981184,
+      "v8Minutes": 711.9788062476479,
+      "orsMinutes": 683.2316666666667,
+      "orsKm": 1128.9576000000002,
+      "sourceRoadKm": 1094.2344844161341,
+      "internalConnectorKm": 22.128513423292883,
+      "sourceArcChordRatio": 1.0043581958861134,
+      "neConnectorKm": 22.068349331866557,
+      "neConnectorKmPer100RoadKm": 2.0167843041102724,
+      "neConnectorPaidMinutes": 15.20613629394062,
+      "connectorOnlyAdditionalMinutesAt55": 8.86842661355017,
+      "connectorOnlyAdditionalMinutesAt25": 37.75790210253912,
+      "endpointMinutes": 3.0154729143148855,
+      "endpointKm": 1.255752603187765,
+      "nonroadMinutes": 1.9516666666666667,
+      "sourceRoundingMinutes": 0.5387142519456347,
+      "modeledDistanceRatio": 0.9906766603874751,
+      "modelAnchorPolylineKm": 1105.6830117149561,
+      "orsPolylineKm": 1128.9577157440801,
+      "majorRoadMinuteShare": 0.5931891741531855,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 368.7352147559683,
+          "connectorKm": 14.53564538409448,
+          "roadMinutes": 276.55141106697636,
+          "connectorMinutes": 10.901734038070861,
+          "recordedMinutes": 287.6200000000003
+        },
+        "natural-earth/105": {
+          "roadKm": 724.1397272345968,
+          "connectorKm": 7.532703947772079,
+          "roadMinutes": 413.7941298483411,
+          "connectorMinutes": 4.30440225586976,
+          "recordedMinutes": 418.47000000000037
+        },
+        "census-layer/105": {
+          "roadKm": 1.3595424255691033,
+          "connectorKm": 0.0601640914263238,
+          "roadMinutes": 0.7768813860394876,
+          "connectorMinutes": 0.1443938194231771,
+          "recordedMinutes": 0.9216666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9202041648176682,
+      "orsWithin1KmOfModel": 0.9072720286249096,
+      "modelWithin3KmOfOrs": 0.9870666188250993,
+      "orsWithin3KmOfModel": 0.9782512651840699
+    },
+    {
+      "id": "frontier/duluth-mn-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "signedMinutes": 29.86817299855477,
+      "v8Minutes": 729.8898396652215,
+      "orsMinutes": 700.0216666666668,
+      "orsKm": 1081.1162,
+      "sourceRoadKm": 1055.6019394272366,
+      "internalConnectorKm": 28.14869784076567,
+      "sourceArcChordRatio": 1.0047382507892744,
+      "neConnectorKm": 20.967329375123004,
+      "neConnectorKmPer100RoadKm": 1.9862912895461098,
+      "neConnectorPaidMinutes": 14.576982032944304,
+      "connectorOnlyAdditionalMinutesAt55": 8.296468194462612,
+      "connectorOnlyAdditionalMinutesAt25": 35.7446084673509,
+      "endpointMinutes": 3.013806247648194,
+      "endpointKm": 1.2557526031866808,
+      "nonroadMinutes": 10.581033417573831,
+      "sourceRoundingMinutes": 0.5120466757865643,
+      "modeledDistanceRatio": 1.0076762828964898,
+      "modelAnchorPolylineKm": 1076.247170104732,
+      "orsPolylineKm": 1081.1164108768876,
+      "majorRoadMinuteShare": 0.48685015717453556,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 368.7352147559683,
+          "connectorKm": 14.53564538409448,
+          "roadMinutes": 276.55141106697636,
+          "connectorMinutes": 10.901734038070861,
+          "recordedMinutes": 287.6200000000003
+        },
+        "natural-earth/105": {
+          "roadKm": 603.2922985415278,
+          "connectorKm": 6.431683991028525,
+          "roadMinutes": 344.7384563094445,
+          "connectorMinutes": 3.675247994873443,
+          "recordedMinutes": 348.7283333333337
+        },
+        "census-layer/80": {
+          "roadKm": 83.57442612974054,
+          "connectorKm": 7.181368465642665,
+          "roadMinutes": 62.6808195973054,
+          "connectorMinutes": 17.235284317542398,
+          "recordedMinutes": 79.94666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9374597796885836,
+      "orsWithin1KmOfModel": 0.9374213245998821,
+      "modelWithin3KmOfOrs": 0.9867128850636329,
+      "orsWithin3KmOfModel": 0.987253998482016
+    },
+    {
+      "id": "frontier/columbus-oh-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -16.228596284867592,
+      "v8Minutes": 350.04307038179905,
+      "orsMinutes": 366.27166666666665,
+      "orsKm": 516.3627,
+      "sourceRoadKm": 468.8147048535943,
+      "internalConnectorKm": 32.13309308101924,
+      "sourceArcChordRatio": 1.0268654822616108,
+      "neConnectorKm": 18.90513128817284,
+      "neConnectorKmPer100RoadKm": 4.032538035272743,
+      "neConnectorPaidMinutes": 12.648716539839352,
+      "connectorOnlyAdditionalMinutesAt55": 7.975063047258292,
+      "connectorOnlyAdditionalMinutesAt25": 32.72359855177545,
+      "endpointMinutes": 3.0814037151325255,
+      "endpointKm": 1.283918214638568,
+      "nonroadMinutes": 4.5600000000000005,
+      "sourceRoundingMinutes": 0.20473025875924122,
+      "modeledDistanceRatio": 0.9763131925471226,
+      "modelAnchorPolylineKm": 484.40625060612825,
+      "orsPolylineKm": 516.3620090270437,
+      "majorRoadMinuteShare": 0.5242429700011197,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 261.227909438202,
+          "connectorKm": 8.568738787225593,
+          "roadMinutes": 149.27309110754396,
+          "connectorMinutes": 4.896422164128918,
+          "recordedMinutes": 154.28333333333333
+        },
+        "natural-earth/80": {
+          "roadKm": 121.49173227691475,
+          "connectorKm": 10.336392500947246,
+          "roadMinutes": 91.11879920768605,
+          "connectorMinutes": 7.752294375710434,
+          "recordedMinutes": 98.92833333333333
+        },
+        "census-layer/105": {
+          "roadKm": 40.107626181569216,
+          "connectorKm": 0.9511303690321021,
+          "roadMinutes": 22.918643532325266,
+          "connectorMinutes": 2.282712885677045,
+          "recordedMinutes": 25.218333333333334
+        },
+        "census-layer/80": {
+          "roadKm": 45.98743695690837,
+          "connectorKm": 12.276831423814299,
+          "roadMinutes": 34.49057771768126,
+          "connectorMinutes": 29.464395417154332,
+          "recordedMinutes": 63.97166666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.18466480998548976,
+      "orsWithin1KmOfModel": 0.19239184664708447,
+      "modelWithin3KmOfOrs": 0.20609912086556495,
+      "orsWithin3KmOfModel": 0.21419393369200485
+    },
+    {
+      "id": "frontier/columbus-oh-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -30.163596284867538,
+      "v8Minutes": 370.00807038179914,
+      "orsMinutes": 400.1716666666667,
+      "orsKm": 588.5353,
+      "sourceRoadKm": 542.0032850397024,
+      "internalConnectorKm": 35.70079039907046,
+      "sourceArcChordRatio": 1.0124877152922411,
+      "neConnectorKm": 31.514140070232187,
+      "neConnectorKmPer100RoadKm": 5.814381746399146,
+      "neConnectorPaidMinutes": 19.853864415301825,
+      "connectorOnlyAdditionalMinutesAt55": 14.525197479496928,
+      "connectorOnlyAdditionalMinutesAt25": 55.78007175325543,
+      "endpointMinutes": 3.0814037151325673,
+      "endpointKm": 1.283918214638568,
+      "nonroadMinutes": 4.576666666666667,
+      "sourceRoundingMinutes": 0.23355956951155576,
+      "modeledDistanceRatio": 0.9870180057132611,
+      "modelAnchorPolylineKm": 565.6710385178359,
+      "orsPolylineKm": 588.5348859037359,
+      "majorRoadMinuteShare": 0.6958741548226857,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 373.5670006170852,
+          "connectorKm": 21.177747569284943,
+          "roadMinutes": 213.46685749547729,
+          "connectorMinutes": 12.10157003959139,
+          "recordedMinutes": 225.72166666666675
+        },
+        "natural-earth/80": {
+          "roadKm": 121.49173227691475,
+          "connectorKm": 10.336392500947246,
+          "roadMinutes": 91.11879920768605,
+          "connectorMinutes": 7.752294375710434,
+          "recordedMinutes": 98.92833333333333
+        },
+        "census-layer/105": {
+          "roadKm": 42.44495128420692,
+          "connectorKm": 0.8975893538460641,
+          "roadMinutes": 24.254257876689675,
+          "connectorMinutes": 2.154214449230554,
+          "recordedMinutes": 26.428333333333335
+        },
+        "census-layer/80": {
+          "roadKm": 4.499600861495511,
+          "connectorKm": 3.289060974992213,
+          "roadMinutes": 3.3747006461216333,
+          "connectorMinutes": 7.893746339981311,
+          "recordedMinutes": 11.271666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.47333673946035987,
+      "orsWithin1KmOfModel": 0.4848144081875182,
+      "modelWithin3KmOfOrs": 0.5206807517029485,
+      "orsWithin3KmOfModel": 0.5390759467839702
+    },
+    {
+      "id": "frontier/columbus-oh-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -26.30702915468771,
+      "v8Minutes": 589.999637511979,
+      "orsMinutes": 616.3066666666667,
+      "orsKm": 954.3860999999999,
+      "sourceRoadKm": 912.654613363835,
+      "internalConnectorKm": 38.67034314519664,
+      "sourceArcChordRatio": 1.010380409767015,
+      "neConnectorKm": 31.266116189566613,
+      "neConnectorKmPer100RoadKm": 3.42584321952057,
+      "neConnectorPaidMinutes": 17.866352108323774,
+      "connectorOnlyAdditionalMinutesAt55": 16.242138280294355,
+      "connectorOnlyAdditionalMinutesAt25": 57.172326746636095,
+      "endpointMinutes": 3.081403715132627,
+      "endpointKm": 1.283918214638568,
+      "nonroadMinutes": 22.523233796846636,
+      "sourceRoundingMinutes": 0.3926465727873847,
+      "modeledDistanceRatio": 1.0079710459659423,
+      "modelAnchorPolylineKm": 939.7914269973395,
+      "orsPolylineKm": 954.3860668428981,
+      "majorRoadMinuteShare": 0.9177614968240329,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 864.2216829876248,
+          "connectorKm": 31.266116189566613,
+          "roadMinutes": 493.84096170721466,
+          "connectorMinutes": 17.866352108323774,
+          "recordedMinutes": 512.0816666666665
+        },
+        "census-layer/105": {
+          "roadKm": 10.078896038376087,
+          "connectorKm": 0.05623522028960597,
+          "roadMinutes": 5.759369164786336,
+          "connectorMinutes": 0.13496452869505432,
+          "recordedMinutes": 5.898333333333333
+        },
+        "census-layer/80": {
+          "roadKm": 38.354034337834015,
+          "connectorKm": 7.347991735340423,
+          "roadMinutes": 28.765525753375506,
+          "connectorMinutes": 17.63518016481701,
+          "recordedMinutes": 46.415
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9312998656567602,
+      "orsWithin1KmOfModel": 0.9282412625565293,
+      "modelWithin3KmOfOrs": 0.9739173947591795,
+      "orsWithin3KmOfModel": 0.969950890096998
+    },
+    {
+      "id": "frontier/columbus-oh-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -23.221929618200647,
+      "v8Minutes": 609.9864037151327,
+      "orsMinutes": 633.2083333333334,
+      "orsKm": 961.1052,
+      "sourceRoadKm": 967.5346923899748,
+      "internalConnectorKm": 41.10281348301261,
+      "sourceArcChordRatio": 1.0073663325764184,
+      "neConnectorKm": 36.86322827537447,
+      "neConnectorKmPer100RoadKm": 3.8100161746465173,
+      "neConnectorPaidMinutes": 21.863463279779765,
+      "connectorOnlyAdditionalMinutesAt55": 18.35096756608329,
+      "connectorOnlyAdditionalMinutesAt25": 66.60828458111895,
+      "endpointMinutes": 3.081403715132692,
+      "endpointKm": 1.283918214638568,
+      "nonroadMinutes": 0.815,
+      "sourceRoundingMinutes": 0.40707088612714415,
+      "modeledDistanceRatio": 1.051145085284066,
+      "modelAnchorPolylineKm": 987.3090659354671,
+      "orsPolylineKm": 961.1044425809871,
+      "majorRoadMinuteShare": 0.8336853162621614,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 851.2367245576302,
+          "connectorKm": 32.39016438980604,
+          "roadMinutes": 486.4209854615031,
+          "connectorMinutes": 18.50866536560344,
+          "recordedMinutes": 505.2883333333334
+        },
+        "natural-earth/80": {
+          "roadKm": 54.110373407467016,
+          "connectorKm": 4.473063885568431,
+          "roadMinutes": 40.58278005560025,
+          "connectorMinutes": 3.3547979141763222,
+          "recordedMinutes": 43.96166666666666
+        },
+        "census-layer/80": {
+          "roadKm": 62.18759442487762,
+          "connectorKm": 4.239585207638145,
+          "roadMinutes": 46.640695818658195,
+          "connectorMinutes": 10.175004498331548,
+          "recordedMinutes": 56.839999999999996
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7982381796571417,
+      "orsWithin1KmOfModel": 0.8232028527543047,
+      "modelWithin3KmOfOrs": 0.8431437643843206,
+      "orsWithin3KmOfModel": 0.8684531065722654
+    },
+    {
+      "id": "frontier/columbus-oh-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -61.07692961820021,
+      "v8Minutes": 710.026403715133,
+      "orsMinutes": 771.1033333333332,
+      "orsKm": 1119.3559,
+      "sourceRoadKm": 1115.7025583264995,
+      "internalConnectorKm": 44.47686845915183,
+      "sourceArcChordRatio": 1.0049248959971868,
+      "neConnectorKm": 37.0640670536385,
+      "neConnectorKmPer100RoadKm": 3.322038367397206,
+      "neConnectorPaidMinutes": 22.850873826259733,
+      "connectorOnlyAdditionalMinutesAt55": 17.58265386861863,
+      "connectorOnlyAdditionalMinutesAt25": 66.10288710247268,
+      "endpointMinutes": 3.0814037151323976,
+      "endpointKm": 1.283918214638568,
+      "nonroadMinutes": 3.1383333333333336,
+      "sourceRoundingMinutes": 0.48089767460817257,
+      "modeledDistanceRatio": 1.038785773040709,
+      "modelAnchorPolylineKm": 1146.051540972464,
+      "orsPolylineKm": 1119.3561971313638,
+      "majorRoadMinuteShare": 0.8147952562730292,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 952.1695663072906,
+          "connectorKm": 27.348253456076737,
+          "roadMinutes": 544.0968950327385,
+          "connectorMinutes": 15.627573403472422,
+          "recordedMinutes": 560.1300000000002
+        },
+        "natural-earth/90": {
+          "roadKm": 1.1820289409028266,
+          "connectorKm": 0.76271730460813,
+          "roadMinutes": 0.7880192939352177,
+          "connectorMinutes": 0.5084782030720867,
+          "recordedMinutes": 1.2966666666666666
+        },
+        "census-layer/80": {
+          "roadKm": 37.659262168122886,
+          "connectorKm": 7.148416642036882,
+          "roadMinutes": 28.244446626092166,
+          "connectorMinutes": 17.15619994088852,
+          "recordedMinutes": 45.42166666666665
+        },
+        "natural-earth/80": {
+          "roadKm": 102.49349779030206,
+          "connectorKm": 8.953096292953635,
+          "roadMinutes": 76.87012334272653,
+          "connectorMinutes": 6.714822219715225,
+          "recordedMinutes": 83.62999999999998
+        },
+        "census-layer/105": {
+          "roadKm": 22.198203119881217,
+          "connectorKm": 0.2643847634764487,
+          "roadMinutes": 12.684687497074982,
+          "connectorMinutes": 0.6345234323434769,
+          "recordedMinutes": 13.328333333333335
+        }
+      },
+      "modelWithin1KmOfOrs": 0.5968331685828524,
+      "orsWithin1KmOfModel": 0.6151381226421899,
+      "modelWithin3KmOfOrs": 0.8071516140570881,
+      "orsWithin3KmOfModel": 0.8298361923934711
+    },
+    {
+      "id": "frontier/columbus-oh-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "signedMinutes": -51.55093590930778,
+      "v8Minutes": 730.9490640906922,
+      "orsMinutes": 782.5,
+      "orsKm": 1155.5136,
+      "sourceRoadKm": 1127.0459225892748,
+      "internalConnectorKm": 41.87299547433875,
+      "sourceArcChordRatio": 1.006258078927317,
+      "neConnectorKm": 41.87299547433875,
+      "neConnectorKmPer100RoadKm": 3.7152874284075086,
+      "neConnectorPaidMinutes": 27.195991006035428,
+      "connectorOnlyAdditionalMinutesAt55": 18.48364042051594,
+      "connectorOnlyAdditionalMinutesAt25": 73.29919813237758,
+      "endpointMinutes": 4.027923658944239,
+      "endpointKm": 1.6783015245600672,
+      "nonroadMinutes": 6.567807098413489,
+      "sourceRoundingMinutes": 0.48174424383125825,
+      "modeledDistanceRatio": 1.0154218919441356,
+      "modelAnchorPolylineKm": 1153.6388179332573,
+      "orsPolylineKm": 1155.513815004969,
+      "majorRoadMinuteShare": 0.6971092889600466,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 854.6095256075382,
+          "connectorKm": 23.569031358424457,
+          "roadMinutes": 488.3483003471653,
+          "connectorMinutes": 13.4680179190997,
+          "recordedMinutes": 502.16500000000025
+        },
+        "natural-earth/80": {
+          "roadKm": 272.43639698173655,
+          "connectorKm": 18.303964115914297,
+          "roadMinutes": 204.32729773630246,
+          "connectorMinutes": 13.72797308693573,
+          "recordedMinutes": 218.18833333333316
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7713972750228542,
+      "orsWithin1KmOfModel": 0.779990920447556,
+      "modelWithin3KmOfOrs": 0.9482862944793081,
+      "orsWithin3KmOfModel": 0.9551293338833512
+    },
+    {
+      "id": "frontier/asheville-nc-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -29.55333333333317,
+      "v8Minutes": 349.91333333333347,
+      "orsMinutes": 379.46666666666664,
+      "orsKm": 494.69759999999997,
+      "sourceRoadKm": 475.74961623860196,
+      "internalConnectorKm": 34.999556786433715,
+      "sourceArcChordRatio": 1.0109677472325642,
+      "neConnectorKm": 34.1468342457487,
+      "neConnectorKmPer100RoadKm": 7.177480145065023,
+      "neConnectorPaidMinutes": 23.873298523699674,
+      "connectorOnlyAdditionalMinutesAt55": 13.377793380753452,
+      "connectorOnlyAdditionalMinutesAt25": 58.0791036660972,
+      "endpointMinutes": 1.8249999999999917,
+      "endpointKm": 1.4522364297041874,
+      "nonroadMinutes": 0.7466666666666667,
+      "sourceRoundingMinutes": 0.18547507938865238,
+      "modeledDistanceRatio": 1.036011738415248,
+      "modelAnchorPolylineKm": 498.5635468467088,
+      "orsPolylineKm": 494.69740153160825,
+      "majorRoadMinuteShare": 0.3377318202538325,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 2.2472515455380275,
+          "connectorKm": 0.09798354127917658,
+          "roadMinutes": 1.2841437403074443,
+          "connectorMinutes": 0.23516049907002376,
+          "recordedMinutes": 1.52
+        },
+        "natural-earth/105": {
+          "roadKm": 193.30466115008514,
+          "connectorKm": 9.192939146875338,
+          "roadMinutes": 110.45980637147724,
+          "connectorMinutes": 5.253108083928762,
+          "recordedMinutes": 115.78833333333333
+        },
+        "natural-earth/80": {
+          "roadKm": 264.59329519214475,
+          "connectorKm": 23.811124486264035,
+          "roadMinutes": 198.4449713941085,
+          "connectorMinutes": 17.85834336469803,
+          "recordedMinutes": 216.4066666666667
+        },
+        "natural-earth/90": {
+          "roadKm": 7.870425637011189,
+          "connectorKm": 1.142770612609326,
+          "roadMinutes": 5.246950424674126,
+          "connectorMinutes": 0.7618470750728839,
+          "recordedMinutes": 6.011666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 7.733982713822827,
+          "connectorKm": 0.7547389994058386,
+          "roadMinutes": 5.800487035367121,
+          "connectorMinutes": 1.8113735985740125,
+          "recordedMinutes": 7.615
+        }
+      },
+      "modelWithin1KmOfOrs": 0.5084010153958674,
+      "orsWithin1KmOfModel": 0.5170715786215188,
+      "modelWithin3KmOfOrs": 0.5322799766284692,
+      "orsWithin3KmOfModel": 0.5413955337953371
+    },
+    {
+      "id": "frontier/asheville-nc-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -29.194999999999766,
+      "v8Minutes": 370.21833333333353,
+      "orsMinutes": 399.4133333333333,
+      "orsKm": 628.5334,
+      "sourceRoadKm": 613.6476372258286,
+      "internalConnectorKm": 18.690266204605255,
+      "sourceArcChordRatio": 1.0026426459823945,
+      "neConnectorKm": 18.592282663326078,
+      "neConnectorKmPer100RoadKm": 3.0297978082956307,
+      "neConnectorPaidMinutes": 11.045091128142664,
+      "connectorOnlyAdditionalMinutesAt55": 9.237399050031238,
+      "connectorOnlyAdditionalMinutesAt25": 33.57638726383992,
+      "endpointMinutes": 2.0016666666665945,
+      "endpointKm": 1.6395661229362812,
+      "nonroadMinutes": 0.64,
+      "sourceRoundingMinutes": 0.23166335893614587,
+      "modeledDistanceRatio": 1.0090858118598576,
+      "modelAnchorPolylineKm": 629.6615953187547,
+      "orsPolylineKm": 628.533378553499,
+      "majorRoadMinuteShare": 0.933356306620841,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 2.2472515455380275,
+          "connectorKm": 0.09798354127917658,
+          "roadMinutes": 1.2841437403074443,
+          "connectorMinutes": 0.23516049907002376,
+          "recordedMinutes": 1.52
+        },
+        "natural-earth/105": {
+          "roadKm": 581.1102153920403,
+          "connectorKm": 16.235076868370598,
+          "roadMinutes": 332.06298022402297,
+          "connectorMinutes": 9.277186781926053,
+          "recordedMinutes": 341.5600000000003
+        },
+        "natural-earth/80": {
+          "roadKm": 30.29017028825026,
+          "connectorKm": 2.3572057949554805,
+          "roadMinutes": 22.717627716187692,
+          "connectorMinutes": 1.7679043462166102,
+          "recordedMinutes": 24.496666666666663
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9759889563438577,
+      "orsWithin1KmOfModel": 0.9864841766674391,
+      "modelWithin3KmOfOrs": 0.9869640235152447,
+      "orsWithin3KmOfModel": 0.9990230458797944
+    },
+    {
+      "id": "frontier/asheville-nc-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -39.037171498583916,
+      "v8Minutes": 589.9994951680827,
+      "orsMinutes": 629.0366666666666,
+      "orsKm": 952.2556,
+      "sourceRoadKm": 935.1057692545933,
+      "internalConnectorKm": 31.834923083143845,
+      "sourceArcChordRatio": 1.0084914006305774,
+      "neConnectorKm": 28.779930828185037,
+      "neConnectorKmPer100RoadKm": 3.07771930988369,
+      "neConnectorPaidMinutes": 18.26702910215237,
+      "connectorOnlyAdditionalMinutesAt55": 13.12925907404949,
+      "connectorOnlyAdditionalMinutesAt25": 50.80480488549171,
+      "endpointMinutes": 1.8233333333332968,
+      "endpointKm": 1.4522364297027899,
+      "nonroadMinutes": 13.692828501416072,
+      "sourceRoundingMinutes": 0.3994832327473432,
+      "modeledDistanceRatio": 1.0229378267519387,
+      "modelAnchorPolylineKm": 958.3580784641432,
+      "orsPolylineKm": 952.255516643512,
+      "majorRoadMinuteShare": 0.8766950013055208,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 66.45328485379106,
+          "connectorKm": 1.4861915470875966,
+          "roadMinutes": 37.97330563073775,
+          "connectorMinutes": 3.5668597130102313,
+          "recordedMinutes": 41.565
+        },
+        "natural-earth/105": {
+          "roadKm": 789.4758443309166,
+          "connectorKm": 18.580346506323817,
+          "roadMinutes": 451.1290539033806,
+          "connectorMinutes": 10.617340860756457,
+          "recordedMinutes": 462.08166666666665
+        },
+        "natural-earth/80": {
+          "roadKm": 64.4311353678587,
+          "connectorKm": 10.19958432186122,
+          "roadMinutes": 48.32335152589401,
+          "connectorMinutes": 7.649688241395915,
+          "recordedMinutes": 56.006666666666675
+        },
+        "census-layer/80": {
+          "roadKm": 14.745504702026821,
+          "connectorKm": 1.5688007078712103,
+          "roadMinutes": 11.059128526520116,
+          "connectorMinutes": 3.7651216988909044,
+          "recordedMinutes": 14.829999999999998
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6167026002096954,
+      "orsWithin1KmOfModel": 0.6436288420812882,
+      "modelWithin3KmOfOrs": 0.7215251405069653,
+      "orsWithin3KmOfModel": 0.7578646593122716
+    },
+    {
+      "id": "frontier/asheville-nc-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -57.18333333333317,
+      "v8Minutes": 610.1833333333335,
+      "orsMinutes": 667.3666666666667,
+      "orsKm": 1000.2541,
+      "sourceRoadKm": 977.3909278278084,
+      "internalConnectorKm": 33.6607553056357,
+      "sourceArcChordRatio": 1.008931673455016,
+      "neConnectorKm": 32.1745637585481,
+      "neConnectorKmPer100RoadKm": 3.2918827914695408,
+      "neConnectorPaidMinutes": 20.813003799924665,
+      "connectorOnlyAdditionalMinutesAt55": 14.286520300309633,
+      "connectorOnlyAdditionalMinutesAt25": 56.40594922059078,
+      "endpointMinutes": 2.0066666666666078,
+      "endpointKm": 1.5936722501560912,
+      "nonroadMinutes": 3.183333333333333,
+      "sourceRoundingMinutes": 0.41476130395483324,
+      "modeledDistanceRatio": 1.013714159504559,
+      "modelAnchorPolylineKm": 997.4858392257145,
+      "orsPolylineKm": 1000.2531709404298,
+      "majorRoadMinuteShare": 0.8324830025675211,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 66.45328485379106,
+          "connectorKm": 1.4861915470875966,
+          "roadMinutes": 37.97330563073775,
+          "connectorMinutes": 3.5668597130102313,
+          "recordedMinutes": 41.565
+        },
+        "natural-earth/105": {
+          "roadKm": 789.4758443309166,
+          "connectorKm": 18.580346506323817,
+          "roadMinutes": 451.1290539033806,
+          "connectorMinutes": 10.617340860756457,
+          "recordedMinutes": 462.08166666666665
+        },
+        "natural-earth/80": {
+          "roadKm": 121.46179864310061,
+          "connectorKm": 13.594217252224288,
+          "roadMinutes": 91.09634898232541,
+          "connectorMinutes": 10.195662939168209,
+          "recordedMinutes": 101.3466666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.636691433331816,
+      "orsWithin1KmOfModel": 0.662880166990546,
+      "modelWithin3KmOfOrs": 0.7333059679870513,
+      "orsWithin3KmOfModel": 0.7694836460978564
+    },
+    {
+      "id": "frontier/asheville-nc-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -111.5733333333335,
+      "v8Minutes": 710.4549999999998,
+      "orsMinutes": 822.0283333333333,
+      "orsKm": 1263.4553,
+      "sourceRoadKm": 1190.0885285776944,
+      "internalConnectorKm": 40.39339011458432,
+      "sourceArcChordRatio": 1.0075871076178586,
+      "neConnectorKm": 40.365976426765684,
+      "neConnectorKmPer100RoadKm": 3.391846527166185,
+      "neConnectorPaidMinutes": 23.419887119134707,
+      "connectorOnlyAdditionalMinutesAt55": 20.615723528246043,
+      "connectorOnlyAdditionalMinutesAt25": 73.45845630510294,
+      "endpointMinutes": 3.301666666666621,
+      "endpointKm": 2.0677177970315057,
+      "nonroadMinutes": 0.37333333333333335,
+      "sourceRoundingMinutes": 0.48486224207795203,
+      "modeledDistanceRatio": 0.9756618948409695,
+      "modelAnchorPolylineKm": 1211.7914187262445,
+      "orsPolylineKm": 1263.4553468233532,
+      "majorRoadMinuteShare": 0.9691558900930982,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1159.1147973398663,
+          "connectorKm": 36.653020236445386,
+          "roadMinutes": 662.351312765638,
+          "connectorMinutes": 20.94458299225451,
+          "recordedMinutes": 683.7666666666664
+        },
+        "natural-earth/90": {
+          "roadKm": 28.968135308068977,
+          "connectorKm": 3.7129561903202966,
+          "roadMinutes": 19.312090205379317,
+          "connectorMinutes": 2.475304126880198,
+          "recordedMinutes": 21.8
+        },
+        "census-layer/105": {
+          "roadKm": 2.0055959297590613,
+          "connectorKm": 0.02741368781863728,
+          "roadMinutes": 1.1460548170051779,
+          "connectorMinutes": 0.06579285076472946,
+          "recordedMinutes": 1.2133333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8866602054781316,
+      "orsWithin1KmOfModel": 0.8603566747739113,
+      "modelWithin3KmOfOrs": 0.9671856918787274,
+      "orsWithin3KmOfModel": 0.9490115472187575
+    },
+    {
+      "id": "frontier/asheville-nc-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "signedMinutes": -101.21166666666682,
+      "v8Minutes": 729.9949999999999,
+      "orsMinutes": 831.2066666666667,
+      "orsKm": 1257.8516000000002,
+      "sourceRoadKm": 1198.332074904133,
+      "internalConnectorKm": 40.854519412952364,
+      "sourceArcChordRatio": 1.0084969228128213,
+      "neConnectorKm": 37.830615896591,
+      "neConnectorKmPer100RoadKm": 3.156939273249234,
+      "neConnectorPaidMinutes": 22.038077520738938,
+      "connectorOnlyAdditionalMinutesAt55": 19.231685275542155,
+      "connectorOnlyAdditionalMinutesAt25": 68.75540063107945,
+      "endpointMinutes": 3.3016666666666623,
+      "endpointKm": 2.067717797031875,
+      "nonroadMinutes": 1.4533333333333334,
+      "sourceRoundingMinutes": 0.49041062489357046,
+      "modeledDistanceRatio": 0.9872864713688584,
+      "modelAnchorPolylineKm": 1219.5853924379205,
+      "orsPolylineKm": 1257.8452228388512,
+      "majorRoadMinuteShare": 0.9190314010994062,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1130.9123595771719,
+          "connectorKm": 34.69240027175277,
+          "roadMinutes": 646.235634044098,
+          "connectorMinutes": 19.824228726715873,
+          "recordedMinutes": 666.5183333333332
+        },
+        "natural-earth/90": {
+          "roadKm": 16.15532549062397,
+          "connectorKm": 1.6777550952673328,
+          "roadMinutes": 10.770216993749312,
+          "connectorMinutes": 1.1185033968448885,
+          "recordedMinutes": 11.895
+        },
+        "natural-earth/80": {
+          "roadKm": 33.037502448346935,
+          "connectorKm": 1.4604605295708992,
+          "roadMinutes": 24.778126836260196,
+          "connectorMinutes": 1.0953453971781744,
+          "recordedMinutes": 25.89
+        },
+        "census-layer/80": {
+          "roadKm": 18.22688738799018,
+          "connectorKm": 3.023903516361363,
+          "roadMinutes": 13.670165540992631,
+          "connectorMinutes": 7.257368439267271,
+          "recordedMinutes": 20.936666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8407812325137198,
+      "orsWithin1KmOfModel": 0.8261438040866844,
+      "modelWithin3KmOfOrs": 0.9236743888347632,
+      "orsWithin3KmOfModel": 0.9152577719956634
+    },
+    {
+      "id": "frontier/portland-me-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -76.5516666666669,
+      "v8Minutes": 350.1633333333331,
+      "orsMinutes": 426.71500000000003,
+      "orsKm": 590.067,
+      "sourceRoadKm": 548.2553963673522,
+      "internalConnectorKm": 49.230330435656,
+      "sourceArcChordRatio": 1.0073970237104823,
+      "neConnectorKm": 48.97034518194849,
+      "neConnectorKmPer100RoadKm": 8.932031587179576,
+      "neConnectorPaidMinutes": 28.78370773966654,
+      "connectorOnlyAdditionalMinutesAt55": 24.638487004277266,
+      "connectorOnlyAdditionalMinutesAt25": 88.74512069700984,
+      "endpointMinutes": 1.8799999999998993,
+      "endpointKm": 0.8102637730039072,
+      "nonroadMinutes": 1.5433333333333332,
+      "sourceRoundingMinutes": 0.22108247194069008,
+      "modeledDistanceRatio": 1.0150356588854617,
+      "modelAnchorPolylineKm": 577.8607828841835,
+      "orsPolylineKm": 590.0653650732837,
+      "majorRoadMinuteShare": 0.9120955182557535,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 17.65093059094508,
+          "connectorKm": 0.259985253707514,
+          "roadMinutes": 10.086246051968619,
+          "connectorMinutes": 0.6239646088980335,
+          "recordedMinutes": 10.718333333333334
+        },
+        "natural-earth/105": {
+          "roadKm": 493.10398318491815,
+          "connectorKm": 41.242237462409214,
+          "roadMinutes": 281.7737046770957,
+          "connectorMinutes": 23.5669928356624,
+          "recordedMinutes": 305.5416666666666
+        },
+        "natural-earth/80": {
+          "roadKm": 3.0116726732527446,
+          "connectorKm": 0.7757170917354554,
+          "roadMinutes": 2.2587545049395583,
+          "connectorMinutes": 0.5817878188015916,
+          "recordedMinutes": 2.841666666666667
+        },
+        "natural-earth/90": {
+          "roadKm": 34.48880991823618,
+          "connectorKm": 6.952390627803819,
+          "roadMinutes": 22.99253994549079,
+          "connectorMinutes": 4.634927085202547,
+          "recordedMinutes": 27.63833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6162379215109617,
+      "orsWithin1KmOfModel": 0.6101790139377383,
+      "modelWithin3KmOfOrs": 0.6846570828491363,
+      "orsWithin3KmOfModel": 0.661595874819513
+    },
+    {
+      "id": "frontier/portland-me-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -89.98500000000018,
+      "v8Minutes": 369.9999999999998,
+      "orsMinutes": 459.98499999999996,
+      "orsKm": 623.6206,
+      "sourceRoadKm": 578.0531177525667,
+      "internalConnectorKm": 51.42639800835269,
+      "sourceArcChordRatio": 1.0082030187054545,
+      "neConnectorKm": 50.08490447323053,
+      "neConnectorKmPer100RoadKm": 8.66441213360416,
+      "neConnectorPaidMinutes": 29.01404259666461,
+      "connectorOnlyAdditionalMinutesAt55": 25.624035010495966,
+      "connectorOnlyAdditionalMinutesAt25": 91.18972813908866,
+      "endpointMinutes": 1.8799999999999333,
+      "endpointKm": 0.8102637730047008,
+      "nonroadMinutes": 2.0683333333333334,
+      "sourceRoundingMinutes": 0.23621946504539437,
+      "modeledDistanceRatio": 1.012076228863318,
+      "modelAnchorPolylineKm": 610.8861766701062,
+      "orsPolylineKm": 623.6197295268788,
+      "majorRoadMinuteShare": 0.950881250825248,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 19.02368707324613,
+          "connectorKm": 0.2587603390912191,
+          "roadMinutes": 10.870678327569218,
+          "connectorMinutes": 0.6210248138189258,
+          "recordedMinutes": 11.5
+        },
+        "natural-earth/105": {
+          "roadKm": 540.7412148118166,
+          "connectorKm": 47.87796024624646,
+          "roadMinutes": 308.9949798924661,
+          "connectorMinutes": 27.358834426426558,
+          "recordedMinutes": 336.5716666666666
+        },
+        "natural-earth/80": {
+          "roadKm": 10.96542674019938,
+          "connectorKm": 2.2069442269840693,
+          "roadMinutes": 8.224070055149534,
+          "connectorMinutes": 1.6552081702380517,
+          "recordedMinutes": 9.883333333333333
+        },
+        "census-layer/80": {
+          "roadKm": 7.322789127304575,
+          "connectorKm": 1.0827331960309465,
+          "roadMinutes": 5.4920918454784315,
+          "connectorMinutes": 2.5985596704742724,
+          "recordedMinutes": 8.096666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.5158812824100755,
+      "orsWithin1KmOfModel": 0.5085713662582402,
+      "modelWithin3KmOfOrs": 0.5819491042542125,
+      "orsWithin3KmOfModel": 0.5601135346427486
+    },
+    {
+      "id": "frontier/portland-me-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -126.20666666666727,
+      "v8Minutes": 589.9899999999994,
+      "orsMinutes": 716.1966666666667,
+      "orsKm": 1049.5184,
+      "sourceRoadKm": 944.1494807070035,
+      "internalConnectorKm": 65.48614542253303,
+      "sourceArcChordRatio": 1.0075953315385837,
+      "neConnectorKm": 65.22700280495688,
+      "neConnectorKmPer100RoadKm": 6.9085461717474255,
+      "neConnectorPaidMinutes": 38.17141158756213,
+      "connectorOnlyAdditionalMinutesAt55": 32.98531874511811,
+      "connectorOnlyAdditionalMinutesAt25": 118.37339514433437,
+      "endpointMinutes": 1.878333333333238,
+      "endpointKm": 0.8102637730027134,
+      "nonroadMinutes": 2.4766666666666666,
+      "sourceRoundingMinutes": 0.3701511921574365,
+      "modeledDistanceRatio": 0.9637542651438828,
+      "modelAnchorPolylineKm": 983.1649096493477,
+      "orsPolylineKm": 1049.5173036602112,
+      "majorRoadMinuteShare": 0.9436309874466743,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 19.02368707324613,
+          "connectorKm": 0.2587603390912191,
+          "roadMinutes": 10.870678327569218,
+          "connectorMinutes": 0.6210248138189258,
+          "recordedMinutes": 11.5
+        },
+        "natural-earth/105": {
+          "roadKm": 886.1637602428227,
+          "connectorKm": 60.193506890471085,
+          "roadMinutes": 506.379291567327,
+          "connectorMinutes": 34.396289651697785,
+          "recordedMinutes": 541.1233333333327
+        },
+        "natural-earth/80": {
+          "roadKm": 36.986730421399336,
+          "connectorKm": 5.033495914485797,
+          "roadMinutes": 27.740047816049508,
+          "connectorMinutes": 3.7751219358643477,
+          "recordedMinutes": 31.528333333333336
+        },
+        "census-layer/80": {
+          "roadKm": 1.975302969535317,
+          "connectorKm": 0.0003822784849231109,
+          "roadMinutes": 1.4814772271514878,
+          "connectorMinutes": 0.0009174683638154662,
+          "recordedMinutes": 1.4833333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.35539143403531237,
+      "orsWithin1KmOfModel": 0.33436158016920703,
+      "modelWithin3KmOfOrs": 0.38651401636618593,
+      "orsWithin3KmOfModel": 0.359169525982571
+    },
+    {
+      "id": "frontier/portland-me-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -93.69666666666683,
+      "v8Minutes": 610.0083333333332,
+      "orsMinutes": 703.705,
+      "orsKm": 1057.9177,
+      "sourceRoadKm": 994.4687495288116,
+      "internalConnectorKm": 53.89411333240069,
+      "sourceArcChordRatio": 1.009806376081457,
+      "neConnectorKm": 51.15542391581851,
+      "neConnectorKmPer100RoadKm": 5.143995116996529,
+      "neConnectorPaidMinutes": 29.231670809039198,
+      "connectorOnlyAdditionalMinutesAt55": 26.57424619003554,
+      "connectorOnlyAdditionalMinutesAt25": 93.54134658892522,
+      "endpointMinutes": 1.878333333333391,
+      "endpointKm": 0.8102637730027134,
+      "nonroadMinutes": 1.8083333333333333,
+      "sourceRoundingMinutes": 0.41529902554714226,
+      "modeledDistanceRatio": 0.9924463867618789,
+      "modelAnchorPolylineKm": 1023.9357846355215,
+      "orsPolylineKm": 1057.9159183835106,
+      "majorRoadMinuteShare": 0.9764563914094004,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 2.9814333783801175,
+          "connectorKm": 0.0018564938958195278,
+          "roadMinutes": 1.70367621621721,
+          "connectorMinutes": 0.004455585349966867,
+          "recordedMinutes": 1.71
+        },
+        "natural-earth/105": {
+          "roadKm": 981.2169981418464,
+          "connectorKm": 51.15542391581851,
+          "roadMinutes": 560.6954275096268,
+          "connectorMinutes": 29.231670809039198,
+          "recordedMinutes": 590.3366666666665
+        },
+        "census-layer/80": {
+          "roadKm": 10.270318008585111,
+          "connectorKm": 2.7368329226863617,
+          "roadMinutes": 7.702738506438832,
+          "connectorMinutes": 6.568399014447269,
+          "recordedMinutes": 14.274999999999999
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8978107445460751,
+      "orsWithin1KmOfModel": 0.8852391707188475,
+      "modelWithin3KmOfOrs": 0.9449855002976387,
+      "orsWithin3KmOfModel": 0.9278655330335324
+    },
+    {
+      "id": "frontier/portland-me-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -131.6217480428303,
+      "v8Minutes": 709.9899186238363,
+      "orsMinutes": 841.6116666666666,
+      "orsKm": 1110.6634,
+      "sourceRoadKm": 1049.1220161291521,
+      "internalConnectorKm": 88.6734977118515,
+      "sourceArcChordRatio": 1.007462690699602,
+      "neConnectorKm": 85.56402532178262,
+      "neConnectorKmPer100RoadKm": 8.155774448188614,
+      "neConnectorPaidMinutes": 50.46767547499717,
+      "connectorOnlyAdditionalMinutesAt55": 42.87489760331115,
+      "connectorOnlyAdditionalMinutesAt25": 154.8859852972811,
+      "endpointMinutes": 1.8799999999998676,
+      "endpointKm": 0.8102637730035034,
+      "nonroadMinutes": 22.419918623836466,
+      "sourceRoundingMinutes": 0.43573093367035654,
+      "modeledDistanceRatio": 1.0335691356840777,
+      "modelAnchorPolylineKm": 1112.6083098273987,
+      "orsPolylineKm": 1110.6622896588717,
+      "majorRoadMinuteShare": 0.8136183989849638,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 29.3962826198509,
+          "connectorKm": 0.45302016963613234,
+          "roadMinutes": 16.797875782771943,
+          "connectorMinutes": 1.0872484071267177,
+          "recordedMinutes": 17.898333333333337
+        },
+        "natural-earth/105": {
+          "roadKm": 861.7152474309509,
+          "connectorKm": 76.74992369150279,
+          "roadMinutes": 492.40871281768574,
+          "connectorMinutes": 43.8570992522873,
+          "recordedMinutes": 536.6249999999998
+        },
+        "census/105": {
+          "roadKm": 2.1873225026985246,
+          "connectorKm": 0.8814539170029745,
+          "roadMinutes": 1.2498985729705854,
+          "connectorMinutes": 2.1154894008071388,
+          "recordedMinutes": 3.3666666666666667
+        },
+        "natural-earth/80": {
+          "roadKm": 110.55674783760708,
+          "connectorKm": 8.814101630279831,
+          "roadMinutes": 82.91756087820532,
+          "connectorMinutes": 6.610576222709875,
+          "recordedMinutes": 89.57333333333332
+        },
+        "census-layer/80": {
+          "roadKm": 45.26641573804478,
+          "connectorKm": 1.7749983034297732,
+          "roadMinutes": 33.949811803533585,
+          "connectorMinutes": 4.259995928231456,
+          "recordedMinutes": 38.22666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6213185700668467,
+      "orsWithin1KmOfModel": 0.626266099336958,
+      "modelWithin3KmOfOrs": 0.7129114077487845,
+      "orsWithin3KmOfModel": 0.7036776884331003
+    },
+    {
+      "id": "frontier/portland-me-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "signedMinutes": -138.95833333333303,
+      "v8Minutes": 730.9933333333336,
+      "orsMinutes": 869.9516666666666,
+      "orsKm": 1300.8944,
+      "sourceRoadKm": 1201.8254824538317,
+      "internalConnectorKm": 68.26938123505805,
+      "sourceArcChordRatio": 1.0058148725833733,
+      "neConnectorKm": 67.98382459605365,
+      "neConnectorKmPer100RoadKm": 5.656713523601399,
+      "neConnectorPaidMinutes": 38.84789976917349,
+      "connectorOnlyAdditionalMinutesAt55": 35.3162725174305,
+      "connectorOnlyAdditionalMinutesAt25": 124.31327926135529,
+      "endpointMinutes": 1.8783333333332517,
+      "endpointKm": 0.8102637730027134,
+      "nonroadMinutes": 2.3366666666666664,
+      "sourceRoundingMinutes": 0.4876790855036006,
+      "modeledDistanceRatio": 0.9776956058639377,
+      "modelAnchorPolylineKm": 1243.4296797882637,
+      "orsPolylineKm": 1300.8929806955773,
+      "majorRoadMinuteShare": 1.0000000000000002,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 22.438280939866445,
+          "connectorKm": 0.28555663900439426,
+          "roadMinutes": 12.821874822780826,
+          "connectorMinutes": 0.6853359336105462,
+          "recordedMinutes": 13.516666666666666
+        },
+        "natural-earth/105": {
+          "roadKm": 1179.3872015139652,
+          "connectorKm": 67.98382459605365,
+          "roadMinutes": 673.9355437222652,
+          "connectorMinutes": 38.84789976917349,
+          "recordedMinutes": 713.2616666666672
+        }
+      },
+      "modelWithin1KmOfOrs": 0.606447311016107,
+      "orsWithin1KmOfModel": 0.583010986345134,
+      "modelWithin3KmOfOrs": 0.6653060755147806,
+      "orsWithin3KmOfModel": 0.6379376994734833
+    },
+    {
+      "id": "frontier/savannah-ga-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -27.99094494769821,
+      "v8Minutes": 351.6840550523018,
+      "orsMinutes": 379.675,
+      "orsKm": 571.5703000000001,
+      "sourceRoadKm": 557.8126206111309,
+      "internalConnectorKm": 15.424599105391929,
+      "sourceArcChordRatio": 1.005084455381288,
+      "neConnectorKm": 15.324878982284723,
+      "neConnectorKmPer100RoadKm": 2.747316646492333,
+      "neConnectorPaidMinutes": 9.586902731093266,
+      "connectorOnlyAdditionalMinutesAt55": 7.131147067762798,
+      "connectorOnlyAdditionalMinutesAt25": 27.19280682639007,
+      "endpointMinutes": 5.06072171896837,
+      "endpointKm": 2.4159684705394007,
+      "nonroadMinutes": 0.605,
+      "sourceRoundingMinutes": 0.21911537230431577,
+      "modeledDistanceRatio": 1.0075843190599572,
+      "modelAnchorPolylineKm": 569.518720825711,
+      "orsPolylineKm": 571.5706850976807,
+      "majorRoadMinuteShare": 0.7807534282865548,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 450.3897847589745,
+          "connectorKm": 10.677836431473578,
+          "roadMinutes": 257.3655912908426,
+          "connectorMinutes": 6.101620817984906,
+          "recordedMinutes": 263.64
+        },
+        "census-layer/105": {
+          "roadKm": 10.97449497469555,
+          "connectorKm": 0.09972012310720536,
+          "roadMinutes": 6.271139985540314,
+          "connectorMinutes": 0.23932829545729287,
+          "recordedMinutes": 6.514999999999999
+        },
+        "natural-earth/80": {
+          "roadKm": 96.44834087746085,
+          "connectorKm": 4.647042550811145,
+          "roadMinutes": 72.33625565809567,
+          "connectorMinutes": 3.4852819131083606,
+          "recordedMinutes": 75.86333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7444197457646718,
+      "orsWithin1KmOfModel": 0.7430155730347309,
+      "modelWithin3KmOfOrs": 0.8396404306982796,
+      "orsWithin3KmOfModel": 0.8380084008851498
+    },
+    {
+      "id": "frontier/savannah-ga-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -2.91020142812539,
+      "v8Minutes": 370.0764652385413,
+      "orsMinutes": 372.9866666666667,
+      "orsKm": 587.5651,
+      "sourceRoadKm": 571.606329777737,
+      "internalConnectorKm": 15.556161393664905,
+      "sourceArcChordRatio": 1.0043009539947056,
+      "neConnectorKm": 11.547190921460905,
+      "neConnectorKmPer100RoadKm": 2.0201299950528724,
+      "neConnectorPaidMinutes": 6.598394812263379,
+      "connectorOnlyAdditionalMinutesAt55": 5.998540738421244,
+      "connectorOnlyAdditionalMinutesAt25": 21.114863399242793,
+      "endpointMinutes": 3.2466666666666733,
+      "endpointKm": 1.6601121987470027,
+      "nonroadMinutes": 11.94646523854129,
+      "sourceRoundingMinutes": 0.2167862816112347,
+      "modeledDistanceRatio": 1.0106119257585942,
+      "modelAnchorPolylineKm": 588.8328113831802,
+      "orsPolylineKm": 587.5652734809843,
+      "majorRoadMinuteShare": 0.8336683417085426,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 494.4710006972532,
+          "connectorKm": 11.547190921460905,
+          "roadMinutes": 282.55485754128756,
+          "connectorMinutes": 6.598394812263379,
+          "recordedMinutes": 289.34
+        },
+        "census-layer/105": {
+          "roadKm": 10.97449497469555,
+          "connectorKm": 0.09972012310720536,
+          "roadMinutes": 6.271139985540314,
+          "connectorMinutes": 0.23932829545729287,
+          "recordedMinutes": 6.514999999999999
+        },
+        "census-layer/80": {
+          "roadKm": 63.67388814947514,
+          "connectorKm": 3.5924646864880083,
+          "roadMinutes": 47.75541611210638,
+          "connectorMinutes": 8.621915247571222,
+          "recordedMinutes": 56.40166666666667
+        },
+        "census/80": {
+          "roadKm": 2.4869459563131233,
+          "connectorKm": 0.3167856626087868,
+          "roadMinutes": 1.8652094672348425,
+          "connectorMinutes": 0.7602855902610884,
+          "recordedMinutes": 2.6266666666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8826236331689957,
+      "orsWithin1KmOfModel": 0.8865423258034059,
+      "modelWithin3KmOfOrs": 0.9681640268422795,
+      "orsWithin3KmOfModel": 0.9707888221132926
+    },
+    {
+      "id": "frontier/savannah-ga-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -70.19500000000028,
+      "v8Minutes": 589.9966666666664,
+      "orsMinutes": 660.1916666666667,
+      "orsKm": 1020.0918,
+      "sourceRoadKm": 970.0519480346243,
+      "internalConnectorKm": 34.13290870651312,
+      "sourceArcChordRatio": 1.0075080174632265,
+      "neConnectorKm": 31.49241519786873,
+      "neConnectorKmPer100RoadKm": 3.2464668785701636,
+      "neConnectorPaidMinutes": 18.73469163111801,
+      "connectorOnlyAdditionalMinutesAt55": 15.620670402920602,
+      "connectorOnlyAdditionalMinutesAt25": 56.84710484376694,
+      "endpointMinutes": 3.2466666666666364,
+      "endpointKm": 1.6601121987470027,
+      "nonroadMinutes": 0.4116666666666667,
+      "sourceRoundingMinutes": 0.3808828210972024,
+      "modeledDistanceRatio": 0.9862019248832921,
+      "modelAnchorPolylineKm": 992.27640899039,
+      "orsPolylineKm": 1020.0918220221336,
+      "majorRoadMinuteShare": 0.9368140692376133,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 933.2589647673447,
+          "connectorKm": 27.35387069678783,
+          "roadMinutes": 533.2908370099116,
+          "connectorMinutes": 15.630783255307335,
+          "recordedMinutes": 549.29
+        },
+        "natural-earth/80": {
+          "roadKm": 16.555000659564364,
+          "connectorKm": 4.138544501080901,
+          "roadMinutes": 12.416250494673273,
+          "connectorMinutes": 3.1039083758106756,
+          "recordedMinutes": 15.524999999999999
+        },
+        "census-layer/80": {
+          "roadKm": 20.237982607715292,
+          "connectorKm": 2.640493508644387,
+          "roadMinutes": 15.178486955786468,
+          "connectorMinutes": 6.337184420746527,
+          "recordedMinutes": 21.523333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9461472747359703,
+      "orsWithin1KmOfModel": 0.9448642544774953,
+      "modelWithin3KmOfOrs": 0.9778180533381072,
+      "orsWithin3KmOfModel": 0.9793099942592278
+    },
+    {
+      "id": "frontier/savannah-ga-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -60.68759060417972,
+      "v8Minutes": 609.9974093958202,
+      "orsMinutes": 670.685,
+      "orsKm": 1044.4103,
+      "sourceRoadKm": 962.8415015962038,
+      "internalConnectorKm": 44.217941499898615,
+      "sourceArcChordRatio": 1.008398034875529,
+      "neConnectorKm": 37.91216217756821,
+      "neConnectorKmPer100RoadKm": 3.93752887829588,
+      "neConnectorPaidMinutes": 22.866282512254045,
+      "connectorOnlyAdditionalMinutesAt55": 18.492439863274917,
+      "connectorOnlyAdditionalMinutesAt25": 68.12290671390967,
+      "endpointMinutes": 3.2483333333333366,
+      "endpointKm": 1.6601121987477927,
+      "nonroadMinutes": 8.945742729152924,
+      "sourceRoundingMinutes": 0.36358033296278336,
+      "modeledDistanceRatio": 0.9693957902355654,
+      "modelAnchorPolylineKm": 994.0160530086815,
+      "orsPolylineKm": 1044.4101111124724,
+      "majorRoadMinuteShare": 0.8900084197143988,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 901.5801623466399,
+          "connectorKm": 28.91039530275546,
+          "roadMinutes": 515.1886641980807,
+          "connectorMinutes": 16.520225887288802,
+          "recordedMinutes": 532.0500000000005
+        },
+        "natural-earth/80": {
+          "roadKm": 16.555000659564364,
+          "connectorKm": 4.138544501080901,
+          "roadMinutes": 12.416250494673273,
+          "connectorMinutes": 3.1039083758106756,
+          "recordedMinutes": 15.524999999999999
+        },
+        "natural-earth/90": {
+          "roadKm": 20.340822248752925,
+          "connectorKm": 4.863222373731853,
+          "roadMinutes": 13.56054816583528,
+          "connectorMinutes": 3.2421482491545683,
+          "recordedMinutes": 16.811666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 24.365516341246654,
+          "connectorKm": 6.3057793223304,
+          "roadMinutes": 18.274137255934992,
+          "connectorMinutes": 15.133870373592957,
+          "recordedMinutes": 33.416666666666664
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9072976643351702,
+      "orsWithin1KmOfModel": 0.8877567771263799,
+      "modelWithin3KmOfOrs": 0.9787767576244363,
+      "orsWithin3KmOfModel": 0.9727018492299984
+    },
+    {
+      "id": "frontier/savannah-ga-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -95.72500000000025,
+      "v8Minutes": 710.2399999999998,
+      "orsMinutes": 805.965,
+      "orsKm": 1242.4469,
+      "sourceRoadKm": 1173.9385688484701,
+      "internalConnectorKm": 48.031511271347064,
+      "sourceArcChordRatio": 1.0033485865058203,
+      "neConnectorKm": 46.52622646210291,
+      "neConnectorKmPer100RoadKm": 3.963259040695888,
+      "neConnectorPaidMinutes": 27.325440924966106,
+      "connectorOnlyAdditionalMinutesAt55": 23.430442488237073,
+      "connectorOnlyAdditionalMinutesAt25": 84.33750258408088,
+      "endpointMinutes": 3.248333333333323,
+      "endpointKm": 1.6601121987477927,
+      "nonroadMinutes": 1.3883333333333332,
+      "sourceRoundingMinutes": 0.45444173446855984,
+      "modeledDistanceRatio": 0.9853207123304724,
+      "modelAnchorPolylineKm": 1209.1433779218823,
+      "orsPolylineKm": 1242.4465523387842,
+      "majorRoadMinuteShare": 0.9708830740595521,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1138.3159197345358,
+          "connectorKm": 42.38768196102201,
+          "roadMinutes": 650.4662398483077,
+          "connectorMinutes": 24.22153254915543,
+          "recordedMinutes": 675.1283333333333
+        },
+        "natural-earth/80": {
+          "roadKm": 16.555000659564364,
+          "connectorKm": 4.138544501080901,
+          "roadMinutes": 12.416250494673273,
+          "connectorMinutes": 3.1039083758106756,
+          "recordedMinutes": 15.524999999999999
+        },
+        "census-layer/105": {
+          "roadKm": 16.645773491457863,
+          "connectorKm": 0.17069579502471555,
+          "roadMinutes": 9.511870566547351,
+          "connectorMinutes": 0.4096699080593174,
+          "recordedMinutes": 9.93
+        },
+        "census-layer/80": {
+          "roadKm": 2.421874962912196,
+          "connectorKm": 1.3345890142194385,
+          "roadMinutes": 1.816406222184147,
+          "connectorMinutes": 3.2030136341266524,
+          "recordedMinutes": 5.02
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8392833093836819,
+      "orsWithin1KmOfModel": 0.8285456861222186,
+      "modelWithin3KmOfOrs": 0.8785160278273652,
+      "orsWithin3KmOfModel": 0.8590392741125789
+    },
+    {
+      "id": "frontier/savannah-ga-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "signedMinutes": -88.95500000000004,
+      "v8Minutes": 731.3416666666667,
+      "orsMinutes": 820.2966666666667,
+      "orsKm": 1279.8785,
+      "sourceRoadKm": 1209.6781580938855,
+      "internalConnectorKm": 50.44637277425805,
+      "sourceArcChordRatio": 1.003073059729272,
+      "neConnectorKm": 50.19265029820511,
+      "neConnectorKmPer100RoadKm": 4.14925655740488,
+      "neConnectorPaidMinutes": 29.42054025988165,
+      "connectorOnlyAdditionalMinutesAt55": 25.3350782472512,
+      "connectorOnlyAdditionalMinutesAt25": 91.04182045581062,
+      "endpointMinutes": 4.578333333333321,
+      "endpointKm": 2.4667769161038517,
+      "nonroadMinutes": 2.06,
+      "sourceRoundingMinutes": 0.4729472452097525,
+      "modeledDistanceRatio": 0.9871637355558207,
+      "modelAnchorPolylineKm": 1246.479906829903,
+      "orsPolylineKm": 1279.8777038749686,
+      "majorRoadMinuteShare": 0.9785774408838561,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 1177.2134837417066,
+          "connectorKm": 46.05410579712421,
+          "roadMinutes": 672.6934192809762,
+          "connectorMinutes": 26.316631884070976,
+          "recordedMinutes": 699.4700000000001
+        },
+        "natural-earth/80": {
+          "roadKm": 16.555000659564364,
+          "connectorKm": 4.138544501080901,
+          "roadMinutes": 12.416250494673273,
+          "connectorMinutes": 3.1039083758106756,
+          "recordedMinutes": 15.524999999999999
+        },
+        "census-layer/105": {
+          "roadKm": 15.909673692614586,
+          "connectorKm": 0.25372247605294124,
+          "roadMinutes": 9.091242110065478,
+          "connectorMinutes": 0.608933942527059,
+          "recordedMinutes": 9.708333333333332
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8654176125497381,
+      "orsWithin1KmOfModel": 0.8533164272242654,
+      "modelWithin3KmOfOrs": 0.9049843936371439,
+      "orsWithin3KmOfModel": 0.8860562327312491
+    },
+    {
+      "id": "original/Los Angeles",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -10.905000000000015,
+      "v8Minutes": 121.73,
+      "orsMinutes": 132.63500000000002,
+      "orsKm": 194.015,
+      "sourceRoadKm": 185.24449355019854,
+      "internalConnectorKm": 17.448685849786305,
+      "sourceArcChordRatio": 1.003636290576389,
+      "neConnectorKm": 17.389824910976078,
+      "neConnectorKmPer100RoadKm": 9.387498962965768,
+      "neConnectorPaidMinutes": 9.937042806272041,
+      "connectorOnlyAdditionalMinutesAt55": 9.033675278429135,
+      "connectorOnlyAdditionalMinutesAt25": 31.79853698007055,
+      "endpointMinutes": 5.073333333333318,
+      "endpointKm": 3.118900818770989,
+      "nonroadMinutes": 0.6466666666666667,
+      "sourceRoundingMinutes": 0.07769462618426815,
+      "modeledDistanceRatio": 1.0621937719413461,
+      "modelAnchorPolylineKm": 197.73364808117307,
+      "orsPolylineKm": 194.01466230195692,
+      "majorRoadMinuteShare": 0.9999999999999999,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 178.94936447320308,
+          "connectorKm": 17.389824910976078,
+          "roadMinutes": 102.25677969897318,
+          "connectorMinutes": 9.937042806272041,
+          "recordedMinutes": 112.26833333333335
+        },
+        "census-layer/105": {
+          "roadKm": 6.295129076995474,
+          "connectorKm": 0.05886093881022808,
+          "roadMinutes": 3.5972166154259853,
+          "connectorMinutes": 0.14126625314454738,
+          "recordedMinutes": 3.7416666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6195082990342211,
+      "orsWithin1KmOfModel": 0.6351007003164914,
+      "modelWithin3KmOfOrs": 0.9141642441870788,
+      "orsWithin3KmOfModel": 0.9208032507586945
+    },
+    {
+      "id": "original/Riverside",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -11.523333333333326,
+      "v8Minutes": 97.165,
+      "orsMinutes": 108.68833333333333,
+      "orsKm": 163.1235,
+      "sourceRoadKm": 154.56410173467748,
+      "internalConnectorKm": 7.7973991706589185,
+      "sourceArcChordRatio": 1.0082610419782974,
+      "neConnectorKm": 7.689676009278507,
+      "neConnectorKmPer100RoadKm": 4.975072428188076,
+      "neConnectorPaidMinutes": 4.394100576730574,
+      "connectorOnlyAdditionalMinutesAt55": 3.9946368879368865,
+      "connectorOnlyAdditionalMinutesAt25": 14.061121845537842,
+      "endpointMinutes": 3.9516666666666875,
+      "endpointKm": 2.6205645931660566,
+      "nonroadMinutes": 0.18166666666666667,
+      "sourceRoundingMinutes": 0.056686654236003164,
+      "modeledDistanceRatio": 1.0118576412530804,
+      "modelAnchorPolylineKm": 160.07721837820768,
+      "orsPolylineKm": 163.1235798479826,
+      "majorRoadMinuteShare": 1.0000000000000002,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 151.10664072775822,
+          "connectorKm": 7.689676009278507,
+          "roadMinutes": 86.34665184443321,
+          "connectorMinutes": 4.394100576730574,
+          "recordedMinutes": 90.795
+        },
+        "census-layer/105": {
+          "roadKm": 3.4574610069192726,
+          "connectorKm": 0.10772316138041112,
+          "roadMinutes": 1.97569200395387,
+          "connectorMinutes": 0.2585355873129867,
+          "recordedMinutes": 2.236666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9596674612674576,
+      "orsWithin1KmOfModel": 0.9601006973834608,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "original/Palm Springs",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -10.84833333333333,
+      "v8Minutes": 133.95833333333334,
+      "orsMinutes": 144.80666666666667,
+      "orsKm": 203.14770000000001,
+      "sourceRoadKm": 214.9453767550336,
+      "internalConnectorKm": 9.712541094480418,
+      "sourceArcChordRatio": 1.0073821196421768,
+      "neConnectorKm": 9.604817933100007,
+      "neConnectorKmPer100RoadKm": 4.468492450547709,
+      "neConnectorPaidMinutes": 5.836395896212552,
+      "connectorOnlyAdditionalMinutesAt55": 4.641587303532911,
+      "connectorOnlyAdditionalMinutesAt25": 17.215167143227468,
+      "endpointMinutes": 2.6050000000000235,
+      "endpointKm": 1.8361171671666194,
+      "nonroadMinutes": 0.18166666666666667,
+      "sourceRoundingMinutes": 0.0809010502870251,
+      "modeledDistanceRatio": 1.1152955680085233,
+      "modelAnchorPolylineKm": 220.54117235580918,
+      "orsPolylineKm": 203.14766449741543,
+      "majorRoadMinuteShare": 0.919329631653177,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 199.33645022023882,
+          "connectorKm": 7.656418300229721,
+          "roadMinutes": 113.90654298299359,
+          "connectorMinutes": 4.3750961715598375,
+          "recordedMinutes": 118.35333333333331
+        },
+        "census-layer/105": {
+          "roadKm": 3.4574610069192726,
+          "connectorKm": 0.10772316138041112,
+          "roadMinutes": 1.97569200395387,
+          "connectorMinutes": 0.2585355873129867,
+          "recordedMinutes": 2.236666666666667
+        },
+        "natural-earth/80": {
+          "roadKm": 12.151465527875526,
+          "connectorKm": 1.9483996328702855,
+          "roadMinutes": 9.113599145906644,
+          "connectorMinutes": 1.461299724652714,
+          "recordedMinutes": 10.581666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6955154954458183,
+      "orsWithin1KmOfModel": 0.7601636272832725,
+      "modelWithin3KmOfOrs": 0.7542960034282227,
+      "orsWithin3KmOfModel": 0.8228150843931844
+    },
+    {
+      "id": "original/Santa Barbara",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -15.189999999999856,
+      "v8Minutes": 216.46000000000015,
+      "orsMinutes": 231.65,
+      "orsKm": 349.0976,
+      "sourceRoadKm": 333.3862486262938,
+      "internalConnectorKm": 26.763667436213588,
+      "sourceArcChordRatio": 1.0083509015729417,
+      "neConnectorKm": 24.154566045450583,
+      "neConnectorKmPer100RoadKm": 7.245219664871786,
+      "neConnectorPaidMinutes": 13.802609168828896,
+      "connectorOnlyAdditionalMinutesAt55": 12.547826517117192,
+      "connectorOnlyAdditionalMinutesAt25": 44.168349340252504,
+      "endpointMinutes": 3.961666666666667,
+      "endpointKm": 1.9709378054042066,
+      "nonroadMinutes": 1.4133333333333333,
+      "sourceRoundingMinutes": 0.14029030201066917,
+      "modeledDistanceRatio": 1.038992369918328,
+      "modelAnchorPolylineKm": 349.0160106108247,
+      "orsPolylineKm": 349.0975415958037,
+      "majorRoadMinuteShare": 0.9651167381228728,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 305.71038311513394,
+          "connectorKm": 24.154566045450583,
+          "roadMinutes": 174.69164749436234,
+          "connectorMinutes": 13.802609168828896,
+          "recordedMinutes": 188.62166666666675
+        },
+        "census-layer/105": {
+          "roadKm": 25.582420843856166,
+          "connectorKm": 0.19577715167180432,
+          "roadMinutes": 14.61852619648924,
+          "connectorMinutes": 0.4698651640123304,
+          "recordedMinutes": 15.1
+        },
+        "census/80": {
+          "roadKm": 2.093444667303738,
+          "connectorKm": 2.413324239091201,
+          "roadMinutes": 1.5700835004778035,
+          "connectorMinutes": 5.791978173818882,
+          "recordedMinutes": 7.363333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.3853139079502669,
+      "orsWithin1KmOfModel": 0.38797263896711737,
+      "modelWithin3KmOfOrs": 0.5690407014348281,
+      "orsWithin3KmOfModel": 0.5753393323531898
+    },
+    {
+      "id": "original/Bakersfield",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -13.953425440458403,
+      "v8Minutes": 230.41824122620824,
+      "orsMinutes": 244.37166666666664,
+      "orsKm": 372.7493,
+      "sourceRoadKm": 363.0341066758149,
+      "internalConnectorKm": 24.55294924331969,
+      "sourceArcChordRatio": 1.0062995989336017,
+      "neConnectorKm": 24.454585325206924,
+      "neConnectorKmPer100RoadKm": 6.736167449700416,
+      "neConnectorPaidMinutes": 13.974048757261116,
+      "connectorOnlyAdditionalMinutesAt55": 12.703680688419166,
+      "connectorOnlyAdditionalMinutesAt25": 44.7169560232355,
+      "endpointMinutes": 7.994907892874904,
+      "endpointKm": 3.55302418882494,
+      "nonroadMinutes": 0.6116666666666667,
+      "sourceRoundingMinutes": 0.15348354832639188,
+      "modeledDistanceRatio": 1.0500219349012074,
+      "modelAnchorPolylineKm": 380.92553577413855,
+      "orsPolylineKm": 372.74918864760025,
+      "majorRoadMinuteShare": 0.9999999999999999,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 357.58759480436146,
+          "connectorKm": 24.454585325206924,
+          "roadMinutes": 204.33576845963512,
+          "connectorMinutes": 13.974048757261116,
+          "recordedMinutes": 218.45999999999998
+        },
+        "census-layer/105": {
+          "roadKm": 5.446511871453419,
+          "connectorKm": 0.09836391811276747,
+          "roadMinutes": 3.1122924979733826,
+          "connectorMinutes": 0.23607340347064193,
+          "recordedMinutes": 3.3516666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.5071085321166983,
+      "orsWithin1KmOfModel": 0.5187752747734277,
+      "modelWithin3KmOfOrs": 0.6453352922476955,
+      "orsWithin3KmOfModel": 0.6694573362116385
+    },
+    {
+      "id": "original/Big Bear Lake",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -14.766666666666623,
+      "v8Minutes": 159.34000000000003,
+      "orsMinutes": 174.10666666666665,
+      "orsKm": 233.7248,
+      "sourceRoadKm": 207.0308205063342,
+      "internalConnectorKm": 21.070145132163116,
+      "sourceArcChordRatio": 1.033884842497097,
+      "neConnectorKm": 9.88652560154123,
+      "neConnectorKmPer100RoadKm": 4.775388310475612,
+      "neConnectorPaidMinutes": 5.649443200880702,
+      "connectorOnlyAdditionalMinutesAt55": 5.135857455346095,
+      "connectorOnlyAdditionalMinutesAt25": 18.078218242818245,
+      "endpointMinutes": 2.2400000000000393,
+      "endpointKm": 1.3586646220061982,
+      "nonroadMinutes": 0.4983333333333333,
+      "sourceRoundingMinutes": 0.07931208853096905,
+      "modeledDistanceRatio": 0.9826397076792552,
+      "modelAnchorPolylineKm": 217.09906131313986,
+      "orsPolylineKm": 233.7247464978116,
+      "majorRoadMinuteShare": 0.6952246144677049,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 161.71508545287054,
+          "connectorKm": 9.88652560154123,
+          "roadMinutes": 92.40862025878312,
+          "connectorMinutes": 5.649443200880702,
+          "recordedMinutes": 98.11500000000002
+        },
+        "census-layer/105": {
+          "roadKm": 13.233903452663062,
+          "connectorKm": 1.3280502669582126,
+          "roadMinutes": 7.5622305443788935,
+          "connectorMinutes": 3.1873206406997103,
+          "recordedMinutes": 10.758333333333333
+        },
+        "census-layer/80": {
+          "roadKm": 32.08183160080061,
+          "connectorKm": 9.855569263663673,
+          "roadMinutes": 24.06137370060046,
+          "connectorMinutes": 23.65336623279281,
+          "recordedMinutes": 47.72833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9620646240738258,
+      "orsWithin1KmOfModel": 0.9552448546769778,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "original/Idyllwild",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -15.821666666666658,
+      "v8Minutes": 115.63000000000002,
+      "orsMinutes": 131.45166666666668,
+      "orsKm": 177.0468,
+      "sourceRoadKm": 164.12067325247753,
+      "internalConnectorKm": 10.476682563806492,
+      "sourceArcChordRatio": 1.0153007759884949,
+      "neConnectorKm": 7.988816207733587,
+      "neConnectorKmPer100RoadKm": 4.867647718848843,
+      "neConnectorPaidMinutes": 4.944313601274883,
+      "connectorOnlyAdditionalMinutesAt55": 3.770758625343575,
+      "connectorOnlyAdditionalMinutesAt25": 14.228845297285725,
+      "endpointMinutes": 2.399999999999997,
+      "endpointKm": 1.5310326051655676,
+      "nonroadMinutes": 0.26,
+      "sourceRoundingMinutes": 0.0604739216319814,
+      "modeledDistanceRatio": 0.99542449654432,
+      "modelAnchorPolylineKm": 169.13568286532106,
+      "orsPolylineKm": 177.04681501160343,
+      "majorRoadMinuteShare": 0.6299164970051044,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 114.68110060738438,
+          "connectorKm": 5.8648719053417135,
+          "roadMinutes": 65.5320574899339,
+          "connectorMinutes": 3.3513553744809785,
+          "recordedMinutes": 68.925
+        },
+        "census-layer/105": {
+          "roadKm": 3.4574610069192726,
+          "connectorKm": 0.10772316138041112,
+          "roadMinutes": 1.97569200395387,
+          "connectorMinutes": 0.2585355873129867,
+          "recordedMinutes": 2.236666666666667
+        },
+        "natural-earth/80": {
+          "roadKm": 42.318858465855065,
+          "connectorKm": 2.123944302391873,
+          "roadMinutes": 31.739143849391304,
+          "connectorMinutes": 1.592958226793905,
+          "recordedMinutes": 33.34666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 3.6632531723188206,
+          "connectorKm": 2.3801431946924936,
+          "roadMinutes": 2.7474398792391153,
+          "connectorMinutes": 5.712343667261984,
+          "recordedMinutes": 8.461666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8255738581179137,
+      "orsWithin1KmOfModel": 0.8344015352190517,
+      "modelWithin3KmOfOrs": 0.8771887144779696,
+      "orsWithin3KmOfModel": 0.8953779394251958
+    },
+    {
+      "id": "original/Borrego Springs",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": 16.66523161628936,
+      "v8Minutes": 132.42189828295602,
+      "orsMinutes": 115.75666666666666,
+      "orsKm": 146.3843,
+      "sourceRoadKm": 111.04605303352709,
+      "internalConnectorKm": 12.431439581817946,
+      "sourceArcChordRatio": 1.065153768447683,
+      "neConnectorKm": 6.406677630035405,
+      "neConnectorKmPer100RoadKm": 5.769387974646067,
+      "neConnectorPaidMinutes": 3.662174807134054,
+      "connectorOnlyAdditionalMinutesAt55": 3.3269280619954795,
+      "connectorOnlyAdditionalMinutesAt25": 11.713851504950918,
+      "endpointMinutes": 5.2873017430456954,
+      "endpointKm": 2.362775376731503,
+      "nonroadMinutes": 36.479596539910325,
+      "sourceRoundingMinutes": 0.044068375998463694,
+      "modeledDistanceRatio": 0.963491985709573,
+      "modelAnchorPolylineKm": 128.52760115540505,
+      "orsPolylineKm": 146.38414163450187,
+      "majorRoadMinuteShare": 0.422444064493593,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 6.4121912817630715,
+          "connectorKm": 0.03002329149360961,
+          "roadMinutes": 3.6641093038646124,
+          "connectorMinutes": 0.07205589958466306,
+          "recordedMinutes": 3.74
+        },
+        "natural-earth/105": {
+          "roadKm": 54.04099391655011,
+          "connectorKm": 6.399867126197997,
+          "roadMinutes": 30.880567952314337,
+          "connectorMinutes": 3.657066929255998,
+          "recordedMinutes": 34.55666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 31.400090167997348,
+          "connectorKm": 5.994738660288931,
+          "roadMinutes": 23.550067625998008,
+          "connectorMinutes": 14.387372784693437,
+          "recordedMinutes": 37.95
+        },
+        "natural-earth/80": {
+          "roadKm": 19.19277766721656,
+          "connectorKm": 0.006810503837408404,
+          "roadMinutes": 14.39458325041242,
+          "connectorMinutes": 0.005107877878056303,
+          "recordedMinutes": 14.408333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9053178923377635,
+      "orsWithin1KmOfModel": 0.8151124407363434,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.9410342239783538
+    },
+    {
+      "id": "original/Temecula",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -6.268333333333331,
+      "v8Minutes": 57.686666666666675,
+      "orsMinutes": 63.955000000000005,
+      "orsKm": 94.2248,
+      "sourceRoadKm": 89.65606753135603,
+      "internalConnectorKm": 5.85601053193685,
+      "sourceArcChordRatio": 1.0108986136351743,
+      "neConnectorKm": 5.85601053193685,
+      "neConnectorKmPer100RoadKm": 6.5316388429470065,
+      "neConnectorPaidMinutes": 3.3462917325353425,
+      "connectorOnlyAdditionalMinutesAt55": 3.0420833932139475,
+      "connectorOnlyAdditionalMinutesAt25": 10.708133544113096,
+      "endpointMinutes": 3.07500000000001,
+      "endpointKm": 1.946689524645042,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.03333634478504166,
+      "modeledDistanceRatio": 1.034321830218137,
+      "modelAnchorPolylineKm": 92.95483144636111,
+      "orsPolylineKm": 94.22486610182392,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 89.65606753135603,
+          "connectorKm": 5.85601053193685,
+          "roadMinutes": 51.23203858934628,
+          "connectorMinutes": 3.3462917325353425,
+          "recordedMinutes": 54.611666666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.947241847436492,
+      "orsWithin1KmOfModel": 0.9436039409156006,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "original/Calexico",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": -3.0450000000000443,
+      "v8Minutes": 120.66499999999996,
+      "orsMinutes": 123.71000000000001,
+      "orsKm": 196.21929999999998,
+      "sourceRoadKm": 190.30418801498445,
+      "internalConnectorKm": 11.010103130594953,
+      "sourceArcChordRatio": 1.0155556168099795,
+      "neConnectorKm": 10.981885847445842,
+      "neConnectorKmPer100RoadKm": 5.770701087556273,
+      "neConnectorPaidMinutes": 6.275363341397623,
+      "connectorOnlyAdditionalMinutesAt55": 5.704875764906931,
+      "connectorOnlyAdditionalMinutesAt25": 20.0811626924724,
+      "endpointMinutes": 3.1216666666666493,
+      "endpointKm": 1.6537702114255273,
+      "nonroadMinutes": 2.381666666666667,
+      "sourceRoundingMinutes": 0.0733315514343218,
+      "modeledDistanceRatio": 1.0394513815313584,
+      "modelAnchorPolylineKm": 196.1449203688477,
+      "orsPolylineKm": 196.21921684276498,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 2.2586151992501193,
+          "connectorKm": 0.028217283149110817,
+          "roadMinutes": 1.2906372567143538,
+          "connectorMinutes": 0.06772147955786596,
+          "recordedMinutes": 1.36
+        },
+        "natural-earth/105": {
+          "roadKm": 188.04557281573432,
+          "connectorKm": 10.981885847445842,
+          "roadMinutes": 107.45461303756248,
+          "connectorMinutes": 6.275363341397623,
+          "recordedMinutes": 113.80166666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9578005068773663,
+      "orsWithin1KmOfModel": 0.9549230815056724,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "original/Julian",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "signedMinutes": 4.35419292464988,
+      "v8Minutes": 75.77085959131655,
+      "orsMinutes": 71.41666666666667,
+      "orsKm": 97.4598,
+      "sourceRoadKm": 90.88545028751955,
+      "internalConnectorKm": 6.8365013125159155,
+      "sourceArcChordRatio": 1.0276178131922198,
+      "neConnectorKm": 6.8365013125159155,
+      "neConnectorKmPer100RoadKm": 7.5221075440440535,
+      "neConnectorPaidMinutes": 4.5052272830764455,
+      "connectorOnlyAdditionalMinutesAt55": 2.952774148759098,
+      "connectorOnlyAdditionalMinutesAt25": 11.90237586696175,
+      "endpointMinutes": 3.103333333333328,
+      "endpointKm": 2.2155626290310413,
+      "nonroadMinutes": 7.784192924649883,
+      "sourceRoundingMinutes": 0.03499223127774087,
+      "modeledDistanceRatio": 1.0587024388278103,
+      "modelAnchorPolylineKm": 97.1968669114626,
+      "orsPolylineKm": 97.45966015276717,
+      "majorRoadMinuteShare": 0.4166452607243771,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 43.79745382129889,
+          "connectorKm": 3.4840327273387457,
+          "roadMinutes": 25.027116469313647,
+          "connectorMinutes": 1.9908758441935688,
+          "recordedMinutes": 27.033333333333335
+        },
+        "natural-earth/80": {
+          "roadKm": 47.087996466220666,
+          "connectorKm": 3.3524685851771694,
+          "roadMinutes": 35.31599734966551,
+          "connectorMinutes": 2.5143514388828767,
+          "recordedMinutes": 37.849999999999994
+        }
+      },
+      "modelWithin1KmOfOrs": 0.020015754809006726,
+      "orsWithin1KmOfModel": 0.026464809270457086,
+      "modelWithin3KmOfOrs": 0.06656427944107376,
+      "orsWithin3KmOfModel": 0.07351995051622669
+    },
+    {
+      "id": "regional/los-angeles--bakersfield",
+      "set": "regional",
+      "origin": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "signedMinutes": -2.858425440458447,
+      "v8Minutes": 118.27324122620821,
+      "orsMinutes": 121.13166666666666,
+      "orsKm": 181.31070000000003,
+      "sourceRoadKm": 172.72044541647406,
+      "internalConnectorKm": 18.10772445931084,
+      "sourceArcChordRatio": 1.0081009733926596,
+      "neConnectorKm": 18.10772445931084,
+      "neConnectorKmPer100RoadKm": 10.48383381344831,
+      "neConnectorPaidMinutes": 10.347271119606203,
+      "connectorOnlyAdditionalMinutesAt55": 9.406610108732897,
+      "connectorOnlyAdditionalMinutesAt25": 33.11126758273981,
+      "endpointMinutes": 9.154907892874903,
+      "endpointKm": 4.597744318452911,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.07366483288477355,
+      "modeledDistanceRatio": 1.0778509718082705,
+      "modelAnchorPolylineKm": 186.73515578537624,
+      "orsPolylineKm": 181.3105185997801,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 172.72044541647406,
+          "connectorKm": 18.10772445931084,
+          "roadMinutes": 98.69739738084233,
+          "connectorMinutes": 10.347271119606203,
+          "recordedMinutes": 109.11833333333331
+        }
+      },
+      "modelWithin1KmOfOrs": 0.8161700433032518,
+      "orsWithin1KmOfModel": 0.8507458551155714,
+      "modelWithin3KmOfOrs": 0.8978298192458779,
+      "orsWithin3KmOfModel": 0.9146245528745637
+    },
+    {
+      "id": "regional/los-angeles--ventura",
+      "set": "regional",
+      "origin": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "signedMinutes": -10.840000000000003,
+      "v8Minutes": 69.38499999999999,
+      "orsMinutes": 80.225,
+      "orsKm": 109.1309,
+      "sourceRoadKm": 98.11824161432442,
+      "internalConnectorKm": 14.116363267660969,
+      "sourceArcChordRatio": 1.0044993870172203,
+      "neConnectorKm": 14.116363267660969,
+      "neConnectorKmPer100RoadKm": 14.387093608086124,
+      "neConnectorPaidMinutes": 8.066493295806273,
+      "connectorOnlyAdditionalMinutesAt55": 7.333175723460238,
+      "connectorOnlyAdditionalMinutesAt25": 25.812778546580056,
+      "endpointMinutes": 5.208333333333343,
+      "endpointKm": 3.291790184992762,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.04260673410357185,
+      "modeledDistanceRatio": 1.058603888238603,
+      "modelAnchorPolylineKm": 109.02608517739746,
+      "orsPolylineKm": 109.13070568993196,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 98.11824161432442,
+          "connectorKm": 14.116363267660969,
+          "roadMinutes": 56.0675666367568,
+          "connectorMinutes": 8.066493295806273,
+          "recordedMinutes": 64.17666666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7205563305708458,
+      "orsWithin1KmOfModel": 0.7317326301031661,
+      "modelWithin3KmOfOrs": 0.885211726072858,
+      "orsWithin3KmOfModel": 0.8757487343543938
+    },
+    {
+      "id": "regional/bakersfield--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "signedMinutes": 1.9365745595414978,
+      "v8Minutes": 215.16824122620815,
+      "orsMinutes": 213.23166666666665,
+      "orsKm": 301.358,
+      "sourceRoadKm": 298.91081179102224,
+      "internalConnectorKm": 20.32238399163315,
+      "sourceArcChordRatio": 1.024637003105965,
+      "neConnectorKm": 9.246487622391676,
+      "neConnectorKmPer100RoadKm": 3.0933934998832293,
+      "neConnectorPaidMinutes": 5.283707212795244,
+      "connectorOnlyAdditionalMinutesAt55": 4.80337019345022,
+      "connectorOnlyAdditionalMinutesAt25": 16.90786308094478,
+      "endpointMinutes": 6.321574559541542,
+      "endpointKm": 2.8375081216881197,
+      "nonroadMinutes": 0.31666666666666665,
+      "sourceRoundingMinutes": 0.1290648345839145,
+      "modeledDistanceRatio": 1.0691690559029061,
+      "modelAnchorPolylineKm": 311.6489519969806,
+      "orsPolylineKm": 301.35791803873303,
+      "majorRoadMinuteShare": 0.7711200626608483,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 257.05253774447783,
+          "connectorKm": 9.246487622391676,
+          "roadMinutes": 146.8871644254158,
+          "connectorMinutes": 5.283707212795244,
+          "recordedMinutes": 152.27999999999997
+        },
+        "census-layer/105": {
+          "roadKm": 9.77644244574379,
+          "connectorKm": 1.2203271055778013,
+          "roadMinutes": 5.586538540425023,
+          "connectorMinutes": 2.928785053386724,
+          "recordedMinutes": 8.521666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 32.08183160080061,
+          "connectorKm": 9.855569263663673,
+          "roadMinutes": 24.06137370060046,
+          "connectorMinutes": 23.65336623279281,
+          "recordedMinutes": 47.72833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.008652462692720167,
+      "orsWithin1KmOfModel": 0.009507332444693761,
+      "modelWithin3KmOfOrs": 0.03033890784442552,
+      "orsWithin3KmOfModel": 0.03360833415604242
+    },
+    {
+      "id": "regional/bakersfield--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "signedMinutes": -19.80175877379179,
+      "v8Minutes": 205.4232412262082,
+      "orsMinutes": 225.225,
+      "orsKm": 350.8419,
+      "sourceRoadKm": 330.1234737721921,
+      "internalConnectorKm": 13.009646237402132,
+      "sourceArcChordRatio": 1.006922083345544,
+      "neConnectorKm": 13.009646237402132,
+      "neConnectorKmPer100RoadKm": 3.9408425243882186,
+      "neConnectorPaidMinutes": 7.782012070099481,
+      "connectorOnlyAdditionalMinutesAt55": 6.410329279793754,
+      "connectorOnlyAdditionalMinutesAt25": 23.441138899665635,
+      "endpointMinutes": 6.686574559541555,
+      "endpointKm": 3.314960666848541,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.1427650253368995,
+      "modeledDistanceRatio": 0.9874763552370533,
+      "modelAnchorPolylineKm": 341.17988568887944,
+      "orsPolylineKm": 350.84177422521304,
+      "majorRoadMinuteShare": 0.9467553378843024,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 317.97200824431656,
+          "connectorKm": 11.061246604531846,
+          "roadMinutes": 181.69829042532362,
+          "connectorMinutes": 6.320712345446767,
+          "recordedMinutes": 188.15499999999997
+        },
+        "natural-earth/80": {
+          "roadKm": 12.151465527875526,
+          "connectorKm": 1.9483996328702855,
+          "roadMinutes": 9.113599145906644,
+          "connectorMinutes": 1.461299724652714,
+          "recordedMinutes": 10.581666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.769324117102781,
+      "orsWithin1KmOfModel": 0.7596152355512749,
+      "modelWithin3KmOfOrs": 0.827674603873075,
+      "orsWithin3KmOfModel": 0.8239572038903183
+    },
+    {
+      "id": "regional/santa-barbara--san-diego",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "signedMinutes": -13.605000000000132,
+      "v8Minutes": 216.45999999999987,
+      "orsMinutes": 230.065,
+      "orsKm": 350.93870000000004,
+      "sourceRoadKm": 333.38624862629393,
+      "internalConnectorKm": 26.763667436213584,
+      "sourceArcChordRatio": 1.0083509015729422,
+      "neConnectorKm": 24.15456604545058,
+      "neConnectorKmPer100RoadKm": 7.245219664871782,
+      "neConnectorPaidMinutes": 13.802609168828893,
+      "connectorOnlyAdditionalMinutesAt55": 12.547826517117192,
+      "connectorOnlyAdditionalMinutesAt25": 44.1683493402525,
+      "endpointMinutes": 3.9616666666667233,
+      "endpointKm": 1.9709378054042066,
+      "nonroadMinutes": 1.4133333333333336,
+      "sourceRoundingMinutes": 0.14029030201035653,
+      "modeledDistanceRatio": 1.03354159218348,
+      "modelAnchorPolylineKm": 349.0160106108247,
+      "orsPolylineKm": 350.93831021322507,
+      "majorRoadMinuteShare": 0.9651167381228731,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 25.58242084385617,
+          "connectorKm": 0.19577715167180432,
+          "roadMinutes": 14.61852619648924,
+          "connectorMinutes": 0.46986516401233036,
+          "recordedMinutes": 15.1
+        },
+        "census/80": {
+          "roadKm": 2.093444667303738,
+          "connectorKm": 2.413324239091201,
+          "roadMinutes": 1.5700835004778035,
+          "connectorMinutes": 5.791978173818882,
+          "recordedMinutes": 7.363333333333333
+        },
+        "natural-earth/105": {
+          "roadKm": 305.71038311513405,
+          "connectorKm": 24.15456604545058,
+          "roadMinutes": 174.69164749436231,
+          "connectorMinutes": 13.802609168828893,
+          "recordedMinutes": 188.6216666666665
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6877377067368465,
+      "orsWithin1KmOfModel": 0.691145299775663,
+      "modelWithin3KmOfOrs": 0.8741447005537718,
+      "orsWithin3KmOfModel": 0.8688161615389772
+    },
+    {
+      "id": "regional/santa-barbara--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "signedMinutes": -1.248333333333278,
+      "v8Minutes": 303.2750000000001,
+      "orsMinutes": 304.52333333333337,
+      "orsKm": 476.99609999999996,
+      "sourceRoadKm": 453.49470366042334,
+      "internalConnectorKm": 23.63095813067789,
+      "sourceArcChordRatio": 1.0077312778800958,
+      "neConnectorKm": 21.12022065802765,
+      "neConnectorKmPer100RoadKm": 4.657214403509873,
+      "neConnectorPaidMinutes": 12.637469465003022,
+      "connectorOnlyAdditionalMinutesAt55": 10.402771252845326,
+      "connectorOnlyAdditionalMinutesAt25": 38.05106011426334,
+      "endpointMinutes": 4.953333333333329,
+      "endpointKm": 2.3381753435778316,
+      "nonroadMinutes": 0.8016666666666666,
+      "sourceRoundingMinutes": 0.1969664502844921,
+      "modeledDistanceRatio": 1.0058737690150024,
+      "modelAnchorPolylineKm": 468.243020541627,
+      "orsPolylineKm": 476.9958950703555,
+      "majorRoadMinuteShare": 0.6967878910101278,
+      "classes": {
+        "census-layer/105": {
+          "roadKm": 20.135908972402753,
+          "connectorKm": 0.09741323355903685,
+          "roadMinutes": 11.506233698515857,
+          "connectorMinutes": 0.23379176054168843,
+          "recordedMinutes": 11.748333333333333
+        },
+        "census/80": {
+          "roadKm": 2.093444667303738,
+          "connectorKm": 2.413324239091201,
+          "roadMinutes": 1.5700835004778035,
+          "connectorMinutes": 5.791978173818882,
+          "recordedMinutes": 7.363333333333333
+        },
+        "natural-earth/105": {
+          "roadKm": 324.046999159404,
+          "connectorKm": 17.935097759699207,
+          "roadMinutes": 185.1697138053737,
+          "connectorMinutes": 10.248627291256689,
+          "recordedMinutes": 195.55999999999997
+        },
+        "natural-earth/80": {
+          "roadKm": 107.21835086131289,
+          "connectorKm": 3.185122898328443,
+          "roadMinutes": 80.41376314598466,
+          "connectorMinutes": 2.3888421737463323,
+          "recordedMinutes": 82.84833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7648175072157641,
+      "orsWithin1KmOfModel": 0.7643742091960604,
+      "modelWithin3KmOfOrs": 0.8165708309673926,
+      "orsWithin3KmOfModel": 0.8097304545549706
+    },
+    {
+      "id": "regional/palm-springs--idyllwild",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "signedMinutes": -12.984478232510973,
+      "v8Minutes": 50.77385510082236,
+      "orsMinutes": 63.75833333333333,
+      "orsKm": 77.6212,
+      "sourceRoadKm": 3.583455833734689,
+      "internalConnectorKm": 0.00046011387564921834,
+      "sourceArcChordRatio": 1.0030943848510772,
+      "neConnectorKm": 0.00046011387564921834,
+      "neConnectorKmPer100RoadKm": 0.012839948278912822,
+      "neConnectorPaidMinutes": 0.00034508540673691376,
+      "connectorOnlyAdditionalMinutesAt55": 0.00015685700306223346,
+      "connectorOnlyAdditionalMinutesAt25": 0.0007591878948212102,
+      "endpointMinutes": 2.2175249055152904,
+      "endpointKm": 1.4528566443375928,
+      "nonroadMinutes": 45.86799686197374,
+      "sourceRoundingMinutes": 0.0003963726255795663,
+      "modeledDistanceRatio": 0.31110621777431496,
+      "modelAnchorPolylineKm": 24.107498137007386,
+      "orsPolylineKm": 77.62066099348861,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 3.583455833734689,
+          "connectorKm": 0.00046011387564921834,
+          "roadMinutes": 2.687591875301017,
+          "connectorMinutes": 0.00034508540673691376,
+          "recordedMinutes": 2.6883333333333335
+        }
+      },
+      "modelWithin1KmOfOrs": 0.20812960825260926,
+      "orsWithin1KmOfModel": 0.05468354129739187,
+      "modelWithin3KmOfOrs": 0.35719600880944885,
+      "orsWithin3KmOfModel": 0.14037666056748688
+    },
+    {
+      "id": "regional/palm-springs--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "signedMinutes": -11.15662362923041,
+      "v8Minutes": 96.7933763707696,
+      "orsMinutes": 107.95,
+      "orsKm": 131.29420000000002,
+      "sourceRoadKm": 53.07272652485192,
+      "internalConnectorKm": 8.131184199072766,
+      "sourceArcChordRatio": 1.0504107571231986,
+      "neConnectorKm": 5.712052340627371,
+      "neConnectorKmPer100RoadKm": 10.762688700292486,
+      "neConnectorPaidMinutes": 4.283894552097459,
+      "connectorOnlyAdditionalMinutesAt55": 1.9474352740414904,
+      "connectorOnlyAdditionalMinutesAt25": 9.42503106540823,
+      "endpointMinutes": 0.9316666666666436,
+      "endpointKm": 1.1206011000297993,
+      "nonroadMinutes": 46.40504303743628,
+      "sourceRoundingMinutes": 0.022692583913347164,
+      "modeledDistanceRatio": 0.6219615674027205,
+      "modelAnchorPolylineKm": 76.70356754790534,
+      "orsPolylineKm": 131.2940036207148,
+      "majorRoadMinuteShare": 0.0298240884275797,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 23.47649468962302,
+          "connectorKm": 5.711242001738191,
+          "roadMinutes": 17.60737101721726,
+          "connectorMinutes": 4.283431501303642,
+          "recordedMinutes": 21.903333333333332
+        },
+        "natural-earth/105": {
+          "roadKm": 2.578138210211338,
+          "connectorKm": 0.0008103388891795291,
+          "roadMinutes": 1.473221834406479,
+          "connectorMinutes": 0.00046305079381687384,
+          "recordedMinutes": 1.475
+        },
+        "census-layer/80": {
+          "roadKm": 27.018093625017563,
+          "connectorKm": 2.419131858445396,
+          "roadMinutes": 20.26357021876317,
+          "connectorMinutes": 5.805916460268951,
+          "recordedMinutes": 26.078333333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.19698198560698243,
+      "orsWithin1KmOfModel": 0.11198997134478088,
+      "modelWithin3KmOfOrs": 0.29183744878380746,
+      "orsWithin3KmOfModel": 0.15257794055977522
+    },
+    {
+      "id": "regional/idyllwild--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "signedMinutes": -10.669478232510968,
+      "v8Minutes": 50.77385510082237,
+      "orsMinutes": 61.443333333333335,
+      "orsKm": 76.5413,
+      "sourceRoadKm": 3.583455833734689,
+      "internalConnectorKm": 0.00046011387564921834,
+      "sourceArcChordRatio": 1.0030943848510772,
+      "neConnectorKm": 0.00046011387564921834,
+      "neConnectorKmPer100RoadKm": 0.012839948278912822,
+      "neConnectorPaidMinutes": 0.00034508540673691376,
+      "connectorOnlyAdditionalMinutesAt55": 0.00015685700306223346,
+      "connectorOnlyAdditionalMinutesAt25": 0.0007591878948212102,
+      "endpointMinutes": 2.2175249055152833,
+      "endpointKm": 1.4528566443375928,
+      "nonroadMinutes": 45.86799686197375,
+      "sourceRoundingMinutes": 0.0003963726255795663,
+      "modeledDistanceRatio": 0.3154955292254464,
+      "modelAnchorPolylineKm": 24.107498137007386,
+      "orsPolylineKm": 76.540838115793,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 3.583455833734689,
+          "connectorKm": 0.00046011387564921834,
+          "roadMinutes": 2.687591875301017,
+          "connectorMinutes": 0.00034508540673691376,
+          "recordedMinutes": 2.6883333333333335
+        }
+      },
+      "modelWithin1KmOfOrs": 0.1706384787446643,
+      "orsWithin1KmOfModel": 0.04280876309712859,
+      "modelWithin3KmOfOrs": 0.35719600880944885,
+      "orsWithin3KmOfModel": 0.13113180111063727
+    },
+    {
+      "id": "regional/idyllwild--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "signedMinutes": -14.186666666666675,
+      "v8Minutes": 60.14166666666666,
+      "orsMinutes": 74.32833333333333,
+      "orsKm": 83.93360000000001,
+      "sourceRoadKm": 74.8641971497306,
+      "internalConnectorKm": 4.62240297019546,
+      "sourceArcChordRatio": 1.020849376042338,
+      "neConnectorKm": 2.131418509599483,
+      "neConnectorKmPer100RoadKm": 2.8470465065384767,
+      "neConnectorPaidMinutes": 1.597229202341111,
+      "connectorOnlyAdditionalMinutesAt55": 0.7279546263128704,
+      "connectorOnlyAdditionalMinutesAt25": 3.5181752206976484,
+      "endpointMinutes": 1.4383333333333248,
+      "endpointKm": 1.578895039329453,
+      "nonroadMinutes": 0.11000000000000001,
+      "sourceRoundingMinutes": 0.02710883318476931,
+      "modeledDistanceRatio": 0.966374949872147,
+      "modelAnchorPolylineKm": 78.0525176266563,
+      "orsPolylineKm": 83.93342309022516,
+      "majorRoadMinuteShare": 0.28646603709181934,
+      "classes": {
+        "census-layer/80": {
+          "roadKm": 3.6632531723188206,
+          "connectorKm": 2.3801431946924936,
+          "roadMinutes": 2.7474398792391153,
+          "connectorMinutes": 5.712343667261984,
+          "recordedMinutes": 8.461666666666666
+        },
+        "natural-earth/80": {
+          "roadKm": 42.31885846585507,
+          "connectorKm": 2.123944302391873,
+          "roadMinutes": 31.7391438493913,
+          "connectorMinutes": 1.5929582267939053,
+          "recordedMinutes": 33.346666666666664
+        },
+        "natural-earth/105": {
+          "roadKm": 19.701562605366586,
+          "connectorKm": 0.007474207207610098,
+          "roadMinutes": 11.258035774495193,
+          "connectorMinutes": 0.00427097554720577,
+          "recordedMinutes": 11.268333333333333
+        },
+        "census-layer/105": {
+          "roadKm": 9.180522906190122,
+          "connectorKm": 0.1108412659034837,
+          "roadMinutes": 5.2460130892514965,
+          "connectorMinutes": 0.26601903816836087,
+          "recordedMinutes": 5.5166666666666675
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6655189460000337,
+      "orsWithin1KmOfModel": 0.6963541159914386,
+      "modelWithin3KmOfOrs": 0.7423992734844153,
+      "orsWithin3KmOfModel": 0.7794982298999371
+    },
+    {
+      "id": "regional/julian--borrego-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "signedMinutes": 14.04189828295609,
+      "v8Minutes": 60.21856494962275,
+      "orsMinutes": 46.17666666666666,
+      "orsKm": 49.926199999999994,
+      "sourceRoadKm": 29.586167335738335,
+      "internalConnectorKm": 0.00947794956861557,
+      "sourceArcChordRatio": 1.1031996987341472,
+      "neConnectorKm": 0.00947794956861557,
+      "neConnectorKmPer100RoadKm": 0.03203507051474954,
+      "neConnectorPaidMinutes": 0.007108462176461677,
+      "connectorOnlyAdditionalMinutesAt55": 0.0032311191711189456,
+      "connectorOnlyAdditionalMinutesAt25": 0.01563861678821569,
+      "endpointMinutes": 4.445635076379091,
+      "endpointKm": 2.5530424551730384,
+      "nonroadMinutes": 33.56292987324366,
+      "sourceRoundingMinutes": 0.013266036019793148,
+      "modeledDistanceRatio": 0.924028703452927,
+      "modelAnchorPolylineKm": 43.20961494702775,
+      "orsPolylineKm": 49.925918595648255,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 29.586167335738335,
+          "connectorKm": 0.00947794956861557,
+          "roadMinutes": 22.189625501803746,
+          "connectorMinutes": 0.007108462176461677,
+          "recordedMinutes": 22.21
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7634493067640317,
+      "orsWithin1KmOfModel": 0.7286416439619364,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.9712671923862353
+    },
+    {
+      "id": "regional/julian--el-centro",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "signedMinutes": 0.10679171311153368,
+      "v8Minutes": 107.19679171311152,
+      "orsMinutes": 107.08999999999999,
+      "orsKm": 154.7392,
+      "sourceRoadKm": 136.73822976345724,
+      "internalConnectorKm": 2.5823293884648493,
+      "sourceArcChordRatio": 1.0328629401487306,
+      "neConnectorKm": 2.5823293884648493,
+      "neConnectorKmPer100RoadKm": 1.8885204181244757,
+      "neConnectorPaidMinutes": 1.9367470413486376,
+      "connectorOnlyAdditionalMinutesAt55": 0.8803395642493796,
+      "connectorOnlyAdditionalMinutesAt25": 4.260843490967001,
+      "endpointMinutes": 2.6567917131115877,
+      "endpointKm": 1.8076910538115798,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.0495806360583515,
+      "modeledDistanceRatio": 0.9120394199125602,
+      "modelAnchorPolylineKm": 136.06005164290778,
+      "orsPolylineKm": 154.7390512525704,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 136.73822976345724,
+          "connectorKm": 2.5823293884648493,
+          "roadMinutes": 102.55367232259294,
+          "connectorMinutes": 1.9367470413486376,
+          "recordedMinutes": 104.53999999999994
+        }
+      },
+      "modelWithin1KmOfOrs": 0.03172463360631946,
+      "orsWithin1KmOfModel": 0.019593770120635536,
+      "modelWithin3KmOfOrs": 0.09296493316053489,
+      "orsWithin3KmOfModel": 0.06401598779859327
+    },
+    {
+      "id": "regional/borrego-springs--anza",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "signedMinutes": 16.517811997273384,
+      "v8Minutes": 109.30781199727338,
+      "orsMinutes": 92.78999999999999,
+      "orsKm": 100.6718,
+      "sourceRoadKm": 2.5865722989260664,
+      "internalConnectorKm": 0.0008679638285733184,
+      "sourceArcChordRatio": 1.0314224494938398,
+      "neConnectorKm": 0,
+      "neConnectorKmPer100RoadKm": 0.0,
+      "neConnectorPaidMinutes": 0,
+      "connectorOnlyAdditionalMinutesAt55": 0.0,
+      "connectorOnlyAdditionalMinutesAt25": 0.0,
+      "endpointMinutes": 4.03896840971241,
+      "endpointKm": 2.330278540005238,
+      "nonroadMinutes": 103.32551025422764,
+      "sourceRoundingMinutes": 0.0013209959502076263,
+      "modeledDistanceRatio": 0.476499026957116,
+      "modelAnchorPolylineKm": 47.875337786228755,
+      "orsPolylineKm": 100.67201251417647,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "census-layer/80": {
+          "roadKm": 2.5865722989260664,
+          "connectorKm": 0.0008679638285733184,
+          "roadMinutes": 1.9399292241945498,
+          "connectorMinutes": 0.002083113188575964,
+          "recordedMinutes": 1.9433333333333334
+        }
+      },
+      "modelWithin1KmOfOrs": 0.03402223004044583,
+      "orsWithin1KmOfModel": 0.0349893297356989,
+      "modelWithin3KmOfOrs": 0.12199780149801519,
+      "orsWithin3KmOfModel": 0.08726297882307345
+    },
+    {
+      "id": "regional/borrego-springs--julian",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "signedMinutes": 15.0452316162894,
+      "v8Minutes": 60.21856494962273,
+      "orsMinutes": 45.17333333333333,
+      "orsKm": 49.504599999999996,
+      "sourceRoadKm": 29.586167335738335,
+      "internalConnectorKm": 0.00947794956861557,
+      "sourceArcChordRatio": 1.1031996987341472,
+      "neConnectorKm": 0.00947794956861557,
+      "neConnectorKmPer100RoadKm": 0.03203507051474954,
+      "neConnectorPaidMinutes": 0.007108462176461678,
+      "connectorOnlyAdditionalMinutesAt55": 0.0032311191711189447,
+      "connectorOnlyAdditionalMinutesAt25": 0.01563861678821569,
+      "endpointMinutes": 4.4456350763790695,
+      "endpointKm": 2.5530424551730384,
+      "nonroadMinutes": 33.56292987324366,
+      "sourceRoundingMinutes": 0.013266036019789595,
+      "modeledDistanceRatio": 0.9318980832959264,
+      "modelAnchorPolylineKm": 43.20961494702775,
+      "orsPolylineKm": 49.504456616054,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 29.586167335738335,
+          "connectorKm": 0.00947794956861557,
+          "roadMinutes": 22.18962550180375,
+          "connectorMinutes": 0.007108462176461678,
+          "recordedMinutes": 22.21
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7475434699219441,
+      "orsWithin1KmOfModel": 0.7263314028698615,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.9710225722690988
+    },
+    {
+      "id": "regional/joshua-tree--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "signedMinutes": -4.058333333333394,
+      "v8Minutes": 146.05499999999992,
+      "orsMinutes": 150.11333333333332,
+      "orsKm": 207.42370000000003,
+      "sourceRoadKm": 194.0023705022787,
+      "internalConnectorKm": 7.884571777464092,
+      "sourceArcChordRatio": 1.0045755218623114,
+      "neConnectorKm": 7.8836232250625775,
+      "neConnectorKmPer100RoadKm": 4.063673657518519,
+      "neConnectorPaidMinutes": 5.747327552735175,
+      "connectorOnlyAdditionalMinutesAt55": 2.852988692787635,
+      "connectorOnlyAdditionalMinutesAt25": 13.173368187415011,
+      "endpointMinutes": 3.1249999999999774,
+      "endpointKm": 1.5720186873170103,
+      "nonroadMinutes": 0.025,
+      "sourceRoundingMinutes": 0.08377618535331521,
+      "modeledDistanceRatio": 0.98093601470674,
+      "modelAnchorPolylineKm": 200.93619574394512,
+      "orsPolylineKm": 207.4235648701449,
+      "majorRoadMinuteShare": 0.19261047549071073,
+      "classes": {
+        "census-layer/80": {
+          "roadKm": 4.397790886193448,
+          "connectorKm": 0.0009485524015155595,
+          "roadMinutes": 3.298343164645086,
+          "connectorMinutes": 0.0022765257636373428,
+          "recordedMinutes": 3.3033333333333332
+        },
+        "natural-earth/80": {
+          "roadKm": 142.3956940289425,
+          "connectorKm": 6.957439975116751,
+          "roadMinutes": 106.79677052170688,
+          "connectorMinutes": 5.21807998133756,
+          "recordedMinutes": 112.07666666666664
+        },
+        "natural-earth/105": {
+          "roadKm": 47.20888558714275,
+          "connectorKm": 0.9261832499458265,
+          "roadMinutes": 26.97650604979586,
+          "connectorMinutes": 0.5292475713976151,
+          "recordedMinutes": 27.525000000000006
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9205598409518371,
+      "orsWithin1KmOfModel": 0.9096764201749047,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/joshua-tree--twentynine-palms",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "signedMinutes": -1.6599999999999966,
+      "v8Minutes": 18.048333333333336,
+      "orsMinutes": 19.708333333333332,
+      "orsKm": 23.8507,
+      "sourceRoadKm": 23.0127466706018,
+      "internalConnectorKm": 0.006679466930224958,
+      "sourceArcChordRatio": 1.0001263476993276,
+      "neConnectorKm": 0.0018928185442651491,
+      "neConnectorKmPer100RoadKm": 0.008225087475903852,
+      "neConnectorPaidMinutes": 0.0014196139081988617,
+      "connectorOnlyAdditionalMinutesAt55": 0.0006452790491813009,
+      "connectorOnlyAdditionalMinutesAt25": 0.003123150598037496,
+      "endpointMinutes": 0.7183333333333339,
+      "endpointKm": 0.8634195323874096,
+      "nonroadMinutes": 0.04666666666666667,
+      "sourceRoundingMinutes": 0.010865760347481768,
+      "modeledDistanceRatio": 1.0021630440349292,
+      "modelAnchorPolylineKm": 23.86212340465361,
+      "orsPolylineKm": 23.850763547311246,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 4.590248139398417,
+          "connectorKm": 0.0018928185442651491,
+          "roadMinutes": 3.442686104548813,
+          "connectorMinutes": 0.0014196139081988617,
+          "recordedMinutes": 3.4466666666666668
+        },
+        "census-layer/80": {
+          "roadKm": 18.42249853120338,
+          "connectorKm": 0.0047866483859598085,
+          "roadMinutes": 13.816873898402536,
+          "connectorMinutes": 0.01148795612630354,
+          "recordedMinutes": 13.836666666666668
+        }
+      },
+      "modelWithin1KmOfOrs": 1.0,
+      "orsWithin1KmOfModel": 1.0,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/salton-city--bombay-beach",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "signedMinutes": 11.004678458260528,
+      "v8Minutes": 83.29301179159387,
+      "orsMinutes": 72.28833333333334,
+      "orsKm": 82.27489999999999,
+      "sourceRoadKm": 61.8527647331581,
+      "internalConnectorKm": 0.9945732798369249,
+      "sourceArcChordRatio": 1.004543557952933,
+      "neConnectorKm": 0.9821818475513042,
+      "neConnectorKmPer100RoadKm": 1.5879352390933223,
+      "neConnectorPaidMinutes": 0.7366363856634779,
+      "connectorOnlyAdditionalMinutesAt55": 0.33483472075612686,
+      "connectorOnlyAdditionalMinutesAt25": 1.6206000484596519,
+      "endpointMinutes": 6.814999999999994,
+      "endpointKm": 3.145434451864922,
+      "nonroadMinutes": 29.29634512492721,
+      "sourceRoundingMinutes": 0.025717293649130113,
+      "modeledDistanceRatio": 0.9504670675209527,
+      "modelAnchorPolylineKm": 77.59485862447879,
+      "orsPolylineKm": 82.27476103579527,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 30.395689218511503,
+          "connectorKm": 0.9821818475513042,
+          "roadMinutes": 22.796766913883623,
+          "connectorMinutes": 0.7366363856634779,
+          "recordedMinutes": 23.546666666666667
+        },
+        "census-layer/80": {
+          "roadKm": 31.457075514646597,
+          "connectorKm": 0.01239143228562064,
+          "roadMinutes": 23.59280663598495,
+          "connectorMinutes": 0.029739437485489538,
+          "recordedMinutes": 23.635000000000005
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9327972077656389,
+      "orsWithin1KmOfModel": 0.885188442207695,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.9670138064330518
+    },
+    {
+      "id": "regional/salton-city--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "signedMinutes": 4.099999999999994,
+      "v8Minutes": 50.43833333333333,
+      "orsMinutes": 46.33833333333334,
+      "orsKm": 62.5728,
+      "sourceRoadKm": 56.18162646372795,
+      "internalConnectorKm": 1.1075087982191725,
+      "sourceArcChordRatio": 1.0117270114252712,
+      "neConnectorKm": 1.1075087982191725,
+      "neConnectorKmPer100RoadKm": 1.9713007043934616,
+      "neConnectorPaidMinutes": 0.8306315986643792,
+      "connectorOnlyAdditionalMinutesAt55": 0.37755981757471824,
+      "connectorOnlyAdditionalMinutesAt25": 1.8273895170616345,
+      "endpointMinutes": 7.450000000000003,
+      "endpointKm": 3.5497338803270404,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.021481886872976474,
+      "modeledDistanceRatio": 0.9722893836023666,
+      "modelAnchorPolylineKm": 59.89853443324948,
+      "orsPolylineKm": 62.572968437912095,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "natural-earth/80": {
+          "roadKm": 56.18162646372795,
+          "connectorKm": 1.1075087982191725,
+          "roadMinutes": 42.13621984779597,
+          "connectorMinutes": 0.8306315986643792,
+          "recordedMinutes": 42.98833333333333
+        }
+      },
+      "modelWithin1KmOfOrs": 0.92763978968315,
+      "orsWithin1KmOfModel": 0.9010523643615834,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/bombay-beach--salton-city",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "signedMinutes": 10.826345124927201,
+      "v8Minutes": 83.29301179159387,
+      "orsMinutes": 72.46666666666667,
+      "orsKm": 82.3672,
+      "sourceRoadKm": 61.8527647331581,
+      "internalConnectorKm": 0.9945732798369249,
+      "sourceArcChordRatio": 1.0045435579529325,
+      "neConnectorKm": 0.9821818475513042,
+      "neConnectorKmPer100RoadKm": 1.5879352390933223,
+      "neConnectorPaidMinutes": 0.7366363856634781,
+      "connectorOnlyAdditionalMinutesAt55": 0.33483472075612664,
+      "connectorOnlyAdditionalMinutesAt25": 1.6206000484596517,
+      "endpointMinutes": 6.8149999999999835,
+      "endpointKm": 3.145434451864922,
+      "nonroadMinutes": 29.296345124927214,
+      "sourceRoundingMinutes": 0.025717293649130113,
+      "modeledDistanceRatio": 0.9494019820217225,
+      "modelAnchorPolylineKm": 77.59485862447879,
+      "orsPolylineKm": 82.36715860364666,
+      "majorRoadMinuteShare": 0.0,
+      "classes": {
+        "census-layer/80": {
+          "roadKm": 31.457075514646597,
+          "connectorKm": 0.012391432285620643,
+          "roadMinutes": 23.59280663598495,
+          "connectorMinutes": 0.029739437485489535,
+          "recordedMinutes": 23.635000000000005
+        },
+        "natural-earth/80": {
+          "roadKm": 30.395689218511496,
+          "connectorKm": 0.9821818475513042,
+          "roadMinutes": 22.796766913883626,
+          "connectorMinutes": 0.7366363856634781,
+          "recordedMinutes": 23.546666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9327972077656389,
+      "orsWithin1KmOfModel": 0.8845567442780531,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 0.966055643224956
+    },
+    {
+      "id": "regional/bombay-beach--indio",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "signedMinutes": 12.732853514852359,
+      "v8Minutes": 76.68785351485236,
+      "orsMinutes": 63.955000000000005,
+      "orsKm": 67.91839999999999,
+      "sourceRoadKm": 55.17025000100415,
+      "internalConnectorKm": 2.0166035278816494,
+      "sourceArcChordRatio": 1.0057820430261633,
+      "neConnectorKm": 2.0042120955960288,
+      "neConnectorKmPer100RoadKm": 3.6327768961705815,
+      "neConnectorPaidMinutes": 1.3408769568687964,
+      "connectorOnlyAdditionalMinutesAt55": 0.8455362383268712,
+      "connectorOnlyAdditionalMinutesAt25": 3.469232072561672,
+      "endpointMinutes": 5.1665083899251485,
+      "endpointKm": 2.1888513945296095,
+      "nonroadMinutes": 29.296345124927214,
+      "sourceRoundingMinutes": 0.025292409764759327,
+      "modeledDistanceRatio": 1.0539487884304561,
+      "modelAnchorPolylineKm": 70.4717857332053,
+      "orsPolylineKm": 67.91844707850129,
+      "majorRoadMinuteShare": 0.053917505427274526,
+      "classes": {
+        "census-layer/80": {
+          "roadKm": 31.457075514646597,
+          "connectorKm": 0.012391432285620643,
+          "roadMinutes": 23.59280663598495,
+          "connectorMinutes": 0.029739437485489535,
+          "recordedMinutes": 23.635000000000005
+        },
+        "natural-earth/80": {
+          "roadKm": 20.641035179073434,
+          "connectorKm": 1.0954322525579676,
+          "roadMinutes": 15.480776384305077,
+          "connectorMinutes": 0.8215741894184757,
+          "recordedMinutes": 16.313333333333336
+        },
+        "natural-earth/105": {
+          "roadKm": 3.0721393072841194,
+          "connectorKm": 0.9087798430380614,
+          "roadMinutes": 1.7555081755909254,
+          "connectorMinutes": 0.5193027674503208,
+          "recordedMinutes": 2.276666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.86743831236759,
+      "orsWithin1KmOfModel": 0.909725892187222,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/san-clemente--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "signedMinutes": -11.731666666666662,
+      "v8Minutes": 59.318333333333335,
+      "orsMinutes": 71.05,
+      "orsKm": 81.9155,
+      "sourceRoadKm": 76.9080630613421,
+      "internalConnectorKm": 4.4764535780821655,
+      "sourceArcChordRatio": 1.0160034382772043,
+      "neConnectorKm": 2.2133742662001716,
+      "neConnectorKmPer100RoadKm": 2.877948264585441,
+      "neConnectorPaidMinutes": 1.4098362502296107,
+      "connectorOnlyAdditionalMinutesAt55": 1.0047538583523945,
+      "connectorOnlyAdditionalMinutesAt25": 3.9022619886508005,
+      "endpointMinutes": 2.6633333333333327,
+      "endpointKm": 2.14057227985678,
+      "nonroadMinutes": 1.6733333333333333,
+      "sourceRoundingMinutes": 0.03436650850598966,
+      "modeledDistanceRatio": 1.0281608626145637,
+      "modelAnchorPolylineKm": 81.64747006574517,
+      "orsPolylineKm": 81.91574696120685,
+      "majorRoadMinuteShare": 0.5722816696474582,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 53.61985292491677,
+          "connectorKm": 1.4010889167549019,
+          "roadMinutes": 30.63991595709529,
+          "connectorMinutes": 0.8006222381456584,
+          "recordedMinutes": 31.465
+        },
+        "natural-earth/80": {
+          "roadKm": 10.43206476216025,
+          "connectorKm": 0.8122853494452699,
+          "roadMinutes": 7.824048571620187,
+          "connectorMinutes": 0.6092140120839524,
+          "recordedMinutes": 8.44
+        },
+        "census-layer/80": {
+          "roadKm": 12.856145374265079,
+          "connectorKm": 2.263079311881994,
+          "roadMinutes": 9.642109030698807,
+          "connectorMinutes": 5.4313903485167865,
+          "recordedMinutes": 15.076666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.6109731150749768,
+      "orsWithin1KmOfModel": 0.602838773228937,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/san-clemente--escondido",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "signedMinutes": -5.3233333333333235,
+      "v8Minutes": 40.60833333333334,
+      "orsMinutes": 45.931666666666665,
+      "orsKm": 67.65060000000001,
+      "sourceRoadKm": 64.38875916678981,
+      "internalConnectorKm": 2.107003002375149,
+      "sourceArcChordRatio": 1.0106591834188203,
+      "neConnectorKm": 2.107003002375149,
+      "neConnectorKmPer100RoadKm": 3.2723149655940116,
+      "neConnectorPaidMinutes": 1.2040017156429423,
+      "connectorOnlyAdditionalMinutesAt55": 1.0945470142208567,
+      "connectorOnlyAdditionalMinutesAt25": 3.852805490057415,
+      "endpointMinutes": 2.5833333333333357,
+      "endpointKm": 2.3371902276028105,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.02742161762002837,
+      "modeledDistanceRatio": 1.0174773379211381,
+      "modelAnchorPolylineKm": 67.27937225260492,
+      "orsPolylineKm": 67.65078070863858,
+      "majorRoadMinuteShare": 1.0,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 64.38875916678981,
+          "connectorKm": 2.107003002375149,
+          "roadMinutes": 36.79357666673703,
+          "connectorMinutes": 1.2040017156429423,
+          "recordedMinutes": 38.025000000000006
+        }
+      },
+      "modelWithin1KmOfOrs": 0.5325902831281855,
+      "orsWithin1KmOfModel": 0.4993311272573467,
+      "modelWithin3KmOfOrs": 1.0,
+      "orsWithin3KmOfModel": 1.0
+    },
+    {
+      "id": "regional/ventura--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "signedMinutes": -19.639999999999958,
+      "v8Minutes": 164.53500000000005,
+      "orsMinutes": 184.175,
+      "orsKm": 278.3203,
+      "sourceRoadKm": 261.1324013664,
+      "internalConnectorKm": 17.394704088442317,
+      "sourceArcChordRatio": 1.0055573779941498,
+      "neConnectorKm": 17.394704088442317,
+      "neConnectorKmPer100RoadKm": 6.661258425772857,
+      "neConnectorPaidMinutes": 10.287759413551015,
+      "connectorOnlyAdditionalMinutesAt55": 8.68828141020424,
+      "connectorOnlyAdditionalMinutesAt25": 31.459530398710548,
+      "endpointMinutes": 2.7399999999999807,
+      "endpointKm": 2.009006533388393,
+      "nonroadMinutes": 0.0,
+      "sourceRoundingMinutes": 0.11882096138555198,
+      "modeledDistanceRatio": 1.007961373957382,
+      "modelAnchorPolylineKm": 273.1085931319806,
+      "orsPolylineKm": 278.3199527881732,
+      "majorRoadMinuteShare": 0.9345983085591849,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 248.9809358385245,
+          "connectorKm": 15.446304455572033,
+          "roadMinutes": 142.27482047915686,
+          "connectorMinutes": 8.826459688898302,
+          "recordedMinutes": 151.2133333333334
+        },
+        "natural-earth/80": {
+          "roadKm": 12.151465527875526,
+          "connectorKm": 1.9483996328702855,
+          "roadMinutes": 9.113599145906644,
+          "connectorMinutes": 1.461299724652714,
+          "recordedMinutes": 10.581666666666667
+        }
+      },
+      "modelWithin1KmOfOrs": 0.7188936844163673,
+      "orsWithin1KmOfModel": 0.7145971594442231,
+      "modelWithin3KmOfOrs": 0.7750201571549113,
+      "orsWithin3KmOfModel": 0.7648140569109063
+    },
+    {
+      "id": "regional/ventura--san-clemente",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "signedMinutes": -14.300000000000011,
+      "v8Minutes": 125.75999999999999,
+      "orsMinutes": 140.06,
+      "orsKm": 208.0399,
+      "sourceRoadKm": 194.14822611414255,
+      "internalConnectorKm": 18.04325235228987,
+      "sourceArcChordRatio": 1.006164374167144,
+      "neConnectorKm": 17.944888434177102,
+      "neConnectorKmPer100RoadKm": 9.242880449305286,
+      "neConnectorPaidMinutes": 10.25422196238691,
+      "connectorOnlyAdditionalMinutesAt55": 9.322019965806291,
+      "connectorOnlyAdditionalMinutesAt25": 32.81351027963814,
+      "endpointMinutes": 2.8633333333333066,
+      "endpointKm": 2.118924839341338,
+      "nonroadMinutes": 1.385,
+      "sourceRoundingMinutes": 0.07952780701333495,
+      "modeledDistanceRatio": 1.032914775670951,
+      "modelAnchorPolylineKm": 206.7320960558418,
+      "orsPolylineKm": 208.0396115900334,
+      "majorRoadMinuteShare": 0.9999999999999998,
+      "classes": {
+        "natural-earth/105": {
+          "roadKm": 188.70171424268912,
+          "connectorKm": 17.944888434177102,
+          "roadMinutes": 107.82955099582242,
+          "connectorMinutes": 10.25422196238691,
+          "recordedMinutes": 118.16
+        },
+        "census-layer/105": {
+          "roadKm": 5.446511871453419,
+          "connectorKm": 0.09836391811276746,
+          "roadMinutes": 3.1122924979733826,
+          "connectorMinutes": 0.23607340347064193,
+          "recordedMinutes": 3.3516666666666666
+        }
+      },
+      "modelWithin1KmOfOrs": 0.9121430827337418,
+      "orsWithin1KmOfModel": 0.9126444928044103,
+      "modelWithin3KmOfOrs": 0.9786108174156583,
+      "orsWithin3KmOfModel": 0.9756400228931775
+    }
+  ],
+  "scope": "Frozen-path component/curvature/proximity diagnostic only; connectors are model geometry, not known drivable roads. Corridor overlap is approximate proximity, not road identity. Components/reference paths differ, so this is not causal ETA decomposition or a candidate result. No fitted parameters, graph/query search, provider/key/env/DB read, activation or national inference."
+}

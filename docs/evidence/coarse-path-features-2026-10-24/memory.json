@@ -1,0 +1,76 @@
+{
+  "artifact": "data/coarse-quality/connector-timing-candidate-v1/grid.json",
+  "inputSelection": "Validated on-land source-visit anchors",
+  "artifactSha256": "2904d0b72e4f15537abd69f5bb9cbc05358c1dacb18d041360e7df10c131b39b",
+  "decodeMs": 4311.391209,
+  "loadHeapBudgetBytes": 4194304,
+  "before": {
+    "rss": 224378880,
+    "heapTotal": 104415232,
+    "heapUsed": 69453480,
+    "external": 63715177,
+    "arrayBuffers": 61244447
+  },
+  "decoded": {
+    "rss": 179535872,
+    "heapTotal": 141901824,
+    "heapUsed": 73318656,
+    "external": 217935246,
+    "arrayBuffers": 215425729
+  },
+  "retainedHeapDeltaBytes": 3865176,
+  "retainedArrayBufferDeltaBytes": 154181282,
+  "retainedHeapAndBufferDeltaBytes": 158046458,
+  "sweeps": [
+    {
+      "inputs": 317586,
+      "attachments": 635172,
+      "points": 10762067,
+      "attachmentMedianMs": 0.04229200000008859,
+      "attachmentMaxMs": 15.500916999997571,
+      "memory": {
+        "rss": 244465664,
+        "heapTotal": 209272832,
+        "heapUsed": 73418336,
+        "external": 217935246,
+        "arrayBuffers": 215425729
+      },
+      "heapGrowthBytes": 99680,
+      "bufferGrowthBytes": 0
+    },
+    {
+      "inputs": 317586,
+      "attachments": 635172,
+      "points": 10762067,
+      "attachmentMedianMs": 0.04104200000074343,
+      "attachmentMaxMs": 2.8291249999965657,
+      "memory": {
+        "rss": 301875200,
+        "heapTotal": 209272832,
+        "heapUsed": 73419664,
+        "external": 217935246,
+        "arrayBuffers": 215425729
+      },
+      "heapGrowthBytes": 101008,
+      "bufferGrowthBytes": 0
+    },
+    {
+      "inputs": 317586,
+      "attachments": 635172,
+      "points": 10762067,
+      "attachmentMedianMs": 0.04091600000538165,
+      "attachmentMaxMs": 18.15804200000275,
+      "memory": {
+        "rss": 302465024,
+        "heapTotal": 209272832,
+        "heapUsed": 73419624,
+        "external": 217935246,
+        "arrayBuffers": 215425729
+      },
+      "heapGrowthBytes": 100968,
+      "bufferGrowthBytes": 0
+    }
+  ],
+  "processMaxRssKiB": 481664,
+  "scope": "Local explicit-GC observations in one Node process, with already-parsed encoded input retained. Load checks less than 2 MiB retained heap beyond packed buffers; three complete supplemental-input sweeps check bounded retained growth (2 MiB heap / 64 KiB buffers allowance), not Vercel memory, a cloud capacity budget, latency percentiles or a nationwide forecast. RSS is whole-process lifetime, not isolated decoder/query peak."
+}

@@ -1,0 +1,317 @@
+{
+  "date": "2026-10-24",
+  "baseCommit": "37ff14b",
+  "state": "Approved29 capture complete; all83 paired; all budgets consumed; no further calls authorized",
+  "plannedNewRequests": 29,
+  "attemptedNewRequests": 29,
+  "newHttp200": 29,
+  "newFinitePairs": 29,
+  "reusedReferences": 54,
+  "totalFinitePairs": 83,
+  "primaryCompatibleCohorts": 1,
+  "missingMetadata": 0,
+  "snapOver100m": 0,
+  "maximumSnapMetersAll83": 79.63446722784605,
+  "maximumSnapMetersNew29": 37.633546127385046,
+  "minimumStartIntervalMs": 6500.0,
+  "returnedQuotaRemaining": [
+    1999,
+    1998,
+    1997,
+    1996,
+    1995,
+    1994,
+    1993,
+    1992,
+    1991,
+    1990,
+    1989,
+    1988,
+    1987,
+    1986,
+    1985,
+    1984,
+    1983,
+    1982,
+    1981,
+    1980,
+    1979,
+    1978,
+    1977,
+    1976,
+    1975,
+    1974,
+    1973,
+    1972,
+    1971
+  ],
+  "retries": 0,
+  "paidSpendCapEuro": 0,
+  "paidUpgrade": false,
+  "authOrStatusProbes": 0,
+  "captureTransport": "live",
+  "realKeyLoadedOnlyByCapture": true,
+  "furtherCallsAuthorized": false,
+  "all48And6And29BudgetsConsumed": true,
+  "planSha256": "77d357142dfe266274c3dc6693732963b296e027888b036725f70b27d5401a93",
+  "twoActualCliReplaysByteIdentical": true,
+  "freshPreservedCaptureRestorationReplayByteIdentical": true,
+  "independentRaw83ModelSourceProtocolArithmetic": true,
+  "independentAnalysisRepeatByteIdentical": true,
+  "all83CasesAndAllPrimarySensitivityDenominatorsRetained": true,
+  "originalPrototypeRejectionAndValhallaGatesUnchanged": true,
+  "newModelAcceptedOrActivated": false,
+  "currentV8AndConcurrentUiFiles": {
+    "src/routes/index.tsx": "a99d1c63225fa7ad88ed021933c00492dd40aca9e4f5967ffddb1977fce9bed3",
+    "src/components/research-map.tsx": "4d871c37a59af0de8b9a62eed4806fb9104aad9007f90aa1f405c9fbb4c96135",
+    "src/server/data/coarse-grid-v8.json": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910"
+  },
+  "envDbSchemaDependenciesChanged": false,
+  "commitPushOrDeployment": false,
+  "previousToolReadiness": {
+    "syntheticTests": 15,
+    "biomeFiles": 164,
+    "appTypecheck": true,
+    "strictDiagnosticTypecheck": true,
+    "ordinaryBuild": true,
+    "rerun": false,
+    "reason": "Acquisition/reporting changes no app implementation or sealed tool source.",
+    "evidence": "docs/evidence/coarse-benchmark-plan-2026-10-24/checks.json"
+  },
+  "prototypeComparisonAgainstOrs": {
+    "original": {
+      "planned": 11,
+      "pairedFinite": 11,
+      "unpaired": 0,
+      "snapOver100m": 0,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -7.391121293895668,
+          "meanAbsoluteMinutes": 11.212834846793712,
+          "medianAbsoluteMinutes": 11.523333333333326,
+          "p90AbsoluteMinutes": 15.821666666666658,
+          "meanAbsolutePercent": 8.350595061302931,
+          "classification": {
+            "correct": 0,
+            "falseReachable": 0,
+            "missedReachable": 0,
+            "ambiguous": 0
+          }
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": 2.8738053356179445,
+          "meanAbsoluteMinutes": 6.0925932144058175,
+          "medianAbsoluteMinutes": 5.0566666666666436,
+          "p90AbsoluteMinutes": 10.484999999999985,
+          "meanAbsolutePercent": 4.606189797045668,
+          "classification": {
+            "correct": 0,
+            "falseReachable": 0,
+            "missedReachable": 0,
+            "ambiguous": 0
+          }
+        }
+      },
+      "candidateChanges": {
+        "improve": 8,
+        "regress": 3,
+        "unchanged": 0
+      }
+    },
+    "regional": {
+      "planned": 24,
+      "pairedFinite": 24,
+      "unpaired": 0,
+      "snapOver100m": 0,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -2.8229963489426684,
+          "meanAbsoluteMinutes": 10.015678454543666,
+          "medianAbsoluteMinutes": 11.080651043745469,
+          "p90AbsoluteMinutes": 16.517811997273384,
+          "meanAbsolutePercent": 12.486838247345547,
+          "classification": {
+            "correct": 0,
+            "falseReachable": 0,
+            "missedReachable": 0,
+            "ambiguous": 0
+          }
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": 1.0023508732795818,
+          "meanAbsoluteMinutes": 8.516979802857273,
+          "medianAbsoluteMinutes": 8.353959842234403,
+          "p90AbsoluteMinutes": 14.536666666666669,
+          "meanAbsolutePercent": 10.77542087713615,
+          "classification": {
+            "correct": 0,
+            "falseReachable": 0,
+            "missedReachable": 0,
+            "ambiguous": 0
+          }
+        }
+      },
+      "candidateChanges": {
+        "improve": 14,
+        "regress": 10,
+        "unchanged": 0
+      }
+    },
+    "frontier": {
+      "planned": 48,
+      "pairedFinite": 48,
+      "unpaired": 0,
+      "snapOver100m": 0,
+      "models": {
+        "v8": {
+          "meanSignedMinutes": -38.9672226264447,
+          "meanAbsoluteMinutes": 52.27309809419811,
+          "medianAbsoluteMinutes": 37.254353174338576,
+          "p90AbsoluteMinutes": 116.33153485009313,
+          "meanAbsolutePercent": 8.376439911295849,
+          "classification": {
+            "correct": 23,
+            "falseReachable": 17,
+            "missedReachable": 5,
+            "ambiguous": 3
+          }
+        },
+        "rejectedCandidate": {
+          "meanSignedMinutes": -8.234557105596478,
+          "meanAbsoluteMinutes": 35.09704628713543,
+          "medianAbsoluteMinutes": 32.60416666666646,
+          "p90AbsoluteMinutes": 70.16500000000019,
+          "meanAbsolutePercent": 6.059411952641844,
+          "classification": {
+            "correct": 31,
+            "falseReachable": 8,
+            "missedReachable": 6,
+            "ambiguous": 3
+          }
+        }
+      },
+      "candidateChanges": {
+        "improve": 32,
+        "regress": 16,
+        "unchanged": 0
+      }
+    }
+  },
+  "all83OrsComparison": {
+    "planned": 83,
+    "pairedFinite": 83,
+    "unpaired": 0,
+    "snapOver100m": 0,
+    "models": {
+      "v8": {
+        "meanSignedMinutes": -24.33109557441954,
+        "meanAbsoluteMinutes": 34.61236355114805,
+        "medianAbsoluteMinutes": 21.29500000000064,
+        "p90AbsoluteMinutes": 93.69666666666683,
+        "meanAbsolutePercent": 9.561563606660552,
+        "classification": {
+          "correct": 23,
+          "falseReachable": 17,
+          "missedReachable": 5,
+          "ambiguous": 3
+        }
+      },
+      "rejectedCandidate": {
+        "meanSignedMinutes": -4.0914513423870345,
+        "meanAbsoluteMinutes": 23.56728026999445,
+        "medianAbsoluteMinutes": 13.628333333333558,
+        "p90AbsoluteMinutes": 56.72986818342633,
+        "meanAbsolutePercent": 7.230481476452751,
+        "classification": {
+          "correct": 31,
+          "falseReachable": 8,
+          "missedReachable": 6,
+          "ambiguous": 3
+        }
+      }
+    },
+    "candidateChanges": {
+      "improve": 54,
+      "regress": 29,
+      "unchanged": 0
+    }
+  },
+  "worstPrototypeAbsoluteErrorIncreaseMinutes": 71.5466666666664,
+  "olderOrsMinusValhalla": {
+    "planned": 35,
+    "paired": 35,
+    "meanSignedMinutes": 15.490758095238094,
+    "medianSignedMinutes": 14.458249999999992,
+    "positive": 35,
+    "negative": 0
+  },
+  "producerFiles": {
+    "scripts/build-coarse-calibration.py": "fd36911bc3c2ab9ac4bd93339a4ad038aa48bd2f878e64f3b0eeedcdface976f",
+    "scripts/coarse_calibration_test.py": "17a4606602ab0fe2ee87fdb25937aed80d0bedf9faae23e673a12c62de81293d",
+    "scripts/compare-coarse-calibration.ts": "751fa6846483d2084931cbdb9e212bf550b9bcc72cb2ab94182a74793358d9f8",
+    "scripts/preview-coarse-calibration.ts": "c30be5d7fcbc446443748969d40d5d439dd33886f83b6d0905abec84612c75ea",
+    "scripts/coarse-calibration-preview.html": "bcad15c908f477c5f63efceff8d0d015a8cf080f23e851e92414d07e5520df50",
+    "scripts/coarse_census.py": "9d9dd6b648997a055775db3a5a680605f5969db04a57fbcda9ffce91a05c1bf1",
+    "scripts/build-coarse-augmentation.py": "8d094fcff45fe11cadd8a5fa4307ad20ae1278872d83c410188a69fb9d3ff704",
+    "scripts/build-coarse-grid-v4.py": "fa2af08414367a2e4f6d9b02c4fa623c3a501f0480ffe4523a08c01e717929d7",
+    "scripts/build-coarse-grid-v3.py": "df0e59c7fe56761ad990a39b833e4447fe1dfba1ab288fce6606a5f47e6437cf",
+    "scripts/build-coarse-grid-v2.py": "e4cddabf99d237b0a90f18798b0b7da4eea49610541caada62aa83c808e2697e",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "src/server/coarse-data.server.ts": "14359b989b13a71cc695261bc03aa38f27993472807cb1a9807336a283aa77c3",
+    "docs/evidence/coarse-class-calibration-2026-10-23/diagnose.py": "68124e73d068a2a371c23a08b37ebdab080243beafbd3913a746587a1d7387a2",
+    "scripts/coarse-holdout.ts": "53eab4c01da6fdc33468ca848ca932bb50e7d39be675096e6d26e9c430010de6",
+    "scripts/compare-coarse-holdout.ts": "8e85694a72ff80c94ccca0446a945bd675273033e5cec136c937968a2f29aacb",
+    "scripts/inspect-coarse-frontier.ts": "1aed51fd7a7bc2b7c2704cafe880be656d9517276565c9222dac3efc18836172",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/analyze.py": "0538f744d9ae9683636ae060be96e0086bbf8493b049fab6eabd70b85e2f1fc4",
+    "scripts/coarse-control.ts": "33b68ac16955091f46b55c870ccd2397e16d4d090600a92a37796f0be6c78c60",
+    "scripts/compare-coarse-control.ts": "39a30162a3a527e826489045a8e3c4258d9d9ad35230dbe8db527b7de8a6a562",
+    "scripts/coarse-control.test.ts": "7dd7e99e0120edd34b114f53fe413cf6c5d57e27e32ea2ae6cd7253b0dbd9276",
+    "docs/evidence/coarse-control-reference-2026-10-24/analyze.py": "2109dd98b6bfbdd293e6bba870247d65536c11072dd74a9693d3a149296e0312",
+    "scripts/coarse-benchmark-plan.ts": "5e59f2e4c6a1d4e3e0a78081517b357ec6781d09ee0ede13da8f51225c97c328",
+    "scripts/prepare-coarse-benchmark.ts": "3e6dac4154e3681d26d96372c72ec57103627ab35a11955dc10a8e4819222fc7",
+    "scripts/coarse-benchmark-capture.ts": "5e66a1995b73815d972ed57b548b161c146561dad2d9ebdb3c761599057de8f4",
+    "scripts/coarse-benchmark.ts": "2f764a3141169bff5ed358a72e0ad468d16971a407075407ca40f804994dc48a",
+    "scripts/compare-coarse-benchmark.ts": "ef45e54d0312cd4f172392ec22f1ddbf8ba8bbd0b9d4939c991b075bfbd4f422",
+    "scripts/coarse-benchmark.test.ts": "b5aa915d8f98bc3ba6de77c163d27658f15a213fc68f3e8412f1b1753de3d4e4",
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/analyze.py": "21dd971f05b223cfd10d9be2354477246d18e4933541219c145e9619f234b4a7"
+  },
+  "referenceFiles": {
+    "docs/evidence/coarse-class-calibration-2026-10-23/comparison.json": "cb31b7f281a737afe6b19d4e8410f533de2ddd7832f552602944a81e376b07ba",
+    "docs/evidence/coarse-control-reference-2026-10-24/comparison.json": "6b9c0278e41c9c11b6eee8dc5104f4aba36393dcddb108caa8467c062caebb2b",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/comparison.json": "ea9ece78749832afee47c07a6b6359799dc6c97fcd6899292c405967bcce316c",
+    "docs/evidence/coarse-control-reference-2026-10-24/reference/sha256.json": "65966b8de287ee8b424b7720f79df8d7135df25b51427237825fbfc2116eb5d7",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/reference/sha256.json": "09d38037f943bb303175feeb8604a90d1ae4061d585f3ebb413edd1ee47194eb",
+    "docs/evidence/coarse-quality-2026-10-22/comparison.json": "90dce82c094f41c13de37065ca677650ecc3fe36187008379bcc48950470c96c",
+    "docs/evidence/coarse-regional-2026-10-22/comparison.json": "acb588585be88a4d2adfd64028fff8fb462325054c989c70cf0a757f31bd782c"
+  },
+  "priorSealedEvidenceVerified": {
+    "coarse-class-calibration-2026-10-23": {
+      "files": 27,
+      "manifestSha256": "78cc9629a51cb6246a8712f73a4c8c0871d438d13a57fc16567888e6629078ab"
+    },
+    "coarse-frontier-reference-2026-10-23": {
+      "files": 160,
+      "manifestSha256": "b1febb70689ce37ad3c6a87bf3e8b24437590982ad44d3c5bc3db76ad005516a"
+    },
+    "coarse-control-tool-2026-10-24": {
+      "files": 28,
+      "manifestSha256": "101d3405629a6f6e30a69d9d55a46ed61c7a6c0314642409931060455dba09eb"
+    },
+    "coarse-control-reference-2026-10-24": {
+      "files": 29,
+      "manifestSha256": "f5aea9985109f97fc8ba4040482ab377ae828aa56e535818cf07a0648fe46cbe"
+    },
+    "coarse-benchmark-plan-2026-10-24": {
+      "files": 98,
+      "manifestSha256": "230bbb517755a232636443f6643a89f709abe7514458f6f2a012bc998dad8763"
+    }
+  },
+  "scope": "Same-provider selected observed development data, not a fresh holdout, national/area accuracy or traffic truth. New ORS summaries do not retroactively accept the historically failed candidate. No new correction/threshold/model or deployed improvement is selected. HTTP-plus-body elapsed is not engine search time.",
+  "documentationChecks": {
+    "pages": 9,
+    "localLinks": 341,
+    "markdownAnchors": 60,
+    "errors": [],
+    "gitDiffCheck": true
+  }
+}

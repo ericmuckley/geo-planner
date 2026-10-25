@@ -1,0 +1,26 @@
+{
+  "approvedOn": "2026-10-24",
+  "recordedAt": "2026-10-24T19:36:57.731363+00:00",
+  "userReply": "Yes go ahead",
+  "precedingApprovalRequest": "May I run the six planned reference requests using your existing key, with zero paid spending and no retries?",
+  "maximumRequests": 6,
+  "retries": 0,
+  "paidSpendCapEuro": 0,
+  "planPath": "docs/evidence/coarse-class-calibration-2026-10-23/control-plan.json",
+  "planSha256": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+  "freshCaptureDirectory": "data/coarse-quality/matched-control-reference-v1",
+  "otherCallsAuthorized": false,
+  "original48BudgetConsumed": true,
+  "producerFiles": {
+    "scripts/coarse-control.ts": "33b68ac16955091f46b55c870ccd2397e16d4d090600a92a37796f0be6c78c60",
+    "scripts/compare-coarse-control.ts": "39a30162a3a527e826489045a8e3c4258d9d9ad35230dbe8db527b7de8a6a562",
+    "scripts/coarse-control.test.ts": "7dd7e99e0120edd34b114f53fe413cf6c5d57e27e32ea2ae6cd7253b0dbd9276",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "scripts/coarse-holdout.ts": "53eab4c01da6fdc33468ca848ca932bb50e7d39be675096e6d26e9c430010de6"
+  },
+  "preservedUiFiles": {
+    "src/routes/index.tsx": "a99d1c63225fa7ad88ed021933c00492dd40aca9e4f5967ffddb1977fce9bed3",
+    "src/components/research-map.tsx": "4d871c37a59af0de8b9a62eed4806fb9104aad9007f90aa1f405c9fbb4c96135"
+  },
+  "scope": "One execution of the six fixed public OD requests. No replacement, auth/status probe, fallback, paid upgrade, commit or deployment."
+}

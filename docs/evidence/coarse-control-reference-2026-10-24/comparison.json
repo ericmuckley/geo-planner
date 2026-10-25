@@ -1,0 +1,237 @@
+{
+  "planSha256": "5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279",
+  "transport": "live",
+  "attempted": 6,
+  "stopReason": null,
+  "valhallaMetadata": [
+    {
+      "version": "3.9.1-7fd2228e5",
+      "tileset_last_modified": 1792170595,
+      "available_actions": [
+        "route",
+        "locate",
+        "sources_to_targets",
+        "optimized_route",
+        "isochrone",
+        "trace_route",
+        "trace_attributes",
+        "height",
+        "transit_available",
+        "expansion",
+        "centroid",
+        "status",
+        "tile"
+      ]
+    },
+    {
+      "version": "3.9.1-7fd2228e5",
+      "tileset_last_modified": 1792170595,
+      "available_actions": [
+        "route",
+        "locate",
+        "sources_to_targets",
+        "optimized_route",
+        "isochrone",
+        "trace_route",
+        "trace_attributes",
+        "height",
+        "transit_available",
+        "expansion",
+        "centroid",
+        "status",
+        "tile"
+      ]
+    }
+  ],
+  "overall": {
+    "planned": 6,
+    "pairedFinite": 6,
+    "unpaired": 0,
+    "snapOver100m": 0,
+    "meanSignedMinutes": 15.969508333333337,
+    "medianSignedMinutes": 15.524341666666679,
+    "meanAbsoluteMinutes": 15.969508333333337,
+    "medianAbsoluteMinutes": 15.524341666666679,
+    "atLeastFiveMinutesLonger": 4,
+    "materialPositiveDiscrepancy": true,
+    "interpretationLimited": false
+  },
+  "snapAtMost100mSensitivity": {
+    "planned": 6,
+    "pairedFinite": 6,
+    "unpaired": 0,
+    "snapOver100m": 0,
+    "meanSignedMinutes": 15.969508333333337,
+    "medianSignedMinutes": 15.524341666666679,
+    "meanAbsoluteMinutes": 15.969508333333337,
+    "medianAbsoluteMinutes": 15.524341666666679,
+    "atLeastFiveMinutesLonger": 4,
+    "materialPositiveDiscrepancy": true,
+    "interpretationLimited": false
+  },
+  "cases": [
+    {
+      "id": "regional/joshua-tree--twentynine-palms",
+      "valhallaMinutes": 15.1931,
+      "valhallaKm": 23.877,
+      "v8Minutes": 18.048333333333336,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 19.708333333333332,
+        "distanceKm": 23.8507,
+        "snapMeters": [
+          14.920572069008797,
+          3.447042725969337
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 4.515233333333333,
+      "absoluteDifferenceMinutes": 4.515233333333333,
+      "differencePercent": 29.718973305864722,
+      "distanceDifferenceKm": -0.026299999999999102
+    },
+    {
+      "id": "regional/idyllwild--palm-springs",
+      "valhallaMinutes": 51.98633333333333,
+      "valhallaKm": 76.625,
+      "v8Minutes": 50.77385510082237,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 61.443333333333335,
+        "distanceKm": 76.5413,
+        "snapMeters": [
+          13.915641208984532,
+          5.007180741741371
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 9.457000000000008,
+      "absoluteDifferenceMinutes": 9.457000000000008,
+      "differencePercent": 18.19131951346189,
+      "distanceDifferenceKm": -0.08369999999999322
+    },
+    {
+      "id": "original/Julian",
+      "valhallaMinutes": 67.14213333333333,
+      "valhallaKm": 94.425,
+      "v8Minutes": 75.77085959131655,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 71.41666666666667,
+        "distanceKm": 97.4598,
+        "snapMeters": [
+          0.5559746333992676,
+          8.123947402930424
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 4.274533333333338,
+      "absoluteDifferenceMinutes": 4.274533333333338,
+      "differencePercent": 6.366394871774511,
+      "distanceDifferenceKm": 3.034800000000004
+    },
+    {
+      "id": "original/Idyllwild",
+      "valhallaMinutes": 109.85998333333333,
+      "valhallaKm": 171.764,
+      "v8Minutes": 115.63000000000002,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 131.45166666666668,
+        "distanceKm": 177.0468,
+        "snapMeters": [
+          0.5559746333992676,
+          13.915641208984532
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 21.59168333333335,
+      "absoluteDifferenceMinutes": 21.59168333333335,
+      "differencePercent": 19.653819960831978,
+      "distanceDifferenceKm": 5.28279999999998
+    },
+    {
+      "id": "original/Big Bear Lake",
+      "valhallaMinutes": 150.4128,
+      "valhallaKm": 234.021,
+      "v8Minutes": 159.34000000000003,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 174.10666666666665,
+        "distanceKm": 233.7248,
+        "snapMeters": [
+          0.5559746333992676,
+          7.078655597586298
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 23.69386666666665,
+      "absoluteDifferenceMinutes": 23.69386666666665,
+      "differencePercent": 15.75256006580999,
+      "distanceDifferenceKm": -0.2961999999999989
+    },
+    {
+      "id": "regional/santa-barbara--brawley",
+      "valhallaMinutes": 272.2386,
+      "valhallaKm": 475.726,
+      "v8Minutes": 303.2750000000001,
+      "status": 200,
+      "outcome": "paired",
+      "ors": {
+        "minutes": 304.52333333333337,
+        "distanceKm": 476.99609999999996,
+        "snapMeters": [
+          9.6070989170514,
+          8.784894437363896
+        ],
+        "snapOver100m": false,
+        "engine": {
+          "version": "9.10.0",
+          "build_date": "2026-08-13T11:53:14Z",
+          "graph_date": "2026-09-21T10:31:27Z",
+          "osm_date": "2026-09-13T23:59:59Z"
+        }
+      },
+      "differenceMinutes": 32.28473333333335,
+      "absoluteDifferenceMinutes": 32.28473333333335,
+      "differencePercent": 11.85898448395391,
+      "distanceDifferenceKm": 1.2700999999999567
+    }
+  ],
+  "scope": "Six matched public OD controls, exploratory ORS-minus-Valhalla profile/data comparison; not traffic truth, national accuracy or a model acceptance gate. All failures/skips retained. Materiality uses at least4 gaps>=5min and median signed gap>=5min; fewer than6 pairs or snap>100m limits interpretation. A false flag does not prove agreement. Synthetic transport results are fixtures, never provider observations. HTTP-plus-body elapsed excludes persistence and is not routing-engine search time."
+}

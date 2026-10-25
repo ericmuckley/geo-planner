@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-damped-calibration-2026-10-24/feature-diagnosis.py", line 42, in <module>
+    spec.loader.exec_module(helpers)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/eric/Documents/GitHub/geo-planner/scripts/build-coarse-augmentation.py", line 14, in <module>
+    from coarse_census import ROOT, SPEEDS, checked_file, load_tool, part_key, road_parts
+ModuleNotFoundError: No module named 'coarse_census'

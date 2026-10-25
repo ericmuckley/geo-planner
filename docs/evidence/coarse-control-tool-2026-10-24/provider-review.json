@@ -1,0 +1,23 @@
+{
+  "reviewedOn": "2026-10-24",
+  "routingProviderRequests": 0,
+  "accountOrRemainingQuotaRead": false,
+  "endpointSource": "https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912",
+  "endpointObservation": "Official announcement still documents api.heigit.org/openrouteservice/v2/directions and existing keys.",
+  "faqSource": "https://giscience.github.io/openrouteservice/frequently-asked-questions#when-and-how-does-my-quota-reset",
+  "quotaObservation": "Official FAQ reports default Directions 2000/day and 40/min, 403 on daily exhaustion, 429 on minute limit, and x-ratelimit-remaining/reset response headers. Actual key remaining quota not read.",
+  "snapSource": "https://giscience.github.io/openrouteservice/frequently-asked-questions#why-is-my-openrouteservice-instance-reporting-could-not-find-point",
+  "snapObservation": "Official FAQ documents 350m maximum public snapping radius; fixed requests use 350m at both endpoints.",
+  "plansPage": "https://account.heigit.org/info/plans",
+  "plansPageObservation": "Public page fetched but no rendered text was available through the web reader; current account/plan not inspected. This does not replace the prior dated browser terms/plans review.",
+  "priorTermsReview": "docs/evidence/coarse-holdout-plan-2026-10-23/README.md",
+  "captureBudget": {
+    "maximumRequests": 6,
+    "paidSpendCapEuro": 0,
+    "retries": 0,
+    "minimumIntervalMs": 6500,
+    "timeoutMs": 45000,
+    "endpoint": "https://api.heigit.org/openrouteservice/v2/directions/driving-car/geojson"
+  },
+  "scope": "Public primary documentation reads only, no Directions/auth/status probe, key read, account change, paid upgrade or provider result. Returned engine/data metadata will be recorded without assuming 9.10."
+}

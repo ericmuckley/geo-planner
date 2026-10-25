@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geo Planner · Class timing candidate review</title><link rel="stylesheet" href="./maplibre-gl.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f7f4;color:#213c40;font:15px/1.5 system-ui,sans-serif}header,footer{padding:18px 26px}h1{margin:0;font-size:26px}p{margin:6px 0}select{padding:8px;font:inherit;max-width:90vw}main{padding:0 26px}.map{height:430px;border:1px solid #bacdca;border-radius:10px}.metrics{display:flex;gap:30px;flex-wrap:wrap;margin:12px 0}.metrics strong{display:block;font-size:21px}.teal{color:#187681}.orange{color:#b44b16}.purple{color:#6941a5}.muted{font-size:13px;color:#50686c}#status{min-height:23px}
+</style>
+<header><p class="muted">GEO PLANNER / OFFLINE DEVELOPMENT CANDIDATE</p><h1>Road-class timing experiment</h1>
+<p>105→95 and 80→85 km/h source classes. Geometry and 25 km/h local costs stay fixed.</p><p id="decision"></p>
+<label>Validation case <select id="case" aria-label="Validation case"></select></label><div class="metrics"><div class="teal">V8 model<strong id="before"></strong></div><div class="orange">Candidate model<strong id="after"></strong></div><div class="purple">Saved reference<strong id="reference"></strong></div></div><p id="status" class="muted" role="status">Loading map…</p></header>
+<main><div id="map" class="map" aria-label="Shared camera route comparison"></div></main>
+<footer><p>Teal: v8 · Orange dashes: candidate · Purple: saved reference route. All use one camera.</p><p class="muted">Model lines connect state positions, not detailed road geometry. Reference engines and datasets differ; these observed routes are development cases, not fresh holdouts or area-accuracy proof. Selected cases are the largest frontier improvement, frontier regression and regional regression in the full ledger. No routing-provider request.</p><p class="muted">Model: Natural Earth + U.S. Census Bureau TIGER/Line, modified/repackaged by Geo Planner; not an official Census product. References: © openrouteservice by HeiGIT | Data from OpenStreetMap (CC-BY-SA4.0) and retained Valhalla/OpenStreetMap. Basemap uses OpenFreeMap/OpenStreetMap.</p></footer>
+<script type="module">
+import * as maplibregl from "./maplibre-gl.mjs";
+maplibregl.setWorkerUrl("./maplibre-gl-worker.mjs");
+const report=__REPORT_JSON__;
+const select=document.querySelector("#case");
+report.scenarios.forEach((row,i)=>{const option=document.createElement("option");option.value=i;option.textContent=`${row.set}/${row.id} · error change ${row.absoluteErrorChangeMinutes.toFixed(1)} min`;select.append(option)});
+document.querySelector("#decision").textContent=report.accuracyGatesPassed?"Accuracy gates passed; physical/runtime gates remain separate.":"REJECTED: long-horizon gains fail the earlier regional accuracy gates. V8 remains active.";
+const map=new maplibregl.Map({container:"map",style:"https://tiles.openfreemap.org/styles/liberty",center:[-96,39],zoom:4,renderWorldCopies:false,maxPitch:0});map.addControl(new maplibregl.NavigationControl({showCompass:false}));map.addControl(new maplibregl.ScaleControl({unit:"imperial"}));
+function draw(){const row=report.scenarios[Number(select.value)],bounds=new maplibregl.LngLatBounds();row.paths.forEach((points,i)=>{map.getSource(`route${i}`).setData({type:"Feature",properties:{},geometry:{type:"LineString",coordinates:points}});points.forEach(p=>bounds.extend(p))});map.fitBounds(bounds,{padding:35,duration:0});document.querySelector("#before").textContent=`${row.baseline.pointMinutes.toFixed(1)} min`;document.querySelector("#after").textContent=`${row.candidate.pointMinutes.toFixed(1)} min`;document.querySelector("#reference").textContent=`${row.referenceMinutes.toFixed(1)} min`;document.querySelector("#status").textContent=`${row.referenceEngine} reference · same camera · ${row.id}`}
+map.on("load",()=>{["#187681","#e77934","#6941a5"].forEach((color,i)=>{map.addSource(`route${i}`,{type:"geojson",data:{type:"FeatureCollection",features:[]}});map.addLayer({id:`route${i}`,type:"line",source:`route${i}`,paint:{"line-color":color,"line-width":i===2?2:4,...(i===1?{"line-dasharray":[2,2]}:{})}})});draw();select.addEventListener("change",draw)});
+</script></html>

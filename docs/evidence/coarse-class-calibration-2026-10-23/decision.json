@@ -1,0 +1,121 @@
+{
+  "outcome": "rejected; not activated",
+  "accuracyGates": {
+    "frontierMean": true,
+    "frontierP90": true,
+    "originalMean": false,
+    "regionalMean": false,
+    "all83Paired": true,
+    "all35StillShaded": true
+  },
+  "byOrigin": {
+    "frontier/{\"lat\": 46.1879, \"lon\": -123.8313}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 65.09129483975715,
+      "candidateMeanAbsoluteMinutes": 49.366572617534416
+    },
+    "frontier/{\"lat\": 46.8721, \"lon\": -113.994}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 44.95388888888862,
+      "candidateMeanAbsoluteMinutes": 38.72000000000034
+    },
+    "frontier/{\"lat\": 38.8792, \"lon\": -99.3268}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 24.084804486533937,
+      "candidateMeanAbsoluteMinutes": 36.67377369162988
+    },
+    "frontier/{\"lat\": 46.7867, \"lon\": -92.1005}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 20.757017639813427,
+      "candidateMeanAbsoluteMinutes": 42.102610693800735
+    },
+    "frontier/{\"lat\": 39.9612, \"lon\": -82.9988}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 34.75816947835525,
+      "candidateMeanAbsoluteMinutes": 15.41670961398295
+    },
+    "frontier/{\"lat\": 35.5951, \"lon\": -82.5515}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 61.29230636087505,
+      "candidateMeanAbsoluteMinutes": 24.280084138652892
+    },
+    "frontier/{\"lat\": 43.6591, \"lon\": -70.2568}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 109.50334689602742,
+      "candidateMeanAbsoluteMinutes": 57.69550829863414
+    },
+    "frontier/{\"lat\": 32.0809, \"lon\": -81.0912}": {
+      "cases": 6,
+      "baselineMeanAbsoluteMinutes": 57.74395616333398,
+      "candidateMeanAbsoluteMinutes": 16.52111124284812
+    },
+    "original/{\"lat\": 32.7157, \"lon\": -117.1611}": {
+      "cases": 11,
+      "baselineMeanAbsoluteMinutes": 10.288166584892211,
+      "candidateMeanAbsoluteMinutes": 20.553093214405823
+    },
+    "regional/{\"lat\": 34.0522, \"lon\": -118.2437}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 7.968812279770766,
+      "candidateMeanAbsoluteMinutes": 16.984645613104128
+    },
+    "regional/{\"lat\": 35.3733, \"lon\": -119.0187}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 14.343691666666643,
+      "candidateMeanAbsoluteMinutes": 28.241816226208257
+    },
+    "regional/{\"lat\": 34.4208, \"lon\": -119.6982}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 21.582783333333296,
+      "candidateMeanAbsoluteMinutes": 40.65028333333336
+    },
+    "regional/{\"lat\": 33.8303, \"lon\": -116.5453}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 3.84730230164028,
+      "candidateMeanAbsoluteMinutes": 2.7573023016402836
+    },
+    "regional/{\"lat\": 33.74, \"lon\": -116.7189}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 0.6737557829221501,
+      "candidateMeanAbsoluteMinutes": 0.9445891162554787
+    },
+    "regional/{\"lat\": 33.0787, \"lon\": -116.602}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 15.839319998033801,
+      "candidateMeanAbsoluteMinutes": 12.069319998033862
+    },
+    "regional/{\"lat\": 33.2559, \"lon\": -116.375}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 19.938588473448053,
+      "candidateMeanAbsoluteMinutes": 19.18442180678139
+    },
+    "regional/{\"lat\": 34.1347, \"lon\": -116.3131}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 13.036299999999965,
+      "candidateMeanAbsoluteMinutes": 10.55296666666672
+    },
+    "regional/{\"lat\": 33.2986, \"lon\": -115.9561}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 16.613297562463597,
+      "candidateMeanAbsoluteMinutes": 13.939964229130258
+    },
+    "regional/{\"lat\": 33.3503, \"lon\": -115.7297}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 23.105007653223115,
+      "candidateMeanAbsoluteMinutes": 20.650840986556478
+    },
+    "regional/{\"lat\": 33.4269, \"lon\": -117.612}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 4.573108333333341,
+      "candidateMeanAbsoluteMinutes": 7.783941666666667
+    },
+    "regional/{\"lat\": 34.2746, \"lon\": -119.229}": {
+      "cases": 2,
+      "baselineMeanAbsoluteMinutes": 2.6152916666666925,
+      "candidateMeanAbsoluteMinutes": 16.671958333333336
+    }
+  },
+  "fullRuntimePhysicalPackageQualificationRun": false,
+  "reason": "Both retained regional accuracy means fail the predeclared admission gates. Preserve candidate/evidence and stop activation qualification; no gate revision or extra tuning.",
+  "next": "Bounded matched-provider control is prepared but capture helper/fixture checks and separate quota authorization remain required."
+}

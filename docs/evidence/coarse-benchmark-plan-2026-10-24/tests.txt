@@ -1,0 +1,23 @@
+✔ 29 exact requests, hard cap, spacing/deadline and redaction; deterministic signed/percentage offline comparison (1408.892666ms)
+✔ HTTP401 stops once and retains 28 skipped cases (356.291ms)
+✔ HTTP403 stops once and retains 28 skipped cases (311.337208ms)
+✔ HTTP429 stops once and retains 28 skipped cases (400.849375ms)
+✔ returned zero quota stops after preserving the final successful response (612.308166ms)
+✔ network exceptions, invalid JSON/routes and HTTP failures retain their original denominators without retries (534.125875ms)
+✔ deadlines cover fetch/body and pre-aborted signals; partial bodies survive (976.510916ms)
+✔ response bound stops acquisition and retains its bounded prefix (290.14525ms)
+✔ disk failure stops before another request (107.490333ms)
+✔ all pairs and >100m snaps remain primary; sensitivity and incomplete-pair limits are explicit (1604.307583ms)
+✔ fixed29 is exactly the complement of saved6; plan/source reconstruction repeats without key/network (260.167334ms)
+✔ changed/missing engine metadata suppresses pooled primary; cohorts and all83 cases remain (1226.519917ms)
+✔ replay rejects changed, incomplete and unsealed captures (427.086458ms)
+✔ replay rejects a checksum-bound thirtieth request file outside its ledger (200.976916ms)
+✔ CLI inspection is offline; capture cannot bypass the 29-request confirmation argument (567.472583ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9825.009875

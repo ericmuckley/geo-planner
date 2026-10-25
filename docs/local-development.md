@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv6 port 3000. No database, routing service, API key, Python or Docker is needed to compute coarse 30-minute–12-hour contours, explore the map and save queries. The compact grid is included in source; the large ignored research datasets are unnecessary for this default path. The default basemap uses the network. The cloud `DATABASE_URL` is stored in ignored `.env`; `.env.local` retains the optional routing settings and has no database override. Preserve these values and restart Vite after service configuration changes. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
+Use `npm ci` only when dependencies need installation; the current workspace already has them. Open Vite's printed URL, using `http://127.0.0.1:3000` for the verified local app because another app can occupy IPv 6 port 3000. No database, routing service, API key, Python or Docker is needed to compute coarse 30-minute–12-hour contours, explore the map and save queries. The compact grid is included in source; the large ignored research datasets are unnecessary for this default path. The default basemap uses the network. The cloud `DATABASE_URL` is stored in ignored `.env`; `.env.local` retains the optional routing settings and has no database override. Preserve these values and restart Vite after service configuration changes. `VITE_` values are public and compiled into the client; server URLs and database credentials must remain unprefixed.
 
 ```bash
 npm run check
@@ -22,6 +22,81 @@ npm run preview -- --port 4173
 ```
 
 The route generator also runs during Vite builds. Use `npm run generate-routes` if typechecking a newly added route before starting/building Vite. Never edit the generated route tree manually. This sandbox required approval to install packages, use the test runner's IPC socket, and start the preview listener; these are environment restrictions, not application requirements.
+
+## Connector timing v9
+
+Completed October 24–25, 2026, **local/uncommitted/not deployed**. [Frozen candidate plan, all83 development comparisons and qualification](evidence/coarse-path-features-2026-10-24/README.md). Active engine `coarse-road-grid-v9`, graph `natural-earth-census-2026-grid-v9`, min 30/max 720; no new env variable, dependency, migration or DB/routing service. V8 and all failed artifacts/old producers remain unchanged. The separately authored floating UI is preserved byte for byte.
+
+Normal safe software checks (already pass; rerun for relevant changes):
+
+```sh
+npm run check
+npm run typecheck
+node --import tsx --test src/server/*.test.ts
+npm run test:coarse-data
+node --import tsx --test scripts/coarse-damped-gates.test.ts scripts/coarse-connector-gates.test.ts
+npm run --silent routing:verify:coarse > /tmp/coarse-v9-api.json
+npm run build
+npm run build:vercel
+npm run check:coarse:vercel
+npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-coarse-connectors.ts scripts/verify-coarse-connectors.ts scripts/preview-coarse-connectors.ts scripts/coarse-connector-gates.test.ts scripts/verify-coarse-v9.ts scripts/verify-coarse-deployment-v9.ts
+```
+
+Expected 56 server,43 Python and 9 gate tests; 175 Biome files; 42 API cell counts match preserved `physical.json`. `npm test`'s tsx CLI IPC socket is blocked by this sandbox; the direct `node --import tsx --test` command runs the same 56 server tests and passes. The new v9 package checker requires<=70MB, first local compute after config<=5s, v9 provenance, no fetch, no server dataset/secrets in client assets and missing-DB history fallback. It reads existing env values only locally to scan build output for embedded secrets, never prints them or calls DB/provider. Existing env files are unchanged.
+
+Safe saved-output audit (no producer, graph search, service/key/env/DB read; requires ignored original candidate and pinned source manifests already present):
+
+```sh
+python3 -B docs/evidence/coarse-path-features-2026-10-24/audit.py > /tmp/coarse-connector-audit.json
+python3 -B docs/evidence/coarse-path-features-2026-10-24/verify.py > /tmp/coarse-v9-bindings.json
+```
+
+Expect all83 joined,166 paths, all15 gates true, accepted for local qualification. Final source version-only relation, artifact/source hashes and sealed-evidence manifests are checked in [checks.json](evidence/coarse-path-features-2026-10-24/checks.json). Do not rerun completed producer, full memory sweep or finalizer for readiness. Finalizer writes a new runtime file once and refuses overwrite.
+
+Completed assets:
+
+| Path under `data/coarse-quality/` | Contents |
+| --- | --- |
+| `connector-timing-candidate-v1/` / `connector-timing-candidate-repeat-v1/` | New packed grid, component link proofs, policy/build reports; repeat exact |
+| `connector-timing-evaluation-v1/` | All83 ORS comparisons/166 paths/35 Valhalla sensitivities |
+| `connector-preview-v1/` | Deterministically selected largest gain/frontier loss/older loss on one camera; saved ORS geometry only |
+| `connector-package-v1/` | Isolated candidate package without copied env files; separate from final root build |
+
+Source prerequisites remain cached49 Census locks/ZIPs/PyShp wheel, NE inputs, v8 `resolution-0025-base-v1/` / `resolution-0025-road-v1/` component proofs, v8 runtime and saved reference captures. The app and final package require only tracked source/runtime data, not ignored assets/Python. New reproducibility commands below describe the **completed recipe**, not health checks; use unused output paths for an intentional new version, never overwrite these runs:
+
+```sh
+# Diagnostic read-only replay; byte-identical to features.json.
+python 3 -B scripts/coarse_path_features.py > /tmp/coarse-path-features.json
+# Completed single candidate production/evaluation/qualification (do not rerun for readiness):
+# python 3 -B scripts/build-coarse-connectors.py --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json --output data/coarse-quality/NEW-UNUSED-CANDIDATE
+# node --import tsx scripts/compare-coarse-connectors.ts CANDIDATE/grid.json data/coarse-quality/NEW-UNUSED-EVALUATION
+# node --import tsx scripts/verify-coarse-connectors.ts CANDIDATE/grid.json CANDIDATE/build.json
+# node --expose-gc --import tsx scripts/verify-coarse-memory.ts CANDIDATE/grid.json --anchor-inputs
+```
+
+For final hosted verification after deployment Ready:
+
+```sh
+node --import tsx scripts/verify-coarse-deployment-v9.ts https://geo-planner-orcin.vercel.app > /tmp/coarse-v9-hosted.json
+```
+
+This makes15 app requests, zero routing-provider requests/history writes, and expects configured anonymous empty history. A deliberately DB-free local preview uses the explicit third argument `--database-free`; it does not weaken production checks. No hosted v9 verification has occurred. Browser checks:reload/default120,Home30,End720,release/loading/latest-result behavior, new v9 metadata/notices and inland/rural/coastal6/10/12h contours. Do not Save/retest cloud persistence for unchanged routing work. The final compiled browser check passed30/360automatic computation; isolated candidate also passed6/10/12h and three shared-camera routes. Only an unrelated browser wallet-extension error appeared.
+
+The transient preview on4184 has been stopped after QA. Rediscover local listeners/owners before reuse; normal `npm run dev` uses3000 and needs no QA adapter. All48/6/29 budgets are consumed; do not reacquire/probe/retry or read a key for these offline diagnostics. [Current next steps](next-steps.md).
+
+## Floating map controls
+
+The current local UI puts the map across the full viewport. A 340px panel floats at the top left, with a Collapse/Expand controls button. On mobile it leaves room for zoom controls, is limited to 65% of viewport height and scrolls internally. Saved queries & runs, Map & model, and Run details expand in place. The time slider and compute/save/cancel behavior are preserved. The shared map's fullscreen mode and measured panel padding apply only to `/`; `/experiment` keeps its existing embedded presentation.
+
+Use the existing dev server, or start `npm run dev` after inspecting local listeners. Verify with `npm run check`, `npm run typecheck` and `npm run build`. Manual browser checks:
+
+1. At desktop and mobile widths, confirm the map reaches all viewport edges without document scrolling; zoom and attribution stay visible.
+2. Confirm default 2 hours, then focus Driving time and press Home. Check 30 min, Updating area… and a completed shaded result without submit. Estimate area still supports coordinate edits/retry.
+3. Collapse/expand the panel and resize the viewport. The contour should refit into the visible area without resetting the query.
+4. On mobile, scroll inside the panel to Map & model, toggle Show reachability contour off/on, and close it. Check keyboard access to disclosures and the collapse button.
+5. Existing history Load/Replay/export/backup controls are under Saved queries & runs. Do not inspect unrelated user history or rerun the live DB suite for layout-only work.
+
+Local browser checks pass at 1512×810 and 390×844, including viewport-sized canvases, min30 loading/completion, collapse/expand/refitting, scrolling and the contour toggle. Check/typecheck/build pass. No new dependency, environment variable, migration, provider request or deployment. These UI changes remain local/uncommitted on baseline `37ff14b`; earlier measured evidence remains intact.
 
 ## Time slider
 
@@ -34,8 +109,8 @@ npm run check
 npm run typecheck
 node --import tsx --test src/server/*.test.ts
 npm run build
-npm run build:vercel
-npm run check:coarse:vercel
+npm run build: vercel
+npm run check: coarse: vercel
 ```
 
 Checks pass locally, including a generated-handler 30-minute result. For browser QA, reload once after builds/docs finish, confirm default120/min30/max720, click/release the track (375 minutes at its center), observe `Updating area…`, and wait for matching run metadata without using submit. Test Home→30, End→720, rapid End/ArrowLeft→719, reset→120 and keyboard auto-computation, then fixture Cloud saved→reload→Replay. Inspect only new public fixture history. [Evidence](evidence/time-slider-2026-10-23/checks.json).
@@ -48,7 +123,7 @@ The slider/min30 update is committed at `9b3e83b` (`slider`), user-reported depl
 
 ```sh
 node --import tsx scripts/prepare-coarse-holdout.ts data/coarse-quality/coarse-holdout-plan-new
-npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/prepare-coarse-holdout.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/prepare-coarse-holdout.ts
 ```
 
 Expected plan SHA `77360fec0906c5a3eeedc533eef55cbe8557659266c25badcc4b924412e4271e`, eight public origins × three horizons × two sides = 48 requests, zero provider/DB calls or key reads. Existing runs `data/coarse-quality/coarse-holdout-plan-v1/` and `-repeat/` match byte for byte. Preparation only searches bundled v8; its diagnostic 750-minute labels supply points outside 720 without changing the public API. No raw sources or Python are needed.
@@ -58,10 +133,10 @@ The bounded [capture/replay CLI](../scripts/compare-coarse-holdout.ts) is now im
 ```sh
 node --import tsx scripts/compare-coarse-holdout.ts --check
 node --import tsx --test scripts/coarse-holdout.test.ts
-npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-holdout.ts scripts/coarse-holdout.test.ts scripts/compare-coarse-holdout.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-holdout.ts scripts/coarse-holdout.test.ts scripts/compare-coarse-holdout.ts
 ```
 
-Eleven synthetic tests pass; `--check` expects the plan SHA above and planned48/provider0/keyReadfalse. A retained **synthetic-only** fixture at `data/coarse-quality/coarse-frontier-tool-fixture-v1/` contains one artificial route, one artificial429 and46 skipped cases. Its CLI replay matches [the saved synthetic report](evidence/coarse-frontier-tool-2026-10-23/synthetic-replay.json); these are software fixtures, not real travel measurements. The separate approved live run below is now complete.
+Eleven synthetic tests pass; `--check` expects the plan SHA above and planned48/provider0/keyReadfalse. A retained **synthetic-only** fixture at `data/coarse-quality/coarse-frontier-tool-fixture-v1/` contains one artificial route, one artificial429 and 46 skipped cases. Its CLI replay matches [the saved synthetic report](evidence/coarse-frontier-tool-2026-10-23/synthetic-replay.json); these are software fixtures, not real travel measurements. The separate approved live run below is now complete.
 
 **Completed acquisition:** the user approved the exact 48-request / zero-paid-spend / no-retry budget, and all 48 requests succeeded. That single-run budget is consumed; do not run the capture command again, probe auth/status, replace cases or retry without separate authorization. The full credential-free run is preserved in [the measured evidence](evidence/coarse-frontier-reference-2026-10-23/README.md), including [raw capture and checksums](evidence/coarse-frontier-reference-2026-10-23/reference/sha256.json). The ignored original is `data/coarse-quality/coarse-frontier-reference-v1/`; its report is the sibling `coarse-frontier-reference-v1-report.json`. Mean absolute difference is 52.273min; all 48 pair and no snap exceeds 100m.
 
@@ -74,7 +149,7 @@ node --import tsx scripts/compare-coarse-holdout.ts --replay data/coarse-quality
 After these files/tools are committed, a fresh clone can restore the saved evidence once into a **new** ignored directory without key/network access:
 
 ```sh
-python3 -B - <<'PYTHON'
+python 3 -B - <<'PYTHON'
 from pathlib import Path
 import shutil
 Path('data/coarse-quality').mkdir(parents=True, exist_ok=True)
@@ -90,14 +165,174 @@ The [offline inspector](../scripts/inspect-coarse-frontier.ts) reconstructed all
 
 ```sh
 node --import tsx scripts/inspect-coarse-frontier.ts data/coarse-quality/coarse-frontier-reference-v1-report.json data/coarse-quality/coarse-frontier-diagnostic-new
-npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/inspect-coarse-frontier.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/inspect-coarse-frontier.ts
 ```
 
-[Additional analysis](evidence/coarse-frontier-reference-2026-10-23/analysis.json) reads the saved paths and active artifact without a search or provider request. Road edges dominate time (98.64%); class-dependent timing is the [next proposed experiment](evidence/coarse-frontier-reference-2026-10-23/calibration-plan.json), not an implemented improvement. All 83 now-observed reference routes are development data; no fresh holdout claim follows.
+[Additional analysis](evidence/coarse-frontier-reference-2026-10-23/analysis.json) reads the saved paths and active artifact without a search or provider request. Road edges dominate time (98.64%); the [class-dependent timing experiment](#road-class-calibration-experiment) has now failed both regional gates and is rejected, not an implemented improvement. All 83 now-observed reference routes are development data; no fresh holdout claim follows.
 
-Capture-mode behavior remains: existing server-only `ORS_API_KEY` from process environment, then ignored `.env.local`/`.env` without overriding existing values; fixed endpoint/exact48 bodies, at least6.5s between starts, 45s header/body deadline, no retries/redirects/fallback/probe/paid upgrade, stop on401/403/429 or returned zero quota, 2MB response bound and disk-write stop. Only selected nonsecret headers and redacted response text are stored; fixed diagnostics avoid logging raw exceptions. Any future live run requires a separately authorized budget, fresh directory and preserved failures; interrupted runs cannot resume. No env file was edited or new variable added. [Current next steps](next-steps.md).
+Capture-mode behavior remains: existing server-only `ORS_API_KEY` from process environment, then ignored `.env.local`/`.env` without overriding existing values; fixed endpoint/exact 48 bodies, at least 6.5s between starts, 45s header/body deadline, no retries/redirects/fallback/probe/paid upgrade, stop on 401/403/429 or returned zero quota, 2MB response bound and disk-write stop. Only selected nonsecret headers and redacted response text are stored; fixed diagnostics avoid logging raw exceptions. Any future live run requires a separately authorized budget, fresh directory and preserved failures; interrupted runs cannot resume. No env file was edited or new variable added. [Current next steps](next-steps.md).
 
-The plan uses the new HeiGIT endpoint. Inspection confirms the existing connected adapter and its mock endpoint test already use that host; the previous migration todo was stale. Its separate60-minute limit remains unchanged. This model-conditioned frontier check is not a random national accuracy sample.
+The plan uses the new HeiGIT endpoint. Inspection confirms the existing connected adapter and its mock endpoint test already use that host; the previous migration todo was stale. Its separate 60-minute limit remains unchanged. This model-conditioned frontier check is not a random national accuracy sample.
+
+## Road-class calibration experiment
+
+The 105→95 / 80→85km/h source-cost prototype is **completed and rejected**. Frontier mean absolute difference 52.273→35.097min improves, but original/broader regional means 10.288→20.553 / 12.011→15.869 worsen, failing the unchanged gates. Runtime model remains v8; separate floating-map UI work is preserved. [Decision/full ledger](evidence/coarse-class-calibration-2026-10-23/README.md).
+
+Current ignored assets:
+
+- `data/coarse-quality/class-timing-candidate-v1/`: failed 61,219,368-byte grid, policy/build metadata, base/layer source proofs. SHA `212b1f7a1e26a17ba81c1194becf326f6fa95b649ebf88575a7361ca0aae287c`. Do not activate or add the failed grid to runtime.
+- `data/coarse-quality/class-timing-evaluation-v1/`: all 83 cases and compressed paths; every frozen v8 point/classification matches, all 166 path sums reconstruct and all 35 older destinations stay shaded.
+- `data/coarse-quality/class-timing-preview-v1/` and `-v2/`: three review cases selected by largest gain/regressions, with saved reference paths. Preview-v2 fits a complete normal viewport at `http://127.0.0.1:4181/`; 4180 serves the earlier taller layout. Rediscover listeners/owners. Full-page WebGL screenshots can render partial canvases; use the verified normal viewport.
+
+The new source pass reuses pinned NE roads, 49 Census ZIPs/manifest and the existing PyShp wheel/tool lock from [source setup](#nationwide-census-candidate). It freezes geometry/ownership/topology and recomputes source alternatives under new class speeds, keeping Census/local transfers at 25km/h and the legacy NE connector rule explicit. All original v8 base/layer costs and base speed tags reproduce exactly before repricing. Producer 116.827s/1.206GB maxRSS on this Mac is not runtime/Vercel measurement. Pure sealed helpers are imported without editing their source.
+
+Only for an intentional **changed** experiment, use fresh output paths; do not rerun the completed producer as a readiness check:
+
+```sh
+python 3 -B scripts/build-coarse-calibration.py --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json --output data/coarse-quality/class-timing-candidate-new
+node --import tsx scripts/compare-coarse-calibration.ts data/coarse-quality/class-timing-candidate-new/grid.json data/coarse-quality/class-timing-evaluation-new
+node --import tsx scripts/preview-coarse-calibration.ts data/coarse-quality/class-timing-evaluation-new data/coarse-quality/class-timing-preview-new
+```
+
+These commands need local sources/old references, not a key or routing service. A 900-minute diagnostic search covers candidate points outside 720; public API limits do not change. `accuracyGatesPassed:false` is the measured result, not a command failure. Preserve failed candidates and never change the preregistered gates or hide regressions. Full independent physical/runtime/package activation qualification was stopped after the necessary accuracy gates failed.
+
+Safe code checks for the new tooling:
+
+```sh
+python 3 -B -m unittest discover -s scripts -p 'coarse_calibration_test.py'
+npm run test: coarse-data
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-coarse-calibration.ts scripts/preview-coarse-calibration.ts
+npm run check
+npm run typecheck
+npm run build
+```
+
+Expected five new pricing/encoding-policy fixtures, 24 total Python fixtures and Biome (155 files). Existing server/DB suites need not repeat for offline-only changes. Browser review and [source-proof/path diagnosis](evidence/coarse-class-calibration-2026-10-23/diagnosis.json) preserve the gains and losses; the initial proof-kind field error and partial WebGL capture remain separate evidence.
+
+**Matched control completed:** [six fixed routes](evidence/coarse-control-reference-2026-10-24/README.md) now have separately approved ORS results; all succeed and ORS is 15.970min longer on average than saved Valhalla, meeting the exploratory discrepancy flag. No automatic correction or reversal of the rejected candidate. The six-call budget is consumed. The subsequent approved 29-request run and full 83-case benchmark below are now complete; all budgets are consumed. Do not reuse the consumed 48-request budget or modify sealed acquisition tools/records. [Ordered acceptance criteria](next-steps.md).
+
+## Matched-reference control
+
+The [six-query plan](evidence/coarse-class-calibration-2026-10-23/control-plan.json) is pinned by SHA `5c4aac583e6e1f83e5eb25bf85d8f52f48e35ccdcb89cbcf11a187d1c6d2e279`. [New runner](../scripts/coarse-control.ts) leaves the sealed 48-route tooling unchanged. **13 synthetic tests, check (158 files), app/strict diagnostic typechecks and ordinary build pass.** [Readiness evidence](evidence/coarse-control-tool-2026-10-24/README.md). Safe inspection/tests need no env files, key, database or network:
+
+```sh
+node --import tsx scripts/compare-coarse-control.ts --check
+node --import tsx --test scripts/coarse-control.test.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-control.ts scripts/coarse-control.test.ts scripts/compare-coarse-control.ts
+```
+
+Inspection must report six planned requests, zero provider requests and `keyRead:false`. Existing ignored `data/coarse-quality/matched-control-fixture-v1/` holds a synthetic-only capture; CLI replay is deterministic and never loads dotenv or reads the key:
+
+```sh
+node --import tsx scripts/compare-coarse-control.ts --replay data/coarse-quality/matched-control-fixture-v1 > /tmp/coarse-control-synthetic-report.json
+```
+
+A fresh clone can restore the preserved fixture into a new, unused ignored directory, then replay it. Do not copy over an existing capture:
+
+```sh
+mkdir -p data/coarse-quality
+test ! -e data/coarse-quality/matched-control-fixture-restored-v1 && cp -R docs/evidence/coarse-control-tool-2026-10-24/synthetic-capture data/coarse-quality/matched-control-fixture-restored-v1
+node --import tsx scripts/compare-coarse-control.ts --replay data/coarse-quality/matched-control-fixture-restored-v1 > /tmp/coarse-control-restored-report.json
+```
+
+The fixture reports `transport:synthetic`; its artificial timing gaps are not provider observations. Compare output with [synthetic-replay.json](evidence/coarse-control-tool-2026-10-24/synthetic-replay.json).
+
+**Live control completed:** the user subsequently authorized one exact six-request / zero-paid-spend/no-retry run. All six succeed; ORS-minus-Valhalla mean 15.970min/median 15.524 meets the exploratory discrepancy rule, with no snap>100m. The original candidate remains rejected and v8 unchanged. [Actual report/records](evidence/coarse-control-reference-2026-10-24/README.md). Its capture is at ignored `data/coarse-quality/matched-control-reference-v1/`, with sibling `matched-control-reference-v1-report.json`. **That approval is consumed: never rerun capture, retry or replace a query. No further calls are authorized.** Existing server-only `ORS_API_KEY`, `.env.local` and `.env` remain unchanged. Only the recorded capture command loaded the key; replay and the independent analyzer need no key/env/network.
+
+Safe actual replay, with report output outside sealed capture files:
+
+```sh
+node --import tsx scripts/compare-coarse-control.ts --replay data/coarse-quality/matched-control-reference-v1 > /tmp/coarse-control-reference-replay.json
+```
+
+Output must match [comparison.json](evidence/coarse-control-reference-2026-10-24/comparison.json). To restore from this uncommitted report tree (or a future commit containing it), use a fresh unused directory, without merging/overwriting prior evidence:
+
+```sh
+test ! -e data/coarse-quality/matched-control-reference-restored-v1 && cp -R docs/evidence/coarse-control-reference-2026-10-24/reference data/coarse-quality/matched-control-reference-restored-v1
+node --import tsx scripts/compare-coarse-control.ts --replay data/coarse-quality/matched-control-reference-restored-v1 > /tmp/coarse-control-reference-restored-report.json
+python 3 -B docs/evidence/coarse-control-reference-2026-10-24/analyze.py > /tmp/coarse-control-independent-analysis.json
+```
+
+Actual replays/restoration match byte for byte; the independent audit checks duration/difference/source bindings, spacing/counters and an explicitly post hoc candidate comparison. It writes only stdout and calls no service. Raw records remain separate from runtime data with provider attribution, exact bodies, all six ledger entries and checksums. Returned engine/build/graph/OSM metadata matches the prior 48 ORS run. The 45s deadline covers headers/body; recorded HTTP-plus-body elapsed is not graph-search time. Preserve the sealed six-route producer and plan; its old “pending” status is a dated preparation snapshot, not current authority to capture again. The subsequent approved 29-request capture and full 83-case benchmark below are now complete; all budgets are consumed. [Current acceptance criteria](next-steps.md#1-prepare-the-remaining-same-provider-benchmark-offline).
+
+## Same-provider benchmark
+
+Offline preparation for the remaining 29 requests is complete, with **15 synthetic tests, check 164/app+diagnostic typechecks/build passing**. [Frozen plan/tools/evidence](evidence/coarse-benchmark-plan-2026-10-24/README.md). Plan SHA `77d357142dfe266274c3dc6693732963b296e027888b036725f70b27d5401a93`; inputs bind the saved six/48 captures, their reports, all 83 frozen model timings and original Valhalla records. New producer versions leave sealed older scripts untouched. Safe commands read no env/key/network:
+
+```sh
+node --import tsx scripts/compare-coarse-benchmark.ts --check
+node --import tsx --test scripts/coarse-benchmark.test.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-benchmark-plan.ts scripts/prepare-coarse-benchmark.ts scripts/coarse-benchmark-capture.ts scripts/coarse-benchmark.ts scripts/compare-coarse-benchmark.ts scripts/coarse-benchmark.test.ts
+```
+
+Check must report29 planned requests,54 reused references,83 total cases, zero provider requests and `keyRead:false`. Completed plan generation at ignored `benchmark-plan-v1/` and `benchmark-plan-repeat-v1/` matches. Only for an intentional new repeat, with a fresh unused directory:
+
+```sh
+node --import tsx scripts/prepare-coarse-benchmark.ts data/coarse-quality/benchmark-plan-repeat-new
+```
+
+Existing `data/coarse-quality/benchmark-fixture-v1/` holds synthetic 29 responses. Its CLI replay joins saved 54 with artificial29 and matches the [preserved fixture report](evidence/coarse-benchmark-plan-2026-10-24/synthetic-replay.json); it is not a completed live benchmark or a provider accuracy measurement:
+
+```sh
+node --import tsx scripts/compare-coarse-benchmark.ts --replay data/coarse-quality/benchmark-fixture-v1 > /tmp/coarse-benchmark-fixture-replay.json
+```
+
+Restore from this uncommitted evidence tree (or a future commit containing it) into a fresh directory without merging/overwriting prior files:
+
+```sh
+test ! -e data/coarse-quality/benchmark-fixture-restored-v1 && cp -R docs/evidence/coarse-benchmark-plan-2026-10-24/synthetic-capture data/coarse-quality/benchmark-fixture-restored-v1
+node --import tsx scripts/compare-coarse-benchmark.ts --replay data/coarse-quality/benchmark-fixture-restored-v1 > /tmp/coarse-benchmark-restored-report.json
+```
+
+**Live benchmark completed:** the user subsequently approved the exact 29 requests / zero paid spending / no retries. All 29 succeed and all 83 finite ORS pairs share complete engine/build/graph/OSM metadata. Saved prototype MAE 34.612→23.567min improves all three ORS groups, but 29 regress and the original Valhalla-based rejection remains unchanged. V8 stays active. [Actual benchmark/raw records](evidence/coarse-benchmark-reference-2026-10-24/README.md). **The 29-call approval is consumed; never repeat/retry/replace a query. No further provider call is authorized.** Capture used existing server-only ORS_API_KEY/configuration without changes; replay/audit need no key/env/network.
+
+Actual ignored capture: `data/coarse-quality/benchmark-reference-v1/`, joined report: sibling `benchmark-reference-v1-report.json`. Safe replay with output outside sealed raw files:
+
+```sh
+node --import tsx scripts/compare-coarse-benchmark.ts --replay data/coarse-quality/benchmark-reference-v1 > /tmp/coarse-benchmark-reference-replay.json
+```
+
+It must match [comparison.json](evidence/coarse-benchmark-reference-2026-10-24/comparison.json). Restore from this uncommitted evidence tree (or future commit containing it) into a fresh directory; never merge/overwrite previous evidence:
+
+```sh
+test ! -e data/coarse-quality/benchmark-reference-restored-v1 && cp -R docs/evidence/coarse-benchmark-reference-2026-10-24/reference data/coarse-quality/benchmark-reference-restored-v1
+node --import tsx scripts/compare-coarse-benchmark.ts --replay data/coarse-quality/benchmark-reference-restored-v1 > /tmp/coarse-benchmark-reference-restored-report.json
+python 3 -B docs/evidence/coarse-benchmark-reference-2026-10-24/analyze.py > /tmp/coarse-benchmark-independent-analysis.json
+```
+
+Actual CLI replays/restoration and independent raw 83/model/source/protocol arithmetic repeat byte for byte. Original 11/regional24/frontier 48 sets, both model timings, all 29 regressions, signed/absolute/percentage differences, horizons/origins, snaps, provider attribution/license and Valhalla sensitivity remain. HTTP-plus-body elapsed is not engine-search time. Existing plan/capture tools and preparation reports stay sealed with their old dated pending statements; those are not permission to acquire again. The subsequent 100/82 revision below is rejected; the next read-only task investigates generic features beyond class/expressway before a new hypothesis. [Current ordered task](next-steps.md#1-specify-one-generic-timing-cost-revision-offline).
+
+## Damped timing experiment
+
+The separately planned **105→100 /80→82** source-cost revision is **evaluated and rejected**. It reduces ORS mean/worst losses, but frontier missed cases 7>6 and 12h 4>3 fail unchanged prospective guards. V8 remains active; do not activate/retune this run, relax gates or repeat completed producers as health checks. [Frozen plan/full results/decision](evidence/coarse-damped-calibration-2026-10-24/README.md), [next feature diagnostic](next-steps.md#1-diagnose-generic-features-beyond-class-and-expressway).
+
+Ignored `data/coarse-quality/damped-timing-candidate-v1/` holds rejected grid/policy/build/base+layer proofs (61,225,563B/SHA `d720f084463451eaf284cd746511b9f67131d54f8516e989f40ab5220c0c8226`); `damped-timing-evaluation-v1/` contains all 83 comparisons and166 compressed paths, also preserved under the dated report. No failed grid is copied into runtime. Source inputs are the existing pinned NE roads/49 Census ZIPs/catalog/manifest/PyShp lock. New producer/comparator/gate helper/tests are uncommitted and require this local tree or a future commit containing them; raw assets remain ignored. No key/env/DB/network is needed for checks:
+
+```sh
+python 3 -B -m unittest discover -s scripts -p 'coarse_damped_test.py'
+node --import tsx --test scripts/coarse-damped-gates.test.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/coarse-damped-gates.ts scripts/coarse-damped-gates.test.ts scripts/compare-coarse-damped.ts
+npm run check
+npm run typecheck
+npm run build
+```
+
+Expected six cost/six gate fixtures,30 total Python fixtures via `npm run test:coarse-data`, Biome 167 and ordinary build passing. Full independent physical/runtime/package qualification, server/DB/Vercel suites and activation browser review were stopped after necessary accuracy failure; they are not claimed as fresh passes.
+
+Read-only independent audit from the repo root (requires existing rejected grid, source-manifest/tool-lock and old reference assets for hash checks; a fresh clone lacking ignored assets cannot run it):
+
+```sh
+python 3 -B docs/evidence/coarse-damped-calibration-2026-10-24/audit.py > /tmp/coarse-damped-independent-audit.json
+```
+
+Output repeats byte-identically to [audit.json](evidence/coarse-damped-calibration-2026-10-24/audit.json). The new source rebuild reproduces every v8 source cost/tag before repricing all alternatives; local/Census/layer transfer semantics stay fixed. Producer 115.756s/1.277GB maxRSS is offline-source scope, not Vercel latency/peak. Actual completed commands, preserved here for provenance only; **do not rerun** as readiness checks or overwrite/reuse these directories:
+
+```sh
+python 3 -B scripts/build-coarse-damped.py --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json --output data/coarse-quality/damped-timing-candidate-v1
+node --import tsx scripts/compare-coarse-damped.ts data/coarse-quality/damped-timing-candidate-v1/grid.json data/coarse-quality/damped-timing-evaluation-v1
+```
+
+The prospective plan SHA `dbe44d8552d2c485eb2ae523f7ade7e04fac0fe162c5bc9647a095dca2e04307` remains unchanged. Saved-v8-path cost diagnosis and a separate source-attribute match are preserved with scripts/outputs in the dated report; they read existing proofs/roads and perform no query search or candidate production. Source matching resolves 8,458 selected NE-major edges; expressway flags do not separate the opposite-sign error examples. Initial parser/import failures and their original empty outputs remain versioned. Next: inspect richer available generic geometry/connectivity features across all 83, then freeze a new hypothesis before any further candidate. No provider calls or another blind uniform-speed sweep.
 
 ## Speed Insights
 
@@ -118,10 +353,10 @@ Use `npm run db:generate` to generate a migration from `src/db/schema.ts`, revie
 ## Coarse estimator checks
 
 ```sh
-npm run test:coarse-data
-npm run routing:verify:coarse
-npm run build:vercel
-npm run check:coarse:vercel
+npm run test: coarse-data
+npm run routing: verify: coarse
+npm run build: vercel
+npm run check: coarse: vercel
 ```
 
 The geometry command runs nineteen small fixtures; `routing:verify:coarse` runs 42 sequential in-process cases at 6/10/12h across fourteen representative origins; it does not call a routing provider. The last command executes the generated Vercel handler locally with outbound fetches rejected, checks enabled coarse estimates, disabled local research routing, bundle size and server-only data packaging. Build first. Neither command is a cloud deployment, a production memory/latency benchmark or real driving-time calibration. `node --import tsx --test src/server/*.test.ts` is equivalent to the server test command when this sandbox blocks the `tsx` CLI IPC socket.
@@ -131,7 +366,7 @@ The geometry command runs nineteen small fixtures; `routing:verify:coarse` runs 
 The candidate comparison now requires an explicit artifact path and uses **v4** as its baseline. It checks all 35 v4 point costs against the preserved v4 evidence before comparing both saved sets, without routing requests. The [offline candidate](#offline-augmentation-candidate) must exist first:
 
 ```sh
-npm run routing:compare:coarse:candidate -- data/coarse-quality/census-augmentation-pilot-v1/grid.json
+npm run routing: compare: coarse: candidate -- data/coarse-quality/census-augmentation-pilot-v1/grid.json
 ```
 
 Expected pilot: one of eleven original cases improves, ten unchanged (22.181 → 21.944 min mean absolute reference difference); six of all 24 broader cases improve, eighteen unchanged (34.234 → 31.204 min). None regress and all remain reached/shaded. These development sets do not establish national accuracy. The earlier v3 → v4 comparison remains in [preserved v4 evidence](evidence/coarse-v4-2026-10-22/README.md).
@@ -149,7 +384,7 @@ Expected: all 35 saved point costs for the selected model and reconstructed endp
 The broader unchanged-v2 validation is now saved: 24 routes from twelve origins, 23 paired finite arrivals and one unreached shore destination. Replay and inspect it **without any network/service/database**:
 
 ```sh
-npm run routing:compare:coarse:regional
+npm run routing: compare: coarse: regional
 node --import tsx scripts/inspect-coarse-regional.ts
 ```
 
@@ -160,13 +395,13 @@ Deliberate new reference acquisition uses `npm run routing:compare:coarse:region
 For strict diagnostic TypeScript checking (these scripts are outside the app's `tsconfig.json` include list):
 
 ```sh
-npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-coarse-regional.ts scripts/inspect-coarse-regional.ts scripts/compare-coarse-candidate.ts scripts/inspect-coarse-access.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-coarse-regional.ts scripts/inspect-coarse-regional.ts scripts/compare-coarse-candidate.ts scripts/inspect-coarse-access.ts
 ```
 
 For the original eleven-case v2 diagnostic, use saved reference responses offline (no service or quota):
 
 ```sh
-npm run --silent routing:compare:coarse:v2 > /tmp/geo-planner-coarse-v2-new.json
+npm run --silent routing: compare: coarse: v2 > /tmp/geo-planner-coarse-v2-new.json
 ```
 
 An optional artifact path follows `--`, e.g. `npm run --silent routing:compare:coarse:v2 -- data/coarse-quality/candidate.json`. Use unused output names. This reproduces v1 cell labels, compares candidate labels at their representative road positions, adds a supplementary 25 km/h straight destination-access comparison for both, and reports shading. The preserved v2 improves all eleven cases under both measures; this is a diagnostic sample that informed the model, not national calibration. [V2 evidence](evidence/coarse-v2-2026-10-22/README.md).
@@ -174,8 +409,8 @@ An optional artifact path follows `--`, e.g. `npm run --silent routing:compare:c
 The original live **v1 baseline** command remains available with the retained regional Valhalla service already running on loopback port 8002:
 
 ```sh
-curl --fail --silent --max-time 5 http://127.0.0.1:8002/status
-npm run --silent routing:compare:coarse > /tmp/geo-planner-coarse-comparison-new.json
+curl --fail --silent --max-time 5 http://127.0.0.1: 8002/status
+npm run --silent routing: compare: coarse > /tmp/geo-planner-coarse-comparison-new.json
 ```
 
 Use an unused output name. The command compares eleven public Southern California destinations from the default San Diego origin with the bundled v1 grid field. It makes one status request and eleven route requests to fixed `127.0.0.1:8002`, with deadlines and no hosted fallback, database access or graph build. Do not start a new graph build to run it. It records raw requests/responses, reference status, cell-center travel costs and whether the destination cell is shaded land. The v1 artifact path is explicit in `scripts/compare-coarse.ts`; when evaluating a new model, select that candidate's artifact deliberately.
@@ -188,7 +423,7 @@ This heading preserves historical links. [Hosted v4 proof](evidence/coarse-hoste
 
 ```sh
 node --import tsx scripts/verify-coarse-deployment.ts https://geo-planner-orcin.vercel.app
-npx tsc --ignoreConfig --noEmit --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
+npx tsc --ignoreConfig --noEmit --target ES 2022 --module ESNext --moduleResolution bundler --skipLibCheck --strict --types node scripts/verify-coarse-deployment.ts
 ```
 
 It makes fifteen app requests, checks saved v8 counts/model/notices and errors/disabled research/no-cookie history, sends no history writes/cookies and calls no connected-routing endpoint. Old v6/v7 fail the version assertion; pre-slider v8 fails the updated minimum assertion. No key/env change is needed. First/repeat HTTP calls do not establish cold/warm state, isolated search time, load or peak memory. Do not run it for documentation alone. [Local v8 proof](evidence/coarse-finer-2026-10-23/README.md).
@@ -199,9 +434,9 @@ This optional historical source-coverage/size diagnostic changes no active datas
 
 ```sh
 mkdir -p data/coarse-sources/tiger-2026 data/coarse-tools/tiger-2026
-test -f data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip || curl --fail --location --proto '=https' https://www2.census.gov/geo/tiger/TIGER2026/PRISECROADS/tl_2026_06_prisecroads.zip --output data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip
-test -f data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl || curl --fail --location --proto '=https' https://files.pythonhosted.org/packages/98/2f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py2.py3-none-any.whl --output data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl
-python3 -B scripts/inspect-coarse-road-source.py \
+test -f data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip || curl --fail --location --proto '=https' https://www 2.census.gov/geo/tiger/TIGER 2026/PRISECROADS/tl_2026_06_prisecroads.zip --output data/coarse-sources/tiger-2026/tl_2026_06_prisecroads.zip
+test -f data/coarse-tools/tiger-2026/pyshp-2.3.1-py 2.py 3-none-any.whl || curl --fail --location --proto '=https' https://files.pythonhosted.org/packages/98/2 f/68116db5b36b895c0450e3072b8cb6c2fac0359279b182ea97014d3c8ac0/pyshp-2.3.1-py 2.py 3-none-any.whl --output data/coarse-tools/tiger-2026/pyshp-2.3.1-py 2.py 3-none-any.whl
+python 3 -B scripts/inspect-coarse-road-source.py \
   --source-lock docs/evidence/coarse-source-2026-10-22/source.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json
 ```
@@ -214,7 +449,7 @@ The generic Census adapter and packed geometry pilot are preserved historical in
 
 ```sh
 mkdir -p data/coarse-quality/census-augmentation-replay-new
-python3 -B scripts/build-coarse-augmentation.py \
+python 3 -B scripts/build-coarse-augmentation.py \
   --source-lock docs/evidence/coarse-source-2026-10-22/source.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/census-augmentation-replay-new/grid.json \
@@ -259,7 +494,7 @@ Build only for an intentional new source/recipe run into an unused path; ordinar
 
 ```sh
 mkdir -p data/coarse-quality/census-national-replay-new
-python3 -B scripts/build-coarse-augmentation.py \
+python 3 -B scripts/build-coarse-augmentation.py \
   --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/census-national-replay-new/grid.json \
@@ -278,7 +513,7 @@ An isolated package probe copies source/config plus the candidate (no env files,
 
 ```sh
 node scripts/prepare-coarse-package-probe.mjs data/coarse-quality/census-national-v2/grid.json data/coarse-quality/census-national-v2/package-probe-new
-(cd data/coarse-quality/census-national-v2/package-probe-new && npm run build:vercel)
+(cd data/coarse-quality/census-national-v2/package-probe-new && npm run build: vercel)
 node scripts/verify-coarse-vercel.mjs data/coarse-quality/census-national-v2/package-probe-new coarse-road-grid-candidate
 ```
 
@@ -293,16 +528,16 @@ For an intentional source rebuild, Python 3.11+, all three pinned NE files, all 
 ```sh
 mkdir -p data/coarse-sources/natural-earth-v5.1.2
 # Only for missing files on a fresh source-preparation machine:
-test -f data/coarse-sources/natural-earth-v5.1.2/countries.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson --output data/coarse-sources/natural-earth-v5.1.2/countries.geojson
-test -f data/coarse-sources/natural-earth-v5.1.2/lakes.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson --output data/coarse-sources/natural-earth-v5.1.2/lakes.geojson
-test -f data/coarse-sources/natural-earth-v5.1.2/roads.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
+test -f data/coarse-sources/natural-earth-v5.1.2/countries.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10 m_admin_0_countries.geojson --output data/coarse-sources/natural-earth-v5.1.2/countries.geojson
+test -f data/coarse-sources/natural-earth-v5.1.2/lakes.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10 m_lakes.geojson --output data/coarse-sources/natural-earth-v5.1.2/lakes.geojson
+test -f data/coarse-sources/natural-earth-v5.1.2/roads.geojson || curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10 m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
 ```
 
 Hash/partial-file mismatches are errors to investigate, not permission to overwrite. Build only into a new directory; no completed producer needs rerunning for normal runtime/docs checks:
 
 ```sh
 mkdir -p data/coarse-quality
-python3 -B scripts/build-coarse-resolution.py --step 0.05 \
+python 3 -B scripts/build-coarse-resolution.py --step 0.05 \
   --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/resolution-005-replay-new
@@ -325,7 +560,7 @@ To regenerate a **new** review page (precomputed validation cases only; no app/A
 
 ```sh
 node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/resolution-005-v2/grid.json data/coarse-quality/resolution-preview-new
-python3 -B -m http.server 4176 --bind 127.0.0.1 --directory data/coarse-quality/resolution-preview-new
+python 3 -B -m http.server 4176 --bind 127.0.0.1 --directory data/coarse-quality/resolution-preview-new
 ```
 
 The current existing server instead serves `data/coarse-quality/resolution-evaluation-v1/`; its URL is **http://127.0.0.1:4176/preview-v2/**. Rediscover the listener before starting another server; never kill an unrelated owner. Maps share a camera and expose inland/rural/coastal/mountain 6/10/12h cases. The template/scripts copy installed MapLibre assets, with no dependency installation; online basemap requests remain separate from routing.
@@ -341,7 +576,7 @@ The completed source runs are `data/coarse-quality/road-layer-v1/` and `road-lay
 Only if intentionally rebuilding, use Python 3.11+, bundled pinned v6, all 49 cached Census ZIPs/locks and manifest, three NE files and the pinned PyShp wheel described above. The default recipe requires v6's exact hash and reuses pure source helpers without running old producers. The v8 recipe below supplies an explicit base path/hash pair. It refuses existing output directories:
 
 ```sh
-python3 -B scripts/build-coarse-road-layer.py \
+python 3 -B scripts/build-coarse-road-layer.py \
   --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/road-layer-replay-new
@@ -357,7 +592,7 @@ node --expose-gc --import tsx scripts/verify-coarse-memory.ts data/coarse-qualit
 node scripts/finalize-coarse-grid-v7.mjs data/coarse-quality/road-layer-v1/grid.json data/coarse-quality/grid-v7-repeat-new.json
 ```
 
-Expected: all new link/transfer proofs and preserved v6 fields pass; 42 cases lose no v6 cells; all 35 baseline costs match sealed v6 evidence, 21 improve/14 unchanged/zero regress and every destination is reached/shaded. Original/broader mean absolute reference differences 14.712→11.579 / 23.615→17.211 min. These are development comparisons, not national accuracy. State IDs are base cell indices or `width * height + cell` for Census; path/attachment diagnostics retain these IDs. Contour arrivals use the minimum across both states. Full source validation remains; no growing decoded/query cache.
+Expected: all new link/transfer proofs and preserved v6 fields pass; 42 cases lose no v6 cells; all 35 baseline costs match sealed v6 evidence, 21 improve/14 unchanged / zero regress and every destination is reached/shaded. Original/broader mean absolute reference differences 14.712→11.579 / 23.615→17.211 min. These are development comparisons, not national accuracy. State IDs are base cell indices or `width * height + cell` for Census; path/attachment diagnostics retain these IDs. Contour arrivals use the minimum across both states. Full source validation remains; no growing decoded/query cache.
 
 Finalization accepts only the qualified candidate hash, changes only version and refuses overwrite. Existing active/repeat bytes match; no producer or sweep is needed to recheck documentation. Default `routing:verify:coarse` and hosted verifier now require v8 counts/version. Both builds and local handler remain the normal app release checks.
 
@@ -365,7 +600,7 @@ For a fresh offline paired review directory:
 
 ```sh
 node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/road-layer-v1/grid.json data/coarse-quality/road-layer-preview-new --baseline-v6
-python3 -B -m http.server 4177 --bind 127.0.0.1 --directory data/coarse-quality/road-layer-preview-new
+python 3 -B -m http.server 4177 --bind 127.0.0.1 --directory data/coarse-quality/road-layer-preview-new
 ```
 
 The existing server instead serves `data/coarse-quality/road-layer-evaluation-v1/` at **http://127.0.0.1:4177/preview/**. Rediscover listeners before starting/stopping one. Twelve inland/rural/coastal/mountain cases at 6/10/12h share a camera, resolution and speeds; basemap requests are separate. Some full-page browser captures rendered only part of WebGL canvases; use a normal viewport capture and inspect it. Initial captures are preserved under ignored evaluation outputs. Main app remains `http://127.0.0.1:3000/` with v8, source notices and normal history/replay. Full DB write tests need not repeat for this unchanged persistence layer.
@@ -379,13 +614,13 @@ Completed ignored source directories: `resolution-0025-base-v1/` / `resolution-0
 Only for an intentional source rebuild, reuse the Python 3.11+/pinned NE/49 Census ZIP/manifest/PyShp prerequisites above. Fresh output paths refuse overwrite:
 
 ```sh
-python3 -B scripts/build-coarse-resolution.py --step 0.025 \
+python 3 -B scripts/build-coarse-resolution.py --step 0.025 \
   --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/resolution-0025-base-new
-python3 -B scripts/build-coarse-road-layer.py \
+python 3 -B scripts/build-coarse-road-layer.py \
   --base data/coarse-quality/resolution-0025-base-new/grid.json \
-  --base-sha256 01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56 \
+  --base-sha 256 01ab7afcbf69a7a074984864ba4aacf3395bbd3225b472d4099f20b42f223e56 \
   --source-manifest data/coarse-sources/tiger-2026/national-v1/sources.json \
   --tool-lock docs/evidence/coarse-source-2026-10-22/tool.json \
   --output data/coarse-quality/resolution-0025-road-new
@@ -413,7 +648,7 @@ Fresh review page (public precomputed cases; no routing references):
 
 ```sh
 node --import tsx scripts/preview-coarse-resolution.ts data/coarse-quality/resolution-0025-evaluation-v1/grid-packed.json data/coarse-quality/resolution-0025-preview-new --baseline-v7
-python3 -B -m http.server 4178 --bind 127.0.0.1 --directory data/coarse-quality/resolution-0025-preview-new
+python 3 -B -m http.server 4178 --bind 127.0.0.1 --directory data/coarse-quality/resolution-0025-preview-new
 ```
 
 The existing server serves `resolution-0025-evaluation-v1/` at **http://127.0.0.1:4178/preview/**. Rediscover listeners before starting/stopping one; never stop an unrelated owner. Normal viewport screenshots render WebGL reliably here. Main app is `http://127.0.0.1:3000/`, with v8 and visible 0.025° / 1.8–2.8km notices. [Publication/hosted verification](next-steps.md#1-publish-and-verify-latest-v8).
@@ -434,14 +669,14 @@ The commands below regenerate **preserved v4 only**; `npm run data:coarse` still
 
 ```sh
 mkdir -p data/coarse-sources/natural-earth-v5.1.2
-curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
-npm run data:coarse
+curl --fail --location https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10 m_roads.geojson --output data/coarse-sources/natural-earth-v5.1.2/roads.geojson
+npm run data: coarse
 ```
 
 The v4 builder verifies pinned v3, v2 and roads hashes before writing `src/server/data/coarse-grid-v4.json`. Expected: **7,995,142 bytes**, SHA-256 `6905fa38d198f6c89201fb731db484a1b7ff911078648c005165b5ba7be654f3`, 26,946 visits / 142,029 points. To check repeatability without replacing the active file, use an unused output path:
 
 ```sh
-python3 -B scripts/build-coarse-grid-v4.py --output data/coarse-quality/grid-v4-repeat-new.json
+python 3 -B scripts/build-coarse-grid-v4.py --output data/coarse-quality/grid-v4-repeat-new.json
 ```
 
 All v3 graph/mask/anchor/shore bytes and speeds remain unchanged; visits are taken only from roads owning the pre-existing v2 anchors. Do not attach new v3 shore land representatives to unrelated source roads. V4 refuses v1/v2/v3 output names. Earlier builders/artifacts/evidence remain preserved. Raw inputs are ignored and runtime requires none of them. The existing cache holds all three original sources (68.8 MB). [Model and provenance](coarse-estimator.md#v4-charged-road-attachment).
@@ -449,7 +684,7 @@ All v3 graph/mask/anchor/shore bytes and speeds remain unchanged; visits are tak
 ## Run the local long-range experiment
 
 ```sh
-npm run dev:experiment
+npm run dev: experiment
 ```
 
 Open Vite's printed URL at `/experiment`. This starts/reuses the loopback Python/native worker with the qualified **`two-hour-region-v2` / `two-hour-region-v2-cuts`** data and enables the local server route only in the app process. `.env.local` and hosted settings are preserved. Python 3.11+, the qualified artifacts and matching macOS native binary must already exist. The launcher checks graph identity and refuses to silently reuse an older worker.
@@ -473,12 +708,12 @@ Earlier anchor, graph and memory experiments are collected in [historical routin
 Use the pinned [California/northern-Baja local recipe](regional-routing.md) for the verified baseline. It downloads 1.32 GB of dated Southern California/Mexico inputs, merges and clips them, builds Valhalla with resource caps, and retains provenance. Read its disk/RAM assessment and boundary limitations first. From the repository root:
 
 ```bash
-npm run routing:download
-npm run routing:build > data/valhalla-v2/build.log 2>&1
-npm run routing:up
-npm run dev:routing
+npm run routing: download
+npm run routing: build > data/valhalla-v2/build.log 2>&1
+npm run routing: up
+npm run dev: routing
 # Separate terminal, with the app running:
-npm run routing:verify > data/valhalla-v2/verification-report.json
+npm run routing: verify > data/valhalla-v2/verification-report.json
 ```
 
 Docker must be running. `dev:routing` uses generated `data/valhalla-v2/app.env`; it does not edit existing environment files. [Measured verification](archive/routing-baseline-verification.md) distinguishes real responses from synthetic adapter tests. Use `routing:down` / `routing:up` to stop/restart without rebuilding.
@@ -488,7 +723,7 @@ For another service, follow the official [installation](https://valhalla.github.
 Set the following server-only values for the actual service:
 
 ```dotenv
-VALHALLA_URL=http://localhost:8002
+VALHALLA_URL=http://localhost: 8002
 VALHALLA_MAX_MINUTES=120
 VALHALLA_ENGINE_VERSION=your-engine-build
 VALHALLA_GRAPH_VERSION=your-osm-snapshot-and-graph-build
@@ -589,8 +824,8 @@ API implementation references: [Valhalla isochrones](https://valhalla.github.io/
 The retained **Valhalla build's** default is `routing/profiles/california-baja-v2.json` with `data/valhalla-v2/`; this is separate from the local experiment's `two-hour-region-v2` default. The shared source cache remains `data/valhalla/sources/`. Select other Valhalla profiles with `VALHALLA_MANIFEST` and a separate `VALHALLA_DATA_DIR`. An optional `VALHALLA_SOURCE_DIR` changes the cache. These variables do not edit `.env.local`. See [Malta commands and retained evidence](archive/routing-expansion-verification.md). Stop/restart the matching app/service when switching Valhalla graphs; Compose uses port 8002.
 
 ```bash
-npm run build:vercel
-npm run check:vercel
+npm run build: vercel
+npm run check: vercel
 ```
 
-`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 and the min30 slider are committed through `9b3e83b`, user-reported deployed; fifteen public hosted checks and automatic slider browser checks pass. Public responses do not independently expose the Git SHA; hosted history writes were not repeated. The subsequent approved 48-route reference run is complete and shows material long-horizon error; its single-run quota budget is consumed. The class-timing candidate is proposed, not implemented. Actual connected-provider contour cloud verification remains separate and open.
+`check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 and the min 30 slider are committed through `9b3e83b`, user-reported deployed; fifteen public hosted checks and automatic slider browser checks pass. Public responses do not independently expose the Git SHA; hosted history writes were not repeated. The subsequent approved 48-route reference run is complete and shows material long-horizon error; its single-run quota budget is consumed. The class-timing candidate was measured and rejected; the separately approved six-route comparison is complete and shows materially different ORS/Valhalla timings; its quota budget is consumed. Actual connected-provider contour cloud verification remains separate and open.

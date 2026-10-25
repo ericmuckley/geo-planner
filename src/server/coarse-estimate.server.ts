@@ -6,7 +6,7 @@ import {
 } from "../lib/reachability";
 import { decodeGrid } from "./coarse-data.server";
 import { estimateGrid, type GridData } from "./coarse-grid";
-import data from "./data/coarse-grid-v8.json";
+import data from "./data/coarse-grid-v9.json";
 
 let grid: GridData | undefined;
 function getGrid() {
@@ -22,13 +22,13 @@ const config = engineConfigSchema.parse({
 	health: "ready",
 	minMinutes: 30,
 	maxMinutes: 720,
-	engineVersion: "coarse-road-grid-v8",
+	engineVersion: "coarse-road-grid-v9",
 	graphVersion: data.version,
 	coverage:
 		"Contiguous United States; coarse estimated travel over land and major roads",
 	coverageBounds: data.bounds,
 	healthMessage:
-		"Ready without a routing service or API key. Rough planning estimates; travel-time accuracy has not been calibrated.",
+		"Ready without a routing service or API key. Rough planning estimates; timing calibrated against selected development routes, not verified nationwide.",
 });
 
 function json(body: unknown, status = 200) {
@@ -85,7 +85,7 @@ export async function runEstimate(request: Request) {
 				},
 				{
 					description:
-						"Local travel is estimated at 25 km/h, including places without roads. Input access can follow retained road geometry at its assumed class speed after checked local access. Road travel charges retained geometry at assumed 55–105 km/h speeds with approximate transfers inside cells. Nearby roads and crossings merge within cells. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
+						"Local travel is estimated at 25 km/h, including places without roads. Input access can follow retained road geometry at its assumed class speed after checked local access. Road travel charges retained geometry at assumed 55–105 km/h speeds. Artificial connections to Natural Earth roads use 55 km/h; added-road connections and local transfers use 25 km/h. These connections are model assumptions, not verified drivable roads. Nearby roads and crossings merge within cells. No traffic, one-way roads, turn restrictions, terrain or actual access checks.",
 				},
 				{
 					description:

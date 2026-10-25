@@ -1,0 +1,1131 @@
+{
+  "cases": 83,
+  "regressions": 29,
+  "regressionsAlreadySlowerThanOrs": 11,
+  "regressionsOvershootFromFasterToSlower": 7,
+  "largestRegressions": [
+    {
+      "id": "frontier/hays-ks-720-inside",
+      "v8SignedMinutes": 21.913610169899584,
+      "prototypeSignedMinutes": 93.46027683656598,
+      "prototypeAbsoluteErrorChangeMinutes": 71.5466666666664,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 702.1616666666661,
+        "transfer": 0.22833333333333333,
+        "census-layer/105": 2.776666666666667
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-600-inside",
+      "v8SignedMinutes": 21.29500000000064,
+      "prototypeSignedMinutes": 77.87666666666746,
+      "prototypeAbsoluteErrorChangeMinutes": 56.58166666666682,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 0.28,
+        "natural-earth/105": 553.0250000000003,
+        "census/105": 2.955,
+        "natural-earth/80": 30.863333333333333
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-600-outside",
+      "v8SignedMinutes": 34.76166666666677,
+      "prototypeSignedMinutes": 84.63666666666722,
+      "prototypeAbsoluteErrorChangeMinutes": 49.875000000000455,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 1.4183333333333334,
+        "natural-earth/105": 519.3083333333335,
+        "census/105": 2.955,
+        "natural-earth/80": 83.06666666666668,
+        "census-layer/80": 4.6
+      }
+    },
+    {
+      "id": "frontier/hays-ks-720-outside",
+      "v8SignedMinutes": 22.220276836565517,
+      "prototypeSignedMinutes": 68.10027683656608,
+      "prototypeAbsoluteErrorChangeMinutes": 45.880000000000564,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 555.2383333333324,
+        "natural-earth/80": 162.77166666666662,
+        "transfer": 0.6183333333333333,
+        "census-layer/80": 6.1866666666666665
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-720-inside",
+      "v8SignedMinutes": 28.747139580981184,
+      "prototypeSignedMinutes": 55.88713958098174,
+      "prototypeAbsoluteErrorChangeMinutes": 27.140000000000555,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 287.6200000000003,
+        "natural-earth/105": 418.47000000000037,
+        "transfer": 1.9516666666666667,
+        "census-layer/105": 0.9216666666666666
+      }
+    },
+    {
+      "id": "frontier/hays-ks-360-outside",
+      "v8SignedMinutes": 12.296943503234104,
+      "prototypeSignedMinutes": 38.67027683656681,
+      "prototypeAbsoluteErrorChangeMinutes": 26.37333333333271,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 286.13000000000005,
+        "transfer": 1.48,
+        "census-layer/105": 4.941666666666666,
+        "natural-earth/80": 64.96000000000002,
+        "census-layer/80": 7.251666666666667
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-600-inside",
+      "v8SignedMinutes": -14.8445270856854,
+      "prototypeSignedMinutes": 39.72713958098143,
+      "prototypeAbsoluteErrorChangeMinutes": 24.88261249529603,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 6.298333333333333,
+        "natural-earth/105": 537.7283333333334,
+        "transfer": 2.165,
+        "census-layer/80": 40.803333333333335
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-600-outside",
+      "v8SignedMinutes": -3.4561937523537836,
+      "prototypeSignedMinutes": 27.523806247647485,
+      "prototypeAbsoluteErrorChangeMinutes": 24.0676124952937,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 95.76000000000006,
+        "natural-earth/105": 463.77333333333206,
+        "transfer": 0.04833333333333333,
+        "census-layer/80": 47.47333333333334
+      }
+    },
+    {
+      "id": "frontier/astoria-or-600-inside",
+      "v8SignedMinutes": -35.471534850093235,
+      "prototypeSignedMinutes": -58.76653485009342,
+      "prototypeAbsoluteErrorChangeMinutes": 23.295000000000186,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 487.2533333333336,
+        "natural-earth/105": 65.88833333333335,
+        "census/80": 4.221666666666667,
+        "natural-earth/55": 5.751666666666667,
+        "transfer": 0.67,
+        "census-layer/80": 25.123333333333328
+      }
+    },
+    {
+      "id": "frontier/astoria-or-600-outside",
+      "v8SignedMinutes": -22.042627843978835,
+      "prototypeSignedMinutes": -44.63929451064439,
+      "prototypeAbsoluteErrorChangeMinutes": 22.596666666665556,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 383.9566666666663,
+        "natural-earth/105": 65.88833333333335,
+        "transfer": 8.27,
+        "census-layer/80": 119.775,
+        "local": 24.807240339448526,
+        "census/80": 6.441666666666666
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "frontier/astoria-or-360-inside",
+      "v8SignedMinutes": -49.742768322142126,
+      "prototypeSignedMinutes": -39.8477683221418,
+      "prototypeAbsoluteErrorChangeMinutes": -9.895000000000323,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 147.61166666666668,
+        "local": 9.147099861284604,
+        "natural-earth/105": 181.99666666666656,
+        "transfer": 0.395,
+        "census-layer/80": 9.508333333333333
+      }
+    },
+    {
+      "id": "frontier/astoria-or-360-outside",
+      "v8SignedMinutes": -48.299434988808855,
+      "prototypeSignedMinutes": -39.57110165547505,
+      "prototypeAbsoluteErrorChangeMinutes": -8.728333333333808,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 170.80000000000004,
+        "local": 9.147099861284604,
+        "natural-earth/105": 181.99666666666656,
+        "census/80": 1.6966666666666668,
+        "transfer": 0.06333333333333334,
+        "census-layer/80": 4.846666666666667
+      }
+    },
+    {
+      "id": "frontier/astoria-or-600-inside",
+      "v8SignedMinutes": -35.471534850093235,
+      "prototypeSignedMinutes": -58.76653485009342,
+      "prototypeAbsoluteErrorChangeMinutes": 23.295000000000186,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 487.2533333333336,
+        "natural-earth/105": 65.88833333333335,
+        "census/80": 4.221666666666667,
+        "natural-earth/55": 5.751666666666667,
+        "transfer": 0.67,
+        "census-layer/80": 25.123333333333328
+      }
+    },
+    {
+      "id": "frontier/astoria-or-600-outside",
+      "v8SignedMinutes": -22.042627843978835,
+      "prototypeSignedMinutes": -44.63929451064439,
+      "prototypeAbsoluteErrorChangeMinutes": 22.596666666665556,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 383.9566666666663,
+        "natural-earth/105": 65.88833333333335,
+        "transfer": 8.27,
+        "census-layer/80": 119.775,
+        "local": 24.807240339448526,
+        "census/80": 6.441666666666666
+      }
+    },
+    {
+      "id": "frontier/astoria-or-720-inside",
+      "v8SignedMinutes": -116.33153485009313,
+      "prototypeSignedMinutes": -56.6448681834255,
+      "prototypeAbsoluteErrorChangeMinutes": -59.686666666667634,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 89.78333333333332,
+        "natural-earth/105": 615.1016666666666,
+        "transfer": 1.1766666666666667,
+        "census-layer/105": 2.6433333333333335
+      }
+    },
+    {
+      "id": "frontier/astoria-or-720-outside",
+      "v8SignedMinutes": -118.65986818342674,
+      "prototypeSignedMinutes": -56.72986818342633,
+      "prototypeAbsoluteErrorChangeMinutes": -61.930000000000405,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 89.78333333333332,
+        "natural-earth/105": 638.8983333333333
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-360-inside",
+      "v8SignedMinutes": 39.07833333333343,
+      "prototypeSignedMinutes": 21.243333333333624,
+      "prototypeAbsoluteErrorChangeMinutes": -17.83499999999981,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 0.395,
+        "natural-earth/105": 14.745000000000001,
+        "natural-earth/80": 329.21833333333325,
+        "census-layer/80": 2.92
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-360-outside",
+      "v8SignedMinutes": 32.606666666666456,
+      "prototypeSignedMinutes": 13.628333333333558,
+      "prototypeAbsoluteErrorChangeMinutes": -18.9783333333329,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 0.7,
+        "natural-earth/105": 14.745000000000001,
+        "natural-earth/80": 322.26833333333326,
+        "census-layer/80": 29.528333333333325
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-600-inside",
+      "v8SignedMinutes": 21.29500000000064,
+      "prototypeSignedMinutes": 77.87666666666746,
+      "prototypeAbsoluteErrorChangeMinutes": 56.58166666666682,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 0.28,
+        "natural-earth/105": 553.0250000000003,
+        "census/105": 2.955,
+        "natural-earth/80": 30.863333333333333
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-600-outside",
+      "v8SignedMinutes": 34.76166666666677,
+      "prototypeSignedMinutes": 84.63666666666722,
+      "prototypeAbsoluteErrorChangeMinutes": 49.875000000000455,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 0.9866666666666667,
+        "transfer": 1.4183333333333334,
+        "natural-earth/105": 519.3083333333335,
+        "census/105": 2.955,
+        "natural-earth/80": 83.06666666666668,
+        "census-layer/80": 4.6
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-720-inside",
+      "v8SignedMinutes": -72.40166666666528,
+      "prototypeSignedMinutes": -10.73833333333323,
+      "prototypeAbsoluteErrorChangeMinutes": -61.66333333333205,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 27.715,
+        "transfer": 1.9783333333333335,
+        "natural-earth/105": 616.4466666666666,
+        "natural-earth/80": 62.633333333333326
+      }
+    },
+    {
+      "id": "frontier/missoula-mt-720-outside",
+      "v8SignedMinutes": -69.57999999999913,
+      "prototypeSignedMinutes": -24.196666666666943,
+      "prototypeAbsoluteErrorChangeMinutes": -45.38333333333219,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 28.993333333333332,
+        "transfer": 2.9783333333333335,
+        "natural-earth/105": 523.833333333333,
+        "natural-earth/80": 166.84499999999997,
+        "census-layer/80": 5.558333333333334
+      }
+    },
+    {
+      "id": "frontier/hays-ks-360-inside",
+      "v8SignedMinutes": -11.524794939325261,
+      "prototypeSignedMinutes": 11.98027683656693,
+      "prototypeAbsoluteErrorChangeMinutes": 0.4554818972416683,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 258.38333333333344,
+        "natural-earth/90": 21.236666666666665,
+        "local": 2.919928224107971,
+        "natural-earth/80": 62.24666666666666
+      }
+    },
+    {
+      "id": "frontier/hays-ks-360-outside",
+      "v8SignedMinutes": 12.296943503234104,
+      "prototypeSignedMinutes": 38.67027683656681,
+      "prototypeAbsoluteErrorChangeMinutes": 26.37333333333271,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 286.13000000000005,
+        "transfer": 1.48,
+        "census-layer/105": 4.941666666666666,
+        "natural-earth/80": 64.96000000000002,
+        "census-layer/80": 7.251666666666667
+      }
+    },
+    {
+      "id": "frontier/hays-ks-600-inside",
+      "v8SignedMinutes": 34.13125796694578,
+      "prototypeSignedMinutes": 0.36292463361269256,
+      "prototypeAbsoluteErrorChangeMinutes": -33.76833333333309,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 0.84,
+        "natural-earth/80": 533.1516666666664,
+        "transfer": 4.685,
+        "census-layer/80": 46.11833333333333
+      }
+    },
+    {
+      "id": "frontier/hays-ks-600-outside",
+      "v8SignedMinutes": 42.421943503233365,
+      "prototypeSignedMinutes": 7.468610169900785,
+      "prototypeAbsoluteErrorChangeMinutes": -34.95333333333258,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 0.84,
+        "natural-earth/80": 553.0849999999996,
+        "transfer": 4.685,
+        "census-layer/80": 46.11833333333333
+      }
+    },
+    {
+      "id": "frontier/hays-ks-720-inside",
+      "v8SignedMinutes": 21.913610169899584,
+      "prototypeSignedMinutes": 93.46027683656598,
+      "prototypeAbsoluteErrorChangeMinutes": 71.5466666666664,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 702.1616666666661,
+        "transfer": 0.22833333333333333,
+        "census-layer/105": 2.776666666666667
+      }
+    },
+    {
+      "id": "frontier/hays-ks-720-outside",
+      "v8SignedMinutes": 22.220276836565517,
+      "prototypeSignedMinutes": 68.10027683656608,
+      "prototypeAbsoluteErrorChangeMinutes": 45.880000000000564,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 555.2383333333324,
+        "natural-earth/80": 162.77166666666662,
+        "transfer": 0.6183333333333333,
+        "census-layer/80": 6.1866666666666665
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-360-inside",
+      "v8SignedMinutes": -22.581545335619808,
+      "prototypeSignedMinutes": -39.82654533561987,
+      "prototypeAbsoluteErrorChangeMinutes": 17.24500000000006,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 322.1783333333334,
+        "natural-earth/105": 16.281666666666666,
+        "local": 8.62048780314947
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-360-outside",
+      "v8SignedMinutes": -25.044527085685615,
+      "prototypeSignedMinutes": -43.74786041901871,
+      "prototypeAbsoluteErrorChangeMinutes": 18.70333333333309,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 349.5249999999998,
+        "natural-earth/105": 17.5
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-600-inside",
+      "v8SignedMinutes": -14.8445270856854,
+      "prototypeSignedMinutes": 39.72713958098143,
+      "prototypeAbsoluteErrorChangeMinutes": 24.88261249529603,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 6.298333333333333,
+        "natural-earth/105": 537.7283333333334,
+        "transfer": 2.165,
+        "census-layer/80": 40.803333333333335
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-600-outside",
+      "v8SignedMinutes": -3.4561937523537836,
+      "prototypeSignedMinutes": 27.523806247647485,
+      "prototypeAbsoluteErrorChangeMinutes": 24.0676124952937,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 95.76000000000006,
+        "natural-earth/105": 463.77333333333206,
+        "transfer": 0.04833333333333333,
+        "census-layer/80": 47.47333333333334
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-720-inside",
+      "v8SignedMinutes": 28.747139580981184,
+      "prototypeSignedMinutes": 55.88713958098174,
+      "prototypeAbsoluteErrorChangeMinutes": 27.140000000000555,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 287.6200000000003,
+        "natural-earth/105": 418.47000000000037,
+        "transfer": 1.9516666666666667,
+        "census-layer/105": 0.9216666666666666
+      }
+    },
+    {
+      "id": "frontier/duluth-mn-720-outside",
+      "v8SignedMinutes": 29.86817299855477,
+      "prototypeSignedMinutes": 45.90317299855519,
+      "prototypeAbsoluteErrorChangeMinutes": 16.035000000000423,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 287.6200000000003,
+        "natural-earth/105": 348.7283333333337,
+        "transfer": 2.4683333333333333,
+        "census-layer/80": 79.94666666666667,
+        "local": 8.112700084240497
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-360-inside",
+      "v8SignedMinutes": -16.228596284867592,
+      "prototypeSignedMinutes": -10.661087977739783,
+      "prototypeAbsoluteErrorChangeMinutes": -5.5675083071278095,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 154.28333333333333,
+        "natural-earth/80": 98.92833333333333,
+        "transfer": 4.5600000000000005,
+        "census-layer/105": 25.218333333333334,
+        "census-layer/80": 63.97166666666667
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-360-outside",
+      "v8SignedMinutes": -30.163596284867538,
+      "prototypeSignedMinutes": -14.633596284867735,
+      "prototypeAbsoluteErrorChangeMinutes": -15.529999999999802,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 225.72166666666675,
+        "natural-earth/80": 98.92833333333333,
+        "transfer": 4.576666666666667,
+        "census-layer/105": 26.428333333333335,
+        "census-layer/80": 11.271666666666667
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-600-inside",
+      "v8SignedMinutes": -26.30702915468771,
+      "prototypeSignedMinutes": 26.209637511979736,
+      "prototypeAbsoluteErrorChangeMinutes": -0.09739164270797573,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 512.0816666666665,
+        "transfer": 5.498333333333333,
+        "census-layer/105": 5.898333333333333,
+        "census-layer/80": 46.415,
+        "local": 17.024900463513305
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-600-outside",
+      "v8SignedMinutes": -23.221929618200647,
+      "prototypeSignedMinutes": 21.87140371513351,
+      "prototypeAbsoluteErrorChangeMinutes": -1.3505259030671368,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 505.2883333333334,
+        "natural-earth/80": 43.96166666666666,
+        "transfer": 0.815,
+        "census-layer/80": 56.839999999999996
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-720-inside",
+      "v8SignedMinutes": -61.07692961820021,
+      "prototypeSignedMinutes": -7.608596284867986,
+      "prototypeAbsoluteErrorChangeMinutes": -53.468333333332225,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 560.1300000000002,
+        "natural-earth/90": 1.2966666666666666,
+        "transfer": 3.1383333333333336,
+        "census-layer/80": 45.42166666666665,
+        "natural-earth/80": 83.62999999999998,
+        "census-layer/105": 13.328333333333335
+      }
+    },
+    {
+      "id": "frontier/columbus-oh-720-outside",
+      "v8SignedMinutes": -51.55093590930778,
+      "prototypeSignedMinutes": -11.51593590930895,
+      "prototypeAbsoluteErrorChangeMinutes": -40.03499999999883,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 502.16500000000025,
+        "natural-earth/80": 218.18833333333316,
+        "local": 6.567807098413489
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-360-inside",
+      "v8SignedMinutes": -29.55333333333317,
+      "prototypeSignedMinutes": -38.489999999999725,
+      "prototypeAbsoluteErrorChangeMinutes": 8.936666666666554,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 1.52,
+        "transfer": 0.7466666666666667,
+        "natural-earth/105": 115.78833333333333,
+        "natural-earth/80": 216.4066666666667,
+        "natural-earth/90": 6.011666666666667,
+        "census-layer/80": 7.615
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-360-outside",
+      "v8SignedMinutes": -29.194999999999766,
+      "prototypeSignedMinutes": -1.2350000000002979,
+      "prototypeAbsoluteErrorChangeMinutes": -27.959999999999468,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 1.52,
+        "transfer": 0.64,
+        "natural-earth/105": 341.5600000000003,
+        "natural-earth/80": 24.496666666666663
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-600-inside",
+      "v8SignedMinutes": -39.037171498583916,
+      "prototypeSignedMinutes": -6.497171498584294,
+      "prototypeAbsoluteErrorChangeMinutes": -32.53999999999962,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 41.565,
+        "transfer": 5.113333333333333,
+        "natural-earth/105": 462.08166666666665,
+        "natural-earth/80": 56.006666666666675,
+        "census-layer/80": 14.829999999999998,
+        "local": 8.579495168082738
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-600-outside",
+      "v8SignedMinutes": -57.18333333333317,
+      "prototypeSignedMinutes": -26.665000000000305,
+      "prototypeAbsoluteErrorChangeMinutes": -30.518333333332862,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 41.565,
+        "transfer": 3.183333333333333,
+        "natural-earth/105": 462.08166666666665,
+        "natural-earth/80": 101.3466666666667
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-720-inside",
+      "v8SignedMinutes": -111.5733333333335,
+      "prototypeSignedMinutes": -39.44833333333315,
+      "prototypeAbsoluteErrorChangeMinutes": -72.12500000000034,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 683.7666666666664,
+        "natural-earth/90": 21.8,
+        "transfer": 0.37333333333333335,
+        "census-layer/105": 1.2133333333333334
+      }
+    },
+    {
+      "id": "frontier/asheville-nc-720-outside",
+      "v8SignedMinutes": -101.21166666666682,
+      "prototypeSignedMinutes": -33.34499999999957,
+      "prototypeAbsoluteErrorChangeMinutes": -67.86666666666724,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 666.5183333333332,
+        "natural-earth/90": 11.895,
+        "natural-earth/80": 25.89,
+        "transfer": 1.4533333333333334,
+        "census-layer/80": 20.936666666666667
+      }
+    },
+    {
+      "id": "frontier/portland-me-360-inside",
+      "v8SignedMinutes": -76.5516666666669,
+      "prototypeSignedMinutes": -43.6366666666666,
+      "prototypeAbsoluteErrorChangeMinutes": -32.915000000000305,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 10.718333333333334,
+        "transfer": 1.5433333333333332,
+        "natural-earth/105": 305.5416666666666,
+        "natural-earth/80": 2.841666666666667,
+        "natural-earth/90": 27.63833333333333
+      }
+    },
+    {
+      "id": "frontier/portland-me-360-outside",
+      "v8SignedMinutes": -89.98500000000018,
+      "prototypeSignedMinutes": -56.5983333333333,
+      "prototypeAbsoluteErrorChangeMinutes": -33.38666666666688,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 11.5,
+        "transfer": 2.0683333333333334,
+        "natural-earth/105": 336.5716666666666,
+        "natural-earth/80": 9.883333333333333,
+        "census-layer/80": 8.096666666666666
+      }
+    },
+    {
+      "id": "frontier/portland-me-600-inside",
+      "v8SignedMinutes": -126.20666666666727,
+      "prototypeSignedMinutes": -70.16500000000019,
+      "prototypeAbsoluteErrorChangeMinutes": -56.04166666666708,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 11.5,
+        "transfer": 2.4766666666666666,
+        "natural-earth/105": 541.1233333333327,
+        "natural-earth/80": 31.528333333333336,
+        "census-layer/80": 1.4833333333333334
+      }
+    },
+    {
+      "id": "frontier/portland-me-600-outside",
+      "v8SignedMinutes": -93.69666666666683,
+      "prototypeSignedMinutes": -31.863333333333344,
+      "prototypeAbsoluteErrorChangeMinutes": -61.833333333333485,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 1.71,
+        "transfer": 1.8083333333333333,
+        "natural-earth/105": 590.3366666666665,
+        "census-layer/80": 14.274999999999999
+      }
+    },
+    {
+      "id": "frontier/portland-me-720-inside",
+      "v8SignedMinutes": -131.6217480428303,
+      "prototypeSignedMinutes": -81.22304979180478,
+      "prototypeAbsoluteErrorChangeMinutes": -50.39869825102551,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 17.898333333333337,
+        "transfer": 7.573333333333332,
+        "natural-earth/105": 536.6249999999998,
+        "census/105": 3.3666666666666667,
+        "natural-earth/80": 89.57333333333332,
+        "census-layer/80": 38.22666666666666,
+        "local": 14.846585290503132
+      }
+    },
+    {
+      "id": "frontier/portland-me-720-outside",
+      "v8SignedMinutes": -138.95833333333303,
+      "prototypeSignedMinutes": -62.68666666666661,
+      "prototypeAbsoluteErrorChangeMinutes": -76.27166666666642,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 13.516666666666666,
+        "transfer": 2.3366666666666664,
+        "natural-earth/105": 713.2616666666672
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-360-inside",
+      "v8SignedMinutes": -27.99094494769821,
+      "prototypeSignedMinutes": -19.185944947698204,
+      "prototypeAbsoluteErrorChangeMinutes": -8.805000000000007,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 263.64,
+        "transfer": 0.605,
+        "census-layer/105": 6.514999999999999,
+        "natural-earth/80": 75.86333333333334
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-360-outside",
+      "v8SignedMinutes": -2.91020142812539,
+      "prototypeSignedMinutes": 10.149798571874726,
+      "prototypeAbsoluteErrorChangeMinutes": 7.239597143749336,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 289.34,
+        "transfer": 3.135,
+        "census-layer/105": 6.514999999999999,
+        "census-layer/80": 56.40166666666667,
+        "census/80": 2.6266666666666665,
+        "local": 8.81146523854129
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-600-inside",
+      "v8SignedMinutes": -70.19500000000028,
+      "prototypeSignedMinutes": -17.728333333333694,
+      "prototypeAbsoluteErrorChangeMinutes": -52.46666666666658,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 549.29,
+        "natural-earth/80": 15.524999999999999,
+        "transfer": 0.4116666666666667,
+        "census-layer/80": 21.523333333333333
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-600-outside",
+      "v8SignedMinutes": -60.68759060417972,
+      "prototypeSignedMinutes": -6.764257270847452,
+      "prototypeAbsoluteErrorChangeMinutes": -53.923333333332266,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 532.0500000000005,
+        "natural-earth/80": 15.524999999999999,
+        "natural-earth/90": 16.811666666666667,
+        "local": 8.274076062486257,
+        "transfer": 0.6716666666666666,
+        "census-layer/80": 33.416666666666664
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-720-inside",
+      "v8SignedMinutes": -95.72500000000025,
+      "prototypeSignedMinutes": -30.04000000000019,
+      "prototypeAbsoluteErrorChangeMinutes": -65.68500000000006,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 675.1283333333333,
+        "natural-earth/80": 15.524999999999999,
+        "transfer": 1.3883333333333332,
+        "census-layer/105": 9.93,
+        "census-layer/80": 5.02
+      }
+    },
+    {
+      "id": "frontier/savannah-ga-720-outside",
+      "v8SignedMinutes": -88.95500000000004,
+      "prototypeSignedMinutes": -15.258333333334463,
+      "prototypeAbsoluteErrorChangeMinutes": -73.69666666666558,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 699.4700000000001,
+        "natural-earth/80": 15.524999999999999,
+        "transfer": 2.06,
+        "census-layer/105": 9.708333333333332
+      }
+    },
+    {
+      "id": "original/Los Angeles",
+      "v8SignedMinutes": -10.905000000000015,
+      "prototypeSignedMinutes": 1.3583333333332916,
+      "prototypeAbsoluteErrorChangeMinutes": -9.546666666666724,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 112.26833333333335,
+        "transfer": 0.6466666666666667,
+        "census-layer/105": 3.7416666666666667
+      }
+    },
+    {
+      "id": "original/Riverside",
+      "v8SignedMinutes": -11.523333333333326,
+      "prototypeSignedMinutes": -1.6883333333333326,
+      "prototypeAbsoluteErrorChangeMinutes": -9.834999999999994,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 90.795,
+        "transfer": 0.18166666666666667,
+        "census-layer/105": 2.236666666666667
+      }
+    },
+    {
+      "id": "original/Palm Springs",
+      "v8SignedMinutes": -10.84833333333333,
+      "prototypeSignedMinutes": 1.1700000000000728,
+      "prototypeAbsoluteErrorChangeMinutes": -9.678333333333256,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 118.35333333333331,
+        "transfer": 0.18166666666666667,
+        "census-layer/105": 2.236666666666667,
+        "natural-earth/80": 10.581666666666667
+      }
+    },
+    {
+      "id": "original/Santa Barbara",
+      "v8SignedMinutes": -15.189999999999856,
+      "prototypeSignedMinutes": 6.129999999999882,
+      "prototypeAbsoluteErrorChangeMinutes": -9.059999999999974,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 188.62166666666675,
+        "transfer": 1.4133333333333333,
+        "census-layer/105": 15.1,
+        "census/80": 7.363333333333333
+      }
+    },
+    {
+      "id": "original/Bakersfield",
+      "v8SignedMinutes": -13.953425440458403,
+      "prototypeSignedMinutes": 9.356574559541542,
+      "prototypeAbsoluteErrorChangeMinutes": -4.596850880916861,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 218.45999999999998,
+        "transfer": 0.6116666666666667,
+        "census-layer/105": 3.3516666666666666
+      }
+    },
+    {
+      "id": "original/Big Bear Lake",
+      "v8SignedMinutes": -14.766666666666623,
+      "prototypeSignedMinutes": -5.0566666666666436,
+      "prototypeAbsoluteErrorChangeMinutes": -9.70999999999998,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 98.11500000000002,
+        "transfer": 0.4983333333333333,
+        "census-layer/105": 10.758333333333333,
+        "census-layer/80": 47.72833333333333
+      }
+    },
+    {
+      "id": "original/Idyllwild",
+      "v8SignedMinutes": -15.821666666666658,
+      "prototypeSignedMinutes": -10.484999999999985,
+      "prototypeAbsoluteErrorChangeMinutes": -5.336666666666673,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 68.925,
+        "transfer": 0.26,
+        "census-layer/105": 2.236666666666667,
+        "natural-earth/80": 33.34666666666667,
+        "census-layer/80": 8.461666666666666
+      }
+    },
+    {
+      "id": "original/Borrego Springs",
+      "v8SignedMinutes": 16.66523161628936,
+      "prototypeSignedMinutes": 17.267757874272604,
+      "prototypeAbsoluteErrorChangeMinutes": 0.6025262579832429,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 3.74,
+        "transfer": 2.916666666666667,
+        "natural-earth/105": 34.55666666666667,
+        "census-layer/80": 37.95,
+        "natural-earth/80": 14.408333333333333,
+        "local": 33.56292987324366
+      }
+    },
+    {
+      "id": "original/Temecula",
+      "v8SignedMinutes": -6.268333333333331,
+      "prototypeSignedMinutes": -0.47333333333333627,
+      "prototypeAbsoluteErrorChangeMinutes": -5.794999999999995,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 54.611666666666665
+      }
+    },
+    {
+      "id": "original/Calexico",
+      "v8SignedMinutes": -3.0450000000000443,
+      "prototypeSignedMinutes": 9.088333333333424,
+      "prototypeAbsoluteErrorChangeMinutes": 6.043333333333379,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 1.36,
+        "transfer": 2.381666666666667,
+        "natural-earth/105": 113.80166666666665
+      }
+    },
+    {
+      "id": "original/Julian",
+      "v8SignedMinutes": 4.35419292464988,
+      "prototypeSignedMinutes": 4.944192924649869,
+      "prototypeAbsoluteErrorChangeMinutes": 0.5899999999999892,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 27.033333333333335,
+        "local": 7.784192924649883,
+        "natural-earth/80": 37.849999999999994
+      }
+    },
+    {
+      "id": "regional/los-angeles--bakersfield",
+      "v8SignedMinutes": -2.858425440458447,
+      "prototypeSignedMinutes": 8.496574559541614,
+      "prototypeAbsoluteErrorChangeMinutes": 5.638149119083167,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 109.11833333333331
+      }
+    },
+    {
+      "id": "regional/los-angeles--ventura",
+      "v8SignedMinutes": -10.840000000000003,
+      "prototypeSignedMinutes": -4.163333333333341,
+      "prototypeAbsoluteErrorChangeMinutes": -6.676666666666662,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 64.17666666666665
+      }
+    },
+    {
+      "id": "regional/bakersfield--big-bear-lake",
+      "v8SignedMinutes": 1.9365745595414978,
+      "prototypeSignedMinutes": 11.299907892874927,
+      "prototypeAbsoluteErrorChangeMinutes": 9.36333333333343,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 152.27999999999997,
+        "transfer": 0.31666666666666665,
+        "census-layer/105": 8.521666666666667,
+        "census-layer/80": 47.72833333333333
+      }
+    },
+    {
+      "id": "regional/bakersfield--palm-springs",
+      "v8SignedMinutes": -19.80175877379179,
+      "prototypeSignedMinutes": -0.683425440458393,
+      "prototypeAbsoluteErrorChangeMinutes": -19.118333333333396,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 188.15499999999997,
+        "natural-earth/80": 10.581666666666667
+      }
+    },
+    {
+      "id": "regional/santa-barbara--san-diego",
+      "v8SignedMinutes": -13.605000000000132,
+      "prototypeSignedMinutes": 7.715000000000117,
+      "prototypeAbsoluteErrorChangeMinutes": -5.890000000000015,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 15.1,
+        "transfer": 1.4133333333333336,
+        "census/80": 7.363333333333333,
+        "natural-earth/105": 188.6216666666665
+      }
+    },
+    {
+      "id": "regional/santa-barbara--brawley",
+      "v8SignedMinutes": -1.248333333333278,
+      "prototypeSignedMinutes": 15.566666666666606,
+      "prototypeAbsoluteErrorChangeMinutes": 14.318333333333328,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/105": 11.748333333333333,
+        "transfer": 0.8016666666666666,
+        "census/80": 7.363333333333333,
+        "natural-earth/105": 195.55999999999997,
+        "natural-earth/80": 82.84833333333333
+      }
+    },
+    {
+      "id": "regional/palm-springs--idyllwild",
+      "v8SignedMinutes": -12.984478232510973,
+      "prototypeSignedMinutes": -13.176144899177636,
+      "prototypeAbsoluteErrorChangeMinutes": 0.19166666666666288,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 2.6883333333333335,
+        "local": 45.86799686197374
+      }
+    },
+    {
+      "id": "regional/palm-springs--big-bear-lake",
+      "v8SignedMinutes": -11.15662362923041,
+      "prototypeSignedMinutes": -13.528290295897065,
+      "prototypeAbsoluteErrorChangeMinutes": 2.3716666666666555,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 21.903333333333332,
+        "natural-earth/105": 1.475,
+        "local": 43.391709704102944,
+        "transfer": 3.013333333333333,
+        "census-layer/80": 26.078333333333333
+      }
+    },
+    {
+      "id": "regional/idyllwild--palm-springs",
+      "v8SignedMinutes": -10.669478232510968,
+      "prototypeSignedMinutes": -10.861144899177631,
+      "prototypeAbsoluteErrorChangeMinutes": 0.19166666666666288,
+      "v8RoadCostMinutesBySourceClass": {
+        "local": 45.86799686197375,
+        "natural-earth/80": 2.6883333333333335
+      }
+    },
+    {
+      "id": "regional/idyllwild--temecula",
+      "v8SignedMinutes": -14.186666666666675,
+      "prototypeSignedMinutes": -14.536666666666669,
+      "prototypeAbsoluteErrorChangeMinutes": 0.3499999999999943,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/80": 8.461666666666666,
+        "transfer": 0.11000000000000001,
+        "natural-earth/80": 33.346666666666664,
+        "natural-earth/105": 11.268333333333333,
+        "census-layer/105": 5.5166666666666675
+      }
+    },
+    {
+      "id": "regional/julian--borrego-springs",
+      "v8SignedMinutes": 14.04189828295609,
+      "prototypeSignedMinutes": 12.690231616289417,
+      "prototypeAbsoluteErrorChangeMinutes": -1.3516666666666737,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 22.21,
+        "local": 33.56292987324366
+      }
+    },
+    {
+      "id": "regional/julian--el-centro",
+      "v8SignedMinutes": 0.10679171311153368,
+      "prototypeSignedMinutes": -6.081541620221671,
+      "prototypeAbsoluteErrorChangeMinutes": 5.974749907110137,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 104.53999999999994
+      }
+    },
+    {
+      "id": "regional/borrego-springs--anza",
+      "v8SignedMinutes": 16.517811997273384,
+      "prototypeSignedMinutes": 16.361145330606732,
+      "prototypeAbsoluteErrorChangeMinutes": -0.15666666666665208,
+      "v8RoadCostMinutesBySourceClass": {
+        "local": 102.2621769208943,
+        "transfer": 1.0633333333333332,
+        "census-layer/80": 1.9433333333333334
+      }
+    },
+    {
+      "id": "regional/borrego-springs--julian",
+      "v8SignedMinutes": 15.0452316162894,
+      "prototypeSignedMinutes": 13.693564949622726,
+      "prototypeAbsoluteErrorChangeMinutes": -1.3516666666666737,
+      "v8RoadCostMinutesBySourceClass": {
+        "local": 33.56292987324366,
+        "natural-earth/80": 22.21
+      }
+    },
+    {
+      "id": "regional/joshua-tree--brawley",
+      "v8SignedMinutes": -4.058333333333394,
+      "prototypeSignedMinutes": -7.96833333333322,
+      "prototypeAbsoluteErrorChangeMinutes": 3.909999999999826,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/80": 3.3033333333333332,
+        "transfer": 0.025,
+        "natural-earth/80": 112.07666666666664,
+        "natural-earth/105": 27.525000000000006
+      }
+    },
+    {
+      "id": "regional/joshua-tree--twentynine-palms",
+      "v8SignedMinutes": -1.6599999999999966,
+      "prototypeSignedMinutes": -2.7166666666666615,
+      "prototypeAbsoluteErrorChangeMinutes": 1.0566666666666649,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 3.4466666666666668,
+        "transfer": 0.04666666666666667,
+        "census-layer/80": 13.836666666666668
+      }
+    },
+    {
+      "id": "regional/salton-city--bombay-beach",
+      "v8SignedMinutes": 11.004678458260528,
+      "prototypeSignedMinutes": 8.211345124927192,
+      "prototypeAbsoluteErrorChangeMinutes": -2.7933333333333366,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 23.546666666666667,
+        "local": 26.214678458260543,
+        "transfer": 3.081666666666667,
+        "census-layer/80": 23.635000000000005
+      }
+    },
+    {
+      "id": "regional/salton-city--brawley",
+      "v8SignedMinutes": 4.099999999999994,
+      "prototypeSignedMinutes": 1.5466666666666526,
+      "prototypeAbsoluteErrorChangeMinutes": -2.5533333333333417,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/80": 42.98833333333333
+      }
+    },
+    {
+      "id": "regional/bombay-beach--salton-city",
+      "v8SignedMinutes": 10.826345124927201,
+      "prototypeSignedMinutes": 8.033011791593907,
+      "prototypeAbsoluteErrorChangeMinutes": -2.793333333333294,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/80": 23.635000000000005,
+        "transfer": 3.081666666666667,
+        "local": 26.214678458260543,
+        "natural-earth/80": 23.546666666666667
+      }
+    },
+    {
+      "id": "regional/bombay-beach--indio",
+      "v8SignedMinutes": 12.732853514852359,
+      "prototypeSignedMinutes": 10.617853514852378,
+      "prototypeAbsoluteErrorChangeMinutes": -2.1149999999999807,
+      "v8RoadCostMinutesBySourceClass": {
+        "census-layer/80": 23.635000000000005,
+        "transfer": 3.081666666666667,
+        "local": 26.214678458260543,
+        "natural-earth/80": 16.313333333333336,
+        "natural-earth/105": 2.276666666666667
+      }
+    },
+    {
+      "id": "regional/san-clemente--temecula",
+      "v8SignedMinutes": -11.731666666666662,
+      "prototypeSignedMinutes": -9.408333333333331,
+      "prototypeAbsoluteErrorChangeMinutes": -2.3233333333333306,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 31.465,
+        "natural-earth/80": 8.44,
+        "transfer": 1.6733333333333333,
+        "census-layer/80": 15.076666666666666
+      }
+    },
+    {
+      "id": "regional/san-clemente--escondido",
+      "v8SignedMinutes": -5.3233333333333235,
+      "prototypeSignedMinutes": -1.2250000000000014,
+      "prototypeAbsoluteErrorChangeMinutes": -4.098333333333322,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 38.025000000000006
+      }
+    },
+    {
+      "id": "regional/ventura--palm-springs",
+      "v8SignedMinutes": -19.639999999999958,
+      "prototypeSignedMinutes": -4.361666666666679,
+      "prototypeAbsoluteErrorChangeMinutes": -15.27833333333328,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 151.2133333333334,
+        "natural-earth/80": 10.581666666666667
+      }
+    },
+    {
+      "id": "regional/ventura--san-clemente",
+      "v8SignedMinutes": -14.300000000000011,
+      "prototypeSignedMinutes": -1.4650000000000034,
+      "prototypeAbsoluteErrorChangeMinutes": -12.835000000000008,
+      "v8RoadCostMinutesBySourceClass": {
+        "natural-earth/105": 118.16,
+        "transfer": 1.385,
+        "census-layer/105": 3.3516666666666666
+      }
+    }
+  ],
+  "scope": "Descriptive saved-v8-path/source-cost exposure and observed old prototype errors, not causal ETA decomposition or a new candidate/forecast. All83 observed development cases retained; no locations enter a routing rule, no new search/provider/key/env/DB read."
+}

@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-24",
+  "baseCommit": "37ff14b",
+  "decision": "rejected; not activated",
+  "planSha256": "dbe44d8552d2c485eb2ae523f7ade7e04fac0fe162c5bc9647a095dca2e04307",
+  "speedMapping": {
+    "55": 55,
+    "80": 82,
+    "90": 90,
+    "105": 100
+  },
+  "candidateSha256": "d720f084463451eaf284cd746511b9f67131d54f8516e989f40ab5220c0c8226",
+  "candidateBytes": 61225563,
+  "baselineSourceCostsAndTagsReproduced": true,
+  "geometryTopologyMasksVisitsAndOwnersUnchanged": true,
+  "baseSourceLinks": 378515,
+  "layerSourceLinks": 346821,
+  "all83Finite": true,
+  "all166PathSums": true,
+  "all35OlderShaded": true,
+  "failedGates": [
+    "frontierMissed",
+    "twelveHourMissed"
+  ],
+  "frozenThresholdsUnchanged": true,
+  "overallMeanAbsoluteMinutes": 27.865257681912084,
+  "frontierMeanAbsoluteMinutes": 42.13929213226521,
+  "worstRegressions": {
+    "frontier": 35.2150000000006,
+    "older": 6.326666666666824
+  },
+  "frontierMissedActual": 7,
+  "frontierMissedMaximum": 6,
+  "twelveHourMissedActual": 4,
+  "twelveHourMissedMaximum": 3,
+  "newCostFixtures": 6,
+  "gateTests": 6,
+  "pythonFixtures": 30,
+  "biomeFiles": 167,
+  "appTypecheck": true,
+  "strictDiagnosticTypecheck": true,
+  "ordinaryBuild": true,
+  "independentOutputGatePathAudit": true,
+  "independentAuditRepeatByteIdentical": true,
+  "matchedNeMajorSourceEdges": 8458,
+  "ambiguousExpresswayFlags": 0,
+  "secondCandidateOrParameterSweep": false,
+  "fullIndependentPhysicalRuntimeMemoryPackageQualification": false,
+  "qualificationStoppedBecause": "Two necessary prospective missed-reachable gates fail. No activation or threshold relaxation.",
+  "producerWallSeconds": 115.7556095418986,
+  "producerMaxRssNative": 1277034496,
+  "producerPlatform": "darwin",
+  "providerRequests": 0,
+  "sourceDownloads": 0,
+  "envSchemaDependenciesChanged": false,
+  "runtimeGridOrAppLogicChanged": false,
+  "commitPushOrDeployment": false,
+  "preservedV8AndUi": {
+    "src/routes/index.tsx": "a99d1c63225fa7ad88ed021933c00492dd40aca9e4f5967ffddb1977fce9bed3",
+    "src/components/research-map.tsx": "4d871c37a59af0de8b9a62eed4806fb9104aad9007f90aa1f405c9fbb4c96135",
+    "src/server/data/coarse-grid-v8.json": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910"
+  },
+  "producerFiles": {
+    "scripts/build-coarse-calibration.py": "fd36911bc3c2ab9ac4bd93339a4ad038aa48bd2f878e64f3b0eeedcdface976f",
+    "scripts/coarse_calibration_test.py": "17a4606602ab0fe2ee87fdb25937aed80d0bedf9faae23e673a12c62de81293d",
+    "scripts/compare-coarse-calibration.ts": "751fa6846483d2084931cbdb9e212bf550b9bcc72cb2ab94182a74793358d9f8",
+    "scripts/preview-coarse-calibration.ts": "c30be5d7fcbc446443748969d40d5d439dd33886f83b6d0905abec84612c75ea",
+    "scripts/coarse-calibration-preview.html": "bcad15c908f477c5f63efceff8d0d015a8cf080f23e851e92414d07e5520df50",
+    "scripts/coarse_census.py": "9d9dd6b648997a055775db3a5a680605f5969db04a57fbcda9ffce91a05c1bf1",
+    "scripts/build-coarse-augmentation.py": "8d094fcff45fe11cadd8a5fa4307ad20ae1278872d83c410188a69fb9d3ff704",
+    "scripts/build-coarse-grid-v4.py": "fa2af08414367a2e4f6d9b02c4fa623c3a501f0480ffe4523a08c01e717929d7",
+    "scripts/build-coarse-grid-v3.py": "df0e59c7fe56761ad990a39b833e4447fe1dfba1ab288fce6606a5f47e6437cf",
+    "scripts/build-coarse-grid-v2.py": "e4cddabf99d237b0a90f18798b0b7da4eea49610541caada62aa83c808e2697e",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "src/server/coarse-data.server.ts": "14359b989b13a71cc695261bc03aa38f27993472807cb1a9807336a283aa77c3",
+    "docs/evidence/coarse-class-calibration-2026-10-23/diagnose.py": "68124e73d068a2a371c23a08b37ebdab080243beafbd3913a746587a1d7387a2",
+    "scripts/coarse-holdout.ts": "53eab4c01da6fdc33468ca848ca932bb50e7d39be675096e6d26e9c430010de6",
+    "scripts/compare-coarse-holdout.ts": "8e85694a72ff80c94ccca0446a945bd675273033e5cec136c937968a2f29aacb",
+    "scripts/inspect-coarse-frontier.ts": "1aed51fd7a7bc2b7c2704cafe880be656d9517276565c9222dac3efc18836172",
+    "docs/evidence/coarse-frontier-reference-2026-10-23/analyze.py": "0538f744d9ae9683636ae060be96e0086bbf8493b049fab6eabd70b85e2f1fc4",
+    "scripts/coarse-control.ts": "33b68ac16955091f46b55c870ccd2397e16d4d090600a92a37796f0be6c78c60",
+    "scripts/compare-coarse-control.ts": "39a30162a3a527e826489045a8e3c4258d9d9ad35230dbe8db527b7de8a6a562",
+    "scripts/coarse-control.test.ts": "7dd7e99e0120edd34b114f53fe413cf6c5d57e27e32ea2ae6cd7253b0dbd9276",
+    "docs/evidence/coarse-control-reference-2026-10-24/analyze.py": "2109dd98b6bfbdd293e6bba870247d65536c11072dd74a9693d3a149296e0312",
+    "scripts/coarse-benchmark-plan.ts": "5e59f2e4c6a1d4e3e0a78081517b357ec6781d09ee0ede13da8f51225c97c328",
+    "scripts/prepare-coarse-benchmark.ts": "3e6dac4154e3681d26d96372c72ec57103627ab35a11955dc10a8e4819222fc7",
+    "scripts/coarse-benchmark-capture.ts": "5e66a1995b73815d972ed57b548b161c146561dad2d9ebdb3c761599057de8f4",
+    "scripts/coarse-benchmark.ts": "2f764a3141169bff5ed358a72e0ad468d16971a407075407ca40f804994dc48a",
+    "scripts/compare-coarse-benchmark.ts": "ef45e54d0312cd4f172392ec22f1ddbf8ba8bbd0b9d4939c991b075bfbd4f422",
+    "scripts/coarse-benchmark.test.ts": "b5aa915d8f98bc3ba6de77c163d27658f15a213fc68f3e8412f1b1753de3d4e4",
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/analyze.py": "21dd971f05b223cfd10d9be2354477246d18e4933541219c145e9619f234b4a7",
+    "scripts/build-coarse-damped.py": "849cb37828a07002aed612ca9459058c65ab9b6e5ea7a28141d32e28fc186dec",
+    "scripts/coarse_damped_test.py": "5fb393694363b09446cfcbeaf5a423e8ea20ce6ebc51eebc4e80b6d52986b47c",
+    "scripts/coarse-damped-gates.ts": "d3db1541837357fcf161ceefeb2731a8c554f61565f29156509ef450d588f64c",
+    "scripts/coarse-damped-gates.test.ts": "a131544bda51052e0422272082c82ffcc8f7160ec31c4379a410513b231f03d2",
+    "scripts/compare-coarse-damped.ts": "f71bc2f435085f707b1f2d33520c499e7e9c5d82de953cd44d20d64bf77df8bf",
+    "docs/evidence/coarse-damped-calibration-2026-10-24/diagnose.py": "1c838d60d91fc29f0cb4d21dd4e3e4803e55680d8a9a1574ea608d3cf0219a56",
+    "docs/evidence/coarse-damped-calibration-2026-10-24/feature-diagnosis.py": "f1469e27ea708ccf818c45a11aecf1e0fe2c4ebb00ad5542de9ee4b77e674745",
+    "docs/evidence/coarse-damped-calibration-2026-10-24/audit.py": "bb3e1fe6176b4c3bdab7ed1221884160b0225dd35679efd5ddf7cbaed3615a64"
+  },
+  "referenceFiles": {
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/comparison.json": "d79ade80d4cc3834cac7cdc7d6cb0810de40ef9588801f6a8a8688de8fc6d48e",
+    "src/server/data/coarse-grid-v8.json": "2beb2fb6d9af6e07f37c5ba53acdeca2da1334c31a5fadd1371efd5453134910",
+    "docs/evidence/coarse-class-calibration-2026-10-23/comparison.json": "cb31b7f281a737afe6b19d4e8410f533de2ddd7832f552602944a81e376b07ba",
+    "data/coarse-sources/tiger-2026/national-v1/sources.json": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+    "docs/evidence/coarse-source-2026-10-22/tool.json": "56a3e5e0f9fd91db9c3ccd05ecfdb07cbbf3433c123aea5c6ac07ebfc03c9a8e"
+  },
+  "priorSealedEvidenceVerified": {
+    "coarse-class-calibration-2026-10-23": {
+      "files": 27,
+      "manifestSha256": "78cc9629a51cb6246a8712f73a4c8c0871d438d13a57fc16567888e6629078ab"
+    },
+    "coarse-frontier-reference-2026-10-23": {
+      "files": 160,
+      "manifestSha256": "b1febb70689ce37ad3c6a87bf3e8b24437590982ad44d3c5bc3db76ad005516a"
+    },
+    "coarse-control-tool-2026-10-24": {
+      "files": 28,
+      "manifestSha256": "101d3405629a6f6e30a69d9d55a46ed61c7a6c0314642409931060455dba09eb"
+    },
+    "coarse-control-reference-2026-10-24": {
+      "files": 29,
+      "manifestSha256": "f5aea9985109f97fc8ba4040482ab377ae828aa56e535818cf07a0648fe46cbe"
+    },
+    "coarse-benchmark-plan-2026-10-24": {
+      "files": 98,
+      "manifestSha256": "230bbb517755a232636443f6643a89f709abe7514458f6f2a012bc998dad8763"
+    },
+    "coarse-benchmark-reference-2026-10-24": {
+      "files": 98,
+      "manifestSha256": "f4b8489af1a9f0cd8653f5b15d0de0110e3922147548aa922ba39db8ecaeb658"
+    }
+  },
+  "failedDiagnosticAttemptsPreserved": [
+    "diagnose-v1.py",
+    "diagnosis-v1-empty.json",
+    "diagnosis-v1-failure.txt",
+    "feature-diagnosis-v1.py",
+    "feature-diagnosis-v1-empty.json",
+    "feature-diagnosis-v1.log"
+  ],
+  "scope": "One different100/82 candidate on all83 observed development routes; no original95/85 gate/evidence change. Rejected necessary gates stop activation qualification. Source-pass RSS/timing is not Vercel runtime. Expressway matches are descriptive, not causal proof or an implemented next policy.",
+  "documentationChecks": {
+    "pages": 9,
+    "localLinks": 368,
+    "markdownAnchors": 64,
+    "errors": [],
+    "gitDiffCheck": true
+  },
+  "experimentScriptsKeyEnvDbRead": false
+}

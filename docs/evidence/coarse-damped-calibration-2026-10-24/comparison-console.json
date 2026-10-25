@@ -1,0 +1,128 @@
+{
+  "output": "data/coarse-quality/damped-timing-evaluation-v1",
+  "sets": {
+    "frontier": {
+      "baseline": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 52.27309809419811,
+        "medianAbsoluteMinutes": 37.254353174338576,
+        "p90AbsoluteMinutes": 116.33153485009313,
+        "classifications": {
+          "correct": 23,
+          "falseReachable": 17,
+          "missedReachable": 5,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      },
+      "candidate": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 42.13929213226521,
+        "medianAbsoluteMinutes": 40.17658649927705,
+        "p90AbsoluteMinutes": 87.67986818342717,
+        "classifications": {
+          "correct": 33,
+          "falseReachable": 5,
+          "missedReachable": 7,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      },
+      "improved": 35,
+      "regressed": 13,
+      "unchanged": 0
+    },
+    "original": {
+      "baseline": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 11.212834846793712,
+        "medianAbsoluteMinutes": 11.523333333333326,
+        "p90AbsoluteMinutes": 15.821666666666658,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "candidate": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 6.989198483157387,
+        "medianAbsoluteMinutes": 5.088333333333367,
+        "p90AbsoluteMinutes": 13.153333333333364,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "improved": 9,
+      "regressed": 2,
+      "unchanged": 0
+    },
+    "regional": {
+      "baseline": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 10.015678454543666,
+        "medianAbsoluteMinutes": 11.080651043745469,
+        "p90AbsoluteMinutes": 16.517811997273384,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "candidate": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 8.885382580635058,
+        "medianAbsoluteMinutes": 9.757178458260555,
+        "p90AbsoluteMinutes": 14.21999999999997,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "improved": 15,
+      "regressed": 9,
+      "unchanged": 0
+    }
+  },
+  "gates": {
+    "overallMean": true,
+    "frontierMean": true,
+    "originalMean": true,
+    "regionalMean": true,
+    "frontierP90": true,
+    "horizonMeans": true,
+    "horizonP90": true,
+    "frontierWorstRegression": true,
+    "olderWorstRegression": true,
+    "frontierDefiniteClassificationErrors": true,
+    "frontierMissed": false,
+    "twelveHourMissed": false,
+    "all83Paired": true,
+    "all166PathSums": true,
+    "all35StillShaded": true
+  },
+  "accuracyGatesPassed": false
+}
