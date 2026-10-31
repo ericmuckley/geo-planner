@@ -1,22 +1,25 @@
 # Geo Planner
 
-A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse contours from 30 minutes to 12 hours across the contiguous US**,  with a two-hour default and a release-to-update time slider.
+A fullstack mapping app for estimating where you could drive within a time budget. The first long-range model provides **coarse contours from 30 minutes to 12 hours across the contiguous US**, with a two-hour default and a release-to-update time slider.
 
-Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md). Local v9 is qualified and ready for review/commit/deployment. V8/slider remain the last user-reported production model; the current checkout starts at `37ff14b`. The floating-map UI and later accuracy work are also uncommitted.
+Continuing an existing session: read [the resume guide](docs/agent-handoff.md) and [documentation index](docs/README.md).
 
-**V9 is qualified and active locally, uncommitted and not deployed.** It retains the 0.025° grid and changes generic travel costs: Natural Earth artificial connections use 55 km/h, secondary roads 85, major roads 105, Census connections/local travel 25. All rules apply everywhere; locations occur only in validation. Across 83 saved ORS development routes, mean absolute difference falls **34.612→29.257 min**; frontier missed reachable **5→2**,  false reachable **17→11**. All prospective gates pass. [Decision, complete ledger and limits](docs/evidence/coarse-path-features-2026-10-24/README.md).
+**V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](docs/evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-Gains are uneven: 59 routes improve/24 regress, frontier median worsens 37.254→40.561 min, and the older Valhalla sensitivity means worsen. This is an observed development comparison, not nationwide/area accuracy or a fresh holdout. Cell spacing is unchanged. Both earlier timing candidates remain rejected under their original frozen decisions. No new provider call, download, DB write, env/schema/dependency change, commit or deployment occurred. All 48/6/29 reference budgets are consumed.
+**Current work:** national bank capacity passes with identical 938 MB banks. Road capture stopped at the old 250,000 selected-element limit; all failure evidence is closed and preserved. Next is bounded disk-backed selection under the same 4 GiB memory, four-hour and 64 GiB storage limits. [Evidence and recovery](docs/evidence/coarse-osm-extraction-2026-10-30/README.md). Deployed v9 is unchanged.
+
 
 ## What works today
 
 - Filled 30-minute–12-hour estimates from arbitrary supported contiguous-US land origins, with the same rules everywhere. The time slider starts at two hours and recalculates on pointer/key release with loading feedback.
-- **0.025° cells, about 1.8–2.8 km**,  half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
+- **0.025° cells, about 1.8–2.8 km**, half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
 - Full-viewport MapLibre map with a compact, collapsible top-left control panel. History, model/layer settings and run details expand inside; mobile controls scroll independently. [Local UI QA](docs/local-development.md#floating-map-controls).
 - Source/model notices, timings, browser-private PostgreSQL history with local fallback, replay and export.
-- Lossless storage puts the finer model in a **61.23 MB** bundled file and **65.05 MB** local Vercel function. First packaged computation is about **3.4 s after config**,  with zero routing fetches.
+- Lossless storage puts the finer model in a **61.23 MB** bundled file and **65.05 MB** local Vercel function. First packaged computation is about **3.4 s after config**, with zero routing fetches.
 
-The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md). Next: review/commit/deploy v9, then verify the hosted contract. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
+The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md).
+
+Offline work is preparing additional OpenStreetMap road attributes. The complete source is downloaded and verified; national census/batching and the faster lookup checks pass. Complete two-pass extraction passes260Linux controls and independent reference output. Its corrected full-run controller passes19more Linux controls; the bounded national raw capture is running. The earlier checkpoint-monitor failure is preserved. Complete capture, source suitability, usable speed/access data, matching and model accuracy remain separate checks. The deployed map has not changed. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
 
 ## Run locally
 
@@ -27,7 +30,7 @@ npm ci
 npm run dev
 ```
 
-Install dependencies only if needed; they already exist in the current workspace. Open Vite's printed URL, using [127.0.0.1:3000](http://127.0.0.1:3000) for the verified local app because a different app can occupy IPv 6 port 3000. The coarse estimator, map and browser-local history work without a database, routing service, API key, Python or Docker. Fresh routing setup is documented in [.env.example](.env.example), [hosted setup](docs/us-routing-service.md) and the [retained Valhalla recipe](docs/regional-routing.md). Preserve the existing locally configured key and other environment values.
+Install dependencies only if needed; they already exist in the current workspace. Open Vite's printed URL, using [127.0.0.1:3000](http://127.0.0.1:3000) for the verified local app because a different app can occupy IPv6 port 3000. The coarse estimator, map and browser-local history work without a database, routing service, API key, Python or Docker. Fresh routing setup is documented in [.env.example](.env.example), [hosted setup](docs/us-routing-service.md) and the [retained Valhalla recipe](docs/regional-routing.md). Preserve the existing locally configured key and other environment values.
 
 For the native experiment, run `npm run dev:experiment` after the handoff's health/process checks; its qualified graph and binary already exist in this workspace. See [current experiment setup and limitations](docs/two-hour-region.md). The compact coarse grid is bundled; detailed research datasets and graphs are not.
 

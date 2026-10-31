@@ -1,0 +1,27 @@
+{
+  "recipeSha256": "e3c3f12d84f0bb0eea3629da292dd6187cf587925eb420c110ca53939ccc2237",
+  "newProducerFiles": {
+    "scripts/coarse_osm_window_cells_v2.cpp": "2fc19713889700fe96273fc1da42829089dbf99913e27fb213e805c489a5d340",
+    "scripts/coarse_osm_window_codec_v2.py": "f942fa20f1ad28f26f9623feade351ff6a426d827e951bb10780ab39fdcaedc9",
+    "scripts/coarse_osm_window_codec_v2_test.py": "233187550d7999452647619747a75aa73a7d5dd97515c4471904a65ff8aee9b5",
+    "scripts/coarse_osm_window_bank_v2.py": "2f8c1f48af91742225d7535f3718549f6492f2957110182acd85f81b7589cfd5",
+    "scripts/coarse_osm_window_bank_v2_test.py": "f6a3759ccbe0b5f6e8041a389ca2e60dea9d8b2da415da0271691ba393d0045b",
+    "scripts/coarse_osm_filtered_extract_v2.py": "48106daa7e386d4a87cc51394b157dac385675b4af41d023474d15e9d3b56774",
+    "scripts/coarse_osm_filtered_extract_v2_test.py": "2e7ac2631bf6ddbf84d2d787767463251de15c30b79353ce63fd4e5ad522362c",
+    "scripts/coarse_osm_readonly_extract_v2_test.py": "0b944fd149a6028a71e16e41b081585818971c8cb57dd92c5ae8db84274fcacf",
+    "scripts/run_osm_country_screen_v13.py": "9ad55b9164d962519ad6f364954ea33baa3394305f54941b4f8143ea81fd1589"
+  },
+  "tests": 65,
+  "newFormat": "WC02/version2/<IqqIII>32byte header; positive canonical ID-gap run pairs only when strictly smaller, raw wins ties; unchanged cell runs.",
+  "oldFormatsRetained": true,
+  "signedIDBits": 63,
+  "cellBlockRows": 4096,
+  "cellBlockBodyBytes": 65536,
+  "lookupReferences": 65536,
+  "legacyConversion": "Decode/check every old ID/cell, re-encode, re-decode and compare every row natively; input rows charged per native callable, not internal loop instructions.",
+  "globalMemoryBytes": 4294967296,
+  "bankLogicalBytes": 2147483648,
+  "sourceAndFailedEvidencePreserved": true,
+  "nationalSourceFineOrStoppedPrefixRead": false,
+  "statusAtFreeze": "unused"
+}

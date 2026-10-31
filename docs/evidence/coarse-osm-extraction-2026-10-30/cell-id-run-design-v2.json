@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-30",
+  "phase": "proposed_lossless_cell_id_runs_v2",
+  "parentStop": "cell-census-stop-v1.json",
+  "parentStopSha256": "e198b926126b898e43502c03a3c18b6588f21bf9dae08321909000dcc7d0a164",
+  "scope": "Exact node IDs and cells only; no source/query/model semantics or resource increase.",
+  "envelope": {
+    "magic": "WC02",
+    "version": 2,
+    "flags": 0,
+    "payloadSha256": true
+  },
+  "bodyHeader": "<IqqIII>: rows, firstID, lastID, idBytes, idRuns, cellRuns;32bytes",
+  "idEncoding": "idRuns0 uses canonical shortest raw positive LEB128 gaps. Otherwise canonical positive(delta,repeat) LEB128 pairs, distinct adjacent deltas, exact rows-1 expansion. Select run mode only if strictly fewer bytes; raw wins ties. Every ID positive signed63 and strictly increasing; last matches header.",
+  "cellEncoding": "Unchanged canonical uint16(cell,repeat) runs; count/total/cell-range guards unchanged.",
+  "bounds": {
+    "rowsPerBlock": 4096,
+    "bodyBytes": 65536,
+    "queryReferences": 65536,
+    "maximumCells": 7225,
+    "maximumWindows": 21,
+    "bankBytes": 2147483648,
+    "memoryBytes": 4294967296,
+    "wholeStageSeconds": 14400,
+    "retainedWorkingBytes": 68719476736
+  },
+  "worstCaseVersusV1": "At most4additional header bytes per block; canonical raw fallback prevents run-data expansion. Dense repeated gaps may shrink; no national size forecast.",
+  "newRetainedReservationBytes": 55406628967,
+  "newOwnedBytesExcludingTmp": 13044412313,
+  "acceptance": "Actual native/reference equivalence, raw ties/dense/mixed/full63-bit IDs, invalid/overflow/noncanonical/zero/duplicate runs, hash/ABI/cap/buffer guards; immutable bank and exact tiny filtered/readonly output; independent proof/cleanup. A separate bounded old-prefix transcode may measure prefix size only; new full source census requires unused freeze.",
+  "sourceAndFailedEvidenceChanged": false,
+  "implementationQualified": false,
+  "nationalCapacityQualified": false,
+  "modelChanged": false
+}

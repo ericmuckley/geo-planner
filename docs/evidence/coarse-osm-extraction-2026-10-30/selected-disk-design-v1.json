@@ -1,0 +1,50 @@
+{
+  "status": "unfrozen_design_before_qualification",
+  "sourceAndWindowsUnchanged": true,
+  "globalCaps": {
+    "retainedWorkingBytes": 68719476736,
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "hostSeconds": 14400
+  },
+  "selectedCaps": {
+    "uniqueElements": 2000000,
+    "windowOccurrences": 4000000,
+    "rawBytesEachState": 536870912,
+    "normalizedOutputBytes": 1073741824,
+    "selectedRowBytes": 8388608,
+    "sourceCopyCanonicalBytes": 4194304,
+    "sourceFrameBytes": 8388608
+  },
+  "sqliteCaps": {
+    "pageBytes": 4096,
+    "maxPagesEach": 327680,
+    "cacheBytesEach": 8388608,
+    "fileLimitBytes": 2147483648,
+    "databases": 2,
+    "journalMode": "DELETE",
+    "temporaryStorage": "MEMORY",
+    "commitEveryMutations": 4096
+  },
+  "retainedActualBytes": 58226331751,
+  "metadataReservationBytes": 67108864,
+  "tmpBytes": 268435456,
+  "ownedBytesExcludingTmp": 10157600665,
+  "writableWorstCaseComponents": {
+    "twoDatabaseFiles": 2684354560,
+    "twoRollbackJournalsAtFileCap": 4294967296,
+    "twoExactCellBanks": 1876729662,
+    "normalizedOutput": 1073741824,
+    "auxiliaryRecordsAndNamespace": 67108864
+  },
+  "writableWorstCaseBytes": 9996902206,
+  "remainingBytes": 160698459,
+  "sourcePolicy": "No source/window/route/region exception, no resampling or model change. New versions only; failed old evidence immutable. Independent primary/audit raw records and predicates, exact source counts/seals/EOF, missing-geometry failure and all downstream gates remain.",
+  "pending": [
+    "Implement fixed-cache SQLite selected states and streaming raw output/audit.",
+    "New native ABI/bridge supports at most2000000selected IDs with bounded typed buffer.",
+    "Actual Linux beyond250kselected keys and native projections, all budget/ABI/transaction/integrity/tamper controls, exact tiny reference output and lifecycle.",
+    "Only then freeze a new national source run."
+  ]
+}

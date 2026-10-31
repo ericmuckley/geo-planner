@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "status": "Policy frozen before new code, changed costs or queries",
+  "sourceRoadTimeFactor": 1.1,
+  "rationale": "One small round10% engineering allowance for static source-road travel that otherwise follows idealized class rates. Saved provider disagreement and faster optimistic backbone predictions motivate a conservative timing hypothesis, not a measured correction, fitted optimum, traffic estimate or causal conclusion. No factor sweep.",
+  "inputs": {
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/next-cost-design.json": "5d37d23610bde4aefd9e4d8c513820c43701c09a79d4eea00bd292d17c162992",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/findings.json": "e72a9ac10c6d00c7e3ff6ec59495a00724354724df026df6461d19033abe0cb8",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/sha256.json": "86ae8c04402586f59749f73707430414a95d3a207d4cd7e5a572aaba6d859981",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/execution-plan.json": "14ce73ea4e2008cb2f87cd21a3bf3d75a4cf5745af7fc00dc8d5649530200324",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "data/coarse-quality/backbone-binary-package-v3/probe/backbone.bin": "4d455bec6c02f3da5a189dd8bbe36b4e2da98be124cd4c45d8309f0234de4b20",
+    "data/coarse-quality/connector-timing-candidate-v1/base-links.json.gz": "dcd8c893240f137af276adc629d83ee7a9cb9868371363bea8f1977709bf4262",
+    "src/server/backbone-routing.ts": "aa2b54c707b8bc78959bd336ebe1152d168988cf27e856caa89bf9198641ae4a",
+    "src/server/backbone-geometry.ts": "9bd333d9b409754978ff24d0adbe05ef731f438656fe413ed556672619e929b8",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "src/server/coarse-data.server.ts": "14359b989b13a71cc695261bc03aa38f27993472807cb1a9807336a283aa77c3",
+    "scripts/backbone-binary-loader.mjs": "c27a1e087ba5790b5a35bfddc9eb5ddb6f1cfc81e8aeec67732e7c6f15d5e221",
+    "scripts/backbone-binary-format.mjs": "9bb4d4813b5728dcac3c87e91960bfde6ff062ead22b32da009cac8a2847f51e",
+    "scripts/backbone-binary-validate.mjs": "7334de37a1ae9c6b2b0180bfbf8ba34183d086da95eb4ade8933062e7420cb73"
+  },
+  "roadPricing": "Full Census arc = original arcMinutes +0.10*(original sourceKm/classSpeed*60), preserving distributed original rounding residue. Chosen base road link = max1,ceil((1.10*roadKm/classSpeed + connectorKm/unchangedConnectorSpeed)*36000) deciseconds. Reproduce old base formula exactly first. Keep selected source alternatives fixed; do not rescale aggregate road+connector cost or reconstruct/rerun raw source producers.",
+  "partialPricing": "Census endpoint/same-arc uses unchanged sourceMinutes with repriced full arcMinutes, so source cumulative fraction and original rounding fraction are consistent; speed-tag chord lower bound unchanged. NE roadVisits use a lazy no-cache wrapper with effective speed originalSpeed/1.10; original points/anchors/cumulative/transferKm unchanged. Existing gridAttachments pricing/rounding and input geography stay unchanged.",
+  "unchanged": "All geometry/topology/source IDs and speed tags/eligibility, local25 and artificial connector55(NE)/25(Census), base-cell/shore/display masks, input/access/fallback/transfer enumeration, source alternative ownership and same-arc rules. Retain mixed-source base. No city/region/coordinate/horizon/case exception.",
+  "artifact": "Same binary format: replace only graph arcMinutes gzip and kept roadDeciseconds gzip; all other payload bytes exact. Add cost policy to descriptor stats. Runtime lazily wraps NE roadVisits after unchanged binary load; no duplicate persistent cost/index arrays. Original binary/model/files unchanged.",
+  "reproduction": "Before mutation, validate all full-source road+rounding terms, every selected base proof/coverage/price and all visit geometry/class bounds; independently replay unchanged attachment enumeration and match83 captured origin+destination selected-state costs (166). No field search for reproduction.",
+  "gates": {
+    "primary": "All83 saved matched ORS development cases vs v9, not holdout/nationwide/traffic truth. Retain all35 Valhalla sensitivities and failures.",
+    "overallMaeMaximum": 26.33167687894809,
+    "frontierMaeMaximum": 40.166414408550864,
+    "originalMaeMaximum": 7.222683331642199,
+    "regionalMaeMaximum": 8.612811312916305,
+    "frontierMedianMaximum": 40.560596876175964,
+    "frontierP90Maximum": 97.8133333333343,
+    "allHorizonMeansAndP90NoWorseThanV9": true,
+    "valhallaGroupMeansNoWorseThanV9": true,
+    "maximumIndividualAbsoluteErrorIncreaseMinutes": {
+      "frontier": 20,
+      "older": 5
+    },
+    "maximumFrontierDefiniteErrors": 12,
+    "maximumFrontierMissed": 2,
+    "maximum12hMissed": 1,
+    "all83FiniteAndAll166PathSums": true,
+    "all35OlderDestinationsShadedAt720": true,
+    "maximumRetainedDecodedBytes": 162238546,
+    "maximumLocalFirstPackagedComputeAfterConfigMs": 5000,
+    "maximumFunctionBytes": 70000000,
+    "fullSourcePhysicalShoreTransferAndArbitraryOriginChecks": true,
+    "softwareAndGeneratedHandlerAndSharedCameraChecks": true
+  },
+  "additionalNoWorseTailChecks": [
+    "overallP90",
+    "originalP90",
+    "regionalP90"
+  ],
+  "ordering": "Freeze exact producer/runtime/test/evaluation dependency hashes and commands before production/query. Synthetic tests and software checks; current-cost/attachment reproduction; produce one artifact; then one83/35 comparison at same900min diagnostic cap. Stop on any necessary failure; no tuning/threshold relaxation.",
+  "scope": "Local isolated candidate only, active v9 unchanged. No env/key/DB/provider/source acquisition, source-producer rerun, dependency/config change, commit/push/deployment. Original rejected candidates/records remain frozen."
+}

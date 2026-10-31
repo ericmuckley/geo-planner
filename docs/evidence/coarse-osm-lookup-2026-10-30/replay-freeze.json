@@ -1,0 +1,32 @@
+{
+  "recipeSha256": "e60b9b81e307f8241b38a1405e0864a4c71594101175f71d9a0fd209c7b8b1c6",
+  "admittedProducers": {
+    "scripts/coarse_osm_lookup_v3.py": "adbc277dbbad128a1dd4a256664266258bc0611dd767534598844c34a272aa10",
+    "scripts/coarse_osm_lookup_v3_test.py": "258cf6259f9b22bf75e938a3e071a170681f091d7bb22599df3b2a0d09d96311",
+    "scripts/run_osm_lookup_v3.py": "769bea1cb8bc874e3ca912e24e5d89f0d2de8ed8f3326682af889f0058f870b7"
+  },
+  "caseOrder": [
+    "old",
+    "new",
+    "new",
+    "old"
+  ],
+  "referenceOccurrencesEach": 2135008,
+  "batchesEach": 135,
+  "gates": {
+    "newMeanPointsRatioMaximum": 0.9,
+    "completeCaseMeanNoWorse": true
+  },
+  "caps": {
+    "hostSeconds": 1200,
+    "hostWorkSeconds": 1140,
+    "workerSeconds": 900,
+    "caseSeconds": 180,
+    "rowsEach": 80000000,
+    "callsEach": 20000,
+    "ioEach": 12884901888
+  },
+  "nationalPbfReadOrMount": false,
+  "output": "data/coarse-quality/us-osm-lookup-v3-run",
+  "command": "PYTHONPATH=scripts python3 -B scripts/run_osm_lookup_v3.py docs/evidence/coarse-osm-lookup-2026-10-30/replay-plan.json e60b9b81e307f8241b38a1405e0864a4c71594101175f71d9a0fd209c7b8b1c6"
+}

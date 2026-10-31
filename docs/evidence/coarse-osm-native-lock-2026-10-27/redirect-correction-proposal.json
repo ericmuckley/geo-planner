@@ -1,0 +1,67 @@
+{
+  "phase": "proposed_native_metadata_lock_v2_config_redirect_only",
+  "status": "Unimplemented/unfrozen; not an active network recipe. V1 remains a stopped immutable run.",
+  "reuse": {
+    "manifestPath": "data/coarse-quality/us-osm-native-lock-v1/acquire/http/001.bin",
+    "manifestSha256": "a3e02308c822fb6ce0d12248b0c941817ba5e1a1bc9e7bb5929f29c50eaa40a9",
+    "manifestBytes": 5542,
+    "manifestDigest": "sha256:a3e02308c822fb6ce0d12248b0c941817ba5e1a1bc9e7bb5929f29c50eaa40a9",
+    "configDescriptor": {
+      "mediaType": "application/vnd.docker.container.image.v1+json",
+      "size": 14396,
+      "digest": "sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b"
+    },
+    "policy": "Reuse verified saved V1 manifest; do not query latest again or re-fetch the manifest. Config/platform and source identities are still unresolved."
+  },
+  "redirectPolicy": {
+    "origin": "https://quay.io/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+    "maximumHops": 1,
+    "allowedStatus": 302,
+    "scheme": "https",
+    "host": "cdn01.quay.io",
+    "path": "/quayio-production-s3/sha256/60/607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+    "queryParameterNames": [
+      "X-Amz-Algorithm",
+      "X-Amz-Credential",
+      "X-Amz-Date",
+      "X-Amz-Expires",
+      "X-Amz-Signature",
+      "X-Amz-SignedHeaders",
+      "akamai_signature",
+      "namespace",
+      "region",
+      "repo_name"
+    ],
+    "pathMustContainExactlyConfigDigest": true,
+    "noBearerOrCookieForwarding": true,
+    "noSignedUrlPersistence": "Keep signed URL only in memory. Store redacted host/path/key names and original URL/body sizes/hashes, never values or the HTML redirect body. Audit may substitute an explicitly synthetic URL.",
+    "responseAcceptance": "Only the already pinned14,396-byte config JSON, SHA256 matching its descriptor, plus linux/arm64/rootfs metadata checks. No layer/blob widening, other host/path/port, extra hop, retries or fallback."
+  },
+  "sourcesUnchanged": [
+    [
+      "osmcode/libosmium",
+      "v2.23.1"
+    ],
+    [
+      "mapbox/protozero",
+      "v1.8.2"
+    ]
+  ],
+  "newStandaloneCaps": {
+    "attempts": 12,
+    "eachBytes": 2097152,
+    "totalBytes": 14680064,
+    "hostSeconds": 600,
+    "retries": 0
+  },
+  "budgetScope": "Explicit versioned protocol revision, not a retry or transfer of unused V1 quota. V1(2requests/6901bytes)+proposed maxima stays below original16requests/16MiB; outputs/code/request policy must be separately frozen.",
+  "requiredControls": [
+    "Pinned manifest/config identity and path; no latest/manifest re-fetch",
+    "One config-only CDN hop and refusal of wrong host/port/path/digest/query shape/extra redirect",
+    "No Authorization/cookie propagation; no signed credential/query values in files, errors or logs",
+    "Exact config size/SHA/platform and existing source/Git/tree/HTTP/resource/ownership controls",
+    "Offline public-record reconciliation with synthetic signed-URL placeholders explicitly scoped"
+  ],
+  "deferred": "No layers/source archives/image pull/compile/source sample/national/provider/DB/model/app change.",
+  "fullImportAdmitted": false
+}

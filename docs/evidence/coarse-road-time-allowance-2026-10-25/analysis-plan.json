@@ -1,0 +1,12 @@
+{
+  "status": "Post-result independent gate/component audit, frozen after single rejected comparison before this arithmetic audit",
+  "inputs": {
+    "scripts/analyze-road-time-allowance.py": "659fac0713b602d6c588b9e087c2074e2a0ecb4c66f836094619274e7dd050d7",
+    "data/coarse-quality/road-time-allowance-comparison-v1/comparison.json": "480ab0ce55b377fa784267c7b18e445d0f6ffd8493f0b745fb53e50529f0ed15",
+    "data/coarse-quality/road-time-allowance-comparison-v1/paths.json.gz": "7952fd20bf98907027b10cdeabae0994e16611ca28c554c2d24c6f08208decfd",
+    "data/coarse-quality/road-time-allowance-comparison-v1/execution-plan.json": "2a1aff992bfdb707d36a673c6e407d4d2f32386a38edc19f85eb9a0cd3676543",
+    "docs/evidence/coarse-path-features-2026-10-24/comparison.json": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a"
+  },
+  "scope": "Recompute all21 frozen decisions,83/35 denominators and166 path component sums; describe errors/cost shifts. No new routes, factor changes or physical/runtime activation qualification.",
+  "command": "python3 -B scripts/analyze-road-time-allowance.py data/coarse-quality/road-time-allowance-comparison-v1 docs/evidence/coarse-road-time-allowance-2026-10-25/analysis.json"
+}

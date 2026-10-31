@@ -1,0 +1,484 @@
+{
+  "version": 1,
+  "status": "Concrete bounded missing-input proposal; unexecuted. Not a selected timing policy or proof that data coverage/matching will pass.",
+  "inputs": {
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "docs/evidence/coarse-timing-design-2026-10-25/inventory.json": "db918677b3d7fd70a3cbfa90aa33487290175ed6f01df45bc1cf7c47d1fdb68d",
+    "docs/evidence/coarse-timing-design-2026-10-25/schema-check.json": "a9e0d3ef6259b46c53a1f92b26f36a131b58b73e813591959259024f38dfb725",
+    "docs/evidence/coarse-timing-design-2026-10-25/source-notes.json": "4f226dcb74f0da5d10d29365c9b1e1a5be5638e5a1a0459e62428f46f4ed83a3",
+    "docs/evidence/coarse-timing-design-2026-10-25/reference-schema-notes.json": "7d1d8d77d55511448cc447f50a7356b20ca4d5f8b7e6c95b4f43baf26f5dd233"
+  },
+  "missingInput": "Road-specific numeric speed limits with units/direction/linear scope and source provenance; connection/access/level context to screen unsafe road matches. Actual average speed and junction control/delay remain separate missing information.",
+  "source": {
+    "provider": "Overture transportation/segment",
+    "proposedRelease": "2026-10-21.0",
+    "proposedSchema": "v2.0.0",
+    "metadataUrl": "https://stac.overturemaps.org/catalog.json",
+    "dataRoot": "https://overturemapswestus2.blob.core.windows.net/release/2026-10-21.0/theme=transportation/type=segment/",
+    "manifestState": "Must resolve, verify and freeze actual schema, object URLs, sizes and ETags/checksums before data ranges; no automatic latest-version fallback."
+  },
+  "selection": {
+    "rule": "Every distinct origin in the 83 frozen unbuffered captures, sorted by (longitude,latitude); fixed +/-0.05 degrees bbox. All 21 windows retained, including empty/failed/stopped windows; no replacement or query-outcome filter. Windows are validation/data-feasibility coverage only and never runtime routing exceptions.",
+    "windowCount": 21,
+    "windows": [
+      {
+        "id": "origin-00",
+        "origin": {
+          "lon": -123.8313,
+          "lat": 46.1879
+        },
+        "bbox": [
+          -123.8813,
+          46.1379,
+          -123.7813,
+          46.237899999999996
+        ],
+        "validationCaseIds": [
+          "frontier/astoria-or-360-inside",
+          "frontier/astoria-or-360-outside",
+          "frontier/astoria-or-600-inside",
+          "frontier/astoria-or-600-outside",
+          "frontier/astoria-or-720-inside",
+          "frontier/astoria-or-720-outside"
+        ]
+      },
+      {
+        "id": "origin-01",
+        "origin": {
+          "lon": -119.6982,
+          "lat": 34.4208
+        },
+        "bbox": [
+          -119.7482,
+          34.3708,
+          -119.6482,
+          34.4708
+        ],
+        "validationCaseIds": [
+          "regional/santa-barbara--san-diego",
+          "regional/santa-barbara--brawley"
+        ]
+      },
+      {
+        "id": "origin-02",
+        "origin": {
+          "lon": -119.229,
+          "lat": 34.2746
+        },
+        "bbox": [
+          -119.279,
+          34.2246,
+          -119.179,
+          34.3246
+        ],
+        "validationCaseIds": [
+          "regional/ventura--palm-springs",
+          "regional/ventura--san-clemente"
+        ]
+      },
+      {
+        "id": "origin-03",
+        "origin": {
+          "lon": -119.0187,
+          "lat": 35.3733
+        },
+        "bbox": [
+          -119.06869999999999,
+          35.3233,
+          -118.9687,
+          35.4233
+        ],
+        "validationCaseIds": [
+          "regional/bakersfield--big-bear-lake",
+          "regional/bakersfield--palm-springs"
+        ]
+      },
+      {
+        "id": "origin-04",
+        "origin": {
+          "lon": -118.2437,
+          "lat": 34.0522
+        },
+        "bbox": [
+          -118.2937,
+          34.0022,
+          -118.1937,
+          34.102199999999996
+        ],
+        "validationCaseIds": [
+          "regional/los-angeles--bakersfield",
+          "regional/los-angeles--ventura"
+        ]
+      },
+      {
+        "id": "origin-05",
+        "origin": {
+          "lon": -117.612,
+          "lat": 33.4269
+        },
+        "bbox": [
+          -117.66199999999999,
+          33.376900000000006,
+          -117.562,
+          33.4769
+        ],
+        "validationCaseIds": [
+          "regional/san-clemente--temecula",
+          "regional/san-clemente--escondido"
+        ]
+      },
+      {
+        "id": "origin-06",
+        "origin": {
+          "lon": -117.1611,
+          "lat": 32.7157
+        },
+        "bbox": [
+          -117.2111,
+          32.6657,
+          -117.11110000000001,
+          32.765699999999995
+        ],
+        "validationCaseIds": [
+          "original/Los Angeles",
+          "original/Riverside",
+          "original/Palm Springs",
+          "original/Santa Barbara",
+          "original/Bakersfield",
+          "original/Big Bear Lake",
+          "original/Idyllwild",
+          "original/Borrego Springs",
+          "original/Temecula",
+          "original/Calexico",
+          "original/Julian"
+        ]
+      },
+      {
+        "id": "origin-07",
+        "origin": {
+          "lon": -116.7189,
+          "lat": 33.74
+        },
+        "bbox": [
+          -116.7689,
+          33.690000000000005,
+          -116.66890000000001,
+          33.79
+        ],
+        "validationCaseIds": [
+          "regional/idyllwild--palm-springs",
+          "regional/idyllwild--temecula"
+        ]
+      },
+      {
+        "id": "origin-08",
+        "origin": {
+          "lon": -116.602,
+          "lat": 33.0787
+        },
+        "bbox": [
+          -116.652,
+          33.0287,
+          -116.552,
+          33.128699999999995
+        ],
+        "validationCaseIds": [
+          "regional/julian--borrego-springs",
+          "regional/julian--el-centro"
+        ]
+      },
+      {
+        "id": "origin-09",
+        "origin": {
+          "lon": -116.5453,
+          "lat": 33.8303
+        },
+        "bbox": [
+          -116.5953,
+          33.780300000000004,
+          -116.4953,
+          33.8803
+        ],
+        "validationCaseIds": [
+          "regional/palm-springs--idyllwild",
+          "regional/palm-springs--big-bear-lake"
+        ]
+      },
+      {
+        "id": "origin-10",
+        "origin": {
+          "lon": -116.375,
+          "lat": 33.2559
+        },
+        "bbox": [
+          -116.425,
+          33.2059,
+          -116.325,
+          33.305899999999994
+        ],
+        "validationCaseIds": [
+          "regional/borrego-springs--anza",
+          "regional/borrego-springs--julian"
+        ]
+      },
+      {
+        "id": "origin-11",
+        "origin": {
+          "lon": -116.3131,
+          "lat": 34.1347
+        },
+        "bbox": [
+          -116.3631,
+          34.084700000000005,
+          -116.26310000000001,
+          34.1847
+        ],
+        "validationCaseIds": [
+          "regional/joshua-tree--brawley",
+          "regional/joshua-tree--twentynine-palms"
+        ]
+      },
+      {
+        "id": "origin-12",
+        "origin": {
+          "lon": -115.9561,
+          "lat": 33.2986
+        },
+        "bbox": [
+          -116.0061,
+          33.2486,
+          -115.90610000000001,
+          33.3486
+        ],
+        "validationCaseIds": [
+          "regional/salton-city--bombay-beach",
+          "regional/salton-city--brawley"
+        ]
+      },
+      {
+        "id": "origin-13",
+        "origin": {
+          "lon": -115.7297,
+          "lat": 33.3503
+        },
+        "bbox": [
+          -115.77969999999999,
+          33.3003,
+          -115.6797,
+          33.400299999999994
+        ],
+        "validationCaseIds": [
+          "regional/bombay-beach--salton-city",
+          "regional/bombay-beach--indio"
+        ]
+      },
+      {
+        "id": "origin-14",
+        "origin": {
+          "lon": -113.994,
+          "lat": 46.8721
+        },
+        "bbox": [
+          -114.044,
+          46.822100000000006,
+          -113.944,
+          46.9221
+        ],
+        "validationCaseIds": [
+          "frontier/missoula-mt-360-inside",
+          "frontier/missoula-mt-360-outside",
+          "frontier/missoula-mt-600-inside",
+          "frontier/missoula-mt-600-outside",
+          "frontier/missoula-mt-720-inside",
+          "frontier/missoula-mt-720-outside"
+        ]
+      },
+      {
+        "id": "origin-15",
+        "origin": {
+          "lon": -99.3268,
+          "lat": 38.8792
+        },
+        "bbox": [
+          -99.3768,
+          38.8292,
+          -99.27680000000001,
+          38.929199999999994
+        ],
+        "validationCaseIds": [
+          "frontier/hays-ks-360-inside",
+          "frontier/hays-ks-360-outside",
+          "frontier/hays-ks-600-inside",
+          "frontier/hays-ks-600-outside",
+          "frontier/hays-ks-720-inside",
+          "frontier/hays-ks-720-outside"
+        ]
+      },
+      {
+        "id": "origin-16",
+        "origin": {
+          "lon": -92.1005,
+          "lat": 46.7867
+        },
+        "bbox": [
+          -92.1505,
+          46.736700000000006,
+          -92.0505,
+          46.8367
+        ],
+        "validationCaseIds": [
+          "frontier/duluth-mn-360-inside",
+          "frontier/duluth-mn-360-outside",
+          "frontier/duluth-mn-600-inside",
+          "frontier/duluth-mn-600-outside",
+          "frontier/duluth-mn-720-inside",
+          "frontier/duluth-mn-720-outside"
+        ]
+      },
+      {
+        "id": "origin-17",
+        "origin": {
+          "lon": -82.9988,
+          "lat": 39.9612
+        },
+        "bbox": [
+          -83.0488,
+          39.9112,
+          -82.9488,
+          40.011199999999995
+        ],
+        "validationCaseIds": [
+          "frontier/columbus-oh-360-inside",
+          "frontier/columbus-oh-360-outside",
+          "frontier/columbus-oh-600-inside",
+          "frontier/columbus-oh-600-outside",
+          "frontier/columbus-oh-720-inside",
+          "frontier/columbus-oh-720-outside"
+        ]
+      },
+      {
+        "id": "origin-18",
+        "origin": {
+          "lon": -82.5515,
+          "lat": 35.5951
+        },
+        "bbox": [
+          -82.6015,
+          35.545100000000005,
+          -82.50150000000001,
+          35.6451
+        ],
+        "validationCaseIds": [
+          "frontier/asheville-nc-360-inside",
+          "frontier/asheville-nc-360-outside",
+          "frontier/asheville-nc-600-inside",
+          "frontier/asheville-nc-600-outside",
+          "frontier/asheville-nc-720-inside",
+          "frontier/asheville-nc-720-outside"
+        ]
+      },
+      {
+        "id": "origin-19",
+        "origin": {
+          "lon": -81.0912,
+          "lat": 32.0809
+        },
+        "bbox": [
+          -81.1412,
+          32.0309,
+          -81.0412,
+          32.1309
+        ],
+        "validationCaseIds": [
+          "frontier/savannah-ga-360-inside",
+          "frontier/savannah-ga-360-outside",
+          "frontier/savannah-ga-600-inside",
+          "frontier/savannah-ga-600-outside",
+          "frontier/savannah-ga-720-inside",
+          "frontier/savannah-ga-720-outside"
+        ]
+      },
+      {
+        "id": "origin-20",
+        "origin": {
+          "lon": -70.2568,
+          "lat": 43.6591
+        },
+        "bbox": [
+          -70.3068,
+          43.609100000000005,
+          -70.2068,
+          43.7091
+        ],
+        "validationCaseIds": [
+          "frontier/portland-me-360-inside",
+          "frontier/portland-me-360-outside",
+          "frontier/portland-me-600-inside",
+          "frontier/portland-me-600-outside",
+          "frontier/portland-me-720-inside",
+          "frontier/portland-me-720-outside"
+        ]
+      }
+    ],
+    "spatialPredicate": "subtype=road AND bbox.xmin<=east AND bbox.xmax>=west AND bbox.ymin<=north AND bbox.ymax>=south; retain complete intersecting segments/scoped properties and count statistics on their clipped in-window geometry. Dedupe returned objects by release/id/version across windows while preserving all window memberships."
+  },
+  "columns": [
+    "id",
+    "version",
+    "bbox",
+    "geometry",
+    "sources",
+    "subtype",
+    "class",
+    "subclass",
+    "subclass_rules",
+    "road_flags",
+    "speed_limits",
+    "access_restrictions",
+    "prohibited_transitions",
+    "connectors",
+    "level_rules"
+  ],
+  "hardCaps": {
+    "receivedHttpBodyBytes": 536870912,
+    "toolDownloadBodyBytesWithinTotal": 134217728,
+    "httpRequests": 10000,
+    "retries": 0,
+    "paidSpend": 0,
+    "routingProviderRequests": 0,
+    "databaseReadsWrites": 0,
+    "processRssBytes": 1073741824,
+    "totalLocalWorkingBytes": 2147483648,
+    "retainedExtractBytes": 134217728,
+    "uniqueSegmentRows": 250000,
+    "wallSeconds": 3600
+  },
+  "enforcement": [
+    "Freeze exact importer/parser/dependencies/fixtures and HTTP metadata/object allowlist before the live run. Keep tools in a separately pinned ignored environment, never app package dependencies.",
+    "All received HTTP bodies, including metadata/listings/footers/schema/tool wheels/ranges, pass one byte/request meter. Include redirects and failures; disallow unmetered library I/O, hidden extension downloads, credentials and paid query services. A bbox predicate or LIMIT alone does not enforce this cap.",
+    "Require verified ranged reads; reject ignored Range or changed object identity before consuming a full object. A controlled seekable range reader may feed a pinned Parquet reader; transport must be proven with synthetic tiny/oversized/redirect/truncated/range-ignored/identity-change fixtures.",
+    "Prove memory/disk/row/time guards enforceable on this host before data access. Stop at the first cap/error and retain every planned window status. Do not expand budgets, retry, switch release or replace a window.",
+    "Verify returned schema/object hashes and preserve complete scoped rules. Report missing, malformed, directional, conditional, variable, conflicting and partly scoped limits separately. Limits are not ETAs."
+  ],
+  "analysis": [
+    "Coverage by window and road class, count and in-window geometry length, including zeros and unsupported/missing fields. Preserve complete source/license/version metadata.",
+    "On frozen cached detailed Census source geometry, report original-source-km-weighted limit and plausible-match coverage within each window. A geometrically plausible match is not verified road identity. Use predeclared <=25 m corridor, >=80% clipped source-length coverage and <=15-degree tangent difference; multiple passing candidates remain ambiguous. Retain all contrary cases and explicit source/grade uncertainty. No threshold tuning.",
+    "Only whole-span numeric limits applicable to ordinary motor-car travel in both directions without time/vehicle/use conditions count as usable for this first feasibility gate. Preserve every other rule, but do not flatten it into a model speed.",
+    "Report Natural Earth/base alignment and unresolved provenance separately; do not count representative chords as exact road geometry or merge them into the primary Census coverage denominator.",
+    "Independently review 50 asserted matches chosen by ascending SHA256(release/id/window), or every match if fewer than 50. Any definite wrong-road match fails matching readiness. No routing prediction, fit or accuracy evaluation."
+  ],
+  "goNoGo": {
+    "dataReadiness": "All 21 window ledgers complete within caps, frozen schema/source identities intact, all parser/provenance/scoping checks reconcile independently.",
+    "feasibilityScreen": "At least 50% of clipped cached detailed-Census source km across all windows has a unique plausible match and usable limit; every window/layer/road-class denominator and 50-match review remains visible. The 50% is a prospective engineering screen for data usefulness, not an accuracy/national coverage claim.",
+    "failure": "Stop and document the exact cap, coverage, scope or matching failure; no national expansion or model cost change.",
+    "success": "Design and freeze one road-attribute timing policy separately, then specify a bounded nationwide input expansion. Pilot coverage alone does not authorize an active switch or establish arbitrary-origin accuracy."
+  },
+  "integration": {
+    "runtime": "A later producer could compile accepted attributes into existing static road-cost payloads with generic class fallback for missing/unsupported/unmatched data. The app would continue to compute offline in TypeScript on Vercel; no road-data request or cloud DB dependency per query. This is a proposed integration, not implemented or qualified.",
+    "national": "Use a fixed release and deterministic complete CONUS tiling; separately bounded national expansion required. These 21 windows are not national coverage or a router.",
+    "gates": "Every original 83/35 accuracy/finite/component/missed/tail/individual gate, physical/source/shore/transfer/path checks, <=70 MB function, retained decoded<=162238546 bytes, first packaged estimate<=5 s, API/software/shared-camera review remains. Actual compressed package, memory, matching coverage and accuracy must be measured; no forecast promoted to admission.",
+    "storage": "Raw GeoParquet/tool environment and provenance stay ignored and excluded from Vercel; preserve ODbL/source attribution and license metadata in later derivatives."
+  },
+  "nextAction": "Implement and validate the capped offline pilot reader/parser using synthetic local fixtures, resolve/freeze metadata/object identities under the same total network cap, then execute one separately sealed pilot recipe. Current design task performs no road-data acquisition.",
+  "scope": "Data feasibility only. Existing 83/35 remain observed development references; no extra ORS/Valhalla budget, no named-place routing behavior, traffic truth or national query claim. V9 stays active."
+}

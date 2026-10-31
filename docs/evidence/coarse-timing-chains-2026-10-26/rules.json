@@ -1,0 +1,19 @@
+{
+  "status": "Frozen before chain enumeration on retained source data",
+  "rowFilter": "Use only saved aligned row ordinals. Preserve parser outcomes; exclude any unsupported road role, nonempty level_rules, malformed/multipart geometry, invalid connectors, missing/multiple endpoint identities or same ID at both ends. A singleton endpoint ID may have duplicate identical raw connector entries; distinct IDs stay unresolved. Do not interpret access/level/turn permission.",
+  "endpointRule": "Connector at is numeric/nonbool finite in[0,1]; endpoint identity requires abs(at-end)<=1e-9 for end0/1. Both raw geometry endpoints must be inside the fixed window. Joins require equal exit/entry IDs and endpoint haversine distance<=0.025km.",
+  "rowProgress": "Restore original ordered Census midpoint samples and weights. For each raw endpoint find nearest samples among that row\u2019s own aligned sample indices; require nearest distance<=0.025km. Treat all distances within1e-9km of the minimum as a tied interval[minIndex,maxIndex]. End intervals must be disjoint and strictly ordered; otherwise unresolved. Orient the row from lower to higher progress.",
+  "joinProgress": "For each join require next.sampleMin>=previous.sampleMin, next.sampleMax>previous.sampleMax, next.entryProgress.low>=previous.entryProgress.low, next.exitProgress.low>previous.exitProgress.low. These sampled progress constraints do not prove physical within-row/road identity or access.",
+  "support": "Use unchanged saved <=25m spacing/distance and <=15deg undirected tangent sample memberships, original positive Census weights. A chain covers the union of member sample bitsets once; support>=80% total original weighted km, tolerance1e-12 in the fraction.",
+  "search": "Seed every valid oriented row in ascending original ordinal order. Depth-first traverse ascending ordinal successors, no repeated row. Count each visited path as one expanded state. At first qualifying path do not extend, since any extension is nonminimal.",
+  "minimality": "A qualifying chain must have no qualifying proper contiguous subchain. Primary checks deleting first or last member (sufficient under nonnegative union weights); independent audit checks every proper contiguous subchain. Canonical equivalence is lexicographic minimum of the ordinal sequence and its reverse; keep the actual progressing sequence as evidence.",
+  "caps": "Maximum64 rows/path and4096 expanded states/arc. Hitting length64 counts as a cap only if a nonrepeating admissible successor exists and the path does not already qualify. State cap counts only if another path would be visited. Preserve partial candidates. Never infer exhaustive single/absent from capped or unresolved rows.",
+  "outcomePriority": [
+    "unmeasured_empty_cache",
+    "search_capped",
+    "unresolved_with_candidates or unresolved_without_candidates",
+    "no_cached_chain, single_cached_chain or multiple_cached_chains"
+  ],
+  "hypothesis": "Support iff at least one formerly absent arc has a declared-valid candidate chain (necessarily>1 row) and no search cap on that arc. Unresolved other aligned rows do not negate an existing declared-valid chain, but prevent uniqueness/exhaustiveness claims. This is an existential geometric hypothesis, not usable speed coverage.",
+  "preservation": "All55120 rows,2469 arc/window records,85629 samples,21 incomplete windows and85/105 classes remain. Raw scopes and2.8270705809269594 baseline provisional eligible km unchanged. No source/model/routing/ETA/50% feasibility admission."
+}

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "status": "Next descriptive diagnostic specification; exact join/audit tool and commands must freeze separately before execution",
+  "inputs": {
+    "docs/evidence/coarse-road-time-control-2026-10-25/report.json": "1989a55ba20197d381dbde5f43e3c37a298439c51132f9d3bda16ba7c430f3e8",
+    "docs/evidence/coarse-road-time-control-2026-10-25/analysis.json": "57442de105f0d4ad46efce16c73f40589b2ecb84c1734074c5a83baf51b35728",
+    "docs/evidence/coarse-road-time-control-2026-10-25/plan.json": "674b94d1b822dbbd670fa804acf438aa377b84f1f4632d031b40e15ddf02a65d",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/report.json": "753faba8fa2ee78a862f2069d06b3a545b4f5a4d13ca3eef8dae7192d2951bb4",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-report.json": "1bfa242bb3f9d9e12a4dbb6f4fc93ca8a5562ddd5c7ab561790eae35b8c6357f",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/sha256.json": "86ae8c04402586f59749f73707430414a95d3a207d4cd7e5a572aaba6d859981",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/analysis.json": "0e5c01b31ae537019e13491d981462067c24951629716dcff9ea56b445df6778",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd"
+  },
+  "question": "Which existing generic path exposures distinguish opposite signed timing residuals? Uniform source time is the measured dominant shift, not route-choice instability. Identify support or missing evidence before choosing a selective correction.",
+  "cases": 83,
+  "valhallaSensitivities": 35,
+  "method": [
+    "Join existing case IDs only: unbuffered/current signed residuals, fixed-policy source-road minutes by class and endpoint/local/transfer costs with prior detailed Census corridor proximity and coverage. Retain all 83/35 and all three reference horizons.",
+    "Report predeclared all/frontier/original/regional, reference horizon, faster/slower residual sign, six newly missed, two persistent missed and original individual-regression-limit cohorts. Preserve null/zero coverage, including three no-full-Census cases; denominators must be explicit.",
+    "Show class exposure as source-road minutes and shares; exclude artificial connectors and mixed attachments. Existing corridor proximity is a partial Census-subset comparison, not complete-route overlap, road identity or legal access. Do not infer complete path length from representative base chords.",
+    "Use descriptive counts, medians/ranges and full per-case rows. No regression fitting, optimized cutoffs, factor sweep, new routing search, provider geometry acquisition or contour/area claim. Do not reinterpret the six original failed gates.",
+    "Conclude with one generic correction hypothesis supported by observed features and clear limitations, or an explicit evidence insufficiency with the smallest needed diagnostic. Do not declare that a rule will pass until a separately frozen candidate is evaluated."
+  ],
+  "ordering": [
+    "Read-only saved-proof checks",
+    "Freeze exact join/audit tool, dependency/input hashes, output paths and commands",
+    "Compute one saved-output join and independently reconcile coverage/cohorts",
+    "Document one supported direction or evidence gap; no candidate generation in this task"
+  ],
+  "pass": "All 83/35 rows retained, source/component/coverage semantics and every joined identifier reconcile, no case-specific rule or fitting, one reproducible decision with uncertainty and exact next action. Keep active v9 and all sealed records unchanged.",
+  "onFailure": "Preserve outputs and missing/unmeasured ledger. Stop dependent work; no substitute cases, new factor or new query.",
+  "prohibited": [
+    "new model/route/field/contour",
+    "new policy factor or speed fit",
+    "case/region/coordinate/horizon-specific routing exceptions",
+    "source producer/download",
+    "provider/env/key/DB input",
+    "runtime/config/dependency change",
+    "commit/push/deploy"
+  ],
+  "scope": "Observed development evidence only; ORS recommended-fallback semantics and 35 older Valhalla sensitivity remain explicit. No national/traffic/holdout qualification."
+}

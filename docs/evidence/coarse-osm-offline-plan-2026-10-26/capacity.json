@@ -1,0 +1,36 @@
+{
+  "observedDate": "2026-10-26",
+  "host": {
+    "os": "Darwin",
+    "architecture": "arm64",
+    "pythonVersion": "3.13.5",
+    "physicalMemoryBytes": 17179869184,
+    "logicalCpus": 10,
+    "workspaceDisk": {
+      "totalBytes": 494384795648,
+      "usedBytes": 327922806784,
+      "freeBytes": 166461988864
+    }
+  },
+  "docker": {
+    "memoryBytes": 8218034176,
+    "cpus": 10,
+    "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "os": "linux",
+    "architecture": "arm64",
+    "pythonVersion": "3.13.5",
+    "sqliteVersion": "3.40.0",
+    "pyosmiumInstalled": false
+  },
+  "hostCommands": {
+    "python3": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "docker": "/usr/local/bin/docker",
+    "osmium": null,
+    "osmconvert": null,
+    "ogr2ogr": null
+  },
+  "hostPyosmiumInstalled": false,
+  "boundToolFiles": 17,
+  "boundRoadTool": "data/coarse-tools/tiger-2026/pyshp-2.3.1-py2.py3-none-any.whl",
+  "inventoryScope": "Existing bound tools verified read-only. No Pyosmium found in host or cached image; this is not an exhaustive filesystem search. Cached image inventory used network=none, --rm, no real road input or package install. Initial sandbox host sysctl was denied; approved read-only sysctl returned RAM above. No host/Docker configuration changed. Disk free and allocated VM memory are observations, not reservations, processing measurements or guarantees."
+}

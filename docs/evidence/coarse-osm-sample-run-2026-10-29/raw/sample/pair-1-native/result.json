@@ -1,0 +1,83 @@
+{
+  "mode": "native",
+  "proofMode": false,
+  "counts": {
+    "node": 64000
+  },
+  "eof": true,
+  "decodeValidateIndexSealEofSeconds": 0.018871499982196838,
+  "framingSeconds": 0.003186166984960437,
+  "postSourceHashSeconds": 0.00046916696010157466,
+  "postSourceHashBytes": 377536,
+  "protectedTotalSeconds": 0.023217250010930002,
+  "framingBytesRead": 377536,
+  "knownGuardReadBytes": 755072,
+  "guardReadScope": "Framing/pre-hash+post-hash only; decoder/index/lookup reads are separate, never an all-IO total.",
+  "sourceIdentity": {
+    "publisherStateUtc": "2026-10-25T21:21:21Z",
+    "requiredFeatures": [
+      "DenseNodes",
+      "OsmSchema-V0.6"
+    ],
+    "framingBytesRead": 377536,
+    "frames": 9,
+    "sourceSha256": "8c27122ee2321a320cf33c1f8c678fdd3041fee16621984380e768d4746d38b8",
+    "sourceMd5": "bc9ad71f2101919f247e5dc0bde16520"
+  },
+  "canonicalSha256": null,
+  "semanticSha256": "010895083c7843ac4f26b635e21e361bc585cbdf726d61e770c6659781083a95",
+  "semanticFormat": "geo-planner-projected-fields-v1",
+  "indexBytes": 579134,
+  "indexManifestSha256": "bd20cfb3ae4f031e80906caaed195312d927b5e8c2e3abdaa3e5b1e17131bf54",
+  "lookup": [
+    {
+      "kind": "cold",
+      "seconds": 0.014584709017071873,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 1156352
+    },
+    {
+      "kind": "warm",
+      "seconds": 0.003324833989609033,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 578176
+    },
+    {
+      "kind": "repeat",
+      "seconds": 0.0030862080166116357,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 578176
+    }
+  ],
+  "queryIds": [],
+  "receipt": {
+    "counts": {
+      "node": 64000
+    },
+    "visits": 64000,
+    "nativeEof": true,
+    "fallbacks": 0,
+    "blocks": 16,
+    "semanticBytes": 4475483,
+    "projectedFrames": 0,
+    "checkpoints": 501,
+    "semanticSha256": "010895083c7843ac4f26b635e21e361bc585cbdf726d61e770c6659781083a95",
+    "semanticFormat": "geo-planner-projected-fields-v1",
+    "error": "",
+    "callbackEvents": {
+      "semantic_batches": 5,
+      "fallbacks": 0,
+      "projected": 0,
+      "blocks": 16,
+      "checkpoints": 501
+    },
+    "mode": "fast-validated-blocks",
+    "pythonProjectionFrames": 0,
+    "callbackFallbacks": 0,
+    "callbackBlocks": 16
+  },
+  "coordinateRowsProved": null
+}

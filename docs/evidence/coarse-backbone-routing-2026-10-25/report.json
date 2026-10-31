@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "648c731",
+  "status": "Candidate rejected under frozen accuracy gates; v9 unchanged",
+  "executionPlanSha256": "14ce73ea4e2008cb2f87cd21a3bf3d75a4cf5745af7fc00dc8d5649530200324",
+  "all83FiniteAnd166ComponentSums": true,
+  "older35ShadedAt720": true,
+  "independentGateRecalculation": true,
+  "accuracyGatesPassed": false,
+  "failedGates": [
+    "overallMean",
+    "frontierMean",
+    "originalMean",
+    "regionalMean",
+    "frontierP90",
+    "horizonMeans",
+    "horizonP90",
+    "frontierWorstRegression",
+    "olderWorstRegression",
+    "frontierDefiniteClassificationErrors",
+    "frontierMedian",
+    "overallP90NoWorse",
+    "originalP90NoWorse",
+    "regionalP90NoWorse"
+  ],
+  "passedGates": [
+    "frontierMissed",
+    "twelveHourMissed",
+    "all83Paired",
+    "all166PathSums",
+    "all35StillShaded",
+    "valhallaOriginalNoWorse",
+    "valhallaRegionalNoWorse"
+  ],
+  "overallMaeBeforeAfterMinutes": [
+    29.257418754386766,
+    43.23434494591635
+  ],
+  "frontierMaeBeforeAfterMinutes": [
+    44.629349342834296,
+    64.18705751258118
+  ],
+  "falseReachableBeforeAfter": [
+    11,
+    32
+  ],
+  "diagnosis": {
+    "fasterPointPredictions": 83,
+    "slowerPointPredictions": 0,
+    "improvedAbsoluteErrors": 13,
+    "regressedAbsoluteErrors": 70,
+    "meanPointTimeChangeMinutes": -19.13630509164394,
+    "meanComponentChangesMinutes": {
+      "origin": -0.7712729623238759,
+      "road": -16.16946709647915,
+      "local": -3.594895184721464,
+      "transfer": 1.3045582329317267,
+      "destination": 0.09477191894874454
+    },
+    "fullCensusEdgeMinutesShareOfAllCandidateTime": 0.7011382837045668,
+    "scope": "Post-result descriptive path accounting, not causal isolation. Origin/destination attachments combine partial-source/base/local costs; full-Census share excludes those attachments. No new routing, physical/source qualification or accuracy tuning."
+  },
+  "valhallaSensitivity": {
+    "original": {
+      "baseline": {
+        "count": 11,
+        "meanAbsoluteMinutes": 14.895590827316441,
+        "meanSignedMinutes": 14.895590827316441,
+        "medianAbsoluteMinutes": 13.6205833333333,
+        "p90AbsoluteMinutes": 25.282074559541627,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        }
+      },
+      "candidate": {
+        "count": 11,
+        "meanAbsoluteMinutes": 4.023317096644092,
+        "meanSignedMinutes": 0.8470354965348964,
+        "medianAbsoluteMinutes": 3.128345101801955,
+        "p90AbsoluteMinutes": 6.5039049307664385,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        }
+      }
+    },
+    "regional": {
+      "baseline": {
+        "count": 24,
+        "meanAbsoluteMinutes": 13.388922679750129,
+        "meanSignedMinutes": 12.928229085442744,
+        "medianAbsoluteMinutes": 10.82101666666663,
+        "p90AbsoluteMinutes": 23.712499999999892,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        }
+      },
+      "candidate": {
+        "count": 24,
+        "meanAbsoluteMinutes": 5.050049753075823,
+        "meanSignedMinutes": 2.1590117688147816,
+        "medianAbsoluteMinutes": 3.0543570398131727,
+        "p90AbsoluteMinutes": 12.61936903848293,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        }
+      }
+    }
+  },
+  "diagnostic900MinuteSearchMsRange": [
+    3051.735958,
+    24720.437542
+  ],
+  "software": {
+    "newSyntheticFixtures": 13,
+    "biomeFiles": 190,
+    "typecheck": true,
+    "strictRunnerTypecheck": true,
+    "ordinaryRootBuild": true,
+    "comparisonExitCode": 2
+  },
+  "candidateFullPackagedQueryPhysicalVisualCloudQualificationRun": false,
+  "providerRequests": 0,
+  "databaseWrites": 0,
+  "sourceDownloads": 0,
+  "envKeyDbInput": false,
+  "runtimeChanged": false,
+  "commitPushDeployment": false,
+  "scope": "Single fixed candidate on observed development data. Rejected result preserved; no source/cost/transfer/access policy tuning or activation. Binary probe remains qualified only for packaging/loading.",
+  "timingScope": "searchMs includes origin validation/attachments, label/queue setup and Dijkstra; binary/module load and display-arrival pass are separate. No polygon tracing or public packaged-query/cloud timing."
+}

@@ -1,0 +1,22 @@
+{
+  "recipe": "docs/evidence/coarse-osm-extraction-2026-10-30/cell-census-plan-run-v2.json",
+  "sha256": "562122a0a5181f5716904a3859bd855f9f708098c565772669e3a15ce627f1fe",
+  "output": "data/coarse-quality/us-osm-cell-census-run-v2",
+  "command": "python3 -B scripts/run_osm_cell_census_v2.py docs/evidence/coarse-osm-extraction-2026-10-30/cell-census-plan-run-v2.json 562122a0a5181f5716904a3859bd855f9f708098c565772669e3a15ce627f1fe",
+  "limits": {
+    "hostSeconds": 14400,
+    "hostWorkSeconds": 14340,
+    "workerSeconds": 13800,
+    "passSeconds": 6900,
+    "hashSeconds": 240,
+    "requiredInitialFreeBytes": 34359738368,
+    "bankBytes": 2147483648,
+    "fineIndexBytes": 25769803776,
+    "fineVerificationBytesPerView": 68719476736,
+    "fineCodecRows": 8000000000,
+    "fineCodecCalls": 2000000,
+    "cellCodecRows": 32000000000,
+    "cellCodecCalls": 12000000
+  },
+  "status": "Frozen before first execution; no replay once output exists"
+}

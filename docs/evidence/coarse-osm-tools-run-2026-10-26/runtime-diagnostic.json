@@ -1,0 +1,86 @@
+{
+  "python": "3.13.5",
+  "machine": "aarch64",
+  "scope": "Read-only ldd inspection; no native import, installation or network.",
+  "extensions": [
+    {
+      "extension": "charset_normalizer/cd.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffb1a18000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffb198a000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffb1432000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffb19cb000)\n",
+      "missing": []
+    },
+    {
+      "extension": "charset_normalizer/md.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffff8038f000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffff8029d000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffff800cf000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffff80342000)\n",
+      "missing": []
+    },
+    {
+      "extension": "osmium/_osmium.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffb362d000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffffb3475000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffffb3433000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffb33f2000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffffb33c1000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffffb3000000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffffb3310000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffffb32bf000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffb2e32000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffb35e0000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/area.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffff99518000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffff993f7000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffff993b5000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffff99374000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffff99343000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffff99000000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffff99292000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffff98faf000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffff98de1000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffff994cb000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/filter.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffff98220000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffff9810e000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffff980cc000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffff9808b000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffff9805a000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffff97c00000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffff97fa9000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffff97f58000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffff97a32000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffff981d3000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/geom.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffff86bac000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffff86a8b000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffff86a49000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffff86a08000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffff869d7000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffff86600000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffff86926000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffff868d5000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffff86432000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffff86b5f000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/index.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffa5971000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffffa5860000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffffa581e000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffa57dd000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffffa57ac000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffffa5400000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffffa56fb000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffffa56aa000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffa5232000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffa5924000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/io.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffaa951000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffffaa7d9000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffffaa797000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffaa756000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffffaa725000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffffaa400000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffffaa674000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffffaa3af000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffaa1e1000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffaa904000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/osm/_osm.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffbf04f000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffffbef0e000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/osm/../../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffffbeecc000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffbee8b000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/osm/../../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffffbee5a000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffffbea00000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffffbeda9000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffffbed58000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffbe832000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffbf002000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    },
+    {
+      "extension": "osmium/replication/_replication.cpython-313-aarch64-linux-gnu.so",
+      "exitCode": 0,
+      "output": "\tlinux-vdso.so.1 (0x0000ffffac63f000)\n\tlibz.so.1 => /lib64/libz.so.1 (0x0000ffffac4d7000)\n\tliblz4-b2322fcc.so.1.8.3 => /inputs/site/osmium/replication/../../osmium.libs/liblz4-b2322fcc.so.1.8.3 (0x0000ffffac495000)\n\tlibpthread.so.0 => /lib64/libpthread.so.0 (0x0000ffffac454000)\n\tlibexpat.so.1 => not found\n\tlibbz2-549b318a.so.1.0.6 => /inputs/site/osmium/replication/../../osmium.libs/libbz2-549b318a.so.1.0.6 (0x0000ffffac423000)\n\tlibstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000ffffac000000)\n\tlibm.so.6 => /lib64/libm.so.6 (0x0000ffffac372000)\n\tlibgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000ffffac321000)\n\tlibc.so.6 => /lib64/libc.so.6 (0x0000ffffabe32000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffac5f2000)\n",
+      "missing": [
+        "libexpat.so.1"
+      ]
+    }
+  ],
+  "missingLibraries": [
+    "libexpat.so.1"
+  ]
+}

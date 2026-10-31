@@ -1,0 +1,249 @@
+{
+  "scope": "10,000 generated nodes, host Python, profiled first-index work only; no real source read",
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "totalSeconds": 0.48942462499999995,
+  "topCumulative": [
+    {
+      "file": "<stdin>",
+      "line": 10,
+      "function": "work",
+      "calls": 1,
+      "selfSeconds": 0.0025058370000000003,
+      "cumulativeSeconds": 0.48941475
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+      "line": 101,
+      "function": "checked_records",
+      "calls": 10001,
+      "selfSeconds": 0.03631265,
+      "cumulativeSeconds": 0.476775583
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "line": 32,
+      "function": "utc",
+      "calls": 40000,
+      "selfSeconds": 0.016776899,
+      "cumulativeSeconds": 0.281023899
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method strptime>",
+      "calls": 40000,
+      "selfSeconds": 0.011336829000000001,
+      "cumulativeSeconds": 0.23351684800000003
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "line": 41,
+      "function": "normalize",
+      "calls": 10000,
+      "selfSeconds": 0.030262965000000003,
+      "cumulativeSeconds": 0.220972249
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py",
+      "line": 670,
+      "function": "_strptime_datetime",
+      "calls": 40000,
+      "selfSeconds": 0.014341593000000001,
+      "cumulativeSeconds": 0.216489602
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py",
+      "line": 413,
+      "function": "_strptime",
+      "calls": 40000,
+      "selfSeconds": 0.112218998,
+      "cumulativeSeconds": 0.20214800900000002
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "line": 12,
+      "function": "canonical",
+      "calls": 20000,
+      "selfSeconds": 0.005887468000000001,
+      "cumulativeSeconds": 0.059925820000000005
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py",
+      "line": 183,
+      "function": "dumps",
+      "calls": 20080,
+      "selfSeconds": 0.009714906,
+      "cumulativeSeconds": 0.053170081
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py",
+      "line": 183,
+      "function": "encode",
+      "calls": 20080,
+      "selfSeconds": 0.009714926,
+      "cumulativeSeconds": 0.04120236
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py",
+      "line": 28,
+      "function": "_getlang",
+      "calls": 40002,
+      "selfSeconds": 0.005506092000000001,
+      "cumulativeSeconds": 0.041134083
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/locale.py",
+      "line": 582,
+      "function": "getlocale",
+      "calls": 40002,
+      "selfSeconds": 0.008746217,
+      "cumulativeSeconds": 0.035627991000000005
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py",
+      "line": 205,
+      "function": "iterencode",
+      "calls": 20080,
+      "selfSeconds": 0.027480868000000002,
+      "cumulativeSeconds": 0.027488078000000003
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/re/__init__.py",
+      "line": 169,
+      "function": "fullmatch",
+      "calls": 40000,
+      "selfSeconds": 0.008701538,
+      "cumulativeSeconds": 0.026844833000000002
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/locale.py",
+      "line": 464,
+      "function": "_parse_localename",
+      "calls": 40002,
+      "selfSeconds": 0.006572734,
+      "cumulativeSeconds": 0.022915326
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'dict' objects>",
+      "calls": 260048,
+      "selfSeconds": 0.017829572000000002,
+      "cumulativeSeconds": 0.017829572000000002
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/locale.py",
+      "line": 381,
+      "function": "normalize",
+      "calls": 40002,
+      "selfSeconds": 0.010428614000000001,
+      "cumulativeSeconds": 0.016342592
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.all>",
+      "calls": 30000,
+      "selfSeconds": 0.0068179,
+      "cumulativeSeconds": 0.01613395
+    }
+  ],
+  "topSelf": [
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py",
+      "line": 413,
+      "function": "_strptime",
+      "calls": 40000,
+      "selfSeconds": 0.112218998,
+      "cumulativeSeconds": 0.20214800900000002
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+      "line": 101,
+      "function": "checked_records",
+      "calls": 10001,
+      "selfSeconds": 0.03631265,
+      "cumulativeSeconds": 0.476775583
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "line": 41,
+      "function": "normalize",
+      "calls": 10000,
+      "selfSeconds": 0.030262965000000003,
+      "cumulativeSeconds": 0.220972249
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py",
+      "line": 205,
+      "function": "iterencode",
+      "calls": 20080,
+      "selfSeconds": 0.027480868000000002,
+      "cumulativeSeconds": 0.027488078000000003
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'dict' objects>",
+      "calls": 260048,
+      "selfSeconds": 0.017829572000000002,
+      "cumulativeSeconds": 0.017829572000000002
+    },
+    {
+      "file": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "line": 32,
+      "function": "utc",
+      "calls": 40000,
+      "selfSeconds": 0.016776899,
+      "cumulativeSeconds": 0.281023899
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/_strptime.py",
+      "line": 670,
+      "function": "_strptime_datetime",
+      "calls": 40000,
+      "selfSeconds": 0.014341593000000001,
+      "cumulativeSeconds": 0.216489602
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "calls": 252541,
+      "selfSeconds": 0.013286169,
+      "cumulativeSeconds": 0.013286169
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method strptime>",
+      "calls": 40000,
+      "selfSeconds": 0.011336829000000001,
+      "cumulativeSeconds": 0.23351684800000003
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/locale.py",
+      "line": 381,
+      "function": "normalize",
+      "calls": 40002,
+      "selfSeconds": 0.010428614000000001,
+      "cumulativeSeconds": 0.016342592
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py",
+      "line": 183,
+      "function": "encode",
+      "calls": 20080,
+      "selfSeconds": 0.009714926,
+      "cumulativeSeconds": 0.04120236
+    },
+    {
+      "file": "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py",
+      "line": 183,
+      "function": "dumps",
+      "calls": 20080,
+      "selfSeconds": 0.009714906,
+      "cumulativeSeconds": 0.053170081
+    }
+  ]
+}

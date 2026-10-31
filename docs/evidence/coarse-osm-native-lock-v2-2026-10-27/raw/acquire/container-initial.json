@@ -1,0 +1,256 @@
+{
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "Limits": {
+    "NetworkMode": "bridge",
+    "Memory": 4294967296,
+    "MemorySwap": 4294967296,
+    "ReadonlyRootfs": true,
+    "NanoCpus": 2000000000,
+    "PidsLimit": 64,
+    "Tmpfs": {
+      "/tmp": "rw,size=256m"
+    }
+  },
+  "Ulimits": [
+    {
+      "Name": "core",
+      "Hard": 0,
+      "Soft": 0
+    },
+    {
+      "Name": "fsize",
+      "Hard": 67108864,
+      "Soft": 67108864
+    }
+  ],
+  "Mounts": [
+    {
+      "destination": "/code/coarse_osm_input.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_pbf.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_profile_driver_v2_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/prepare_osm_native_lock_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_timing_input.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_audit.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_driver_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/prepare_osm_native_lock_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/prepare_osm_input_v3.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_backbone_paths.py",
+      "writable": false
+    },
+    {
+      "destination": "/tools/runtime/copyright",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_validation_v4_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_lock_v2_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/manifest.json",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_data.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_inventory_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_stream_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_stream_driver_v1_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/tools/site",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_profile_driver_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/prepare_osm_bulk.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_timing_parquet.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_capture.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_records.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_profile_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_profile_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_smoke.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_lock_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_lock_v1_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/proposal.json",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_inventory_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_inventory_v3.py",
+      "writable": false
+    },
+    {
+      "destination": "/work",
+      "writable": true
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_transport.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_compact_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_stream_v1_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_lock_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_v3.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_driver_v3_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_profile.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/profile_osm_import_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/profile_osm_import_v2.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_path_features.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_data_v3.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/profile_osm_stream_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_audit.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_inventory_driver_v2_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_backbone_codec.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_validation_v4.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_test.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_stream_v1.py",
+      "writable": false
+    },
+    {
+      "destination": "/tools/runtime/libexpat.so.1",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/recipe.json",
+      "writable": false
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "status": "stopped_or_equivalence_failed",
+  "inventory": {
+    "status": "stopped",
+    "counts": {
+      "node": 1000000001,
+      "way": 0,
+      "relation": 0
+    },
+    "nativeCallbackVisits": 1000000001,
+    "sampleCounts": {
+      "node": 1000,
+      "way": 0,
+      "relation": 0
+    },
+    "sampleBytes": 137802,
+    "sampleSha256": "42012dff1e369720c8a32ef7dc89c90186440326338de46258ea7bdaf6f753e6",
+    "wholeSourceNativeEof": false,
+    "elapsedCountSeconds": 814.3888094549766,
+    "error": {
+      "type": "PilotError",
+      "message": "Inventory native object cap"
+    },
+    "sourceMetadataValidatedGlobally": false,
+    "scope": "Counts are delivered node/way/relation callbacks. Only fixed samples are projected; decoder failures may leave unknown raw-object counts."
+  },
+  "sampleComparison": {
+    "equivalent": true,
+    "allSampleRecordsAccepted": true,
+    "sampleCounts": {
+      "node": 1000,
+      "way": 0,
+      "relation": 0
+    },
+    "cases": {
+      "reference": {
+        "accepted": true,
+        "error": null,
+        "returnedRecords": 1000,
+        "returnedSha256": "42012dff1e369720c8a32ef7dc89c90186440326338de46258ea7bdaf6f753e6",
+        "loadedCounts": {
+          "node": 1000,
+          "way": 0,
+          "relation": 0
+        },
+        "passes": [
+          {
+            "label": "mixed-sample",
+            "status": "eof",
+            "counts": {
+              "node": 1000
+            }
+          }
+        ],
+        "visits": 1000,
+        "secondsIncludingJsonReplayValidationHash": 0.04009841597871855
+      },
+      "candidate": {
+        "accepted": true,
+        "error": null,
+        "returnedRecords": 1000,
+        "returnedSha256": "42012dff1e369720c8a32ef7dc89c90186440326338de46258ea7bdaf6f753e6",
+        "loadedCounts": {
+          "node": 1000,
+          "way": 0,
+          "relation": 0
+        },
+        "passes": [
+          {
+            "label": "mixed-sample",
+            "status": "eof",
+            "counts": {
+              "node": 1000
+            }
+          }
+        ],
+        "visits": 1000,
+        "secondsIncludingJsonReplayValidationHash": 0.015213916020002216
+      }
+    },
+    "wholeSourceMetadataValidation": false,
+    "scope": "First fixed objects per type, replayed as JSON; no real spatial selection, dependency closure, index, source-wide metadata validation or national timing claim."
+  },
+  "importerDecision": {
+    "decision": "hold_incomplete_inventory",
+    "wholeExtractionAdmitted": false,
+    "countsComplete": false
+  },
+  "workerSecondsBeforeSummary": 814.6338808719884,
+  "observedProcessMaxRssKiB": 154484,
+  "networkRequests": 0,
+  "wholeExtractionQualified": false,
+  "sourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "usableAttributesQualified": false,
+  "modelChanged": false,
+  "windows": [
+    {
+      "id": "origin-00",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-01",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-02",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-03",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-04",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-05",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-06",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-07",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-08",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-09",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-10",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-11",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-12",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-13",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-14",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-15",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-16",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-17",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-18",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-19",
+      "status": "unqualified_inventory_only"
+    },
+    {
+      "id": "origin-20",
+      "status": "unqualified_inventory_only"
+    }
+  ]
+}

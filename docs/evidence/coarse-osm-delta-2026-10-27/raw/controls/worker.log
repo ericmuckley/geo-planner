@@ -1,0 +1,14 @@
+...........................................F
+======================================================================
+FAIL: test_whole_shard_truncation_symlink_cache_and_catalog_drift_refused (coarse_osm_delta_v1_test.Tests.test_whole_shard_truncation_symlink_cache_and_catalog_drift_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_delta_v1_test.py", line 129, in test_whole_shard_truncation_symlink_cache_and_catalog_drift_refused
+    with self.assertRaises(PilotError):index.points([1])
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: PilotError not raised
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.342s
+
+FAILED (failures=1)

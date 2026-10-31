@@ -1,0 +1,54 @@
+{
+  "decision": "reject_existing_four_pass_importer; prototype_two_pass_streaming_with_compact_independent_indexes",
+  "inventoryCounts": {
+    "node": 1606229364,
+    "way": 162688797,
+    "relation": 1624265
+  },
+  "inventoryNativeEof": true,
+  "hardArithmetic": {
+    "objectsPerFullPass": 1770542426,
+    "fourFullPassVisits": 7082169704,
+    "originalTotalVisitCeiling": 4440000000,
+    "fourPassExcessVisits": 2642169704,
+    "twoFullPassVisits": 3541084852,
+    "twoPassRemainingVisitAllowance": 898915148,
+    "nodePerPassExceedsOldLimit": true,
+    "wayPerPassExceedsOldLimit": true
+  },
+  "fixedPrefixForecast": {
+    "optimisticTwoNodeIndexSeconds": 89853.369958235,
+    "timeMargin": 2.0,
+    "marginedTwoNodeIndexSeconds": 179706.73991647,
+    "indexBytesEachBeforeMargin": 43895036059.392,
+    "storageMargin": 1.5,
+    "marginedIndexBytesEach": 65842554089.088,
+    "marginedWorkingBytes": 145415989026.176,
+    "scope": "Extrapolation from the frozen 64,000-node prefix; excludes remaining passes, way/relation work, framing/final checks. Not measured national import time, a physical storage bound or an accuracy result."
+  },
+  "compactIndexHypothesis": {
+    "format": "Ordered 64-bit node ID plus two exact signed 32-bit native coordinate integers, 16 payload bytes/record; losslessness not yet demonstrated.",
+    "payloadBytesPerIndex": 25699669824,
+    "twoIndexPayloadBytes": 51399339648,
+    "oneIndexPayloadSlackAgainstOld24GiB": 70133952,
+    "twoIndexPayloadAndOtherOriginalWorkingBytes": 65130220496,
+    "totalSlackBeforeHeadersLookupAndMargin": 3589256240,
+    "scope": "Payload arithmetic only, not an index footprint or approved storage screen. Existing 1.5x forecast margin would reject two complete copies. Prototype bounded shard replacement to avoid two full concurrent indexes; all read-only retained assets and overhead still need accounting."
+  },
+  "selectedDesign": {
+    "firstPass": "Fuse exact native metadata validation with batched compact coordinate writes; select highway ways and complete node dependencies generically against unchanged windows.",
+    "secondPass": "Materialize primary selected raw nodes, ways and relevant restrictions. Independently rebuild audit coordinate shards and recompute selection/membership/geometry from the source; no primary index reuse.",
+    "auditIndependence": "A primary node-ID set may only be a bounded materialization hint. Audit selection must be independently recomputed and exactly reconciled, with missing/extra IDs and raw-record/geometry drift rejected. Independent indexing and rolling shard replacement require adversarial controls before any large run.",
+    "firstPrototype": "Exact compact index, native validator/projection equivalence and batched writes on fixed bounded fixtures/saved samples, plus synthetic two-pass audit closure and storage/lifecycle bounds. Not a national extraction."
+  },
+  "admissionBlockedBy": [
+    "native coordinate integer/float losslessness and all metadata guards unproven",
+    "two-pass independent audit and complete selection/dependency equivalence unimplemented",
+    "lookup/header/shard storage, runtime and margins unmeasured",
+    "per-type row caps require a separately frozen count-backed revision; old full-import caps remain held",
+    "all original source/publisher/21-window/usable-attribute/matching/physical/accuracy/package/startup/API/visual/model gates remain held"
+  ],
+  "fullExtractionAdmitted": false,
+  "newNativeInventoryAllocation": false,
+  "modelChanged": false
+}

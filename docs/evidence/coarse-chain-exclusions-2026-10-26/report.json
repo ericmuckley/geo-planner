@@ -1,0 +1,2787 @@
+{
+  "retainedRows": 55120,
+  "retainedLevelCategories": {
+    "missing": 54045,
+    "partial": 722,
+    "uniform_nonzero": 353
+  },
+  "retainedLevelValueCategories": {
+    "missing": 54045,
+    "uniform_nonzero": 1049,
+    "mixed": 26
+  },
+  "retainedLevelFlagCounts": {
+    "partial_intervals": 722
+  },
+  "scopeRowCounts": {
+    "speedRows": 6230,
+    "accessRows": 15022
+  },
+  "frozenLimitStatusCounts": {
+    "unsupported_road_role": 19795,
+    "usable": 3608,
+    "missing": 18925,
+    "access_scoped_or_restricted": 12740,
+    "partial_scope": 51,
+    "directional": 1
+  },
+  "cohorts": {
+    "all": {
+      "arcCount": 2469,
+      "sourceKm": 2078.237959868213,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_with_candidates": 32,
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalOldStatusCounts": {
+        "absent_in_cache": 2297,
+        "ambiguous_in_cache": 99,
+        "single_in_cache": 73
+      },
+      "samples": 85629,
+      "candidateChains": 82,
+      "formerlyAbsentPositiveRecords": 14,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 2.827070580926959,
+      "excludedIncidences": 3334,
+      "uniqueExcludedPublisherIds": 995,
+      "reasonIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "unsupported_road_role": 766,
+        "unsupported_level_rules": 1385,
+        "nonprogressing_or_tied_endpoints": 37,
+        "outside_window_endpoint": 181
+      },
+      "reasonUniquePublisherIds": {
+        "endpoint_not_near_own_samples": 387,
+        "unsupported_road_role": 286,
+        "unsupported_level_rules": 310,
+        "nonprogressing_or_tied_endpoints": 19,
+        "outside_window_endpoint": 50
+      },
+      "reasonCombinationIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "unsupported_road_role": 625,
+        "unsupported_level_rules|unsupported_road_role": 131,
+        "nonprogressing_or_tied_endpoints": 37,
+        "unsupported_level_rules": 1189,
+        "outside_window_endpoint": 106,
+        "outside_window_endpoint|unsupported_level_rules": 65,
+        "outside_window_endpoint|unsupported_road_role": 10
+      },
+      "levelCategoryIncidences": {
+        "missing": 1949,
+        "partial": 1138,
+        "uniform_nonzero": 247
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 685,
+        "partial": 254,
+        "uniform_nonzero": 56
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 1949,
+        "uniform_nonzero": 1270,
+        "mixed": 115
+      },
+      "candidateOverlapIncidences": {
+        "sample_and_endpoint": 36,
+        "sample_only": 208,
+        "no_candidate_record": 3064,
+        "neither": 26
+      },
+      "sharedSampleIncidenceKm": 25.335613546092457,
+      "declaredRoleLevelOnlyIncidences": 1945,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 2723,
+        "nonprogressing_or_tied_endpoints": 766,
+        "outside_window_endpoint": 181
+      }
+    },
+    "with_cache": {
+      "arcCount": 545,
+      "sourceKm": 541.5149490212568,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 32,
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalOldStatusCounts": {
+        "ambiguous_in_cache": 99,
+        "absent_in_cache": 373,
+        "single_in_cache": 73
+      },
+      "samples": 22211,
+      "candidateChains": 82,
+      "formerlyAbsentPositiveRecords": 14,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 2.827070580926959,
+      "excludedIncidences": 3334,
+      "uniqueExcludedPublisherIds": 995,
+      "reasonIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "unsupported_road_role": 766,
+        "unsupported_level_rules": 1385,
+        "nonprogressing_or_tied_endpoints": 37,
+        "outside_window_endpoint": 181
+      },
+      "reasonUniquePublisherIds": {
+        "endpoint_not_near_own_samples": 387,
+        "unsupported_road_role": 286,
+        "unsupported_level_rules": 310,
+        "nonprogressing_or_tied_endpoints": 19,
+        "outside_window_endpoint": 50
+      },
+      "reasonCombinationIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "unsupported_road_role": 625,
+        "unsupported_level_rules|unsupported_road_role": 131,
+        "nonprogressing_or_tied_endpoints": 37,
+        "unsupported_level_rules": 1189,
+        "outside_window_endpoint": 106,
+        "outside_window_endpoint|unsupported_level_rules": 65,
+        "outside_window_endpoint|unsupported_road_role": 10
+      },
+      "levelCategoryIncidences": {
+        "missing": 1949,
+        "partial": 1138,
+        "uniform_nonzero": 247
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 685,
+        "partial": 254,
+        "uniform_nonzero": 56
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 1949,
+        "uniform_nonzero": 1270,
+        "mixed": 115
+      },
+      "candidateOverlapIncidences": {
+        "sample_and_endpoint": 36,
+        "sample_only": 208,
+        "no_candidate_record": 3064,
+        "neither": 26
+      },
+      "sharedSampleIncidenceKm": 25.335613546092457,
+      "declaredRoleLevelOnlyIncidences": 1945,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 2723,
+        "nonprogressing_or_tied_endpoints": 766,
+        "outside_window_endpoint": 181
+      }
+    },
+    "empty_cache": {
+      "arcCount": 1924,
+      "sourceKm": 1536.723010846956,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924
+      },
+      "originalOldStatusCounts": {
+        "absent_in_cache": 1924
+      },
+      "samples": 63418,
+      "candidateChains": 0,
+      "formerlyAbsentPositiveRecords": 0,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "excludedIncidences": 0,
+      "uniqueExcludedPublisherIds": 0,
+      "reasonIncidences": {},
+      "reasonUniquePublisherIds": {},
+      "reasonCombinationIncidences": {},
+      "levelCategoryIncidences": {},
+      "levelCategoryUniquePublisherIds": {},
+      "levelValueCategoryIncidences": {},
+      "candidateOverlapIncidences": {},
+      "sharedSampleIncidenceKm": 0.0,
+      "declaredRoleLevelOnlyIncidences": 0,
+      "measuredFlagIncidences": {}
+    },
+    "candidate_bearing": {
+      "arcCount": 32,
+      "sourceKm": 32.49471552777543,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 32
+      },
+      "originalOldStatusCounts": {
+        "ambiguous_in_cache": 9,
+        "absent_in_cache": 14,
+        "single_in_cache": 9
+      },
+      "samples": 1336,
+      "candidateChains": 82,
+      "formerlyAbsentPositiveRecords": 14,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 1.6257668688861955,
+      "excludedIncidences": 270,
+      "uniqueExcludedPublisherIds": 120,
+      "reasonIncidences": {
+        "endpoint_not_near_own_samples": 71,
+        "unsupported_road_role": 171,
+        "unsupported_level_rules": 19,
+        "nonprogressing_or_tied_endpoints": 16,
+        "outside_window_endpoint": 6
+      },
+      "reasonUniquePublisherIds": {
+        "endpoint_not_near_own_samples": 33,
+        "unsupported_road_role": 72,
+        "unsupported_level_rules": 9,
+        "nonprogressing_or_tied_endpoints": 8,
+        "outside_window_endpoint": 3
+      },
+      "reasonCombinationIncidences": {
+        "endpoint_not_near_own_samples": 71,
+        "unsupported_road_role": 158,
+        "unsupported_level_rules|unsupported_road_role": 13,
+        "unsupported_level_rules": 6,
+        "nonprogressing_or_tied_endpoints": 16,
+        "outside_window_endpoint": 6
+      },
+      "levelCategoryIncidences": {
+        "missing": 251,
+        "partial": 19
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 111,
+        "partial": 9
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 251,
+        "uniform_nonzero": 19
+      },
+      "candidateOverlapIncidences": {
+        "sample_and_endpoint": 36,
+        "sample_only": 208,
+        "neither": 26
+      },
+      "sharedSampleIncidenceKm": 25.335613546092457,
+      "declaredRoleLevelOnlyIncidences": 177,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 200,
+        "nonprogressing_or_tied_endpoints": 157,
+        "outside_window_endpoint": 6
+      }
+    },
+    "without_candidate_with_cache": {
+      "arcCount": 513,
+      "sourceKm": 509.0202334934813,
+      "originalStatusCounts": {
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalOldStatusCounts": {
+        "ambiguous_in_cache": 90,
+        "absent_in_cache": 359,
+        "single_in_cache": 64
+      },
+      "samples": 20875,
+      "candidateChains": 0,
+      "formerlyAbsentPositiveRecords": 0,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 1.2013037120407637,
+      "excludedIncidences": 3064,
+      "uniqueExcludedPublisherIds": 904,
+      "reasonIncidences": {
+        "unsupported_road_role": 595,
+        "nonprogressing_or_tied_endpoints": 21,
+        "endpoint_not_near_own_samples": 1100,
+        "unsupported_level_rules": 1366,
+        "outside_window_endpoint": 175
+      },
+      "reasonUniquePublisherIds": {
+        "unsupported_road_role": 228,
+        "nonprogressing_or_tied_endpoints": 11,
+        "endpoint_not_near_own_samples": 365,
+        "unsupported_level_rules": 305,
+        "outside_window_endpoint": 49
+      },
+      "reasonCombinationIncidences": {
+        "unsupported_road_role": 467,
+        "nonprogressing_or_tied_endpoints": 21,
+        "endpoint_not_near_own_samples": 1100,
+        "unsupported_level_rules|unsupported_road_role": 118,
+        "unsupported_level_rules": 1183,
+        "outside_window_endpoint": 100,
+        "outside_window_endpoint|unsupported_level_rules": 65,
+        "outside_window_endpoint|unsupported_road_role": 10
+      },
+      "levelCategoryIncidences": {
+        "missing": 1698,
+        "partial": 1119,
+        "uniform_nonzero": 247
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 599,
+        "partial": 249,
+        "uniform_nonzero": 56
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 1698,
+        "uniform_nonzero": 1251,
+        "mixed": 115
+      },
+      "candidateOverlapIncidences": {
+        "no_candidate_record": 3064
+      },
+      "sharedSampleIncidenceKm": 0.0,
+      "declaredRoleLevelOnlyIncidences": 1768,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 2523,
+        "nonprogressing_or_tied_endpoints": 609,
+        "outside_window_endpoint": 175
+      }
+    },
+    "formerly_absent_positive": {
+      "arcCount": 14,
+      "sourceKm": 21.25481114779464,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 14
+      },
+      "originalOldStatusCounts": {
+        "absent_in_cache": 14
+      },
+      "samples": 866,
+      "candidateChains": 50,
+      "formerlyAbsentPositiveRecords": 14,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "excludedIncidences": 123,
+      "uniqueExcludedPublisherIds": 58,
+      "reasonIncidences": {
+        "unsupported_road_role": 68,
+        "endpoint_not_near_own_samples": 35,
+        "unsupported_level_rules": 7,
+        "nonprogressing_or_tied_endpoints": 12,
+        "outside_window_endpoint": 6
+      },
+      "reasonUniquePublisherIds": {
+        "unsupported_road_role": 31,
+        "endpoint_not_near_own_samples": 17,
+        "unsupported_level_rules": 3,
+        "nonprogressing_or_tied_endpoints": 6,
+        "outside_window_endpoint": 3
+      },
+      "reasonCombinationIncidences": {
+        "unsupported_road_role": 63,
+        "endpoint_not_near_own_samples": 35,
+        "unsupported_level_rules|unsupported_road_role": 5,
+        "nonprogressing_or_tied_endpoints": 12,
+        "outside_window_endpoint": 6,
+        "unsupported_level_rules": 2
+      },
+      "levelCategoryIncidences": {
+        "missing": 116,
+        "partial": 7
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 55,
+        "partial": 3
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 116,
+        "uniform_nonzero": 7
+      },
+      "candidateOverlapIncidences": {
+        "sample_only": 96,
+        "neither": 16,
+        "sample_and_endpoint": 11
+      },
+      "sharedSampleIncidenceKm": 9.787142269960308,
+      "declaredRoleLevelOnlyIncidences": 70,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 81,
+        "nonprogressing_or_tied_endpoints": 71,
+        "outside_window_endpoint": 6
+      }
+    },
+    "baseline_absent": {
+      "arcCount": 2297,
+      "sourceKm": 2010.3410812532782,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_without_candidates": 167,
+        "unresolved_with_candidates": 14,
+        "no_cached_chain": 192
+      },
+      "originalOldStatusCounts": {
+        "absent_in_cache": 2297
+      },
+      "samples": 82807,
+      "candidateChains": 50,
+      "formerlyAbsentPositiveRecords": 14,
+      "cappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "excludedIncidences": 2435,
+      "uniqueExcludedPublisherIds": 841,
+      "reasonIncidences": {
+        "unsupported_road_role": 508,
+        "endpoint_not_near_own_samples": 865,
+        "unsupported_level_rules": 1092,
+        "nonprogressing_or_tied_endpoints": 25,
+        "outside_window_endpoint": 107
+      },
+      "reasonUniquePublisherIds": {
+        "unsupported_road_role": 203,
+        "endpoint_not_near_own_samples": 337,
+        "unsupported_level_rules": 300,
+        "nonprogressing_or_tied_endpoints": 13,
+        "outside_window_endpoint": 41
+      },
+      "reasonCombinationIncidences": {
+        "unsupported_road_role": 391,
+        "endpoint_not_near_own_samples": 865,
+        "unsupported_level_rules|unsupported_road_role": 111,
+        "nonprogressing_or_tied_endpoints": 25,
+        "unsupported_level_rules": 936,
+        "outside_window_endpoint": 56,
+        "outside_window_endpoint|unsupported_level_rules": 45,
+        "outside_window_endpoint|unsupported_road_role": 6
+      },
+      "levelCategoryIncidences": {
+        "missing": 1343,
+        "partial": 887,
+        "uniform_nonzero": 205
+      },
+      "levelCategoryUniquePublisherIds": {
+        "missing": 541,
+        "partial": 245,
+        "uniform_nonzero": 55
+      },
+      "levelValueCategoryIncidences": {
+        "missing": 1343,
+        "uniform_nonzero": 1027,
+        "mixed": 65
+      },
+      "candidateOverlapIncidences": {
+        "no_candidate_record": 2312,
+        "sample_only": 96,
+        "neither": 16,
+        "sample_and_endpoint": 11
+      },
+      "sharedSampleIncidenceKm": 9.787142269960308,
+      "declaredRoleLevelOnlyIncidences": 1438,
+      "measuredFlagIncidences": {
+        "endpoint_not_near_own_samples": 1935,
+        "nonprogressing_or_tied_endpoints": 457,
+        "outside_window_endpoint": 107
+      }
+    }
+  },
+  "windows": [
+    {
+      "id": "origin-00",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 144,
+        "sourceKm": 72.12967736099975,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 144
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 144
+        },
+        "samples": 2999,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 144,
+          "sourceKm": 72.12967736099975,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 144
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 144
+          },
+          "samples": 2999,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-01",
+      "cachedRows": 11621,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 81,
+        "sourceKm": 78.67644429599045,
+        "originalStatusCounts": {
+          "unresolved_with_candidates": 28,
+          "unresolved_without_candidates": 53
+        },
+        "originalOldStatusCounts": {
+          "ambiguous_in_cache": 24,
+          "absent_in_cache": 35,
+          "single_in_cache": 22
+        },
+        "samples": 3243,
+        "candidateChains": 44,
+        "formerlyAbsentPositiveRecords": 11,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 2.827070580926959,
+        "excludedIncidences": 809,
+        "uniqueExcludedPublisherIds": 352,
+        "reasonIncidences": {
+          "endpoint_not_near_own_samples": 244,
+          "unsupported_road_role": 439,
+          "unsupported_level_rules": 117,
+          "nonprogressing_or_tied_endpoints": 36,
+          "outside_window_endpoint": 23
+        },
+        "reasonUniquePublisherIds": {
+          "endpoint_not_near_own_samples": 111,
+          "unsupported_road_role": 187,
+          "unsupported_level_rules": 48,
+          "nonprogressing_or_tied_endpoints": 18,
+          "outside_window_endpoint": 8
+        },
+        "reasonCombinationIncidences": {
+          "endpoint_not_near_own_samples": 244,
+          "unsupported_road_role": 393,
+          "unsupported_level_rules|unsupported_road_role": 46,
+          "nonprogressing_or_tied_endpoints": 36,
+          "unsupported_level_rules": 67,
+          "outside_window_endpoint": 19,
+          "outside_window_endpoint|unsupported_level_rules": 4
+        },
+        "levelCategoryIncidences": {
+          "missing": 692,
+          "partial": 115,
+          "uniform_nonzero": 2
+        },
+        "levelCategoryUniquePublisherIds": {
+          "missing": 304,
+          "partial": 47,
+          "uniform_nonzero": 1
+        },
+        "levelValueCategoryIncidences": {
+          "missing": 692,
+          "uniform_nonzero": 117
+        },
+        "candidateOverlapIncidences": {
+          "sample_and_endpoint": 32,
+          "sample_only": 202,
+          "no_candidate_record": 553,
+          "neither": 22
+        },
+        "sharedSampleIncidenceKm": 24.838864475924346,
+        "declaredRoleLevelOnlyIncidences": 506,
+        "measuredFlagIncidences": {
+          "endpoint_not_near_own_samples": 558,
+          "nonprogressing_or_tied_endpoints": 349,
+          "outside_window_endpoint": 23
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 68,
+          "sourceKm": 57.94402738610388,
+          "originalStatusCounts": {
+            "unresolved_with_candidates": 28,
+            "unresolved_without_candidates": 40
+          },
+          "originalOldStatusCounts": {
+            "ambiguous_in_cache": 22,
+            "absent_in_cache": 26,
+            "single_in_cache": 20
+          },
+          "samples": 2393,
+          "candidateChains": 44,
+          "formerlyAbsentPositiveRecords": 11,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 2.827070580926959,
+          "excludedIncidences": 633,
+          "uniqueExcludedPublisherIds": 251,
+          "reasonIncidences": {
+            "endpoint_not_near_own_samples": 156,
+            "unsupported_road_role": 413,
+            "unsupported_level_rules": 57,
+            "nonprogressing_or_tied_endpoints": 36,
+            "outside_window_endpoint": 8
+          },
+          "reasonUniquePublisherIds": {
+            "endpoint_not_near_own_samples": 57,
+            "unsupported_road_role": 166,
+            "unsupported_level_rules": 21,
+            "nonprogressing_or_tied_endpoints": 18,
+            "outside_window_endpoint": 2
+          },
+          "reasonCombinationIncidences": {
+            "endpoint_not_near_own_samples": 156,
+            "unsupported_road_role": 376,
+            "unsupported_level_rules|unsupported_road_role": 37,
+            "nonprogressing_or_tied_endpoints": 36,
+            "unsupported_level_rules": 20,
+            "outside_window_endpoint": 8
+          },
+          "levelCategoryIncidences": {
+            "missing": 576,
+            "partial": 57
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 230,
+            "partial": 21
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 576,
+            "uniform_nonzero": 57
+          },
+          "candidateOverlapIncidences": {
+            "sample_and_endpoint": 32,
+            "sample_only": 202,
+            "no_candidate_record": 377,
+            "neither": 22
+          },
+          "sharedSampleIncidenceKm": 24.838864475924346,
+          "declaredRoleLevelOnlyIncidences": 433,
+          "measuredFlagIncidences": {
+            "endpoint_not_near_own_samples": 405,
+            "nonprogressing_or_tied_endpoints": 329,
+            "outside_window_endpoint": 8
+          }
+        },
+        "105": {
+          "arcCount": 13,
+          "sourceKm": 20.73241690988657,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 13
+          },
+          "originalOldStatusCounts": {
+            "ambiguous_in_cache": 2,
+            "absent_in_cache": 9,
+            "single_in_cache": 2
+          },
+          "samples": 850,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 176,
+          "uniqueExcludedPublisherIds": 102,
+          "reasonIncidences": {
+            "outside_window_endpoint": 15,
+            "unsupported_level_rules": 60,
+            "unsupported_road_role": 26,
+            "endpoint_not_near_own_samples": 88
+          },
+          "reasonUniquePublisherIds": {
+            "outside_window_endpoint": 6,
+            "unsupported_level_rules": 27,
+            "unsupported_road_role": 22,
+            "endpoint_not_near_own_samples": 54
+          },
+          "reasonCombinationIncidences": {
+            "outside_window_endpoint": 11,
+            "outside_window_endpoint|unsupported_level_rules": 4,
+            "unsupported_level_rules|unsupported_road_role": 9,
+            "unsupported_level_rules": 47,
+            "endpoint_not_near_own_samples": 88,
+            "unsupported_road_role": 17
+          },
+          "levelCategoryIncidences": {
+            "missing": 116,
+            "partial": 58,
+            "uniform_nonzero": 2
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 75,
+            "partial": 26,
+            "uniform_nonzero": 1
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 116,
+            "uniform_nonzero": 60
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 176
+          },
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 73,
+          "measuredFlagIncidences": {
+            "outside_window_endpoint": 15,
+            "endpoint_not_near_own_samples": 153,
+            "nonprogressing_or_tied_endpoints": 20
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-02",
+      "cachedRows": 9151,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 67,
+        "sourceKm": 66.71377745233106,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 65,
+          "unresolved_with_candidates": 2
+        },
+        "originalOldStatusCounts": {
+          "ambiguous_in_cache": 20,
+          "absent_in_cache": 31,
+          "single_in_cache": 16
+        },
+        "samples": 2726,
+        "candidateChains": 2,
+        "formerlyAbsentPositiveRecords": 1,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 496,
+        "uniqueExcludedPublisherIds": 139,
+        "reasonIncidences": {
+          "endpoint_not_near_own_samples": 268,
+          "unsupported_level_rules": 134,
+          "unsupported_road_role": 67,
+          "outside_window_endpoint": 68
+        },
+        "reasonUniquePublisherIds": {
+          "endpoint_not_near_own_samples": 83,
+          "unsupported_level_rules": 31,
+          "unsupported_road_role": 18,
+          "outside_window_endpoint": 16
+        },
+        "reasonCombinationIncidences": {
+          "endpoint_not_near_own_samples": 268,
+          "unsupported_level_rules|unsupported_road_role": 18,
+          "unsupported_level_rules": 103,
+          "unsupported_road_role": 39,
+          "outside_window_endpoint|unsupported_road_role": 10,
+          "outside_window_endpoint": 45,
+          "outside_window_endpoint|unsupported_level_rules": 13
+        },
+        "levelCategoryIncidences": {
+          "missing": 362,
+          "partial": 132,
+          "uniform_nonzero": 2
+        },
+        "levelCategoryUniquePublisherIds": {
+          "missing": 108,
+          "partial": 30,
+          "uniform_nonzero": 1
+        },
+        "levelValueCategoryIncidences": {
+          "missing": 362,
+          "uniform_nonzero": 134
+        },
+        "candidateOverlapIncidences": {
+          "no_candidate_record": 490,
+          "sample_only": 2,
+          "sample_and_endpoint": 4
+        },
+        "sharedSampleIncidenceKm": 0.39746781637757345,
+        "declaredRoleLevelOnlyIncidences": 160,
+        "measuredFlagIncidences": {
+          "endpoint_not_near_own_samples": 468,
+          "nonprogressing_or_tied_endpoints": 64,
+          "outside_window_endpoint": 68
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 33,
+          "sourceKm": 25.82492788740767,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 31,
+            "unresolved_with_candidates": 2
+          },
+          "originalOldStatusCounts": {
+            "ambiguous_in_cache": 11,
+            "absent_in_cache": 14,
+            "single_in_cache": 8
+          },
+          "samples": 1056,
+          "candidateChains": 2,
+          "formerlyAbsentPositiveRecords": 1,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 252,
+          "uniqueExcludedPublisherIds": 73,
+          "reasonIncidences": {
+            "endpoint_not_near_own_samples": 148,
+            "unsupported_level_rules": 31,
+            "unsupported_road_role": 65,
+            "outside_window_endpoint": 34
+          },
+          "reasonUniquePublisherIds": {
+            "endpoint_not_near_own_samples": 43,
+            "unsupported_level_rules": 10,
+            "unsupported_road_role": 18,
+            "outside_window_endpoint": 9
+          },
+          "reasonCombinationIncidences": {
+            "endpoint_not_near_own_samples": 148,
+            "unsupported_level_rules|unsupported_road_role": 16,
+            "unsupported_level_rules": 15,
+            "unsupported_road_role": 39,
+            "outside_window_endpoint|unsupported_road_role": 10,
+            "outside_window_endpoint": 24
+          },
+          "levelCategoryIncidences": {
+            "missing": 221,
+            "partial": 31
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 63,
+            "partial": 10
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 221,
+            "uniform_nonzero": 31
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 246,
+            "sample_only": 2,
+            "sample_and_endpoint": 4
+          },
+          "sharedSampleIncidenceKm": 0.39746781637757345,
+          "declaredRoleLevelOnlyIncidences": 70,
+          "measuredFlagIncidences": {
+            "endpoint_not_near_own_samples": 250,
+            "nonprogressing_or_tied_endpoints": 36,
+            "outside_window_endpoint": 34
+          }
+        },
+        "105": {
+          "arcCount": 34,
+          "sourceKm": 40.888849564923376,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 34
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 17,
+            "single_in_cache": 8,
+            "ambiguous_in_cache": 9
+          },
+          "samples": 1670,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 244,
+          "uniqueExcludedPublisherIds": 72,
+          "reasonIncidences": {
+            "unsupported_level_rules": 103,
+            "unsupported_road_role": 2,
+            "endpoint_not_near_own_samples": 120,
+            "outside_window_endpoint": 34
+          },
+          "reasonUniquePublisherIds": {
+            "unsupported_level_rules": 25,
+            "unsupported_road_role": 1,
+            "endpoint_not_near_own_samples": 42,
+            "outside_window_endpoint": 7
+          },
+          "reasonCombinationIncidences": {
+            "unsupported_level_rules": 88,
+            "unsupported_level_rules|unsupported_road_role": 2,
+            "endpoint_not_near_own_samples": 120,
+            "outside_window_endpoint": 21,
+            "outside_window_endpoint|unsupported_level_rules": 13
+          },
+          "levelCategoryIncidences": {
+            "partial": 101,
+            "missing": 141,
+            "uniform_nonzero": 2
+          },
+          "levelCategoryUniquePublisherIds": {
+            "partial": 24,
+            "missing": 47,
+            "uniform_nonzero": 1
+          },
+          "levelValueCategoryIncidences": {
+            "uniform_nonzero": 103,
+            "missing": 141
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 244
+          },
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 90,
+          "measuredFlagIncidences": {
+            "endpoint_not_near_own_samples": 218,
+            "outside_window_endpoint": 34,
+            "nonprogressing_or_tied_endpoints": 28
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-03",
+      "cachedRows": 3325,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 98,
+        "sourceKm": 104.71110051030787,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 6,
+          "unresolved_with_candidates": 2,
+          "no_cached_chain": 90
+        },
+        "originalOldStatusCounts": {
+          "ambiguous_in_cache": 2,
+          "absent_in_cache": 94,
+          "single_in_cache": 2
+        },
+        "samples": 4278,
+        "candidateChains": 36,
+        "formerlyAbsentPositiveRecords": 2,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 36,
+        "uniqueExcludedPublisherIds": 21,
+        "reasonIncidences": {
+          "endpoint_not_near_own_samples": 22,
+          "outside_window_endpoint": 13,
+          "unsupported_road_role": 1
+        },
+        "reasonUniquePublisherIds": {
+          "endpoint_not_near_own_samples": 16,
+          "outside_window_endpoint": 4,
+          "unsupported_road_role": 1
+        },
+        "reasonCombinationIncidences": {
+          "endpoint_not_near_own_samples": 22,
+          "outside_window_endpoint": 13,
+          "unsupported_road_role": 1
+        },
+        "levelCategoryIncidences": {
+          "missing": 36
+        },
+        "levelCategoryUniquePublisherIds": {
+          "missing": 21
+        },
+        "levelValueCategoryIncidences": {
+          "missing": 36
+        },
+        "candidateOverlapIncidences": {
+          "no_candidate_record": 28,
+          "neither": 4,
+          "sample_only": 4
+        },
+        "sharedSampleIncidenceKm": 0.0992812537905372,
+        "declaredRoleLevelOnlyIncidences": 1,
+        "measuredFlagIncidences": {
+          "endpoint_not_near_own_samples": 36,
+          "nonprogressing_or_tied_endpoints": 15,
+          "outside_window_endpoint": 13
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 45,
+          "sourceKm": 37.68055810218275,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 2,
+            "unresolved_with_candidates": 2,
+            "no_cached_chain": 41
+          },
+          "originalOldStatusCounts": {
+            "ambiguous_in_cache": 2,
+            "absent_in_cache": 43
+          },
+          "samples": 1539,
+          "candidateChains": 36,
+          "formerlyAbsentPositiveRecords": 2,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 18,
+          "uniqueExcludedPublisherIds": 7,
+          "reasonIncidences": {
+            "endpoint_not_near_own_samples": 10,
+            "outside_window_endpoint": 8
+          },
+          "reasonUniquePublisherIds": {
+            "endpoint_not_near_own_samples": 5,
+            "outside_window_endpoint": 2
+          },
+          "reasonCombinationIncidences": {
+            "endpoint_not_near_own_samples": 10,
+            "outside_window_endpoint": 8
+          },
+          "levelCategoryIncidences": {
+            "missing": 18
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 7
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 18
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 10,
+            "neither": 4,
+            "sample_only": 4
+          },
+          "sharedSampleIncidenceKm": 0.0992812537905372,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {
+            "endpoint_not_near_own_samples": 18,
+            "nonprogressing_or_tied_endpoints": 14,
+            "outside_window_endpoint": 8
+          }
+        },
+        "105": {
+          "arcCount": 53,
+          "sourceKm": 67.03054240812511,
+          "originalStatusCounts": {
+            "no_cached_chain": 49,
+            "unresolved_without_candidates": 4
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 51,
+            "single_in_cache": 2
+          },
+          "samples": 2739,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 18,
+          "uniqueExcludedPublisherIds": 14,
+          "reasonIncidences": {
+            "outside_window_endpoint": 5,
+            "endpoint_not_near_own_samples": 12,
+            "unsupported_road_role": 1
+          },
+          "reasonUniquePublisherIds": {
+            "outside_window_endpoint": 2,
+            "endpoint_not_near_own_samples": 11,
+            "unsupported_road_role": 1
+          },
+          "reasonCombinationIncidences": {
+            "outside_window_endpoint": 5,
+            "endpoint_not_near_own_samples": 12,
+            "unsupported_road_role": 1
+          },
+          "levelCategoryIncidences": {
+            "missing": 18
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 14
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 18
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 18
+          },
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 1,
+          "measuredFlagIncidences": {
+            "outside_window_endpoint": 5,
+            "endpoint_not_near_own_samples": 18,
+            "nonprogressing_or_tied_endpoints": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-04",
+      "cachedRows": 24393,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 265,
+        "sourceKm": 240.47839591576897,
+        "originalStatusCounts": {
+          "no_cached_chain": 102,
+          "unresolved_without_candidates": 163
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 190,
+          "ambiguous_in_cache": 47,
+          "single_in_cache": 28
+        },
+        "samples": 9888,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 1737,
+        "uniqueExcludedPublisherIds": 415,
+        "reasonIncidences": {
+          "endpoint_not_near_own_samples": 469,
+          "unsupported_level_rules": 1054,
+          "unsupported_road_role": 255,
+          "outside_window_endpoint": 62,
+          "nonprogressing_or_tied_endpoints": 1
+        },
+        "reasonUniquePublisherIds": {
+          "endpoint_not_near_own_samples": 127,
+          "unsupported_level_rules": 217,
+          "unsupported_road_role": 78,
+          "outside_window_endpoint": 17,
+          "nonprogressing_or_tied_endpoints": 1
+        },
+        "reasonCombinationIncidences": {
+          "endpoint_not_near_own_samples": 469,
+          "unsupported_level_rules": 950,
+          "unsupported_level_rules|unsupported_road_role": 67,
+          "unsupported_road_role": 188,
+          "outside_window_endpoint|unsupported_level_rules": 37,
+          "outside_window_endpoint": 25,
+          "nonprogressing_or_tied_endpoints": 1
+        },
+        "levelCategoryIncidences": {
+          "missing": 683,
+          "partial": 811,
+          "uniform_nonzero": 243
+        },
+        "levelCategoryUniquePublisherIds": {
+          "missing": 198,
+          "partial": 163,
+          "uniform_nonzero": 54
+        },
+        "levelValueCategoryIncidences": {
+          "missing": 683,
+          "uniform_nonzero": 939,
+          "mixed": 115
+        },
+        "candidateOverlapIncidences": {
+          "no_candidate_record": 1737
+        },
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 1205,
+        "measuredFlagIncidences": {
+          "endpoint_not_near_own_samples": 1422,
+          "nonprogressing_or_tied_endpoints": 323,
+          "outside_window_endpoint": 62
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 13,
+          "sourceKm": 6.718641200690687,
+          "originalStatusCounts": {
+            "no_cached_chain": 13
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 13
+          },
+          "samples": 276,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 252,
+          "sourceKm": 233.75975471507826,
+          "originalStatusCounts": {
+            "no_cached_chain": 89,
+            "unresolved_without_candidates": 163
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 177,
+            "ambiguous_in_cache": 47,
+            "single_in_cache": 28
+          },
+          "samples": 9612,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 1737,
+          "uniqueExcludedPublisherIds": 415,
+          "reasonIncidences": {
+            "endpoint_not_near_own_samples": 469,
+            "unsupported_level_rules": 1054,
+            "unsupported_road_role": 255,
+            "outside_window_endpoint": 62,
+            "nonprogressing_or_tied_endpoints": 1
+          },
+          "reasonUniquePublisherIds": {
+            "endpoint_not_near_own_samples": 127,
+            "unsupported_level_rules": 217,
+            "unsupported_road_role": 78,
+            "outside_window_endpoint": 17,
+            "nonprogressing_or_tied_endpoints": 1
+          },
+          "reasonCombinationIncidences": {
+            "endpoint_not_near_own_samples": 469,
+            "unsupported_level_rules": 950,
+            "unsupported_level_rules|unsupported_road_role": 67,
+            "unsupported_road_role": 188,
+            "outside_window_endpoint|unsupported_level_rules": 37,
+            "outside_window_endpoint": 25,
+            "nonprogressing_or_tied_endpoints": 1
+          },
+          "levelCategoryIncidences": {
+            "missing": 683,
+            "partial": 811,
+            "uniform_nonzero": 243
+          },
+          "levelCategoryUniquePublisherIds": {
+            "missing": 198,
+            "partial": 163,
+            "uniform_nonzero": 54
+          },
+          "levelValueCategoryIncidences": {
+            "missing": 683,
+            "uniform_nonzero": 939,
+            "mixed": 115
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 1737
+          },
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 1205,
+          "measuredFlagIncidences": {
+            "endpoint_not_near_own_samples": 1422,
+            "nonprogressing_or_tied_endpoints": 323,
+            "outside_window_endpoint": 62
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-05",
+      "cachedRows": 6630,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 34,
+        "sourceKm": 50.93523084685845,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 34
+        },
+        "originalOldStatusCounts": {
+          "single_in_cache": 5,
+          "absent_in_cache": 23,
+          "ambiguous_in_cache": 6
+        },
+        "samples": 2076,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 256,
+        "uniqueExcludedPublisherIds": 68,
+        "reasonIncidences": {
+          "outside_window_endpoint": 15,
+          "unsupported_level_rules": 80,
+          "endpoint_not_near_own_samples": 168,
+          "unsupported_road_role": 4
+        },
+        "reasonUniquePublisherIds": {
+          "outside_window_endpoint": 5,
+          "unsupported_level_rules": 14,
+          "endpoint_not_near_own_samples": 50,
+          "unsupported_road_role": 2
+        },
+        "reasonCombinationIncidences": {
+          "outside_window_endpoint|unsupported_level_rules": 11,
+          "endpoint_not_near_own_samples": 168,
+          "unsupported_level_rules": 69,
+          "outside_window_endpoint": 4,
+          "unsupported_road_role": 4
+        },
+        "levelCategoryIncidences": {
+          "partial": 80,
+          "missing": 176
+        },
+        "levelCategoryUniquePublisherIds": {
+          "partial": 14,
+          "missing": 54
+        },
+        "levelValueCategoryIncidences": {
+          "uniform_nonzero": 80,
+          "missing": 176
+        },
+        "candidateOverlapIncidences": {
+          "no_candidate_record": 256
+        },
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 73,
+        "measuredFlagIncidences": {
+          "outside_window_endpoint": 15,
+          "endpoint_not_near_own_samples": 239,
+          "nonprogressing_or_tied_endpoints": 15
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 34,
+          "sourceKm": 50.93523084685845,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 34
+          },
+          "originalOldStatusCounts": {
+            "single_in_cache": 5,
+            "absent_in_cache": 23,
+            "ambiguous_in_cache": 6
+          },
+          "samples": 2076,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 256,
+          "uniqueExcludedPublisherIds": 68,
+          "reasonIncidences": {
+            "outside_window_endpoint": 15,
+            "unsupported_level_rules": 80,
+            "endpoint_not_near_own_samples": 168,
+            "unsupported_road_role": 4
+          },
+          "reasonUniquePublisherIds": {
+            "outside_window_endpoint": 5,
+            "unsupported_level_rules": 14,
+            "endpoint_not_near_own_samples": 50,
+            "unsupported_road_role": 2
+          },
+          "reasonCombinationIncidences": {
+            "outside_window_endpoint|unsupported_level_rules": 11,
+            "endpoint_not_near_own_samples": 168,
+            "unsupported_level_rules": 69,
+            "outside_window_endpoint": 4,
+            "unsupported_road_role": 4
+          },
+          "levelCategoryIncidences": {
+            "partial": 80,
+            "missing": 176
+          },
+          "levelCategoryUniquePublisherIds": {
+            "partial": 14,
+            "missing": 54
+          },
+          "levelValueCategoryIncidences": {
+            "uniform_nonzero": 80,
+            "missing": 176
+          },
+          "candidateOverlapIncidences": {
+            "no_candidate_record": 256
+          },
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 73,
+          "measuredFlagIncidences": {
+            "outside_window_endpoint": 15,
+            "endpoint_not_near_own_samples": 239,
+            "nonprogressing_or_tied_endpoints": 15
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-06",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 147,
+        "sourceKm": 158.8901594169742,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 147
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 147
+        },
+        "samples": 6532,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 69,
+          "sourceKm": 34.37295451047214,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 69
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 69
+          },
+          "samples": 1425,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 78,
+          "sourceKm": 124.51720490650207,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 78
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 78
+          },
+          "samples": 5107,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-07",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 73,
+        "sourceKm": 79.29274798222865,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 73
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 73
+        },
+        "samples": 3361,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 73,
+          "sourceKm": 79.29274798222865,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 73
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 73
+          },
+          "samples": 3361,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-08",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 87,
+        "sourceKm": 91.9034068216536,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 87
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 87
+        },
+        "samples": 3828,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 87,
+          "sourceKm": 91.9034068216536,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 87
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 87
+          },
+          "samples": 3828,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-09",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 32,
+        "sourceKm": 28.186721753282622,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 32
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 32
+        },
+        "samples": 1148,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 26,
+          "sourceKm": 25.743396297657675,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 26
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 26
+          },
+          "samples": 1047,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 6,
+          "sourceKm": 2.443325455624948,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 6
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 6
+          },
+          "samples": 101,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-10",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 16,
+        "sourceKm": 16.33890174760004,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 16
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 16
+        },
+        "samples": 684,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 16,
+          "sourceKm": 16.33890174760004,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 16
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 16
+          },
+          "samples": 684,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-11",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 10,
+        "sourceKm": 18.40802799179741,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 10
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 10
+        },
+        "samples": 744,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 10,
+          "sourceKm": 18.40802799179741,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 10
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 10
+          },
+          "samples": 744,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-12",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 30,
+        "sourceKm": 38.434690363836516,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 30
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 30
+        },
+        "samples": 1551,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 30,
+          "sourceKm": 38.434690363836516,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 30
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 30
+          },
+          "samples": 1551,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-13",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 21,
+        "sourceKm": 32.382406888317796,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 21
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 21
+        },
+        "samples": 1320,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 21,
+          "sourceKm": 32.382406888317796,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 21
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 21
+          },
+          "samples": 1320,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "originalStatusCounts": {},
+          "originalOldStatusCounts": {},
+          "samples": 0,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-14",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 159,
+        "sourceKm": 112.99507804282223,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 159
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 159
+        },
+        "samples": 4654,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 108,
+          "sourceKm": 65.23031870646925,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 108
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 108
+          },
+          "samples": 2690,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 51,
+          "sourceKm": 47.76475933635299,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 51
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 51
+          },
+          "samples": 1964,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-15",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 62,
+        "sourceKm": 63.696489159807115,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 62
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 62
+        },
+        "samples": 2585,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 38,
+          "sourceKm": 37.13659306143445,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 38
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 38
+          },
+          "samples": 1511,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 24,
+          "sourceKm": 26.559896098372665,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 24
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 24
+          },
+          "samples": 1074,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-16",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 89,
+        "sourceKm": 58.492425697329004,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 89
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 89
+        },
+        "samples": 2427,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 57,
+          "sourceKm": 27.671395783706526,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 57
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 57
+          },
+          "samples": 1158,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 32,
+          "sourceKm": 30.821029913622475,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 32
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 32
+          },
+          "samples": 1269,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-17",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 344,
+        "sourceKm": 282.02342923214917,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 344
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 344
+        },
+        "samples": 11572,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 194,
+          "sourceKm": 115.16309071641028,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 194
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 194
+          },
+          "samples": 4727,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 150,
+          "sourceKm": 166.8603385157389,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 150
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 150
+          },
+          "samples": 6845,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-18",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 237,
+        "sourceKm": 204.3654456865458,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 237
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 237
+        },
+        "samples": 8467,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 136,
+          "sourceKm": 99.44946687565265,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 136
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 136
+          },
+          "samples": 4142,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 101,
+          "sourceKm": 104.91597881089315,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 101
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 101
+          },
+          "samples": 4325,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-19",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 192,
+        "sourceKm": 146.0739072520906,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 192
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 192
+        },
+        "samples": 6006,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 81,
+          "sourceKm": 48.222720429408696,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 81
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 81
+          },
+          "samples": 1975,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 111,
+          "sourceKm": 97.8511868226819,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 111
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 111
+          },
+          "samples": 4031,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-20",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 281,
+        "sourceKm": 133.1094954495215,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 281
+        },
+        "originalOldStatusCounts": {
+          "absent_in_cache": 281
+        },
+        "samples": 5540,
+        "candidateChains": 0,
+        "formerlyAbsentPositiveRecords": 0,
+        "cappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "excludedIncidences": 0,
+        "uniqueExcludedPublisherIds": 0,
+        "reasonIncidences": {},
+        "reasonUniquePublisherIds": {},
+        "reasonCombinationIncidences": {},
+        "levelCategoryIncidences": {},
+        "levelCategoryUniquePublisherIds": {},
+        "levelValueCategoryIncidences": {},
+        "candidateOverlapIncidences": {},
+        "sharedSampleIncidenceKm": 0.0,
+        "declaredRoleLevelOnlyIncidences": 0,
+        "measuredFlagIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 252,
+          "sourceKm": 110.75862412506055,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 252
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 252
+          },
+          "samples": 4614,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        },
+        "105": {
+          "arcCount": 29,
+          "sourceKm": 22.350871324460947,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 29
+          },
+          "originalOldStatusCounts": {
+            "absent_in_cache": 29
+          },
+          "samples": 926,
+          "candidateChains": 0,
+          "formerlyAbsentPositiveRecords": 0,
+          "cappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "excludedIncidences": 0,
+          "uniqueExcludedPublisherIds": 0,
+          "reasonIncidences": {},
+          "reasonUniquePublisherIds": {},
+          "reasonCombinationIncidences": {},
+          "levelCategoryIncidences": {},
+          "levelCategoryUniquePublisherIds": {},
+          "levelValueCategoryIncidences": {},
+          "candidateOverlapIncidences": {},
+          "sharedSampleIncidenceKm": 0.0,
+          "declaredRoleLevelOnlyIncidences": 0,
+          "measuredFlagIncidences": {}
+        }
+      }
+    }
+  ],
+  "publisherGeometryKm": {
+    "origin-00": 0.0,
+    "origin-01": 1346.5941263618608,
+    "origin-02": 1261.1934750747105,
+    "origin-03": 424.83761625177914,
+    "origin-04": 2385.5958986733413,
+    "origin-05": 929.2850925089898,
+    "origin-06": 0.0,
+    "origin-07": 0.0,
+    "origin-08": 0.0,
+    "origin-09": 0.0,
+    "origin-10": 0.0,
+    "origin-11": 0.0,
+    "origin-12": 0.0,
+    "origin-13": 0.0,
+    "origin-14": 0.0,
+    "origin-15": 0.0,
+    "origin-16": 0.0,
+    "origin-17": 0.0,
+    "origin-18": 0.0,
+    "origin-19": 0.0,
+    "origin-20": 0.0
+  },
+  "candidateMemberParserOccurrences": {
+    "usable": 28,
+    "access_scoped_or_restricted": 743,
+    "missing": 23,
+    "partial_scope": 2
+  },
+  "completedSourceWindows": 0,
+  "originalFeasibilityQualified": false,
+  "matcherEnumerationsPerformed": 0,
+  "networkRequests": 0,
+  "routingQueries": 0,
+  "scope": "Overlapping cohorts/reasons and per-incidence sample overlaps are not additive road coverage. Unique counts identify retained publisher id/version pairs, not physical roads. Zero level is a raw value, not grade/access proof. All frozen outcomes/21 incomplete windows stay; no new joins, chains, parser or permission policy."
+}

@@ -1,0 +1,187 @@
+{
+  "events": [
+    {
+      "number": 1,
+      "url": "https://quay.io/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "68eedc6ffd4ae2a0e02559181eed7f4985381d7b6c9a5c5daf6484ce1d5753d0",
+        "queryValuesRedacted": true
+      },
+      "kind": "config",
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/60/607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "bf7e2874acad177ceba44a4b8c7e77c4ef60be9c03707bf4f4215b867325c12c",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "09d594324a623885fa7b139abfa943a1c41b1f4884477f7f0385919797a85faf",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 2,
+      "url": "https://cdn01.quay.io/quayio-production-s3/sha256/60/607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/60/607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "bf7e2874acad177ceba44a4b8c7e77c4ef60be9c03707bf4f4215b867325c12c",
+        "queryValuesRedacted": true
+      },
+      "kind": "cdn",
+      "status": 200,
+      "bodyBytes": 14396,
+      "bodyFile": "002.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "14396"
+      },
+      "bodySha256": "607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 3,
+      "url": "https://api.github.com/repos/osmcode/libosmium/git/ref/tags/v2.23.1",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 345,
+      "bodyFile": "003.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "59",
+        "x-ratelimit-reset": "1793139882",
+        "content-length": "345"
+      },
+      "bodySha256": "590f7a746c5b8a29efe801c35d259fbb25bbb32f21a027f5ac5daad50986af50",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 4,
+      "url": "https://api.github.com/repos/osmcode/libosmium/git/commits/97dccf105391d410701ae8bd52170dc0ee041373",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 1083,
+      "bodyFile": "004.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "58",
+        "x-ratelimit-reset": "1793139882",
+        "content-length": "1083"
+      },
+      "bodySha256": "577d404fa2f1a7247397ececa303019acb260b56824c9cf18659075eef6d9a87",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 5,
+      "url": "https://api.github.com/repos/osmcode/libosmium/git/trees/c17441c8de31e1d51b596879fe61cc232c1a0367?recursive=1",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 131806,
+      "bodyFile": "005.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "57",
+        "x-ratelimit-reset": "1793139882",
+        "transfer-encoding": "chunked"
+      },
+      "bodySha256": "03c71bc82b598740efaf6734f410b7b817234728d3e66c703fe1ac131d9c612b",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 6,
+      "url": "https://api.github.com/repos/mapbox/protozero/git/ref/tags/v1.8.2",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 341,
+      "bodyFile": "006.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "56",
+        "x-ratelimit-reset": "1793139882",
+        "content-length": "341"
+      },
+      "bodySha256": "07bcfa13bf242d4463a76660556ae58f0993351cc9dfd333d89c6f2acfc2cb37",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 7,
+      "url": "https://api.github.com/repos/mapbox/protozero/git/commits/af2f6e274e0a873a00e34d8c9ab99fca76898047",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 2529,
+      "bodyFile": "007.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "55",
+        "x-ratelimit-reset": "1793139882",
+        "content-length": "2529"
+      },
+      "bodySha256": "b5bb6a7949fb55249bbe2e17eb18e09c2e667994243e97ea933fe9978aa89687",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 8,
+      "url": "https://api.github.com/repos/mapbox/protozero/git/trees/3efd40b2a7469960081054e16819191daa24d21a?recursive=1",
+      "kind": "git",
+      "status": 200,
+      "bodyBytes": 94186,
+      "bodyFile": "008.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "x-ratelimit-remaining": "54",
+        "x-ratelimit-reset": "1793139882",
+        "transfer-encoding": "chunked"
+      },
+      "bodySha256": "a1051d97a1a03f304cd6bc79013bb15295dccdace3ec9d4074d36cf2ce18268f",
+      "authBodyRedacted": false
+    }
+  ],
+  "receivedBodyBytes": 246045,
+  "stopped": false,
+  "elapsedSeconds": 1.815718210011255,
+  "counterScope": "read1/IncompleteRead.partial payload only; excludes headers/socket/TLS buffering. Config redirect/error bodies and signed query values are counted/hashed, never persisted."
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "status": "Next task is offline-only analysis of the preserved partial cache; no retry or resumption of this stopped producer",
+  "inputs": {
+    "docs/evidence/coarse-timing-pilot-2026-10-25/execution-plan.json": "0f8c66eabacbef0fb9ad2db666441c3820b3e03a35e92984f6b06255d2641a0d",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/analysis.json": "e2527490f531c9adc7bef72e94303c1a6943489c7c44541c673be9b44812006f",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/state.json": "b8e3f2c9a810682f6c2bce61098ff3842698e3a94ad772270dfcf393f0298561",
+    "data/coarse-quality/overture-timing-pilot-v1/segments.jsonl": "3b23132960cfc022256b0e0ed1e1061479da8db35d72147ad38dfd2d333647e4",
+    "data/coarse-quality/overture-timing-pilot-v1/object-manifest.json": "f9a1a95c83777747f702a50840013a11b743e52c5c49b17587e117ea93a00e26",
+    "data/coarse-quality/overture-timing-pilot-v1/source-schema.json": "2a23b193ea4e7f6fa0f50792e5948f376577c4f76e5d6c3741366bb7d2cde741",
+    "data/coarse-quality/overture-timing-pilot-v1/tool-lock.json": "43c9498c73b855d19a97e0555c49553fa2e469364c2dfbd7998d085c4ec22192",
+    "data/coarse-quality/overture-timing-pilot-v1/state.json": "b8e3f2c9a810682f6c2bce61098ff3842698e3a94ad772270dfcf393f0298561"
+  },
+  "facts": {
+    "captureStatus": "source timeout before final response headers",
+    "retainedRoadRows": 55120,
+    "plannedWindows": 21,
+    "completedWindows": 0,
+    "receivedBodyBytes": 123155489,
+    "httpAttempts": 1115,
+    "originalByteCap": 536870912,
+    "unusedByteAllowance": 413715423,
+    "unusedAttemptAllowance": 8885
+  },
+  "method": [
+    "Implement a separately versioned offline cache-analysis entry point; reuse frozen scoped-rule/geometry helpers without editing sealed source files or old capture. Freeze exact code/input/criteria/output hashes first.",
+    "Use a network-disabled cached Linux worker with the same proven 1 GiB/zero-swap guard, one-hour limit and bounded fresh output. Read captured JSONL, source manifest and existing qualified Census geometry only; no Parquet/tool/network access is needed for source rows already retained.",
+    "Reconcile all 55,120 identities and source/scoping fields, then report observed cached limit statuses and geometry-length-weighted attribute availability for every fixed window/class. Preserve missing, unsupported, conditional, directional, variable and conflicting records.",
+    "If evaluating candidate alignment with cached detailed Census geometry, retain the same 25 m/80%/15° checks, original source-km weights and all 21 denominators. Label single candidates single_in_cache; unseen publisher records can introduce competitors, so partial-cache uniqueness or match usability is not a conservative lower bound and cannot qualify the original gate.",
+    "Keep all 21 windows incomplete and the original pilot unqualified. No ETA/routing/model/national coverage claim or cost policy. Natural Earth/base provenance remains separate.",
+    "Conclude whether observed cached attributes justify preparing one separately versioned acquisition/recovery proposal or abandoning this input. A proposed later fetch must enumerate missing object/range identities, reuse verified cache, log complete request/response range/ETag receipts, bind exact retry policy and resource budgets, and account for bytes already spent. Unused allowance alone does not permit retrying the failed request or changing the stopped producer. No new network in this task."
+  ],
+  "pass": "All retained identities/fields/source weights and 21 incomplete-window denominators reconcile independently; one concrete next-input decision without claiming original feasibility or changing any gate.",
+  "prohibited": [
+    "network/tool download or source request",
+    "retry/resume original producer",
+    "editing sealed modules/evidence",
+    "new routing/model/contour or timing policy",
+    "case/region exceptions",
+    "parameter/cutoff tuning",
+    "production/env/DB/dependency change",
+    "commit/push/deploy"
+  ],
+  "scope": "Offline salvage/decision only. Original 512 MiB/zero-retry run remains stopped; all 83/35 old references and active v9 unchanged."
+}

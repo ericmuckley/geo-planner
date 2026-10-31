@@ -1,0 +1,36 @@
+{
+  "status": "Post-result diagnostic interpretation; no changed original gate or model",
+  "inputs": {
+    "data/coarse-quality/overture-timing-compatibility-v1/report.json": "e5295c886077e784740f73f404ca15aa4e78927e9f0533f2444edcfb805fb9ab",
+    "data/coarse-quality/overture-timing-compatibility-v1/audit.json": "92971a32fa42dd0887bfd4bc6a09751747a821d0c74c9cf7c79eb077eee07f36"
+  },
+  "metrics": {
+    "retainedRows": 55120,
+    "arcWindowRecords": 2469,
+    "samples": 85629,
+    "windowsWithCache": 5,
+    "completedSourceWindows": 0,
+    "censusKmAllWindows": 2078.237959868215,
+    "censusKmWindowsWithCache": 541.5149490212568,
+    "unionAlignedKm": 332.47729631451165,
+    "unionAlignedPercentInWindowsWithCache": 61.397621047292716,
+    "absentArcsWithAtLeast80PercentUnion": 163,
+    "sourceKmOfAbsentArcsWithAtLeast80PercentUnion": 259.9311348266915,
+    "unionAlignedKmOnThoseArcs": 259.38092215312975,
+    "provisionalEligibleMatchedKmUnchanged": 2.8270705809269594,
+    "rawSpeedRows": 6230,
+    "rawAccessRows": 15022
+  },
+  "decision": "Specify one conservative generic connected-segment matching prototype using the same cache. Single-ID coverage is a demonstrable limitation of this frozen matcher:163 absent arcs have >=80% union support. A union is not connectivity or road identity, so test explicit endpoint connector links next. Keep speed/access parsing unchanged and further acquisition stopped.",
+  "limits": [
+    "All21 source windows remain incomplete; sixteen have no cached rows. Fractions are cached observations, not nationwide accuracy, final coverage or lower bounds on eventual unique/usable matches.",
+    "The larger geometric union does not increase eligible speed coverage. All old single/ambiguous/absent classifications and2.8270705809269594 provisional eligible km remain unchanged.",
+    "163 arcs demonstrate geometric support split across publisher IDs; neither road fragmentation as a physical cause, drivable connectivity, car access nor a unique route is established.",
+    "Access rules include raw allowed/denied/designated values with heading, recognition, mode, vehicle, purpose and time scopes. Do not flatten them or treat allowed as bidirectional permission.",
+    "No timing/cost policy, road graph routing, original50% feasibility review, source request, candidate or production change."
+  ],
+  "next": "Implement one separately frozen endpoint-connector chain alignment diagnostic with explicit ambiguity/resource-cap outcomes; all source/case/weight and frozen scope outcomes retained.",
+  "newNetworkRequests": 0,
+  "originalFeasibilityQualified": false,
+  "productionModelChanged": false
+}

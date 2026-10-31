@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "status": "Next packaging proposal only; no binary packer, probe build or routing candidate run",
+  "reason": "Protected25m geometry/cost/cell/index checks pass, but88.93MB inline-base64 storage forecast fails70MB. Measure byte-identical server-side binary assets instead of changing geometry, weights or budget. Preserve the failed inline-format result.",
+  "inputs": {
+    "docs/evidence/coarse-backbone-geometry-2026-10-25/plan.json": "fb1f8cad561e791c55db31751e5b0897e3ba7de1ceca4c11bcb978226f2d2420",
+    "docs/evidence/coarse-backbone-geometry-2026-10-25/report.json": "0cf23641e99a7eefe22b266e7b5b7114b28036cf61c950a96a0589bbbcbdfe8f",
+    "docs/evidence/coarse-backbone-geometry-2026-10-25/independent-audit.json": "ce20b8a6906138410b77a792a568e9804a407e0a529f37f20c201455342ca7a2",
+    "docs/evidence/coarse-backbone-geometry-2026-10-25/relative-audit.json": "13b05fdce3c8f0390f874dbe375f7e839a34625e39e8c5608afccce3b9d1c1fd",
+    "src/server/data/coarse-grid-v9.json": "28271c809a04cdfab41ad735ad66b29e3875179b617198b7b1d4490533439bf6",
+    "package-lock.json": "344621884a6d42d99525db2be9bcd961ea2ddae06211b11a60be931cb7af6abc",
+    "vite.config.ts": "f5607ee4eda9d89fd4730f42e662d5ad803d453d615b38baf56ee73bdb9352a5",
+    "node_modules/nitro/package.json": "e0884cb7fab7a5d22a4e54a098d4ed6ca2aab09e5bca45ecde3d54ef11a0f3be",
+    "node_modules/nitro/dist/_build/common.mjs": "c94ea6f0b9f539aa5afd8307e021c5ddcc3cd402f254f3b15fba5da71da63653"
+  },
+  "runtimeArrayInputs": {
+    "data/coarse-quality/census-backbone-geometry-v1/nodeCoordinates.bin.gz": "a6951c2b10491d299959fc0c33bcc4ceba81d86e95bc9c480e8f8228c3d5daa8",
+    "data/coarse-quality/census-backbone-geometry-v1/arcFrom.bin.gz": "8a9f4eab46b8207aaaea4165ea7b5face692b283d7cc502dc0bd2e50dae70948",
+    "data/coarse-quality/census-backbone-geometry-v1/arcTo.bin.gz": "8244fd95c2b0cf934074eb7f93780cb14e14071552cd2610ead45438ee098684",
+    "data/coarse-quality/census-backbone-geometry-v1/arcRoadKm.bin.gz": "b10d7a3b8a3cfec22a7b9849710ced415f77c2abc0c8b14cfb3743a115fe3498",
+    "data/coarse-quality/census-backbone-geometry-v1/arcMinutes.bin.gz": "4bf331247334a9ab713f7d331638261d1d9bfbb04cea8b9d79413b32c59f7a5c",
+    "data/coarse-quality/census-backbone-geometry-v1/arcSpeedKph.bin.gz": "98ab55360f02885bdfe7b85e3543ead2ee36ac0e394bd0aa918b098541bddacb",
+    "data/coarse-quality/census-backbone-geometry-v1/arcByteOffsets.bin.gz": "2a073525df0fbec5da8c40ee78896f11bdfdd5fee7770736bdf6a106d4728e99",
+    "data/coarse-quality/census-backbone-geometry-v1/arcInteriorOffsets.bin.gz": "e1b21ad854c1b8d024d78f7c5e767db174d8e78949481fcf42f24fae20be2f07",
+    "data/coarse-quality/census-backbone-geometry-v1/interiorSourceKm.bin.gz": "1355629b3009958f85ff3abeb5445d347d6cd7c87a94447b631e8ef7de5f120c",
+    "data/coarse-quality/census-backbone-geometry-v1/geometryBytes.bin.gz": "769934041c1c4af51e911bcddf52801469a4e1af60203b8a492e98e1b262c343",
+    "data/coarse-quality/census-backbone-geometry-v1/partArcOffsets.bin.gz": "2c06584832a7c1e3cebd7f3c808d42e67a9579306aa6261ef4ee34845cac4d94",
+    "data/coarse-quality/census-backbone-geometry-v1/crossingFirstArc.bin.gz": "2dfa13663f23dd546e7cf059d7ca2df6e9464b6122c3d423e5f831d7f11386d5",
+    "data/coarse-quality/census-backbone-geometry-v1/endpointAdjOffsets.bin.gz": "81caa6790ea46140d5e005e0620339e61d979556f2a8eef8eb2b3e8db19909b8",
+    "data/coarse-quality/census-backbone-geometry-v1/endpointAdjArcs.bin.gz": "a788c27c24cfc47e0458b67565b3b6a848a149dc1ffe5d01c5a7d9834a5d6168",
+    "data/coarse-quality/census-backbone-geometry-v1/cellIds.bin.gz": "c4f8862588890478237a85af4c458031c337cf490f7ede183a5c58482727a3b9",
+    "data/coarse-quality/census-backbone-geometry-v1/cellArcOffsets.bin.gz": "afe5a60376740acffc3814e20be51cc50731a627f7635042ba750ae27c278b9c",
+    "data/coarse-quality/census-backbone-geometry-v1/cellArcs.bin.gz": "51eef9820ae68896b6269094ac06626fee38ae39cd092edbbdbc1bbf7e0b5030"
+  },
+  "installedNitro": {
+    "version": "3.0.260610-beta",
+    "finding": "The installed serverAssets production loader imports raw: assets; binary raw loader embeds base64. That path alone will not remove overhead. Use a documented/traced server-file or emitted-binary mechanism and verify the emitted Vercel function contains real binary bytes.",
+    "excerpt": "docs/evidence/coarse-backbone-geometry-2026-10-25/nitro-server-assets.txt"
+  },
+  "packingPolicy": "All17 current gzip runtime arrays remain byte-identical, with original typed-array hashes. Replace inline blobs in the kept-v9 fields (excluding old Census layer/supplemental visits) with equivalent gzip binary payloads and a bounded JSON descriptor. Validate every restored value, buffer, graph/index and original metadata; no numeric/geometry/cost/index/source changes.",
+  "probe": "Isolated copy of the existing app/build dependencies, without env files or DB/provider config. Replace active coarse computation only inside that probe with an explicitly unavailable/diagnostic response and add a data-load endpoint; do not fabricate contours or modify the real app/runtime. Include all proposed kept data, graph arrays, indexes, descriptors and server code in the generated Vercel function.",
+  "buildRequirement": "Inspect installed Nitro/Vite emitted/traced-asset behavior and freeze the exact probe recipe before its build. No new dependency, public asset URL, CDN, cloud DB or server network fallback. Binary files must live only inside the server function.",
+  "gates": {
+    "allRuntimeAndKeptV9ValuesRestoredExactly": true,
+    "maximumFunctionBytesPlus4194304IntegrationReserve": 70000000,
+    "maximumFirstLocalLoadDecodeValidateMs": 3000,
+    "firstLoadProcesses": 3,
+    "maximumPostGcRetainedDecodedBytes": 162238546,
+    "serverOnlyBinaryAssets": true,
+    "noRawSourceEnvSecretsOrDatabaseDependency": true,
+    "outboundFetches": 0,
+    "disabledDetailedExperimentAndDatabaseFreeFallback": true,
+    "normalBuildAndVercelBuildAndHandlerChecks": true
+  },
+  "timingScope": "Local load/decode/validation only, leaving2s of the eventual5s first-estimate target for search/contour. No routing engine, accuracy result, cloud cold-start/peak/load qualification or activation exists in this probe.",
+  "afterPass": "Freeze a separately versioned routing candidate recipe/evaluation plan before any search. Keep all prior83 ORS/35 Valhalla and accuracy/classification/physical/runtime gates from the preserved next-design; activate only after full qualification.",
+  "onFailure": "Preserve outputs and stop this packaging approach. No budget change, geometry retuning, public/network storage fallback or activation.",
+  "scope": "One future binary packaging/load feasibility probe, not another source producer or new routing model. All48/6/29 provider budgets remain consumed."
+}

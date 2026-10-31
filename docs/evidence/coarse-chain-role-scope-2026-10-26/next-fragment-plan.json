@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "status": "Prospective implementation and synthetic-test scope only; not a frozen real-data execution recipe, not executed or admitted",
+  "inputs": {
+    "docs/evidence/coarse-chain-role-scope-2026-10-26/decision.json": "b65ee2d8600749f2de53312e34fcfd5dbb76e2d2315b28d41ecb001b06f176ca",
+    "docs/evidence/coarse-chain-role-scope-2026-10-26/report.json": "8760874da43c8e33587f2eae5cda903f46df5ed9276beeafc5a0de91ff973ed2",
+    "docs/evidence/coarse-chain-role-scope-2026-10-26/execution-plan.json": "755e53b44276429638969645629ab85a0c475a6a1a59a22e07b055f95a3724b2",
+    "docs/evidence/coarse-chain-exclusions-2026-10-26/report.json": "a0b7315831d4d46e8bde59e26d25ecb28e7bdaeb8e41db101fc1eff7cf33d313",
+    "docs/evidence/coarse-timing-chains-2026-10-26/rules.json": "72f5d54e7e48f0929fdd60f8b28b3d68d01c6d1e6442420a7ad5f9999ae893f7",
+    "data/coarse-quality/overture-timing-pilot-v1/segments.jsonl": "3b23132960cfc022256b0e0ed1e1061479da8db35d72147ad38dfd2d333647e4",
+    "data/coarse-quality/overture-timing-chains-v1/rows.jsonl": "1cdcafabb00b244b2c6a2b6a48efb218a99f3801138e9f1cce402e4b0958e3bf",
+    "data/coarse-quality/overture-timing-chains-v1/chains.jsonl": "f3859217a0686cf95baa4347147a04984732f4b49d1e25ac32dbb17a53fc0f21",
+    "data/coarse-quality/overture-timing-compatibility-v1/support.jsonl": "13b72c2ffcb8ec4b026649d2ace6895295cd2019d040e9d01670e2e78e0ca493"
+  },
+  "objective": "Test geometry matching that allows a connected publisher path to start/end inside its terminal segment, because Census and publisher segments can have different boundaries. Address a concrete geometry limitation after the reporting-only hypothesis failed, rather than relabel uncertainty.",
+  "implementation": {
+    "module": "scripts/coarse_timing_fragments.py",
+    "tests": "scripts/coarse_timing_fragments_test.py",
+    "newRealOutput": "data/coarse-quality/overture-timing-fragments-v1"
+  },
+  "method": [
+    "Implement a separate geometry prototype and tests first; do not edit/replay sealed matchers or inspect real-data outcomes while choosing projection/interval rules. Preserve raw IDs, geometry fractions, scopes, sample membership/weights and full provenance for each fragment.",
+    "Allow clipping only on terminal portions of a candidate. Interior joins must use identical original endpoint connector IDs and the existing <=25m join-distance rule. Never invent a connector at an interior clipped point or join by spatial proximity alone. Whole-row internal nodes retain old eligibility/progress rules.",
+    "Define deterministic projection to the original publisher polyline; use original weighted Census samples, 25m distance, 15deg undirected tangent and80% union support. Before real execution specify tie tolerance and projection/interval construction exactly, including loops, reversals and windows. Ambiguous projections remain unresolved. Do not sweep thresholds or select a best alternative.",
+    "Keep supported roles, all nonempty-level rejections, original access/speed parser and every raw conditional/directional scope unchanged. A terminal cut is geometry only, not a new access grant. Missing grade metadata stays unknown; explicit zero or shared IDs never imply physical driving permission.",
+    "Meaningful synthetic fixtures must cover overhanging terminal geometry, same path with different segmentation, reversal, weighted partial support, internal connector mismatch, nearby parallel/crossing geometry, tied/looping projections, nonzero/partial levels, outside-window fragments, multiple candidates, empty cache and state/length caps. Independent audit should reconstruct interval endpoints/support/unions/connectors and reject tampering.",
+    "After synthetic host/Linux tests pass, freeze exact new code, rules, all inputs, bounded outputs and one pass/fail hypothesis before running any cached-data geometry/enumeration. Preserve all original2469 arc records,85629 weights,21 incomplete windows,82 old candidates/32 unresolved outcomes and2.827 baseline provisional km as separate immutable controls. No real-data run under this prospective plan alone."
+  ],
+  "syntheticAcceptance": "Projection/fragment results are deterministic under reversal and harmless source segmentation; overhanging terminal positives pass without invented joins; every disconnected/ambiguous/unsupported/capped case stays explicit. Independent geometry/provenance/union accounting agrees. Check/typecheck/build pass; all sealed and production bindings remain unchanged.",
+  "resourceEnvelope": {
+    "network": "none",
+    "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "imagePull": "never",
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "wallSeconds": 3600,
+    "outputBytes": 134217728,
+    "tmpBytes": 67108864
+  },
+  "deferred": "New data/tool/source/provider request/retry; real cached-data enumeration until separately frozen; grade/access semantics; unique/drivable/speed/ETA/coverage claims; graph arrays; timing policy; app/UI/env/DB/npm/config changes; commit/push/deploy. A later model still needs every original accuracy/physical/package/startup/API/visual gate."
+}

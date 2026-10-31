@@ -1,0 +1,76 @@
+{
+  "scope": "Prospective extension; original guards and completed evidence remain frozen. No new helper qualified yet.",
+  "originalPath": "docs/evidence/coarse-osm-native-design-2026-10-27/guard-map.json",
+  "entries": [
+    {
+      "guard": "Source identity and format",
+      "preserve": "Keep the frozen full SHA/MD5/framing/header/feature/granularity/snapshot and immutable-file checks. Decoder EOF alone is insufficient.",
+      "screenExtension": "Continuous exact12,229,320,016-byte whole-source pre/post identity and framed guards each pass; source file/mount immutable.",
+      "newRequiredControls": "framing/hash/decoder drift, unsupported headers, exact normal/error EOF",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Identity/order/counters",
+      "preserve": "Native receipt counters before validation; positive signed64 IDs/version, strict typed order, duplicate rejection, all per-type/total quotas. Do not filter before validation.",
+      "screenExtension": "u64 per-type/pass/two-pass receipts and checked cumulative byte/ref/member/codec counters; no restart resets.",
+      "newRequiredControls": "2**31/2**32/near-u64 boundaries, count caps+1, before-validation rejected receipts",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Timestamp and visibility",
+      "preserve": "Same complete native timestamp/calendar/whole-second/UTC/shape/snapshot/visible rules as the frozen projector and validator; no rejection of valid epoch0 merely because a native Timestamp bool is false.",
+      "screenExtension": "Same metadata validation before dropping node/way/relation projections.",
+      "newRequiredControls": "all retained timestamp/visibility negatives on discarded objects",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Coordinates",
+      "preserve": "Exact native signed XY32 lattice and range, IEEE binary64 division in round-to-nearest, no fast-math/rounding; compare bits to reference. Preserve original framing precision rejection.",
+      "screenExtension": "All source blocks native roundtrip; bounded passB source ID/XY witnesses separately compare lookup binary64 bits.",
+      "newRequiredControls": "lattice extremes, missing witness, swapped axes, index drift",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Strings/tags",
+      "preserve": "Validate accessed UTF-8 fields exactly as native-to-Python conversion; reject duplicate tag keys. Same incremental native-view copy charges; preserve all raw keys/values, not user/uid fields that old projection never copied.",
+      "screenExtension": "Suppress ordinary mixed-object Python projections only after full UTF8/tag/copy validation and GPF1 sealing.",
+      "newRequiredControls": "discarded invalid tags/strings, duplicate keys, copy charges",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Canonical byte cap",
+      "preserve": "Count exact canonical ASCII-escaped string/key/ref/member/integer/timestamp syntax natively. For node floats use a proven32-byte upper bound per finite float; accept safely below cap, reject safely above the lower bound, send only ambiguous near-limit nodes to the frozen Python canonical-size check via a bounded integer-XY frame. No approximate reject or C++ float formatting substitute.",
+      "screenExtension": "Retain exact near-cap Python fallback, bounded/count-limited; all-field semantic hashing stays streamed.",
+      "newRequiredControls": "cap +/-1, ambiguous-node fallback unavailable/exception/limit",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "References and members",
+      "preserve": "Positive ordered way references (at least2); valid typed positive members/roles; retain unresolved outside references exactly.",
+      "screenExtension": "Validate every ref/member; choose bounded range-eligible actual highway references, never silently ignore missing dependencies.",
+      "newRequiredControls": "invalid refs before selection, unresolved range hits, trace caps/exclusions",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Selection and complete objects",
+      "preserve": "Generic unchanged21 windows, crossing/outside-node closure and relevant restrictions; separate native audit geometry/membership; retained raw/output/occurrence/heap caps unchanged.",
+      "screenExtension": "No21-window selection/extraction this screen; source-ordinal index sample and fixed way priority are probe only.",
+      "newRequiredControls": "exact census/strata/remap and selector proof; old independent geometry audit still required later",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "Pass drift and output",
+      "preserve": "Acquired-file SHA/immutable checks plus lossless per-pass semantic seals, counts and independently rebuilt block equality; selected canonical JSON/geometry hashes stay byte-identical to reference.",
+      "screenExtension": "Two whole GPF1/count/census passes, source-built rolling mini replacement and typed source witnesses.",
+      "newRequiredControls": "late failure, source/metadata/trace drift, omitted blocks, untrusted partial closure",
+      "newImplementationQualified": false
+    },
+    {
+      "guard": "ABI and lifecycle",
+      "preserve": "C ABI primitives/length-prefixed buffers only; exceptions caught, callback lifetimes fixed, callback errors stop. Same worker cgroup/time/storage/process ownership controls; no extra container resources during execution.",
+      "screenExtension": "New ABI/summary sink/reader queues; same isolation and exact owned lifecycle; full queried-shard authentication remains.",
+      "newRequiredControls": "actual target callback/counter/thread tests, hard watchdog, cap/OOM/error/removal/refusal tests",
+      "newImplementationQualified": false
+    }
+  ]
+}

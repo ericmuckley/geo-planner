@@ -1,0 +1,45 @@
+{
+  "status": "compiled_country_screen_controls_pending",
+  "artifactSha256": "1084fc1b6e9b1a627b52180fd91df0b46e01a967fbd399c2bad672a4f675f48a",
+  "artifactBytes": 2003688,
+  "sourceSha256": "c5a21a11dd44a271fc662662af231c7b2396e18087465a16aca16b9091ee9765",
+  "deltaSourceSha256": "42556e05ffc29fdc2facbaa2d3dccc70b24751159f097a1975242b8eba05cb3c",
+  "flags": [
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fvisibility=hidden",
+    "-static-libstdc++",
+    "-static-libgcc",
+    "-pthread",
+    "-I/inputs/libosmium/include",
+    "-I/inputs/protozero/include",
+    "/work/country-screen.cpp",
+    "/work/delta.cpp",
+    "-Wl,-z,defs",
+    "-Wl,--exclude-libs,ALL",
+    "-Wl,-Bsymbolic-functions",
+    "-lz",
+    "-o",
+    "/work/country-screen.so"
+  ],
+  "needed": [
+    "libz.so.1",
+    "libm.so.6",
+    "libpthread.so.0",
+    "libc.so.6",
+    "ld-linux-aarch64.so.1"
+  ],
+  "exports": [
+    "gp_delta_abi",
+    "gp_delta_decode",
+    "gp_country_screen_abi",
+    "gp_country_screen_frames",
+    "gp_country_screen_pbf",
+    "gp_country_screen_add",
+    "gp_country_screen_priority",
+    "gp_country_screen_stratum"
+  ],
+  "elfSha256": "26fcfb2c9ed4956eb03dd4a611b3bbc3983693c052ee0b76dd26b4a2e4a77c21"
+}

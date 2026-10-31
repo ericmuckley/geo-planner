@@ -1,0 +1,89 @@
+.............FFF.
+======================================================================
+FAIL: test_create_timeout_recovers_only_labelled_owned_container (coarse_osm_profile_driver_test.Tests.test_create_timeout_recovers_only_labelled_owned_container)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_profile_driver_test.py", line 76, in test_create_timeout_recovers_only_labelled_owned_container
+    def test_create_timeout_recovers_only_labelled_owned_container(self): self.scenario('create-timeout')
+                                                                          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/code/coarse_osm_profile_driver_test.py", line 68, in scenario
+    self.assertEqual(run(path,sha,plan['output'],repo=repo),2)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/profile_osm_import_v1.py", line 122, in run
+    found = cleanup_call(['docker','inspect',identity or name])
+  File "/code/profile_osm_import_v1.py", line 121, in cleanup_call
+    return subprocess.run(args,capture_output=True,text=True,timeout=max(1,min(15,hard_deadline-time.monotonic())))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1234, in _execute_mock_call
+    result = effect(*args, **kwargs)
+  File "/code/coarse_osm_profile_driver_test.py", line 45, in docker
+    self.assertIn(args[2],(identity,name));return SimpleNamespace(stdout=json.dumps([inspection()]),returncode=0)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'geo-planner-profile-v1-583f299821fb' not found in ('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', None)
+
+======================================================================
+FAIL: test_monitor_failure_kills_client_and_preserves_live_snapshot (coarse_osm_profile_driver_test.Tests.test_monitor_failure_kills_client_and_preserves_live_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_profile_driver_test.py", line 78, in test_monitor_failure_kills_client_and_preserves_live_snapshot
+    def test_monitor_failure_kills_client_and_preserves_live_snapshot(self): self.scenario('monitor-stop')
+                                                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/code/coarse_osm_profile_driver_test.py", line 68, in scenario
+    self.assertEqual(run(path,sha,plan['output'],repo=repo),2)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/profile_osm_import_v1.py", line 122, in run
+    found = cleanup_call(['docker','inspect',identity or name])
+  File "/code/profile_osm_import_v1.py", line 121, in cleanup_call
+    return subprocess.run(args,capture_output=True,text=True,timeout=max(1,min(15,hard_deadline-time.monotonic())))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1234, in _execute_mock_call
+    result = effect(*args, **kwargs)
+  File "/code/coarse_osm_profile_driver_test.py", line 45, in docker
+    self.assertIn(args[2],(identity,name));return SimpleNamespace(stdout=json.dumps([inspection()]),returncode=0)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'geo-planner-profile-v1-074211dcf18d' not found in ('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', None)
+
+======================================================================
+FAIL: test_nonzero_worker_exit_is_retained_and_owned_container_removed (coarse_osm_profile_driver_test.Tests.test_nonzero_worker_exit_is_retained_and_owned_container_removed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_profile_driver_test.py", line 77, in test_nonzero_worker_exit_is_retained_and_owned_container_removed
+    def test_nonzero_worker_exit_is_retained_and_owned_container_removed(self): self.scenario('worker-failure')
+                                                                                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/code/coarse_osm_profile_driver_test.py", line 68, in scenario
+    self.assertEqual(run(path,sha,plan['output'],repo=repo),2)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/profile_osm_import_v1.py", line 122, in run
+    found = cleanup_call(['docker','inspect',identity or name])
+  File "/code/profile_osm_import_v1.py", line 121, in cleanup_call
+    return subprocess.run(args,capture_output=True,text=True,timeout=max(1,min(15,hard_deadline-time.monotonic())))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/lang/lib/python3.13/unittest/mock.py", line 1234, in _execute_mock_call
+    result = effect(*args, **kwargs)
+  File "/code/coarse_osm_profile_driver_test.py", line 45, in docker
+    self.assertIn(args[2],(identity,name));return SimpleNamespace(stdout=json.dumps([inspection()]),returncode=0)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'geo-planner-profile-v1-efacfb049bff' not found in ('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', None)
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.082s
+
+FAILED (failures=3)

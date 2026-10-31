@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "status": "Next timing-design task; no policy or candidate selected by the distance audit",
+  "inputs": {
+    "docs/evidence/coarse-distance-budget-2026-10-25/report.json": "1fd58d14fa983d918b6e18bd3ba390c971acbde88c51f849a2d0d08a049203f4",
+    "docs/evidence/coarse-distance-budget-2026-10-25/analysis.json": "285f666212f236cb19d732e7c710d98439585f9f2449a3cbe77a34213dadf483",
+    "docs/evidence/coarse-distance-budget-2026-10-25/bound-derivation.json": "940a794a70cdc8165886441c77b513eb1f3889a604272b8974001d3bcdb514d1",
+    "docs/evidence/coarse-timing-exposure-2026-10-25/report.json": "cdc5f02cd05c7a7516aa1f025f1ecaaf62e3ebb3eafed9f602dfde568cfd76b6",
+    "docs/evidence/coarse-timing-exposure-2026-10-25/decision.json": "c117b53a07548f2c5cc49fc8a8527af87dd76ea87012f1c8b7a2373c1d8b597e",
+    "docs/evidence/coarse-road-time-control-2026-10-25/report.json": "1989a55ba20197d381dbde5f43e3c37a298439c51132f9d3bda16ba7c430f3e8",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd",
+    "docs/evidence/coarse-backbone-geometry-2026-10-25/plan.json": "fb1f8cad561e791c55db31751e5b0897e3ba7de1ceca4c11bcb978226f2d2420",
+    "docs/evidence/coarse-damped-calibration-2026-10-24/README.md": "57c2cd725497e32f416c7e079f5ab956de3f69e535fbec57aa3d3f973cd88938",
+    "docs/evidence/coarse-damped-calibration-2026-10-24/feature-diagnosis.json": "789fdca600bf1d3adabc3112b5c65fe2ec2b7647d565da79c45da95d979bb6f2",
+    "docs/evidence/coarse-path-features-2026-10-24/README.md": "9a52caa178c222a2a9e9dc996b43967993d0deca41926908bdd649a28bf176c1",
+    "src/server/backbone-geometry.ts": "9bd333d9b409754978ff24d0adbe05ef731f438656fe413ed556672619e929b8",
+    "src/server/backbone-routing.ts": "aa2b54c707b8bc78959bd336ebe1152d168988cf27e856caa89bf9198641ae4a"
+  },
+  "decision": "Prioritize generic timing features beyond broad source class; longer modeled distance does not explain the eight missed cases. Preserve current display/geometry and all original gates.",
+  "method": [
+    "Review existing saved controls and prior class/expressway/curvature/connector experiments so the next step adds evidence rather than repeating a failed factor rule.",
+    "Inventory available timing-related attributes in cached sources, current graph and saved reference schemas: road role/class/source, explicit speed attributes if any, original source-junction incidence, transition angle/continuity and paid transfer costs. Distinguish recorded facts from inferences and unsupported/missing attributes. Read cached schemas/records only; no source producer or download.",
+    "Original source junctions must be distinguished from artificial cell-crossing states and simplified interior vertices. Source incidence or geometry angles do not establish legal turns, stop controls, grade separation or actual delays. Do not add a penalty per grid split/graph edge or use cities/coordinates/regions/horizons as routing features.",
+    "If a new saved-path feature extraction is needed, first freeze its exact tools/inputs/cohorts/commands and fresh outputs. Retain all 83/35 and original contrary cases; no optimized thresholds, regression fit, alternate-factor sweep or predicted-accuracy search.",
+    "Produce one concrete implementable generic timing hypothesis with component equations, provenance/availability, unchanged-cost reproduction controls, synthetic checks and original prospective acceptance gates. Explain what new feature distinguishes it from failed broad class/expressway/blanket rules. Freeze policy/tool/artifact/evaluation inputs before a later candidate, without claiming it will pass.",
+    "If available inputs cannot support such a hypothesis, identify the exact missing timing/access attribute and prepare the smallest bounded data-input proposal, including source, coverage, storage/processing limits and integration implications. Do not substitute another diagnostic with no decision or acquire new data during this task."
+  ],
+  "pass": "A reviewable single generic timing policy/design with valid existing inputs and explicit unmeasured limits, or one concrete bounded missing-data proposal. No candidate generation/query in this design task, fitting, special-case routing or relaxation of prior failures.",
+  "prohibited": [
+    "new route/field/contour",
+    "source producer/download",
+    "provider/env/key/DB input",
+    "case/region/coordinate/horizon routing exception",
+    "artificial-node/edge-count delay",
+    "fitted speed/cutoff/factor sweep",
+    "runtime/config/dependency change",
+    "commit/push/deploy"
+  ],
+  "scope": "Observed development evidence; ORS recommended fallback and 35 older Valhalla sensitivity retained. No causal traffic/turn-speed, national/area/holdout or app/cloud qualification. No further provider budget exists."
+}

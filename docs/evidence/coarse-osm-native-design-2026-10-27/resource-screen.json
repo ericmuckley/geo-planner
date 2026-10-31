@@ -1,0 +1,57 @@
+{
+  "scope": "Conditional format arithmetic, not measured size, throughput, ID range or full-import admission.",
+  "illustrativeBound": {
+    "nodes": 1606229364,
+    "assumedMaximumId": 1099511627775,
+    "blocks": 392146,
+    "shards": 766,
+    "coordinateBytes": 12849834912,
+    "idVarintBytesUpperBound": 3279311712,
+    "headerDirectoryReceiptBytes": 54525376,
+    "allocationRoundingReserveBytes": 3149824,
+    "indexBytesUpperBound": 16186821824,
+    "marginedIndexBytes": 24280232736,
+    "perIndexScreenPassesConditionally": true
+  },
+  "fullSigned63IdDomain": {
+    "nodes": 1606229364,
+    "assumedMaximumId": 9223372036854775807,
+    "blocks": 392146,
+    "shards": 766,
+    "coordinateBytes": 12849834912,
+    "idVarintBytesUpperBound": 8299735206,
+    "headerDirectoryReceiptBytes": 54525376,
+    "allocationRoundingReserveBytes": 3149824,
+    "indexBytesUpperBound": 21207245318,
+    "marginedIndexBytes": 31810867977,
+    "perIndexScreenPassesConditionally": false
+  },
+  "largestMaximumIdPassingThisBound": 17242489503744,
+  "actualNationalMaximumId": null,
+  "maximumReplacementShardBytes": 35684480,
+  "retainedReadOnlyAndOtherReservations": {
+    "originalOtherWorkingBytes": 13730880848,
+    "oldUntrustedIndexBytesReserved": 8783028224,
+    "qualifiedRuntimeImageBytes": 191505175,
+    "newBuildClosureReservationBytes": 15032385536,
+    "earlierSmallOutputsReservationBytes": 1073741824
+  },
+  "additionalPrimaryDirectoryAndReceiptBytes": 29342272,
+  "conditionalMarginedWorkingBytes": 63189314471,
+  "workingLimitBytes": 68719476736,
+  "conditionalWorkingSlackBytes": 5530162265,
+  "unproven": [
+    "National maximum ID; sample IDs do not establish it.",
+    "Actual compiler image/header/lib closure and expanded bytes within the reserved14GiB.",
+    "Measured allocation/FS metadata, lookup latency, memory and two-pass runtime.",
+    "Native guard/ABI/selection/semantic-seal/canonical fallback equivalence."
+  ],
+  "futureNodePrefixGateSeconds": 0.07,
+  "futureMarginedTwoNodePassForecastSecondsAtGate": 7027.253467500001,
+  "oldWorkSeconds": 14340,
+  "otherWorkSecondsRemainingAtGate": 7312.746532499999,
+  "futureSampleObjectLimit": 200000,
+  "futureSampleAggregateLimit": 2000000,
+  "fullImportAdmitted": false,
+  "anyNewNationalScan": false
+}

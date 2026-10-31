@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "status": "Next design/primary-documentation review only; no new acquisition or execution recipe",
+  "inputs": {
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/decision.json": "15756dc6138da3e160b82eb3d265abd980c96cd6df87af4cf0aeefcf70cd1604",
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/report.json": "8e7f6415da59055e83c802db9edc0bb058ecae7a4712585252b8579aaf196e95",
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/metrics.json": "0ff10aa5e1333da55ff7d88730561bc2c83ff61b3beaf946d8eab3d7f64b3d87",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/README.md": "49fad63b9145f345f18c253e9a8933fc8c2077ad5d000e77cdff3b7e89ef9841",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/execution-plan.json": "0f8c66eabacbef0fb9ad2db666441c3820b3e03a35e92984f6b06255d2641a0d",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/state.json": "b8e3f2c9a810682f6c2bce61098ff3842698e3a94ad772270dfcf393f0298561",
+    "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730",
+    "docs/evidence/coarse-timing-fragments-2026-10-26/execution-plan.json": "509e98e071d67659698a550e6672766bad5e820a4f8d82c20688199669913fdd"
+  },
+  "objective": "Choose one enforceably bounded way to obtain complete road speed/access/identity inputs for a feasibility pilot, after geometry-only matching improved but the stopped cache remained sparse/unqualified. Keep eventual Vercel queries dependent on compiled static costs, not per-query road-data/DB/provider access.",
+  "method": [
+    "Preserve the stopped Overture pilot and all subsequent cache/matcher results as historical evidence. Do not resume its requests, reuse unused allowance, switch its release, overwrite outputs or change its frozen parser/matcher.",
+    "Review primary documentation for at most2 candidate approaches: spatially pruned Overture extraction/distribution, and bounded OSM extracts. Treat availability, pricing, partitioning and request behavior as unverified until checked. This next design task may read official documentation/schema/metadata descriptions, but fetch no road objects, tool binaries or hosted routing results.",
+    "Choose1 approach only if the documents support a concrete bounded complete-window acquisition and safe preservation of source IDs/geometry/speed units/direction/access/level scopes and license/provenance. A bbox filter or SQL LIMIT alone is not a transport/memory/storage bound. If neither approach supports the bounds, record no-go without increasing resources or starting downloads.",
+    "Write one exact prospective proposal with source/release/schema/object identity resolution, unchanged21 validation windows and every source/class denominator, columns, request/byte/tool/disk/row/time budgets, timeout/retry/failure policy and independent completeness/transport/parser/match-review checks. Do not infer whole-car permission from generic allowed tags or convert posted limits to actual travel times.",
+    "Proposed resource/network ceilings must not exceed the original pilot envelope without a separately justified task:512MiB total HTTP bodies including metadata/tools,128MiB tools within total,10000 attempts,0 retries/paid spend/routing-provider queries,1GiB process memory/zero swap,2GiB working storage,128MiB extract,250000 rows,1hour. Specify enforceable limits and raw failure preservation before any later implementation/acquisition.",
+    "Retain original readiness: all21 window ledgers complete and frozen schema/provenance/parser accounting; original50% unique plausible usable-limit Census-km screen and deterministic independent match review, with physical/access/source uncertainty explicit. Geometry-only hypothesis success does not waive these gates. National expansion and a timing policy remain separate later tasks.",
+    "End with one selected design or explicit no-go, assumptions verified by primary citations, exact proposed commands/budgets and pass/fail criteria. Do not implement a new downloader or execute acquisition during this design task. A later run needs exact code/dependency/input/resource freeze and a fresh output path."
+  ],
+  "pass": "One documented, reviewable bounded acquisition design, or explicit evidence-based no-go. All old evidence and budgets preserved; no road/tool/provider acquisition or runtime/data-policy change. Any source claims are distinguished from forecasts and all original gates remain.",
+  "deferred": "New road-data/tool download, stopped-pilot retry, uncapped remote filesystem/SQL scan, paid service, provider quota, schema/matcher/access semantics change, timing/model build, DB/env/npm/app/runtime change, national expansion and commit/push/deploy."
+}

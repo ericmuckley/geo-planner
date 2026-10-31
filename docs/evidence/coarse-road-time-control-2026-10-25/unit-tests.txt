@@ -1,0 +1,16 @@
+✔ held source-state sequence reproduces old costs and computes new prefixes without search (1.547542ms)
+✔ parallel source arc identity is held even when another arc has the same endpoints (0.340125ms)
+✔ base road can become local within a held state pair and is reported separately (0.189292ms)
+✔ bound applicability uses graph prefixes and excludes the final point attachment (0.037625ms)
+✔ worse actual cost under an eligible held path fails while cap-limited gaps stay visible (0.046625ms)
+✔ discontinuous chains, moved coordinates and stale recorded prices are rejected (0.235083ms)
+✔ state/arc identity comparison ignores road/local kind changes (0.095292ms)
+✔ accounting leaves shared arrays unchanged and unsupported records fail explicitly (0.41275ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.907917

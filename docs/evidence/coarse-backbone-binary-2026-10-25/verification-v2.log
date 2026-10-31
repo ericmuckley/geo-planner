@@ -1,0 +1,24 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(
+  	destination.startsWith(
+  		`${resolve("docs/evidence/coarse-backbone-binary-2026-10-25")}/`,
+  	),
+  )
+
+    at file:///Users/eric/Documents/GitHub/geo-planner/scripts/verify-backbone-binary-probe.mjs:11:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:371:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:669:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}
+
+Node.js v24.5.0

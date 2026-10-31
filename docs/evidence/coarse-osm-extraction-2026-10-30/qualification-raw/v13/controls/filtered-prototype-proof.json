@@ -1,0 +1,569 @@
+{
+  "proposal": {
+    "version": 2,
+    "status": "Reviewable proposed offline input revision; NOT ACTIVATED, implemented or executable-frozen",
+    "inputs": {
+      "docs/evidence/coarse-osm-bulk-review-2026-10-26/next-scope-plan.json": "258e4710d9132866eac8e0a9e93b91503ad19ba2b510ecc05eebd1f9d0131538",
+      "docs/evidence/coarse-osm-bulk-review-2026-10-26/decision.json": "beab11b57c6d0ed12fbef40d6bd584045a347fd041b377b1a5eece4470e3053e",
+      "docs/evidence/coarse-osm-bulk-review-2026-10-26/sources.json": "d2bdb94e2909aea4a59c21bc2fb0c8a7f1de4c6e86f9ff3eb5cfee4fa1d77e3f",
+      "docs/evidence/coarse-osm-bulk-review-2026-10-26/closure-review.json": "9b03c7ae4b16e31b8613e67f1359e6f389c53feef5ecc7db89045df7f5514ae7",
+      "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730",
+      "docs/evidence/coarse-osm-offline-plan-2026-10-26/capacity.json": "a0d0090ab43597331f0aa2643cf3cef02205d0f3eb20964c5032dba8b4ace0d1",
+      "docs/evidence/coarse-osm-offline-plan-2026-10-26/linux-metadata-ledger.json": "2d3ca1b96b8567e0677bf38c9b9523743627089e1598539e504f986311d5321a",
+      "docs/evidence/coarse-osm-offline-plan-2026-10-26/linux-metadata/dated-md5.bin": "b3e681c8167ec305d00f8a1b4081ac124d7feedb7ff99c194705f82590ff2b7b",
+      "docs/evidence/coarse-osm-offline-plan-2026-10-26/linux-metadata/pyosmium-json.bin": "a59a5dd21e003748167b81068b7bafce5c1cf54834a6cd096e6f44fabe029eb6"
+    },
+    "source": {
+      "url": "https://download.geofabrik.de/north-america/us-261025.osm.pbf",
+      "listedBodyBytes": 12229320016,
+      "publisherMd5": "c5abaec55e724255277f22fb97941e5a",
+      "checksumUrl": "https://download.geofabrik.de/north-america/us-261025.osm.pbf.md5",
+      "proposedPublisherReplicationStateUtc": "2026-10-25T21:21:21Z",
+      "oldExactTimeQueryUtc": "2026-10-21T00:00:00Z",
+      "differenceSeconds": 422481,
+      "identityPolicy": "Explicit new publisher-state input version. Dated URL and captured MD5 pin expected contents; MD5 is a publisher integrity checksum, not a strong authenticity proof. Future acquisition must independently retain SHA256, source header/features/replication state and full raw file. Require exact bytes/MD5/header state; drift or missing identity stops with no latest/date fallback. Do not claim header timestamp is global all-object snapshot completeness. No PBF/header has been read yet.",
+      "license": "OSM ODbL/attribution; preserve publisher/source provenance and raw missing editor metadata status."
+    },
+    "windows": [
+      {
+        "id": "a",
+        "bbox": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "b",
+        "bbox": [
+          0.25,
+          0.25,
+          0.75,
+          0.75
+        ]
+      }
+    ],
+    "oldWindowsOrGatesChanged": false,
+    "proposedCaps": {
+      "totalHttpBodyBytes": 12884901888,
+      "httpAttempts": 17,
+      "pbfGets": 1,
+      "wheelGets": 6,
+      "metadataGets": 10,
+      "toolArchiveBodyBytesWithinTotal": 134217728,
+      "metadataBodyBytesWithinTotal": 16777216,
+      "retries": 0,
+      "redirectsFollowed": 0,
+      "paidSpend": 0,
+      "providerQueries": 0,
+      "databaseAccessToAppPostgres": 0,
+      "clientMemoryBytes": 4294967296,
+      "swapBytes": 0,
+      "cpus": 2,
+      "workingBytesIncludingTmp": 33554432,
+      "hostFreeHeadroomBytes": 17179869184,
+      "requiredInitialFreeBytes": 85899345920,
+      "wallSeconds": 30,
+      "tmpBytes": 65536,
+      "selectedUniqueTypedElements": 250000,
+      "selectedWindowElementOccurrences": 500000,
+      "normalizedExtractBytes": 1048576,
+      "singleNormalizedElementBytes": 1048576,
+      "sqliteIndexBytesEach": 1048576,
+      "sqlitePageBytes": 4096,
+      "sqliteMaxPagesEach": 256,
+      "sqliteCacheBytesEach": 8192,
+      "pythonSelectionStateBytes": 4194304,
+      "retainedNativeObjectBytes": 1048576,
+      "pbfHeaderBytesExclusiveMaximum": 65536,
+      "pbfUncompressedBlobBytesExclusiveMaximum": 33554432,
+      "scanNodesPerPass": 10000,
+      "scanWaysPerPass": 10000,
+      "scanRelationsPerPass": 10000,
+      "scanObjectVisitsTotal": 100000,
+      "fullObjectDecodePasses": 4
+    },
+    "resourceArithmetic": {
+      "networkComponents": {
+        "exactPbf": 12229320016,
+        "allWheelArchives": 134217728,
+        "allMetadata": 16777216,
+        "errorBodiesAndSentinelsReserve": 2097152
+      },
+      "maximumPlannedBodyBytes": 12382412112,
+      "networkCapSlackBytes": 502489776,
+      "storageComponents": {
+        "rawPbf": 12229320016,
+        "primaryNodeIndex": 25769803776,
+        "independentAuditNodeIndex": 25769803776,
+        "normalizedExtract": 134217728,
+        "toolArchivesAndInstalledTree": 536870912,
+        "metadata": 16777216,
+        "ledgersReportsLogs": 536870912,
+        "tmpfsReserve": 268435456,
+        "driverStateReserve": 8388608
+      },
+      "assignedWorkingBytes": 65270488400,
+      "workingCapSlackBytes": 3448988336,
+      "hostObservedFreeMinusRequiredBytes": 80562642944,
+      "dockerObservedMemoryMinusWorkerBytes": 3923066880,
+      "minimumDockerMemoryBytes": 6442450944,
+      "minimumHostMemoryBytes": 8589934592,
+      "minimumCpuCount": 2,
+      "scope": "Assigned caps/reserves, not predicted or measured working sizes, memory peaks or four-hour completion. Read-only local capacity is sufficient for these proposed limits at observation time; recheck before execution."
+    },
+    "departuresFromOriginal": {
+      "bodyBytes": [
+        536870912,
+        12884901888
+      ],
+      "memoryBytes": [
+        1073741824,
+        4294967296
+      ],
+      "workingBytes": [
+        2147483648,
+        68719476736
+      ],
+      "wallSeconds": [
+        3600,
+        14400
+      ],
+      "tmpBytes": [
+        67108864,
+        268435456
+      ],
+      "upstreamRows": "New explicitly counted national scan stream; original250000 selected elements/500000 per-window occurrences and128MiB normalized caps remain. Four passes each <=1B nodes/100M ways/10M relations =4.44B maximum object visits. Index/byte/time caps may stop far earlier. No inferred count from file size.",
+      "sourceState": "Proposed new publisher replication state replaces the old exact historical-time acquisition only for a separately versioned future run. Old source evidence/results/snapshot remain intact. Original source/matching/accuracy gates are not waived."
+    },
+    "tools": {
+      "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+      "python": "CPython3.13 Linux aarch64",
+      "reader": "Pyosmium4.3.2",
+      "wheel": {
+        "filename": "osmium-4.3.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/ba/34/1c7e25d29329cf7c092e5360744a8fdae4d855a2b4880b5e54e7141eb7eb/osmium-4.3.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+        "size": 1729855
+      },
+      "wheelSha256": "456234255186a6f9aae83e70cce3e878f51673c37595f116d54f2cd861151b61",
+      "runtimeDependency": "requests and its transitives; resolve and freeze all exact wheels, versions, sizes, SHA256/URLs before any binary GET, maximum6 wheels total. No tests/docs extras, source builds, apt, arbitrary pip network resolution or image pull. If closure exceeds caps, stop for revised design.",
+      "lockComplete": false,
+      "installation": "Future isolated tool directory only: python3 -B -m pip install --no-index --no-deps --no-compile --target /tools/site /inputs/wheels/*.whl after every archived wheel hash and size is checked; immutable cached stdlib Python/SQLite. Read-only import/ABI/PBF tiny-fixture smoke test network=none before any PBF GET. No app/npm/environment modification."
+    },
+    "networkPlan": {
+      "counts": "1 dated MD5 +1 dated source listing +1 publisher polygon +1 Pyosmium metadata +<=6 dependency metadata +<=6 wheel GETs +1 PBF =<=17 requests. Stop if more packages/requests are needed. All exact paths/hashes are bound before corresponding requests; only one final PBF GET.",
+      "hosts": [
+        "download.geofabrik.de",
+        "pypi.org",
+        "files.pythonhosted.org"
+      ],
+      "transport": "One direct verified-TLS meter, identity encoding, no inherited proxy/cookie/auth, redirects/range/resume/retry or automatic source fallback. Byte/attempt ledgers before IO; bounded raw/error/partial spool. A new Linux trust path is proven for metadata only; synthetic full absolute deadlines/chunk/framing/certificate failures remain required. No credential mount or host trust changes.",
+      "deadlinesSeconds": {
+        "metadataAbsolute": 20,
+        "wheelAbsolute": 120,
+        "pbfAbsolute": 5400,
+        "idleRead": 30,
+        "wholeRun": 14400
+      },
+      "phases": "Owned acquisition worker bridge network, then owned extraction/audit worker network=none. Read-only image/code/source/tools, only owned outputs writable, --init/no pull/no env mount. One global wall interval including network/setup/four file scans/audit and cleanup; independent watchdog/host remaining-time bound. Code host/path allowlist is not an OS hostname firewall."
+    },
+    "extraction": {
+      "sourceFraming": "Require OSM0.6/DenseNodes support; reject unknown required features/history/multiple versions, unsupported compression, malformed/truncated frames or missing identity. Guard BlobHeader<64KiB and decoded Blob<32MiB before admission; prove decoder/decompression behavior synthetically, with cgroup hard bound. No full XML conversion.",
+      "pass1": "Scan complete file to EOF in verified type/ID order. Store every node ID and copied native coordinate in the primary capped SQLite index; duplicate/out-of-order ID or malformed/too-new record stops. For each highway way, copy bounded raw native fields/references, batch lookup all referenced coordinates, test every segment against every original bbox including inclusive boundary touches. Missing referenced geometry stops rather than calling a way outside. Select solely by segment intersection, without city/region/type/access shortcuts or node-inside requirement. Count all upstream nodes/ways/relations and every selected-window occurrence.",
+      "pass2": "Rescan the same hash-bound file to recover complete native metadata/tags for each selected referenced node and selected way. Retain restriction relations with a typed member referring to a selected way or its full nodes, preserving all raw roles/members and unresolved external references; no recursive repair downloads or access inference. Check coordinates against pass1 index, ordered dependency identity, exact typed de-duplication/normalization prefixes and all21 complete-from-file window inventories.",
+      "auditPass3": "Independently rebuild a second capped coordinate index from the same raw file and enumerate selected ways/typed memberships using a separate geometry/control implementation. Do not read primary selection/index results to seed the audit. Same Pyosmium decoder/SQLite and low-level native/hash primitives are explicitly shared, not independent source/physical verification.",
+      "auditPass4": "Recover independent full selected-node/way/restriction metadata from raw input, compare complete selection sets, native fields, per-window counts, missing/external references, raw-file/node-dependent hashes and normalized output prefix. Retain both capped indexes and all failures; source identity and output admission require all4 EOF scans/audits/counters/limits to reconcile.",
+      "sqlite": "Each newly owned derived index: page_size4096/max_page_count6291456/cache_size-131072/mmap_size0/temp_storeMEMORY/journal_modeOFF, read back every setting and test compile-option behavior. No WAL or unmetered temp/extra indexes. Cache is only a hint; 4GiB cgroup is the hard limit. OFF indexes may corrupt on error/crash; never trust/resume them, never roll back/reuse to claim success. Raw PBF and append-only failure ledgers stay preserved. Final index integrity check only on successful completed scans.",
+      "sourceBoundaryGate": "Completion means complete extraction of the acquired publisher PBF, not all global OSM/physical roads. Before original source feasibility can be asserted, separately verify publisher clipping/polygon adequacy for every unchanged window and document unresolved outside-file competitors/cross-boundary dependencies. A polygon containing a window alone does not prove inclusion of every possible long crossing way. If source adequacy cannot be justified, keep original completeness gate unqualified even after successful extraction.",
+      "retainedSemantics": "Preserve raw native version/timestamp/coordinates/all tags and missingness/ordered node references/typed restriction roles. No speed units/defaults/access/direction interpretation, Overture adapter, matcher, graph or ETA/model run.",
+      "hashIoScope": "Four passes count native-object decoding, not every filesystem read. Download MD5/SHA256 are incremental. Additional immutable-file hash checks/framing reads must be metered separately and included in the same four-hour wall bound; no four-pass throughput/performance forecast is claimed."
+    },
+    "acceptance": "This stage passes on a reviewable proposal and capacity/arithmetic/synthetic reasoning. Later execution only after tool closure/native framing/geometry/index/storage/timeout/resource tests pass and a separate exact code/dependency/input/query/resource recipe is frozen. Data capture success requires bytes/MD5/new SHA256/header state, four complete scans, all21 acquired-file-complete ledgers, independent audit/limits/cleanup. Still no original source feasibility, usable limits, physical identity or model admission.",
+    "failure": "Retain every attempted metadata/tool/raw/error/partial file, capped index and normalized prefix, scan/window outcomes and source/counter/state/resource/cleanup ledger. No overwrite/resume/retry/latest/mirror/raised-cap fallback or deletion of failed evidence. Hard kill/OOM/SQLite integrity failure marks indexes/output untrusted; counter partialness explicit. A correction requires a separately versioned design/run.",
+    "futureOutput": "data/coarse-quality/us-osm-input-v2",
+    "executionReady": false,
+    "largerLimitsActivated": false,
+    "sourceSnapshotActivated": false,
+    "toolsFetchedOrInstalled": false,
+    "roadDataFetched": false,
+    "deferred": "Native speed/access adapter/parser/matching,50% usable-limit screen/independent match review,all83/35 accuracy/physical/package/memory/startup/API/visual gates, national model integration and any app/UI/env/DB/npm/Vercel/commit/push/deploy change. All original gates stay required; publisher-state freshness is no accuracy proof."
+  },
+  "state": {
+    "status": "passed_cell_filtered_extraction_prototype",
+    "stage": "all-highway-independent-materialization",
+    "passes": [
+      {
+        "label": "all-highway-primary-selection",
+        "status": "eof",
+        "counts": {
+          "node": 4,
+          "way": 3,
+          "relation": 2
+        }
+      },
+      {
+        "label": "all-highway-independent-materialization",
+        "status": "eof",
+        "counts": {
+          "node": 4,
+          "way": 3,
+          "relation": 2
+        }
+      }
+    ],
+    "windows": [
+      {
+        "id": "a",
+        "status": "unmeasured"
+      },
+      {
+        "id": "b",
+        "status": "unmeasured"
+      }
+    ],
+    "sourceFeasibilityQualified": false,
+    "publisherBoundaryQualified": false,
+    "sourceAdapterImplemented": false,
+    "nativeDecoderQualified": false,
+    "routingProviderRequests": 0,
+    "scanObjectVisits": 18,
+    "extractBytes": 1470,
+    "retainedElements": 4,
+    "windowOccurrences": 8,
+    "hashFramingBytesRead": 0,
+    "counterScope": "Recognized native source objects including rejected/cap+1; full count/seal only at normal EOF.",
+    "elapsedSeconds": 0.22506387496832758,
+    "publisherStateUtc": "2026-10-25T21:21:21Z",
+    "independentAuditComplete": true,
+    "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+    "nativeReceipts": [
+      {
+        "nodes": 4,
+        "ways": 3,
+        "relations": 2,
+        "visits": 9,
+        "nativeEof": true,
+        "fallbacks": 0,
+        "blocks": 1,
+        "semanticBytes": 930,
+        "projectedFrames": 2,
+        "checkpoints": 1,
+        "acceptedNodes": 4,
+        "acceptedWays": 3,
+        "acceptedRelations": 2,
+        "maxNodeId": 4,
+        "maxWayId": 4,
+        "maxRelationId": 2,
+        "references": 6,
+        "members": 4,
+        "canonicalLowerBytes": 1380,
+        "canonicalUpperBytes": 1612,
+        "copyBytes": 3842,
+        "maxCopyBytes": 833,
+        "tags": 10,
+        "tagUtf8Bytes": 181,
+        "maxCanonicalLowerBytes": 288,
+        "maxCanonicalUpperBytes": 288,
+        "maxVersion": 1,
+        "sourceEncodeRows": 4,
+        "sourceDecodeRows": 4,
+        "sourceCodecCalls": 2,
+        "highwayWays": 2,
+        "longHighwayWays": 0,
+        "outOfRangeHighwayWays": 0,
+        "eligibleHighwayWays": 2,
+        "traceWays": 2,
+        "traceReferences": 4,
+        "witnessRows": 0,
+        "maxReferences": 2,
+        "maxMembers": 3,
+        "examinedHighwayReferences": 4,
+        "nextExcludedPriority": 0,
+        "nextExcludedId": 0,
+        "nextExcludedOrdinal": 0,
+        "nodeSpanStartNs": 270792,
+        "nodeSpanEndNs": 274209,
+        "waySpanStartNs": 274209,
+        "waySpanEndNs": 11268500,
+        "relationSpanStartNs": 11268500,
+        "relationSpanEndNs": 37248709,
+        "maxTags": 4,
+        "nodeMembers": 1,
+        "wayMembers": 3,
+        "relationMembers": 0,
+        "batchWays": 2,
+        "batchReferences": 4,
+        "wayBatches": 1,
+        "counts": {
+          "node": 4,
+          "way": 3,
+          "relation": 2
+        },
+        "semanticSha256": "04630ed15b3eb0925917fb1d4dcabb51991d3cfe65eee84bc5a76b7652b9ed81",
+        "semanticFormat": "geo-planner-projected-fields-v1",
+        "error": "",
+        "pythonProjectionFrames": 2,
+        "callbackEvents": [
+          1,
+          0,
+          2,
+          1,
+          1,
+          2,
+          0,
+          3,
+          1
+        ],
+        "canonicalFallbackExactSizes": [],
+        "metadata": {
+          "node": {
+            "count": 4,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 11,
+            "maxTags": 1,
+            "maxVersion": 1,
+            "maxCopyBytes": 331,
+            "maxReferences": 0,
+            "maxMembers": 0
+          },
+          "way": {
+            "count": 3,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 69,
+            "maxTags": 4,
+            "maxVersion": 1,
+            "maxCopyBytes": 645,
+            "maxReferences": 2,
+            "maxMembers": 0
+          },
+          "relation": {
+            "count": 2,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 56,
+            "maxTags": 2,
+            "maxVersion": 1,
+            "maxCopyBytes": 833,
+            "maxReferences": 0,
+            "maxMembers": 3
+          }
+        },
+        "deliveredBatchWays": 2,
+        "deliveredBatchReferences": 4,
+        "selectedNodeProjections": 0,
+        "restrictionProjections": 2,
+        "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+        "sourceIdentity": {
+          "publisherStateUtc": "2026-10-25T21:21:21Z",
+          "requiredFeatures": [
+            "DenseNodes",
+            "OsmSchema-V0.6"
+          ],
+          "framingBytesRead": 564,
+          "frames": 4,
+          "sourceSha256": "1dbfca4f9fc849aea04c371327967803e862abb3c1da6daf78da63982f6feddb",
+          "sourceMd5": "ea94f62995481fce42b58ec4caf3c981"
+        },
+        "framingSeconds": 0.04507883300539106,
+        "nativeSeconds": 0.04339054197771475,
+        "postSourceHashSeconds": 0.003573582973331213,
+        "postSourceHashBytes": 564,
+        "knownGuardReadBytes": 1128
+      },
+      {
+        "nodes": 4,
+        "ways": 3,
+        "relations": 2,
+        "visits": 9,
+        "nativeEof": true,
+        "fallbacks": 0,
+        "blocks": 1,
+        "semanticBytes": 930,
+        "projectedFrames": 4,
+        "checkpoints": 1,
+        "acceptedNodes": 4,
+        "acceptedWays": 3,
+        "acceptedRelations": 2,
+        "maxNodeId": 4,
+        "maxWayId": 4,
+        "maxRelationId": 2,
+        "references": 6,
+        "members": 4,
+        "canonicalLowerBytes": 1380,
+        "canonicalUpperBytes": 1612,
+        "copyBytes": 3842,
+        "maxCopyBytes": 833,
+        "tags": 10,
+        "tagUtf8Bytes": 181,
+        "maxCanonicalLowerBytes": 288,
+        "maxCanonicalUpperBytes": 288,
+        "maxVersion": 1,
+        "sourceEncodeRows": 4,
+        "sourceDecodeRows": 4,
+        "sourceCodecCalls": 2,
+        "highwayWays": 2,
+        "longHighwayWays": 0,
+        "outOfRangeHighwayWays": 0,
+        "eligibleHighwayWays": 2,
+        "traceWays": 2,
+        "traceReferences": 4,
+        "witnessRows": 2,
+        "maxReferences": 2,
+        "maxMembers": 3,
+        "examinedHighwayReferences": 4,
+        "nextExcludedPriority": 0,
+        "nextExcludedId": 0,
+        "nextExcludedOrdinal": 0,
+        "nodeSpanStartNs": 216583,
+        "nodeSpanEndNs": 6111541,
+        "waySpanStartNs": 6111541,
+        "waySpanEndNs": 20457583,
+        "relationSpanStartNs": 20457583,
+        "relationSpanEndNs": 50683041,
+        "maxTags": 4,
+        "nodeMembers": 1,
+        "wayMembers": 3,
+        "relationMembers": 0,
+        "batchWays": 2,
+        "batchReferences": 4,
+        "wayBatches": 1,
+        "counts": {
+          "node": 4,
+          "way": 3,
+          "relation": 2
+        },
+        "semanticSha256": "04630ed15b3eb0925917fb1d4dcabb51991d3cfe65eee84bc5a76b7652b9ed81",
+        "semanticFormat": "geo-planner-projected-fields-v1",
+        "error": "",
+        "pythonProjectionFrames": 4,
+        "callbackEvents": [
+          1,
+          0,
+          4,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "canonicalFallbackExactSizes": [],
+        "metadata": {
+          "node": {
+            "count": 4,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 11,
+            "maxTags": 1,
+            "maxVersion": 1,
+            "maxCopyBytes": 331,
+            "maxReferences": 0,
+            "maxMembers": 0
+          },
+          "way": {
+            "count": 3,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 69,
+            "maxTags": 4,
+            "maxVersion": 1,
+            "maxCopyBytes": 645,
+            "maxReferences": 2,
+            "maxMembers": 0
+          },
+          "relation": {
+            "count": 2,
+            "minTimestamp": "2026-10-20T00:00:00Z",
+            "maxTimestamp": "2026-10-20T00:00:00Z",
+            "maxTagUtf8Bytes": 56,
+            "maxTags": 2,
+            "maxVersion": 1,
+            "maxCopyBytes": 833,
+            "maxReferences": 0,
+            "maxMembers": 3
+          }
+        },
+        "deliveredBatchWays": 2,
+        "deliveredBatchReferences": 4,
+        "selectedNodeProjections": 2,
+        "restrictionProjections": 2,
+        "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+        "sourceIdentity": {
+          "publisherStateUtc": "2026-10-25T21:21:21Z",
+          "requiredFeatures": [
+            "DenseNodes",
+            "OsmSchema-V0.6"
+          ],
+          "framingBytesRead": 564,
+          "frames": 4,
+          "sourceSha256": "1dbfca4f9fc849aea04c371327967803e862abb3c1da6daf78da63982f6feddb",
+          "sourceMd5": "ea94f62995481fce42b58ec4caf3c981"
+        },
+        "framingSeconds": 0.05271054100012407,
+        "nativeSeconds": 0.05630020902026445,
+        "postSourceHashSeconds": 0.0029919579974375665,
+        "postSourceHashBytes": 564,
+        "knownGuardReadBytes": 1128
+      }
+    ],
+    "lookups": [
+      {
+        "authenticatedShardBytes": 454,
+        "hashAndFormatSeconds": 0.00019620900275185704,
+        "blockDecodeSeconds": 9.583949577063322e-06
+      },
+      {
+        "authenticatedShardBytes": 454,
+        "hashAndFormatSeconds": 0.00018170796101912856,
+        "blockDecodeSeconds": 1.0166957508772612e-05
+      }
+    ],
+    "coordinateStoragePeakBytes": 2305,
+    "coordinateStorageLiveBytes": 2305,
+    "cellBankBytesPeak": 581,
+    "coarseLookups": [
+      {
+        "label": "all-highway-primary-selection",
+        "bankBytes": 581,
+        "bankBlocks": 1,
+        "codecRowsCumulative": 20,
+        "codecCallsCumulative": 5,
+        "maskReferencesCumulative": 4,
+        "maskCallsCumulative": 1,
+        "queryBlocks": 1,
+        "examinedReferences": 4,
+        "fineReferences": 2,
+        "certifiedOutsideWays": 1
+      },
+      {
+        "label": "all-highway-independent-materialization",
+        "bankBytes": 581,
+        "bankBlocks": 1,
+        "codecRowsCumulative": 40,
+        "codecCallsCumulative": 10,
+        "maskReferencesCumulative": 8,
+        "maskCallsCumulative": 2,
+        "queryBlocks": 1,
+        "examinedReferences": 4,
+        "fineReferences": 2,
+        "certifiedOutsideWays": 1
+      }
+    ],
+    "liveBatchHeapLimitBytes": 134217728,
+    "liveBatchConservativeHeapPeakBytes": 3811,
+    "nativeCellFilteredSyntheticQualified": true,
+    "wholeExtractionQualified": false,
+    "modelChanged": false
+  },
+  "outputBytes": 1470,
+  "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+  "referenceOutputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+  "cellCodecRows": 40,
+  "cellCodecCalls": 10,
+  "maskReferences": 8,
+  "maskCalls": 2,
+  "scope": "Tiny synthetic exact output and conservative rejection; no national bank/performance/storage qualification."
+}

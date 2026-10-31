@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,unittest; from coarse_timing_input import cgroup_limit,start_watchdog; from run_timing_cache import network_guard; guard=start_watchdog(120); print(json.dumps({"memory":cgroup_limit(),"network":network_guard()}),flush=True); result=unittest.TextTestRunner().run(unittest.defaultTestLoader.discover(".",pattern="coarse_timing_fragments_test.py")); guard.terminate(); guard.wait(timeout=5); raise SystemExit(not result.wasSuccessful())
+                                                                                                                                         ~~~~~~~~~~~~~~^^^^^
+  File "/code/coarse_timing_input.py", line 345, in start_watchdog
+    require(os.getpid() != 1, 'Worker requires an init supervisor for hard timeout')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/coarse_timing_input.py", line 27, in require
+    raise PilotError(message)
+coarse_timing_input.PilotError: Worker requires an init supervisor for hard timeout

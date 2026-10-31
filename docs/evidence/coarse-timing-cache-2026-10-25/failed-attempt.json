@@ -1,0 +1,15 @@
+{
+  "status": "Stopped in preflight before any source rows or Census arrays were read; no state/report generated",
+  "reason": "The first guard required sysfs to contain only lo. Docker network=none includes dormant kernel tunnel devices and a bonding_masters entry here.",
+  "containerNetworkMode": "none",
+  "containerOomKilled": false,
+  "containerRemoved": true,
+  "files": {
+    "data/coarse-quality/overture-timing-cache-analysis-v1/cleanup.json": "02b89b9773043831d57afb2cc5f592f104291bc82ad40bda62cf071efd91bbd7",
+    "data/coarse-quality/overture-timing-cache-analysis-v1/container-name.txt": "506d2dc202400bf7e6cb8e6beb36d9bfc73ed5a53750da9f793a8e796f2f58e2",
+    "data/coarse-quality/overture-timing-cache-analysis-v1/container-result.json": "ef87f7f0bd8111adc49291d981d16f4e169ebfde2ea7498e17415f38f2afb641",
+    "data/coarse-quality/overture-timing-cache-analysis-v1/execution-plan.json": "b2f53de08632e136f3163fbfeb79bbdf391c7e54fc90c80c799b2e2ccf1c98eb",
+    "data/coarse-quality/overture-timing-cache-analysis-v1/worker.log": "f6b645253016430292700338a784a6433249b1053edb8b2e87c8e1ffd1fafe1b"
+  },
+  "correction": "Separately versioned runner validates process namespace interface UP flags and IPv4/IPv6 routes plus host-side Docker network=none. No input, cap, metric, parser, matcher, geometry or threshold changes."
+}

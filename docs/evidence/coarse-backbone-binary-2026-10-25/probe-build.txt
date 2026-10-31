@@ -1,0 +1,78 @@
+
+> build
+> vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+
+[@tanstack/devtools-vite] Removed devtools code from: /src/routes/__root.tsx
+
+✓ 1961 modules transformed.
+rendering chunks...
+computing gzip size...
+.output/public/assets/maplibre-gl-worker-CV6NbyPW.js    507.71 kB
+.output/public/assets/map-client-DBE96hFo.css            82.93 kB │ gzip:  10.72 kB
+.output/public/assets/styles-B9cLm3k8.css               183.89 kB │ gzip:  24.91 kB
+.output/public/assets/experiment-YO68jYmu.js             12.01 kB │ gzip:   4.30 kB
+.output/public/assets/routes-D24zWbYK.js                 24.08 kB │ gzip:   7.98 kB
+.output/public/assets/reachability-Bhd77GXg.js          133.18 kB │ gzip:  39.45 kB
+.output/public/assets/index-7lgioWn4.js                 341.78 kB │ gzip: 109.85 kB
+.output/public/assets/map-client-psfxvW4t.js          1,106.36 kB │ gzip: 298.35 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.04s
+vite v8.3.4 building ssr environment for production...
+transforming...
+
+[@tanstack/devtools-vite] Removed devtools code from: /src/routes/__root.tsx
+
+✓ 79 modules transformed.
+rendering chunks...
+computing gzip size...
+node_modules/.nitro/vite/services/ssr/assets/maplibre-gl-worker-CV6NbyPW.js          507.71 kB
+node_modules/.nitro/vite/services/ssr/assets/map-client-DBE96hFo.css                  82.93 kB │ gzip: 10.72 kB
+node_modules/.nitro/vite/services/ssr/assets/styles-B1Aa4PIo.css                     184.09 kB │ gzip: 24.92 kB
+node_modules/.nitro/vite/services/ssr/assets/start-Cf3Y0oPX.js                         0.15 kB │ gzip:  0.13 kB
+node_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-orLds928.js         0.23 kB │ gzip:  0.16 kB
+node_modules/.nitro/vite/services/ssr/assets/map-client-C6xXv00w.js                    0.84 kB │ gzip:  0.49 kB
+node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-C1iKOdRT.js    1.04 kB │ gzip:  0.44 kB
+node_modules/.nitro/vite/services/ssr/assets/reachability-BhN8NKuH.js                  4.67 kB │ gzip:  1.41 kB
+node_modules/.nitro/vite/services/ssr/assets/research-map-Dt1IN3Iu.js                  8.94 kB │ gzip:  2.83 kB
+node_modules/.nitro/vite/services/ssr/assets/experiment-YT8Xo1oO.js                   17.02 kB │ gzip:  4.54 kB
+node_modules/.nitro/vite/services/ssr/assets/router-B3oEjV3c.js                       26.69 kB │ gzip:  8.52 kB
+node_modules/.nitro/vite/services/ssr/assets/routes-DcH7Jv4u.js                       37.02 kB │ gzip:  8.86 kB
+node_modules/.nitro/vite/services/ssr/index.js                                        93.12 kB │ gzip: 23.48 kB
+
+✓ built in 1.38s
+
+[nitro] ◐ Building [Nitro] (preset: node-server, compatibility: 2026-10-20)
+[nitro] ✔ Generated public .output/public
+vite v8.3.4 building nitro environment for production...
+`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
+transforming...
+✓ 2312 modules transformed.
+✗ Build failed in 88ms
+error during build:
+Build failed with 1 error:
+
+Error: Missing "#geo-backbone-binary" specifier in "geo-planner" package
+    at e (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:7092:8)
+    at n (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:7104:14)
+    at f (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:7136:24)
+    at resolveExportsOrImports (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:29519:45)
+    at resolveSubpathImports (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:29300:20)
+    at resolveSubpathImports (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:29228:12)
+    at aggregateBindingErrorsIntoJsError (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/rolldown/dist/shared/error-CBG33oNV.mjs:49:18)
+    at unwrapBindingResult (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/rolldown/dist/shared/error-CBG33oNV.mjs:19:128)
+    at #build (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/rolldown/dist/shared/rolldown-BYX6bV3R.mjs:146:34)
+    at async buildEnvironment (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:34716:66)
+    at async Object.build (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:35137:19)
+    at async buildEnvironments (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/nitro/dist/vite.mjs:120:17)
+    at async Object.buildApp (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/chunks/node.js:35131:5)
+    at async CAC.<anonymous> (file:///Users/eric/Documents/GitHub/geo-planner/node_modules/vite/dist/node/cli.js:780:3) {
+  errors: [Getter/Setter]
+}

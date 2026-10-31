@@ -1,0 +1,20 @@
+{
+  "status": "prioritize_generic_timing_features",
+  "cases": 83,
+  "sensitivities": 35,
+  "recordedLengthCounts": {
+    "shorter": 57,
+    "longer": 5,
+    "overlap": 21
+  },
+  "newMissesWithShorterIntervals": 6,
+  "persistentMissesWithShorterIntervals": 2,
+  "oldSlowerCasesWithLongerIntervals": 0,
+  "meaning": "Longer modeled distance alone does not explain the missed cases; broad class and partial-corridor features previously failed to identify a selective timing rule. Review timing feature availability before one new hypothesis.",
+  "selectedPolicy": null,
+  "candidateProduced": false,
+  "nextAction": "docs/evidence/coarse-distance-budget-2026-10-25/next-timing-plan.json",
+  "priorCandidatesRemainRejected": true,
+  "v9Unchanged": true,
+  "scope": "Recorded unbuffered model-weight distance versus saved decoded ORS length. No road identity, true speed or causal delay inference."
+}

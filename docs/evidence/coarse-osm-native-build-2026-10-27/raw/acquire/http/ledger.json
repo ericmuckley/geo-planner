@@ -1,0 +1,1929 @@
+{
+  "events": [
+    {
+      "number": 1,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:3f7637ada877c9f78220f3e8d50d33e50c99f467bc2d51e769ec3455bac469a0",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "4d774f7c79d1a4933c8a4b7c10ff0caf8172aacf4416cb1fe05a9595bf18a275",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/3f/3f7637ada877c9f78220f3e8d50d33e50c99f467bc2d51e769ec3455bac469a0",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "2b90a1b3699991812bc69eba46b1b221ef45213fe3525c398244a2c9590e1913",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "48621faed0b690974278f68902f36fa3d355ed77fc27769f3409852adb320957",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 2,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/3f/3f7637ada877c9f78220f3e8d50d33e50c99f467bc2d51e769ec3455bac469a0",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "2b90a1b3699991812bc69eba46b1b221ef45213fe3525c398244a2c9590e1913",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 71996907,
+      "bodyFile": "002.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "71996907"
+      },
+      "bodySha256": "3f7637ada877c9f78220f3e8d50d33e50c99f467bc2d51e769ec3455bac469a0",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 3,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:8de72cf234436e796b05947f9bc5981245f21a25a240107b6c00a6c4dadbd1c3",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "4020870582a1cb1a23e82be0140d372111c2d72f19d60a084cea4275c71729ac",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8d/8de72cf234436e796b05947f9bc5981245f21a25a240107b6c00a6c4dadbd1c3",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "77df30d7969d6a86d13d948e46f697c674e1d521f17415908903a7faebb4988a",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "3180b7b569d3d21dc085ea59ffe9ea1d56f75c0f04f75940b0a95bd7088b415b",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 4,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8d/8de72cf234436e796b05947f9bc5981245f21a25a240107b6c00a6c4dadbd1c3",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "77df30d7969d6a86d13d948e46f697c674e1d521f17415908903a7faebb4988a",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 720,
+      "bodyFile": "004.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "720"
+      },
+      "bodySha256": "8de72cf234436e796b05947f9bc5981245f21a25a240107b6c00a6c4dadbd1c3",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 5,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:59c252351303d1c4e339f859b1d9d7b183a5903b86dc90964333d150f5ed2665",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "d001c13ae774d962dc62782b3729fd7c094e553bd23586e7966adc107b90573f",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/59/59c252351303d1c4e339f859b1d9d7b183a5903b86dc90964333d150f5ed2665",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "d542a56664784690a009934bbfd30522188026fff5d1efaf9829056ae525a962",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "dbea5584dc17bb041804b340d87fccf0f5c463e8c5718132474feb5c8fec2351",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 6,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/59/59c252351303d1c4e339f859b1d9d7b183a5903b86dc90964333d150f5ed2665",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "d542a56664784690a009934bbfd30522188026fff5d1efaf9829056ae525a962",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 133668,
+      "bodyFile": "006.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "133668"
+      },
+      "bodySha256": "59c252351303d1c4e339f859b1d9d7b183a5903b86dc90964333d150f5ed2665",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 7,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:979db8d4c6829e3c97c3a59fdd180d9ed8ea3cbe71c46cbc30ed236a8a84b8a5",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "80f4a6ef34d6ff8368515a4d2c22573c7e4748e97fac9fbee5d3105636cacf2e",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/97/979db8d4c6829e3c97c3a59fdd180d9ed8ea3cbe71c46cbc30ed236a8a84b8a5",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "6983d6aa2781aa7124d9a57a5363c07737606147b3c89f9b131b8d75c322228b",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "85c46418bec2de99e1260c2c3d561856d007e75d702117417b98ca5b5ac86002",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 8,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/97/979db8d4c6829e3c97c3a59fdd180d9ed8ea3cbe71c46cbc30ed236a8a84b8a5",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "6983d6aa2781aa7124d9a57a5363c07737606147b3c89f9b131b8d75c322228b",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 164,
+      "bodyFile": "008.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "164"
+      },
+      "bodySha256": "979db8d4c6829e3c97c3a59fdd180d9ed8ea3cbe71c46cbc30ed236a8a84b8a5",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 9,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:115862aa83e5b52181d50ecbfe394a8fb743ecfc1aa87fba147395abb29c1eea",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "cabd06a164eaf45df470a44ae3f149ebf1c813473b5f184d47e3343a795f5293",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/11/115862aa83e5b52181d50ecbfe394a8fb743ecfc1aa87fba147395abb29c1eea",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "cf13fe8a648d10feaded430e5a438e53f1f4df629dad8e89a2fbbef0f648cf88",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "c21f00d49dcfff20434beb77c148c622ba0a524b11c131ecb0cb461181a1ea76",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 10,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/11/115862aa83e5b52181d50ecbfe394a8fb743ecfc1aa87fba147395abb29c1eea",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "cf13fe8a648d10feaded430e5a438e53f1f4df629dad8e89a2fbbef0f648cf88",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 3479,
+      "bodyFile": "010.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "3479"
+      },
+      "bodySha256": "115862aa83e5b52181d50ecbfe394a8fb743ecfc1aa87fba147395abb29c1eea",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 11,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "aa8579074491919f236bf90bef51b46acb5670fff5c0a38c45842bb594c8f4f1",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "84b9ac9a51f724711b52dcc3e5bae8e9375ea47497f2022bf6ff3c8b22263402",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "c77baf64608163e8900e3ed82e21e29ac11873bf689fdfb60d71d6ffce410438",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 12,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "84b9ac9a51f724711b52dcc3e5bae8e9375ea47497f2022bf6ff3c8b22263402",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 32,
+      "bodyFile": "012.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "32"
+      },
+      "bodySha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 13,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:8f0fa5bdbe7bf91dab32fe4a13d982def10394c8fc09d199cbe1996c8a983ecb",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "08c255e53a4877e2bbaa281e7160faf76e8851bebc915ba1cde0527299c6e484",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8f/8f0fa5bdbe7bf91dab32fe4a13d982def10394c8fc09d199cbe1996c8a983ecb",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "96d11601b79d482ba521a64a769aaca042f611b0fcb851551d23987598598f7e",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "9c02f092490290474cef5b31cbd4633bbf51215b732e7062e00564ed3627b508",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 14,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8f/8f0fa5bdbe7bf91dab32fe4a13d982def10394c8fc09d199cbe1996c8a983ecb",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "96d11601b79d482ba521a64a769aaca042f611b0fcb851551d23987598598f7e",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 367,
+      "bodyFile": "014.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "367"
+      },
+      "bodySha256": "8f0fa5bdbe7bf91dab32fe4a13d982def10394c8fc09d199cbe1996c8a983ecb",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 15,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:0085e3277ee217c0c810d85ff1275965fdbe875a197a208e741be26ac00abb9f",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "6c5e5a0fe7bb5dfe29697d72db8f0d56fa74aac567d5b684b99c1133a8ce8b24",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/00/0085e3277ee217c0c810d85ff1275965fdbe875a197a208e741be26ac00abb9f",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "2f0df92c9036e741e09f8b237a11404ee34dd161a759a0cd9d434eec58d2fe4a",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "8ccc2cd26b2096d548f33e6fba34fb553c9e80c6afbefa45a223873598e2719f",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 16,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/00/0085e3277ee217c0c810d85ff1275965fdbe875a197a208e741be26ac00abb9f",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "2f0df92c9036e741e09f8b237a11404ee34dd161a759a0cd9d434eec58d2fe4a",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 3114,
+      "bodyFile": "016.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "3114"
+      },
+      "bodySha256": "0085e3277ee217c0c810d85ff1275965fdbe875a197a208e741be26ac00abb9f",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 17,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:825f5a0b6dd9b81408c1423508a119aae9e6a513b8e8d34a3dd82cb2628cf71e",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "02b8d792312b28cc4aea30ad314683f7bdc132a816b9fc23839d1f5a5731ce50",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/82/825f5a0b6dd9b81408c1423508a119aae9e6a513b8e8d34a3dd82cb2628cf71e",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "1ee4fb92edf6c279a29389bd2c9301bac0f1c6aa6a4bfadd5e2584bc15ba4fc0",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "22769262aefa9b36b2ec4557d069c6e79c5d22423be814ae04a5402424b80b46",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 18,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/82/825f5a0b6dd9b81408c1423508a119aae9e6a513b8e8d34a3dd82cb2628cf71e",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "1ee4fb92edf6c279a29389bd2c9301bac0f1c6aa6a4bfadd5e2584bc15ba4fc0",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 233267487,
+      "bodyFile": "018.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "233267487"
+      },
+      "bodySha256": "825f5a0b6dd9b81408c1423508a119aae9e6a513b8e8d34a3dd82cb2628cf71e",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 19,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:00861ec0c7313d6991eab9321f2bda25b308917341758608ed6ea3e897c45b6d",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "a8c4839d61d3313d431a02389b0a62b8015faa8705f66008e876350872d03c63",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/00/00861ec0c7313d6991eab9321f2bda25b308917341758608ed6ea3e897c45b6d",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "a7034f165d02616daa5cf1dd6a0a829ec8bf156ef5945fbac8953974596ecdea",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "b58139339b7e971866775d67c9f554dc433bcd07072146f555da084ecdd3808c",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 20,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/00/00861ec0c7313d6991eab9321f2bda25b308917341758608ed6ea3e897c45b6d",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "a7034f165d02616daa5cf1dd6a0a829ec8bf156ef5945fbac8953974596ecdea",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 974,
+      "bodyFile": "020.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "974"
+      },
+      "bodySha256": "00861ec0c7313d6991eab9321f2bda25b308917341758608ed6ea3e897c45b6d",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 21,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:cdaff7dca109ec0b97881c53068689cce46ff4038017b7037b041bfcfd4dd3ab",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "1376ee03c878c16426dbd7729d1781d1a057b3089adc65e7668f32987e353ffe",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/cd/cdaff7dca109ec0b97881c53068689cce46ff4038017b7037b041bfcfd4dd3ab",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "289d9c16f13cda5bcf75747af185b8f6792f408ded07da1d5c414239078273ea",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "771ee238ac81c12a0d1c979549029fb9e07e27693ca8cf74c540196cccd9d49a",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 22,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/cd/cdaff7dca109ec0b97881c53068689cce46ff4038017b7037b041bfcfd4dd3ab",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "289d9c16f13cda5bcf75747af185b8f6792f408ded07da1d5c414239078273ea",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 1009158,
+      "bodyFile": "022.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "1009158"
+      },
+      "bodySha256": "cdaff7dca109ec0b97881c53068689cce46ff4038017b7037b041bfcfd4dd3ab",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 23,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:0637c3bbf7bd6b151b96acc919f16ccc23178a220b48fdb974d3d3b8a169730c",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "aec9a895d991eee0cf2e7bff89ea9770be4c9054787820d2309485cc01755b7e",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/06/0637c3bbf7bd6b151b96acc919f16ccc23178a220b48fdb974d3d3b8a169730c",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "e0e16b592476596d1ee3ad4bbc74c5853d46c982148a53a46396219f72a4ed0d",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "05f1c60532ee5e7efb9459775593dc642106b93c772d917d1d686fc866cd9233",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 24,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/06/0637c3bbf7bd6b151b96acc919f16ccc23178a220b48fdb974d3d3b8a169730c",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "e0e16b592476596d1ee3ad4bbc74c5853d46c982148a53a46396219f72a4ed0d",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 1096,
+      "bodyFile": "024.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "1096"
+      },
+      "bodySha256": "0637c3bbf7bd6b151b96acc919f16ccc23178a220b48fdb974d3d3b8a169730c",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 25,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:f565207d50cf6cb8c478e42aef40276e24de62f38655ef221cec079dc80905d7",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "a570598e11f58f1f10416a6d8f3efc003d68eb0ab40ade3a79d0d7150be586ac",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/f5/f565207d50cf6cb8c478e42aef40276e24de62f38655ef221cec079dc80905d7",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "e4a08e1ddb462d17b43e5b39ad59d10b6d5b419e4b8df391d98ae8b640ad3632",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "bace4ed049491ed2dda537b71caf4e7e0ced2d0f6a4ca5ad85ec9813d3b5c5a5",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 26,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/f5/f565207d50cf6cb8c478e42aef40276e24de62f38655ef221cec079dc80905d7",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "e4a08e1ddb462d17b43e5b39ad59d10b6d5b419e4b8df391d98ae8b640ad3632",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 719524,
+      "bodyFile": "026.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "719524"
+      },
+      "bodySha256": "f565207d50cf6cb8c478e42aef40276e24de62f38655ef221cec079dc80905d7",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 27,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:80395ba33ab39aeab89e8903f1d2d188605126fc8aaee649237ff557ac91268b",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "4c99a10301bc55dc7cae39ea2bc7fc31e23e467c5ff17282f4a48a13adbbf261",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/80/80395ba33ab39aeab89e8903f1d2d188605126fc8aaee649237ff557ac91268b",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "06fe933feca112e9e93aa1576124bad99c6867491bf6359264850bbac9fa2cfb",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "d7d09ab812622eebfa53d7519efeae7579af282bffc1813c963722565e477abd",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 28,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/80/80395ba33ab39aeab89e8903f1d2d188605126fc8aaee649237ff557ac91268b",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "06fe933feca112e9e93aa1576124bad99c6867491bf6359264850bbac9fa2cfb",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 641,
+      "bodyFile": "028.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "641"
+      },
+      "bodySha256": "80395ba33ab39aeab89e8903f1d2d188605126fc8aaee649237ff557ac91268b",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 29,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:68e9e868fe417f88d32a2cd1037c9e11eec210d5574510025d112b8dd8e82df6",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "a0249935137849385eae5349e91c62a922d7ed34af2d763f185a4df4d04d2ddb",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/68/68e9e868fe417f88d32a2cd1037c9e11eec210d5574510025d112b8dd8e82df6",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "4e7a8797bb2ff26cd74bb5d74060876edd70238af85b19e21dfb1e965fdcf97d",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "bd814640d61a3644fe8847906fad142e6e9cfd51c91941f393f30b98588d5100",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 30,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/68/68e9e868fe417f88d32a2cd1037c9e11eec210d5574510025d112b8dd8e82df6",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "4e7a8797bb2ff26cd74bb5d74060876edd70238af85b19e21dfb1e965fdcf97d",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 705649,
+      "bodyFile": "030.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "705649"
+      },
+      "bodySha256": "68e9e868fe417f88d32a2cd1037c9e11eec210d5574510025d112b8dd8e82df6",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 31,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:1d603cccde04a4be1387f91ca9287f1356c253ed164c231d35bc6eaecda2ee10",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "77a03fc8d48351ba06837c6c3b42b4815d1b7b0571ccd585497f31417113ccfc",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/1d/1d603cccde04a4be1387f91ca9287f1356c253ed164c231d35bc6eaecda2ee10",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "9c239c3042230446da685eaf245ff3f6097906f6bf9ee3e90ff62773afd84b9c",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "5d0df68065b30f2ae3b9504e86ee1fe18b6184ddefc64486c132f0a87eab9452",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 32,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/1d/1d603cccde04a4be1387f91ca9287f1356c253ed164c231d35bc6eaecda2ee10",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "9c239c3042230446da685eaf245ff3f6097906f6bf9ee3e90ff62773afd84b9c",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 1112,
+      "bodyFile": "032.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "1112"
+      },
+      "bodySha256": "1d603cccde04a4be1387f91ca9287f1356c253ed164c231d35bc6eaecda2ee10",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 33,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "aa8579074491919f236bf90bef51b46acb5670fff5c0a38c45842bb594c8f4f1",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "c363a8cc05957fcd74d07fb45dd8bfc2698dcdc64eb7d8ddc00602e89c0e62f5",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "44eb318cb535f292d3d0dece144d28e99861c9ad2272eed00a13321958dc972c",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 34,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "c363a8cc05957fcd74d07fb45dd8bfc2698dcdc64eb7d8ddc00602e89c0e62f5",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 32,
+      "bodyFile": "034.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "32"
+      },
+      "bodySha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 35,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "aa8579074491919f236bf90bef51b46acb5670fff5c0a38c45842bb594c8f4f1",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "c363a8cc05957fcd74d07fb45dd8bfc2698dcdc64eb7d8ddc00602e89c0e62f5",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "44eb318cb535f292d3d0dece144d28e99861c9ad2272eed00a13321958dc972c",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 36,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/4f/4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "c363a8cc05957fcd74d07fb45dd8bfc2698dcdc64eb7d8ddc00602e89c0e62f5",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 32,
+      "bodyFile": "036.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "32"
+      },
+      "bodySha256": "4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 37,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:10ec9b892818a36059890181aaf60a984fc5976836f559fff07d6a4a6720fc18",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "e9732057cd2a6c25d7867b2145c888ca9d6cc381393ede2ab7021ea110d0208a",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/10/10ec9b892818a36059890181aaf60a984fc5976836f559fff07d6a4a6720fc18",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "83f031703612291221558e7fb82a56a4d855dd23c7227923b500f8d5cd732e8d",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "93116b668d1c320596394aba5619cb7caa1114007d9f5452a96618688df6099f",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 38,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/10/10ec9b892818a36059890181aaf60a984fc5976836f559fff07d6a4a6720fc18",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "83f031703612291221558e7fb82a56a4d855dd23c7227923b500f8d5cd732e8d",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 88618,
+      "bodyFile": "038.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "88618"
+      },
+      "bodySha256": "10ec9b892818a36059890181aaf60a984fc5976836f559fff07d6a4a6720fc18",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 39,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:fcea97942483e990d95f6ec4f5355d33e98bbd05d3c6a72457ce164fd3251b83",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "834b57fdbf538eef4a67eeabcc44c45b81cb5a71b3f6403dc110406713685382",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/fc/fcea97942483e990d95f6ec4f5355d33e98bbd05d3c6a72457ce164fd3251b83",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "481afab204d3122faef6a9c79acc8ea14ac26a1952880aa8dbe8fff01b0f96c2",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "96458d4465597fe3c784c7b645e9c628f0bbfb4c0d3ce0f9c3f399506bb161e3",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 40,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/fc/fcea97942483e990d95f6ec4f5355d33e98bbd05d3c6a72457ce164fd3251b83",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "481afab204d3122faef6a9c79acc8ea14ac26a1952880aa8dbe8fff01b0f96c2",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 289947,
+      "bodyFile": "040.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "289947"
+      },
+      "bodySha256": "fcea97942483e990d95f6ec4f5355d33e98bbd05d3c6a72457ce164fd3251b83",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 41,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:8a0f4068fd1b4a4e8780be6a792e3b92f67feb70c56524d28029737cdda9d033",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "82269d816e322896235862288789337dc8dbe0b47b6c2bcd17d7a81b12f2bb02",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8a/8a0f4068fd1b4a4e8780be6a792e3b92f67feb70c56524d28029737cdda9d033",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "0269c39a8e5f97e2c64105873e3f694d14fca5225d7cb14f1a964d5167a3fccb",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "f1a5467f6b45998f5f920108103445b94f907951f491d76eb394fac2834693d2",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 42,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/8a/8a0f4068fd1b4a4e8780be6a792e3b92f67feb70c56524d28029737cdda9d033",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "0269c39a8e5f97e2c64105873e3f694d14fca5225d7cb14f1a964d5167a3fccb",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 2324054,
+      "bodyFile": "042.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "2324054"
+      },
+      "bodySha256": "8a0f4068fd1b4a4e8780be6a792e3b92f67feb70c56524d28029737cdda9d033",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 43,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:3b0fc9603555c00e3c81f72e89a97ca626c0eb9562952ed28f2390275a84e9b1",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "d506cebc1627a80b7b2ca7f22f65381536f8a7e54c5ab051ec7032e86490f7e9",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/3b/3b0fc9603555c00e3c81f72e89a97ca626c0eb9562952ed28f2390275a84e9b1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "468fec2e99199f37b0e709b379aed0777397c3cc080bc96eeb7c746fae5bf861",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "9b15369d8141463589b272e6deee82532addaeace0e48f3cd15da1b4f9cd2860",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 44,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/3b/3b0fc9603555c00e3c81f72e89a97ca626c0eb9562952ed28f2390275a84e9b1",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "468fec2e99199f37b0e709b379aed0777397c3cc080bc96eeb7c746fae5bf861",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 13420305,
+      "bodyFile": "044.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "13420305"
+      },
+      "bodySha256": "3b0fc9603555c00e3c81f72e89a97ca626c0eb9562952ed28f2390275a84e9b1",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 45,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:5ada2bf152895e96da4da1a2f9c20844027edab7495a4b3844094a94310a396c",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "fa6dec1ac8892908948bd53c1e70aa1913c25b71969fa7b6948125f594a1bbb2",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/5a/5ada2bf152895e96da4da1a2f9c20844027edab7495a4b3844094a94310a396c",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "93ec9d462dfb7c71bca2645394f9c4cd9d29c4e3d06150972cf7d1824e838f9f",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "6d7ff20e8bfc20df869be91bb07cf19178f7a786016080f4b77c4050836889e8",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 46,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/5a/5ada2bf152895e96da4da1a2f9c20844027edab7495a4b3844094a94310a396c",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "93ec9d462dfb7c71bca2645394f9c4cd9d29c4e3d06150972cf7d1824e838f9f",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 104564,
+      "bodyFile": "046.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "104564"
+      },
+      "bodySha256": "5ada2bf152895e96da4da1a2f9c20844027edab7495a4b3844094a94310a396c",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 47,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:bc124d36f1371dd04ff89b4722a759e912140158b5836f96e28f5705ec22ae23",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "3e8abbb2ce48c0797f81930a86d99504d627b8c5e532d9816c075706cbd277c5",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/bc/bc124d36f1371dd04ff89b4722a759e912140158b5836f96e28f5705ec22ae23",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "d6f1007af973356bd0eb2f5f38969d6e942a65c112b8e363c3dc30a1fde218af",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "ec74cab58e13e2cdd768cf50c11008746f7b065a4195504ea340321238964cb9",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 48,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/bc/bc124d36f1371dd04ff89b4722a759e912140158b5836f96e28f5705ec22ae23",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "d6f1007af973356bd0eb2f5f38969d6e942a65c112b8e363c3dc30a1fde218af",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 241333120,
+      "bodyFile": "048.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "241333120"
+      },
+      "bodySha256": "bc124d36f1371dd04ff89b4722a759e912140158b5836f96e28f5705ec22ae23",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 49,
+      "kind": "origin",
+      "requestUri": {
+        "scheme": "https",
+        "host": "quay.io",
+        "path": "/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:f965099e9c42b4e88131ce1c3076c56195be52f73c2d28c30b4c3fd1bc4268f7",
+        "queryParameterNames": [],
+        "urlBytes": 124,
+        "urlSha256": "c674d5c337396285bd0278a54a44e410ae06fc4b96115673ccc079c52981a051",
+        "queryValuesRedacted": true
+      },
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": null,
+      "outcome": "body_complete",
+      "redirectReceipt": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/f9/f965099e9c42b4e88131ce1c3076c56195be52f73c2d28c30b4c3fd1bc4268f7",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "ce478e1e98cb4628937370ffcf42b83bc1e429b30448cdb97727e6f484aa0547",
+        "queryValuesRedacted": true
+      },
+      "headers": {
+        "content-length": "1359"
+      },
+      "bodySha256": "0873c68a23c5bd82b12d3fc3095a93817b6088596527ebd2280135fd4a3cafb5",
+      "privateBodyRedacted": true
+    },
+    {
+      "number": 50,
+      "kind": "cdn",
+      "requestUri": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/f9/f965099e9c42b4e88131ce1c3076c56195be52f73c2d28c30b4c3fd1bc4268f7",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-Signature",
+          "X-Amz-SignedHeaders",
+          "akamai_signature",
+          "namespace",
+          "region",
+          "repo_name"
+        ],
+        "urlBytes": 550,
+        "urlSha256": "ce478e1e98cb4628937370ffcf42b83bc1e429b30448cdb97727e6f484aa0547",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 8935,
+      "bodyFile": "050.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-length": "8935"
+      },
+      "bodySha256": "f965099e9c42b4e88131ce1c3076c56195be52f73c2d28c30b4c3fd1bc4268f7",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 51,
+      "kind": "archive",
+      "requestUri": {
+        "scheme": "https",
+        "host": "codeload.github.com",
+        "path": "/osmcode/libosmium/tar.gz/97dccf105391d410701ae8bd52170dc0ee041373",
+        "queryParameterNames": [],
+        "urlBytes": 93,
+        "urlSha256": "84a8226685585e2bb92bcba8144273ac28a55f8f4aa4daec99eb1cb7c1d82513",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 568569,
+      "bodyFile": "051.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "transfer-encoding": "chunked"
+      },
+      "bodySha256": "dd3aaf4c8b5540e8e1d4e13a4aecf3a79d00db1759d2eeaac226377fa64d4190",
+      "privateBodyRedacted": false
+    },
+    {
+      "number": 52,
+      "kind": "archive",
+      "requestUri": {
+        "scheme": "https",
+        "host": "codeload.github.com",
+        "path": "/mapbox/protozero/tar.gz/af2f6e274e0a873a00e34d8c9ab99fca76898047",
+        "queryParameterNames": [],
+        "urlBytes": 92,
+        "urlSha256": "c41fa774710b33d47460b5a185ee3401692c471e6c0c4790870a5f8703b11b30",
+        "queryValuesRedacted": true
+      },
+      "status": 200,
+      "bodyBytes": 1127726,
+      "bodyFile": "052.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "transfer-encoding": "chunked"
+      },
+      "bodySha256": "d7548d78dcd297e4a492577c6a5ddf28b91716152b9830caf4100e5f3d405d0d",
+      "privateBodyRedacted": false
+    }
+  ],
+  "receivedBodyBytes": 567143969,
+  "builderBodyBytes": 565447674,
+  "sourceBodyBytes": 1696295,
+  "stopped": false,
+  "elapsedSeconds": 27.446781762992032,
+  "scope": "Delivered read1/IncompleteRead.partial payload, excluding headers/TLS/socket buffering. Redirect/error/unverified layer bytes and signed URL values never persisted."
+}

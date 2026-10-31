@@ -1,0 +1,134 @@
+[
+  {
+    "type": "node",
+    "id": 1,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "barrier": "gate"
+    },
+    "lon": -1.0,
+    "lat": 0.5
+  },
+  {
+    "type": "node",
+    "id": 2,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {},
+    "lon": 2.0,
+    "lat": 0.5
+  },
+  {
+    "type": "node",
+    "id": 3,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {},
+    "lon": -2.0,
+    "lat": 2.0
+  },
+  {
+    "type": "node",
+    "id": 4,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {},
+    "lon": -1.0,
+    "lat": 2.0
+  },
+  {
+    "type": "way",
+    "id": 1,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "access": "private",
+      "highway": "primary",
+      "maxspeed": "55 mph",
+      "maxspeed:conditional": "35 @ wet"
+    },
+    "nodes": [
+      1,
+      2
+    ]
+  },
+  {
+    "type": "way",
+    "id": 3,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "highway": "secondary"
+    },
+    "nodes": [
+      3,
+      4
+    ]
+  },
+  {
+    "type": "way",
+    "id": 4,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "waterway": "stream"
+    },
+    "nodes": [
+      3,
+      4
+    ]
+  },
+  {
+    "type": "relation",
+    "id": 1,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "restriction:conditional": "no_left_turn @ wet",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 2,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 999,
+        "role": "to"
+      }
+    ]
+  },
+  {
+    "type": "relation",
+    "id": 2,
+    "version": 1,
+    "timestamp": "2026-10-20T00:00:00Z",
+    "visible": true,
+    "tags": {
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 3,
+        "role": "from"
+      }
+    ]
+  }
+]

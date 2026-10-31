@@ -1,0 +1,121 @@
+{
+  "status": "Design fixtures and arithmetic proof only; reader/decoder/resource tests NOT implemented/run",
+  "bbox": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "geometryCases": [
+    {
+      "name": "crosses-with-both-nodes-outside",
+      "points": [
+        [
+          -1,
+          0.5
+        ],
+        [
+          2,
+          0.5
+        ]
+      ],
+      "selected": true
+    },
+    {
+      "name": "lies-on-boundary",
+      "points": [
+        [
+          -1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "selected": true
+    },
+    {
+      "name": "touches-corner",
+      "points": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "selected": true
+    },
+    {
+      "name": "inside",
+      "points": [
+        [
+          0.2,
+          0.2
+        ],
+        [
+          0.8,
+          0.8
+        ]
+      ],
+      "selected": true
+    },
+    {
+      "name": "outside",
+      "points": [
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "above-box",
+      "points": [
+        [
+          -1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "multi-segment-crossing",
+      "points": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          0.5
+        ],
+        [
+          2,
+          0.5
+        ]
+      ],
+      "selected": true
+    }
+  ],
+  "requiredFurtherFixtures": [
+    "Full selected-way nodes outsidebbox preserved; no inside-node dependency.",
+    "Raw native conditional/access/direction tags, missing tags, ordered references and external relation roles survive copying; expired Pyosmium view not retained.",
+    "Typed node/way/relation ID collisions remain separate; changing a node version/coordinate changes geometry dependency even under unchanged way version.",
+    "Source checksum/header/feature/order/duplicate/EOF/bomb/missing-node/changed-snapshot drift stops without fallback.",
+    "Two independent SQLite indexes, page/disk/memory caps, temp/journal configuration, database-full/crash integrity failures, and complete audit prefix accounting.",
+    "All attempts/bytes/tools/archive extraction/row/window/timeout/watchdog/OOM/storage failures preserve raw/partial/error state and never admit source or model."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "readOnlyCheck": [
+    "python3",
+    "-B",
+    "scripts/prepare_osm_input_v2.py",
+    "docs/evidence/coarse-osm-data-freeze-2026-10-26/execution-plan.json",
+    "bc57f4e3e82a03201b4964efd0d33c5813a04410e5e048544bd2e7df4a459f14",
+    "data/coarse-quality/us-osm-input-v2",
+    "--check"
+  ],
+  "executeLaterOnce": [
+    "python3",
+    "-B",
+    "scripts/prepare_osm_input_v2.py",
+    "docs/evidence/coarse-osm-data-freeze-2026-10-26/execution-plan.json",
+    "bc57f4e3e82a03201b4964efd0d33c5813a04410e5e048544bd2e7df4a459f14",
+    "data/coarse-quality/us-osm-input-v2"
+  ],
+  "executedNow": false,
+  "scope": "Current preparation only; exact later command activates larger data limits/publication state, not source/model qualification."
+}

@@ -1,0 +1,39 @@
+{
+  "decision": "sample_prototype_passes; national_extraction_stays_held",
+  "sampleSpeedup": 1.9715951037395172,
+  "fractionLessIndexTime": 0.492796468147388,
+  "sampleIndexByteFraction": 0.5856264637002342,
+  "sampleLookupMedianSeconds": {
+    "v4": 0.0012364580179564655,
+    "compact": 0.0035398330073803663
+  },
+  "sampleLookupScope": "1152 queries from first1024 IDs, one compact shard; compact is slower here. Not national way-node lookup performance.",
+  "forecast": {
+    "scope": "Node-prefix extrapolation only, excludes way/relation work, audit selection, hashing/framing/setup/cleanup; not measured national duration.",
+    "nodeCount": 1606229364,
+    "optimisticTwoNodePassSeconds": 45916.81663797761,
+    "timeMargin": 2.0,
+    "marginedTwoNodePassSeconds": 91833.63327595522,
+    "oldWorkSeconds": 14340,
+    "neededPrefixSecondsAtTimeMargin": 0.14284385850637457,
+    "additionalSpeedupNeededForNodeOnlyTimeScreen": 6.404019056900642,
+    "exact16BytePayloadPerIndex": 25699669824,
+    "payloadOnlyAtStorageMargin": 38549504736.0,
+    "storageMargin": 1.5,
+    "oldPerIndexBytes": 25769803776,
+    "payloadOnlyStorageScreenPasses": false,
+    "rollingReplacementReducesConcurrentCopiesButNotPerIndexPayload": true
+  },
+  "remainingBlockers": [
+    "Node-only time forecast still misses original4h work limit; mixed work and audit add costs.",
+    "16-byte payload alone fails retained1.5x per-index storage screen, before headers/catalog/lookup.",
+    "Synthetic two-pass audit is implemented, but no real dependency-complete two-pass regional/national extraction has run.",
+    "Lookup is only a cache-local microbenchmark, and compact lookup is slower than SQLite here.",
+    "National per-type cap revision, global metadata validity, all21 windows/usable attributes/matching/physical/model/accuracy/package gates remain held."
+  ],
+  "nextDesign": "Review a bulk native node-processing path that avoids Python object/canonical-JSON work for every unselected node while preserving exact validation and independent audit. Specify lossless block/delta-ID coordinates and bound full storage overhead; current16-byte format is not admitted. Use cached tool/API capability evidence and synthetic controls before another fixed-sample freeze.",
+  "fullExtractionAdmitted": false,
+  "modelChanged": false,
+  "nationalSourceMountedOrReadByProfile": false,
+  "readOnlyProofMayHashSavedPriorAssets": true
+}

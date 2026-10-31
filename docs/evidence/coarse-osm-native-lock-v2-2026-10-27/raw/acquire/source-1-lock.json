@@ -1,0 +1,5181 @@
+{
+  "repository": "osmcode/libosmium",
+  "tagSelector": "v2.23.1",
+  "annotatedTags": [],
+  "commit": "97dccf105391d410701ae8bd52170dc0ee041373",
+  "tree": "c17441c8de31e1d51b596879fe61cc232c1a0367",
+  "entries": [
+    {
+      "path": ".clang-tidy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc1cce055883756bcf21a9e97495a1c519b13166",
+      "size": 6950
+    },
+    {
+      "path": ".codecov.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79204cdb32726ed2fe28138fe9bc06d6cd737e5c",
+      "size": 116
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "662c0159b4c12a3d8799e2d929a7ba6a0613cff8"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74b20fde6feb1c1660afe0d31b468be7124cc7a0",
+      "size": 44
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfde6e2cf86e1bf6ae2a99652a9093f29480a5f7"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17ca53a71ca406d04eeae0e909cee4c3b23cf2d7",
+      "size": 1315
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f0eda6161ea5ab04206b4566b43d80a423bbea8",
+      "size": 161
+    },
+    {
+      "path": ".github/actions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "709b694ef3a8fa21c50f834b2ae1205a4958c70a"
+    },
+    {
+      "path": ".github/actions/build",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b26d68fd1a6add42324a34e7e819135d6394f6e2"
+    },
+    {
+      "path": ".github/actions/build/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c12982b7a56de14f79d040fa81bbf51f41e7ffa",
+      "size": 168
+    },
+    {
+      "path": ".github/actions/cmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d6a7929abca2e745a7e9b1bec1e816547dcfe34"
+    },
+    {
+      "path": ".github/actions/cmake-windows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e236506abdc5924ce4a080a38a95ee10fdbffb45"
+    },
+    {
+      "path": ".github/actions/cmake-windows/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb5f16d9867f2460a0b874a64c3bdf25dcce41c4",
+      "size": 508
+    },
+    {
+      "path": ".github/actions/cmake/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b1c1be85605c02d0c32c445427f9406eb8197b8",
+      "size": 445
+    },
+    {
+      "path": ".github/actions/ctest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52f53c3194774ae1ae026fe14d652d20612d3846"
+    },
+    {
+      "path": ".github/actions/ctest/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c6da6cfedb25a3bc46b45b36a9ec444155e29dd",
+      "size": 160
+    },
+    {
+      "path": ".github/actions/install-macos",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "094a4b3bc708e37baab507b51f5ae70556cb74be"
+    },
+    {
+      "path": ".github/actions/install-macos/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca8f14a8441cd98513d07e608a8e257f53cda64",
+      "size": 201
+    },
+    {
+      "path": ".github/actions/install-protozero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31ec6c4a8bf28c4dc876735f67a3e6e358a6dfd3"
+    },
+    {
+      "path": ".github/actions/install-protozero/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "491c3e9fe9563f669491afb0d9d719ee9a723bdc",
+      "size": 207
+    },
+    {
+      "path": ".github/actions/install-ubuntu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1cd988632a1d79e8b15043b55f7c28f28c4080b"
+    },
+    {
+      "path": ".github/actions/install-ubuntu/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2129f0b6d606b6a941e074e7a9f086290189f232",
+      "size": 418
+    },
+    {
+      "path": ".github/actions/install-windows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b58c0b00fa15bb0c22dc27c09c8400d6d379f29c"
+    },
+    {
+      "path": ".github/actions/install-windows/action.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae5830a0369db4ba17820767cf24c6dafdbfb2d",
+      "size": 346
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bd96751f8e9f4796b4f96eb4086247ba5baebb6"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9821fe24cb91c2f7111d97366f6fb419cf7d120b",
+      "size": 6008
+    },
+    {
+      "path": ".github/workflows/clang-tidy.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4a0d056c075874c3dfb8ed637ae5027bef783d9",
+      "size": 1740
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfc4cebb09cb9c0b082bdc48eff0907c96670d87",
+      "size": 64
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42b21d77cde368c7871c9906e4927786ace21f7",
+      "size": 127
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97f3784c0ef0aa80f368dbd8f066bc331b034bb3",
+      "size": 57006
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c1a42379dfd88e843997cd703fa84c00a60c491",
+      "size": 16203
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a60f507db0c9bbc98ad0bd5fba99cd12bf386e57",
+      "size": 864
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "size": 1338
+    },
+    {
+      "path": "NOTES_FOR_DEVELOPERS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aee6a658af8c06ffef25f0fdc8cf0a60e9fccc0f",
+      "size": 6585
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "156c20f7dea20f7bd2972cedf243e2ddf8892789",
+      "size": 2501
+    },
+    {
+      "path": "benchmarks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c813d2d09b09ee46378e18624b3661cfe6d29de5"
+    },
+    {
+      "path": "benchmarks/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d8b3c1e26fdfe2cfc7da48d1ad56e308623771c",
+      "size": 1682
+    },
+    {
+      "path": "benchmarks/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f10045ca0a9e8b72e917e7f6973c7e85c1a0b6c5",
+      "size": 1476
+    },
+    {
+      "path": "benchmarks/download_data.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b17fcad5895ff9cf25a783f05d0ee1288883152e",
+      "size": 709
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_count.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b92455ec989b25141fe731bb51448665318cf361",
+      "size": 1287
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_count_tag.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9616a17a5fde7f8006dafe6b029c2aa0ee7df29e",
+      "size": 1301
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_index_map.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7c3e2433615c3bd4b6f114cd836588a6a91c49f",
+      "size": 1313
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_mercator.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0959441836c0fcaac1aaeeac22504cda5678c7",
+      "size": 1033
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_static_vs_dynamic_index.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "725973e09ae96289a13fb536bd384af660e64335",
+      "size": 5941
+    },
+    {
+      "path": "benchmarks/osmium_benchmark_write_pbf.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548909645e2efe543d7382d8088c9af50a61063b",
+      "size": 1135
+    },
+    {
+      "path": "benchmarks/run_benchmark_count.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d71508f7644f3851952e78cbda4bc01c97d4001d",
+      "size": 532
+    },
+    {
+      "path": "benchmarks/run_benchmark_count_tag.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4fa6a1068fa9386cfc61c27820161f06add6bc0b",
+      "size": 540
+    },
+    {
+      "path": "benchmarks/run_benchmark_index_map.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "30984d46033e41e4d37ed88d71b4eba9be7def15",
+      "size": 827
+    },
+    {
+      "path": "benchmarks/run_benchmark_mercator.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a52072764200adf48911e27cae882f6a01b6ffb7",
+      "size": 538
+    },
+    {
+      "path": "benchmarks/run_benchmark_static_vs_dynamic_index.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "05e32f126078707ca6ae2f627cde4a67472e7668",
+      "size": 393
+    },
+    {
+      "path": "benchmarks/run_benchmark_write_pbf.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8143097702a5e15923361118d6b8cc492fc25e1c",
+      "size": 866
+    },
+    {
+      "path": "benchmarks/run_benchmarks.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6a20c021419ba568ba1d849c5e271eb38ef3ba7e",
+      "size": 219
+    },
+    {
+      "path": "benchmarks/setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f8901c2739ba24bf64ae0e9bddf11f4a92248503",
+      "size": 1038
+    },
+    {
+      "path": "cmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c856b46ecd5d03cc1ca905e69d7983b2c733d89"
+    },
+    {
+      "path": "cmake/FindGem.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9927ea81438c15d247c1ed07b29d1dfb6feb9ccf",
+      "size": 6096
+    },
+    {
+      "path": "cmake/FindLZ4.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c94e3bcd1e5e6bd236d52e62ae35480947abefe",
+      "size": 1370
+    },
+    {
+      "path": "cmake/FindOsmium.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17be196662a8ec70db7b945442c56c894afe28e0",
+      "size": 11199
+    },
+    {
+      "path": "cmake/FindProtozero.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad16cabeb00e4a2d6cb381cf083491ba24ebeb6f",
+      "size": 2032
+    },
+    {
+      "path": "cmake/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a035f7b218ba54ebc00713b5376d3e552ed687e",
+      "size": 61
+    },
+    {
+      "path": "cmake/iwyu.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b386159c44437a4bae80d9c9911e0d509be06369",
+      "size": 1294
+    },
+    {
+      "path": "doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32416c4f57a221b38185f88a8c125108ed7b8b91"
+    },
+    {
+      "path": "doc/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ea819b922067a855de557cdd1d65a5fafc0a039",
+      "size": 1104
+    },
+    {
+      "path": "doc/Doxyfile.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2030d1cec03959f15375af0dbe842abc2759848c",
+      "size": 101179
+    },
+    {
+      "path": "doc/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1cf4bd2e0c2873236e9ace5375f8797aabe668",
+      "size": 188
+    },
+    {
+      "path": "doc/doc.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db9b43cc91da32e4bd9c5724a873e14e664e1d56",
+      "size": 879
+    },
+    {
+      "path": "doc/header.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "495d50024e7630e3df55cd6740d6c6bb3d5bc3ff",
+      "size": 2044
+    },
+    {
+      "path": "doc/osmium.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6256e845edc467f0ecf6e5335b5541bb905e4c03",
+      "size": 369
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03a2692c582eb5614a8bcb7b961ef575697dcb7a"
+    },
+    {
+      "path": "examples/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38a00d61c8f8e28bf5ee1a268092fa315bf6ddf7",
+      "size": 1531
+    },
+    {
+      "path": "examples/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0758eb0ebb7e88bab47933fe01d4685975b93492",
+      "size": 1542
+    },
+    {
+      "path": "examples/osmium_amenity_list.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e14638e32ab4024544430c4ed96b8076aa85fca8",
+      "size": 6841
+    },
+    {
+      "path": "examples/osmium_area_test.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "015eb1c85157e0f8ef86c2b2a6da2b4be0f5a198",
+      "size": 7840
+    },
+    {
+      "path": "examples/osmium_change_tags.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdd3c1149e5ffd36f084d174fa7b959d37915249",
+      "size": 7219
+    },
+    {
+      "path": "examples/osmium_convert.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "699d0eb0731a87ff3a812f59b253855926dee3f5",
+      "size": 5822
+    },
+    {
+      "path": "examples/osmium_count.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda8c2949c61010e4b216aa6182fa2b9b28a8550",
+      "size": 3184
+    },
+    {
+      "path": "examples/osmium_create_pois.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a30ff22ee94ddf920e3706c5083db9e3bf144c7",
+      "size": 3425
+    },
+    {
+      "path": "examples/osmium_debug.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34aafc1c0cd1ac92e70d3dd19b4fd058ae730972",
+      "size": 2992
+    },
+    {
+      "path": "examples/osmium_dump_internal.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec271a5795d4bab666718c727dff3a9afcbe358f",
+      "size": 6556
+    },
+    {
+      "path": "examples/osmium_filter_discussions.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb8a9af42b4fe2bd9acf2f1c02bd15f014c83199",
+      "size": 3670
+    },
+    {
+      "path": "examples/osmium_index_lookup.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f16a20841b555e7a70f7cbacec61e31a567f7f9",
+      "size": 12039
+    },
+    {
+      "path": "examples/osmium_location_cache_create.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "591fd9978816f7b6ac2a07223b438b4419f88b45",
+      "size": 3425
+    },
+    {
+      "path": "examples/osmium_location_cache_use.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3ee468b514963c7a3efc8c57417290a2017af8",
+      "size": 4022
+    },
+    {
+      "path": "examples/osmium_pub_names.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5aaecbc9482aa34a7964b5a2442908d4e20cbbd",
+      "size": 2901
+    },
+    {
+      "path": "examples/osmium_read.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d588219d8ec0a243c6f87c3017f18acefe3ea12e",
+      "size": 1301
+    },
+    {
+      "path": "examples/osmium_read_with_progress.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e986e6b8947b966504dc7527e100cf616b25129e",
+      "size": 1825
+    },
+    {
+      "path": "examples/osmium_road_length.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d6b4d707616f90085fb30183a81ff9e7c4d57ad",
+      "size": 3152
+    },
+    {
+      "path": "examples/osmium_tags_filter.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9efd0ae34dd4740312f1cd57a1ddf37453eb49c9",
+      "size": 6238
+    },
+    {
+      "path": "examples/osmium_tiles.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a6a1f7b9b2095cf7842e2a6b154b560156fb389",
+      "size": 2432
+    },
+    {
+      "path": "include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2329392c2a794ac5e76ecfc5905207e27ba6f80"
+    },
+    {
+      "path": "include/gdalcpp.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b5cea2adb73bf68d246acf6cad5072a69537db",
+      "size": 16043
+    },
+    {
+      "path": "include/osmium",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a331d40df2c5526edd32a92c3ab89117d95cb60a"
+    },
+    {
+      "path": "include/osmium/area",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e13c6a6e16ce0a715733643fcb43963d8f3e45f"
+    },
+    {
+      "path": "include/osmium/area/assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ecd136122a0b659cc005e574c0471f0e7165ded",
+      "size": 9302
+    },
+    {
+      "path": "include/osmium/area/assembler_config.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff5156c9b250551eb3254b6be888d9a645129521",
+      "size": 5330
+    },
+    {
+      "path": "include/osmium/area/assembler_legacy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "537087565d3bce9e579eaf8277d6b95c48085274",
+      "size": 16396
+    },
+    {
+      "path": "include/osmium/area/detail",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e3371b8c93fe3b0c1a7dbf6845e8f0a0a0dafc9"
+    },
+    {
+      "path": "include/osmium/area/detail/basic_assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2152a2e8ad644ef489b78798c618f67bec989f",
+      "size": 56390
+    },
+    {
+      "path": "include/osmium/area/detail/basic_assembler_with_tags.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c5b56f438cff1d5495c969559fcf87c7dd15662",
+      "size": 3478
+    },
+    {
+      "path": "include/osmium/area/detail/node_ref_segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41f35b4fed127a357bec9998b7fa5e5c630b4417",
+      "size": 14773
+    },
+    {
+      "path": "include/osmium/area/detail/proto_ring.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb8316f9bacf3793cbdcfa31b1ff9f8b5eff300c",
+      "size": 8248
+    },
+    {
+      "path": "include/osmium/area/detail/segment_list.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be4cb1e19e00ec2d3275bdbc4a5f0c57674332d",
+      "size": 15475
+    },
+    {
+      "path": "include/osmium/area/detail/vector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac54746022b42021f0f0c2b750bea70868fcd4b4",
+      "size": 4310
+    },
+    {
+      "path": "include/osmium/area/geom_assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "558eb97671095a1c50f5c62602f66b72761f01f5",
+      "size": 4948
+    },
+    {
+      "path": "include/osmium/area/multipolygon_collector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3054c625e57464b0fd22e4386670ca375420345",
+      "size": 8165
+    },
+    {
+      "path": "include/osmium/area/multipolygon_manager.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b221e3bac927e12fdd448665b0dfb1f5e3932c",
+      "size": 7403
+    },
+    {
+      "path": "include/osmium/area/multipolygon_manager_legacy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9077805ab7bb4e46e4a2ff7f272acfce6a23376f",
+      "size": 7013
+    },
+    {
+      "path": "include/osmium/area/problem_reporter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2748f9690a671773e73ffca9e97a035b028132a4",
+      "size": 10043
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_exception.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b8699df563bd3a4f328d74b7f2018b5cd12550",
+      "size": 6065
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_ogr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b887e5b166aca8eb17d4986e554494d504d4e15d",
+      "size": 10835
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_stream.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd491f958daa04edb85154dbee724d838e142ea1",
+      "size": 6231
+    },
+    {
+      "path": "include/osmium/area/stats.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4434f48d8d52c1ddb98688a7c9c827154f0432cc",
+      "size": 7366
+    },
+    {
+      "path": "include/osmium/builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92a0cf3b297980541db30899b20f5e9aaa4152df"
+    },
+    {
+      "path": "include/osmium/builder/attr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e99c7f20712aa47c4bc09a4965fa30aa4071db0",
+      "size": 42559
+    },
+    {
+      "path": "include/osmium/builder/builder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ead29cbdeb1b5f1f26c1e22e1ff557e15b7236",
+      "size": 8113
+    },
+    {
+      "path": "include/osmium/builder/osm_object_builder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa5b04315cd47143c243bfd90dae0f006db2b853",
+      "size": 29799
+    },
+    {
+      "path": "include/osmium/diff_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf4435e40d38af83801e81f6124b8f08c2a2dc1",
+      "size": 2228
+    },
+    {
+      "path": "include/osmium/diff_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "577b3e3331f02b47bb99549dca863a7abc681551",
+      "size": 4743
+    },
+    {
+      "path": "include/osmium/diff_visitor.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a3ec8171ac27e91360d03b55cebc4f0aa6a1d1e",
+      "size": 4033
+    },
+    {
+      "path": "include/osmium/dynamic_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a730f2f6cb1c687be4a7b3a9274840bc6d83592f",
+      "size": 7068
+    },
+    {
+      "path": "include/osmium/experimental",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5218d17022f8900ef625426eb79c9a0e5fa16b8b"
+    },
+    {
+      "path": "include/osmium/experimental/flex_reader.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d830ff1666cb0f21aaaa441d369f5b4c731eea",
+      "size": 5491
+    },
+    {
+      "path": "include/osmium/fwd.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "608f83b5106abc635292b5f70fc885a834076788",
+      "size": 2140
+    },
+    {
+      "path": "include/osmium/geom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "679dd86853cf21c457249de127efd74cc92ce8ea"
+    },
+    {
+      "path": "include/osmium/geom/coordinates.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d3a20ff0a8fc6611b90e8a19acb98716bba50e",
+      "size": 6274
+    },
+    {
+      "path": "include/osmium/geom/factory.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2438a817afc6178912643e98bc4ddf9ffa5a36",
+      "size": 15650
+    },
+    {
+      "path": "include/osmium/geom/geojson.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad997370631ca3197d612ed3cfb009525792a89",
+      "size": 6076
+    },
+    {
+      "path": "include/osmium/geom/geos.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87afe8bf37f50e0c3e7a4f19e5555dad857688f1",
+      "size": 10498
+    },
+    {
+      "path": "include/osmium/geom/haversine.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1bc7a6bed52ffc89fb58bb181f2c9c2027d0921",
+      "size": 4101
+    },
+    {
+      "path": "include/osmium/geom/mercator_projection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "572d080cfd9252611f71e48ead2e75011dae0c1a",
+      "size": 7296
+    },
+    {
+      "path": "include/osmium/geom/ogr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f26c01c964ce70823cab47dfc8cdd53120a236b9",
+      "size": 6073
+    },
+    {
+      "path": "include/osmium/geom/rapid_geojson.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f93b9996c530afd4aba38f8b993cd57d7f4cb33f",
+      "size": 7046
+    },
+    {
+      "path": "include/osmium/geom/relations.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1beb721c50127bd70a8822543f0a92053278ede",
+      "size": 2668
+    },
+    {
+      "path": "include/osmium/geom/tile.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dde94ef1e078ab74ec4e8d9103e04a1b3d9a42f",
+      "size": 7285
+    },
+    {
+      "path": "include/osmium/geom/util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b69da939a31eed1f77532726599be19d6347e94",
+      "size": 2615
+    },
+    {
+      "path": "include/osmium/geom/wkb.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7a5973da82d8d61fa3cade7e3b749ecd28bb0a",
+      "size": 10840
+    },
+    {
+      "path": "include/osmium/geom/wkt.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5ff4fabe497129ef81d7b7c672900592910cb6c",
+      "size": 6317
+    },
+    {
+      "path": "include/osmium/handler",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b41113efb83a83456ba50b5e2163feb14abbfdf"
+    },
+    {
+      "path": "include/osmium/handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3d495d903982344f702c7eb0b60be3c28402b7",
+      "size": 4110
+    },
+    {
+      "path": "include/osmium/handler/chain.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05df255611d88064efc9f0fef10cd890376d77d",
+      "size": 4515
+    },
+    {
+      "path": "include/osmium/handler/check_order.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44dea19fc42b8f0c163f98cc4cc2865ae3df92a4",
+      "size": 8423
+    },
+    {
+      "path": "include/osmium/handler/disk_store.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165f0928390c50df48000f07ffbd03183103587d",
+      "size": 3933
+    },
+    {
+      "path": "include/osmium/handler/dump.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15fb52d4f5431b8335a2dc20b1818f2d8cf4013",
+      "size": 10514
+    },
+    {
+      "path": "include/osmium/handler/node_locations_for_ways.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "720d1ae81f9e12aeb52a31632cd9e1b74686e1c0",
+      "size": 7493
+    },
+    {
+      "path": "include/osmium/handler/object_relations.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c318a80de0eb412f85c17747eb088d0ebd5ef0",
+      "size": 3941
+    },
+    {
+      "path": "include/osmium/index",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5eb173528162de97c33da55f686b81c320e0073"
+    },
+    {
+      "path": "include/osmium/index/detail",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffcdec56f7d9a705c67ef1195fb18a7ff8725fbf"
+    },
+    {
+      "path": "include/osmium/index/detail/create_map_with_fd.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "876fa1f49af7e6a20d1190ee01978e18bead052f",
+      "size": 2569
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_anon.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bcf86ef0eaa50d707e8967e6287fd2c81303af8",
+      "size": 2175
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_base.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7ba10f7b59dbc2cdf0dee99de93befb99bc821",
+      "size": 6166
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30aa28707bd3578ddeb642994fb1451920047310",
+      "size": 3043
+    },
+    {
+      "path": "include/osmium/index/detail/tmpfile.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0205f982a5537ce3c6ff5f6cff41d2f4fba366",
+      "size": 2439
+    },
+    {
+      "path": "include/osmium/index/detail/vector_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db4fb999a2f49bd1ca7c6c4f296e421ee7c23149",
+      "size": 10551
+    },
+    {
+      "path": "include/osmium/index/detail/vector_multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbd198821b31dd5a56fbd52fbc7bd9cb07ee036",
+      "size": 6789
+    },
+    {
+      "path": "include/osmium/index/id_set.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07946662d757f1b8b3c7f04f87ce6b664915518f",
+      "size": 16076
+    },
+    {
+      "path": "include/osmium/index/index.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8da068e111df7f994f2b5fae0fbfe9835b3e1f9f",
+      "size": 3218
+    },
+    {
+      "path": "include/osmium/index/map",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58b54a81d84c41e1b0a5ed8401b149647c90c5b8"
+    },
+    {
+      "path": "include/osmium/index/map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea26c99cb04423d78f1e76551f79b9b2b88987d2",
+      "size": 11488
+    },
+    {
+      "path": "include/osmium/index/map/all.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28e497d43c015895fbff044c5a027affad33ba13",
+      "size": 2227
+    },
+    {
+      "path": "include/osmium/index/map/dense_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de47e7f05df0ec3114ff4e96aef5e897f1250eb",
+      "size": 2694
+    },
+    {
+      "path": "include/osmium/index/map/dense_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea1999e5abd29eead09815ae99af305d3b64bde6",
+      "size": 2189
+    },
+    {
+      "path": "include/osmium/index/map/dense_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2660c8d46ccc3372343b282485482704406c01e6",
+      "size": 2310
+    },
+    {
+      "path": "include/osmium/index/map/dummy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6ebbfbcb5949355ea8a73b7bb1033b15b439762",
+      "size": 3164
+    },
+    {
+      "path": "include/osmium/index/map/flex_mem.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "770be661c31c3cac13ee9ab6bd91f8eaa48928a7",
+      "size": 10725
+    },
+    {
+      "path": "include/osmium/index/map/sparse_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ac38fd4199d4d37f18ffda149a7e577111d838",
+      "size": 2697
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39bdd34f18293484cabc50035d931bd5011bd3e8",
+      "size": 2276
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mem_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c03cc693504a125d624065161d557ca16fb80360",
+      "size": 4631
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "202ffbba4927e4bd86456f786f67cbebf5848fde",
+      "size": 2289
+    },
+    {
+      "path": "include/osmium/index/multimap",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36c7dbcef197c137dc930d228aa28e91828b8cfc"
+    },
+    {
+      "path": "include/osmium/index/multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70d4631cec56b823a6ababa31c801e28476c077",
+      "size": 4687
+    },
+    {
+      "path": "include/osmium/index/multimap/all.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de7359bc8217435e28d0961e37b036614839fcc5",
+      "size": 1915
+    },
+    {
+      "path": "include/osmium/index/multimap/hybrid.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9311f0c0e640020ea07f29d2809dd5cc9672b798",
+      "size": 7350
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2268f636992115ed1f479fd53d443553ce0570",
+      "size": 2067
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34030b3edaa207058fde9e6984e5d5986f23e33d",
+      "size": 2096
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mem_multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c1b1dc8215e975629b3f8d42cef64905123f48",
+      "size": 5513
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b599a3c57f371a7850d841b1bc9e17251408119e",
+      "size": 2106
+    },
+    {
+      "path": "include/osmium/index/node_locations_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c80169be312b4bfdcbe434b9551f0e89509cd6e",
+      "size": 3330
+    },
+    {
+      "path": "include/osmium/index/nwr_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc469d55c38c88ddf507a0d183d77eedfa7e1087",
+      "size": 3564
+    },
+    {
+      "path": "include/osmium/index/relations_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f993bc5a5a06935283500c04aa4537905903c69",
+      "size": 18002
+    },
+    {
+      "path": "include/osmium/io",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61fa131f419048e7366841b962d778ca207eb157"
+    },
+    {
+      "path": "include/osmium/io/any_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e02eee77158e612af2f9c741c4af28234c936b7a",
+      "size": 1934
+    },
+    {
+      "path": "include/osmium/io/any_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a8f0522e255f36b7a49c54003a9698564233d6f",
+      "size": 2146
+    },
+    {
+      "path": "include/osmium/io/any_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "509dd947e043fa4357c0154d672907b8beeaa64d",
+      "size": 2203
+    },
+    {
+      "path": "include/osmium/io/bzip2_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f9e3235f52ecebe78d5caff9ea568fb3710fd3",
+      "size": 17624
+    },
+    {
+      "path": "include/osmium/io/compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a49f5157d703babc31409138915a89a27301abd6",
+      "size": 14279
+    },
+    {
+      "path": "include/osmium/io/debug_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1999014f282e96664efacad2f32237dbe841088",
+      "size": 1724
+    },
+    {
+      "path": "include/osmium/io/detail",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7641bffe9f62208fd75547b7cdebd7fc68d3643a"
+    },
+    {
+      "path": "include/osmium/io/detail/debug_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe3c1cd78d20a4b0300772b39c4dd8ce42980d7",
+      "size": 24105
+    },
+    {
+      "path": "include/osmium/io/detail/ids_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6249705a48a14be55df84f5559c5ccbd24c13ce2",
+      "size": 5788
+    },
+    {
+      "path": "include/osmium/io/detail/input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "403afb53f9226d799ba693bac1ec68860bb2f35a",
+      "size": 10710
+    },
+    {
+      "path": "include/osmium/io/detail/lz4.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8061fdb618001866d3a902aaaa9d543bedc3a1c",
+      "size": 5063
+    },
+    {
+      "path": "include/osmium/io/detail/o5m_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f76a367b1173039f430f942e38ddde38d975392a",
+      "size": 26293
+    },
+    {
+      "path": "include/osmium/io/detail/opl_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63a5b4d1ccb2041830622370c4042e465e62e378",
+      "size": 6301
+    },
+    {
+      "path": "include/osmium/io/detail/opl_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c17236410a9f9d357ec8b1043683d78fcf521d0",
+      "size": 12583
+    },
+    {
+      "path": "include/osmium/io/detail/opl_parser_functions.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fa5ed4300c8451d0235abc7209fcce88f398d83",
+      "size": 36806
+    },
+    {
+      "path": "include/osmium/io/detail/output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f648cfcfa93e3d2a54cbc3c7e251103249cf169",
+      "size": 9267
+    },
+    {
+      "path": "include/osmium/io/detail/pbf.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6fbcdcc50783c0576b70cf41362afb2ff0ed5c8",
+      "size": 3535
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_decoder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b03cfb2f346dd82bf27d942025a32c0bd4747871",
+      "size": 62385
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36fe336cabd0442935005f2931bab39140595b50",
+      "size": 12772
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05f11c3fcf35d70d5b19a7333024fed4aaff155f",
+      "size": 38102
+    },
+    {
+      "path": "include/osmium/io/detail/protobuf_tags.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f337aefb3451e20999fbf58ddce0922e769e72cd",
+      "size": 7027
+    },
+    {
+      "path": "include/osmium/io/detail/queue_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc48706613f400af295cfc95cf2d59b548cb8cf1",
+      "size": 5631
+    },
+    {
+      "path": "include/osmium/io/detail/read_thread.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66e24e4e17b1c60d950884d7e96044ef4fd32461",
+      "size": 4646
+    },
+    {
+      "path": "include/osmium/io/detail/read_write.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4b1913c50607585e31c907349f34aa7232018c4",
+      "size": 12264
+    },
+    {
+      "path": "include/osmium/io/detail/string_table.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5854e17ed2fd4319afb8c031fd2498c981e11a98",
+      "size": 10760
+    },
+    {
+      "path": "include/osmium/io/detail/string_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e726567df93938d5859702cd04b64a8d34606fd9",
+      "size": 15643
+    },
+    {
+      "path": "include/osmium/io/detail/write_thread.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "166e8cb2d315b48164345926cdb7b52d2343b2ec",
+      "size": 4104
+    },
+    {
+      "path": "include/osmium/io/detail/xml_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc966a7a85261992db4e47de444c3e43a2a559a7",
+      "size": 39094
+    },
+    {
+      "path": "include/osmium/io/detail/xml_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "359ca901478394570c75ea0a3fe30de3f5293e39",
+      "size": 19873
+    },
+    {
+      "path": "include/osmium/io/detail/zlib.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0329b597ba58c05dbe588f3c7f4b272b65de3e9",
+      "size": 5007
+    },
+    {
+      "path": "include/osmium/io/error.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b94573e8d6682b4c013a1964eac780205e2306",
+      "size": 2408
+    },
+    {
+      "path": "include/osmium/io/file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "678038015f51b67278730c0811f247191b4fddeb",
+      "size": 12274
+    },
+    {
+      "path": "include/osmium/io/file_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c6010a0d272ac1affb66136d2c0c6270360fe26",
+      "size": 2479
+    },
+    {
+      "path": "include/osmium/io/file_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a981866f82e5602bf3f700104f6476d97ea7b5e9",
+      "size": 3313
+    },
+    {
+      "path": "include/osmium/io/gzip_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1060bcbbe7ef20d7caa1eb0e88609501e418ff59",
+      "size": 12948
+    },
+    {
+      "path": "include/osmium/io/header.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e495c45d9dbef94290bf01dbdfb7588ecf14f6b",
+      "size": 6212
+    },
+    {
+      "path": "include/osmium/io/ids_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8caf5b1b06feeb52248b84823d1ea93366a09ede",
+      "size": 1716
+    },
+    {
+      "path": "include/osmium/io/input_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bd40b6e060e216e012f05b80beef3fca628159f",
+      "size": 6069
+    },
+    {
+      "path": "include/osmium/io/o5m_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d70c77fff373a63ac4b89b48a3ce5a4fd879d0f",
+      "size": 1797
+    },
+    {
+      "path": "include/osmium/io/opl_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8641ffd46f73e45052ee4f0c70ecab7dadbb2fc5",
+      "size": 1792
+    },
+    {
+      "path": "include/osmium/io/opl_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "445bf5f1922fd0c1185088b7899dc675d03dc52a",
+      "size": 1716
+    },
+    {
+      "path": "include/osmium/io/output_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84a3ff085879f7c58895a2a82ccb0b682b89849c",
+      "size": 3252
+    },
+    {
+      "path": "include/osmium/io/overwrite.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87132a9ca77fe958c4be96d1da4095bd4b050e1a",
+      "size": 1753
+    },
+    {
+      "path": "include/osmium/io/pbf.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b0c3045c1d04e2697e4721720f86a7f5accd22",
+      "size": 2029
+    },
+    {
+      "path": "include/osmium/io/pbf_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd5472d180dc1af635b8c75a142a3f23fac2af87",
+      "size": 1958
+    },
+    {
+      "path": "include/osmium/io/pbf_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ab804d7e2c9f6d0be73274bde98c1d669eacbb",
+      "size": 1963
+    },
+    {
+      "path": "include/osmium/io/reader.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83527976066b8ea9e0418642e9cd243f01fd82ea",
+      "size": 23568
+    },
+    {
+      "path": "include/osmium/io/reader_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c989f3ca307922a5045afea39e127cbccd54c03c",
+      "size": 1980
+    },
+    {
+      "path": "include/osmium/io/reader_with_progress_bar.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d332b667fcf63f63d85b29b8440f804595ff9ea9",
+      "size": 3495
+    },
+    {
+      "path": "include/osmium/io/writer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a27319235e6d8f9e2262c636c752be126107f17",
+      "size": 16478
+    },
+    {
+      "path": "include/osmium/io/writer_options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e90a307370f137141be0144125421724a03ab37",
+      "size": 2038
+    },
+    {
+      "path": "include/osmium/io/xml_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a90cf528df8648ce6c58f1571d9a3855a04c237",
+      "size": 1910
+    },
+    {
+      "path": "include/osmium/io/xml_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b69d9ac1929fa0bfd841ca3facd51270b4dd9d2",
+      "size": 1875
+    },
+    {
+      "path": "include/osmium/memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3c7dca34a7e289dc6dc5d4ab2f7e07d338af17b"
+    },
+    {
+      "path": "include/osmium/memory/buffer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6645d555aa6a6cc93d340e85e4825c19a33fe9e5",
+      "size": 35846
+    },
+    {
+      "path": "include/osmium/memory/callback_buffer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102f43eebc174fb5c16640755887e4cc1c9e5c0b",
+      "size": 7728
+    },
+    {
+      "path": "include/osmium/memory/collection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dab5aaf75dc0c29e2db0a1035f992f921d40ef5",
+      "size": 8493
+    },
+    {
+      "path": "include/osmium/memory/item.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbf1f8a84f2f8b40700f767b7b50bf3c7d188b31",
+      "size": 6228
+    },
+    {
+      "path": "include/osmium/memory/item_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14de17b440e471e6ef7fa996ac0cb8a9dbb8e1f7",
+      "size": 8458
+    },
+    {
+      "path": "include/osmium/object_pointer_collection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f634a437df825838eb5511e6fa1f085ff21474",
+      "size": 5956
+    },
+    {
+      "path": "include/osmium/opl.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86025b3488598abc74ef4cb84ee0b42320e0586e",
+      "size": 2563
+    },
+    {
+      "path": "include/osmium/osm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ddbc27e8f81a1104c7eca5a7ef9415c150e0942"
+    },
+    {
+      "path": "include/osmium/osm.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bded0674c5018c0e5a4f7cf00965a2987ebc648",
+      "size": 2469
+    },
+    {
+      "path": "include/osmium/osm/area.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa4f5f421f410f8841b17cc870c8daff8b2b51f",
+      "size": 8434
+    },
+    {
+      "path": "include/osmium/osm/box.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de1db5dc3b81f6979f902604250ae64441f417b",
+      "size": 9162
+    },
+    {
+      "path": "include/osmium/osm/changeset.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a1d8598fc5f7151e7c4249f681c422ba7888264",
+      "size": 14872
+    },
+    {
+      "path": "include/osmium/osm/crc.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f909723e49839026046195f1a7a06170c1151c",
+      "size": 9142
+    },
+    {
+      "path": "include/osmium/osm/crc_zlib.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8297ba00f0be4d95d06766792eda383bfcaeba22",
+      "size": 2637
+    },
+    {
+      "path": "include/osmium/osm/diff_object.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e9f5654ea323854b296691e5ac6dcda74d1f66d",
+      "size": 9133
+    },
+    {
+      "path": "include/osmium/osm/entity.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8515513b8a141a984e8fbac1e0127374edc1de49",
+      "size": 3168
+    },
+    {
+      "path": "include/osmium/osm/entity_bits.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1b0d5503a906403ad76150ef55e768993f9327f",
+      "size": 5043
+    },
+    {
+      "path": "include/osmium/osm/item_type.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d462254a4738a1893759641c81fa464bfe8fbf5",
+      "size": 7274
+    },
+    {
+      "path": "include/osmium/osm/location.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36072d1844fe72794adc9fff1e88fb588f79aef8",
+      "size": 21771
+    },
+    {
+      "path": "include/osmium/osm/metadata_options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1552886f02da2a1f99ae7bcc6ef46c12e373bf68",
+      "size": 8361
+    },
+    {
+      "path": "include/osmium/osm/node.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773a43d18a98c780e5de7974ee41f1fc9e9ab839",
+      "size": 2767
+    },
+    {
+      "path": "include/osmium/osm/node_ref.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b33c3ab1b8f97c03b4f122595869135ca89e62e",
+      "size": 7198
+    },
+    {
+      "path": "include/osmium/osm/node_ref_list.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7e495f7d4e7f81f7e349277ca3539d0ca80fa1e",
+      "size": 7735
+    },
+    {
+      "path": "include/osmium/osm/object.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d93740ebda95daf3bf9a5cdaadde950278b39f",
+      "size": 17271
+    },
+    {
+      "path": "include/osmium/osm/object_comparisons.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a24e53d2cd74ce29771ebec65cc320c507f44d9f",
+      "size": 6663
+    },
+    {
+      "path": "include/osmium/osm/relation.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0eb060c52c93e6579a086e702f46721c7787806",
+      "size": 6750
+    },
+    {
+      "path": "include/osmium/osm/segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c037c1aafffa466bbf26c6f69a3931bb89a0b0d4",
+      "size": 3169
+    },
+    {
+      "path": "include/osmium/osm/tag.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c00dbce58386ad3c9511d1b8405773513c6173",
+      "size": 6117
+    },
+    {
+      "path": "include/osmium/osm/timestamp.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38a908ff5768c3c3504aea98ee443ab4ae20de6e",
+      "size": 12583
+    },
+    {
+      "path": "include/osmium/osm/types.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3403f5c612e1d96a6c0d4dbd9d96f1d562a494dc",
+      "size": 3236
+    },
+    {
+      "path": "include/osmium/osm/types_from_string.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2ee7b84d1aafada441f5d7e49a83687850ae2cb",
+      "size": 6874
+    },
+    {
+      "path": "include/osmium/osm/undirected_segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2123b3d90a0c318d5b1b7fc3b5dc8b16c0c830c2",
+      "size": 3463
+    },
+    {
+      "path": "include/osmium/osm/way.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fdfcf06ffdcd8a1e1b1b881057833dca54ba509",
+      "size": 5351
+    },
+    {
+      "path": "include/osmium/relations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36d993c47bd520d2c5d65fdb8416ddbf4b5b04d3"
+    },
+    {
+      "path": "include/osmium/relations/collector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4648a92f7e43fdd8a6579e65cc37b49c7f7f9be3",
+      "size": 25806
+    },
+    {
+      "path": "include/osmium/relations/detail",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c0d53a60cf068343cca9189de26d89cf210da0a"
+    },
+    {
+      "path": "include/osmium/relations/detail/member_meta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b467b8deb02546ad227fa41238cb3418ab471b6",
+      "size": 5758
+    },
+    {
+      "path": "include/osmium/relations/detail/relation_meta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bc6fc277787bd60fd3b8e531a90d6761a222447",
+      "size": 4615
+    },
+    {
+      "path": "include/osmium/relations/manager_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94bd45b9a4ba69de9153e432c7739f00733e1af0",
+      "size": 7738
+    },
+    {
+      "path": "include/osmium/relations/members_database.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b743edffaa93c7280b54b3f771310d86bfc70c50",
+      "size": 16657
+    },
+    {
+      "path": "include/osmium/relations/relations_database.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fd01b27da1c127a529bbe434ee750940d21807f",
+      "size": 12157
+    },
+    {
+      "path": "include/osmium/relations/relations_manager.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d62933ccd869e1a7e1d98a4a2b985b10d320c0ba",
+      "size": 22915
+    },
+    {
+      "path": "include/osmium/storage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "caf7d928f1ab31c201e3645db98dbdd5ee55883e"
+    },
+    {
+      "path": "include/osmium/storage/item_stash.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a0142fb69fe58ce57b98c910d4ef54b189cf48",
+      "size": 12798
+    },
+    {
+      "path": "include/osmium/tags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee10ec8e7f7d8f17521eb37cca4568cf4097a60d"
+    },
+    {
+      "path": "include/osmium/tags/filter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d061c0716b7410584401d1eec3884453481d174e",
+      "size": 6575
+    },
+    {
+      "path": "include/osmium/tags/matcher.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0746a54681c43db3e8cf9e642abaaba97fe2a0a4",
+      "size": 4832
+    },
+    {
+      "path": "include/osmium/tags/taglist.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61afa040e5c44cf889eaeef3f54d8dffa76f496",
+      "size": 2534
+    },
+    {
+      "path": "include/osmium/tags/tags_filter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "608c1e878becb079ed2ce3a735ce328c60d34220",
+      "size": 6687
+    },
+    {
+      "path": "include/osmium/thread",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22c64973daedacdc7e25ff66610ec06bb262b5f0"
+    },
+    {
+      "path": "include/osmium/thread/function_wrapper.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1110155d07de912b02c4c61e90748cff9d4ba7",
+      "size": 4522
+    },
+    {
+      "path": "include/osmium/thread/pool.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de5f2716a9b2625f6000306683a286ce9fd0fa66",
+      "size": 8483
+    },
+    {
+      "path": "include/osmium/thread/queue.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574bef0b9f49432cf899eba461d9db51b2939db2",
+      "size": 8279
+    },
+    {
+      "path": "include/osmium/thread/util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9244f1e2ca81c93c1a6b58ca648030f29082c29a",
+      "size": 4037
+    },
+    {
+      "path": "include/osmium/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a3d9da190f0cd50e49d3a640d7cdf32180941919"
+    },
+    {
+      "path": "include/osmium/util/compatibility.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7ac6399b9a25781854d1aa232c37bd786a2062",
+      "size": 1933
+    },
+    {
+      "path": "include/osmium/util/config.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac37bee8c7865fe16e5d56630e269ad9e9e9183",
+      "size": 3934
+    },
+    {
+      "path": "include/osmium/util/delta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a2eb672cbb5eff4019132993a57c9729a4aef44",
+      "size": 4756
+    },
+    {
+      "path": "include/osmium/util/double.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01746dd442e10e257b9f128cfd6c718785d5f28d",
+      "size": 3482
+    },
+    {
+      "path": "include/osmium/util/endian.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e48e9aa51aa6877462f85b1f9eac039781738f60",
+      "size": 1990
+    },
+    {
+      "path": "include/osmium/util/file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20bfd1dfd816ef00e180a2b7590d3228efc4e46c",
+      "size": 8772
+    },
+    {
+      "path": "include/osmium/util/iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5236e8963448b65196b6def2f8b9bb484e77ea2c",
+      "size": 2550
+    },
+    {
+      "path": "include/osmium/util/memory.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72cd4cc0f4834061d3c107e46b37213c7146bc8a",
+      "size": 3396
+    },
+    {
+      "path": "include/osmium/util/memory_mapping.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a73137e9a124f4e4cff2611a124fc1b5e16078e",
+      "size": 27031
+    },
+    {
+      "path": "include/osmium/util/minmax.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "552ecd2505faa9c49dc5ff7c30f5b6a2b6999144",
+      "size": 3201
+    },
+    {
+      "path": "include/osmium/util/misc.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cdef5e87901fb9f4213e8b272c75b231fdf20b9",
+      "size": 3164
+    },
+    {
+      "path": "include/osmium/util/options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff71506b986b91feb15b106946702b945dbdea6",
+      "size": 7331
+    },
+    {
+      "path": "include/osmium/util/progress_bar.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "394ee8d8d068a7adafdd744fdf7d272c91f0d230",
+      "size": 6979
+    },
+    {
+      "path": "include/osmium/util/string.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2474d345e49d4fa74a5d737cee3fb7c18c2a90f",
+      "size": 3736
+    },
+    {
+      "path": "include/osmium/util/string_matcher.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2fb8def65d94f731cda83c45d5bf00672be1d4",
+      "size": 12869
+    },
+    {
+      "path": "include/osmium/util/timer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0db68e9eab5c3e36345b8e0e4e49eb6d3dfcb01a",
+      "size": 2715
+    },
+    {
+      "path": "include/osmium/util/verbose_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "246033f7251266bd3a6169c7d3bae8d77d3ca33f",
+      "size": 4833
+    },
+    {
+      "path": "include/osmium/version.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "855ca1d1c1e2da956912b6021f71fff25925f1b1",
+      "size": 1847
+    },
+    {
+      "path": "include/osmium/visitor.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174a940bdfa9e588d2f182798f1e0f07f5346d22",
+      "size": 15555
+    },
+    {
+      "path": "osmium.imp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e63cf7ff5caaf2b2fcd32aed27cd2986d6f60ade",
+      "size": 770
+    },
+    {
+      "path": "test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "880d3120f18aed4f8e872d4c5f553caa6be4adbd"
+    },
+    {
+      "path": "test/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6829ca911280d02ad3f59d5d5b5860b4c89f4018",
+      "size": 9376
+    },
+    {
+      "path": "test/README",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69e903607a6d264d29603f3eebd8f4206fd08451",
+      "size": 276
+    },
+    {
+      "path": "test/catch",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b6b9ed438c994d9f8aba2b2a75c708715a6772c"
+    },
+    {
+      "path": "test/catch/catch.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b309bddc6bcc736af7c1264c2a6f760fa52d4bb",
+      "size": 657411
+    },
+    {
+      "path": "test/data-tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14bed49bd281a4c0384936868ba7ddc2e1891640"
+    },
+    {
+      "path": "test/data-tests/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98df22edaab5b56a14cde036a5bbbc63309c7a02",
+      "size": 18
+    },
+    {
+      "path": "test/data-tests/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "135cc4a73b7294a4dee17a9aad5b1af975bff48a",
+      "size": 4131
+    },
+    {
+      "path": "test/data-tests/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5138bf85663bdc7541b8adae3cd2af8174e477cc",
+      "size": 362
+    },
+    {
+      "path": "test/data-tests/include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99439ad95c16b4c82ebf8da5d88197dc4410cc8e"
+    },
+    {
+      "path": "test/data-tests/include/check_basics_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f70c52583b866eea66c63db26f4b107d4781cb94",
+      "size": 2640
+    },
+    {
+      "path": "test/data-tests/include/check_wkt_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e715b597da256f7d62e270d59b9e4e189bcfd6c6",
+      "size": 2702
+    },
+    {
+      "path": "test/data-tests/include/common.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dad07d32ef5afd291098b79cbf7d4e087488044",
+      "size": 747
+    },
+    {
+      "path": "test/data-tests/include/testdata-testcases.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7d0c01d7ee7161287bbb8645132b4cbbfb096b5",
+      "size": 166
+    },
+    {
+      "path": "test/data-tests/multipolygon.qgs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf121c3961778793319652a71eb948ae9c7335da",
+      "size": 61282
+    },
+    {
+      "path": "test/data-tests/osm-testdata",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "ecfdeb0d5ffcfcb60939651d517d5d7d1bb041a3"
+    },
+    {
+      "path": "test/data-tests/run-testdata-multipolygon.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be2cb395dda958c405bd63a08add873ea0dc05c8",
+      "size": 1357
+    },
+    {
+      "path": "test/data-tests/testcases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d29db199f8b7112f9b4cee721590ad6c789c0843"
+    },
+    {
+      "path": "test/data-tests/testcases/test-100.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29174daa494ec5f2c9ea1c493dbe7ebea0fd1717",
+      "size": 1178
+    },
+    {
+      "path": "test/data-tests/testcases/test-101.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02f5254cf6f71a05d3b3d24f8df09ae7257af5d6",
+      "size": 1259
+    },
+    {
+      "path": "test/data-tests/testcases/test-102.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03dd9f8b3c11ada042ae39dde8b6e49c8f831ece",
+      "size": 1291
+    },
+    {
+      "path": "test/data-tests/testcases/test-110.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "799b47d958c937fd67daeb376e3dd5b60f568bfe",
+      "size": 1745
+    },
+    {
+      "path": "test/data-tests/testcases/test-111.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4237b3ebf5e3cd313f608be62c4b437ec2fe1bf6",
+      "size": 1173
+    },
+    {
+      "path": "test/data-tests/testcases/test-112.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "977f330c3b7cf5c2ccdb9781803ca236714c5f17",
+      "size": 1167
+    },
+    {
+      "path": "test/data-tests/testcases/test-113.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c88c64a81db239aa9e345a3efba5d418f3b5b35",
+      "size": 2365
+    },
+    {
+      "path": "test/data-tests/testcases/test-114.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d111489783f90f6600f32defe2580dbe20f7c6f",
+      "size": 1401
+    },
+    {
+      "path": "test/data-tests/testcases/test-115.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34af2dfa861b645a46ab4fa16727d5717dd68eed",
+      "size": 1401
+    },
+    {
+      "path": "test/data-tests/testcases/test-116.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7333edd226adb48b895a068c42de4fe867f9b241",
+      "size": 1297
+    },
+    {
+      "path": "test/data-tests/testcases/test-120.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e0da8df6426706623861839063bc96097183ff",
+      "size": 897
+    },
+    {
+      "path": "test/data-tests/testcases/test-121.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "301d61d7db1f7aad63ddc5e42ae95dc1b330cbfe",
+      "size": 973
+    },
+    {
+      "path": "test/data-tests/testcases/test-122.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0b9a343bf7fcc9e6d0d9a0acbefc7342b2b3728",
+      "size": 1028
+    },
+    {
+      "path": "test/data-tests/testcases/test-123.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcd24d5a9b94a8f29c988684fd2c44d7ab91e342",
+      "size": 1105
+    },
+    {
+      "path": "test/data-tests/testcases/test-124.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a01e379d3ddcc937c3b4fd90532f3f8cee8ab9e",
+      "size": 1237
+    },
+    {
+      "path": "test/data-tests/testdata-multipolygon.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd71b1df1a06cd217cb704255bbfba83a5ce6d2",
+      "size": 6738
+    },
+    {
+      "path": "test/data-tests/testdata-overview.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3e3664827457bd241937b062e858873b4d2922",
+      "size": 3441
+    },
+    {
+      "path": "test/data-tests/testdata-testcases.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f91732c982c326f84f46217ea2f97de836c4421",
+      "size": 757
+    },
+    {
+      "path": "test/data-tests/testdata-xml.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d79ea09d07875c5c8d3094d3afa333032bd68f0",
+      "size": 18542
+    },
+    {
+      "path": "test/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5899846a06648426d1efd25afc68cdec6c275ba"
+    },
+    {
+      "path": "test/examples/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6d427d399c2f81e258381ac6a168277888eaa2d",
+      "size": 1199
+    },
+    {
+      "path": "test/examples/t",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d946c8a0b68296d54657d572a4d2bfa0a27fce0e"
+    },
+    {
+      "path": "test/examples/t/amenity_list",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bedce64f2d582aa2f8a3c96deb7f738cf13f4e1"
+    },
+    {
+      "path": "test/examples/t/amenity_list/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a99a8a6d8246a901b0a5c1c16d6a8b4f4cda391",
+      "size": 518
+    },
+    {
+      "path": "test/examples/t/amenity_list/area.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbf60fb7aa257e4440b35f78bf7d901b1b98e97b",
+      "size": 1191
+    },
+    {
+      "path": "test/examples/t/amenity_list/node.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44807116c8e480fe4457c8d6ea8623c1d7a48166",
+      "size": 303
+    },
+    {
+      "path": "test/examples/t/area_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64fedf471a12c648774baae72fc030be05c9f043"
+    },
+    {
+      "path": "test/examples/t/area_test/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d92aa97523aa87fb763596473cb75c3fd3cd4c15",
+      "size": 1042
+    },
+    {
+      "path": "test/examples/t/area_test/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbdeeaa28b7d69a240a53e8c4a61e452768a710a",
+      "size": 1816
+    },
+    {
+      "path": "test/examples/t/change_tags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bcc3808e98eb541072014de5b51f9cb358e2e95"
+    },
+    {
+      "path": "test/examples/t/change_tags/.gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4111dd15bcd1ce3c3a2e00c3d91b7e6c5134987",
+      "size": 23
+    },
+    {
+      "path": "test/examples/t/change_tags/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "614e1b1706f539dfecab95d8d34462c2f36691b6",
+      "size": 416
+    },
+    {
+      "path": "test/examples/t/change_tags/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d65c716c55383289674177d195ea1f7434b07776",
+      "size": 992
+    },
+    {
+      "path": "test/examples/t/change_tags/result.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f57180d07e80bf7fc7ce0ffc6e0ba8d5a0ed962",
+      "size": 865
+    },
+    {
+      "path": "test/examples/t/convert",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea1eeaae6b5bf3ae9cf204e07f706469b33918da"
+    },
+    {
+      "path": "test/examples/t/convert/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac6f84631f9289aa8b9ba41c049e1534217e3f17",
+      "size": 2375
+    },
+    {
+      "path": "test/examples/t/convert/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbdeeaa28b7d69a240a53e8c4a61e452768a710a",
+      "size": 1816
+    },
+    {
+      "path": "test/examples/t/count",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7b6efc1adac04113ab8a3b5a8506430f0e9b212"
+    },
+    {
+      "path": "test/examples/t/count/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07ac6f4740552bc6d492e6c61290083038db01f3",
+      "size": 245
+    },
+    {
+      "path": "test/examples/t/count/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a62ece240945717ba2b14482f245d6dbfc63eb0",
+      "size": 610
+    },
+    {
+      "path": "test/examples/t/create_pois",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc816e20644288322a0872cfe4e552584978fb49"
+    },
+    {
+      "path": "test/examples/t/create_pois/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2aa7cb3e88244095879a35545d380c61cad4b31",
+      "size": 544
+    },
+    {
+      "path": "test/examples/t/debug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "298d34a014f45729ba47738ed7da1bafead9346b"
+    },
+    {
+      "path": "test/examples/t/debug/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e2462c00a83e9c713205212a2be0bf855954632",
+      "size": 1611
+    },
+    {
+      "path": "test/examples/t/debug/changesets.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61ee023c4bb95d188123899e6c27e1dae70d2b5f",
+      "size": 463
+    },
+    {
+      "path": "test/examples/t/debug/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15fbda3ec74eb4f367556a0f4ed580644e93b321",
+      "size": 701
+    },
+    {
+      "path": "test/examples/t/dump_internal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ed33dfa77bcebee3a5556484575e077b1d3697c"
+    },
+    {
+      "path": "test/examples/t/dump_internal/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa942ef1ad7f4ffefa11837f4ed8edad693151e9",
+      "size": 1615
+    },
+    {
+      "path": "test/examples/t/dump_internal/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbdeeaa28b7d69a240a53e8c4a61e452768a710a",
+      "size": 1816
+    },
+    {
+      "path": "test/examples/t/filter_discussions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7ec1f5ca8d7b20ec1380202bc92f59b14c1da3c"
+    },
+    {
+      "path": "test/examples/t/filter_discussions/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21e8f7208787de1595f150de044c5f877e99307f",
+      "size": 401
+    },
+    {
+      "path": "test/examples/t/filter_discussions/changesets.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "350a7171b420e6dccbd9cc2f3eb58f2d9ca3784b",
+      "size": 761
+    },
+    {
+      "path": "test/examples/t/index_lookup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fd9e3d01b9a5bbe2b5d11ce244d4290a0df3268"
+    },
+    {
+      "path": "test/examples/t/index_lookup/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac4c434639deefef7861ffffa5a708b88aba2114",
+      "size": 1862
+    },
+    {
+      "path": "test/examples/t/location_cache",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c07daa6e90025734e81ce677cba3ff0d44ed330b"
+    },
+    {
+      "path": "test/examples/t/location_cache/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ca8b79e5c1a4ac6df27dba8a2bcedaa4ac11af1",
+      "size": 1736
+    },
+    {
+      "path": "test/examples/t/location_cache/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04cb6fda4b02537cbd6067873f4d6c63424f00c6",
+      "size": 586
+    },
+    {
+      "path": "test/examples/t/location_cache/way.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f64a170d9485ff9844448c8480c5d84b7cc331b8",
+      "size": 318
+    },
+    {
+      "path": "test/examples/t/pub_names",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87d7207f9c9cea5b31ffcf54d71a227dec3cd8f6"
+    },
+    {
+      "path": "test/examples/t/pub_names/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3abefa39f7cdacbaf729d375dec4ae067801d6de",
+      "size": 968
+    },
+    {
+      "path": "test/examples/t/pub_names/pub-addr.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6199961263a5067d3a2f280c542dd17be4ae9662",
+      "size": 426
+    },
+    {
+      "path": "test/examples/t/pub_names/pub-node.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee542269545921a601268f358c224e505750440a",
+      "size": 295
+    },
+    {
+      "path": "test/examples/t/pub_names/pub-noname.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "321788978116089edf208b3f3f640fa44ff948ba",
+      "size": 262
+    },
+    {
+      "path": "test/examples/t/pub_names/pub-way.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aec7a8636d936d066e72d761b5876e65403bf791",
+      "size": 1361
+    },
+    {
+      "path": "test/examples/t/read",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d57c892538b2f42bd5fe2590730a0a1ea998bc00"
+    },
+    {
+      "path": "test/examples/t/read/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff2b7aa5896ef624a2d74b5ccd8b683177a50ad5",
+      "size": 97
+    },
+    {
+      "path": "test/examples/t/read/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98462b619b3043213c27ff4d3740c0de1c405280",
+      "size": 1536
+    },
+    {
+      "path": "test/examples/t/read_with_progress",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d955fe86db511ed0e26645e7d73ef41e89e4a18"
+    },
+    {
+      "path": "test/examples/t/read_with_progress/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc088188b4a5b54132330900d82832ac48d2dd3",
+      "size": 125
+    },
+    {
+      "path": "test/examples/t/read_with_progress/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98462b619b3043213c27ff4d3740c0de1c405280",
+      "size": 1536
+    },
+    {
+      "path": "test/examples/t/road_length",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d290359bc1c394475440f21c577b0a3ece2cb4f"
+    },
+    {
+      "path": "test/examples/t/road_length/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6323f073195cbece5d50837c23943d593face95d",
+      "size": 238
+    },
+    {
+      "path": "test/examples/t/road_length/road.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d00581b77d4245f59a1cd48221a975b3e8dfddb9",
+      "size": 4647
+    },
+    {
+      "path": "test/examples/t/tiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "198699ae8a12daa33c35e7c3f86fda875cfa5baf"
+    },
+    {
+      "path": "test/examples/t/tiles/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a4fbaa9e23ec7371377673ff2cb4698a965dc59",
+      "size": 590
+    },
+    {
+      "path": "test/include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eaf4d6d906907c16f093d83eb920bd9446cb7216"
+    },
+    {
+      "path": "test/include/test_crc.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a819042e6267ffd494ed1af3773bcebbd5182bae",
+      "size": 363
+    },
+    {
+      "path": "test/include/utils.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "714a1cdb5354631b2bf27ffefb583496097d7143",
+      "size": 805
+    },
+    {
+      "path": "test/include/win_mkstemp.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "693c266f31ba1f2e95d76c31f40c2570d50703b2",
+      "size": 1092
+    },
+    {
+      "path": "test/t",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "780470aca98cded48628227bb996f620562e5cd8"
+    },
+    {
+      "path": "test/t/area",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35a3cacc27707e230d6321d2ba1f6e26ef636c6b"
+    },
+    {
+      "path": "test/t/area/test_area_id.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4349c3806ffd8453a2ec4493c9042b21c8004cb7",
+      "size": 1009
+    },
+    {
+      "path": "test/t/area/test_assembler.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d45ff84e49400873ba7852df0aeb47aefe238a6",
+      "size": 4048
+    },
+    {
+      "path": "test/t/area/test_node_ref_segment.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3370eeb86a87bad8e10426e85be138324ee532a",
+      "size": 8756
+    },
+    {
+      "path": "test/t/builder",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e50d109376056793a6aad9e7dc966986c2c5885"
+    },
+    {
+      "path": "test/t/builder/test_attr.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1404a7490fdd61288811cfcd5e3fad9702fb175",
+      "size": 18696
+    },
+    {
+      "path": "test/t/builder/test_object_builder.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f647994a01f1f168cef1ca0f5427807b5620435b",
+      "size": 13203
+    },
+    {
+      "path": "test/t/geom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f1fe08f757551b9f1bc9b3b468e380185f959db"
+    },
+    {
+      "path": "test/t/geom/area_helper.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2a1ce6bcdaf2e1a2c6b6dc36bc617b1024545c",
+      "size": 2064
+    },
+    {
+      "path": "test/t/geom/test_coordinates.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2143eb402a3c78299fadccc6155982ee5b4d34af",
+      "size": 1955
+    },
+    {
+      "path": "test/t/geom/test_exception.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e6b66cb2eefcf80231d0f8e389a6c47def7ab39",
+      "size": 286
+    },
+    {
+      "path": "test/t/geom/test_factory_with_projection.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "226ad9b438afcb2369c2c8ecbec0de18a264b6a6",
+      "size": 396
+    },
+    {
+      "path": "test/t/geom/test_geojson.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b64f589f3eed453ee1ea2bda961911f1834c32f",
+      "size": 7735
+    },
+    {
+      "path": "test/t/geom/test_geos.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5714ad190b048cfe46085e9d863991b398a59dbd",
+      "size": 5762
+    },
+    {
+      "path": "test/t/geom/test_mercator.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f8bf9764dee8cbe7f1a9d7cc39d0616f0d51559",
+      "size": 1617
+    },
+    {
+      "path": "test/t/geom/test_ogr.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9acdd818647f613eaaf938db565682b6f54c10",
+      "size": 3917
+    },
+    {
+      "path": "test/t/geom/test_ogr_wkb.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d78f64201c3d36bda02174cb82519c9283a738",
+      "size": 3771
+    },
+    {
+      "path": "test/t/geom/test_projection.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2ef6d4af28ad14e2ead37b95ac883ae7ce109a",
+      "size": 1662
+    },
+    {
+      "path": "test/t/geom/test_tile.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2da8ff298e1fb8ed48ecba57f446c0edaada3d61",
+      "size": 3490
+    },
+    {
+      "path": "test/t/geom/test_tile_data.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a22cfa519fdf591568cd132bd515b0bbf63439e",
+      "size": 15972
+    },
+    {
+      "path": "test/t/geom/test_wkb.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2af344ba459953af89200bcfd769f6b330a0553",
+      "size": 7239
+    },
+    {
+      "path": "test/t/geom/test_wkt.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "251f3e5eab59ebceadc0f9240b958846ba2200c5",
+      "size": 6212
+    },
+    {
+      "path": "test/t/geom/wnl_helper.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f40dfdb9686c21830ac883197fd8fa7b4f6397c",
+      "size": 1661
+    },
+    {
+      "path": "test/t/handler",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eaf92cd83a332008425f1e85ab346229e2114fd5"
+    },
+    {
+      "path": "test/t/handler/test_apply.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f615ae3b1e7081c88349e5b18a516073d29b93c",
+      "size": 3311
+    },
+    {
+      "path": "test/t/handler/test_check_order_handler.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e32abd86c4139d3994d59d2d37bc04060944006d",
+      "size": 9094
+    },
+    {
+      "path": "test/t/handler/test_dynamic_handler.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc0898e598f3a2e45d17b1dec40f7c4cd2e7811",
+      "size": 2600
+    },
+    {
+      "path": "test/t/index",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98a91eb0983084270c52ca33e89379b6d2a1dc0b"
+    },
+    {
+      "path": "test/t/index/test_dump_and_load_index.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a4a12b194590f897f22147e42765d1e8a338b82",
+      "size": 3498
+    },
+    {
+      "path": "test/t/index/test_dump_sparse_as_array.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3260a4bcc0fff5483761f798bcc9af50f3ee615e",
+      "size": 3378
+    },
+    {
+      "path": "test/t/index/test_file_based_index.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6be69c35d99f5744cff943a09f3f938facedfd6",
+      "size": 5429
+    },
+    {
+      "path": "test/t/index/test_id_set.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8da7ea08e32be3eb07df93c9f30c45c047e759c",
+      "size": 5853
+    },
+    {
+      "path": "test/t/index/test_id_to_location.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "735b420360db3c083763ed4eb9837aafa411e0fe",
+      "size": 8680
+    },
+    {
+      "path": "test/t/index/test_nwr_array.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca0fc5fab4ebe446a39046e6aac054abb1e35388",
+      "size": 503
+    },
+    {
+      "path": "test/t/index/test_object_pointer_collection.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36fe154da592d8bc0586d15661aa22392964ab1e",
+      "size": 2033
+    },
+    {
+      "path": "test/t/index/test_relations_map.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48198f0f4dfe80663cab0d5e910e89f01c1b08dc",
+      "size": 10312
+    },
+    {
+      "path": "test/t/io",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f891264dae2b021afba03b910ac9206e3c5cbe3b"
+    },
+    {
+      "path": "test/t/io/corrupt_data_bzip2.txt.bz2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c602e27e4d00a32ca66989c23866278882f0a1e0",
+      "size": 44
+    },
+    {
+      "path": "test/t/io/corrupt_data_gzip.txt.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36c665a520d511c37fcac8e04f6c0df9e05dac7b",
+      "size": 35
+    },
+    {
+      "path": "test/t/io/data-cr.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef666eef012a32391a28e23bb01def8d376271e",
+      "size": 58
+    },
+    {
+      "path": "test/t/io/data-n0w1r3.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86a01c6212f9612c91a80912700d306564e8d972",
+      "size": 1013
+    },
+    {
+      "path": "test/t/io/data-n0w1r3.osm.o5m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b76653e196ca9d21d09bbab5a2c1ce96f44b4d9",
+      "size": 164
+    },
+    {
+      "path": "test/t/io/data-n0w1r3.osm.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c515c0e07b801d75a566efca3c06d3e439b5366",
+      "size": 291
+    },
+    {
+      "path": "test/t/io/data-n5w0r3.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c30e2d8c949f6c8d71fd4ca580547b8491b7c92",
+      "size": 1415
+    },
+    {
+      "path": "test/t/io/data-n5w0r3.osm.o5m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4606e999508281e2300e92f0ace595a0dd4c45a4",
+      "size": 196
+    },
+    {
+      "path": "test/t/io/data-n5w0r3.osm.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d5c7ba94f13a3ff691cef51185028daf161a7df",
+      "size": 489
+    },
+    {
+      "path": "test/t/io/data-n5w1r0.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13c39d307599f07d761d6e153abdebf540cd6f34",
+      "size": 890
+    },
+    {
+      "path": "test/t/io/data-n5w1r0.osm.o5m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e04951239956bdf470c714acc12a2efa4246ea",
+      "size": 118
+    },
+    {
+      "path": "test/t/io/data-n5w1r0.osm.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd89da39b210646e2c795f3bc6903b491e490e2",
+      "size": 338
+    },
+    {
+      "path": "test/t/io/data-n5w1r3.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f338a0baa77d873b4fce421ab47a22f076b9e29",
+      "size": 1608
+    },
+    {
+      "path": "test/t/io/data-n5w1r3.osm.o5m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3fc62106578d179edd37524372bd557fc7483e2",
+      "size": 235
+    },
+    {
+      "path": "test/t/io/data-n5w1r3.osm.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85d76b345ad2a9fe983edacaf0d38ac117baf86e",
+      "size": 559
+    },
+    {
+      "path": "test/t/io/data-nonl.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db2354439bccf191f740be010939ff72335ca69b",
+      "size": 56
+    },
+    {
+      "path": "test/t/io/data.opl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c7e2a35f479e89809aaf37cdfbbf93c9501f71d",
+      "size": 57
+    },
+    {
+      "path": "test/t/io/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fffb77ad3cbdf383c65221b065dac6b9c31a3d04",
+      "size": 222
+    },
+    {
+      "path": "test/t/io/data.osm.bz2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f38797ebc6219cc4cfab63da1e4c7532007742a",
+      "size": 200
+    },
+    {
+      "path": "test/t/io/data.osm.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07edb9095b9ce78d51666d221ad9faba309ff5d5",
+      "size": 187
+    },
+    {
+      "path": "test/t/io/data.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "755d6af45a8819135abceb14d8fc94db1657df08",
+      "size": 9
+    },
+    {
+      "path": "test/t/io/data_bzip2.txt.bz2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0ee7e7d65cf069345fad9f6e75d03c6e88e0941",
+      "size": 45
+    },
+    {
+      "path": "test/t/io/data_gzip.txt.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "662bb9b922a34eb4ea7f1ad52c7393254fdc131b",
+      "size": 43
+    },
+    {
+      "path": "test/t/io/data_pbf_version-1-densenodes.osm.pbf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d3b0a8f1eee26ffb1d15da834f313369e469dd5",
+      "size": 136
+    },
+    {
+      "path": "test/t/io/data_pbf_version-1.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f731ac584cf4bd9da83e98db031fc2e08d3a0fe1",
+      "size": 129
+    },
+    {
+      "path": "test/t/io/data_pbf_version-1.osm.pbf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3766b8c0ca95975975e58b0eb0ac9d9c76256e01",
+      "size": 119
+    },
+    {
+      "path": "test/t/io/deleted_nodes.osh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "639e051490542fa2cf8ddc356bbb1aed194af901",
+      "size": 334
+    },
+    {
+      "path": "test/t/io/deleted_nodes.osh.pbf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a94870d14ad3d7a17b0a79dc1441cf51afa3ba1",
+      "size": 189
+    },
+    {
+      "path": "test/t/io/empty_file",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "path": "test/t/io/test_bzip2.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feb6ad4546582cce41ed4f09272edb1515548c6b",
+      "size": 4159
+    },
+    {
+      "path": "test/t/io/test_compression_factory.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff8bc0e830bcf71c200926f45beedef9b4c64e87",
+      "size": 1011
+    },
+    {
+      "path": "test/t/io/test_file_formats.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dc6575103b82da0c48a62e1d45d4523269c52a8",
+      "size": 11405
+    },
+    {
+      "path": "test/t/io/test_file_seek.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f32360981f86a7da896815c84f3c19114b8a94c0",
+      "size": 2777
+    },
+    {
+      "path": "test/t/io/test_gzip.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb67fc6a04b5797a48696fc0e020abd979000743",
+      "size": 4014
+    },
+    {
+      "path": "test/t/io/test_nocompression.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cb27b315ee377fcddb6742e5b3b51b8d2e47dec",
+      "size": 3576
+    },
+    {
+      "path": "test/t/io/test_opl_parser.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e45f8a87dc71519306d1e171e272e490c2b5292e",
+      "size": 43486
+    },
+    {
+      "path": "test/t/io/test_output_iterator.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ce213034c64e306e178e2ecbbd5d47918c32249",
+      "size": 903
+    },
+    {
+      "path": "test/t/io/test_output_utils.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e322d7140b759ffdcf7737a9d04c8398df39602",
+      "size": 8751
+    },
+    {
+      "path": "test/t/io/test_pbf.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c55cd957df0d9076a75295bad6cc00f4f09b8d1",
+      "size": 3152
+    },
+    {
+      "path": "test/t/io/test_print_width.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "620d61ac1378668c7d7d20233c8c5d3dfffa644f",
+      "size": 871
+    },
+    {
+      "path": "test/t/io/test_reader.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17eb3bf9fbd9166c0f5eba973b8167f50f2f76f5",
+      "size": 11439
+    },
+    {
+      "path": "test/t/io/test_reader_fileformat.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24fa2a6e03dde51e023f03e19850852b29e33d01",
+      "size": 250
+    },
+    {
+      "path": "test/t/io/test_reader_with_mock_decompression.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7db2190f23017a252756b595eed2d94693fda8b",
+      "size": 4463
+    },
+    {
+      "path": "test/t/io/test_reader_with_mock_parser.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e1447c0d11887d668c3b00a13f1d624fce207f",
+      "size": 3015
+    },
+    {
+      "path": "test/t/io/test_string_table.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79718678938ff2d1f2d5775efa152ac1c8086a64",
+      "size": 3237
+    },
+    {
+      "path": "test/t/io/test_writer.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47b8b075406dfd8c2c53f8c5a1a5215290309565",
+      "size": 7202
+    },
+    {
+      "path": "test/t/io/test_writer_with_mock_compression.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0d366a0acae63c7919f5fb11c8818b464ce9786",
+      "size": 3361
+    },
+    {
+      "path": "test/t/io/test_writer_with_mock_encoder.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8629a6f0b7fd46af9b3aaeddf0fe3a18acb4a04",
+      "size": 3141
+    },
+    {
+      "path": "test/t/memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a79eec9a4a08aaa24a08b29cf53ab95c61b4be4"
+    },
+    {
+      "path": "test/t/memory/test_buffer_basics.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f08a2c1121374d91a4a69d15637b934fc3bb266",
+      "size": 4040
+    },
+    {
+      "path": "test/t/memory/test_buffer_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd8d74315fb5faf874dd8b853236f32844f73f0e",
+      "size": 5582
+    },
+    {
+      "path": "test/t/memory/test_buffer_purge.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60cf2096261900c71e7f3a2d088e18e900ec3a43",
+      "size": 5836
+    },
+    {
+      "path": "test/t/memory/test_callback_buffer.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67894fd13074d9c2f21ac1c07bf5cb429f818811",
+      "size": 2884
+    },
+    {
+      "path": "test/t/memory/test_item.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7aceefadd7399273ade33ae441249a7005028f0",
+      "size": 1700
+    },
+    {
+      "path": "test/t/memory/test_type_is_compatible.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ff0f3ac0cfa1cc0ad14fdcce96ee860f6de3f5",
+      "size": 6202
+    },
+    {
+      "path": "test/t/osm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05315ff02e84eb687a65d2abfc16fd72a816c040"
+    },
+    {
+      "path": "test/t/osm/test_area.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "487e2a6066210ce74a5b3ff3056f610649547170",
+      "size": 2439
+    },
+    {
+      "path": "test/t/osm/test_box.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69780be8a0c424c0cc9a13d34e6a9d3077a53cca",
+      "size": 4726
+    },
+    {
+      "path": "test/t/osm/test_changeset.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95005bbd61bf60c396e6e3b81cc3debd9e7045f7",
+      "size": 5837
+    },
+    {
+      "path": "test/t/osm/test_crc.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd9c0079e4aac5eb0f6277d6bd94de8245b0e0e7",
+      "size": 1544
+    },
+    {
+      "path": "test/t/osm/test_entity_bits.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a124fa372281bbe2564aab17458e381dfd876911",
+      "size": 3389
+    },
+    {
+      "path": "test/t/osm/test_location.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd59c5491a6fbb8e17aecbc8e892bf5d24e77652",
+      "size": 13049
+    },
+    {
+      "path": "test/t/osm/test_location_extra.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7066055fb9ad34b668a1f988318956e1b1a239ed",
+      "size": 14352
+    },
+    {
+      "path": "test/t/osm/test_metadata.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd589bb8f25ffb197ca5d04c4398dd86abebd353",
+      "size": 5628
+    },
+    {
+      "path": "test/t/osm/test_node.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31cc54f0e2265226b46b526684e8008af9559a5f",
+      "size": 6192
+    },
+    {
+      "path": "test/t/osm/test_node_ref.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9db8d33db13a04ccfbf0628f309e9ecf8648713",
+      "size": 4283
+    },
+    {
+      "path": "test/t/osm/test_object_comparisons.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8d011d9c982d216bd20a64a3c2715e61b8b947f",
+      "size": 11654
+    },
+    {
+      "path": "test/t/osm/test_relation.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e5eddd40fae3b706d648ba2c7f6d5fd7085fcec",
+      "size": 2265
+    },
+    {
+      "path": "test/t/osm/test_timestamp.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d87381cc6f68055f199f6f4380daa29af9e71653",
+      "size": 6874
+    },
+    {
+      "path": "test/t/osm/test_types_from_string.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a2d3ff44ff009c6c8d9d6e840940920a17ec28c",
+      "size": 5998
+    },
+    {
+      "path": "test/t/osm/test_way.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8359903373326159974478d0bbb7915b5364e680",
+      "size": 3082
+    },
+    {
+      "path": "test/t/relations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2579d3a94e7a0305d74b41ff62727335452c9a6f"
+    },
+    {
+      "path": "test/t/relations/data.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "796b98660f350376519f061617d1b1fb5ae7a36c",
+      "size": 1805
+    },
+    {
+      "path": "test/t/relations/dupl_member.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58683bcd03ca4c79e6f9be85e900aae0b959f507",
+      "size": 1016
+    },
+    {
+      "path": "test/t/relations/missing_members.osm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c0cb0e06b5cf0984b99606c1397fd009c28ca6",
+      "size": 2106
+    },
+    {
+      "path": "test/t/relations/test_members_database.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae5ab8ad8f9908eb80b428803d27f26fa059af40",
+      "size": 6002
+    },
+    {
+      "path": "test/t/relations/test_read_relations.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b4246df8079822aaccf4b9cfcc09238c40e52d3",
+      "size": 1927
+    },
+    {
+      "path": "test/t/relations/test_relations_database.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e170d0c0ea43d72fec06cfc9f351174a5277a6d5",
+      "size": 3043
+    },
+    {
+      "path": "test/t/relations/test_relations_manager.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5743e76b797bcf2ff7c3ae7debf989983485386c",
+      "size": 10246
+    },
+    {
+      "path": "test/t/storage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c8bec399db3b493674a8c6c6a5d4edee6687da8"
+    },
+    {
+      "path": "test/t/storage/test_item_stash.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "297c6de13e3fd5cf68847c2f73f0c2a89e988c40",
+      "size": 5037
+    },
+    {
+      "path": "test/t/tags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "853afd932f638049b12b102a07919459f74833b8"
+    },
+    {
+      "path": "test/t/tags/test_filter.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4d1f8e2d7f29b7143799887f8d2bf7016946de7",
+      "size": 6343
+    },
+    {
+      "path": "test/t/tags/test_operators.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb5e5e803d173e6aee550866828b7662cc53155",
+      "size": 1719
+    },
+    {
+      "path": "test/t/tags/test_tag_list.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02fec436d5cfc0ebdb1418ddc0d69ab2eb430504",
+      "size": 7621
+    },
+    {
+      "path": "test/t/tags/test_tag_matcher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d39332934c6e7d725895d90b77e59732f96ea8c",
+      "size": 4720
+    },
+    {
+      "path": "test/t/tags/test_tags_filter.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcaf20677b852eb883197afb2cae86c1c273bc5e",
+      "size": 11644
+    },
+    {
+      "path": "test/t/thread",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "98f8ea620cf3c71bb90bdb12d5cb6dd36c9419ba"
+    },
+    {
+      "path": "test/t/thread/test_pool.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b835eadd7411e6cf2bb1015ba74e11a609943dd",
+      "size": 3677
+    },
+    {
+      "path": "test/t/thread/test_queue.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99226f9bb3c11e29e76d703adab5d4fe5fd381e9",
+      "size": 1185
+    },
+    {
+      "path": "test/t/thread/test_util.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efc5ae4d936101c56208813e91fc85f99c509c02",
+      "size": 1461
+    },
+    {
+      "path": "test/t/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c23de15ad6a510fce34d018ee773ca0dc9ceb54"
+    },
+    {
+      "path": "test/t/util/.gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a22ace47c5fa7e40722b9d61f9cacedc343964f3",
+      "size": 28
+    },
+    {
+      "path": "test/t/util/known_file_size",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1369e1e14672b334c3cc56c72887a31d68320d95",
+      "size": 22
+    },
+    {
+      "path": "test/t/util/test_config.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "116077c2a9ee83b3811f0366158dceea18d9984d",
+      "size": 3102
+    },
+    {
+      "path": "test/t/util/test_delta.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8f0e9b1adeea311895433e1c871b9f62bde800b",
+      "size": 2103
+    },
+    {
+      "path": "test/t/util/test_double.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d239684d974bf72349136b99d52da526e8a72156",
+      "size": 648
+    },
+    {
+      "path": "test/t/util/test_file.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "739484e848e09bc5a80880614f17d21f457d6e0b",
+      "size": 1692
+    },
+    {
+      "path": "test/t/util/test_memory.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5362b0fdfafb74cec88824eaa368eef7075f626e",
+      "size": 309
+    },
+    {
+      "path": "test/t/util/test_memory_mapping.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3c12c0b6427059d61633ff4151d9f5472db4a96",
+      "size": 11458
+    },
+    {
+      "path": "test/t/util/test_minmax.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "872a61a9e998cf0588368fafe1f27a3f7ec2ebbc",
+      "size": 1408
+    },
+    {
+      "path": "test/t/util/test_misc.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50968fe657149305bdb743e02135fd4724f7a9f4",
+      "size": 2995
+    },
+    {
+      "path": "test/t/util/test_options.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2f668f70bb559dc00525cb1c9268a6b9cccdd9e",
+      "size": 2873
+    },
+    {
+      "path": "test/t/util/test_string.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c4afa527157162236ffc96b247c8d9cf33af026",
+      "size": 3237
+    },
+    {
+      "path": "test/t/util/test_string_matcher.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03427b78d3cb27d6ca275cd8a54da70e94126df0",
+      "size": 6539
+    },
+    {
+      "path": "test/t/util/test_timer_disabled.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c62ad34f030286f4c1bb93d48e68dc3db19da01f",
+      "size": 290
+    },
+    {
+      "path": "test/t/util/test_timer_enabled.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1fb665373707805ea74cf98cef2342105d9ae18",
+      "size": 317
+    },
+    {
+      "path": "test/test_main.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7c351f437f5f43f3bb62beb254a9f1ecbec5a0",
+      "size": 47
+    },
+    {
+      "path": "test/valgrind.supp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6ef1f65a22aee5dff371e228d0bff80428d841f",
+      "size": 961
+    }
+  ],
+  "selectedFiles": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "size": 1338
+    },
+    {
+      "path": "include/osmium/area/assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ecd136122a0b659cc005e574c0471f0e7165ded",
+      "size": 9302
+    },
+    {
+      "path": "include/osmium/area/assembler_config.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff5156c9b250551eb3254b6be888d9a645129521",
+      "size": 5330
+    },
+    {
+      "path": "include/osmium/area/assembler_legacy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "537087565d3bce9e579eaf8277d6b95c48085274",
+      "size": 16396
+    },
+    {
+      "path": "include/osmium/area/detail/basic_assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2152a2e8ad644ef489b78798c618f67bec989f",
+      "size": 56390
+    },
+    {
+      "path": "include/osmium/area/detail/basic_assembler_with_tags.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c5b56f438cff1d5495c969559fcf87c7dd15662",
+      "size": 3478
+    },
+    {
+      "path": "include/osmium/area/detail/node_ref_segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41f35b4fed127a357bec9998b7fa5e5c630b4417",
+      "size": 14773
+    },
+    {
+      "path": "include/osmium/area/detail/proto_ring.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb8316f9bacf3793cbdcfa31b1ff9f8b5eff300c",
+      "size": 8248
+    },
+    {
+      "path": "include/osmium/area/detail/segment_list.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be4cb1e19e00ec2d3275bdbc4a5f0c57674332d",
+      "size": 15475
+    },
+    {
+      "path": "include/osmium/area/detail/vector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac54746022b42021f0f0c2b750bea70868fcd4b4",
+      "size": 4310
+    },
+    {
+      "path": "include/osmium/area/geom_assembler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "558eb97671095a1c50f5c62602f66b72761f01f5",
+      "size": 4948
+    },
+    {
+      "path": "include/osmium/area/multipolygon_collector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3054c625e57464b0fd22e4386670ca375420345",
+      "size": 8165
+    },
+    {
+      "path": "include/osmium/area/multipolygon_manager.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b221e3bac927e12fdd448665b0dfb1f5e3932c",
+      "size": 7403
+    },
+    {
+      "path": "include/osmium/area/multipolygon_manager_legacy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9077805ab7bb4e46e4a2ff7f272acfce6a23376f",
+      "size": 7013
+    },
+    {
+      "path": "include/osmium/area/problem_reporter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2748f9690a671773e73ffca9e97a035b028132a4",
+      "size": 10043
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_exception.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9b8699df563bd3a4f328d74b7f2018b5cd12550",
+      "size": 6065
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_ogr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b887e5b166aca8eb17d4986e554494d504d4e15d",
+      "size": 10835
+    },
+    {
+      "path": "include/osmium/area/problem_reporter_stream.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd491f958daa04edb85154dbee724d838e142ea1",
+      "size": 6231
+    },
+    {
+      "path": "include/osmium/area/stats.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4434f48d8d52c1ddb98688a7c9c827154f0432cc",
+      "size": 7366
+    },
+    {
+      "path": "include/osmium/builder/attr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e99c7f20712aa47c4bc09a4965fa30aa4071db0",
+      "size": 42559
+    },
+    {
+      "path": "include/osmium/builder/builder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ead29cbdeb1b5f1f26c1e22e1ff557e15b7236",
+      "size": 8113
+    },
+    {
+      "path": "include/osmium/builder/osm_object_builder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa5b04315cd47143c243bfd90dae0f006db2b853",
+      "size": 29799
+    },
+    {
+      "path": "include/osmium/diff_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf4435e40d38af83801e81f6124b8f08c2a2dc1",
+      "size": 2228
+    },
+    {
+      "path": "include/osmium/diff_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "577b3e3331f02b47bb99549dca863a7abc681551",
+      "size": 4743
+    },
+    {
+      "path": "include/osmium/diff_visitor.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a3ec8171ac27e91360d03b55cebc4f0aa6a1d1e",
+      "size": 4033
+    },
+    {
+      "path": "include/osmium/dynamic_handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a730f2f6cb1c687be4a7b3a9274840bc6d83592f",
+      "size": 7068
+    },
+    {
+      "path": "include/osmium/experimental/flex_reader.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d830ff1666cb0f21aaaa441d369f5b4c731eea",
+      "size": 5491
+    },
+    {
+      "path": "include/osmium/fwd.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "608f83b5106abc635292b5f70fc885a834076788",
+      "size": 2140
+    },
+    {
+      "path": "include/osmium/geom/coordinates.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d3a20ff0a8fc6611b90e8a19acb98716bba50e",
+      "size": 6274
+    },
+    {
+      "path": "include/osmium/geom/factory.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2438a817afc6178912643e98bc4ddf9ffa5a36",
+      "size": 15650
+    },
+    {
+      "path": "include/osmium/geom/geojson.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad997370631ca3197d612ed3cfb009525792a89",
+      "size": 6076
+    },
+    {
+      "path": "include/osmium/geom/geos.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87afe8bf37f50e0c3e7a4f19e5555dad857688f1",
+      "size": 10498
+    },
+    {
+      "path": "include/osmium/geom/haversine.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1bc7a6bed52ffc89fb58bb181f2c9c2027d0921",
+      "size": 4101
+    },
+    {
+      "path": "include/osmium/geom/mercator_projection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "572d080cfd9252611f71e48ead2e75011dae0c1a",
+      "size": 7296
+    },
+    {
+      "path": "include/osmium/geom/ogr.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f26c01c964ce70823cab47dfc8cdd53120a236b9",
+      "size": 6073
+    },
+    {
+      "path": "include/osmium/geom/rapid_geojson.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f93b9996c530afd4aba38f8b993cd57d7f4cb33f",
+      "size": 7046
+    },
+    {
+      "path": "include/osmium/geom/relations.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1beb721c50127bd70a8822543f0a92053278ede",
+      "size": 2668
+    },
+    {
+      "path": "include/osmium/geom/tile.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dde94ef1e078ab74ec4e8d9103e04a1b3d9a42f",
+      "size": 7285
+    },
+    {
+      "path": "include/osmium/geom/util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b69da939a31eed1f77532726599be19d6347e94",
+      "size": 2615
+    },
+    {
+      "path": "include/osmium/geom/wkb.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7a5973da82d8d61fa3cade7e3b749ecd28bb0a",
+      "size": 10840
+    },
+    {
+      "path": "include/osmium/geom/wkt.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5ff4fabe497129ef81d7b7c672900592910cb6c",
+      "size": 6317
+    },
+    {
+      "path": "include/osmium/handler.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3d495d903982344f702c7eb0b60be3c28402b7",
+      "size": 4110
+    },
+    {
+      "path": "include/osmium/handler/chain.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05df255611d88064efc9f0fef10cd890376d77d",
+      "size": 4515
+    },
+    {
+      "path": "include/osmium/handler/check_order.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44dea19fc42b8f0c163f98cc4cc2865ae3df92a4",
+      "size": 8423
+    },
+    {
+      "path": "include/osmium/handler/disk_store.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165f0928390c50df48000f07ffbd03183103587d",
+      "size": 3933
+    },
+    {
+      "path": "include/osmium/handler/dump.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15fb52d4f5431b8335a2dc20b1818f2d8cf4013",
+      "size": 10514
+    },
+    {
+      "path": "include/osmium/handler/node_locations_for_ways.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "720d1ae81f9e12aeb52a31632cd9e1b74686e1c0",
+      "size": 7493
+    },
+    {
+      "path": "include/osmium/handler/object_relations.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c318a80de0eb412f85c17747eb088d0ebd5ef0",
+      "size": 3941
+    },
+    {
+      "path": "include/osmium/index/detail/create_map_with_fd.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "876fa1f49af7e6a20d1190ee01978e18bead052f",
+      "size": 2569
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_anon.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bcf86ef0eaa50d707e8967e6287fd2c81303af8",
+      "size": 2175
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_base.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7ba10f7b59dbc2cdf0dee99de93befb99bc821",
+      "size": 6166
+    },
+    {
+      "path": "include/osmium/index/detail/mmap_vector_file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30aa28707bd3578ddeb642994fb1451920047310",
+      "size": 3043
+    },
+    {
+      "path": "include/osmium/index/detail/tmpfile.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0205f982a5537ce3c6ff5f6cff41d2f4fba366",
+      "size": 2439
+    },
+    {
+      "path": "include/osmium/index/detail/vector_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db4fb999a2f49bd1ca7c6c4f296e421ee7c23149",
+      "size": 10551
+    },
+    {
+      "path": "include/osmium/index/detail/vector_multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbd198821b31dd5a56fbd52fbc7bd9cb07ee036",
+      "size": 6789
+    },
+    {
+      "path": "include/osmium/index/id_set.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07946662d757f1b8b3c7f04f87ce6b664915518f",
+      "size": 16076
+    },
+    {
+      "path": "include/osmium/index/index.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8da068e111df7f994f2b5fae0fbfe9835b3e1f9f",
+      "size": 3218
+    },
+    {
+      "path": "include/osmium/index/map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea26c99cb04423d78f1e76551f79b9b2b88987d2",
+      "size": 11488
+    },
+    {
+      "path": "include/osmium/index/map/all.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28e497d43c015895fbff044c5a027affad33ba13",
+      "size": 2227
+    },
+    {
+      "path": "include/osmium/index/map/dense_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de47e7f05df0ec3114ff4e96aef5e897f1250eb",
+      "size": 2694
+    },
+    {
+      "path": "include/osmium/index/map/dense_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea1999e5abd29eead09815ae99af305d3b64bde6",
+      "size": 2189
+    },
+    {
+      "path": "include/osmium/index/map/dense_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2660c8d46ccc3372343b282485482704406c01e6",
+      "size": 2310
+    },
+    {
+      "path": "include/osmium/index/map/dummy.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6ebbfbcb5949355ea8a73b7bb1033b15b439762",
+      "size": 3164
+    },
+    {
+      "path": "include/osmium/index/map/flex_mem.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "770be661c31c3cac13ee9ab6bd91f8eaa48928a7",
+      "size": 10725
+    },
+    {
+      "path": "include/osmium/index/map/sparse_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ac38fd4199d4d37f18ffda149a7e577111d838",
+      "size": 2697
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39bdd34f18293484cabc50035d931bd5011bd3e8",
+      "size": 2276
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mem_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c03cc693504a125d624065161d557ca16fb80360",
+      "size": 4631
+    },
+    {
+      "path": "include/osmium/index/map/sparse_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "202ffbba4927e4bd86456f786f67cbebf5848fde",
+      "size": 2289
+    },
+    {
+      "path": "include/osmium/index/multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70d4631cec56b823a6ababa31c801e28476c077",
+      "size": 4687
+    },
+    {
+      "path": "include/osmium/index/multimap/all.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de7359bc8217435e28d0961e37b036614839fcc5",
+      "size": 1915
+    },
+    {
+      "path": "include/osmium/index/multimap/hybrid.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9311f0c0e640020ea07f29d2809dd5cc9672b798",
+      "size": 7350
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_file_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2268f636992115ed1f479fd53d443553ce0570",
+      "size": 2067
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mem_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34030b3edaa207058fde9e6984e5d5986f23e33d",
+      "size": 2096
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mem_multimap.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c1b1dc8215e975629b3f8d42cef64905123f48",
+      "size": 5513
+    },
+    {
+      "path": "include/osmium/index/multimap/sparse_mmap_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b599a3c57f371a7850d841b1bc9e17251408119e",
+      "size": 2106
+    },
+    {
+      "path": "include/osmium/index/node_locations_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c80169be312b4bfdcbe434b9551f0e89509cd6e",
+      "size": 3330
+    },
+    {
+      "path": "include/osmium/index/nwr_array.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc469d55c38c88ddf507a0d183d77eedfa7e1087",
+      "size": 3564
+    },
+    {
+      "path": "include/osmium/index/relations_map.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f993bc5a5a06935283500c04aa4537905903c69",
+      "size": 18002
+    },
+    {
+      "path": "include/osmium/io/any_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e02eee77158e612af2f9c741c4af28234c936b7a",
+      "size": 1934
+    },
+    {
+      "path": "include/osmium/io/any_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a8f0522e255f36b7a49c54003a9698564233d6f",
+      "size": 2146
+    },
+    {
+      "path": "include/osmium/io/any_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "509dd947e043fa4357c0154d672907b8beeaa64d",
+      "size": 2203
+    },
+    {
+      "path": "include/osmium/io/bzip2_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f9e3235f52ecebe78d5caff9ea568fb3710fd3",
+      "size": 17624
+    },
+    {
+      "path": "include/osmium/io/compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a49f5157d703babc31409138915a89a27301abd6",
+      "size": 14279
+    },
+    {
+      "path": "include/osmium/io/debug_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1999014f282e96664efacad2f32237dbe841088",
+      "size": 1724
+    },
+    {
+      "path": "include/osmium/io/detail/debug_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe3c1cd78d20a4b0300772b39c4dd8ce42980d7",
+      "size": 24105
+    },
+    {
+      "path": "include/osmium/io/detail/ids_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6249705a48a14be55df84f5559c5ccbd24c13ce2",
+      "size": 5788
+    },
+    {
+      "path": "include/osmium/io/detail/input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "403afb53f9226d799ba693bac1ec68860bb2f35a",
+      "size": 10710
+    },
+    {
+      "path": "include/osmium/io/detail/lz4.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8061fdb618001866d3a902aaaa9d543bedc3a1c",
+      "size": 5063
+    },
+    {
+      "path": "include/osmium/io/detail/o5m_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f76a367b1173039f430f942e38ddde38d975392a",
+      "size": 26293
+    },
+    {
+      "path": "include/osmium/io/detail/opl_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63a5b4d1ccb2041830622370c4042e465e62e378",
+      "size": 6301
+    },
+    {
+      "path": "include/osmium/io/detail/opl_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c17236410a9f9d357ec8b1043683d78fcf521d0",
+      "size": 12583
+    },
+    {
+      "path": "include/osmium/io/detail/opl_parser_functions.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fa5ed4300c8451d0235abc7209fcce88f398d83",
+      "size": 36806
+    },
+    {
+      "path": "include/osmium/io/detail/output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f648cfcfa93e3d2a54cbc3c7e251103249cf169",
+      "size": 9267
+    },
+    {
+      "path": "include/osmium/io/detail/pbf.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6fbcdcc50783c0576b70cf41362afb2ff0ed5c8",
+      "size": 3535
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_decoder.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b03cfb2f346dd82bf27d942025a32c0bd4747871",
+      "size": 62385
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36fe336cabd0442935005f2931bab39140595b50",
+      "size": 12772
+    },
+    {
+      "path": "include/osmium/io/detail/pbf_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05f11c3fcf35d70d5b19a7333024fed4aaff155f",
+      "size": 38102
+    },
+    {
+      "path": "include/osmium/io/detail/protobuf_tags.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f337aefb3451e20999fbf58ddce0922e769e72cd",
+      "size": 7027
+    },
+    {
+      "path": "include/osmium/io/detail/queue_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc48706613f400af295cfc95cf2d59b548cb8cf1",
+      "size": 5631
+    },
+    {
+      "path": "include/osmium/io/detail/read_thread.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66e24e4e17b1c60d950884d7e96044ef4fd32461",
+      "size": 4646
+    },
+    {
+      "path": "include/osmium/io/detail/read_write.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4b1913c50607585e31c907349f34aa7232018c4",
+      "size": 12264
+    },
+    {
+      "path": "include/osmium/io/detail/string_table.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5854e17ed2fd4319afb8c031fd2498c981e11a98",
+      "size": 10760
+    },
+    {
+      "path": "include/osmium/io/detail/string_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e726567df93938d5859702cd04b64a8d34606fd9",
+      "size": 15643
+    },
+    {
+      "path": "include/osmium/io/detail/write_thread.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "166e8cb2d315b48164345926cdb7b52d2343b2ec",
+      "size": 4104
+    },
+    {
+      "path": "include/osmium/io/detail/xml_input_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc966a7a85261992db4e47de444c3e43a2a559a7",
+      "size": 39094
+    },
+    {
+      "path": "include/osmium/io/detail/xml_output_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "359ca901478394570c75ea0a3fe30de3f5293e39",
+      "size": 19873
+    },
+    {
+      "path": "include/osmium/io/detail/zlib.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0329b597ba58c05dbe588f3c7f4b272b65de3e9",
+      "size": 5007
+    },
+    {
+      "path": "include/osmium/io/error.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b94573e8d6682b4c013a1964eac780205e2306",
+      "size": 2408
+    },
+    {
+      "path": "include/osmium/io/file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "678038015f51b67278730c0811f247191b4fddeb",
+      "size": 12274
+    },
+    {
+      "path": "include/osmium/io/file_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c6010a0d272ac1affb66136d2c0c6270360fe26",
+      "size": 2479
+    },
+    {
+      "path": "include/osmium/io/file_format.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a981866f82e5602bf3f700104f6476d97ea7b5e9",
+      "size": 3313
+    },
+    {
+      "path": "include/osmium/io/gzip_compression.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1060bcbbe7ef20d7caa1eb0e88609501e418ff59",
+      "size": 12948
+    },
+    {
+      "path": "include/osmium/io/header.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e495c45d9dbef94290bf01dbdfb7588ecf14f6b",
+      "size": 6212
+    },
+    {
+      "path": "include/osmium/io/ids_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8caf5b1b06feeb52248b84823d1ea93366a09ede",
+      "size": 1716
+    },
+    {
+      "path": "include/osmium/io/input_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bd40b6e060e216e012f05b80beef3fca628159f",
+      "size": 6069
+    },
+    {
+      "path": "include/osmium/io/o5m_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d70c77fff373a63ac4b89b48a3ce5a4fd879d0f",
+      "size": 1797
+    },
+    {
+      "path": "include/osmium/io/opl_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8641ffd46f73e45052ee4f0c70ecab7dadbb2fc5",
+      "size": 1792
+    },
+    {
+      "path": "include/osmium/io/opl_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "445bf5f1922fd0c1185088b7899dc675d03dc52a",
+      "size": 1716
+    },
+    {
+      "path": "include/osmium/io/output_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84a3ff085879f7c58895a2a82ccb0b682b89849c",
+      "size": 3252
+    },
+    {
+      "path": "include/osmium/io/overwrite.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87132a9ca77fe958c4be96d1da4095bd4b050e1a",
+      "size": 1753
+    },
+    {
+      "path": "include/osmium/io/pbf.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b0c3045c1d04e2697e4721720f86a7f5accd22",
+      "size": 2029
+    },
+    {
+      "path": "include/osmium/io/pbf_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd5472d180dc1af635b8c75a142a3f23fac2af87",
+      "size": 1958
+    },
+    {
+      "path": "include/osmium/io/pbf_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ab804d7e2c9f6d0be73274bde98c1d669eacbb",
+      "size": 1963
+    },
+    {
+      "path": "include/osmium/io/reader.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83527976066b8ea9e0418642e9cd243f01fd82ea",
+      "size": 23568
+    },
+    {
+      "path": "include/osmium/io/reader_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c989f3ca307922a5045afea39e127cbccd54c03c",
+      "size": 1980
+    },
+    {
+      "path": "include/osmium/io/reader_with_progress_bar.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d332b667fcf63f63d85b29b8440f804595ff9ea9",
+      "size": 3495
+    },
+    {
+      "path": "include/osmium/io/writer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a27319235e6d8f9e2262c636c752be126107f17",
+      "size": 16478
+    },
+    {
+      "path": "include/osmium/io/writer_options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e90a307370f137141be0144125421724a03ab37",
+      "size": 2038
+    },
+    {
+      "path": "include/osmium/io/xml_input.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a90cf528df8648ce6c58f1571d9a3855a04c237",
+      "size": 1910
+    },
+    {
+      "path": "include/osmium/io/xml_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b69d9ac1929fa0bfd841ca3facd51270b4dd9d2",
+      "size": 1875
+    },
+    {
+      "path": "include/osmium/memory/buffer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6645d555aa6a6cc93d340e85e4825c19a33fe9e5",
+      "size": 35846
+    },
+    {
+      "path": "include/osmium/memory/callback_buffer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102f43eebc174fb5c16640755887e4cc1c9e5c0b",
+      "size": 7728
+    },
+    {
+      "path": "include/osmium/memory/collection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dab5aaf75dc0c29e2db0a1035f992f921d40ef5",
+      "size": 8493
+    },
+    {
+      "path": "include/osmium/memory/item.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbf1f8a84f2f8b40700f767b7b50bf3c7d188b31",
+      "size": 6228
+    },
+    {
+      "path": "include/osmium/memory/item_iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14de17b440e471e6ef7fa996ac0cb8a9dbb8e1f7",
+      "size": 8458
+    },
+    {
+      "path": "include/osmium/object_pointer_collection.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f634a437df825838eb5511e6fa1f085ff21474",
+      "size": 5956
+    },
+    {
+      "path": "include/osmium/opl.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86025b3488598abc74ef4cb84ee0b42320e0586e",
+      "size": 2563
+    },
+    {
+      "path": "include/osmium/osm.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bded0674c5018c0e5a4f7cf00965a2987ebc648",
+      "size": 2469
+    },
+    {
+      "path": "include/osmium/osm/area.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa4f5f421f410f8841b17cc870c8daff8b2b51f",
+      "size": 8434
+    },
+    {
+      "path": "include/osmium/osm/box.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de1db5dc3b81f6979f902604250ae64441f417b",
+      "size": 9162
+    },
+    {
+      "path": "include/osmium/osm/changeset.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a1d8598fc5f7151e7c4249f681c422ba7888264",
+      "size": 14872
+    },
+    {
+      "path": "include/osmium/osm/crc.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f909723e49839026046195f1a7a06170c1151c",
+      "size": 9142
+    },
+    {
+      "path": "include/osmium/osm/crc_zlib.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8297ba00f0be4d95d06766792eda383bfcaeba22",
+      "size": 2637
+    },
+    {
+      "path": "include/osmium/osm/diff_object.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e9f5654ea323854b296691e5ac6dcda74d1f66d",
+      "size": 9133
+    },
+    {
+      "path": "include/osmium/osm/entity.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8515513b8a141a984e8fbac1e0127374edc1de49",
+      "size": 3168
+    },
+    {
+      "path": "include/osmium/osm/entity_bits.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1b0d5503a906403ad76150ef55e768993f9327f",
+      "size": 5043
+    },
+    {
+      "path": "include/osmium/osm/item_type.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d462254a4738a1893759641c81fa464bfe8fbf5",
+      "size": 7274
+    },
+    {
+      "path": "include/osmium/osm/location.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36072d1844fe72794adc9fff1e88fb588f79aef8",
+      "size": 21771
+    },
+    {
+      "path": "include/osmium/osm/metadata_options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1552886f02da2a1f99ae7bcc6ef46c12e373bf68",
+      "size": 8361
+    },
+    {
+      "path": "include/osmium/osm/node.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773a43d18a98c780e5de7974ee41f1fc9e9ab839",
+      "size": 2767
+    },
+    {
+      "path": "include/osmium/osm/node_ref.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b33c3ab1b8f97c03b4f122595869135ca89e62e",
+      "size": 7198
+    },
+    {
+      "path": "include/osmium/osm/node_ref_list.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7e495f7d4e7f81f7e349277ca3539d0ca80fa1e",
+      "size": 7735
+    },
+    {
+      "path": "include/osmium/osm/object.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d93740ebda95daf3bf9a5cdaadde950278b39f",
+      "size": 17271
+    },
+    {
+      "path": "include/osmium/osm/object_comparisons.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a24e53d2cd74ce29771ebec65cc320c507f44d9f",
+      "size": 6663
+    },
+    {
+      "path": "include/osmium/osm/relation.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0eb060c52c93e6579a086e702f46721c7787806",
+      "size": 6750
+    },
+    {
+      "path": "include/osmium/osm/segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c037c1aafffa466bbf26c6f69a3931bb89a0b0d4",
+      "size": 3169
+    },
+    {
+      "path": "include/osmium/osm/tag.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c00dbce58386ad3c9511d1b8405773513c6173",
+      "size": 6117
+    },
+    {
+      "path": "include/osmium/osm/timestamp.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38a908ff5768c3c3504aea98ee443ab4ae20de6e",
+      "size": 12583
+    },
+    {
+      "path": "include/osmium/osm/types.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3403f5c612e1d96a6c0d4dbd9d96f1d562a494dc",
+      "size": 3236
+    },
+    {
+      "path": "include/osmium/osm/types_from_string.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2ee7b84d1aafada441f5d7e49a83687850ae2cb",
+      "size": 6874
+    },
+    {
+      "path": "include/osmium/osm/undirected_segment.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2123b3d90a0c318d5b1b7fc3b5dc8b16c0c830c2",
+      "size": 3463
+    },
+    {
+      "path": "include/osmium/osm/way.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fdfcf06ffdcd8a1e1b1b881057833dca54ba509",
+      "size": 5351
+    },
+    {
+      "path": "include/osmium/relations/collector.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4648a92f7e43fdd8a6579e65cc37b49c7f7f9be3",
+      "size": 25806
+    },
+    {
+      "path": "include/osmium/relations/detail/member_meta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b467b8deb02546ad227fa41238cb3418ab471b6",
+      "size": 5758
+    },
+    {
+      "path": "include/osmium/relations/detail/relation_meta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bc6fc277787bd60fd3b8e531a90d6761a222447",
+      "size": 4615
+    },
+    {
+      "path": "include/osmium/relations/manager_util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94bd45b9a4ba69de9153e432c7739f00733e1af0",
+      "size": 7738
+    },
+    {
+      "path": "include/osmium/relations/members_database.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b743edffaa93c7280b54b3f771310d86bfc70c50",
+      "size": 16657
+    },
+    {
+      "path": "include/osmium/relations/relations_database.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fd01b27da1c127a529bbe434ee750940d21807f",
+      "size": 12157
+    },
+    {
+      "path": "include/osmium/relations/relations_manager.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d62933ccd869e1a7e1d98a4a2b985b10d320c0ba",
+      "size": 22915
+    },
+    {
+      "path": "include/osmium/storage/item_stash.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a0142fb69fe58ce57b98c910d4ef54b189cf48",
+      "size": 12798
+    },
+    {
+      "path": "include/osmium/tags/filter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d061c0716b7410584401d1eec3884453481d174e",
+      "size": 6575
+    },
+    {
+      "path": "include/osmium/tags/matcher.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0746a54681c43db3e8cf9e642abaaba97fe2a0a4",
+      "size": 4832
+    },
+    {
+      "path": "include/osmium/tags/taglist.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61afa040e5c44cf889eaeef3f54d8dffa76f496",
+      "size": 2534
+    },
+    {
+      "path": "include/osmium/tags/tags_filter.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "608c1e878becb079ed2ce3a735ce328c60d34220",
+      "size": 6687
+    },
+    {
+      "path": "include/osmium/thread/function_wrapper.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1110155d07de912b02c4c61e90748cff9d4ba7",
+      "size": 4522
+    },
+    {
+      "path": "include/osmium/thread/pool.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de5f2716a9b2625f6000306683a286ce9fd0fa66",
+      "size": 8483
+    },
+    {
+      "path": "include/osmium/thread/queue.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574bef0b9f49432cf899eba461d9db51b2939db2",
+      "size": 8279
+    },
+    {
+      "path": "include/osmium/thread/util.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9244f1e2ca81c93c1a6b58ca648030f29082c29a",
+      "size": 4037
+    },
+    {
+      "path": "include/osmium/util/compatibility.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7ac6399b9a25781854d1aa232c37bd786a2062",
+      "size": 1933
+    },
+    {
+      "path": "include/osmium/util/config.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac37bee8c7865fe16e5d56630e269ad9e9e9183",
+      "size": 3934
+    },
+    {
+      "path": "include/osmium/util/delta.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a2eb672cbb5eff4019132993a57c9729a4aef44",
+      "size": 4756
+    },
+    {
+      "path": "include/osmium/util/double.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01746dd442e10e257b9f128cfd6c718785d5f28d",
+      "size": 3482
+    },
+    {
+      "path": "include/osmium/util/endian.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e48e9aa51aa6877462f85b1f9eac039781738f60",
+      "size": 1990
+    },
+    {
+      "path": "include/osmium/util/file.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20bfd1dfd816ef00e180a2b7590d3228efc4e46c",
+      "size": 8772
+    },
+    {
+      "path": "include/osmium/util/iterator.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5236e8963448b65196b6def2f8b9bb484e77ea2c",
+      "size": 2550
+    },
+    {
+      "path": "include/osmium/util/memory.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72cd4cc0f4834061d3c107e46b37213c7146bc8a",
+      "size": 3396
+    },
+    {
+      "path": "include/osmium/util/memory_mapping.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a73137e9a124f4e4cff2611a124fc1b5e16078e",
+      "size": 27031
+    },
+    {
+      "path": "include/osmium/util/minmax.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "552ecd2505faa9c49dc5ff7c30f5b6a2b6999144",
+      "size": 3201
+    },
+    {
+      "path": "include/osmium/util/misc.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cdef5e87901fb9f4213e8b272c75b231fdf20b9",
+      "size": 3164
+    },
+    {
+      "path": "include/osmium/util/options.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff71506b986b91feb15b106946702b945dbdea6",
+      "size": 7331
+    },
+    {
+      "path": "include/osmium/util/progress_bar.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "394ee8d8d068a7adafdd744fdf7d272c91f0d230",
+      "size": 6979
+    },
+    {
+      "path": "include/osmium/util/string.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2474d345e49d4fa74a5d737cee3fb7c18c2a90f",
+      "size": 3736
+    },
+    {
+      "path": "include/osmium/util/string_matcher.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2fb8def65d94f731cda83c45d5bf00672be1d4",
+      "size": 12869
+    },
+    {
+      "path": "include/osmium/util/timer.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0db68e9eab5c3e36345b8e0e4e49eb6d3dfcb01a",
+      "size": 2715
+    },
+    {
+      "path": "include/osmium/util/verbose_output.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "246033f7251266bd3a6169c7d3bae8d77d3ca33f",
+      "size": 4833
+    },
+    {
+      "path": "include/osmium/version.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "855ca1d1c1e2da956912b6021f71fff25925f1b1",
+      "size": 1847
+    },
+    {
+      "path": "include/osmium/visitor.hpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174a940bdfa9e588d2f182798f1e0f07f5346d22",
+      "size": 15555
+    }
+  ],
+  "selectedBytes": 1668371,
+  "archiveSha256": null,
+  "sourceAcquired": false,
+  "scope": "Git API object identities only; file contents/archive SHA256 and compilation remain unverified."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "compiled_target_abi_unqualified",
+  "artifactSha256": "bcd80e0b8ff911cc49f58bc13218fc941051361f3526f972e0166b1a6588b367",
+  "artifactBytes": 1930672,
+  "compiler": "/opt/rh/gcc-toolset-14/root/usr/bin/g++",
+  "flags": [
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fvisibility=hidden",
+    "-static-libstdc++",
+    "-static-libgcc",
+    "-pthread",
+    "-I/inputs/libosmium/include",
+    "-I/inputs/protozero/include",
+    "/work/smoke.cpp",
+    "-Wl,-z,defs",
+    "-Wl,--exclude-libs,ALL",
+    "-lz",
+    "-o",
+    "/work/smoke.so"
+  ],
+  "needed": [
+    "libz.so.1",
+    "libm.so.6",
+    "libpthread.so.0",
+    "libc.so.6",
+    "ld-linux-aarch64.so.1"
+  ],
+  "elfReceiptSha256": "779353e0a5cd00700cd7db576c77955a85d4c596a97506481fa30e1c8c658836",
+  "scope": "Minimal PBF/C ABI fixture only; no native importer implementation or road data read."
+}

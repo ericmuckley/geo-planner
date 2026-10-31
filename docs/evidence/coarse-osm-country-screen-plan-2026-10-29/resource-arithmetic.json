@@ -1,0 +1,131 @@
+{
+  "scope": "Proposal arithmetic, not a national measurement or execution admission",
+  "countsPerPass": {
+    "node": 1606229364,
+    "way": 162688797,
+    "relation": 1624265
+  },
+  "objectsPerPass": 1770542426,
+  "acceptedObjectsAcrossTwoPasses": 3541084852,
+  "blocks": 392146,
+  "shards": 766,
+  "selectedSourceShardOrdinals": [
+    0,
+    109,
+    218,
+    327,
+    437,
+    546,
+    655,
+    765
+  ],
+  "selectedBlocksPerShard": [
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    466
+  ],
+  "selectedRowsPerShard": [
+    2097152,
+    2097152,
+    2097152,
+    2097152,
+    2097152,
+    2097152,
+    2097152,
+    1908084
+  ],
+  "selectedBlocks": 4050,
+  "selectedRows": 16588148,
+  "maximumPayloadBytes": 69623,
+  "maximumShardBytes": 35679872,
+  "globalDirectoryBytes": 12548800,
+  "maximumMiniIndexBytesIncluding4MiBCatalog": 289763008,
+  "writableReservations": {
+    "eightRetainedPlusOneReplacementShard": 321118848,
+    "twoMiniIndexDirectoryCatalogPairs": 16777216,
+    "twoGlobalDirectoryCatalogPairs": 41943040,
+    "traceWitnessLogsReceipts": 67108864,
+    "scratch": 67108864,
+    "tmpfs": 268435456,
+    "rounding1024EntriesAt4KiB": 4194304,
+    "namespace1024EntriesAt8KiB": 8388608,
+    "additionalReserve": 1048576
+  },
+  "writableReservationBytes": 796123776,
+  "writableLimitBytes": 1073741824,
+  "retainedReservations": {
+    "originalOtherWorking": 13730880848,
+    "oldUntrustedIndex": 8783028224,
+    "runtimeImage": 191505175,
+    "buildClosureReservation": 15032385536,
+    "earlierSmallOutputsIncludingSample": 1073741824
+  },
+  "retainedPlusWritableLimitBytes": 39885283431,
+  "overallWorkingEnvelopeBytes": 68719476736,
+  "memoryReservationsMiB": {
+    "libosmiumQueuesDecompression": 512,
+    "pythonRuntime": 256,
+    "writerSnapshotsCopies": 256,
+    "nativeSemanticMetadataFrames": 128,
+    "traceWitnessSelection": 64,
+    "directoriesCatalogsCache": 64,
+    "logsMetrics": 64
+  },
+  "memoryReservationBytes": 1409286144,
+  "hardMemoryBytes": 4294967296,
+  "knownPrePostSourceGuardReadBytesTwoPasses": 48917280064,
+  "decoderAndOtherIo": "Measure separately; guard reads are not physical or total IO",
+  "roadReferenceOccurrencesMax": 131072,
+  "spreadQueryOccurrences": 4178,
+  "sourceWitnessUniqueIdsUpperBound": 136146,
+  "sourceWitnessTypedRowsBytesUpperBound": 2178336,
+  "lookupAuthenticatedShardBytesUpperBound": 3282548224,
+  "lookupDecodedRowsUpperBound": 199075932,
+  "lookupDecodedRowsLimit": 256000000,
+  "sourceEncodeRowsTwoPasses": 3212458728,
+  "sourceRoundtripDecodeRowsTwoPasses": 3212458728,
+  "sourceCodecCallsTwoPasses": 1568584,
+  "miniIndexAppendAndReplacementDecodeRowsUpperBound": 49764444,
+  "checkpointInterval": 65536,
+  "checkpointsPerPassIncludingFinal": 27017,
+  "phaseSeconds": {
+    "eachSourcePass": 3000,
+    "lookup": 300,
+    "otherWorkerWork": 600,
+    "worker": 7200,
+    "host": 7800,
+    "hostBindingHash": 240,
+    "cleanup": 60
+  },
+  "prioritySeedHex": "0x47504c414e4e4552",
+  "priorityVectors": {
+    "1": 2347232807671798036,
+    "2": 606183006175938884,
+    "127": 14582558847513835711,
+    "2147483648": 2766385720969411232,
+    "9223372036854775807": 16075191014247825066
+  },
+  "nationalMaximumId": null,
+  "nationalLogicalIndexBytes": null,
+  "illustrative2To40IdBound": {
+    "maximumIdAssumption": 1099511627775,
+    "logicalUpperBound": 16183672000,
+    "filesystemReserve": 10498048,
+    "marginedBytes": 24291255072,
+    "passes24GiBConditionally": true
+  },
+  "fullSigned63IdBound": {
+    "maximumIdAssumption": 9223372036854775807,
+    "logicalUpperBound": 21204095494,
+    "filesystemReserve": 10498048,
+    "marginedBytes": 31821890313,
+    "passes24GiBConditionally": false
+  },
+  "fullImportAdmitted": false,
+  "nationalExecutionThisStage": false
+}

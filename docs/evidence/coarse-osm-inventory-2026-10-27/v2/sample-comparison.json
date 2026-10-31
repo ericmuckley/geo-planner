@@ -1,0 +1,57 @@
+{
+  "equivalent": true,
+  "allSampleRecordsAccepted": true,
+  "sampleCounts": {
+    "node": 1000,
+    "way": 0,
+    "relation": 0
+  },
+  "cases": {
+    "reference": {
+      "accepted": true,
+      "error": null,
+      "returnedRecords": 1000,
+      "returnedSha256": "42012dff1e369720c8a32ef7dc89c90186440326338de46258ea7bdaf6f753e6",
+      "loadedCounts": {
+        "node": 1000,
+        "way": 0,
+        "relation": 0
+      },
+      "passes": [
+        {
+          "label": "mixed-sample",
+          "status": "eof",
+          "counts": {
+            "node": 1000
+          }
+        }
+      ],
+      "visits": 1000,
+      "secondsIncludingJsonReplayValidationHash": 0.07130895898444578
+    },
+    "candidate": {
+      "accepted": true,
+      "error": null,
+      "returnedRecords": 1000,
+      "returnedSha256": "42012dff1e369720c8a32ef7dc89c90186440326338de46258ea7bdaf6f753e6",
+      "loadedCounts": {
+        "node": 1000,
+        "way": 0,
+        "relation": 0
+      },
+      "passes": [
+        {
+          "label": "mixed-sample",
+          "status": "eof",
+          "counts": {
+            "node": 1000
+          }
+        }
+      ],
+      "visits": 1000,
+      "secondsIncludingJsonReplayValidationHash": 0.016411791963037103
+    }
+  },
+  "wholeSourceMetadataValidation": false,
+  "scope": "First fixed objects per type, replayed as JSON; no real spatial selection, dependency closure, index, source-wide metadata validation or national timing claim."
+}

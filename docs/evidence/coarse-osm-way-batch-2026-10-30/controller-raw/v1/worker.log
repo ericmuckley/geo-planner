@@ -1,0 +1,21 @@
+test_caps_source_and_network_drift_are_rejected (coarse_osm_way_batch_v1_test.Tests.test_caps_source_and_network_drift_are_rejected) ... ok
+test_duplicate_reference_order_and_bits_survive_independent_audit (coarse_osm_way_batch_v1_test.Tests.test_duplicate_reference_order_and_bits_survive_independent_audit) ... ok
+test_independent_audit_rejects_coordinate_corruption_even_with_matching_file_hash (coarse_osm_way_batch_v1_test.Tests.test_independent_audit_rejects_coordinate_corruption_even_with_matching_file_hash) ... ok
+test_input_paths_do_not_replace_owned_container_name (coarse_osm_way_batch_v1_test.Tests.test_input_paths_do_not_replace_owned_container_name) ... ERROR
+test_real_measurement_requires_qualified_exact_controller (coarse_osm_way_batch_v1_test.Tests.test_real_measurement_requires_qualified_exact_controller) ... ok
+test_reference_decoder_budget_refuses_before_decode (coarse_osm_way_batch_v1_test.Tests.test_reference_decoder_budget_refuses_before_decode) ... ok
+test_wrong_returned_count_stops_before_witness_write (coarse_osm_way_batch_v1_test.Tests.test_wrong_returned_count_stops_before_witness_write) ... ok
+
+======================================================================
+ERROR: test_input_paths_do_not_replace_owned_container_name (coarse_osm_way_batch_v1_test.Tests.test_input_paths_do_not_replace_owned_container_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_way_batch_v1_test.py", line 90, in test_input_paths_do_not_replace_owned_container_name
+    args=run.call_args_list[0].args[0]
+         ~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (errors=1)

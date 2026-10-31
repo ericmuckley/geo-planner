@@ -1,0 +1,34 @@
+{
+  "scope": "Two manually repeated metadata inspections using the cached Linux trust store after host certificate failures. TLS verification enabled, no trust/config change or bypass. No automatic retry, source PBF or tool payload. The earlier three failed metadata attempts remain preserved. Body-byte and socket/elapsed scopes match the first metadata ledger.",
+  "events": [
+    {
+      "number": 1,
+      "url": "https://download.geofabrik.de/north-america/us-261025.osm.pbf.md5",
+      "method": "GET",
+      "bodyLimitBytes": 4096,
+      "redirectsFollowed": 0,
+      "automaticRetries": 0,
+      "status": 200,
+      "outcome": "complete",
+      "bodyFile": "linux-metadata/dated-md5.bin",
+      "receivedBodyBytes": 52,
+      "bodySha256": "b3e681c8167ec305d00f8a1b4081ac124d7feedb7ff99c194705f82590ff2b7b",
+      "elapsedSeconds": 0.579183624999132
+    },
+    {
+      "number": 2,
+      "url": "https://pypi.org/pypi/osmium/4.3.2/json",
+      "method": "GET",
+      "bodyLimitBytes": 262144,
+      "redirectsFollowed": 0,
+      "automaticRetries": 0,
+      "status": 200,
+      "outcome": "complete",
+      "bodyFile": "linux-metadata/pyosmium-json.bin",
+      "receivedBodyBytes": 51186,
+      "bodySha256": "a59a5dd21e003748167b81068b7bafce5c1cf54834a6cd096e6f44fabe029eb6",
+      "elapsedSeconds": 0.11188795795897022
+    }
+  ],
+  "receivedMetadataBodyBytes": 51238
+}

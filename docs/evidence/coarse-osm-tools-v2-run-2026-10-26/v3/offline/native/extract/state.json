@@ -1,0 +1,79 @@
+{
+  "status": "extracted_publisher_file_analysis_pending",
+  "stage": "complete",
+  "passes": [
+    {
+      "label": "primary-index-selection",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "primary-native-records",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "audit-index-selection",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "audit-native-records",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "a",
+      "status": "complete_from_acquired_file_only"
+    },
+    {
+      "id": "b",
+      "status": "complete_from_acquired_file_only"
+    }
+  ],
+  "sourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "sourceAdapterImplemented": false,
+  "nativeDecoderQualified": false,
+  "routingProviderRequests": 0,
+  "scanObjectVisits": 36,
+  "extractBytes": 1470,
+  "retainedElements": 4,
+  "windowOccurrences": 8,
+  "hashFramingBytesRead": 564,
+  "counterScope": "Projected native records counted on receipt; decoder failures before projection can leave unknown raw-object counts.",
+  "elapsedSeconds": 0.021718625037465245,
+  "sourceIdentity": {
+    "publisherStateUtc": "2026-10-25T21:21:21Z",
+    "requiredFeatures": [
+      "DenseNodes",
+      "OsmSchema-V0.6"
+    ],
+    "framingBytesRead": 564,
+    "frames": 4,
+    "sourceSha256": "1dbfca4f9fc849aea04c371327967803e862abb3c1da6daf78da63982f6feddb",
+    "sourceMd5": "ea94f62995481fce42b58ec4caf3c981"
+  },
+  "externalInputReservationBytes": 564,
+  "publisherStateUtc": "2026-10-25T21:21:21Z",
+  "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+  "independentAuditComplete": true
+}

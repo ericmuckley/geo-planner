@@ -1,0 +1,66 @@
+{
+  "status": "Post-result geometry-input decision only; no changed filter, matcher, permission or grade interpretation",
+  "inputs": {
+    "data/coarse-quality/overture-timing-chain-exclusions-v1/report.json": "a0b7315831d4d46e8bde59e26d25ecb28e7bdaeb8e41db101fc1eff7cf33d313",
+    "data/coarse-quality/overture-timing-chain-exclusions-v1/audit.json": "9709db0a5f00c1755e449fef2a556bd2fe5c7365c10244f7ba73dd90e868d029",
+    "data/coarse-quality/overture-timing-chain-exclusions-v1/exclusions.jsonl": "7e546ac5041385434a7128c3db35ea149ae995a7c110132f76a14eabfc713c75"
+  },
+  "metrics": {
+    "retainedRows": 55120,
+    "arcWindowRecords": 2469,
+    "samples": 85629,
+    "excludedIncidences": 3334,
+    "uniqueExcludedPublisherIds": 995,
+    "candidateBearingArcs": 32,
+    "candidateExcludedIncidences": 270,
+    "candidateUniqueExcludedPublisherIds": 120,
+    "candidateReasonIncidences": {
+      "endpoint_not_near_own_samples": 71,
+      "unsupported_road_role": 171,
+      "unsupported_level_rules": 19,
+      "nonprogressing_or_tied_endpoints": 16,
+      "outside_window_endpoint": 6
+    },
+    "candidateOverlapIncidences": {
+      "sample_and_endpoint": 36,
+      "sample_only": 208,
+      "neither": 26
+    },
+    "retainedLevelCategories": {
+      "missing": 54045,
+      "partial": 722,
+      "uniform_nonzero": 353
+    },
+    "retainedLevelValueCategories": {
+      "missing": 54045,
+      "uniform_nonzero": 1049,
+      "mixed": 26
+    },
+    "explicitUniformZeroRows": 0,
+    "candidateLevelCategoryIncidences": {
+      "missing": 251,
+      "partial": 19
+    },
+    "candidateMeasuredFlagIncidences": {
+      "endpoint_not_near_own_samples": 200,
+      "nonprogressing_or_tied_endpoints": 157,
+      "outside_window_endpoint": 6
+    },
+    "originalCandidateChains": 82,
+    "originalCandidateBearingArcsUnresolved": 32,
+    "baselineProvisionalEligibleKmUnchanged": 2.827070580926959
+  },
+  "decision": "Do not relax level/progress filters or acquire data. Specify one reporting-only declared-role uncertainty hypothesis: rows carrying the frozen unsupported_road_role reason are outside that fixed candidate-role universe, while all other unresolved rows/caps remain blockers. Graph nodes, candidates, source scopes and original conservative statuses stay unchanged. Evaluate this separate contract-scoped reporting rule in a fresh frozen run, not here.",
+  "reason": "Candidate-bearing records have171 unsupported-role incidences, while their19 level exclusions are partial nonzero-valued rules. No retained explicit uniform-zero level record exists. Additional ungated distance/tie measurements show metadata reasons can mask geometric uncertainty; do not silently clear them.",
+  "limits": [
+    "All21 windows remain incomplete; no resolved physical/global uniqueness, driving access, level semantics, usable speed coverage, timing correction or model admission.",
+    "Reason/cohort counts overlap and unique counts are retained id/version pairs, not physical roads. Per-incidence shared sample km are not additive coverage.",
+    "36 candidate-case excluded incidences share samples and endpoint IDs,208 share samples only,26 neither. These overlap observations do not establish that competitors are harmless or drivable.",
+    "Current32 candidate-bearing statuses remain unresolved. The future declared-role rule is a proposed statement about the fixed candidate universe, not a change to the old decision or a physical exclusion assertion.",
+    "No revised matcher or adjacency/chain enumeration occurred in this audit; all14 existential positives,82 candidates,0 caps and2.8270705809269594 baseline provisional km remain unchanged."
+  ],
+  "newNetworkRequests": 0,
+  "matcherEnumerationsPerformed": 0,
+  "originalFeasibilityQualified": false,
+  "productionModelChanged": false
+}

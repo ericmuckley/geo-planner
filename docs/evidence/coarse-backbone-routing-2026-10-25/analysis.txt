@@ -1,0 +1,56 @@
+{
+  "independentGateAnd166ComponentSumAudit": true,
+  "accuracyGatesPassed": false,
+  "overall": {
+    "baseline": {
+      "count": 83,
+      "meanAbsoluteMinutes": 29.257418754386766,
+      "meanSignedMinutes": -20.947641954049526,
+      "medianAbsoluteMinutes": 15.985262951534196,
+      "p90AbsoluteMinutes": 70.04833333333386,
+      "classifications": {
+        "correct": 67,
+        "falseReachable": 11,
+        "missedReachable": 2,
+        "ambiguous": 3
+      }
+    },
+    "candidate": {
+      "count": 83,
+      "meanAbsoluteMinutes": 43.23434494591635,
+      "meanSignedMinutes": -40.08394704569346,
+      "medianAbsoluteMinutes": 23.910744477118442,
+      "p90AbsoluteMinutes": 104.9296807993735,
+      "classifications": {
+        "correct": 46,
+        "falseReachable": 32,
+        "missedReachable": 2,
+        "ambiguous": 3
+      }
+    }
+  },
+  "worstRegressions": {
+    "frontier": 88.5040231072735,
+    "older": 27.2693270138422
+  },
+  "diagnosis": {
+    "fasterPointPredictions": 83,
+    "slowerPointPredictions": 0,
+    "improvedAbsoluteErrors": 13,
+    "regressedAbsoluteErrors": 70,
+    "meanPointTimeChangeMinutes": -19.13630509164394,
+    "meanComponentChangesMinutes": {
+      "origin": -0.7712729623238759,
+      "road": -16.16946709647915,
+      "local": -3.594895184721464,
+      "transfer": 1.3045582329317267,
+      "destination": 0.09477191894874454
+    },
+    "fullCensusEdgeMinutesShareOfAllCandidateTime": 0.7011382837045668,
+    "scope": "Post-result descriptive path accounting, not causal isolation. Origin/destination attachments combine partial-source/base/local costs; full-Census share excludes those attachments. No new routing, physical/source qualification or accuracy tuning."
+  },
+  "diagnosticSearchMsRange": [
+    3051.735958,
+    24720.437542
+  ]
+}

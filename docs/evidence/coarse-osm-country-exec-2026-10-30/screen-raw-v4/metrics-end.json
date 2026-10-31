@@ -1,0 +1,34 @@
+{
+  "latest": {
+    "work": {
+      "logicalBytes": 176048964,
+      "allocatedBytes": 176234496,
+      "entries": 67,
+      "conservativeAllocatedBytes": 177831936
+    },
+    "tmp": {
+      "logicalBytes": 0,
+      "allocatedBytes": 0,
+      "entries": 1,
+      "conservativeAllocatedBytes": 1056768
+    },
+    "cgroup": {
+      "memory.current": "4278779904",
+      "memory.peak": "4294967296",
+      "memory.events": "low 0\nhigh 0\nmax 31007\noom 0\noom_kill 0\noom_group_kill 0",
+      "cpu.stat": "usage_usec 1844647619\nuser_usec 1817385005\nsystem_usec 27262614\nnr_periods 15122\nnr_throttled 2\nthrottled_usec 12940\nnr_bursts 0\nburst_usec 0",
+      "memory.max": "4294967296",
+      "memory.swap.max": "0",
+      "processIo": "rchar: 75121560335\nwchar: 325577580\nsyscr: 2261876\nsyscw: 63\nread_bytes: 0\nwrite_bytes: 325577580\ncancelled_write_bytes: 0\n"
+    },
+    "seconds": 1512.065510482993
+  },
+  "observedWorkPeaks": {
+    "logicalBytes": 181654696,
+    "allocatedBytes": 181780480,
+    "entries": 67,
+    "conservativeAllocatedBytes": 183238656
+  },
+  "samples": 1594,
+  "scope": "Work allocation checked around every owned write; periodic worker/tmp samples. Cgroup memory.peak is kernel-maintained. No physical national-index allocation claim."
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "status": "Next offline diagnostic only; do not produce another factor/candidate or route search",
+  "inputs": {
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/comparison.json": "480ab0ce55b377fa784267c7b18e445d0f6ffd8493f0b745fb53e50529f0ed15",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/paths.json.gz": "7952fd20bf98907027b10cdeabae0994e16611ca28c554c2d24c6f08208decfd",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/analysis.json": "0e5c01b31ae537019e13491d981462067c24951629716dcff9ea56b445df6778",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/policy.json": "4446789e20dab8e2e5d64ef74cba431dff8123977736f86a412c17f8e329b4c1",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/report.json": "e385fe62636ff3356da5acd6980208e0daca25abfbb48690329a4dc4459fc32c",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/analysis.json": "5d3d648e7663a730b17a262e62936abd9b582527dc0002166a8bad14094e6ca8",
+    "data/coarse-quality/road-time-allowance-v1/backbone.bin": "f099563d48f5b7f31fc12768deeca9cfe388adbbae54a29f952f65974a896af3",
+    "data/coarse-quality/road-time-allowance-v1/manifest.json": "aac1b13ce142d369aa414ffd94a852d637d88a7098be4453d802c8bca2ace68b",
+    "src/server/backbone-cost.ts": "2057f6f41171b54cb48398f9ed4a6b7126b46676331688b655aebc3d424d15e7",
+    "src/server/backbone-routing.ts": "aa2b54c707b8bc78959bd336ebe1152d168988cf27e856caa89bf9198641ae4a"
+  },
+  "question": "Separate the direct10% component cost increase on the prior graph-state paths from changed path/attachment choices; identify generic exposures behind six tail/missed/individual failures without fitting another factor.",
+  "beforeExecution": "Freeze exact diagnostic tool/input/command recipe first. Use all83/35 cases, old/new captured paths and the already-produced1.10 cost artifact only. No searchBackbone/Dijkstra, source producer or provider request.",
+  "method": [
+    "Replay current attachment enumeration at captured unbuffered origin/terminal states and reprice its captured full-Census/base/local/transfer transitions at the unchanged1.10 policy. Hold graph-state sequence and source arc identity, allowing the existing cheapest eligible attachment to that state and current road/local minimum for a base-cell pair; label that distinction from literally fixed full geometry.",
+    "Reconcile old path at old costs, held-state path at current costs and actual new stored prediction. Every captured transition must remain eligible. Check actual new point time<=held-state cost where the whole held-state prefix fits the same900min diagnostic cap; retain explicit cap-limited/gap ledger otherwise.",
+    "Report direct component cost shift vs path/state/endpoint-choice benefit, alongside original gate-defined missed/regression cohorts and all83/35 rows. No case replacement, coordinate/region/horizon exception, speed fit or fitted optimum.",
+    "All numerator/denominator, component sums, source/base geometry/data bindings and counterfactual bound/cap conditions must reconcile. This is descriptive control accounting on observed development data, not a new accepted model or causal traffic truth."
+  ],
+  "onFailure": "Preserve gaps/failures and stop. Do not rerun either completed comparison, change the factor or relax any original gate.",
+  "after": "Only an evidence-backed separately specified generic correction may follow; keep v9 active and original full accuracy/physical/runtime gates."
+}

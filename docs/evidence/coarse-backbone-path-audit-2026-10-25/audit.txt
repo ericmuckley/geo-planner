@@ -1,0 +1,553 @@
+{
+  "checks": {
+    "plannedOrs": 83,
+    "plannedValhalla": 35,
+    "allCasesRetained": true,
+    "missingOrs": [],
+    "missingValhalla": [],
+    "detailedSourceEdgesChecked": 22316,
+    "everyPathCostAccounted": true,
+    "everyDetailedSourceEndpointCostGeometryVerified": true,
+    "newRoutingQueries": 0,
+    "providerRequests": 0,
+    "runtimeChanged": false
+  },
+  "providers": {
+    "orsAvailable": 83,
+    "valhallaAvailable": 35,
+    "orsRequestPreferences": {
+      "fastest": 83
+    },
+    "orsResponseQueryPreferences": {
+      "fastest": 83
+    },
+    "orsSystemMessages": {
+      "Preference 'fastest' has been deprecated, using 'recommended'.": 83
+    },
+    "orsEngineCohorts": {
+      "{\"build_date\": \"2026-08-13T11:53:14Z\", \"graph_date\": \"2026-09-21T10:31:27Z\", \"osm_date\": \"2026-09-13T23:59:59Z\", \"version\": \"9.10.0\"}": 83
+    },
+    "orsCaptureRangeUtc": [
+      "2026-10-23T19:47:06.873000+00:00",
+      "2026-10-24T20:27:13.068000+00:00"
+    ],
+    "valhallaCostingOptions": {
+      "{\"auto\": {\"speed_types\": [\"freeflow\", \"constrained\"]}}": 35
+    },
+    "valhallaReturnedFerryFlags": {
+      "False": 35
+    },
+    "valhallaEngineCohorts": {
+      "{\"tileset_last_modified\": 1792170595, \"version\": \"3.9.1-7fd2228e5\"}": 35
+    }
+  },
+  "summary": {
+    "all": {
+      "planned": 83,
+      "metrics": {
+        "detailedCensusTimeShare": {
+          "measured": 83,
+          "missing": 0,
+          "median": 0.7206447555432808,
+          "mean": 0.6778603682155031
+        },
+        "detailedCensusSourceKm": {
+          "measured": 83,
+          "missing": 0,
+          "median": 371.59597894797236,
+          "mean": 409.607545124464
+        },
+        "censusWithin1KmOfOrs": {
+          "measured": 80,
+          "missing": 3,
+          "median": 0.8997753272271549,
+          "mean": 0.7321481635891376
+        },
+        "censusWithin3KmOfOrs": {
+          "measured": 80,
+          "missing": 3,
+          "median": 0.9257962431915672,
+          "mean": 0.7669243563985382
+        },
+        "orsWithin1KmOfCensusSubset": {
+          "measured": 83,
+          "missing": 0,
+          "median": 0.5588015682549256,
+          "mean": 0.5138631819601178
+        },
+        "orsWithin3KmOfCensusSubset": {
+          "measured": 83,
+          "missing": 0,
+          "median": 0.5910513801760472,
+          "mean": 0.5518531597785176
+        },
+        "orsWithin1KmOfValhalla": {
+          "measured": 35,
+          "missing": 48,
+          "median": 1.0,
+          "mean": 0.8561598223009274
+        },
+        "orsWithin3KmOfValhalla": {
+          "measured": 35,
+          "missing": 48,
+          "median": 1.0,
+          "mean": 0.8807936266493832
+        },
+        "valhallaWithin1KmOfOrs": {
+          "measured": 35,
+          "missing": 48,
+          "median": 1.0,
+          "mean": 0.8616814872662433
+        },
+        "valhallaWithin3KmOfOrs": {
+          "measured": 35,
+          "missing": 48,
+          "median": 1.0,
+          "mean": 0.8868537257109328
+        },
+        "censusWithin1KmOfValhalla": {
+          "measured": 32,
+          "missing": 51,
+          "median": 0.9087963564484216,
+          "mean": 0.7458639404487968
+        },
+        "censusWithin3KmOfValhalla": {
+          "measured": 32,
+          "missing": 51,
+          "median": 0.9419631645254744,
+          "mean": 0.8025219282340724
+        },
+        "orsMinusValhallaMinutes": {
+          "measured": 35,
+          "missing": 48,
+          "median": 14.458249999999992,
+          "mean": 15.490758095238094
+        },
+        "orsMinusValhallaDistanceKm": {
+          "measured": 35,
+          "missing": 48,
+          "median": -0.08810000000001139,
+          "mean": 1.0519800000000012
+        },
+        "orsToValhallaDurationRatio": {
+          "measured": 35,
+          "missing": 48,
+          "median": 1.1519846442579182,
+          "mean": 1.1648400909966674
+        },
+        "orsToValhallaDistanceRatio": {
+          "measured": 35,
+          "missing": 48,
+          "median": 0.9989023184487177,
+          "mean": 1.009734938722637
+        }
+      }
+    },
+    "frontier": {
+      "planned": 48,
+      "metrics": {
+        "detailedCensusTimeShare": {
+          "measured": 48,
+          "missing": 0,
+          "median": 0.7125971747975668,
+          "mean": 0.6979485002133421
+        },
+        "detailedCensusSourceKm": {
+          "measured": 48,
+          "missing": 0,
+          "median": 588.1862945097953,
+          "mean": 614.4633565962984
+        },
+        "censusWithin1KmOfOrs": {
+          "measured": 48,
+          "missing": 0,
+          "median": 0.9108026133043228,
+          "mean": 0.7438945806133669
+        },
+        "censusWithin3KmOfOrs": {
+          "measured": 48,
+          "missing": 0,
+          "median": 0.9257962431915672,
+          "mean": 0.7600805955009188
+        },
+        "orsWithin1KmOfCensusSubset": {
+          "measured": 48,
+          "missing": 0,
+          "median": 0.5449364622492612,
+          "mean": 0.5047432161462809
+        },
+        "orsWithin3KmOfCensusSubset": {
+          "measured": 48,
+          "missing": 0,
+          "median": 0.5729726991014273,
+          "mean": 0.5272955562127458
+        },
+        "orsWithin1KmOfValhalla": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "orsWithin3KmOfValhalla": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "valhallaWithin1KmOfOrs": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "valhallaWithin3KmOfOrs": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "censusWithin1KmOfValhalla": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "censusWithin3KmOfValhalla": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "orsMinusValhallaMinutes": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "orsMinusValhallaDistanceKm": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "orsToValhallaDurationRatio": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        },
+        "orsToValhallaDistanceRatio": {
+          "measured": 0,
+          "missing": 48,
+          "median": null,
+          "mean": null
+        }
+      }
+    },
+    "original": {
+      "planned": 11,
+      "metrics": {
+        "detailedCensusTimeShare": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.8796584214363404,
+          "mean": 0.7935597091826743
+        },
+        "detailedCensusSourceKm": {
+          "measured": 11,
+          "missing": 0,
+          "median": 147.8266340688452,
+          "mean": 171.02337562102286
+        },
+        "censusWithin1KmOfOrs": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9186442961937683,
+          "mean": 0.7321931121839639
+        },
+        "censusWithin3KmOfOrs": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9405368894273106,
+          "mean": 0.7653529910215188
+        },
+        "orsWithin1KmOfCensusSubset": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9127263723455065,
+          "mean": 0.6463083615309538
+        },
+        "orsWithin3KmOfCensusSubset": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9368956636322769,
+          "mean": 0.6840561019616251
+        },
+        "orsWithin1KmOfValhalla": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9127345842815782,
+          "mean": 0.7442913548406902
+        },
+        "orsWithin3KmOfValhalla": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9372919417195071,
+          "mean": 0.7694815089272844
+        },
+        "valhallaWithin1KmOfOrs": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9030178434983669,
+          "mean": 0.7481950058950747
+        },
+        "valhallaWithin3KmOfOrs": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9249011304233806,
+          "mean": 0.7768409000532812
+        },
+        "censusWithin1KmOfValhalla": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9188044618747273,
+          "mean": 0.9149386089970458
+        },
+        "censusWithin3KmOfValhalla": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.9926810167731137,
+          "mean": 0.9498751645536512
+        },
+        "orsMinusValhallaMinutes": {
+          "measured": 11,
+          "missing": 0,
+          "median": 17.498916666666688,
+          "mean": 17.67928787878788
+        },
+        "orsMinusValhallaDistanceKm": {
+          "measured": 11,
+          "missing": 0,
+          "median": -0.14220000000000255,
+          "mean": 1.2537181818181826
+        },
+        "orsToValhallaDurationRatio": {
+          "measured": 11,
+          "missing": 0,
+          "median": 1.1519846442579182,
+          "mean": 1.1443971406709101
+        },
+        "orsToValhallaDistanceRatio": {
+          "measured": 11,
+          "missing": 0,
+          "median": 0.998734301622504,
+          "mean": 1.0111534611103232
+        }
+      }
+    },
+    "regional": {
+      "planned": 24,
+      "metrics": {
+        "detailedCensusTimeShare": {
+          "measured": 24,
+          "missing": 0,
+          "median": 0.6896391216514793,
+          "mean": 0.5846552396098719
+        },
+        "detailedCensusSourceKm": {
+          "measured": 24,
+          "missing": 0,
+          "median": 61.48399506920662,
+          "mean": 109.24699986987247
+        },
+        "censusWithin1KmOfOrs": {
+          "measured": 21,
+          "missing": 3,
+          "median": 0.8461851952414504,
+          "mean": 0.7052756658888472
+        },
+        "censusWithin3KmOfOrs": {
+          "measured": 21,
+          "missing": 3,
+          "median": 0.8995374079348086,
+          "mean": 0.7833903346001068
+        },
+        "orsWithin1KmOfCensusSubset": {
+          "measured": 24,
+          "missing": 0,
+          "median": 0.5432293367461201,
+          "mean": 0.47139907295115857
+        },
+        "orsWithin3KmOfCensusSubset": {
+          "measured": 24,
+          "missing": 0,
+          "median": 0.5747860721066951,
+          "mean": 0.5403753517428037
+        },
+        "orsWithin1KmOfValhalla": {
+          "measured": 24,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.9074328698868693
+        },
+        "orsWithin3KmOfValhalla": {
+          "measured": 24,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.9318116806053451
+        },
+        "valhallaWithin1KmOfOrs": {
+          "measured": 24,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.9136961245613623
+        },
+        "valhallaWithin3KmOfOrs": {
+          "measured": 24,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.9372762708040231
+        },
+        "censusWithin1KmOfValhalla": {
+          "measured": 21,
+          "missing": 3,
+          "median": 0.7586263802427058,
+          "mean": 0.6573010188282854
+        },
+        "censusWithin3KmOfValhalla": {
+          "measured": 21,
+          "missing": 3,
+          "median": 0.7685816294293607,
+          "mean": 0.7253368996857217
+        },
+        "orsMinusValhallaMinutes": {
+          "measured": 24,
+          "missing": 0,
+          "median": 12.909025000000003,
+          "mean": 14.487681944444441
+        },
+        "orsMinusValhallaDistanceKm": {
+          "measured": 24,
+          "missing": 0,
+          "median": -0.08590000000000231,
+          "mean": 0.959516666666668
+        },
+        "orsToValhallaDurationRatio": {
+          "measured": 24,
+          "missing": 0,
+          "median": 1.163128645692459,
+          "mean": 1.1742097765626396
+        },
+        "orsToValhallaDistanceRatio": {
+          "measured": 24,
+          "missing": 0,
+          "median": 0.9989049928295791,
+          "mean": 1.009084782628281
+        }
+      }
+    },
+    "older": {
+      "planned": 35,
+      "metrics": {
+        "detailedCensusTimeShare": {
+          "measured": 35,
+          "missing": 0,
+          "median": 0.7339334292141186,
+          "mean": 0.6503109300470383
+        },
+        "detailedCensusSourceKm": {
+          "measured": 35,
+          "missing": 0,
+          "median": 90.76518430854414,
+          "mean": 128.66243224880546
+        },
+        "censusWithin1KmOfOrs": {
+          "measured": 32,
+          "missing": 3,
+          "median": 0.8549514869283441,
+          "mean": 0.7145285380527935
+        },
+        "censusWithin3KmOfOrs": {
+          "measured": 32,
+          "missing": 3,
+          "median": 0.9200371486810597,
+          "mean": 0.7771899977449671
+        },
+        "orsWithin1KmOfCensusSubset": {
+          "measured": 35,
+          "missing": 0,
+          "median": 0.5669783742975903,
+          "mean": 0.5263705636476655
+        },
+        "orsWithin3KmOfCensusSubset": {
+          "measured": 35,
+          "missing": 0,
+          "median": 0.6354945176937635,
+          "mean": 0.5855321589544332
+        },
+        "orsWithin1KmOfValhalla": {
+          "measured": 35,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.8561598223009274
+        },
+        "orsWithin3KmOfValhalla": {
+          "measured": 35,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.8807936266493832
+        },
+        "valhallaWithin1KmOfOrs": {
+          "measured": 35,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.8616814872662433
+        },
+        "valhallaWithin3KmOfOrs": {
+          "measured": 35,
+          "missing": 0,
+          "median": 1.0,
+          "mean": 0.8868537257109328
+        },
+        "censusWithin1KmOfValhalla": {
+          "measured": 32,
+          "missing": 3,
+          "median": 0.9087963564484216,
+          "mean": 0.7458639404487968
+        },
+        "censusWithin3KmOfValhalla": {
+          "measured": 32,
+          "missing": 3,
+          "median": 0.9419631645254744,
+          "mean": 0.8025219282340724
+        },
+        "orsMinusValhallaMinutes": {
+          "measured": 35,
+          "missing": 0,
+          "median": 14.458249999999992,
+          "mean": 15.490758095238094
+        },
+        "orsMinusValhallaDistanceKm": {
+          "measured": 35,
+          "missing": 0,
+          "median": -0.08810000000001139,
+          "mean": 1.0519800000000012
+        },
+        "orsToValhallaDurationRatio": {
+          "measured": 35,
+          "missing": 0,
+          "median": 1.1519846442579182,
+          "mean": 1.1648400909966674
+        },
+        "orsToValhallaDistanceRatio": {
+          "measured": 35,
+          "missing": 0,
+          "median": 0.9989023184487177,
+          "mean": 1.009734938722637
+        }
+      }
+    }
+  },
+  "elapsedSeconds": 10.70707712485455,
+  "maxRssBytes": 282279936
+}

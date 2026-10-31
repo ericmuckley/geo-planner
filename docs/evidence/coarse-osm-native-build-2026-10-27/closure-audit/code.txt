@@ -1,0 +1,11 @@
+import json,os,stat,sys
+from pathlib import Path
+sys.path.insert(0,"/code")
+from coarse_osm_build_v1 import inventory
+r=Path("/rootfs")
+samples=[]
+for p in sorted(r.rglob("*")):
+ if p.is_symlink():
+  samples.append({"path":str(p.relative_to(r)),"mode":stat.S_IMODE(p.lstat().st_mode),"target":os.readlink(p)})
+  if len(samples)==8:break
+print(json.dumps({"inventory":inventory(r),"symlinkSamples":samples}))

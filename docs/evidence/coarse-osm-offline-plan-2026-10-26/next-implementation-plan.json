@@ -1,0 +1,21 @@
+{
+  "status": "Next implementation/synthetic scope, no larger acquisition yet",
+  "inputs": {
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json": "38c8246d32faa3082b0786aff0e08fa0a7838cbf876f50e9b2369317f8559194",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/capacity.json": "a0d0090ab43597331f0aa2643cf3cef02205d0f3eb20964c5032dba8b4ace0d1",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/synthetic-cases.json": "53b8ab70e9701283997bcc519e700d198630b9e89647eb338dfc14cb5f28becf",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/commands.json": "4680c5e005b45f3903d776f8c1121d4743d2a5fdecdf091801aca03988b2beda"
+  },
+  "objective": "Implement the proposed generic native-PBF/SQLite extractor, bounded metadata/tool-lock and transport controls, and a separately reconstructing audit; synthetically verify before any tool binary or national data acquisition.",
+  "scope": [
+    "Add new versioned code rather than editing sealed prior producers; reuse low-level native validation/hash/time primitives where contracts match, with explicit publisher-state/source-boundary distinctions.",
+    "Implement the proposed direct-TLS request/body/attempt/absolute-time guards, bounded wheel/ZIP handling, exact dependency-lock validation and isolated launcher. No new metadata request, package binary, PBF or host trust/config change is required to implement these controls; use captured metadata/synthetic fixtures.",
+    "Implement bounded geometry/native copying and two SQLite coordinate indexes/four-pass extraction, with selected caps separate from explicitly enlarged upstream scan counters. Generic original21 boxes only, no region/city exceptions or speed/access policy.",
+    "Test synthetic PBF/native records, inclusive crossings/outside nodes, expired view copies, identity collisions/drift, restriction metadata, dependency locks/ZIP errors/framing/decompression, certificate/time/byte/attempt/disk/SQLite limits, partial retention and audit tampering. Use no real road inputs or hosted routing.",
+    "Verify host and network-disabled cached Linux fixtures, real memory/zero-swap/tmp/watchdog/SQLite page guards within safe synthetic budgets, check/typecheck/build. 4GiB proposal is a cap, not a requirement to allocate4GiB in tests.",
+    "End with tested code and an exact separate metadata/tool setup recipe if needed; tool closure still must be resolved/frozen and smoke-tested before a later executable data freeze. No national acquisition, activated larger budget/snapshot or source/model admission in this implementation task.",
+    "Pyosmium is not cached: injected native iterators and synthetic frame checks can verify controls before a tool binary is acquired, but cannot establish real decoder compatibility. Keep actual Pyosmium tiny-PBF round trips/ABI/malformed-stream proof pending until the separately frozen tool-only setup stage; no executable data recipe before those checks pass."
+  ],
+  "acceptance": "Generic controls/extractor/audit pass meaningful synthetic checks with preserved old bindings and exact next setup/freeze criteria. No new road/tool/provider acquisition, env/DB/npm/Vercel change or failed-evidence overwrite.",
+  "deferred": "Live metadata/tool/national-data acquisition, source admission/adapter/matcher/model/ETA, paid/cloud resources and commit/push/deploy."
+}

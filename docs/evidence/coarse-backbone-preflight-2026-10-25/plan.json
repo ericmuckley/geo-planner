@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "status": "Frozen before national source preflight; no routing candidate or activation",
+  "baseCommit": "648c731",
+  "hypothesis": "A sparse Census backbone, split at source endpoints occurring on other source polylines, can preserve more source connectivity than one Census anchor per display cell, with a compact Vercel footprint. First prototype would replace the Census layer; NE/local fallback remains coarse. This preflight tests feasibility, not ETA accuracy.",
+  "inputs": {
+    "src/server/data/coarse-grid-v9.json": "28271c809a04cdfab41ad735ad66b29e3875179b617198b7b1d4490533439bf6",
+    "docs/evidence/coarse-path-features-2026-10-24/comparison.json": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a",
+    "data/coarse-sources/tiger-2026/national-v1/sources.json": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+    "docs/evidence/coarse-source-2026-10-22/tool.json": "56a3e5e0f9fd91db9c3ccd05ecfdb07cbbf3433c123aea5c6ac07ebfc03c9a8e",
+    "scripts/coarse_census.py": "9d9dd6b648997a055775db3a5a680605f5969db04a57fbcda9ffce91a05c1bf1",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "docs/evidence/coarse-path-features-2026-10-24/sha256.json": "619310ff6a546e26e6a956144cf4842551a1ea5e764c3901a62eaeec55f1944c"
+  },
+  "sourcePolicy": {
+    "allPartitions": 49,
+    "partsBeforeExactDeduplication": 261862,
+    "exactDuplicateParts": 38470,
+    "classes": {
+      "S1100": 105,
+      "S1200": 85
+    },
+    "deduplication": "Existing exact direction-independent geometry/class SHA; multipart pieces remain separate",
+    "junctions": "Only identical original float coordinate pairs at source endpoints; split every part at all such endpoints occurring in its interior. Never snap near points or connect geometric crossings without that shared source endpoint. Shared interior/interior-only junctions are NOT resolved by this first preflight.",
+    "parallelRoads": "Retain separate original arcs/geometry; no city/region/query exceptions",
+    "weights": "Full original haversine polyline length, positive ceil deciseconds; no fitted speed/weight correction",
+    "geometryStorage": "Proposed source geometry deltas quantized1e-5 degrees, measured coordinate error retained. Node/junction identity remains exact float64; quantization must not merge nodes. This is prototype storage, not an active model."
+  },
+  "diagnostics": {
+    "componentModels": [
+      "Endpoint-to-endpoint only",
+      "Split at identical endpoint coordinates occurring at interior vertices"
+    ],
+    "proximity": "All83 saved OD pairs retained. Nearest original source vertex within5km; not nearest segment, legal access, snapped route or reachable-OD proof. Repeated coordinates deduplicated for work but all166 endpoints reported.",
+    "probeRadiusKm": 5,
+    "probeIndexDegrees": 0.1,
+    "geometryQuantumDegrees": 1e-05
+  },
+  "resourceLimits": {
+    "maximumSeconds": 600,
+    "maximumProducerRssBytes": 1073741824,
+    "minimumFreeDiskBytes": 2147483648
+  },
+  "advanceGates": {
+    "exactSourceAndSplitLengthConservation": true,
+    "largestSplitComponentMinimumRoadLengthFraction": 0.9,
+    "endpointProximityMinimumFraction": 0.95,
+    "projectedFunctionMaximumBytes": 70000000,
+    "integrationReserveBytes": 4194304,
+    "functionOverheadBytes": 3822197,
+    "projection": "Keep all v9 fields except roadLayer/supplementalRoadVisits; add sparse source graph + full quantized source geometry, existing function overhead and4MiB reserve for integration/index/metadata. Storage forecast only, not a working handler or memory/latency proof."
+  },
+  "onFailure": "Retain all outputs and failed gates. Stop a full routing candidate; no gate relaxation, source retry, coordinate snapping, second source recipe or rollout in this run. Diagnose exact limitation and version a follow-up separately.",
+  "nextCandidateRequirements": "If this passes, freeze a separate candidate design before any routing producer/search: arbitrary-origin paid attachments, source-arc to display arrival semantics, all83 vs v9 means/horizons/tails/median/individual/classification/finite/path/shading and Valhalla sensitivity, physical checks, decoded retention and first-compute<=5s/package<=70MB. No new provider calls authorized.",
+  "scope": "One offline national feasibility preflight; zero provider/key/env/cloud-DB access, download or runtime/app change. Existing48/6/29 budgets consumed."
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Documentation research only, separate from the frozen artifact request budget; no additional artifact or provider request.",
+  "sources": [
+    {
+      "url": "https://github.com/opencontainers/image-spec/blob/main/layer.md",
+      "usedFor": "Layer application and whiteouts affect earlier layers; apply opaque deletions before same-layer entries."
+    },
+    {
+      "url": "https://docs.python.org/3.13/library/tarfile.html",
+      "usedFor": "Streaming tar traversal; manual selected-file writes and type/path/link handling, no extractall or implicit trust."
+    }
+  ]
+}

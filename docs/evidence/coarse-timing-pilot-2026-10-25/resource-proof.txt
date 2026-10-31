@@ -1,0 +1,43 @@
+{
+  "containerImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "hardMemoryGuardProven": true,
+  "records": [
+    {
+      "size": "64m",
+      "workerReturnCode": 0,
+      "kernel": [
+        {
+          "memoryMaxBytes": 67108864,
+          "swapMaxBytes": 0
+        },
+        {
+          "memoryMaxBytes": 67108864,
+          "swapMaxBytes": 0,
+          "childReturnCode": -9,
+          "memoryEvents": "low 0\nhigh 0\nmax 91\noom 1\noom_kill 1\noom_group_kill 0\n"
+        }
+      ],
+      "oomKilled": true,
+      "networkMode": "none",
+      "memory": 67108864,
+      "memorySwap": 67108864
+    },
+    {
+      "size": "1g",
+      "workerReturnCode": 0,
+      "kernel": [
+        {
+          "memoryMaxBytes": 1073741824,
+          "swapMaxBytes": 0
+        }
+      ],
+      "oomKilled": false,
+      "networkMode": "none",
+      "memory": 1073741824,
+      "memorySwap": 1073741824
+    }
+  ],
+  "sourceOrToolDownloads": 0,
+  "network": "none",
+  "scope": "Kernel memory/swap enforcement only, not application/cloud memory or routing performance."
+}

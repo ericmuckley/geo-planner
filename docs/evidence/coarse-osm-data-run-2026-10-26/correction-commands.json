@@ -1,0 +1,21 @@
+{
+  "readOnlyCheck": [
+    "python3",
+    "-B",
+    "scripts/prepare_osm_input_v3.py",
+    "docs/evidence/coarse-osm-data-run-2026-10-26/correction-plan.json",
+    "a7155c25e61516c9cd61bb3b32f5bd96e5ef8811c265a93f4b845c69f448857e",
+    "data/coarse-quality/us-osm-input-v3",
+    "--check"
+  ],
+  "executeLaterOnce": [
+    "python3",
+    "-B",
+    "scripts/prepare_osm_input_v3.py",
+    "docs/evidence/coarse-osm-data-run-2026-10-26/correction-plan.json",
+    "a7155c25e61516c9cd61bb3b32f5bd96e5ef8811c265a93f4b845c69f448857e",
+    "data/coarse-quality/us-osm-input-v3"
+  ],
+  "executedNow": false,
+  "scope": "Separate fresh full attempt only; failed-v2 prefix/output/recipe preserved, no resume or automatic retry."
+}

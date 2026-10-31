@@ -1,0 +1,12 @@
+{
+  "status": "Post-result descriptive audit; frozen before executing this analysis, after candidate rejection",
+  "inputs": {
+    "scripts/analyze-backbone-routing.py": "ee1decac9a8930db5064f14ea7b235adf8df3057c8f4085c4cee779f3d409e70",
+    "data/coarse-quality/backbone-routing-candidate-v1/comparison.json": "f459ecea45a2dc914c9a26971f36c0d0285bb1473e5c1801de9c093689373980",
+    "data/coarse-quality/backbone-routing-candidate-v1/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "data/coarse-quality/backbone-routing-candidate-v1/execution-plan.json": "14ce73ea4e2008cb2f87cd21a3bf3d75a4cf5745af7fc00dc8d5649530200324",
+    "docs/evidence/coarse-path-features-2026-10-24/comparison.json": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a"
+  },
+  "scope": "Independently recompute all gates,83 matched denominators,35 sensitivities and166 component sums; normalize explicit baseline/candidate error fields, describe path-cost shifts. No routing, new references, model/threshold changes or qualification of the failed candidate.",
+  "command": "python3 -B scripts/analyze-backbone-routing.py data/coarse-quality/backbone-routing-candidate-v1 docs/evidence/coarse-backbone-routing-2026-10-25/analysis.json"
+}

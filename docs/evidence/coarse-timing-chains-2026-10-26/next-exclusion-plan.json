@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "status": "Next bounded offline unresolved-exclusion audit and one geometry-input decision; no matcher rerun or policy change yet",
+  "inputs": {
+    "docs/evidence/coarse-timing-chains-2026-10-26/decision.json": "c9cc89dad7202311feadb24b91d5bf25f15b671bdb1590c7fbc3ee7ef55e5fbf",
+    "docs/evidence/coarse-timing-chains-2026-10-26/report.json": "aca687330c34e5d3e92a25a9385722e50c8184fb3fca9f06d3ab9e3e619b3f37",
+    "docs/evidence/coarse-timing-chains-2026-10-26/audit.json": "d7911b7e7047dd5a0887a777d7652344d853f1628c0fc298a7f595d8cf705cad",
+    "docs/evidence/coarse-timing-chains-2026-10-26/execution-plan.json": "84aa2a9446495d7b00be88b1bc8cb271490e77d3092e9c7586dfe411578fd6f5",
+    "docs/evidence/coarse-timing-chains-2026-10-26/rules.json": "72f5d54e7e48f0929fdd60f8b28b3d68d01c6d1e6442420a7ad5f9999ae893f7",
+    "data/coarse-quality/overture-timing-chains-v1/rows.jsonl": "1cdcafabb00b244b2c6a2b6a48efb218a99f3801138e9f1cce402e4b0958e3bf",
+    "data/coarse-quality/overture-timing-chains-v1/chains.jsonl": "f3859217a0686cf95baa4347147a04984732f4b49d1e25ac32dbb17a53fc0f21",
+    "data/coarse-quality/overture-timing-compatibility-v1/support.jsonl": "13b72c2ffcb8ec4b026649d2ace6895295cd2019d040e9d01670e2e78e0ca493",
+    "data/coarse-quality/overture-timing-compatibility-v1/scopes.jsonl": "9be557bdef2a22fe0cdb1de913cd786c285885f23c0712ac976ae177b6d1ebab",
+    "data/coarse-quality/overture-timing-pilot-v1/segments.jsonl": "3b23132960cfc022256b0e0ed1e1061479da8db35d72147ad38dfd2d333647e4"
+  },
+  "output": "data/coarse-quality/overture-timing-chain-exclusions-v1",
+  "implementation": "New scripts/analyze_chain_exclusions.py and meaningful scripts/coarse_chain_exclusions_test.py; freeze exact code/inputs/categories/output before the diagnostic. Reuse sealed helpers without editing or rerunning completed producers.",
+  "resources": {
+    "network": "none",
+    "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "imagePull": "never",
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "wallSeconds": 3600,
+    "outputBytes": 134217728,
+    "tmpBytes": 67108864
+  },
+  "method": [
+    "Reconcile all 55,120 retained IDs/raw scopes,2,469 arc/window records,85,629 saved sample weights,21 incomplete windows and 85/105 classes. Preserve all old classifications, 82 chains/32 unresolved candidate-bearing arcs,14 supported formerly absent arcs, 0 caps and 2.8270705809269594 provisional baseline km. No new chain search, graph arrays, road source or route query.",
+    "Inventory every aligned excluded arc-row incidence with all overlapping reasons and unique retained publisher-ID denominators. Separately report candidate-bearing, formerly-absent-positive, unmatched and empty-cache cohorts; no hand-selected case or window exception.",
+    "For raw level_rules, preserve every rule/interval/value/extra field and classify observations only: missing, explicit uniform zero, uniform nonzero, mixed, partial/malformed/unsupported fields. Raw zero is a value, not verified ground-level connectivity or driving permission. Do not silently admit it or change the frozen nonempty-level rejection.",
+    "Separate declared unsupported road roles from missing/malformed endpoint IDs, multipart/outside-window/endpoint-distance/progress-tie uncertainty. Recompute the frozen endpoint/sample progress measurements and tie intervals for accounting only; no tolerance change, new adjacency/chain enumeration or replacement of old outcomes.",
+    "For every one of the 32 candidate-bearing arcs, account for which unresolved rows could share sample support/endpoint identities with retained candidates versus rows excluded only by declared role/metadata constraints. These are overlap counts, not proof of harmless competitors or resolved uniqueness. Preserve all raw speed/access/level/connector values and candidate-member parser outcomes.",
+    "Independently reconcile IDs, reason partitions/overlaps, unique retained publisher-ID counts, raw level categories and all sample/source/window denominators. Make one concrete decision: specify a separately frozen geometry-only metadata/uncertainty hypothesis, or stop this input. Do not run a revised matcher in this diagnostic."
+  ],
+  "pass": "All original and exclusion/level/progress/cohort denominators reconcile independently; one explicit geometry-input decision without changing parser/access/level/turn interpretation, existing gates, caps or classifications.",
+  "deferred": "No network/tool/source/range/retry, matcher/cutoff/cap sweep, semantic permission/level assumption, new timing or routing/ETA/contour/model, runtime/env/DB/npm change, commit/push/deploy. Any later policy or acquisition needs its own exact specification and original qualification gates."
+}

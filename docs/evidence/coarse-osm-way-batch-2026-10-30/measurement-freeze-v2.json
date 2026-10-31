@@ -1,0 +1,30 @@
+{
+  "recipeSha256": "55a558f4575682d70ff3df009b104e5119eb72194aa639fd9d2cbd7fdc72c175",
+  "admittedControllerProducers": {
+    "scripts/run_osm_way_batch_v2.py": "4997e0a8d330268375f21568714f195ad9ac7730ae4cb56cc2063ff10ddc6041",
+    "scripts/coarse_osm_way_batch_v2_test.py": "7d357e81759546284b1bba82bf267c587c032bd73d0ab8906f00e40842c1b7d6"
+  },
+  "helperArtifact": {
+    "path": "data/coarse-quality/us-osm-country-controls-v5/build/country-screen.so",
+    "sha256": "9c81c86e3605738430b1c8f9f762bce71830740e5c46737485371ef8c0561166"
+  },
+  "helperTests": 206,
+  "controllerTests": 7,
+  "caps": {
+    "hostSeconds": 4800,
+    "hostWorkSeconds": 4740,
+    "workerSeconds": 4200,
+    "caseSeconds": 3000,
+    "auditSeconds": 900,
+    "hashSeconds": 240,
+    "references": 8000000,
+    "batches": 512,
+    "lookupBytes": 34359738368,
+    "lookupRows": 1024000000,
+    "codecCalls": 250000
+  },
+  "output": "data/coarse-quality/us-osm-way-batch-run-v2",
+  "sourceWayEligibilityIsValidationOnly": true,
+  "fullIndexAllocationOrModelAdmission": false,
+  "command": "PYTHONPATH=scripts python3 -B scripts/run_osm_way_batch_v2.py docs/evidence/coarse-osm-way-batch-2026-10-30/measurement-plan-v2.json 55a558f4575682d70ff3df009b104e5119eb72194aa639fd9d2cbd7fdc72c175"
+}

@@ -1,0 +1,188 @@
+{
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,size=256m"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": 64,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "fsize",
+        "Hard": 67108864,
+        "Soft": 67108864
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/diagnose_osm_member_v2.py",
+        "Target": "/code/diagnose_osm_member_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+        "Target": "/code/coarse_osm_bulk_pbf.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+        "Target": "/code/coarse_osm_records.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+        "Target": "/code/coarse_timing_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-input-v3/download/http/001.bin",
+        "Target": "/source.pbf",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-member-diagnostic-v2",
+        "Target": "/work"
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-country-exec-2026-10-30/member-diagnostic-plan-v2.json",
+        "Target": "/inputs/plan.json",
+        "ReadOnly": true
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "Mounts": [
+    {
+      "Destination": "/work",
+      "RW": true
+    },
+    {
+      "Destination": "/inputs/plan.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/diagnose_osm_member_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_pbf.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_records.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/source.pbf",
+      "RW": false
+    }
+  ]
+}

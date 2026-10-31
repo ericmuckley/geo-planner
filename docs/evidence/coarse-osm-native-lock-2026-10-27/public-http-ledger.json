@@ -1,0 +1,59 @@
+{
+  "events": [
+    {
+      "number": 1,
+      "url": "https://quay.io/v2/pypa/manylinux_2_28_aarch64/manifests/latest",
+      "kind": "registry",
+      "status": 200,
+      "bodyBytes": 5542,
+      "bodyFile": "001.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "application/vnd.docker.distribution.manifest.v2+json",
+        "content-length": "5542",
+        "docker-content-digest": "sha256:a3e02308c822fb6ce0d12248b0c941817ba5e1a1bc9e7bb5929f29c50eaa40a9"
+      },
+      "bodySha256": "a3e02308c822fb6ce0d12248b0c941817ba5e1a1bc9e7bb5929f29c50eaa40a9",
+      "authBodyRedacted": false
+    },
+    {
+      "number": 2,
+      "url": "https://quay.io/v2/pypa/manylinux_2_28_aarch64/blobs/sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+      "kind": "config",
+      "status": 302,
+      "bodyBytes": 1359,
+      "bodyFile": "002.bin",
+      "outcome": "body_complete",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "1359",
+        "docker-content-digest": "sha256:607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b"
+      },
+      "bodySha256": "0e922c29b57c2935f05e928d40915baae0d2f8739b1f525464aa635d05c1efa0",
+      "authBodyRedacted": false,
+      "redactedLocation": {
+        "scheme": "https",
+        "host": "cdn01.quay.io",
+        "path": "/quayio-production-s3/sha256/60/607462577eb2ec84031739355771637c602d54af7d4cd22b89805504753b063b",
+        "queryParameterNames": [
+          "X-Amz-Algorithm",
+          "X-Amz-Credential",
+          "X-Amz-Date",
+          "X-Amz-Expires",
+          "X-Amz-SignedHeaders",
+          "X-Amz-Signature",
+          "region",
+          "namespace",
+          "repo_name",
+          "akamai_signature"
+        ],
+        "urlSha256": "552b6902dab40190b8d7d28969b1363823d35f1860fb0c45bfcb604944b07b59",
+        "queryValuesRedacted": true
+      }
+    }
+  ],
+  "receivedBodyBytes": 6901,
+  "stopped": true,
+  "elapsedSeconds": 0.5868484589736909,
+  "counterScope": "read1/IncompleteRead.partial payload only; excludes headers/socket/TLS buffering. Auth body is hashed/counted but never persisted."
+}

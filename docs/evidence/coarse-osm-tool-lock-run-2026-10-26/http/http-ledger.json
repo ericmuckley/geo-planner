@@ -1,0 +1,53 @@
+{
+  "events": [
+    {
+      "number": 1,
+      "url": "https://pypi.org/pypi/requests/json",
+      "kind": "metadata",
+      "method": "GET",
+      "status": 200,
+      "bodyFile": "001.bin",
+      "bodyBytes": 192973,
+      "outcome": "complete",
+      "absoluteSeconds": 20,
+      "startedElapsed": 0.0004883339861407876,
+      "headers": {
+        "content-length": "192973",
+        "content-type": "application/json"
+      },
+      "bodySha256": "bcfc6a202592e4e90f5a28ff002694eaa7c58ba741b76077f432b8bee1480111",
+      "bodyMd5": "56a52b79330752bd90d472526341312d",
+      "finishedElapsed": 0.0702624170226045
+    },
+    {
+      "number": 2,
+      "url": "https://pypi.org/pypi/charset-normalizer/json",
+      "kind": "metadata",
+      "method": "GET",
+      "status": 200,
+      "bodyFile": "002.bin",
+      "bodyBytes": 0,
+      "outcome": "failed",
+      "absoluteSeconds": 20,
+      "startedElapsed": 0.0722281250054948,
+      "headers": {
+        "content-length": "2390209",
+        "content-type": "application/json"
+      },
+      "errorType": "PilotError",
+      "error": "Declared body oversize",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bodyMd5": "d41d8cd98f00b204e9800998ecf8427e",
+      "finishedElapsed": 0.1201339170220308
+    }
+  ],
+  "receivedBodyBytes": 192973,
+  "bodyBytesByKind": {
+    "metadata": 192973,
+    "wheel": 0,
+    "pbf": 0
+  },
+  "elapsedSeconds": 0.12013508402742445,
+  "stopped": true,
+  "counterScope": "read1/IncompleteRead.partial delivered payload, excluding headers/TCP/TLS/kernel buffering"
+}

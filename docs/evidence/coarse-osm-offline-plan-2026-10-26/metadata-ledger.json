@@ -1,0 +1,57 @@
+{
+  "scope": "Three direct metadata GETs only; no road/PBF/tool payload, retries or redirects. Bytes are body bytes delivered to this reader, not headers/TCP/TLS. Official-document browsing is separate and unmetered. Socket timeout and elapsed checks are not a proven absolute deadline; this is a small metadata inspection, not the future acquisition meter.",
+  "events": [
+    {
+      "number": 1,
+      "method": "GET",
+      "url": "https://download.geofabrik.de/north-america/us-261025.osm.pbf.md5",
+      "kind": "checksum_or_package_metadata",
+      "bodyLimitBytes": 4096,
+      "timeoutSeconds": 20,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "outcome": "failed",
+      "errorType": "SSLCertVerificationError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)",
+      "bodyFile": "metadata/dated-md5.bin",
+      "receivedBodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsedSeconds": 0.6578037501312792
+    },
+    {
+      "number": 2,
+      "method": "GET",
+      "url": "https://download.geofabrik.de/north-america/us-latest.osm.pbf.md5",
+      "kind": "checksum_or_package_metadata",
+      "bodyLimitBytes": 4096,
+      "timeoutSeconds": 20,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "outcome": "failed",
+      "errorType": "SSLCertVerificationError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)",
+      "bodyFile": "metadata/latest-md5.bin",
+      "receivedBodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsedSeconds": 0.32706300006248057
+    },
+    {
+      "number": 3,
+      "method": "GET",
+      "url": "https://pypi.org/pypi/osmium/4.3.2/json",
+      "kind": "checksum_or_package_metadata",
+      "bodyLimitBytes": 262144,
+      "timeoutSeconds": 20,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "outcome": "failed",
+      "errorType": "SSLCertVerificationError",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)",
+      "bodyFile": "metadata/pyosmium-json.bin",
+      "receivedBodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsedSeconds": 0.035444207955151796
+    }
+  ],
+  "receivedMetadataBodyBytes": 0
+}

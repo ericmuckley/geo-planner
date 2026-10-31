@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "status": "Supplementary source-kind accounting, frozen before captured-base-edge attribution",
+  "reason": "Completed primary audit leaves27.35% of captured time on coarse base-road edges. Read-only proof inventory shows retained mixed-source base includes Census links, despite the proposed NE/local fallback label. Count captured usage before selecting any correction.",
+  "inputs": {
+    "scripts/coarse_backbone_base_audit.py": "7ac2cc05c80c19f6fcfea57b85b97fb560bf62fb1a0064775348e01f2a2033e0",
+    "scripts/coarse_backbone_base_audit_test.py": "8c8624ffd691e22383e6a46fbb4be8cb0139ffe2c40094bf608493f5ae618a37",
+    "data/coarse-quality/backbone-path-audit-v1/report.json": "753faba8fa2ee78a862f2069d06b3a545b4f5a4d13ca3eef8dae7192d2951bb4",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "data/coarse-quality/connector-timing-candidate-v1/base-links.json.gz": "dcd8c893240f137af276adc629d83ee7a9cb9868371363bea8f1977709bf4262",
+    "docs/evidence/coarse-path-features-2026-10-24/producer-console.json": "dba8ef954f62b4c4570f5ad4c097c58bbb07bd3acb22109ff534596463b0bdf5",
+    "src/server/data/coarse-grid-v9.json": "28271c809a04cdfab41ad735ad66b29e3875179b617198b7b1d4490533439bf6"
+  },
+  "output": "data/coarse-quality/backbone-base-audit-v1",
+  "paths": "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz",
+  "audit": "data/coarse-quality/backbone-path-audit-v1/report.json",
+  "proofs": "data/coarse-quality/connector-timing-candidate-v1/base-links.json.gz",
+  "width": 2360,
+  "height": 1040,
+  "method": "Map every captured non-arc road transition to its canonical neighbor-link key; verify exact v9 decisecond cost, source kind, road and artificial-connector costs with rounding. Retain all83 cases. No polyline inference from source endpoints, rerouting, price/threshold/source changes or candidate activation.",
+  "scope": "Post-result saved-output diagnostic only; usage does not establish causal ETA contribution. Existing v9 proof reused read-only, no producer rerun.",
+  "command": "python3 -B scripts/coarse_backbone_base_audit.py data/coarse-quality/backbone-base-audit-v1 PLAN_SHA256"
+}

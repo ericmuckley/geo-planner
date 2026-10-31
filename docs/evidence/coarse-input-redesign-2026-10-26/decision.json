@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-26",
+  "inputs": {
+    "docs/evidence/coarse-input-redesign-2026-10-26/proposal.json": "e318532fffe1930242f67909a934f9929aec8bf2dfdff4c4bff48c76287f29c7",
+    "docs/evidence/coarse-input-redesign-2026-10-26/sources.json": "4cee84d363514169aaf75e6a3532d14116efc9a2595178c2f06c9d9fe2db1d31",
+    "docs/evidence/coarse-input-redesign-2026-10-26/queries.json": "a1e07317b394234111e2bd855e72bd69a4db45cdd861b4668667f40a620b8de0"
+  },
+  "decision": "Select the finite21-window OSM/Overpass snapshot acquisition design for synthetic implementation. No acquisition or eligibility/model admission. Retain original gates; actual completion, attributes, memory/output and timings remain unmeasured.",
+  "approachesReviewed": 2,
+  "selectedApproaches": 1,
+  "newRoadStatusInterpreterRequests": 0,
+  "newToolBinaryDownloads": 0,
+  "newRoutingProviderRequests": 0,
+  "newMatcherRuns": 0,
+  "databaseReadsWrites": 0,
+  "runtimeChanged": false,
+  "sourceAdapterImplemented": false,
+  "originalFeasibilityQualified": false,
+  "next": "Implement the synthetic-only metered capture reader/closure audit and freeze exact executable recipe before any later live capture. All source-adapter/matching/usable-limit/model gates remain separate and required."
+}

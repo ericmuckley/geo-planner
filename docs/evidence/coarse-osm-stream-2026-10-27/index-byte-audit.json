@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "case": "pair-0-compact",
+      "rowsCompared": 64000,
+      "exactCoordinateFloatBits": true,
+      "binaryAndCatalogChecksumsValid": true
+    },
+    {
+      "case": "pair-1-compact",
+      "rowsCompared": 64000,
+      "exactCoordinateFloatBits": true,
+      "binaryAndCatalogChecksumsValid": true
+    },
+    {
+      "case": "pair-2-compact",
+      "rowsCompared": 64000,
+      "exactCoordinateFloatBits": true,
+      "binaryAndCatalogChecksumsValid": true
+    }
+  ],
+  "sqliteFilesIdentical": true,
+  "sqliteSha256": "766e482dbd226e8b54126ac8dbd5e102f23d746d7d2bb497f5b02628fa768fec",
+  "nativeReplay": false,
+  "scope": "Independent struct decoder + read-only SQLite query; all64k coordinate rows compared per compact index. Not a national index or independent source proof."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "Post-result input decision; not a new candidate or a prospective accuracy gate",
+  "inputs": {
+    "data/coarse-quality/overture-timing-cache-analysis-v2/report.json": "f60b2d817bfaf22a7b42a191e6153503158f00468216786e584cd1afcfb4d35b",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/audit.json": "4eaa4391565b3d76523ee11718859118a8ba2d3c0d175e0b35e6f62448045d56",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/matches.jsonl": "bc52cb3fc16d70f4e0ae0f2d0fb7bfe01e48087fe92dc59a24a9be2d4208842d"
+  },
+  "metrics": {
+    "retainedRows": 55120,
+    "rowsWithSpeedLimits": 6230,
+    "eligibleWholeSpanBidirectionalStaticLimitRows": 3608,
+    "plannedWindows": 21,
+    "completedSourceWindows": 0,
+    "windowsWithCachedRows": 5,
+    "publisherClippedGeometryKm": 6347.506208870682,
+    "eligiblePublisherClippedGeometryKm": 464.0644071955851,
+    "censusSourceKmAllWindows": 2078.2379598682132,
+    "censusSourceKmWindowsWithCache": 541.5149490212569,
+    "provisionalStaticLimitMatchedCensusKm": 2.8270705809269594,
+    "cacheCandidateArcCounts": {
+      "absent_in_cache": 2297,
+      "ambiguous_in_cache": 99,
+      "single_in_cache": 73
+    },
+    "cacheCandidateSourceKm": {
+      "absent_in_cache": 2010.3410812532784,
+      "ambiguous_in_cache": 32.42299878731396,
+      "single_in_cache": 35.473879827620785
+    },
+    "singleCandidateLimitStatusSourceKm": {
+      "missing": 1.7422849197396928,
+      "access_scoped_or_restricted": 25.859407642574322,
+      "unsupported_road_role": 4.906463202026896,
+      "usable": 2.965724063279874
+    },
+    "rowsWithSpeedLimitsPercent": 11.302612481857764,
+    "eligiblePublisherGeometryPercent": 7.310972087700395,
+    "provisionalMatchedPercentOfCensusInWindowsWithCache": 0.5220669505129366,
+    "provisionalMatchedPercentOfCensusAllWindows": 0.13603209235511374,
+    "censusArcWindowRecords": 2469,
+    "provisionalEligibleSingleCandidateArcs": 10
+  },
+  "decision": "Stop further acquisition with the current reader/matcher recipe. The cache contains real attributes, but its observed eligible single-segment matching yield does not justify preparing another download now. Do not use this partial input for a timing correction.",
+  "limits": [
+    "All21 windows remain incomplete, including the five with some cached rows. Sixteen empty windows are unmeasured, not proof of absent roads or speed limits.",
+    "Single-in-cache matches can gain competitors. Neither provisional matched fractions nor current absent/ambiguous fractions establish final coverage, a lower bound or national accuracy.",
+    "The frozen matcher requires one publisher segment to cover80% of one Census arc. Fragmented segments and scope/access rules are plausible limitations, not causes proved by this run.",
+    "The frozen parser rejects any access_restrictions and some directional/conditional speed scopes. Speed-only counts are observations with access cleared, never usable car-travel claims.",
+    "No original50% gate, independent road-identity review, ETA policy, route query or runtime admission was executed or passed. Natural Earth/base alignment is outside the Census denominator."
+  ],
+  "next": "Specify one bounded offline compatibility diagnostic on this same cache to distinguish missing geometry from segmentation/scoping limitations before any new source request or matching-policy proposal.",
+  "newNetworkRequests": 0,
+  "originalFeasibilityQualified": false,
+  "productionModelChanged": false
+}

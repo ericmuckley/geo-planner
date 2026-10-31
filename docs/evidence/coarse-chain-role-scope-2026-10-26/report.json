@@ -1,0 +1,2117 @@
+{
+  "retainedRows": 55120,
+  "rawRoleCounts": {
+    "footway": 15965,
+    "primary": 1231,
+    "unknown": 1892,
+    "service": 17199,
+    "residential": 10332,
+    "secondary": 2399,
+    "tertiary": 2825,
+    "steps": 489,
+    "motorway": 671,
+    "path": 705,
+    "pedestrian": 90,
+    "cycleway": 318,
+    "unclassified": 599,
+    "living_street": 24,
+    "trunk": 45,
+    "track": 335,
+    "bridleway": 1
+  },
+  "frozenLimitStatusCounts": {
+    "unsupported_road_role": 19795,
+    "usable": 3608,
+    "missing": 18925,
+    "access_scoped_or_restricted": 12740,
+    "partial_scope": 51,
+    "directional": 1
+  },
+  "scopeRowCounts": {
+    "speedRows": 6230,
+    "accessRows": 15022
+  },
+  "retainedLevelCategories": {
+    "missing": 54045,
+    "partial": 722,
+    "uniform_nonzero": 353
+  },
+  "cohorts": {
+    "all": {
+      "arcCount": 2469,
+      "sourceKm": 2078.237959868213,
+      "samples": 85629,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_with_candidates": 32,
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalExhaustiveRecords": 192,
+      "originalCandidateChains": 82,
+      "originalPositiveRecords": 14,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 2.827070580926959,
+      "roleScopedStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_in_role_with_candidates": 32,
+        "unresolved_in_role_without_candidates": 321,
+        "no_declared_role_chain": 192
+      },
+      "roleScopedExhaustiveRecords": 192,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 766,
+      "unresolvedInRoleIncidences": 2568,
+      "uniqueOutOfRolePublisherIds": 286,
+      "uniqueUnresolvedInRolePublisherIds": 709,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 766,
+        "unsupported_level_rules": 131,
+        "outside_window_endpoint": 10
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "nonprogressing_or_tied_endpoints": 37,
+        "unsupported_level_rules": 1254,
+        "outside_window_endpoint": 171
+      }
+    },
+    "with_cache": {
+      "arcCount": 545,
+      "sourceKm": 541.5149490212568,
+      "samples": 22211,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 32,
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalExhaustiveRecords": 192,
+      "originalCandidateChains": 82,
+      "originalPositiveRecords": 14,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 2.827070580926959,
+      "roleScopedStatusCounts": {
+        "unresolved_in_role_with_candidates": 32,
+        "unresolved_in_role_without_candidates": 321,
+        "no_declared_role_chain": 192
+      },
+      "roleScopedExhaustiveRecords": 192,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 766,
+      "unresolvedInRoleIncidences": 2568,
+      "uniqueOutOfRolePublisherIds": 286,
+      "uniqueUnresolvedInRolePublisherIds": 709,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 766,
+        "unsupported_level_rules": 131,
+        "outside_window_endpoint": 10
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "endpoint_not_near_own_samples": 1171,
+        "nonprogressing_or_tied_endpoints": 37,
+        "unsupported_level_rules": 1254,
+        "outside_window_endpoint": 171
+      }
+    },
+    "empty_cache": {
+      "arcCount": 1924,
+      "sourceKm": 1536.723010846956,
+      "samples": 63418,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924
+      },
+      "originalExhaustiveRecords": 0,
+      "originalCandidateChains": 0,
+      "originalPositiveRecords": 0,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "roleScopedStatusCounts": {
+        "unmeasured_empty_cache": 1924
+      },
+      "roleScopedExhaustiveRecords": 0,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 0,
+      "unresolvedInRoleIncidences": 0,
+      "uniqueOutOfRolePublisherIds": 0,
+      "uniqueUnresolvedInRolePublisherIds": 0,
+      "outOfRoleReasonIncidences": {},
+      "unresolvedInRoleReasonIncidences": {}
+    },
+    "candidate_bearing": {
+      "arcCount": 32,
+      "sourceKm": 32.49471552777543,
+      "samples": 1336,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 32
+      },
+      "originalExhaustiveRecords": 0,
+      "originalCandidateChains": 82,
+      "originalPositiveRecords": 14,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 1.6257668688861955,
+      "roleScopedStatusCounts": {
+        "unresolved_in_role_with_candidates": 32
+      },
+      "roleScopedExhaustiveRecords": 0,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 171,
+      "unresolvedInRoleIncidences": 99,
+      "uniqueOutOfRolePublisherIds": 72,
+      "uniqueUnresolvedInRolePublisherIds": 48,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 171,
+        "unsupported_level_rules": 13
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "endpoint_not_near_own_samples": 71,
+        "unsupported_level_rules": 6,
+        "nonprogressing_or_tied_endpoints": 16,
+        "outside_window_endpoint": 6
+      }
+    },
+    "without_candidate_with_cache": {
+      "arcCount": 513,
+      "sourceKm": 509.0202334934813,
+      "samples": 20875,
+      "originalStatusCounts": {
+        "unresolved_without_candidates": 321,
+        "no_cached_chain": 192
+      },
+      "originalExhaustiveRecords": 192,
+      "originalCandidateChains": 0,
+      "originalPositiveRecords": 0,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 1.2013037120407637,
+      "roleScopedStatusCounts": {
+        "unresolved_in_role_without_candidates": 321,
+        "no_declared_role_chain": 192
+      },
+      "roleScopedExhaustiveRecords": 192,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 595,
+      "unresolvedInRoleIncidences": 2469,
+      "uniqueOutOfRolePublisherIds": 228,
+      "uniqueUnresolvedInRolePublisherIds": 676,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 595,
+        "unsupported_level_rules": 118,
+        "outside_window_endpoint": 10
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "nonprogressing_or_tied_endpoints": 21,
+        "endpoint_not_near_own_samples": 1100,
+        "unsupported_level_rules": 1248,
+        "outside_window_endpoint": 165
+      }
+    },
+    "formerly_absent_positive": {
+      "arcCount": 14,
+      "sourceKm": 21.25481114779464,
+      "samples": 866,
+      "originalStatusCounts": {
+        "unresolved_with_candidates": 14
+      },
+      "originalExhaustiveRecords": 0,
+      "originalCandidateChains": 50,
+      "originalPositiveRecords": 14,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "roleScopedStatusCounts": {
+        "unresolved_in_role_with_candidates": 14
+      },
+      "roleScopedExhaustiveRecords": 0,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 68,
+      "unresolvedInRoleIncidences": 55,
+      "uniqueOutOfRolePublisherIds": 31,
+      "uniqueUnresolvedInRolePublisherIds": 27,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 68,
+        "unsupported_level_rules": 5
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "endpoint_not_near_own_samples": 35,
+        "nonprogressing_or_tied_endpoints": 12,
+        "outside_window_endpoint": 6,
+        "unsupported_level_rules": 2
+      }
+    },
+    "baseline_absent": {
+      "arcCount": 2297,
+      "sourceKm": 2010.3410812532782,
+      "samples": 82807,
+      "originalStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_without_candidates": 167,
+        "unresolved_with_candidates": 14,
+        "no_cached_chain": 192
+      },
+      "originalExhaustiveRecords": 192,
+      "originalCandidateChains": 50,
+      "originalPositiveRecords": 14,
+      "originalCappedRecords": 0,
+      "baselineProvisionalEligibleKm": 0.0,
+      "roleScopedStatusCounts": {
+        "unmeasured_empty_cache": 1924,
+        "unresolved_in_role_without_candidates": 167,
+        "unresolved_in_role_with_candidates": 14,
+        "no_declared_role_chain": 192
+      },
+      "roleScopedExhaustiveRecords": 192,
+      "newlyExhaustiveCandidateRecords": 0,
+      "newlyExhaustiveCandidateSourceKm": 0.0,
+      "declaredOutOfRoleIncidences": 508,
+      "unresolvedInRoleIncidences": 1927,
+      "uniqueOutOfRolePublisherIds": 203,
+      "uniqueUnresolvedInRolePublisherIds": 638,
+      "outOfRoleReasonIncidences": {
+        "unsupported_road_role": 508,
+        "unsupported_level_rules": 111,
+        "outside_window_endpoint": 6
+      },
+      "unresolvedInRoleReasonIncidences": {
+        "endpoint_not_near_own_samples": 865,
+        "nonprogressing_or_tied_endpoints": 25,
+        "unsupported_level_rules": 981,
+        "outside_window_endpoint": 101
+      }
+    }
+  },
+  "windows": [
+    {
+      "id": "origin-00",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 144,
+        "sourceKm": 72.12967736099975,
+        "samples": 2999,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 144
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 144
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 144,
+          "sourceKm": 72.12967736099975,
+          "samples": 2999,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 144
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 144
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-01",
+      "cachedRows": 11621,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 81,
+        "sourceKm": 78.67644429599045,
+        "samples": 3243,
+        "originalStatusCounts": {
+          "unresolved_with_candidates": 28,
+          "unresolved_without_candidates": 53
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 44,
+        "originalPositiveRecords": 11,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 2.827070580926959,
+        "roleScopedStatusCounts": {
+          "unresolved_in_role_with_candidates": 28,
+          "unresolved_in_role_without_candidates": 53
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 439,
+        "unresolvedInRoleIncidences": 370,
+        "uniqueOutOfRolePublisherIds": 187,
+        "uniqueUnresolvedInRolePublisherIds": 165,
+        "outOfRoleReasonIncidences": {
+          "unsupported_road_role": 439,
+          "unsupported_level_rules": 46
+        },
+        "unresolvedInRoleReasonIncidences": {
+          "endpoint_not_near_own_samples": 244,
+          "nonprogressing_or_tied_endpoints": 36,
+          "unsupported_level_rules": 71,
+          "outside_window_endpoint": 23
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 68,
+          "sourceKm": 57.94402738610388,
+          "samples": 2393,
+          "originalStatusCounts": {
+            "unresolved_with_candidates": 28,
+            "unresolved_without_candidates": 40
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 44,
+          "originalPositiveRecords": 11,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 2.827070580926959,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_with_candidates": 28,
+            "unresolved_in_role_without_candidates": 40
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 413,
+          "unresolvedInRoleIncidences": 220,
+          "uniqueOutOfRolePublisherIds": 166,
+          "uniqueUnresolvedInRolePublisherIds": 85,
+          "outOfRoleReasonIncidences": {
+            "unsupported_road_role": 413,
+            "unsupported_level_rules": 37
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "endpoint_not_near_own_samples": 156,
+            "nonprogressing_or_tied_endpoints": 36,
+            "unsupported_level_rules": 20,
+            "outside_window_endpoint": 8
+          }
+        },
+        "105": {
+          "arcCount": 13,
+          "sourceKm": 20.73241690988657,
+          "samples": 850,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 13
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_without_candidates": 13
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 26,
+          "unresolvedInRoleIncidences": 150,
+          "uniqueOutOfRolePublisherIds": 22,
+          "uniqueUnresolvedInRolePublisherIds": 80,
+          "outOfRoleReasonIncidences": {
+            "unsupported_level_rules": 9,
+            "unsupported_road_role": 26
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "outside_window_endpoint": 15,
+            "unsupported_level_rules": 51,
+            "endpoint_not_near_own_samples": 88
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-02",
+      "cachedRows": 9151,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 67,
+        "sourceKm": 66.71377745233106,
+        "samples": 2726,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 65,
+          "unresolved_with_candidates": 2
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 2,
+        "originalPositiveRecords": 1,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unresolved_in_role_without_candidates": 65,
+          "unresolved_in_role_with_candidates": 2
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 67,
+        "unresolvedInRoleIncidences": 429,
+        "uniqueOutOfRolePublisherIds": 18,
+        "uniqueUnresolvedInRolePublisherIds": 121,
+        "outOfRoleReasonIncidences": {
+          "unsupported_level_rules": 18,
+          "unsupported_road_role": 67,
+          "outside_window_endpoint": 10
+        },
+        "unresolvedInRoleReasonIncidences": {
+          "endpoint_not_near_own_samples": 268,
+          "unsupported_level_rules": 116,
+          "outside_window_endpoint": 58
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 33,
+          "sourceKm": 25.82492788740767,
+          "samples": 1056,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 31,
+            "unresolved_with_candidates": 2
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 2,
+          "originalPositiveRecords": 1,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_without_candidates": 31,
+            "unresolved_in_role_with_candidates": 2
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 65,
+          "unresolvedInRoleIncidences": 187,
+          "uniqueOutOfRolePublisherIds": 18,
+          "uniqueUnresolvedInRolePublisherIds": 55,
+          "outOfRoleReasonIncidences": {
+            "unsupported_level_rules": 16,
+            "unsupported_road_role": 65,
+            "outside_window_endpoint": 10
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "endpoint_not_near_own_samples": 148,
+            "unsupported_level_rules": 15,
+            "outside_window_endpoint": 24
+          }
+        },
+        "105": {
+          "arcCount": 34,
+          "sourceKm": 40.888849564923376,
+          "samples": 1670,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 34
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_without_candidates": 34
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 2,
+          "unresolvedInRoleIncidences": 242,
+          "uniqueOutOfRolePublisherIds": 1,
+          "uniqueUnresolvedInRolePublisherIds": 71,
+          "outOfRoleReasonIncidences": {
+            "unsupported_level_rules": 2,
+            "unsupported_road_role": 2
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "unsupported_level_rules": 101,
+            "endpoint_not_near_own_samples": 120,
+            "outside_window_endpoint": 34
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-03",
+      "cachedRows": 3325,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 98,
+        "sourceKm": 104.71110051030787,
+        "samples": 4278,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 6,
+          "unresolved_with_candidates": 2,
+          "no_cached_chain": 90
+        },
+        "originalExhaustiveRecords": 90,
+        "originalCandidateChains": 36,
+        "originalPositiveRecords": 2,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unresolved_in_role_without_candidates": 6,
+          "unresolved_in_role_with_candidates": 2,
+          "no_declared_role_chain": 90
+        },
+        "roleScopedExhaustiveRecords": 90,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 1,
+        "unresolvedInRoleIncidences": 35,
+        "uniqueOutOfRolePublisherIds": 1,
+        "uniqueUnresolvedInRolePublisherIds": 20,
+        "outOfRoleReasonIncidences": {
+          "unsupported_road_role": 1
+        },
+        "unresolvedInRoleReasonIncidences": {
+          "endpoint_not_near_own_samples": 22,
+          "outside_window_endpoint": 13
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 45,
+          "sourceKm": 37.68055810218275,
+          "samples": 1539,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 2,
+            "unresolved_with_candidates": 2,
+            "no_cached_chain": 41
+          },
+          "originalExhaustiveRecords": 41,
+          "originalCandidateChains": 36,
+          "originalPositiveRecords": 2,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_without_candidates": 2,
+            "unresolved_in_role_with_candidates": 2,
+            "no_declared_role_chain": 41
+          },
+          "roleScopedExhaustiveRecords": 41,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 18,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 7,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {
+            "endpoint_not_near_own_samples": 10,
+            "outside_window_endpoint": 8
+          }
+        },
+        "105": {
+          "arcCount": 53,
+          "sourceKm": 67.03054240812511,
+          "samples": 2739,
+          "originalStatusCounts": {
+            "no_cached_chain": 49,
+            "unresolved_without_candidates": 4
+          },
+          "originalExhaustiveRecords": 49,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "no_declared_role_chain": 49,
+            "unresolved_in_role_without_candidates": 4
+          },
+          "roleScopedExhaustiveRecords": 49,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 1,
+          "unresolvedInRoleIncidences": 17,
+          "uniqueOutOfRolePublisherIds": 1,
+          "uniqueUnresolvedInRolePublisherIds": 13,
+          "outOfRoleReasonIncidences": {
+            "unsupported_road_role": 1
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "outside_window_endpoint": 5,
+            "endpoint_not_near_own_samples": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-04",
+      "cachedRows": 24393,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 265,
+        "sourceKm": 240.47839591576897,
+        "samples": 9888,
+        "originalStatusCounts": {
+          "no_cached_chain": 102,
+          "unresolved_without_candidates": 163
+        },
+        "originalExhaustiveRecords": 102,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "no_declared_role_chain": 102,
+          "unresolved_in_role_without_candidates": 163
+        },
+        "roleScopedExhaustiveRecords": 102,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 255,
+        "unresolvedInRoleIncidences": 1482,
+        "uniqueOutOfRolePublisherIds": 78,
+        "uniqueUnresolvedInRolePublisherIds": 337,
+        "outOfRoleReasonIncidences": {
+          "unsupported_level_rules": 67,
+          "unsupported_road_role": 255
+        },
+        "unresolvedInRoleReasonIncidences": {
+          "endpoint_not_near_own_samples": 469,
+          "unsupported_level_rules": 987,
+          "outside_window_endpoint": 62,
+          "nonprogressing_or_tied_endpoints": 1
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 13,
+          "sourceKm": 6.718641200690687,
+          "samples": 276,
+          "originalStatusCounts": {
+            "no_cached_chain": 13
+          },
+          "originalExhaustiveRecords": 13,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "no_declared_role_chain": 13
+          },
+          "roleScopedExhaustiveRecords": 13,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 252,
+          "sourceKm": 233.75975471507826,
+          "samples": 9612,
+          "originalStatusCounts": {
+            "no_cached_chain": 89,
+            "unresolved_without_candidates": 163
+          },
+          "originalExhaustiveRecords": 89,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "no_declared_role_chain": 89,
+            "unresolved_in_role_without_candidates": 163
+          },
+          "roleScopedExhaustiveRecords": 89,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 255,
+          "unresolvedInRoleIncidences": 1482,
+          "uniqueOutOfRolePublisherIds": 78,
+          "uniqueUnresolvedInRolePublisherIds": 337,
+          "outOfRoleReasonIncidences": {
+            "unsupported_level_rules": 67,
+            "unsupported_road_role": 255
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "endpoint_not_near_own_samples": 469,
+            "unsupported_level_rules": 987,
+            "outside_window_endpoint": 62,
+            "nonprogressing_or_tied_endpoints": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-05",
+      "cachedRows": 6630,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 34,
+        "sourceKm": 50.93523084685845,
+        "samples": 2076,
+        "originalStatusCounts": {
+          "unresolved_without_candidates": 34
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unresolved_in_role_without_candidates": 34
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 4,
+        "unresolvedInRoleIncidences": 252,
+        "uniqueOutOfRolePublisherIds": 2,
+        "uniqueUnresolvedInRolePublisherIds": 66,
+        "outOfRoleReasonIncidences": {
+          "unsupported_road_role": 4
+        },
+        "unresolvedInRoleReasonIncidences": {
+          "outside_window_endpoint": 15,
+          "unsupported_level_rules": 80,
+          "endpoint_not_near_own_samples": 168
+        }
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 34,
+          "sourceKm": 50.93523084685845,
+          "samples": 2076,
+          "originalStatusCounts": {
+            "unresolved_without_candidates": 34
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unresolved_in_role_without_candidates": 34
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 4,
+          "unresolvedInRoleIncidences": 252,
+          "uniqueOutOfRolePublisherIds": 2,
+          "uniqueUnresolvedInRolePublisherIds": 66,
+          "outOfRoleReasonIncidences": {
+            "unsupported_road_role": 4
+          },
+          "unresolvedInRoleReasonIncidences": {
+            "outside_window_endpoint": 15,
+            "unsupported_level_rules": 80,
+            "endpoint_not_near_own_samples": 168
+          }
+        }
+      }
+    },
+    {
+      "id": "origin-06",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 147,
+        "sourceKm": 158.8901594169742,
+        "samples": 6532,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 147
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 147
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 69,
+          "sourceKm": 34.37295451047214,
+          "samples": 1425,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 69
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 69
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 78,
+          "sourceKm": 124.51720490650207,
+          "samples": 5107,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 78
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 78
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-07",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 73,
+        "sourceKm": 79.29274798222865,
+        "samples": 3361,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 73
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 73
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 73,
+          "sourceKm": 79.29274798222865,
+          "samples": 3361,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 73
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 73
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-08",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 87,
+        "sourceKm": 91.9034068216536,
+        "samples": 3828,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 87
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 87
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 87,
+          "sourceKm": 91.9034068216536,
+          "samples": 3828,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 87
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 87
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-09",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 32,
+        "sourceKm": 28.186721753282622,
+        "samples": 1148,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 32
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 32
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 26,
+          "sourceKm": 25.743396297657675,
+          "samples": 1047,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 26
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 26
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 6,
+          "sourceKm": 2.443325455624948,
+          "samples": 101,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 6
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 6
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-10",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 16,
+        "sourceKm": 16.33890174760004,
+        "samples": 684,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 16
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 16
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 16,
+          "sourceKm": 16.33890174760004,
+          "samples": 684,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 16
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 16
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-11",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 10,
+        "sourceKm": 18.40802799179741,
+        "samples": 744,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 10
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 10
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 10,
+          "sourceKm": 18.40802799179741,
+          "samples": 744,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 10
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 10
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-12",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 30,
+        "sourceKm": 38.434690363836516,
+        "samples": 1551,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 30
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 30
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 30,
+          "sourceKm": 38.434690363836516,
+          "samples": 1551,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 30
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 30
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-13",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 21,
+        "sourceKm": 32.382406888317796,
+        "samples": 1320,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 21
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 21
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 21,
+          "sourceKm": 32.382406888317796,
+          "samples": 1320,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 21
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 21
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 0,
+          "sourceKm": 0.0,
+          "samples": 0,
+          "originalStatusCounts": {},
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {},
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-14",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 159,
+        "sourceKm": 112.99507804282223,
+        "samples": 4654,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 159
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 159
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 108,
+          "sourceKm": 65.23031870646925,
+          "samples": 2690,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 108
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 108
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 51,
+          "sourceKm": 47.76475933635299,
+          "samples": 1964,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 51
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 51
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-15",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 62,
+        "sourceKm": 63.696489159807115,
+        "samples": 2585,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 62
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 62
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 38,
+          "sourceKm": 37.13659306143445,
+          "samples": 1511,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 38
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 38
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 24,
+          "sourceKm": 26.559896098372665,
+          "samples": 1074,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 24
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 24
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-16",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 89,
+        "sourceKm": 58.492425697329004,
+        "samples": 2427,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 89
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 89
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 57,
+          "sourceKm": 27.671395783706526,
+          "samples": 1158,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 57
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 57
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 32,
+          "sourceKm": 30.821029913622475,
+          "samples": 1269,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 32
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 32
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-17",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 344,
+        "sourceKm": 282.02342923214917,
+        "samples": 11572,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 344
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 344
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 194,
+          "sourceKm": 115.16309071641028,
+          "samples": 4727,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 194
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 194
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 150,
+          "sourceKm": 166.8603385157389,
+          "samples": 6845,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 150
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 150
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-18",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 237,
+        "sourceKm": 204.3654456865458,
+        "samples": 8467,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 237
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 237
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 136,
+          "sourceKm": 99.44946687565265,
+          "samples": 4142,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 136
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 136
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 101,
+          "sourceKm": 104.91597881089315,
+          "samples": 4325,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 101
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 101
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-19",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 192,
+        "sourceKm": 146.0739072520906,
+        "samples": 6006,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 192
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 192
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 81,
+          "sourceKm": 48.222720429408696,
+          "samples": 1975,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 81
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 81
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 111,
+          "sourceKm": 97.8511868226819,
+          "samples": 4031,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 111
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 111
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    },
+    {
+      "id": "origin-20",
+      "cachedRows": 0,
+      "sourceStatus": "incomplete_after_capture_stop",
+      "totals": {
+        "arcCount": 281,
+        "sourceKm": 133.1094954495215,
+        "samples": 5540,
+        "originalStatusCounts": {
+          "unmeasured_empty_cache": 281
+        },
+        "originalExhaustiveRecords": 0,
+        "originalCandidateChains": 0,
+        "originalPositiveRecords": 0,
+        "originalCappedRecords": 0,
+        "baselineProvisionalEligibleKm": 0.0,
+        "roleScopedStatusCounts": {
+          "unmeasured_empty_cache": 281
+        },
+        "roleScopedExhaustiveRecords": 0,
+        "newlyExhaustiveCandidateRecords": 0,
+        "newlyExhaustiveCandidateSourceKm": 0.0,
+        "declaredOutOfRoleIncidences": 0,
+        "unresolvedInRoleIncidences": 0,
+        "uniqueOutOfRolePublisherIds": 0,
+        "uniqueUnresolvedInRolePublisherIds": 0,
+        "outOfRoleReasonIncidences": {},
+        "unresolvedInRoleReasonIncidences": {}
+      },
+      "sourceClassesKph": {
+        "85": {
+          "arcCount": 252,
+          "sourceKm": 110.75862412506055,
+          "samples": 4614,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 252
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 252
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        },
+        "105": {
+          "arcCount": 29,
+          "sourceKm": 22.350871324460947,
+          "samples": 926,
+          "originalStatusCounts": {
+            "unmeasured_empty_cache": 29
+          },
+          "originalExhaustiveRecords": 0,
+          "originalCandidateChains": 0,
+          "originalPositiveRecords": 0,
+          "originalCappedRecords": 0,
+          "baselineProvisionalEligibleKm": 0.0,
+          "roleScopedStatusCounts": {
+            "unmeasured_empty_cache": 29
+          },
+          "roleScopedExhaustiveRecords": 0,
+          "newlyExhaustiveCandidateRecords": 0,
+          "newlyExhaustiveCandidateSourceKm": 0.0,
+          "declaredOutOfRoleIncidences": 0,
+          "unresolvedInRoleIncidences": 0,
+          "uniqueOutOfRolePublisherIds": 0,
+          "uniqueUnresolvedInRolePublisherIds": 0,
+          "outOfRoleReasonIncidences": {},
+          "unresolvedInRoleReasonIncidences": {}
+        }
+      }
+    }
+  ],
+  "reportingHypothesisSupported": false,
+  "publisherGeometryKm": {
+    "origin-00": 0.0,
+    "origin-01": 1346.5941263618608,
+    "origin-02": 1261.1934750747105,
+    "origin-03": 424.83761625177914,
+    "origin-04": 2385.5958986733413,
+    "origin-05": 929.2850925089898,
+    "origin-06": 0.0,
+    "origin-07": 0.0,
+    "origin-08": 0.0,
+    "origin-09": 0.0,
+    "origin-10": 0.0,
+    "origin-11": 0.0,
+    "origin-12": 0.0,
+    "origin-13": 0.0,
+    "origin-14": 0.0,
+    "origin-15": 0.0,
+    "origin-16": 0.0,
+    "origin-17": 0.0,
+    "origin-18": 0.0,
+    "origin-19": 0.0,
+    "origin-20": 0.0
+  },
+  "completedSourceWindows": 0,
+  "originalFeasibilityQualified": false,
+  "matcherEnumerationsPerformed": 0,
+  "networkRequests": 0,
+  "routingQueries": 0,
+  "scope": "Separate declared-role reporting fields only; all original chain fields/candidates/statuses preserved. All21 source windows incomplete. Scoped exhaustiveness is neither physical/global uniqueness nor access/usable-speed/ETA evidence."
+}

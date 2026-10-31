@@ -1,0 +1,7 @@
+{
+  "executionPlanSha256": "14ce73ea4e2008cb2f87cd21a3bf3d75a4cf5745af7fc00dc8d5649530200324",
+  "reason": "InstalledTypeScript6 rejects a file-list invocation when tsconfig exists unless --ignoreConfig is explicit. Original invocation failed before checking code (TS5112); log preserved.",
+  "correctedCommand": "npx tsc --ignoreConfig --noEmit --module esnext --target es2022 --moduleResolution bundler --skipLibCheck --strict --types node scripts/compare-backbone-routing.ts",
+  "candidateDataSemanticsCodeAndGatesChanged": false,
+  "status": "Frozen before benchmark; explicit flags otherwise unchanged"
+}

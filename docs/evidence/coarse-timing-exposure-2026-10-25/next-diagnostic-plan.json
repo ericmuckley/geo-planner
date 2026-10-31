@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "status": "Next saved-distance diagnostic specification; exact tool/formula/proof dependencies and commands must freeze before execution",
+  "inputs": {
+    "docs/evidence/coarse-timing-exposure-2026-10-25/report.json": "cdc5f02cd05c7a7516aa1f025f1ecaaf62e3ebb3eafed9f602dfde568cfd76b6",
+    "docs/evidence/coarse-timing-exposure-2026-10-25/analysis.json": "54f5568c3d6467a6844078d28fd5829471d8b3e25eff251d9eaa6f7bfe876575",
+    "docs/evidence/coarse-timing-exposure-2026-10-25/plan.json": "64e35ee018406147d7123950213875fbd2acb84d466c4fdd23643da3844c087a",
+    "docs/evidence/coarse-road-time-control-2026-10-25/report.json": "1989a55ba20197d381dbde5f43e3c37a298439c51132f9d3bda16ba7c430f3e8",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/report.json": "753faba8fa2ee78a862f2069d06b3a545b4f5a4d13ca3eef8dae7192d2951bb4",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-report.json": "1bfa242bb3f9d9e12a4dbb6f4fc93ca8a5562ddd5c7ab561790eae35b8c6357f",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-edge-audit.json.gz": "b24f1fa005109e2b535bd5a956d1a456ae6e0bc83d90dfb7cad2edd119bca845",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd",
+    "src/server/backbone-routing.ts": "aa2b54c707b8bc78959bd336ebe1152d168988cf27e856caa89bf9198641ae4a",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "src/server/backbone-cost.ts": "2057f6f41171b54cb48398f9ed4a6b7126b46676331688b655aebc3d424d15e7"
+  },
+  "question": "Can saved length budgets distinguish distance differences from timing assumptions among opposite signed residuals, without inventing full geometry?",
+  "cases": 83,
+  "sensitivities": 35,
+  "method": [
+    "Use the exact captured unbuffered paths, detailed Census cumulative source lengths and selected base source-road/connector proofs. Sum traveled source lengths per occurrence; do not replace them with simplified source chords or base representative chords, or deduplicate revisited roads.",
+    "Reconcile every road/source/class/connector/rounding time against existing saved controls before deriving distance. For local/transfer steps, use captured state coordinates and unchanged distance/pricing formulas; separately account for quantization and any minimum transfer charge.",
+    "Mixed origin/destination attachment geometry is unresolved. Derive explicit conservative distance bounds from the exact current eligible attachment/pricing semantics, or keep an unbounded/missing ledger if the available record does not justify a bound. Do not use paid time as exact distance, invent a source path or assume the same physical attachment. No route search.",
+    "Compare supported source/local/transfer/attachment distance intervals with saved full ORS decoded-polyline kilometers. Keep distance-computation conventions and provider profile/source dates explicit; geometric distance compatibility does not imply route identity, correct speed, legal access or ETA truth.",
+    "Retain all 83/35 and the same all/frontier/original/regional, query-budget/frontier-budget, old/current residual-sign, new/persistent miss and original individual-regression cohorts. Report full intervals, compatibility counts and ranges, with missing/unbounded/uncertain cases in denominators. No tuned threshold, speed fitting, factor sweep or new prediction.",
+    "Conclude with one supported generic model direction or the exact remaining provenance gap. A timing or topology candidate must be specified/frozen/evaluated separately under all original gates."
+  ],
+  "ordering": [
+    "Read-only saved-proof checks",
+    "Inspect unchanged formulas and freeze exact distance-bound derivation, tool/dependencies/inputs/commands and fresh outputs",
+    "Synthetic checks for source repeats, connector/rounding and endpoint interval cases",
+    "Compute one saved-output ledger and independently audit it",
+    "Document evidence-backed direction or specific remaining gap; no candidate in this diagnostic"
+  ],
+  "pass": "All 83/35 IDs remain; every exact length has recorded source provenance, every bound is justified by existing pricing/attachment semantics, all gaps and cohorts reconcile independently; no routing/geometry identity claim or fitted correction.",
+  "onFailure": "Preserve failed outputs and all planned IDs. Stop; no substitute case, new data, factor or active switch.",
+  "prohibited": [
+    "new route/field/contour",
+    "model loading solely to run searches",
+    "source producer/download",
+    "provider/env/key/DB input",
+    "case/region/coordinate/horizon-specific routing exception",
+    "fitted cutoff/speed or policy factor",
+    "runtime/config/dependency change",
+    "commit/push/deploy"
+  ],
+  "scope": "Descriptive saved development evidence. 35 older sensitivity records are retained; no new provider comparison is implied where their saved distance semantics are insufficient. ORS recommended fallback remains explicit. No national/traffic/area/holdout or app/cloud qualification."
+}

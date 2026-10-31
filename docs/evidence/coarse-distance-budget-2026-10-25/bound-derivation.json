@@ -1,0 +1,18 @@
+{
+  "scope": "Recorded unbuffered modeled walk-weight lengths. Mixed attachments remain unidentified; no geometric road identity or physical network/ETA claim.",
+  "distanceConvention": "Earth diameter 12742 km, spherical haversine. Complete source lengths retain saved original cumulative-km weights per occurrence. Base source and connector lengths retain saved selected proofs. Local/transfer distances use captured states because their model explicitly prices straight segments.",
+  "timeConvention": "Minutes, upward decisecond quantum 1/600 minute; source split costs preserve original rounding rather than independently rounding each split. Transfer charge is max(1/600, ceil(local25_minutes*600)/600); local steps unrounded.",
+  "endpointBound": {
+    "lowerKm": "0, no inferred geometric attachment or straight-line lower bound",
+    "upperKm": "paidMinutes * 105 / 60 for each captured endpoint",
+    "justification": [
+      "Kept road visits validate speedKph <=105 in coarse-data.server.ts; local/road-access/visit transfer movement is priced at local25.",
+      "Frozen geometry plan sources.speeds has S1100=105, S1200=85. Prior sealed full-cost controls verify arcMinutes >= (arcRoadKm / classSpeed)*60 before the allowance.",
+      "sourceMinutes is max(arcMinutes*(partialKm/arcRoadKm), endpointChord/classSpeed*60); it cannot undercharge weighted partial source distance.",
+      "For every eligible selected endpoint attachment, raw paid time >= (sum modeled movement distances)/105*60. Ceil only adds time, so distance <= paidMinutes*105/60. No positive distance is inferred from a positive rounded charge.",
+      "All calculations hold the unbuffered recorded path. New-path lengths are not recomputed even in current-residual cohorts."
+    ]
+  },
+  "comparison": "Compare supported model interval with saved full decoded ORS polyline km. Classify recorded-model-shorter / recorded-model-longer / recorded-length-intervals-overlap at numerical 1e-8 km only. This tolerance is not a physical/model/provider uncertainty allowance; no real route-length equality, road identity or access claim.",
+  "missingPolicy": "If an exact proof, coordinate/pricing check or endpoint ceiling cannot be justified, preserve failure and all planned IDs; do not silently emit an interval or replace/drop a case."
+}

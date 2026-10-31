@@ -1,0 +1,25 @@
+{
+  "status": "compiled_delta_controls_pending",
+  "artifactSha256": "efe338cabf78035b93b936afb623741162e376df8451e5fede8590bbf724dc23",
+  "artifactBytes": 201016,
+  "sourceSha256": "42556e05ffc29fdc2facbaa2d3dccc70b24751159f097a1975242b8eba05cb3c",
+  "flags": [
+    "-std=c++17",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fvisibility=hidden",
+    "-static-libstdc++",
+    "-static-libgcc",
+    "/work/delta.cpp",
+    "-Wl,-z,defs",
+    "-Wl,--exclude-libs,ALL",
+    "-o",
+    "/work/delta.so"
+  ],
+  "needed": [
+    "libm.so.6",
+    "libc.so.6"
+  ],
+  "elfSha256": "c258bca08ee74116a186b46491e78014ead76bc1979d8351c2d23f07dce81c69"
+}

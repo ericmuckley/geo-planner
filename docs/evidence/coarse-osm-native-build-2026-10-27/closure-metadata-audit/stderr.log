@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+    assert row["kind"]=="directory" and changed==["size"],(path,row,host[path])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('etc/gshadow', {'path': 'etc/gshadow', 'mode': 0, 'size': 327, 'kind': 'file'}, {'path': 'etc/gshadow', 'mode': 384, 'size': 327, 'kind': 'file'})

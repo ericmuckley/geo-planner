@@ -1,0 +1,62 @@
+[
+  {
+    "guard": "Source identity and format",
+    "nativeDesign": "Keep the frozen full SHA/MD5/framing/header/feature/granularity/snapshot and immutable-file checks. Decoder EOF alone is insufficient.",
+    "requiredControls": "Drift, truncation, unsupported precision/compression/features; failure never EOF.",
+    "implemented": false
+  },
+  {
+    "guard": "Identity/order/counters",
+    "nativeDesign": "Native receipt counters before validation; positive signed64 IDs/version, strict typed order, duplicate rejection, all per-type/total quotas. Do not filter before validation.",
+    "requiredControls": "Zero/negative/overflow/duplicate IDs, typed collisions, exact-cap/sentinel/partial counters.",
+    "implemented": false
+  },
+  {
+    "guard": "Timestamp and visibility",
+    "nativeDesign": "Same complete native timestamp/calendar/whole-second/UTC/shape/snapshot/visible rules as the frozen projector and validator; no rejection of valid epoch0 merely because a native Timestamp bool is false.",
+    "requiredControls": "Calendar/year/epoch/future/zone/precision/deletion boundaries against reference outcomes.",
+    "implemented": false
+  },
+  {
+    "guard": "Coordinates",
+    "nativeDesign": "Exact native signed XY32 lattice and range, IEEE binary64 division in round-to-nearest, no fast-math/rounding; compare bits to reference. Preserve original framing precision rejection.",
+    "requiredControls": "Extrema, signs, zero, subprecision, roundtrip bits, source/index drift, invalid locations.",
+    "implemented": false
+  },
+  {
+    "guard": "Strings/tags",
+    "nativeDesign": "Validate accessed UTF-8 fields exactly as native-to-Python conversion; reject duplicate tag keys. Same incremental native-view copy charges; preserve all raw keys/values, not user/uid fields that old projection never copied.",
+    "requiredControls": "Invalid UTF-8, controls, quote/backslash, BMP/non-BMP, duplicate keys, copy limits.",
+    "implemented": false
+  },
+  {
+    "guard": "Canonical byte cap",
+    "nativeDesign": "Count exact canonical ASCII-escaped string/key/ref/member/integer/timestamp syntax natively. For node floats use a proven32-byte upper bound per finite float; accept safely below cap, reject safely above the lower bound, send only ambiguous near-limit nodes to the frozen Python canonical-size check via a bounded integer-XY frame. No approximate reject or C++ float formatting substitute.",
+    "requiredControls": "cap-1/cap/cap+1, Unicode escape sizes, float width/exponent/negative zero; reject if fallback unavailable or callback raises.",
+    "implemented": false
+  },
+  {
+    "guard": "References and members",
+    "nativeDesign": "Positive ordered way references (at least2); valid typed positive members/roles; retain unresolved outside references exactly.",
+    "requiredControls": "Invalid/short/missing refs, typed collisions, unresolved restriction members, no silent missing-location ignore.",
+    "implemented": false
+  },
+  {
+    "guard": "Selection and complete objects",
+    "nativeDesign": "Generic unchanged21 windows, crossing/outside-node closure and relevant restrictions; separate native audit geometry/membership; retained raw/output/occurrence/heap caps unchanged.",
+    "requiredControls": "Omit all or individual primary roads/nodes/restrictions, extra hints, wrong membership/tags/output, distinct audit storage.",
+    "implemented": false
+  },
+  {
+    "guard": "Pass drift and output",
+    "nativeDesign": "Acquired-file SHA/immutable checks plus lossless per-pass semantic seals, counts and independently rebuilt block equality; selected canonical JSON/geometry hashes stay byte-identical to reference.",
+    "requiredControls": "Unselected metadata drift, selected raw drift, EOF/count/semantic hash mismatch; diagnostic seal never called the old JSON hash.",
+    "implemented": false
+  },
+  {
+    "guard": "ABI and lifecycle",
+    "nativeDesign": "C ABI primitives/length-prefixed buffers only; exceptions caught, callback lifetimes fixed, callback errors stop. Same worker cgroup/time/storage/process ownership controls; no extra container resources during execution.",
+    "requiredControls": "Wrong ABI/endianness/length, callback exception/GC, process timeout/OOM/partial files, unrelated cleanup refusal.",
+    "implemented": false
+  }
+]

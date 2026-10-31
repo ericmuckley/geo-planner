@@ -1,0 +1,37 @@
+{
+  "scope": "Planning evidence only; recorded after draft proof and document checks, before sealing this new report.",
+  "planningProofDefaultDraft": "passed",
+  "planningProofDraftWithThreeLocalHeaders": "passed",
+  "priorSampleDefaultProof": {
+    "passed": true,
+    "recordFiles": 48,
+    "producerFiles": 259,
+    "priorSealedRuns": 51,
+    "all67000FieldsAnd65000CoordinatesVerified": true,
+    "nationalRunAdmitted": false
+  },
+  "documentationLinks": {
+    "pages": 51,
+    "relativeLinks": 1265,
+    "errors": [],
+    "checker": "Temporary /tmp/check-osm-country-plan-doc-links.py; inspected all relative targets and referenced Markdown anchors in current pages and linked reports."
+  },
+  "diffWhitespace": "git diff --check passed",
+  "newPlanningRecords": "JSON parse, Python AST, final newline and trailing-whitespace checks passed",
+  "activeV9Sha256": "28271c809a04cdfab41ad735ad66b29e3875179b617198b7b1d4490533439bf6",
+  "draftCorrections": "Before sealing, corrected an auditor list-cardinality assertion and a new link to a nonexistent recovery anchor. No sealed producer, prior evidence, measurement or runtime result changed.",
+  "notRun": [
+    "national source read/hash/decode",
+    "Docker/compiler/native execution",
+    "source/index/extraction producers",
+    "provider/DB calls",
+    "npm checks/builds: no application implementation changed"
+  ],
+  "stillUnqualified": [
+    "new helper/ABI/controls",
+    "national metadata/maximumID/logical index bytes",
+    "national allocated storage/memory/time/mixed work/lookup distribution",
+    "full road extraction or model improvement"
+  ],
+  "postSealRequirement": "Run final default and --local-headers proofs after creating sha256.json; these commands are read-only and do not replay producers."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "Post-result independent arithmetic audit, frozen before audit execution; no new model experiment",
+  "inputs": {
+    "docs/evidence/coarse-road-time-control-2026-10-25/report.json": "1989a55ba20197d381dbde5f43e3c37a298439c51132f9d3bda16ba7c430f3e8",
+    "docs/evidence/coarse-road-time-control-2026-10-25/edge-audit.json.gz": "baf28539f10f7909a2d6dcf4def58c6c62342ffe6c37b35dc8fbf484ea596aba",
+    "docs/evidence/coarse-road-time-control-2026-10-25/plan.json": "674b94d1b822dbbd670fa804acf438aa377b84f1f4632d031b40e15ddf02a65d",
+    "docs/evidence/coarse-road-time-control-2026-10-25/audit.py": "4f6455f27b3fa746f35d7ec833d4574437491fe9b7955441ae79400857e8db09",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/paths.json.gz": "7952fd20bf98907027b10cdeabae0994e16611ca28c554c2d24c6f08208decfd",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/comparison.json": "480ab0ce55b377fa784267c7b18e445d0f6ffd8493f0b745fb53e50529f0ed15"
+  },
+  "command": "python3 -B docs/evidence/coarse-road-time-control-2026-10-25/audit.py",
+  "output": "docs/evidence/coarse-road-time-control-2026-10-25/analysis.json",
+  "method": "Recompute captured identities, all 249 component totals, prefix cap/bound ledger, direct-minus-path-choice and road/rounding/endpoint equations and all predeclared cohort summaries from saved outputs. No model load or search."
+}

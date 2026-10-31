@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "status": "Next diagnostic proposal only; no new candidate or route search authorized by this recipe",
+  "inputs": {
+    "docs/evidence/coarse-backbone-routing-2026-10-25/comparison.json": "f459ecea45a2dc914c9a26971f36c0d0285bb1473e5c1801de9c093689373980",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/analysis.json": "5d3d648e7663a730b17a262e62936abd9b582527dc0002166a8bad14094e6ca8",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "docs/evidence/coarse-benchmark-reference-2026-10-24/comparison.json": "d79ade80d4cc3834cac7cdc7d6cb0810de40ef9588801f6a8a8688de8fc6d48e",
+    "docs/evidence/coarse-path-features-2026-10-24/comparison.json": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd"
+  },
+  "question": "Why do all83 predictions get faster while ORS errors worsen and older Valhalla sensitivity improves? Distinguish route-choice/source-incidence/transfer behavior from reference-provider differences before another timing policy.",
+  "method": "Freeze an exact separately versioned offline diagnostic producer/commands and input route bindings first. Use all83 saved matched ORS route geometries and35 existing Valhalla sensitivities, never new routing queries. Inventory provider profile/options/source-date/snap/distance metadata and denominators. Read captured candidate full-Census arc IDs through bounded indexed geometry and compare existing1km/3km corridor proximity/length shares to saved reference linework. Account for source/base-road/local/transfer cost components and major/secondary exposure without changing paths or costs.",
+  "coverage": "Candidate export retains full source-edge IDs/points and component totals; input/destination attachments combine several costs and base edges are coarse representative chords. Label those as unresolved/approximate, report accounted cost/geometry fractions, and do not claim exact full-route geometry or causal attribution. Missing saved source/reference geometry is a visible gap, never a reason to call providers.",
+  "acceptance": [
+    "All83 ORS/35 Valhalla cases, failures and provider metadata retained with explicit missing-data ledger",
+    "Every detailed source edge matches exact stored endpoint/cumulative cost/geometry bindings, all component sums and accounting fractions reconcile",
+    "One descriptive per-case and grouped report separates source-path/transfer hypotheses from provider-option/data/speed differences; correlations are not causal proof",
+    "No model search/rerun, weights/transfers/access changes, new sources/keys/env/DB/provider use or activation",
+    "Any next candidate requires a new explicit evidence-backed policy and frozen complete evaluation recipe retaining original gates; no post-result fit or threshold relaxation"
+  ],
+  "commands": "Implement and bind diagnostic tools before execution. Read-only readiness now: python3 -B docs/evidence/coarse-backbone-routing-2026-10-25/verify.py --local-assets",
+  "onFailure": "Preserve gaps/failures. Do not rerun failed candidate, retune source speeds/geometry or replace benchmark cases."
+}

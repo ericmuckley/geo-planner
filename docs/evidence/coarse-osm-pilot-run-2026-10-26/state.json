@@ -1,0 +1,135 @@
+{
+  "status": "stopped",
+  "stage": "status",
+  "windows": [
+    {
+      "id": "origin-00",
+      "status": "incomplete_after_stop"
+    },
+    {
+      "id": "origin-01",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-02",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-03",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-04",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-05",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-06",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-07",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-08",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-09",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-10",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-11",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-12",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-13",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-14",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-15",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-16",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-17",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-18",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-19",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "id": "origin-20",
+      "status": "unmeasured_after_stop"
+    }
+  ],
+  "http": [
+    {
+      "number": 1,
+      "windowId": "origin-00",
+      "kind": "status",
+      "method": "GET",
+      "url": "https://overpass-api.de/api/status",
+      "formBodySha256": null,
+      "status": 502,
+      "receivedBodyBytes": 534,
+      "bodyFile": "http/00001.bin",
+      "outcome": "failed",
+      "startedElapsedSeconds": 0.004130083019845188,
+      "absoluteTimeoutSeconds": 10,
+      "bodyCounterScope": "Payload bytes returned by read1/IncompleteRead.partial; excludes headers/TCP/TLS/kernel buffering.",
+      "headers": {
+        "content-type": "text/plain",
+        "content-length": "534"
+      },
+      "errorType": "PilotError",
+      "error": "HTTP refusal/status 502",
+      "bodySha256": "8084e21e11df846a2e41bb93ddaf66961aa2ef71e9a9fc1f46debc960b303042",
+      "finishedElapsedSeconds": 0.5865872079739347
+    }
+  ],
+  "snapshotUtc": "2026-10-21T00:00:00Z",
+  "sourceGenerator": null,
+  "routingProviderRequests": 0,
+  "sourceAdapterImplemented": false,
+  "originalFeasibilityQualified": false,
+  "budget": {
+    "receivedHttpBodyBytes": 534,
+    "httpAttempts": 1,
+    "uniqueNormalizedElements": 0,
+    "validatedElementOccurrences": 0,
+    "normalizedExtractBytes": 0,
+    "elapsedSeconds": 0.5881022500107065,
+    "accountedWorkingBytes": 14911,
+    "initialWorkingBytes": 14377,
+    "reservedTmpBytes": 67108864,
+    "reservedStateDriverBytes": 8388608,
+    "stopped": true
+  },
+  "errorType": "PilotError",
+  "error": "HTTP refusal/status 502"
+}

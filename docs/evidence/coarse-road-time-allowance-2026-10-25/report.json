@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "648c731",
+  "status": "One10% source-road allowance candidate rejected under six frozen gates; v9 unchanged",
+  "policySha256": "4446789e20dab8e2e5d64ef74cba431dff8123977736f86a412c17f8e329b4c1",
+  "sourceRoadTimeFactor": 1.1,
+  "allCurrentSourceBaseAnd166SelectedEndpointCostsReproduced": true,
+  "onlyTwoCostPayloadsChanged": true,
+  "allOther27PayloadsExact": true,
+  "all83FiniteAnd166ComponentSums": true,
+  "all35OlderShaded": true,
+  "allPointTimesNoFasterThanUnbufferedBackbone": true,
+  "independentGateAndComponentAudit": true,
+  "accuracyGatesPassed": false,
+  "failedGates": [
+    "horizonP90",
+    "frontierWorstRegression",
+    "olderWorstRegression",
+    "frontierDefiniteClassificationErrors",
+    "frontierMissed",
+    "twelveHourMissed"
+  ],
+  "passedGates": [
+    "overallMean",
+    "frontierMean",
+    "originalMean",
+    "regionalMean",
+    "frontierP90",
+    "horizonMeans",
+    "all83Paired",
+    "all166PathSums",
+    "all35StillShaded",
+    "frontierMedian",
+    "overallP90NoWorse",
+    "originalP90NoWorse",
+    "regionalP90NoWorse",
+    "valhallaOriginalNoWorse",
+    "valhallaRegionalNoWorse"
+  ],
+  "overallMaeBeforeAfterMinutes": [
+    29.257418754386766,
+    24.482463364947098
+  ],
+  "meanImprovementFraction": 0.1632049440015526,
+  "frontierMaeBeforeAfterMinutes": [
+    44.629349342834296,
+    37.28482067180083
+  ],
+  "classificationsBeforeAfter": {
+    "baseline": {
+      "correct": 67,
+      "falseReachable": 11,
+      "missedReachable": 2,
+      "ambiguous": 3
+    },
+    "candidate": {
+      "correct": 67,
+      "falseReachable": 5,
+      "missedReachable": 8,
+      "ambiguous": 3
+    }
+  },
+  "worstRegressions": {
+    "frontier": 66.57757783184627,
+    "older": 7.584459404360672
+  },
+  "diagnostic900MinuteOriginPreparationAndSearchMsRange": [
+    2621.7044589999996,
+    22815.558333
+  ],
+  "software": {
+    "newCostFixtures": 8,
+    "biomeFiles": 194,
+    "appTypecheck": true,
+    "strictRunnerTypecheck": true,
+    "ordinaryBuild": true
+  },
+  "candidateFullPackagePhysicalMemoryApiVisualCloudQualificationRun": false,
+  "providerRequests": 0,
+  "sourceDownloads": 0,
+  "databaseWrites": 0,
+  "envKeyDbInput": false,
+  "runtimeChanged": false,
+  "commitPushDeployment": false,
+  "scope": "Observed83/35 development comparison; average gain does not override missed-frontier/tail/individual failures. No second factor, retuning or activation."
+}

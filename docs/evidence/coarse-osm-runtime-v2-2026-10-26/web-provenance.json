@@ -1,0 +1,16 @@
+{
+  "scope": "External web lookup records; tool-mediated wire counts are unknown and are not part of the measured Linux GET ledger.",
+  "debianDownloadPage": {
+    "url": "https://packages.debian.org/bookworm/arm64/libexpat1/download",
+    "observed": "2.5.0-1+deb12u4 arm64,89164 bytes,SHA2565333bc2f751edadaceff1dd117d1e29be76b78a3a7bf139021bb9d07e6e2cae5"
+  },
+  "debianDetailsPage": {
+    "url": "https://packages.debian.org/bookworm/arm64/libexpat1",
+    "observed": "Different cached version2.5.0-1+deb12u5; declared libc6>=2.36, unsuitable for target2.34; not selected."
+  },
+  "binaryLinkProbe": {
+    "url": "https://security.debian.org/debian-security/pool/updates/main/e/expat/libexpat1_2.5.0-1%2Bdeb12u4_arm64.deb",
+    "outcome": "Web tool reported Cache miss/internal error; no package binary content returned. No peer HTTP response/transfer measurement; not a successful package acquisition. Not repeated."
+  },
+  "ubuntuPages": "Several architecture-detail/download URLs inaccessible through web tool; official package-site search found a declared libc>=2.25 candidate. Frozen two-GET Linux index inspection subsequently supplied the selected exact package pin, without binary acquisition."
+}

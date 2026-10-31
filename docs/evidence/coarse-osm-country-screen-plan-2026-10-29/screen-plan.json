@@ -1,0 +1,333 @@
+{
+  "format": "geo-planner-country-screen-proposal-v1",
+  "status": "planning_complete_implementation_and_execution_not_admitted",
+  "decision": "Implement and synthetically qualify a new continuous whole-source summary helper and bounded eight-shard lookup probe before freezing any national execution recipe.",
+  "thisStage": {
+    "nationalSourceRead": false,
+    "compilerOrNativeExecution": false,
+    "indexProduction": false,
+    "networkRequests": 0,
+    "modelChanged": false
+  },
+  "source": {
+    "path": "data/coarse-quality/us-osm-input-v3/download/http/001.bin",
+    "bytes": 12229320016,
+    "sha256": "1b127070917e2f4e5d9e778e2412bb44d24116519cf084ab72fe13e679eb11ff",
+    "md5": "c5abaec55e724255277f22fb97941e5a",
+    "publisherState": "2026-10-25T21:21:21Z",
+    "identityProvenance": "Existing inventory/data-run records; not rehashed or decoded for this plan",
+    "countsPerPass": {
+      "node": 1606229364,
+      "way": 162688797,
+      "relation": 1624265
+    },
+    "acceptedObjectsPerPass": 1770542426,
+    "acceptedObjectsTwoPasses": 3541084852,
+    "capFailure": "Count received rejected objects and the first cap+1 sentinel before stopping; undecoded objects remain unknown. No retry or partial-EOF claim.",
+    "formatLimits": {
+      "blobHeaderBytesExclusiveMax": 65536,
+      "decodedBlobBytesExclusiveMax": 33554432
+    }
+  },
+  "implementation": {
+    "newFiles": [
+      "scripts/coarse_osm_country_screen_v1.cpp",
+      "scripts/coarse_osm_country_screen_v1.py",
+      "scripts/coarse_osm_country_screen_v1_test.py",
+      "scripts/run_osm_country_screen_v1.py"
+    ],
+    "oldLimitsUnchanged": {
+      "profileInputBytes": 16777216,
+      "projectorAggregateObjects": 2000000
+    },
+    "abi": "New gp_country_screen_abi/gp_country_screen_pbf/gp_country_screen_frames symbols, ABI version0x00010000. A separate library/bridge; no patching old globals, chunk resets or monkey-patching. Freeze exact structs/event tags and candidate artifact hash after compiled controls.",
+    "integers": "uint64 checked object/type/byte/ref/member/row/call/checkpoint counters, source length and bounds; positive signed63 IDs; uint32 only bounded event/frame/4096-row lengths. Python int counters aggregate both passes including failures.",
+    "modes": [
+      "summary: validate and GPF1-seal ALL objects, suppress ordinary Python node/way/relation dictionaries/JSON",
+      "full-field proof: bounded synthetic/saved-small records, compare all projected fields and semantic seal to frozen Python reference"
+    ],
+    "events": [
+      "1MiB-or-final GPF1 semantic batches, each record length checked before copying",
+      "4096-row-or-final encoded node blocks plus source block/shard ordinals, IDs, row counts, max/byte/counter summaries",
+      "exact ambiguous node canonical fallback only, <=2MiB frame, counted <=65536/pass; unavailable/refusal stops",
+      "checkpoint every65536 received objects plus final, and error receipt with no success EOF",
+      "bounded typed source-witness rows and final bounded selected-way trace; no ordinary way/relation projections in summary mode"
+    ],
+    "metadata": "Retain all original source framing/features/granularity/snapshot/visibility/identity/version/order/duplicate/calendar/UTF8/tags/copy/ref/member/XY/exact canonical cap rules before selection. Node canonical fallback uses unchanged Python canonical sizing; no approximate rejection or float-format substitute.",
+    "perObjectCaps": {
+      "canonicalAndIncrementalCopyBytes": 1048576,
+      "eventBytes": 2097152,
+      "wayReferencesBy32ByteCopyCharge": 32768,
+      "relationMembersBy128ByteMinimumCharge": 8192
+    },
+    "checkpoints": "Continuous pass state and strictly increasing typed IDs; final checkpoint/receipt only after native EOF and flush. Hard independent process watchdog covers framing, stalled native callbacks and posthash. Persist at most one progress log entry/60s, not one file/event.",
+    "reader": {
+      "metadata": "read_meta::yes",
+      "threadPool": "explicit osmium::thread::Pool(2,2) passed to Reader",
+      "workerOnlyEnvironment": {
+        "OSMIUM_MAX_INPUT_QUEUE_SIZE": "2",
+        "OSMIUM_MAX_OSMDATA_QUEUE_SIZE": "2"
+      },
+      "notAProof": "These queue settings constrain concurrency; hard4GiB cgroup plus measured memory remain necessary."
+    },
+    "sourceCodec": {
+      "rowsPerCall": 4096,
+      "encodeRowsAcrossTwoPasses": 3212458728,
+      "roundtripDecodeRowsAcrossTwoPasses": 3212458728,
+      "maxCalls": 2000000,
+      "requiredCalls": 1568584,
+      "oracle": "Frozen delta C ABI encoder/decoder, compare every decoded ID/XY directly to original native source arrays before dropping payloads. Independent Python ReferenceCodec checks synthetic/probe files separately."
+    },
+    "pythonCodecBudgets": {
+      "miniIndexAppendReplacementDecodedRows": 64000000,
+      "miniIndexCalls": 20000,
+      "lookupDecodedRows": 256000000,
+      "lookupCalls": 100000,
+      "scope": "Separate from source-object counts and C++ encode/roundtrip counters. Existing codec constructor supports explicit positive budgets, but no existing experiment is widened."
+    },
+    "sourceByteBoundary": "New file-length option and bridge accept only the bound12,229,320,016-byte national file for screen mode after preserved framing/prehash guards; synthetic mode uses explicitly smaller frozen bounds. No unchecked file-size widening in old wrappers.",
+    "counterCaps": {
+      "referencesPerPass": 5330986500096,
+      "membersPerPass": 13305978880,
+      "semanticBytesPerPass": 3713103671940456,
+      "fallbackFramesPerPass": 65536,
+      "sourceCodecCallsTwoPasses": 2000000,
+      "checkpointsPerPass": 27017,
+      "rule": "All cumulative adds checked before overflow/allocation; accepted-source caps distinct from failed received sentinel counters. Explicit source/metadata/witness/trace/event/log and storage caps apply in worker, not only host recipe."
+    },
+    "compiler": {
+      "pathInsideSavedRootfs": "/opt/rh/gcc-toolset-14/root/usr/bin/g++",
+      "versions": {
+        "GCC": "14.2.1",
+        "libosmium": "2.23.1",
+        "protozero": "1.8.2",
+        "runtimePython": "3.13.5",
+        "glibc": "2.34",
+        "zlib": "1.2.11"
+      },
+      "proposedArguments": [
+        "-std=c++17",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-fvisibility=hidden",
+        "-static-libstdc++",
+        "-static-libgcc",
+        "-pthread",
+        "-I/inputs/libosmium/include",
+        "-I/inputs/protozero/include",
+        "/work/country-screen.cpp",
+        "/work/delta.cpp",
+        "-Wl,-z,defs",
+        "-Wl,--exclude-libs,ALL",
+        "-Wl,-Bsymbolic-functions",
+        "-lz",
+        "-o",
+        "/work/country-screen.so"
+      ],
+      "scope": "Same qualified projector build flags with new source/output names; no fast-math. Freeze exact build argv, exports/ABI, source/header/rootfs hashes and target ELF/load controls before use. Link frozen delta source unchanged; no source acquisition."
+    }
+  },
+  "phases": [
+    {
+      "id": "preflight",
+      "scope": "Future run only: verify frozen code/tool/header/image/control bindings; new exclusive owned output; fresh free-space/cgroup/capability/mount checks; source exact identity. No unrelated producers or asset-proof jobs concurrently. Record host load/cache as uncontrolled. Reject existing/used recipe/output. Host binding SHA reads source once within240s, separately counted; pass framing checks MD5/SHA again. No host source hash in current planning/qualification stages."
+    },
+    {
+      "id": "pass-a",
+      "secondsMax": 3000,
+      "objectsMax": 1770542426,
+      "scope": "Full framing/decompression/pre-SHA+MD5/features/state, continuous full native validation/GPF1/normal EOF, exact block+shard+catalog byte census; write only selected mini-index shards and bounded trace/summary; full post-SHA/stable stat. All node/way/relation counts must match inventory."
+    },
+    {
+      "id": "pass-b",
+      "secondsMax": 3000,
+      "objectsMax": 1770542426,
+      "scope": "Same whole-source guards and continuous validation; independently source-build the same mini-index/global summaries/way selection. Capture requested ID/XY witness directly from source node view. Authenticate and compare each corresponding original mini-shard before exact owned rolling removal; final source/semantic/counters/directories/catalogs/trace equality required."
+    },
+    {
+      "id": "lookup",
+      "secondsMax": 300,
+      "scope": "Only after BOTH whole normal EOFs and all source/semantic/summary/probe/witness equality. Three fixed cohorts, cold-application/warm/repeat; independent source-witness bits/order/duplicates; full per-batch queried-shard checksums unchanged."
+    },
+    {
+      "id": "audit-close",
+      "scope": "Independent pure Python/reference-codec probe decode/census formula/trace selection from bounded emitted candidates and receipts, source-witness/result comparison; logical and allocated peak+IO/time/cgroup metrics; exit/OOM/cleanup independent exact-ID absence; close manifest/decision without promoting a model. Reference audit reads each retained shard once and decodes bounded blocks; report its IO separately, not as lookup authenticated-shard IO."
+    }
+  ],
+  "census": {
+    "allTypes": [
+      "received/accepted/rejected counts, strict typed ID order/unique/maxID/version/timestamp/tag/canonical byte maxima",
+      "all-field GPF1 semantic digest; total semantic/canonical/copy/ref/member bytes, references/member type totals and maximum per-object sizes",
+      "per-type first/last times and checkpoint counters; fallback and Python raw-projection counts; normal EOF/count equality"
+    ],
+    "allNodes": [
+      "each lossless4096-row block, payload/header bytes and digest; every source shard seal and global directory/catalog",
+      "exact would-be full-index logical bytes including sidecars, namespace/file count and distribution, allocation formula applied separately",
+      "positive signed63 domain; measured maximum ID must never be substituted with a sample maximum or assumed2**40"
+    ],
+    "outputCaps": {
+      "directoryBytesEachPass": 16777216,
+      "catalogJsonBytesEachPass": 4194304
+    },
+    "memory": "Keep one <=35,679,872-byte source shard to seal without storing a full national index; <=16MiB directory and <=4MiB catalog per pass. Source blocks roundtrip natively; Python handles bounded blocks/semantic batches, not per-object records.",
+    "comparison": "Byte-for-byte passA/passB global directories/catalogs/block stream seals and mini manifests, counts/maxima/semantic/trace. Same implementation in both passes is a rebuild/drift check, not an independent national metadata oracle.",
+    "nationalStorageGate": "After normal EOF compute exact full-index logical L. Conservatively use files=766 shards+3 sidecars, R=4096*files+8192*files+1MiB, I=ceil(1.5*(L+R)); require I<=24GiB. Require retainedReservations + I + ceil(1.5*(maximumShardBytes + globalDirectoryBytes + 4MiB + 3*4096))<=64GiB for the original future rolling two-pass index design. Screen output itself must separately stay<=1GiB and retained+screen<=64GiB. Report independent conservative maximum-ID varint bound from resource_arithmetic.py; passing neither proves physical national allocation nor admits extraction.",
+    "nationalTimeGate": "Each protected source pass <=3000s and worker<=7200s. This measures this screen, including metadata/mixed/seal/roundtrip/sink costs; excludes full road selection/extraction/matcher and is not a full-import forecast."
+  },
+  "probe": {
+    "sourceShardOrdinals": [
+      0,
+      109,
+      218,
+      327,
+      437,
+      546,
+      655,
+      765
+    ],
+    "selectionFormula": "floor(k*(766-1)/7), k=0..7; zero-based source-node ordinal shards of512 blocks*4096 rows. Fixed before results; no geographic inputs.",
+    "blocks": 4050,
+    "rows": 16588148,
+    "sourceToMiniMapping": "Preserve original complete block boundaries/IDs/XY/payload bytes. Renumber only mini shard/directory entries and dependent header/directory/catalog seals. Record original source ordinals and hashes beside each mini ordinal.",
+    "persistentShardsMax": 8,
+    "peakWithReplacementShards": 9,
+    "maximumShardBytes": 35679872,
+    "aggregateMiniIndexLimitBytes": 402653184,
+    "perFileLimitBytes": 67108864,
+    "directoryCatalogLimitBytes": 4194304,
+    "integrity": "Reuse frozen block-id-delta-xy32-v1 codec and V2 Reader: authenticate full immutable queried-shard snapshot every batch even on cache hit; first snapshot also full format validation; <=64 decoded cache blocks/4MiB. Old32MiB experiment index cap stays unchanged; this new recipe explicitly proposes384MiB aggregate index budget and64MiB file cap.",
+    "replacement": "Never remove original mini shard before corresponding passB shard is source-built, sealed, fully authenticated and equal; only exact owned path. Late failure closes as untrusted even if earlier mini shards were replaced. Preserve partial artifacts and all old failed indices."
+  },
+  "wayTrace": {
+    "eligibility": "Every validated highway-tagged way with2..1024 references, all positive ref IDs within the numeric first..last ranges of the eight selected source shards. This range test does NOT prove membership; missing source witness is a hard dependency failure.",
+    "selection": "Keep up to128 eligible ways with smallest (splitmix64(uint64(wayID) XOR seed),wayID,sourceWayOrdinal); bounded native heap. splitmix64 includes state increment and wraps modulo2**64, defined/tested in resource_arithmetic.py; seed0x47504c414e4e4552. No top-up, resampling or outcome selection.",
+    "minimumEligibleWays": 64,
+    "maximumSelectedWays": 128,
+    "maxReferencesEach": 1024,
+    "maxOccurrences": 131072,
+    "traceJsonBytesEachPass": 4194304,
+    "traceFields": [
+      "wayID",
+      "version",
+      "sourceWayOrdinal",
+      "priority",
+      "references in source order"
+    ],
+    "counters": "Count all highway ways, short/long/out-of-range exclusions, eligible ways, refs examined and selected occurrences; separate source metadata and numeric-range eligibility. Emit bounded selector audit: all candidate priority <= final cutoff (at most128), plus next-minimum excluded priority and totals; independent exact-selector controls remain essential. This compact audit cannot independently revalidate all national candidates.",
+    "witness": "After passA freeze union of local/spread/road queries sorted/deduplicated (<=136146 IDs), capture ID64/XY32 directly from passB source into <=8MiB typed rows+presence bitmap; every requested ID exactly once. Compare binary64 division bits and original order/duplicates after lookup. Same helper source path is not a separate pyosmium national oracle.",
+    "failure": "Fewer than64 eligible ways or missing witness: report insufficient/failure; never silently skip, replace choices or claim road-lookup coverage."
+  },
+  "lookup": {
+    "cohorts": [
+      {
+        "id": "local",
+        "queries": "Reverse first1024 source IDs in first retained shard, then append their first128 in original order",
+        "occurrences": 1152
+      },
+      {
+        "id": "spread",
+        "queries": "First ID of EVERY block of the eight retained shards, round-robin by local block ordinal then selected shard ordinal; append first128",
+        "occurrences": 4178
+      },
+      {
+        "id": "way-refs",
+        "queries": "Selected ways sorted by priority tuple, refs in source order, preserve all duplicates; contiguous batches<=65536 IDs, at most2 batches/repeat",
+        "occurrencesMax": 131072
+      }
+    ],
+    "runs": [
+      "cold-application",
+      "warm",
+      "repeat"
+    ],
+    "cacheReset": "Clear decoded cache and format_verified once before each cohort only; retain through its three runs. No OS page-cache flush or OS-cold claim.",
+    "authenticatedShardReadBytesLimit": 4294967296,
+    "authenticatedShardReadUpperBound": 3282548224,
+    "decodeRowsLimit": 256000000,
+    "maxBatchIds": 65536,
+    "decodedCacheBlocks": 64,
+    "metrics": "Record every cohort/run batch count, unique IDs/blocks/shards, cache hits/misses/evictions, authenticated-shard bytes/hash seconds, catalog/other bytes, decode calls/rows/seconds and total wall time. Measure rather than infer kernel physical IO. No per-latency threshold besides300s aggregate/4GiB shard IO.",
+    "scope": "Source-ordinal stratification and actual range-eligible highway references only; excludes most road dependencies and is not a representative national routing/lookup or accuracy distribution."
+  },
+  "resources": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "pids": 64,
+    "network": "none",
+    "capabilities": [],
+    "readOnlyRootAndInputs": true,
+    "tmpBytes": 268435456,
+    "fileBytes": 67108864,
+    "ownedWritableIncludingTmpBytes": 1073741824,
+    "filesAndDirectoriesMax": 1024,
+    "overallWorkingEnvelopeBytes": 68719476736,
+    "seconds": {
+      "eachSourcePass": 3000,
+      "lookup": 300,
+      "otherWorkerWork": 600,
+      "worker": 7200,
+      "host": 7800,
+      "hostBindingHash": 240,
+      "cleanup": 60
+    },
+    "otherWorkerAllowanceIncludes": "independent audits/catalogs/stats/resource sampling and bounded closures; no extra source scan",
+    "memoryReservationBytes": 1409286144,
+    "measurement": "Record memory.current/peak and memory.events/cgroup OOM, CPU/process IO, st_size/st_blocks live files plus namespace counts and Docker writable/tmp allocation. memory reservations and namespace reserves are proposals, not measured maxima. If required cgroup counters are unavailable, stop before source execution; no ru_maxrss substitute.",
+    "hardStop": "First source/guard/count/semantic/EOF/ABI/callback/resource/time/IO/trace/witness/equality failure stops; retain partial counters/checkpoint/errors but no successful EOF or promotion. No rerun or larger allowance to make results pass.",
+    "capacity": "Fresh host/Docker capacity includes preserved12.23GB source, old8.78GB failed index, runtime/tools/compiler closure and all prior outputs. Conservative existing reservations and new1GiB are arithmetic only; never delete old assets to pass. Fail if fresh available capacity/allocation accounting cannot establish the bound.",
+    "compilerIsolation": "Separate synthetic build/qualification stage only, using saved pinned rootfs/headers and cached runtime. Same4GiB/2CPU baseline; compiler alone narrowly SYS_CHROOT, cleared before scoped-env exec. No compiler capability or network in future screen worker."
+  },
+  "qualificationBeforeFreeze": [
+    "New C ABI layout/version/endian/size/null/buffer/checked-add failures; all type/count/source byte counters tested across2**31,2**32,near2**64 with small synthetic counter arithmetic controls, never billions of generated rows.",
+    "All existing metadata/canonical cap/fallback/ref/member/XY/framing/state/source drift/EOF/callback lifetime/reentry/cap+1/reference-rejection regressions, run in actual target Linux with zero native skips; full-field/GPF1 exact agreement to frozen Python reference.",
+    "Summary mode over multi-type synthetic PBF matches full-field results, records zero ordinary Python node/way/relation projections, validates discarded invalid metadata; every emitted encoded node block roundtrips original arrays.",
+    "Reduced fixed block/shard fixtures exercise8-stratum formula, nonadjacent original ordinals, partial final block/shard, exact census vs fully written reference index, mini remap, sorted-ID gaps, independent source witness and all selector vectors/ties/eligibility/exclusions.",
+    "Independent Python ReferenceCodec decodes probe blocks; source-built witness vs index lookup with duplicates/order/missing ID, >64-block eviction and cold/warm/repeat accounting; no weakened full-shard check. Same-size/same-mtime shard/catalog drift still rejects.",
+    "Rolling comparison/removal exact ownership, late passB failure leaves untrusted files; cap-1/cap/cap+1 for all buffers/indices/directory/working/file/trace/IO/fallback limits, bounded malformed events and unavailable metrics.",
+    "Hard watchdog interrupts stuck native/no callbacks/framing/posthash, correct rejected/partial counters and error EOF, worker OOM/nonzero/client errors, refuse unrelated cleanup, independently verify exact owned removal/absence.",
+    "Freeze exact candidate sources/tests/runner/artifact/tool/header/image/control results and resource plan only after checks pass; synthetic corpus aggregate<=2million source receipts,64MiB files,1GiB work+tmp,300s qualification worker/600s host. Declare exhaustive test list/expected counts in qualification recipe before running; no national source mount in qualification."
+  ],
+  "futureOutputContract": {
+    "newUnusedRoot": "data/coarse-quality/us-osm-country-screen-v1/",
+    "records": [
+      "owner/isolation/capacity/bindings.json",
+      "pass-a/source-identity.json",
+      "pass-a/summary.json",
+      "pass-a/global-directory.bin",
+      "pass-a/global-catalog.json",
+      "pass-a/probe/*",
+      "pass-a/way-trace.json",
+      "pass-b equivalents with source witness",
+      "lookup.json",
+      "timing-io-memory-allocation.json",
+      "partial-error/checkpoint.json if failed",
+      "worker-exit-oom.json",
+      "owned-cleanup.json",
+      "independent-absence.json",
+      "closed-manifest.json",
+      "decision.json"
+    ],
+    "success": "Both complete protected passes/source identities/counts/order/metadata/GPF1/census/probe/trace/witness equality; >=64 eligible ways; all fixed lookup bits and integrity/resource/time/lifecycle gates. Report measured facts and separate conditional24GiB/64GiB index screen outcome; storage-screen failure remains a failure even when scan completes.",
+    "neverAdmits": [
+      "national physical index allocation",
+      "all-national road dependency lookup distribution",
+      "full two-pass21-window extraction time",
+      "publisher boundary/source suitability or usable attributes",
+      "matching/physical/speed policy/83ORS-35Valhalla accuracy/package/API/visual/model switch"
+    ]
+  },
+  "commandContract": {
+    "availableNow": [
+      "python3 -B docs/evidence/coarse-osm-country-screen-plan-2026-10-29/resource_arithmetic.py",
+      "python3 -B docs/evidence/coarse-osm-country-screen-plan-2026-10-29/verify.py"
+    ],
+    "proposedNotImplemented": [
+      "python3 -B scripts/run_osm_country_screen_v1.py --qualify <frozen-qualification.json> <sha256> <new-owned-control-root>",
+      "python3 -B scripts/run_osm_country_screen_v1.py --screen <separately-frozen-screen.json> <sha256> data/coarse-quality/us-osm-country-screen-v1/"
+    ],
+    "order": "Implement -> freeze bounded build/synthetic qualification -> actual target controls and normal app code checks -> independent proof -> freeze exact new screen recipe -> separately authorized one execution. No new source-wide run in this plan or implementation/qualification stage.",
+    "notExecutableFreeze": "This proposal deliberately has no executable screen recipe/artifact hash. Unknown candidate hashes are not placeholders accepted by a runner."
+  }
+}

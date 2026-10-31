@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "status": "Frozen execution recipe before the25m geometry preflight; no routing candidate",
+  "designSha256": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd",
+  "inputs": {
+    "src/server/data/coarse-grid-v9.json": "28271c809a04cdfab41ad735ad66b29e3875179b617198b7b1d4490533439bf6",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/sha256.json": "44c9123092497e3d0ba4cb6070b54d63235524e61ef3ca0fead9b940087f9499",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/report.json": "b75074f241bc4e92d05c2c305410d7f3a4653f0f35645795e5af6137e581efd5",
+    "data/coarse-sources/tiger-2026/national-v1/sources.json": "c03379192c584e7b4fdd55ad6534ab9339db4551d5ee3720c7d12489990fb782",
+    "docs/evidence/coarse-source-2026-10-22/tool.json": "56a3e5e0f9fd91db9c3ccd05ecfdb07cbbf3433c123aea5c6ac07ebfc03c9a8e",
+    "scripts/coarse_census.py": "9d9dd6b648997a055775db3a5a680605f5969db04a57fbcda9ffce91a05c1bf1",
+    "scripts/coarse_backbone.py": "779399aaeac0ebf0d1424cef4092578170adcb4ecb21c76f1ca543824090ca72",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "data/coarse-quality/census-backbone-preflight-v1/nodeCoordinates.bin.gz": "361c304daf3d6e72d81afb45cc6fcf25ccfa3d02b20d3202480f5fdef8efddbf",
+    "data/coarse-quality/census-backbone-preflight-v1/arcFrom.bin.gz": "5441ea7f800c93099de708065ed6d392447792aacb22137ee65baabd2eaf125b",
+    "data/coarse-quality/census-backbone-preflight-v1/arcTo.bin.gz": "7d7fdcadff8bdd689e8d16913fc38b4592f2b665192a793bd6f3a12052b43234",
+    "data/coarse-quality/census-backbone-preflight-v1/arcRoadKm.bin.gz": "bfed809a6fa6b4f42b0a77a3900be6956afc295dafd26c22ddeb243cdcefe870",
+    "data/coarse-quality/census-backbone-preflight-v1/arcDeciseconds.bin.gz": "99b9842f7b06f64d354be48d7d0f7f91c5d13fd6cd90418e9058785aad1a802c",
+    "data/coarse-quality/census-backbone-preflight-v1/arcSpeedKph.bin.gz": "0d20cf23f8c771f934f1c686229111d9142951edf1e0f16a8f6f033dd9fa5d6b",
+    "data/coarse-quality/census-backbone-preflight-v1/partPointOffsets.bin.gz": "4c52a57c8576366ab8aac19cf0a38a355fe5096057e4e1e6c70a63ccd607c50e"
+  },
+  "sources": {
+    "partitions": 49,
+    "parts": 261862,
+    "duplicates": 38470,
+    "uniqueParts": 223392,
+    "originalNodes": 245842,
+    "originalArcs": 501493,
+    "components": 3100,
+    "largestRoadLengthFraction": 0.9854365119558087,
+    "speeds": {
+      "S1100": 105,
+      "S1200": 85
+    }
+  },
+  "geometry": {
+    "gridDegrees": 0.025,
+    "gridBounds": [
+      -125,
+      24,
+      -66,
+      50
+    ],
+    "coordinateQuantumDegrees": 1e-05,
+    "maximumTotalDeviationMeters": 25,
+    "rdpMeters": 23,
+    "quantizationAllowanceMeters": 2,
+    "metric": "Euclidean lon/lat coordinate distance multiplied by111320m/degree. This isotropic upper bound dominates the modeled spherical haversine distance; vertex-to-corresponding-segment tests also bound intervening linear source edges.",
+    "gridIntersections": "Canonical float gridlines at integer/40 degrees. Exact binary-float rational interpolation parameters, deduplicating only identical parameters at a corner; preserve every distinct crossing without proximity snapping.",
+    "protected": "Original exact endpoint-junction nodes; all grid crossings and source-vertex tangent touches changing half-open cell visitation. Crossing nodes are unique to a source occurrence, never merged by position/cell.",
+    "simplifier": "Deterministic iterative Douglas-Peucker between protected positions,23m. If endpoint chord lies on a different owning-cell boundary, preserve one deterministic original interior witness. Quantize interior vertices to1e-5 degrees, clamp inside the original half-open owning cell; exact node positions supply protected endpoints. Remove consecutive exact duplicates only from geometric work, keeping raw IDs/counts/cost denominators.",
+    "costs": "Reproduce every original parent arc roadKm/ceil-decisecond cost before splitting. Subarc roadKm and float64 minutes apportion those unchanged parent values by full-source subdivided lengths, never by simplified geometry; per-parent sums checked. Retained interior cumulative sourceKm is float64. Positive subarc costs, chord lower bounds with1mm numerical tolerance.",
+    "cellVisitation": "Before/after chronological half-open point/interval cell rosters must match. Runtime spatial index includes each subarc owner cell and endpoint-touch cells. No land/access/water flags or eligibility changes."
+  },
+  "storage": {
+    "runtimeArrays": [
+      "nodeCoordinates",
+      "arcFrom",
+      "arcTo",
+      "arcRoadKm",
+      "arcMinutes",
+      "arcSpeedKph",
+      "arcByteOffsets",
+      "arcInteriorOffsets",
+      "interiorSourceKm",
+      "geometryBytes",
+      "partArcOffsets",
+      "endpointAdjOffsets",
+      "endpointAdjArcs",
+      "crossingFirstArc",
+      "cellIds",
+      "cellArcOffsets",
+      "cellArcs"
+    ],
+    "encoding": "Little-endian native arrays gzipped(level6,mtime0); geometryBytes uses the frozen signed32 zigzag/LEB128 codec. Protected endpoints implicit from exact nodeCoordinates; only interior geometry encoded.",
+    "adjacency": "CSR on original junction nodes; every newly inserted degree2 crossing has consecutive incoming/outgoing arc IDs stored by crossingFirstArc. No omitted per-part/arc/cell index.",
+    "forecast": "Keep v9 except roadLayer/supplementalRoadVisits, add every measured runtime field/base64/name/prefix plus1024metadata bytes, existing3822197function overhead and4194304integration reserve. Not an actual package/handler.",
+    "maximumProjectedFunctionBytes": 70000000
+  },
+  "verification": {
+    "independentEverySourceSpan": true,
+    "allSourceCostsAndComponentsPreserved": true,
+    "all83CasesAnd166EndpointDenominatorsRetained": true,
+    "maximumSourceLengthRelativeError": 1e-10,
+    "maximumParentMinutesAbsoluteError": 1e-08,
+    "maximumChordUnderchargeMeters": 0.001
+  },
+  "resources": {
+    "maximumSeconds": 600,
+    "maximumProducerRssBytes": 1073741824,
+    "minimumFreeDiskBytes": 2147483648
+  },
+  "onFailure": "Preserve all failed outputs; stop routing/candidate work. No tolerance/format/budget retuning or alternative source recipe in this run.",
+  "scope": "One offline cached-source geometry/storage experiment. No provider/key/env/DB access, download, runtime change or routing/accuracy result."
+}

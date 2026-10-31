@@ -1,0 +1,3971 @@
+{
+  "model": "source-road-time-allowance-v1",
+  "planSha256": "2a1aff992bfdb707d36a673c6e407d4d2f32386a38edc19f85eb9a0cd3676543",
+  "binarySha256": "f099563d48f5b7f31fc12768deeca9cfe388adbbae54a29f952f65974a896af3",
+  "sourceRoadTimeFactor": 1.1,
+  "overall": {
+    "baseline": {
+      "planned": 83,
+      "pairedFinite": 83,
+      "unreached": 0,
+      "meanAbsoluteMinutes": 29.257418754386766,
+      "medianAbsoluteMinutes": 15.985262951534196,
+      "p90AbsoluteMinutes": 70.04833333333386,
+      "classifications": {
+        "correct": 67,
+        "falseReachable": 11,
+        "missedReachable": 2,
+        "ambiguous": 3
+      },
+      "pathSumsReconstructed": 83
+    },
+    "candidate": {
+      "planned": 83,
+      "pairedFinite": 83,
+      "unreached": 0,
+      "meanAbsoluteMinutes": 24.482463364947098,
+      "medianAbsoluteMinutes": 13.03043122827009,
+      "p90AbsoluteMinutes": 66.41791286629814,
+      "classifications": {
+        "correct": 67,
+        "falseReachable": 5,
+        "missedReachable": 8,
+        "ambiguous": 3
+      },
+      "pathSumsReconstructed": 83
+    }
+  },
+  "sets": {
+    "original": {
+      "baseline": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 7.222683331642199,
+        "medianAbsoluteMinutes": 5.0191929246498574,
+        "p90AbsoluteMinutes": 14.466666666666697,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "candidate": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 6.351675372190075,
+        "medianAbsoluteMinutes": 6.006399064005137,
+        "p90AbsoluteMinutes": 12.45834628251589,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      }
+    },
+    "regional": {
+      "baseline": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 8.612811312916305,
+        "medianAbsoluteMinutes": 8.50051179159388,
+        "p90AbsoluteMinutes": 14.581758773791819,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "candidate": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 7.187693247919936,
+        "medianAbsoluteMinutes": 7.4285431634315096,
+        "p90AbsoluteMinutes": 13.03043122827009,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      }
+    },
+    "frontier": {
+      "baseline": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 44.629349342834296,
+        "medianAbsoluteMinutes": 40.560596876175964,
+        "p90AbsoluteMinutes": 97.8133333333343,
+        "classifications": {
+          "correct": 32,
+          "falseReachable": 11,
+          "missedReachable": 2,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      },
+      "candidate": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 37.28482067180084,
+        "medianAbsoluteMinutes": 32.64834813365454,
+        "p90AbsoluteMinutes": 81.53268670310558,
+        "classifications": {
+          "correct": 32,
+          "falseReachable": 5,
+          "missedReachable": 8,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      }
+    }
+  },
+  "valhallaSensitivity": {
+    "original": {
+      "baseline": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 14.895590827316441,
+        "medianAbsoluteMinutes": 13.6205833333333,
+        "p90AbsoluteMinutes": 25.282074559541627,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "candidate": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 12.419685063689645,
+        "medianAbsoluteMinutes": 11.366364030392774,
+        "p90AbsoluteMinutes": 21.82980580796118,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      }
+    },
+    "regional": {
+      "baseline": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 13.388922679750129,
+        "medianAbsoluteMinutes": 10.82101666666663,
+        "p90AbsoluteMinutes": 23.712499999999892,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "candidate": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 11.100042702017605,
+        "medianAbsoluteMinutes": 7.7841187124648705,
+        "p90AbsoluteMinutes": 29.671532355604242,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      }
+    }
+  },
+  "byHorizon": {
+    "360": {
+      "baseline": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 30.200413417363453,
+        "medianAbsoluteMinutes": 25.858805807182705,
+        "p90AbsoluteMinutes": 54.60333333333335,
+        "classifications": {
+          "correct": 8,
+          "falseReachable": 6,
+          "missedReachable": 0,
+          "ambiguous": 2
+        },
+        "pathSumsReconstructed": 16
+      },
+      "candidate": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 29.374129963436086,
+        "medianAbsoluteMinutes": 26.11366598007882,
+        "p90AbsoluteMinutes": 58.729610602041305,
+        "classifications": {
+          "correct": 9,
+          "falseReachable": 3,
+          "missedReachable": 2,
+          "ambiguous": 2
+        },
+        "pathSumsReconstructed": 16
+      }
+    },
+    "600": {
+      "baseline": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 36.898617457514895,
+        "medianAbsoluteMinutes": 37.41191908262522,
+        "p90AbsoluteMinutes": 70.04833333333386,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 3,
+          "missedReachable": 1,
+          "ambiguous": 1
+        },
+        "pathSumsReconstructed": 16
+      },
+      "candidate": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 33.00620775194872,
+        "medianAbsoluteMinutes": 24.935852932464456,
+        "p90AbsoluteMinutes": 81.53268670310558,
+        "classifications": {
+          "correct": 12,
+          "falseReachable": 1,
+          "missedReachable": 2,
+          "ambiguous": 1
+        },
+        "pathSumsReconstructed": 16
+      }
+    },
+    "720": {
+      "baseline": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 66.78901715362453,
+        "medianAbsoluteMinutes": 67.47583333333182,
+        "p90AbsoluteMinutes": 107.93986818342614,
+        "classifications": {
+          "correct": 13,
+          "falseReachable": 2,
+          "missedReachable": 1,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 16
+      },
+      "candidate": {
+        "planned": 16,
+        "pairedFinite": 16,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 49.47412430001768,
+        "medianAbsoluteMinutes": 42.96232992393237,
+        "p90AbsoluteMinutes": 93.33636866686277,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 1,
+          "missedReachable": 4,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 16
+      }
+    }
+  },
+  "worstRegressions": {
+    "frontier": 66.57757783184627,
+    "older": 7.584459404360672
+  },
+  "gates": {
+    "overallMean": true,
+    "frontierMean": true,
+    "originalMean": true,
+    "regionalMean": true,
+    "frontierP90": true,
+    "horizonMeans": true,
+    "horizonP90": false,
+    "frontierWorstRegression": false,
+    "olderWorstRegression": false,
+    "frontierDefiniteClassificationErrors": false,
+    "frontierMissed": false,
+    "twelveHourMissed": false,
+    "all83Paired": true,
+    "all166PathSums": true,
+    "all35StillShaded": true,
+    "frontierMedian": true,
+    "overallP90NoWorse": true,
+    "originalP90NoWorse": true,
+    "regionalP90NoWorse": true,
+    "valhallaOriginalNoWorse": true,
+    "valhallaRegionalNoWorse": true
+  },
+  "accuracyGatesPassed": false,
+  "rows": [
+    {
+      "id": "astoria-or-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -120.13269,
+        "lat": 47.81195
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 399.69666666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 366.23712403720685,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.675,
+          "road": 354.377124037207,
+          "local": 0,
+          "transfer": 10.141666666666667,
+          "destination": 1.0433333333333332
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 350.11889834452455,
+        "cellMinutes": 350.11889834452455,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 339.28166666666635,
+          "local": 9.147099861284604,
+          "transfer": 0.395,
+          "destination": 0
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -16.1182256926823
+    },
+    {
+      "id": "astoria-or-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -119.91124,
+        "lat": 47.91014
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 418.14666666666665,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 384.5371443013777,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.675,
+          "road": 371.9654776347111,
+          "local": 0,
+          "transfer": 10.861666666666668,
+          "destination": 1.035
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 369.6872316778579,
+        "cellMinutes": 369.6855650111912,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 358.3999999999996,
+          "local": 9.147099861284604,
+          "transfer": 0.8433333333333334,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -14.8499126235198
+    },
+    {
+      "id": "astoria-or-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -120.01171,
+        "lat": 41.55242
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 626.0116666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 592.080099385015,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.5283333333333333,
+          "road": 583.9500993850146,
+          "local": 0,
+          "transfer": 6.698333333333333,
+          "destination": 0.9033333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "baseline": {
+        "pointMinutes": 568.3584651499064,
+        "cellMinutes": 568.0217984832396,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 566.0566666666673,
+          "local": 0,
+          "transfer": 0.67,
+          "destination": 0.33666666666666667
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -23.721634235108695
+    },
+    {
+      "id": "astoria-or-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -118.70764,
+        "lat": 42.29336
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 632.4783333333332,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 606.1583707265572,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.675,
+          "road": 588.6186670765826,
+          "local": 5.646370316641203,
+          "transfer": 10.571666666666665,
+          "destination": 0.6466666666666666
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 588.4190388226885,
+        "cellMinutes": 588.4173721560219,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 554.0450000000009,
+          "local": 24.807240339448523,
+          "transfer": 8.270000000000001,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -17.739331903868674
+    },
+    {
+      "id": "astoria-or-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -121.80236,
+        "lat": 37.26779
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 826.3333333333334,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 779.4308295158754,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.5283333333333333,
+          "road": 769.4091628492095,
+          "local": 0,
+          "transfer": 8.896666666666667,
+          "destination": 0.5966666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 718.3934651499072,
+        "cellMinutes": 718.3917984832406,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 715.9200000000014,
+          "local": 0,
+          "transfer": 1.1766666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -61.03736436596819
+    },
+    {
+      "id": "astoria-or-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "destination": {
+        "lon": -120.51162,
+        "lat": 37.30991
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 849.7,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 798.5657020290178,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.5283333333333333,
+          "road": 790.7873686956835,
+          "local": 0,
+          "transfer": 6.378333333333334,
+          "destination": 0.8716666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 736.3601318165735,
+        "cellMinutes": 735.2967984832401,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.2951318165734167,
+          "road": 734.0016666666681,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.0633333333333332
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -62.205570212444286
+    },
+    {
+      "id": "missoula-mt-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -108.98697,
+        "lat": 47.05684
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 311.0183333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 361.46213929366576,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.46,
+          "road": 357.76356738023,
+          "local": 0,
+          "transfer": 2.575,
+          "destination": 0.6635719134356957
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 336.36500000000035,
+        "cellMinutes": 336.25000000000034,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 334.03333333333313,
+          "local": 0,
+          "transfer": 0.5,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 25.097139293665407
+    },
+    {
+      "id": "missoula-mt-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -108.96939,
+        "lat": 48.57573
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 337.455,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 386.1668739640866,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.46,
+          "road": 380.79020729742007,
+          "local": 0,
+          "transfer": 4.581666666666666,
+          "destination": 0.335
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 354.53000000000014,
+        "cellMinutes": 354.5283333333335,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 351.8916666666665,
+          "local": 0,
+          "transfer": 0.805,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 31.636873964086476
+    },
+    {
+      "id": "missoula-mt-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -111.90475,
+        "lat": 39.31708
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 569.1183333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 645.5968586494554,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.46,
+          "road": 644.1035253161215,
+          "local": 0,
+          "transfer": 0.24,
+          "destination": 0.7933333333333333
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 598.0383333333338,
+        "cellMinutes": 597.5833333333337,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 594.3183333333329,
+          "local": 0,
+          "transfer": 1.4333333333333333,
+          "destination": 0.455
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 47.55852531612163
+    },
+    {
+      "id": "missoula-mt-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -110.79103,
+        "lat": 39.59621
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 579.4066666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 662.9761086900663,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.46,
+          "road": 659.2794420233988,
+          "local": 0,
+          "transfer": 3.0766666666666667,
+          "destination": 0.16
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 619.7283333333331,
+        "cellMinutes": 615.5049999999998,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 615.7283333333334,
+          "local": 0,
+          "transfer": 2.166666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "missedReachable"
+      },
+      "absoluteErrorChangeMinutes": 43.2477753567332
+    },
+    {
+      "id": "missoula-mt-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -123.29443,
+        "lat": 42.7739
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 783.0083333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 774.3825481779808,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.006666666666666667,
+          "road": 767.65254817798,
+          "local": 0,
+          "transfer": 6.523333333333333,
+          "destination": 0.2
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 716.9950000000018,
+        "cellMinutes": 716.3283333333351,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 712.3783333333339,
+          "local": 0,
+          "transfer": 2.783333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -57.38754817797894
+    },
+    {
+      "id": "missoula-mt-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -124.22414,
+        "lat": 43.47093
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 799.62,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 789.6342914010515,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.006666666666666667,
+          "road": 782.8509580677173,
+          "local": 0,
+          "transfer": 6.416666666666667,
+          "destination": 0.36
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 730.6816666666679,
+        "cellMinutes": 730.6816666666679,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 725.6133333333336,
+          "local": 0,
+          "transfer": 3.236666666666667,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -58.952624734383676
+    },
+    {
+      "id": "hays-ks-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -94.4077,
+        "lat": 40.33496
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 361.7066666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 377.7564874464873,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.505,
+          "road": 371.1264874464871,
+          "local": 0,
+          "transfer": 1.8633333333333333,
+          "destination": 1.2616666666666667
+        },
+        "classification": "ambiguous"
+      },
+      "baseline": {
+        "pointMinutes": 352.69361016990047,
+        "cellMinutes": 352.6919435032338,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 347.2683333333341,
+          "local": 0,
+          "transfer": 0.21166666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "ambiguous"
+      },
+      "absoluteErrorChangeMinutes": 7.036764283054367
+    },
+    {
+      "id": "hays-ks-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -93.21301,
+        "lat": 39.73768
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 357.68,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 398.35227751067345,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.505,
+          "road": 391.56061084400625,
+          "local": 0,
+          "transfer": 2.2066666666666666,
+          "destination": 1.08
+        },
+        "classification": "ambiguous"
+      },
+      "baseline": {
+        "pointMinutes": 373.25694350323334,
+        "cellMinutes": 373.2552768365667,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 366.5633333333339,
+          "local": 0,
+          "transfer": 1.48,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "ambiguous"
+      },
+      "absoluteErrorChangeMinutes": 25.0953340074401
+    },
+    {
+      "id": "hays-ks-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -100.11476,
+        "lat": 32.89047
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 559.2033333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 582.7143282051459,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1683333333333334,
+          "road": 574.6159948718118,
+          "local": 0,
+          "transfer": 5.221666666666666,
+          "destination": 0.7083333333333334
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 566.5095913002793,
+        "cellMinutes": 563.1819435032339,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 553.0799999999999,
+          "local": 0,
+          "transfer": 4.890000000000001,
+          "destination": 3.327647797045386
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 16.204736904866536
+    },
+    {
+      "id": "hays-ks-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -100.83945,
+        "lat": 33.15753
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 567.7766666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 599.6138203045159,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1683333333333334,
+          "road": 593.6671536378484,
+          "local": 0,
+          "transfer": 2.9499999999999997,
+          "destination": 0.8283333333333334
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 582.5569435032342,
+        "cellMinutes": 582.3069435032342,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 572.2049999999999,
+          "local": 0,
+          "transfer": 4.890000000000001,
+          "destination": 0.25
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 17.05687680128176
+    },
+    {
+      "id": "hays-ks-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -107.18797,
+        "lat": 44.93187
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 688.465,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 781.8013686668628,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.505,
+          "road": 774.4330353335296,
+          "local": 0,
+          "transfer": 3.0966666666666667,
+          "destination": 0.7666666666666667
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 716.3402768365662,
+        "cellMinutes": 716.0902768365662,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 710.9000000000024,
+          "local": 0,
+          "transfer": 0.22833333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 65.4610918302966
+    },
+    {
+      "id": "hays-ks-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "destination": {
+        "lon": -108.06232,
+        "lat": 43.74105
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 707.8083333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 793.8211880017458,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.505,
+          "road": 785.2778546684124,
+          "local": 0,
+          "transfer": 4.24,
+          "destination": 0.7983333333333333
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 727.2436101698995,
+        "cellMinutes": 727.2419435032328,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 5.211943503233505,
+          "road": 720.7933333333357,
+          "local": 0,
+          "transfer": 1.2366666666666666,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "missedReachable"
+      },
+      "absoluteErrorChangeMinutes": 66.57757783184627
+    },
+    {
+      "id": "duluth-mn-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.10095,
+        "lat": 45.70282
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 376.0383333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 356.2616246287223,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 351.098291295389,
+          "local": 0,
+          "transfer": 3.1166666666666667,
+          "destination": 0.2833333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "baseline": {
+        "pointMinutes": 338.9684546643801,
+        "cellMinutes": 335.60596071746403,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 323.9716666666666,
+          "local": 8.62048780314947,
+          "transfer": 0,
+          "destination": 3.362493946916084
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -17.293169964342212
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.66185,
+        "lat": 45.0997
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 397.34666666666664,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 375.6081391403853,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 370.098139140385,
+          "local": 0,
+          "transfer": 3.6483333333333334,
+          "destination": 0.09833333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 356.5471395809812,
+        "cellMinutes": 354.2838062476479,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 351.27,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.263333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -19.06099955940408
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -97.10138,
+        "lat": 41.01295
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 604.855,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 628.4067432581529,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 618.7450765914873,
+          "local": 0,
+          "transfer": 6.7716666666666665,
+          "destination": 1.1266666666666667
+        },
+        "classification": "ambiguous"
+      },
+      "baseline": {
+        "pointMinutes": 601.6971395809813,
+        "cellMinutes": 601.6954729143147,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 595.8333333333329,
+          "local": 0,
+          "transfer": 2.848333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "ambiguous"
+      },
+      "absoluteErrorChangeMinutes": 20.39388283913422
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -99.32231,
+        "lat": 42.94749
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 613.525,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 650.3597783566046,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 646.3381116899379,
+          "local": 0,
+          "transfer": 1.9183333333333332,
+          "destination": 0.34
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 610.0388062476467,
+        "cellMinutes": 610.0388062476467,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 606.9766666666649,
+          "local": 0,
+          "transfer": 0.04833333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 33.3485846042513
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -105.47339,
+        "lat": 46.67349
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 683.2316666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 749.6495795329648,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 742.7945795329641,
+          "local": 0,
+          "transfer": 4.871666666666667,
+          "destination": 0.22
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 704.3821395809803,
+        "cellMinutes": 702.3088062476469,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 699.2899999999994,
+          "local": 0,
+          "transfer": 2.0766666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 45.26743995198456
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -104.37019,
+        "lat": 46.19137
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 700.0216666666668,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 744.9471579974829,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.7633333333333334,
+          "road": 736.8554913308152,
+          "local": 0,
+          "transfer": 5.511666666666667,
+          "destination": 0.8166666666666667
+        },
+        "classification": "missedReachable"
+      },
+      "baseline": {
+        "pointMinutes": 718.0348396652206,
+        "cellMinutes": 718.0348396652206,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 704.3149999999991,
+          "local": 8.112700084240497,
+          "transfer": 2.5933333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 26.912318332262316
+    },
+    {
+      "id": "columbus-oh-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -80.10748,
+        "lat": 37.46188
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 366.27166666666665,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 351.0667482821476,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.5283333333333333,
+          "road": 339.4434149488145,
+          "local": 0,
+          "transfer": 9.931666666666665,
+          "destination": 1.1633333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "baseline": {
+        "pointMinutes": 350.62640371513237,
+        "cellMinutes": 350.62640371513237,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 342.98499999999973,
+          "local": 0,
+          "transfer": 4.56,
+          "destination": 0
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -0.44034456701524505
+    },
+    {
+      "id": "columbus-oh-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -80.25191,
+        "lat": 36.25135
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 400.1716666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 389.14957718637044,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.5283333333333333,
+          "road": 385.04957718637087,
+          "local": 0,
+          "transfer": 3.3566666666666665,
+          "destination": 0.215
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 377.0647370484657,
+        "cellMinutes": 377.0647370484657,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 369.4066666666663,
+          "local": 0,
+          "transfer": 4.576666666666666,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -12.084840137904735
+    },
+    {
+      "id": "columbus-oh-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -92.36316,
+        "lat": 37.38909
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 616.3066666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 618.4720603773878,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 2.845,
+          "road": 591.330493247207,
+          "local": 17.024900463513305,
+          "transfer": 6.293333333333334,
+          "destination": 0.9783333333333334
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 600.2129708453126,
+        "cellMinutes": 600.2129708453126,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 572.3583333333327,
+          "local": 17.024900463513305,
+          "transfer": 7.748333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -13.928302110633012
+    },
+    {
+      "id": "columbus-oh-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -92.91856,
+        "lat": 38.28645
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 633.2083333333334,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 639.1191394151153,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 2.845,
+          "road": 633.3458060817811,
+          "local": 0,
+          "transfer": 1.84,
+          "destination": 1.0883333333333334
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 617.2230703817992,
+        "cellMinutes": 617.2230703817992,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 608.7583333333333,
+          "local": 0,
+          "transfer": 5.383333333333334,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -10.074456869752225
+    },
+    {
+      "id": "columbus-oh-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -73.09165,
+        "lat": 44.03629
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 771.1033333333332,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 733.3283364850219,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.3233333333333333,
+          "road": 723.2716698183548,
+          "local": 0,
+          "transfer": 8.681666666666665,
+          "destination": 1.0516666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 721.1064037151325,
+        "cellMinutes": 721.1064037151325,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 714.8866666666664,
+          "local": 0,
+          "transfer": 3.1383333333333336,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -12.22193276988935
+    },
+    {
+      "id": "columbus-oh-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -73.06746,
+        "lat": 44.88702
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 782.5,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 771.8762755877459,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.3233333333333333,
+          "road": 759.9796089210776,
+          "local": 0,
+          "transfer": 6.258333333333333,
+          "destination": 5.315
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 736.764064090691,
+        "cellMinutes": 735.8175441468794,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 725.9566666666666,
+          "local": 6.567807098413489,
+          "transfer": 0.21166666666666667,
+          "destination": 0.9465199438115981
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -35.112211497054886
+    },
+    {
+      "id": "asheville-nc-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -82.33716,
+        "lat": 31.97221
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 379.46666666666664,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 348.97786223279036,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.2966666666666667,
+          "road": 344.4578622327901,
+          "local": 0,
+          "transfer": 3.2666666666666666,
+          "destination": 0.9566666666666667
+        },
+        "classification": "falseReachable"
+      },
+      "baseline": {
+        "pointMinutes": 349.6850000000002,
+        "cellMinutes": 349.6833333333335,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8233333333333333,
+          "road": 343.7216666666666,
+          "local": 0,
+          "transfer": 4.138333333333334,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": 0.7071377672098151
+    },
+    {
+      "id": "asheville-nc-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -81.71193,
+        "lat": 31.46296
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 399.4133333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 401.5714417492915,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.2966666666666667,
+          "road": 397.6431084159583,
+          "local": 0,
+          "transfer": 2.251666666666667,
+          "destination": 1.38
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 377.5650000000001,
+        "cellMinutes": 377.39333333333343,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8233333333333333,
+          "road": 375.23166666666674,
+          "local": 0,
+          "transfer": 0.3383333333333333,
+          "destination": 0.17166666666666666
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -19.690224917374962
+    },
+    {
+      "id": "asheville-nc-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -91.2303,
+        "lat": 36.02922
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 629.0366666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 618.7594177171507,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.2966666666666667,
+          "road": 616.1844177171503,
+          "local": 0,
+          "transfer": 1.7466666666666666,
+          "destination": 0.5316666666666666
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 594.5344951680827,
+        "cellMinutes": 594.5344951680827,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8233333333333333,
+          "road": 580.7566666666667,
+          "local": 8.579495168082738,
+          "transfer": 3.375,
+          "destination": 0
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -24.22492254906797
+    },
+    {
+      "id": "asheville-nc-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -91.49539,
+        "lat": 36.43675
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 667.3666666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 653.8367104279265,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.2966666666666667,
+          "road": 651.4550437612601,
+          "local": 0,
+          "transfer": 1.9,
+          "destination": 0.185
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 614.0033333333333,
+        "cellMinutes": 613.825,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8233333333333333,
+          "road": 610.5566666666665,
+          "local": 0,
+          "transfer": 1.445,
+          "destination": 0.17833333333333334
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -39.833377094593175
+    },
+    {
+      "id": "asheville-nc-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -75.93746,
+        "lat": 43.09154
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 822.0283333333333,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 784.38601691984,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.47833333333333333,
+          "road": 779.9843502531745,
+          "local": 0,
+          "transfer": 3.41,
+          "destination": 0.5133333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 728.1399999999999,
+        "cellMinutes": 727.6949999999998,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.3,
+          "road": 720.1399999999994,
+          "local": 0,
+          "transfer": 4.698333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -56.246016919840145
+    },
+    {
+      "id": "asheville-nc-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "destination": {
+        "lon": -74.90139,
+        "lat": 42.79735
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 831.2066666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 790.2074981496181,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 0.47833333333333333,
+          "road": 785.7174981496181,
+          "local": 0,
+          "transfer": 3.753333333333334,
+          "destination": 0.25833333333333336
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 744.8566666666666,
+        "cellMinutes": 744.8549999999999,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.3,
+          "road": 736.8949999999992,
+          "local": 0,
+          "transfer": 4.659999999999999,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -45.35083148295155
+    },
+    {
+      "id": "portland-me-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -74.88889,
+        "lat": 40.92918
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 426.71500000000003,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 367.9853893979587,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 365.59538939795823,
+          "local": 0,
+          "transfer": 0.5383333333333333,
+          "destination": 0.6683333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 372.1116666666667,
+        "cellMinutes": 371.92333333333335,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 365.83833333333314,
+          "local": 0,
+          "transfer": 4.3933333333333335,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 4.126277268707952
+    },
+    {
+      "id": "portland-me-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -75.03865,
+        "lat": 40.73951
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 459.98499999999996,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 385.99401602518986,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 383.27901602518955,
+          "local": 0,
+          "transfer": 0.5383333333333333,
+          "destination": 0.9933333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 391.918333333333,
+        "cellMinutes": 391.91666666666634,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 385.33833333333314,
+          "local": 0,
+          "transfer": 4.7,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 5.924317308143145
+    },
+    {
+      "id": "portland-me-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -78.82475,
+        "lat": 39.59963
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 716.1966666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 634.6639799635611,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 630.5773132968934,
+          "local": 0,
+          "transfer": 2.8666666666666667,
+          "destination": 0.03666666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 618.3833333333324,
+        "cellMinutes": 618.3833333333324,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 611.3966666666662,
+          "local": 0,
+          "transfer": 5.108333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -16.280646630228716
+    },
+    {
+      "id": "portland-me-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -79.86222,
+        "lat": 41.14159
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 703.705,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 657.4458042000091,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 650.847470866676,
+          "local": 0,
+          "transfer": 4.583333333333333,
+          "destination": 0.8316666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 633.6566666666662,
+        "cellMinutes": 633.6566666666662,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 627.3033333333326,
+          "local": 0,
+          "transfer": 4.475,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -23.78913753334291
+    },
+    {
+      "id": "portland-me-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -78.49399,
+        "lat": 37.63117
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 841.6116666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 717.4253703890809,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 709.9203703890809,
+          "local": 0,
+          "transfer": 5.701666666666666,
+          "destination": 0.62
+        },
+        "classification": "falseReachable"
+      },
+      "baseline": {
+        "pointMinutes": 741.3695299708779,
+        "cellMinutes": 741.3678633042113,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 726.2549999999994,
+          "local": 6.01119663754484,
+          "transfer": 7.2233333333333345,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 23.944159581797066
+    },
+    {
+      "id": "portland-me-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "destination": {
+        "lon": -80.16304,
+        "lat": 37.26252
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 869.9516666666666,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 791.9196442780038,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.1833333333333333,
+          "road": 787.6729776113377,
+          "local": 0,
+          "transfer": 2.2566666666666664,
+          "destination": 0.8066666666666666
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 762.556666666667,
+        "cellMinutes": 761.5616666666671,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8783333333333334,
+          "road": 753.3316666666658,
+          "local": 0,
+          "transfer": 7.346666666666668,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -29.362977611336873
+    },
+    {
+      "id": "savannah-ga-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -84.66308,
+        "lat": 29.85043
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 379.675,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 375.74480707669136,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 2.5183333333333335,
+          "road": 368.6631404100247,
+          "local": 0,
+          "transfer": 3.6699999999999995,
+          "destination": 0.8933333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 353.30405505230163,
+        "cellMinutes": 351.4899999999999,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 345.93500000000006,
+          "local": 0,
+          "transfer": 2.3083333333333336,
+          "destination": 1.8140550523017553
+        },
+        "classification": "falseReachable"
+      },
+      "absoluteErrorChangeMinutes": -22.440752024389724
+    },
+    {
+      "id": "savannah-ga-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -84.98338,
+        "lat": 30.0638
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 372.9866666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 382.98595842628,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 2.5183333333333335,
+          "road": 374.15095842628006,
+          "local": 0,
+          "transfer": 5.345,
+          "destination": 0.9716666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 372.1214652385413,
+        "cellMinutes": 372.1214652385413,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 355.7816666666667,
+          "local": 8.81146523854129,
+          "transfer": 4.281666666666666,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 9.134090331487926
+    },
+    {
+      "id": "savannah-ga-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -84.68972,
+        "lat": 38.65655
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 660.1916666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 644.2598785411897,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.1733333333333333,
+          "road": 639.4948785411905,
+          "local": 0,
+          "transfer": 1.045,
+          "destination": 0.5466666666666666
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 603.2633333333333,
+        "cellMinutes": 603.2633333333333,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 596.3800000000001,
+          "local": 0,
+          "transfer": 3.6366666666666663,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -40.99654520785634
+    },
+    {
+      "id": "savannah-ga-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -81.31799,
+        "lat": 39.86753
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 670.685,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 654.226918930522,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.1733333333333333,
+          "road": 644.195252263856,
+          "local": 0,
+          "transfer": 5.916666666666666,
+          "destination": 0.9416666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 624.7263359535262,
+        "cellMinutes": 624.7246692868596,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 608.7883333333333,
+          "local": 10.979669286859693,
+          "transfer": 1.71,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -29.5005829769957
+    },
+    {
+      "id": "savannah-ga-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -74.49153,
+        "lat": 39.41316
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 805.965,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 774.8171343165498,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.1733333333333333,
+          "road": 767.6954676498847,
+          "local": 0,
+          "transfer": 2.8233333333333337,
+          "destination": 1.125
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 729.2863303848225,
+        "cellMinutes": 729.2846637181558,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 715.9133333333341,
+          "local": 6.861330384823188,
+          "transfer": 3.2633333333333336,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -45.53080393172729
+    },
+    {
+      "id": "savannah-ga-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "destination": {
+        "lon": -74.2366,
+        "lat": 40.42878
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 820.2966666666667,
+      "valhallaMinutes": null,
+      "candidate": {
+        "pointMinutes": 796.4579914823208,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.1733333333333333,
+          "road": 789.6279914823228,
+          "local": 0,
+          "transfer": 2.981666666666667,
+          "destination": 0.675
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 754.6649999999996,
+        "cellMinutes": 753.3333333333329,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.2466666666666666,
+          "road": 746.3000000000009,
+          "local": 0,
+          "transfer": 3.786666666666667,
+          "destination": 1.3316666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -41.79299148232121
+    },
+    {
+      "id": "Los Angeles",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 132.63500000000002,
+      "valhallaMinutes": 115.13608333333333,
+      "candidate": {
+        "pointMinutes": 123.94220142088871,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.145,
+          "road": 119.90386808755544,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.8933333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 128.75666666666663,
+        "cellMinutes": 125.63999999999996,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 123.03666666666665,
+          "local": 0,
+          "transfer": 0.6466666666666667,
+          "destination": 3.1166666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 4.8144652457779245
+    },
+    {
+      "id": "Riverside",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -117.3962,
+        "lat": 33.9533
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 108.68833333333333,
+      "valhallaMinutes": 93.94615,
+      "candidate": {
+        "pointMinutes": 105.31251403039278,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 100.66918069705943,
+          "local": 0,
+          "transfer": 0.485,
+          "destination": 2.0516666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 100.81,
+        "cellMinutes": 98.815,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 96.02499999999999,
+          "local": 0,
+          "transfer": 0.8333333333333333,
+          "destination": 1.995
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -4.502514030392774
+    },
+    {
+      "id": "Palm Springs",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 144.80666666666667,
+      "valhallaMinutes": 120.42438333333332,
+      "candidate": {
+        "pointMinutes": 144.51073991355315,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 138.73907324688656,
+          "local": 0,
+          "transfer": 2.995,
+          "destination": 0.67
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 137.68000000000004,
+        "cellMinutes": 136.99666666666667,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 134.27499999999998,
+          "local": 0,
+          "transfer": 0.8333333333333333,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -6.830739913553117
+    },
+    {
+      "id": "Santa Barbara",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 231.65,
+      "valhallaMinutes": 205.92193333333336,
+      "candidate": {
+        "pointMinutes": 220.45887392897274,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.145,
+          "road": 215.427207262306,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.8866666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 228.0433333333334,
+        "cellMinutes": 226.0383333333334,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 222.0199999999999,
+          "local": 0,
+          "transfer": 2.061666666666667,
+          "destination": 2.005
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 7.584459404360672
+    },
+    {
+      "id": "Bakersfield",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 244.37166666666664,
+      "valhallaMinutes": 216.4545,
+      "candidate": {
+        "pointMinutes": 238.28430580796118,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.145,
+          "road": 233.88930580796108,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.25
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 241.73657455954162,
+        "cellMinutes": 235.69833333333338,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 231.12333333333316,
+          "local": 0,
+          "transfer": 2.6183333333333336,
+          "destination": 6.038241226208234
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 3.4522687515804478
+    },
+    {
+      "id": "Big Bear Lake",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 174.10666666666665,
+      "valhallaMinutes": 150.4128,
+      "candidate": {
+        "pointMinutes": 161.64832038415076,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 146.3133203841509,
+          "local": 0,
+          "transfer": 13.166666666666666,
+          "destination": 0.06166666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 162.45499999999998,
+        "cellMinutes": 162.0984201293528,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 159.07666666666665,
+          "local": 0,
+          "transfer": 1.15,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 0.8066796158492195
+    },
+    {
+      "id": "Idyllwild",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 131.45166666666668,
+      "valhallaMinutes": 109.85998333333333,
+      "candidate": {
+        "pointMinutes": 117.03199612410245,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 113.37366279076917,
+          "local": 0,
+          "transfer": 0.9666666666666666,
+          "destination": 0.585
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 116.98499999999999,
+        "cellMinutes": 116.56333333333332,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 113.43166666666663,
+          "local": 0,
+          "transfer": 1.175,
+          "destination": 0.4216666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.046996124102463455
+    },
+    {
+      "id": "Borrego Springs",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 115.75666666666666,
+      "valhallaMinutes": 101.74296666666667,
+      "candidate": {
+        "pointMinutes": 114.95238190685907,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 83.96781281600326,
+          "local": 17.39956909085584,
+          "transfer": 5.893333333333333,
+          "destination": 5.585
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 133.10023161628936,
+        "cellMinutes": 129.80126320657695,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9883333333333333,
+          "road": 90.61833333333333,
+          "local": 33.56292987324366,
+          "transfer": 3.631666666666667,
+          "destination": 3.2989684097124137
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -16.539280189815116
+    },
+    {
+      "id": "Temecula",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.955000000000005,
+      "valhallaMinutes": 54.947966666666666,
+      "candidate": {
+        "pointMinutes": 60.749647558866656,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 57.1479808922,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.495
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 60.16333333333334,
+        "cellMinutes": 59.168333333333344,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 56.410000000000004,
+          "local": 0,
+          "transfer": 0.8016666666666666,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.5863142255333145
+    },
+    {
+      "id": "Calexico",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -115.4989,
+        "lat": 32.6789
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 123.71000000000001,
+      "valhallaMinutes": 112.08726666666666,
+      "candidate": {
+        "pointMinutes": 129.71639906400515,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9733333333333334,
+          "road": 125.3763990640052,
+          "local": 0,
+          "transfer": 2.3333333333333335,
+          "destination": 0.03333333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 125.76166666666664,
+        "cellMinutes": 124.6283333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9883333333333333,
+          "road": 118.5666666666667,
+          "local": 0,
+          "transfer": 4.073333333333333,
+          "destination": 1.1333333333333333
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 3.9547323973385033
+    },
+    {
+      "id": "Julian",
+      "set": "original",
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "destination": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 71.41666666666667,
+      "valhallaMinutes": 67.14213333333333,
+      "candidate": {
+        "pointMinutes": 68.08532222750016,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.1066666666666665,
+          "road": 64.53865556083349,
+          "local": 0,
+          "transfer": 0.265,
+          "destination": 1.175
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 76.43585959131653,
+        "cellMinutes": 75.33419292464987,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9566666666666668,
+          "road": 65.59333333333335,
+          "local": 7.784192924649883,
+          "transfer": 0,
+          "destination": 1.1016666666666666
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -1.687848485483343
+    },
+    {
+      "id": "los-angeles--bakersfield",
+      "set": "regional",
+      "origin": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "destination": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 121.13166666666666,
+      "valhallaMinutes": 105.95386666666667,
+      "candidate": {
+        "pointMinutes": 116.73223173030297,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9966666666666666,
+          "road": 112.48556506363624,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.25
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 124.30490789287491,
+        "cellMinutes": 118.26666666666668,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.1166666666666667,
+          "road": 115.14999999999998,
+          "local": 0,
+          "transfer": 0,
+          "destination": 6.038241226208234
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 1.2261937101554423
+    },
+    {
+      "id": "los-angeles--ventura",
+      "set": "regional",
+      "origin": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "destination": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 80.225,
+      "valhallaMinutes": 65.76675,
+      "candidate": {
+        "pointMinutes": 68.40614091500196,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.9966666666666666,
+          "road": 62.6694742483353,
+          "local": 0,
+          "transfer": 0,
+          "destination": 3.74
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 75.55666666666663,
+        "cellMinutes": 73.46499999999996,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.1166666666666667,
+          "road": 70.34833333333333,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.091666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 7.150525751664674
+    },
+    {
+      "id": "bakersfield--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 213.23166666666665,
+      "valhallaMinutes": 186.82356666666666,
+      "candidate": {
+        "pointMinutes": 217.11025866348118,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.25,
+          "road": 200.59859199681455,
+          "local": 0,
+          "transfer": 14.2,
+          "destination": 0.06166666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 218.01657455954154,
+        "cellMinutes": 217.74490789287486,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 6.038241226208234,
+          "road": 210.68666666666672,
+          "local": 0,
+          "transfer": 1.02,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.906315896060363
+    },
+    {
+      "id": "bakersfield--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 225.225,
+      "valhallaMinutes": 205.76595,
+      "candidate": {
+        "pointMinutes": 223.94988167167327,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.25,
+          "road": 220.08321500500648,
+          "local": 0,
+          "transfer": 0.9466666666666665,
+          "destination": 0.67
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 210.64324122620818,
+        "cellMinutes": 209.9599078928748,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 6.038241226208234,
+          "road": 202.9116666666667,
+          "local": 0,
+          "transfer": 1.0783333333333334,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -13.306640445465092
+    },
+    {
+      "id": "santa-barbara--san-diego",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "destination": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 230.065,
+      "valhallaMinutes": 204.33083333333335,
+      "candidate": {
+        "pointMinutes": 220.45887392897268,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.8866666666666667,
+          "road": 215.42720726230604,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.145
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 228.04333333333324,
+        "cellMinutes": 226.08666666666656,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.005,
+          "road": 222.02000000000007,
+          "local": 0,
+          "transfer": 2.061666666666667,
+          "destination": 1.9566666666666668
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 7.584459404360558
+    },
+    {
+      "id": "santa-barbara--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 304.52333333333337,
+      "valhallaMinutes": 272.2386,
+      "candidate": {
+        "pointMinutes": 315.46574858800716,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.8866666666666667,
+          "road": 312.55074858800754,
+          "local": 0,
+          "transfer": 0,
+          "destination": 0.028333333333333332
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 308.21166666666653,
+        "cellMinutes": 305.27499999999986,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.005,
+          "road": 301.39000000000016,
+          "local": 0,
+          "transfer": 1.88,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 7.254081921340628
+    },
+    {
+      "id": "palm-springs--idyllwild",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.75833333333333,
+      "valhallaMinutes": 53.24466666666667,
+      "candidate": {
+        "pointMinutes": 50.727902105063244,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.67,
+          "road": 2.783333333333333,
+          "local": 42.73623543839658,
+          "transfer": 3.3733333333333335,
+          "destination": 1.165
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 50.58385510082236,
+        "cellMinutes": 49.014663528640405,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197375,
+          "transfer": 0,
+          "destination": 1.5691915721819576
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.1440470042408819
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 107.95,
+      "valhallaMinutes": 91.56958333333334,
+      "candidate": {
+        "pointMinutes": 93.95443388204686,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.67,
+          "road": 46.319390844610595,
+          "local": 43.39170970410295,
+          "transfer": 3.3983333333333334,
+          "destination": 0.175
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 96.4350867960194,
+        "cellMinutes": 95.43175346268606,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 72.80833333333332,
+          "local": 20.015086796019432,
+          "transfer": 2.725,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 2.4806529139725484
+    },
+    {
+      "id": "idyllwild--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 61.443333333333335,
+      "valhallaMinutes": 51.98633333333333,
+      "candidate": {
+        "pointMinutes": 50.72790210506325,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.165,
+          "road": 2.783333333333333,
+          "local": 42.73623543839658,
+          "transfer": 3.3733333333333335,
+          "destination": 0.67
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 50.58385510082237,
+        "cellMinutes": 49.96885510082237,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.5691915721819576,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197374,
+          "transfer": 0,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.1440470042408819
+    },
+    {
+      "id": "idyllwild--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 74.32833333333333,
+      "valhallaMinutes": 60.2767,
+      "candidate": {
+        "pointMinutes": 57.2229326268731,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.585,
+          "road": 54.87293262687313,
+          "local": 0,
+          "transfer": 0.9666666666666666,
+          "destination": 0.7983333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 58.811666666666675,
+        "cellMinutes": 57.731666666666676,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.4216666666666667,
+          "road": 57.02166666666668,
+          "local": 0,
+          "transfer": 0.3733333333333334,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 1.5887340397935716
+    },
+    {
+      "id": "julian--borrego-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "destination": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 46.17666666666666,
+      "valhallaMinutes": 40.170683333333336,
+      "candidate": {
+        "pointMinutes": 54.305184086209074,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.3,
+          "road": 21.99158831943059,
+          "local": 21.56026243344514,
+          "transfer": 4.868333333333333,
+          "destination": 5.585
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 58.870231616289416,
+        "cellMinutes": 55.571263206577,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.1016666666666666,
+          "road": 20.906666666666666,
+          "local": 33.56292987324366,
+          "transfer": 0,
+          "destination": 3.2989684097124137
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -4.565047530080342
+    },
+    {
+      "id": "julian--el-centro",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "destination": {
+        "lon": -115.5631,
+        "lat": 32.792
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 107.08999999999999,
+      "valhallaMinutes": 95.56603333333334,
+      "candidate": {
+        "pointMinutes": 105.74777174646563,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.3,
+          "road": 103.69431336668741,
+          "local": 0,
+          "transfer": 0.24333333333333335,
+          "destination": 1.510125046444914
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 102.00012504644499,
+        "cellMinutes": 100.49000000000008,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.1016666666666666,
+          "road": 99.38833333333332,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.510125046444914
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -3.7476467000206384
+    },
+    {
+      "id": "borrego-springs--anza",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.674,
+        "lat": 33.555
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 92.78999999999999,
+      "valhallaMinutes": 89.98631666666667,
+      "candidate": {
+        "pointMinutes": 93.06725654090208,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.585,
+          "road": 65.83333460437032,
+          "local": 15.36892193653173,
+          "transfer": 6.171666666666667,
+          "destination": 0.10833333333333334
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 109.15114533060672,
+        "cellMinutes": 107.58565186981103,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 1.8283333333333334,
+          "local": 102.26217692089432,
+          "transfer": 1.0633333333333332,
+          "destination": 0.6983333333333334
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -16.083888789704645
+    },
+    {
+      "id": "borrego-springs--julian",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 45.17333333333333,
+      "valhallaMinutes": 39.66288333333333,
+      "candidate": {
+        "pointMinutes": 54.30518408620906,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.585,
+          "road": 21.991588319430583,
+          "local": 21.56026243344514,
+          "transfer": 4.868333333333333,
+          "destination": 0.3
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 58.87023161628939,
+        "cellMinutes": 57.76856494962272,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 20.906666666666666,
+          "local": 33.56292987324366,
+          "transfer": 0,
+          "destination": 1.1016666666666666
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -4.565047530080328
+    },
+    {
+      "id": "joshua-tree--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 150.11333333333332,
+      "valhallaMinutes": 122.83763333333333,
+      "candidate": {
+        "pointMinutes": 152.50916568893757,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.14166666666666666,
+          "road": 151.65083235560422,
+          "local": 0,
+          "transfer": 0.6883333333333334,
+          "destination": 0.028333333333333332
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 142.40833333333345,
+        "cellMinutes": 139.47166666666678,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.17166666666666666,
+          "road": 139.27499999999995,
+          "local": 0,
+          "transfer": 0.025,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -5.309167644395615
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -116.0542,
+        "lat": 34.1356
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 19.708333333333332,
+      "valhallaMinutes": 15.1931,
+      "candidate": {
+        "pointMinutes": 18.60042911269463,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.0183333333333333,
+          "road": 16.08376244602796,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.4983333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 16.99166666666667,
+        "cellMinutes": 16.354999999999997,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.13833333333333334,
+          "road": 16.261666666666667,
+          "local": 0,
+          "transfer": 0.04666666666666667,
+          "destination": 0.545
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -1.60876244602796
+    },
+    {
+      "id": "salton-city--bombay-beach",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 72.28833333333334,
+      "valhallaMinutes": 61.267950000000006,
+      "candidate": {
+        "pointMinutes": 68.55089988041077,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.023333333333333,
+          "road": 56.765899880410785,
+          "local": 0,
+          "transfer": 3.46,
+          "destination": 3.3016666666666667
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 80.87801179159386,
+        "cellMinutes": 78.56967845826053,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 44.788333333333334,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 2.308333333333333
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -4.852245005337949
+    },
+    {
+      "id": "salton-city--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 46.33833333333334,
+      "valhallaMinutes": 39.2368,
+      "candidate": {
+        "pointMinutes": 50.35555391583733,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 5.793333333333333,
+          "road": 44.53388724917066,
+          "local": 0,
+          "transfer": 0,
+          "destination": 0.028333333333333332
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 48.30833333333332,
+        "cellMinutes": 45.371666666666655,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 40.88666666666666,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 2.0472205825040106
+    },
+    {
+      "id": "bombay-beach--salton-city",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "destination": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 72.46666666666667,
+      "valhallaMinutes": 61.58226666666667,
+      "candidate": {
+        "pointMinutes": 68.55089988041078,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.3016666666666667,
+          "road": 56.765899880410785,
+          "local": 0,
+          "transfer": 3.46,
+          "destination": 5.023333333333333
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 80.8780117915939,
+        "cellMinutes": 76.3930117915939,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.308333333333333,
+          "road": 44.78833333333335,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 4.485
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -4.495578338671351
+    },
+    {
+      "id": "bombay-beach--indio",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "destination": {
+        "lon": -116.2156,
+        "lat": 33.7206
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.955000000000005,
+      "valhallaMinutes": 52.188583333333334,
+      "candidate": {
+        "pointMinutes": 52.547528164320816,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.3016666666666667,
+          "road": 47.505861497654166,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.74
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 75.22618684818572,
+        "cellMinutes": 72.3730117915939,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.308333333333333,
+          "road": 40.768333333333345,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 2.8531750565918252
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 0.13628498749347528
+    },
+    {
+      "id": "san-clemente--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 71.05,
+      "valhallaMinutes": 50.75438333333333,
+      "candidate": {
+        "pointMinutes": 59.03967087785231,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.455,
+          "road": 52.759670877852315,
+          "local": 0,
+          "transfer": 4.33,
+          "destination": 1.495
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 58.885000000000005,
+        "cellMinutes": 57.89000000000001,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.545,
+          "road": 53.87,
+          "local": 0,
+          "transfer": 2.4749999999999996,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -0.15467087785230405
+    },
+    {
+      "id": "san-clemente--escondido",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "destination": {
+        "lon": -117.0864,
+        "lat": 33.1192
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 45.931666666666665,
+      "valhallaMinutes": 40.026066666666665,
+      "candidate": {
+        "pointMinutes": 45.06833333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.455,
+          "road": 41.72,
+          "local": 0,
+          "transfer": 1.8033333333333332,
+          "destination": 1.09
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 41.698333333333345,
+        "cellMinutes": 40.338333333333345,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.545,
+          "road": 39.11499999999999,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.0383333333333333
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -3.3699999999999832
+    },
+    {
+      "id": "ventura--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 184.175,
+      "valhallaMinutes": 162.5282,
+      "candidate": {
+        "pointMinutes": 177.4464310926794,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.74,
+          "road": 172.94143109267935,
+          "local": 0,
+          "transfer": 0.095,
+          "destination": 0.67
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 172.02666666666667,
+        "cellMinutes": 171.3433333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.091666666666667,
+          "road": 168.24166666666662,
+          "local": 0,
+          "transfer": 1.0783333333333334,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": -5.419764426012733
+    },
+    {
+      "id": "ventura--san-clemente",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "destination": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 140.06,
+      "valhallaMinutes": 122.53621666666666,
+      "candidate": {
+        "pointMinutes": 129.38645056634002,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.74,
+          "road": 124.15978389967334,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.4866666666666666
+        },
+        "classification": "correct"
+      },
+      "baseline": {
+        "pointMinutes": 134.3883333333333,
+        "cellMinutes": 132.8433333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.091666666666667,
+          "road": 129.49166666666665,
+          "local": 0,
+          "transfer": 1.2600000000000002,
+          "destination": 1.545
+        },
+        "classification": "correct"
+      },
+      "absoluteErrorChangeMinutes": 5.001882766993276
+    }
+  ],
+  "originResults": [
+    {
+      "origin": {
+        "lon": -123.8313,
+        "lat": 46.1879
+      },
+      "settled": 267046,
+      "searchMs": 2621.7044589999996,
+      "displayArrivalMs": 59.60804100000041,
+      "fieldMs": 2681.392334,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "settled": 442378,
+      "searchMs": 3843.1610419999997,
+      "displayArrivalMs": 69.68591600000036,
+      "fieldMs": 3912.859167,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -99.3268,
+        "lat": 38.8792
+      },
+      "settled": 978903,
+      "searchMs": 15416.658083000002,
+      "displayArrivalMs": 247.05695899999773,
+      "fieldMs": 15663.733291,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "settled": 622728,
+      "searchMs": 10427.946417000003,
+      "displayArrivalMs": 187.66916700000002,
+      "fieldMs": 10615.635917,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "settled": 1094588,
+      "searchMs": 22815.558333,
+      "displayArrivalMs": 485.5604170000006,
+      "fieldMs": 23301.136167000004,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -82.5515,
+        "lat": 35.5951
+      },
+      "settled": 1004230,
+      "searchMs": 21645.006,
+      "displayArrivalMs": 466.7382499999949,
+      "fieldMs": 22111.760040999994,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -70.2568,
+        "lat": 43.6591
+      },
+      "settled": 366241,
+      "searchMs": 7626.388458000001,
+      "displayArrivalMs": 200.1469589999906,
+      "fieldMs": 7826.552666000003,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -81.0912,
+        "lat": 32.0809
+      },
+      "settled": 777235,
+      "searchMs": 17177.568415999995,
+      "displayArrivalMs": 380.0126670000027,
+      "fieldMs": 17557.58708299999,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "settled": 297220,
+      "searchMs": 3139.1381669999973,
+      "displayArrivalMs": 68.1571249999979,
+      "fieldMs": 3207.301250000004,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -118.2437,
+        "lat": 34.0522
+      },
+      "settled": 331442,
+      "searchMs": 3428.1304170000076,
+      "displayArrivalMs": 73.74549999998999,
+      "fieldMs": 3501.881208999999,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "settled": 336936,
+      "searchMs": 3543.870041999995,
+      "displayArrivalMs": 76.5630000000092,
+      "fieldMs": 3620.43858300001,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "settled": 290046,
+      "searchMs": 3028.550500000012,
+      "displayArrivalMs": 66.7862499999901,
+      "fieldMs": 3095.342583999998,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "settled": 329667,
+      "searchMs": 3452.1901669999934,
+      "displayArrivalMs": 74.92687500000466,
+      "fieldMs": 3527.1222090000083,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "settled": 319790,
+      "searchMs": 3333.3073329999897,
+      "displayArrivalMs": 72.676667000007,
+      "fieldMs": 3405.9893329999904,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "settled": 297049,
+      "searchMs": 3147.1725000000006,
+      "displayArrivalMs": 69.0669579999958,
+      "fieldMs": 3216.246291999996,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "settled": 282582,
+      "searchMs": 3022.652499999982,
+      "displayArrivalMs": 67.14291700001922,
+      "fieldMs": 3089.800916999986,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "settled": 333445,
+      "searchMs": 3464.144083000021,
+      "displayArrivalMs": 74.4467500000028,
+      "fieldMs": 3538.5962500000023,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "settled": 305481,
+      "searchMs": 3255.0554159999883,
+      "displayArrivalMs": 71.41916700001457,
+      "fieldMs": 3326.4803340000217,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "settled": 303811,
+      "searchMs": 3206.0739999999932,
+      "displayArrivalMs": 71.211707999988,
+      "fieldMs": 3277.2914159999928,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "settled": 314589,
+      "searchMs": 3292.943667000014,
+      "displayArrivalMs": 72.86991599999601,
+      "fieldMs": 3365.819334,
+      "diagnosticBudgetMinutes": 900
+    },
+    {
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "settled": 300197,
+      "searchMs": 3126.4568340000114,
+      "displayArrivalMs": 69.45604099999764,
+      "fieldMs": 3195.918624999991,
+      "diagnosticBudgetMinutes": 900
+    }
+  ],
+  "pathSha256": "7952fd20bf98907027b10cdeabae0994e16611ca28c554c2d24c6f08208decfd",
+  "loadDecodeValidateMs": 587.996333,
+  "outboundCalls": 0,
+  "runtimeChanged": false,
+  "scope": "Saved83 ORS/35 Valhalla development comparison.900min diagnostic fields, whole-cell shading and point times separate. No fresh references, full packaged-query/cloud qualification or activation."
+}

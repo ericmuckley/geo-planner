@@ -1,0 +1,57 @@
+{
+  "root": "data/coarse-quality/us-osm-native-build-v1",
+  "portableClosedInventory": {
+    "files": 67899,
+    "entries": 78876,
+    "logicalFileBytes": 2787749803,
+    "portableTreeSha256": "c2f7dbd73578509597bec9e1df70c236baece6ef48130e34a2090ab3cc142cb9"
+  },
+  "hostClosedAllocation": {
+    "files": 67899,
+    "entries": 78876,
+    "logicalFileBytes": 2787749803,
+    "allocatedInodeBytes": 2396532736,
+    "conservativeBytesWithNamespaceReserve": 3434950571,
+    "treeSha256": "42e5ca613b6d115f39a1b667edd8581dd625f43cc1053466ad40010d16ba84a6",
+    "scope": "SHA256 of sorted postorder path/mode/size/content-or-link rows, no symlink following. Allocation deduplicates hardlinked inodes;8KiB/entry+1MiB namespace reserve, not physical filesystem metadata measurement."
+  },
+  "portableRootfsInventory": {
+    "files": 67573,
+    "entries": 78517,
+    "logicalFileBytes": 2215610879,
+    "portableTreeSha256": "a64ef22d93c8b49689ccfefe09c67a62e67422cb84c6edb86089533fb33ebd72"
+  },
+  "linuxRootfsSealUnchanged": true,
+  "portableHostLinuxRootfsEqual": true,
+  "onlyObservedMetadataDifferences": [
+    "mode"
+  ],
+  "offlineArtifactAudit": {
+    "verified": true,
+    "requests": 52,
+    "bodyBytes": 567143969,
+    "scope": "Saved public artifact bytes and state-machine/receipt reconciliation. Redacted redirect bodies and signed values are not reconstructed or authenticated."
+  },
+  "sourceVersions": {
+    "libosmium": [
+      "#define OSMIUM_VERSION_HPP",
+      "#define LIBOSMIUM_VERSION_MAJOR 2",
+      "#define LIBOSMIUM_VERSION_MINOR 23",
+      "#define LIBOSMIUM_VERSION_PATCH 1",
+      "#define LIBOSMIUM_VERSION_STRING \"2.23.1\""
+    ],
+    "protozero": [
+      "#define PROTOZERO_VERSION_HPP",
+      "#define PROTOZERO_VERSION_MAJOR 1",
+      "#define PROTOZERO_VERSION_MINOR 8",
+      "#define PROTOZERO_VERSION_PATCH 2",
+      "#define PROTOZERO_VERSION_CODE (PROTOZERO_VERSION_MAJOR * 10000 + PROTOZERO_VERSION_MINOR * 100 + PROTOZERO_VERSION_PATCH)",
+      "#define PROTOZERO_VERSION_STRING \"1.8.2\""
+    ]
+  },
+  "scope": "Read-only closed-file hashes/counts; no archive/native/producer replay. Portable content seal omits POSIX permissions and directory sizes; original Linux seal separately preserved and rechecked. Allocation is final, not peak.",
+  "elfGlibcVersions": [
+    "GLIBC_2.17",
+    "GLIBC_2.25"
+  ]
+}

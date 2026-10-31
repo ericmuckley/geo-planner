@@ -1,0 +1,218 @@
+{
+  "status": "passed_sample_screen",
+  "cases": [
+    {
+      "name": "projection",
+      "mode": "projection",
+      "indexLoopSeconds": 1.0844290010281838,
+      "lookupSeconds": 0,
+      "lookupQueries": 0,
+      "lookupCoordinateSha256": null,
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 0,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "fused-validation",
+      "mode": "validation",
+      "indexLoopSeconds": 0.8572911249939352,
+      "lookupSeconds": 0,
+      "lookupQueries": 0,
+      "lookupCoordinateSha256": null,
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 0,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-0-v4",
+      "mode": "v4",
+      "indexLoopSeconds": 1.8169062509550713,
+      "lookupSeconds": 0.0012364580179564655,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1748992,
+      "nativePrefixEof": true,
+      "passes": [
+        {
+          "label": "v4-prefix",
+          "status": "eof",
+          "counts": {
+            "node": 64000
+          }
+        }
+      ],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-0-compact",
+      "mode": "compact",
+      "indexLoopSeconds": 0.9147747920360416,
+      "lookupSeconds": 0.0035398330073803663,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1024256,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-1-compact",
+      "mode": "compact",
+      "indexLoopSeconds": 0.9086951250210404,
+      "lookupSeconds": 0.00355916703119874,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1024256,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-1-v4",
+      "mode": "v4",
+      "indexLoopSeconds": 1.8035655010025948,
+      "lookupSeconds": 0.0014842910459265113,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1748992,
+      "nativePrefixEof": true,
+      "passes": [
+        {
+          "label": "v4-prefix",
+          "status": "eof",
+          "counts": {
+            "node": 64000
+          }
+        }
+      ],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-2-v4",
+      "mode": "v4",
+      "indexLoopSeconds": 1.7996499589644372,
+      "lookupSeconds": 0.0012105840141884983,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1748992,
+      "nativePrefixEof": true,
+      "passes": [
+        {
+          "label": "v4-prefix",
+          "status": "eof",
+          "counts": {
+            "node": 64000
+          }
+        }
+      ],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "name": "pair-2-compact",
+      "mode": "compact",
+      "indexLoopSeconds": 0.9158467090455815,
+      "lookupSeconds": 0.003512333962135017,
+      "lookupQueries": 1152,
+      "lookupCoordinateSha256": "1e1edf449cd4f027155dedb0b591dca5bccf6fd14b888bcf4a50bf13b20a81e5",
+      "counts": {
+        "node": 64000
+      },
+      "projectedSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+      "indexBytes": 1024256,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    }
+  ],
+  "mixed": [
+    {
+      "mode": "v4",
+      "indexLoopSeconds": 0.18360925000160933,
+      "lookupSeconds": 0.0012058340362273157,
+      "lookupQueries": 1128,
+      "lookupCoordinateSha256": "ba18caedf1c7975a9c3302e2d661ba2f361f987e3807ddad37294a9295b11e48",
+      "counts": {
+        "node": 1000,
+        "way": 1000,
+        "relation": 1000
+      },
+      "projectedSha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95",
+      "indexBytes": 36864,
+      "nativePrefixEof": true,
+      "passes": [
+        {
+          "label": "v4-prefix",
+          "status": "eof",
+          "counts": {
+            "node": 1000,
+            "way": 1000,
+            "relation": 1000
+          }
+        }
+      ],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    },
+    {
+      "mode": "validation",
+      "indexLoopSeconds": 0.10627508297329769,
+      "lookupSeconds": 0,
+      "lookupQueries": 0,
+      "lookupCoordinateSha256": null,
+      "counts": {
+        "node": 1000,
+        "way": 1000,
+        "relation": 1000
+      },
+      "projectedSha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95",
+      "indexBytes": 0,
+      "nativePrefixEof": true,
+      "passes": [],
+      "scope": "Fixed node prefix or explicitly re-encoded mixed fixture; not national import throughput."
+    }
+  ],
+  "equivalentSamplesAndCoordinates": true,
+  "medianIndexSeconds": {
+    "v4": 1.8035655010025948,
+    "compact": 0.9147747920360416
+  },
+  "medianSpeedup": 1.9715951037395172,
+  "indexByteFraction": 0.5856264637002342,
+  "sampleGatesPassed": true,
+  "nativeObjectVisits": 521000,
+  "workerSecondsBeforeSummary": 10.867376254987903,
+  "observedProcessMaxRssKiB": 115724,
+  "wholeSourceEof": false,
+  "wholeExtractionQualified": false,
+  "modelChanged": false,
+  "networkRequests": 0
+}

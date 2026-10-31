@@ -1,0 +1,61 @@
+{
+  "equivalent": true,
+  "allSampleRecordsAccepted": true,
+  "sampleCounts": {
+    "node": 1000,
+    "way": 1000,
+    "relation": 1000
+  },
+  "cases": {
+    "reference": {
+      "accepted": true,
+      "error": null,
+      "returnedRecords": 3000,
+      "returnedSha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95",
+      "loadedCounts": {
+        "node": 1000,
+        "way": 1000,
+        "relation": 1000
+      },
+      "passes": [
+        {
+          "label": "mixed-sample",
+          "status": "eof",
+          "counts": {
+            "node": 1000,
+            "way": 1000,
+            "relation": 1000
+          }
+        }
+      ],
+      "visits": 3000,
+      "secondsIncludingJsonReplayValidationHash": 0.131311499979347
+    },
+    "candidate": {
+      "accepted": true,
+      "error": null,
+      "returnedRecords": 3000,
+      "returnedSha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95",
+      "loadedCounts": {
+        "node": 1000,
+        "way": 1000,
+        "relation": 1000
+      },
+      "passes": [
+        {
+          "label": "mixed-sample",
+          "status": "eof",
+          "counts": {
+            "node": 1000,
+            "way": 1000,
+            "relation": 1000
+          }
+        }
+      ],
+      "visits": 3000,
+      "secondsIncludingJsonReplayValidationHash": 0.10729358304524794
+    }
+  },
+  "wholeSourceMetadataValidation": false,
+  "scope": "First fixed objects per type, replayed as JSON; no real spatial selection, dependency closure, index, source-wide metadata validation or national timing claim."
+}

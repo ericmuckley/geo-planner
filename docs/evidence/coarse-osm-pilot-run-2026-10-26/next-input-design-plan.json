@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "status": "Next primary-documentation/metadata design only; no executable acquisition recipe",
+  "inputs": {
+    "docs/evidence/coarse-osm-pilot-run-2026-10-26/run-summary.json": "29c1aeef8c88827f18e3e46004b1872c627af117845d943eadc0fbc57bc27e77",
+    "docs/evidence/coarse-osm-pilot-run-2026-10-26/state.json": "f652d79d951db9711c59ad05b4f71da17efb2d1192d9191cd143f2112e5fdafb",
+    "docs/evidence/coarse-osm-pilot-run-2026-10-26/audit.json": "c62ecc9db4827627b7660b0e4fd386260bf43ce1bfb010b06ffef4a7e397413e",
+    "docs/evidence/coarse-osm-pilot-run-2026-10-26/http/00001.bin": "8084e21e11df846a2e41bb93ddaf66961aa2ef71e9a9fc1f46debc960b303042",
+    "docs/evidence/coarse-osm-pilot-2026-10-26/execution-plan.json": "c8dd8d24f91a9fa679cd22ebd48bc06d38728a3605b8c29494c29d1d6e53fd48",
+    "docs/evidence/coarse-input-redesign-2026-10-26/proposal.json": "e318532fffe1930242f67909a934f9929aec8bf2dfdff4c4bff48c76287f29c7",
+    "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730"
+  },
+  "objective": "Determine whether one deterministic bulk/native OSM distribution can supply complete native data for the same 21 pilot windows and 2026-10-21T00:00:00Z snapshot within the unchanged resource envelope, avoiding dependence on an interactive public query queue. Keep eventual Vercel queries on compiled static costs.",
+  "method": [
+    "Preserve both stopped acquisitions, all old caches/matcher results and frozen code. No retry, resume, mirror switch, changed Overpass query or use of unused allowance. The 502 status response establishes one failed attempt, not permanent service or road-data infeasibility.",
+    "Review primary publisher/tool documentation and metadata descriptions for at most two deterministic native OSM bulk/extract approaches. Verify historical snapshot availability/reconstruction, stable object/checksum identity, license, selected-way full node closure and boundary-crossing inclusion. No road/PBF/replication payloads, status/interpreter calls, tool binaries, hosted routing or paid services during design.",
+    "For a selected design, specify exact immutable source objects or identity-resolution procedure, same snapshot and all 21 original windows/order/denominators; raw native IDs/versions/timestamps/tags/units/direction/conditions/access/levels/restriction references must remain lossless. Do not silently substitute current-state or a newer snapshot.",
+    "Show enforceable aggregate body/request/tool/row/extract/disk/memory/time bounds including historical reconstruction, redirects, compressed/decompressed data and closure dependencies. A small output bbox or row LIMIT alone does not bound source transfers. No national download or local Overpass service setup is part of this design task.",
+    "Do not increase the original envelope: 512 MiB total HTTP bodies including metadata/tools, 128 MiB tools within that total, 10000 attempts, zero retries/paid spend/provider queries, 1 GiB memory/zero swap, 2 GiB working files, 128 MiB normalized extract, 250000 unique typed elements/500000 occurrences, one hour/64 MiB tmp. The 42-attempt limit belonged to the closed status/query recipe; any next request plan must be explicit and independently justified within the original envelope.",
+    "Retain strict raw/partial/error preservation, native field/typed identity/node-version dependency validation, full window/count/closure provenance, independent transport/completeness checks and original all-21-complete/50% unique plausible usable-limit Census-km/deterministic 50-match review. Source adapter/parser/matching and every original accuracy/physical/package/startup/API/visual gate remain separate.",
+    "Deliver one cited prospective proposal with exact commands/budgets/failure behavior and pass/fail criteria, or explicit no-go if no documented approach fits. Do not implement or run a new downloader, native speed/access adapter or matcher; later execution requires synthetic proof, frozen code/inputs/resource rules and a fresh versioned output."
+  ],
+  "pass": "One reviewable primary-source-backed bounded bulk/native input design, or explicit no-go without raised limits or downloads. All old evidence, original denominators/snapshot/semantics/gates and deployed v9 preserved.",
+  "deferred": "Road/tool/provider acquisition, stopped-run retry or endpoint rotation, national expansion, new service provisioning, paid resources, speed/access/matching semantics, graph/model/ETA build, app/UI/env/DB/npm/config changes and commit/push/deploy."
+}

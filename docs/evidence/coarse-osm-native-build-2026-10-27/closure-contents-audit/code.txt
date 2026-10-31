@@ -1,0 +1,14 @@
+import json,sys
+from pathlib import Path
+sys.path.insert(0,"/proof")
+from asset_contents import snapshot
+value,rows=snapshot("/rootfs",True)
+host=json.loads(Path("/host.json").read_text());assert set(host)==set(rows)
+differences=[];fields=set()
+for path,row in rows.items():
+ if row!=host[path]:
+  changed=[k for k in row if row[k]!=host[path][k]]
+  fields.update(changed)
+  assert all(k=="mode" or k=="size" and row["kind"]=="directory" for k in changed),(path,row,host[path])
+  if len(differences)<8:differences.append({"path":path,"linux":row,"host":host[path]})
+print(json.dumps({"portable":value,"differentFields":sorted(fields),"differenceSamples":differences,"allDifferencesAreModeOrDirectorySize":True}))

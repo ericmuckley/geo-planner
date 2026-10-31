@@ -1,0 +1,31 @@
+{
+  "status": "stopped",
+  "errorType": "PilotError",
+  "error": "Declared body oversize",
+  "toolBinaryDownloads": 0,
+  "pbfRequests": 0,
+  "sourceFeasibilityQualified": false,
+  "actualDecoderQualified": false,
+  "plannedRequests": [
+    {
+      "url": "https://pypi.org/pypi/requests/json",
+      "status": "complete"
+    },
+    {
+      "url": "https://pypi.org/pypi/charset-normalizer/json",
+      "status": "failed"
+    },
+    {
+      "url": "https://pypi.org/pypi/idna/json",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "url": "https://pypi.org/pypi/urllib3/json",
+      "status": "unmeasured_after_stop"
+    },
+    {
+      "url": "https://pypi.org/pypi/certifi/json",
+      "status": "unmeasured_after_stop"
+    }
+  ]
+}

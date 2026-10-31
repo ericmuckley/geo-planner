@@ -1,0 +1,106 @@
+{
+  "reviewDate": "2026-10-26",
+  "primaryDocumentationBrowsingPerformed": true,
+  "browsingHttpBytesAttemptsMeteredOrClaimed": false,
+  "sources": [
+    {
+      "id": "geofabrik-technical",
+      "url": "https://download.geofabrik.de/technical.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "Daily extraction uses a locally updated planet and cascading geographic cuts. Public PBF lacks user/uid/changeset fields, not necessarily all metadata. Older dated files have limited retention. Regional full history is available through a login-protected service. Diffs describe changes between extracts, including possible boundary changes; they do not establish arbitrary subdaily reconstruction."
+      ],
+      "scope": "Publisher documentation, no raw extract/header/checksum fetched."
+    },
+    {
+      "id": "geofabrik-california",
+      "url": "https://download.geofabrik.de/north-america/us/california.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "The listed children are Northern and Southern California. Dated parent california-261020.osm.pbf is listed as 1333217331 bytes."
+      ],
+      "scope": "Directory metadata only; no polygon coverage or header verified."
+    },
+    {
+      "id": "geofabrik-socal",
+      "url": "https://download.geofabrik.de/north-america/us/california/socal.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "The directory lists socal-261020.osm.pbf at 671829508 bytes, socal-261021.osm.pbf at 671865396 bytes and no subregions. These are source-file sizes, not the size of a road-only or 21-window extract."
+      ],
+      "scope": "No data/checksum fetch. A filename date/file modification time is not the required exact OSM state timestamp."
+    },
+    {
+      "id": "geofabrik-us",
+      "url": "https://download.geofabrik.de/north-america/us.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "The directory lists us-261020.osm.pbf at 12219271434 bytes and us-261021.osm.pbf at 12221526745 bytes. The current page declares its latest state as 2026-10-25T21:21:21Z."
+      ],
+      "scope": "Metadata listing/declared latest state only; no retained immutable content identity or data-header confirmation."
+    },
+    {
+      "id": "planet-pbf",
+      "url": "https://planet.openstreetmap.org/pbf/",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "The publisher lists planet-261019.osm.pbf as 89G. This rounded listing is already far above 512 MiB; no exact byte count is asserted."
+      ],
+      "scope": "Directory metadata only; no PBF/checksum/torrent/replication payload."
+    },
+    {
+      "id": "planet-overview",
+      "url": "https://planet.openstreetmap.org/",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "Weekly database copies and history containing older/deleted object versions are documented. Complete planet files are large; regional extracts are suggested."
+      ],
+      "scope": "Publisher documentation, not a historical snapshot reconstruction proof."
+    },
+    {
+      "id": "planet-history-documentation",
+      "url": "https://wiki.openstreetmap.org/wiki/Planet.osm/full",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "The project documents weekly full-history dumps, omitted redactions and some early-history omissions. Its dated example reports a 151.7G PBF on 2026-10-01."
+      ],
+      "scope": "Project-maintained documentation; not a currently inspected history object or proof that a dump covers the requested snapshot."
+    },
+    {
+      "id": "osmium-time-filter",
+      "url": "https://docs.osmcode.org/osmium/latest/osmium-time-filter.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "A single-time filter emits objects valid at that time from history input, excluding deleted objects in the resulting snapshot. It streams one pass; that reduces working memory but does not reduce bytes needed from its source. Filtering a later state-only file cannot recover superseded/deleted versions that are absent from it."
+      ],
+      "scope": "Tool contract plus explicit inference about absent versions; tool not installed or executed."
+    },
+    {
+      "id": "osmium-extract",
+      "url": "https://docs.osmcode.org/osmium/latest/osmium-extract.html",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "complete_ways uses two passes, selects in-region nodes and ways referencing them, and completes those ways nodes. simple is the pipe-capable strategy and leaves boundary ways incomplete. The documented node-seeded selection does not establish inclusion of a segment crossing a bbox with no interior node. Memory depends on number of extracts, highest node ID and strategy."
+      ],
+      "scope": "Documented semantics and synthetic inference only; no actual memory/performance measurement."
+    },
+    {
+      "id": "osm-license",
+      "url": "https://www.openstreetmap.org/copyright",
+      "observedDate": "2026-10-26",
+      "notes": [
+        "OSM data is ODbL; attribution and license notice must accompany use/distribution as applicable."
+      ],
+      "scope": "License/source provenance unchanged; no new data distributed."
+    }
+  ],
+  "unavailablePageChecks": [
+    {
+      "url": "https://planet.openstreetmap.org/pbf/full-history/",
+      "result": "Browser tool reported inaccessible; no history listing inspected or retried through a mirror."
+    }
+  ],
+  "roadPayloadRequests": 0,
+  "toolDownloads": 0,
+  "routingProviderRequests": 0
+}

@@ -1,0 +1,9 @@
+{
+  "status": "V1 not admitted after post-control review, despite71 passing tests. Preserve exact V1 source/recipe/output.",
+  "problem": "V1 reference charges only consume callbacks. A metadata-rejected object is received/countable by NativeValidator but omitted from partial counts and global visit budget.",
+  "correction": "V2 checks pending native/NativeValidator receipt counters, clamps each scan to remaining aggregate allowance, charges receipts in finally even on rejection, records received vs validated counts, and preserves an over-limit sentinel instead of dropping it.",
+  "controls": "New regression demonstrates V1 version0 node reports0counts/0budget, then V2 Python/C++ both report1received/1budget/EOFfalse. Aggregate quota1 yields2received including sentinel on both paths; valid source/field/index/lookup/IO behavior matches.",
+  "noRealSampleReadOrCompile": true,
+  "artifactUnchanged": true,
+  "sampleRecipePendingV2Controls": true
+}

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "status": "Frozen before full-data exposure join",
+  "inputs": {
+    "docs/evidence/coarse-road-time-control-2026-10-25/report.json": "1989a55ba20197d381dbde5f43e3c37a298439c51132f9d3bda16ba7c430f3e8",
+    "docs/evidence/coarse-road-time-control-2026-10-25/analysis.json": "57442de105f0d4ad46efce16c73f40589b2ecb84c1734074c5a83baf51b35728",
+    "docs/evidence/coarse-road-time-control-2026-10-25/plan.json": "674b94d1b822dbbd670fa804acf438aa377b84f1f4632d031b40e15ddf02a65d",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/report.json": "753faba8fa2ee78a862f2069d06b3a545b4f5a4d13ca3eef8dae7192d2951bb4",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-report.json": "1bfa242bb3f9d9e12a4dbb6f4fc93ca8a5562ddd5c7ab561790eae35b8c6357f",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/sha256.json": "86ae8c04402586f59749f73707430414a95d3a207d4cd7e5a572aaba6d859981",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/analysis.json": "0e5c01b31ae537019e13491d981462067c24951629716dcff9ea56b445df6778",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/next-design.json": "5eece245f8e6922796d6f0511c1beb23b116c966dc69e7064b7843817ec248dd",
+    "docs/evidence/coarse-road-time-control-2026-10-25/next-diagnostic-plan.json": "096ef690c10145d96c86850f44e5b130a47fb9b8618d67ecf4fe013765195173",
+    "docs/evidence/coarse-road-time-control-2026-10-25/sha256.json": "a7e6064b31b85d18b17f42c9d08209bae8f7eefaad545756034756f28cecd9bf",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-edge-audit.json.gz": "b24f1fa005109e2b535bd5a956d1a456ae6e0bc83d90dfb7cad2edd119bca845",
+    "scripts/coarse_timing_exposure.py": "68356ceacee09964cc8841b94793efa545ea475b03a3087b63e481749e2bda76",
+    "scripts/coarse_timing_exposure_test.py": "29552c20536e2bcc64b04c81e8ea5aa87a90d93c5ec8435ada844e738233c25b"
+  },
+  "toolFiles": {
+    "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13": "542c879fdc2cfe0be223e4729082bac529780d90c6d811c853de852765b35a35",
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5",
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/gzip.py": "dba33ac2497af37712ea23f5c3ce3ed56177262886868cbc6a6d43632c79afe9",
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/hashlib.py": "f129b330e6ab878a96085843b3606acd7d157b8fe6edfa15e37fa13988cef19c",
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/__init__.py": "07921047886282e3d324acf95f7d9f840faa806664ee7007e7333a7df4cdcaf6",
+    "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/statistics.py": "0f618d7c13e99f5289d5e2a20ba8b7340be27ab424f2bffb739ab3be291fe261"
+  },
+  "pythonVersion": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "files": {
+    "control": "docs/evidence/coarse-road-time-control-2026-10-25/report.json",
+    "paths": "docs/evidence/coarse-backbone-path-audit-2026-10-25/report.json",
+    "base": "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-report.json",
+    "baseEdges": "docs/evidence/coarse-backbone-path-audit-2026-10-25/base-edge-audit.json.gz",
+    "comparison": "docs/evidence/coarse-road-time-allowance-2026-10-25/analysis.json"
+  },
+  "output": "data/coarse-quality/timing-exposure-v1",
+  "cases": 83,
+  "sensitivities": 35,
+  "sourceClassesKph": [
+    55,
+    85,
+    90,
+    105
+  ],
+  "numericalTolerance": 1e-08,
+  "cohorts": [
+    "all",
+    "frontier",
+    "original",
+    "regional",
+    "budget/360,600,720",
+    "frontierBudget/360,600,720",
+    "oldResidual/faster,equal,slower",
+    "currentResidual/faster,equal,slower",
+    "newMissVsV9",
+    "newMissVsSource",
+    "persistentSourceMiss",
+    "originalRegressionGateExceeded"
+  ],
+  "coverageSemantics": "Source-to-ORS ratios null for 3 no-full-Census cases; provider-to-empty-subset zeros retained as structural coverage, not route mismatch measurements. All means/medians/ranges keep available/missing counts. Class exposure is captured unbuffered pure source travel, not current rerouted path exposure. Base chord geometry and endpoints remain unresolved.",
+  "budgetSemantics": "360/600/720 are planned query budgets, not observed route durations. Older 35 all use 720 display budget and do not establish a 12-hour travel-time horizon; separate frontier budget summaries are emitted.",
+  "method": [
+    "Exact ID/set/reference/point-cost join with all 83/35",
+    "Independently reproduce pure road class exposure from detailed source km/class and base source-edge proofs, separating artificial connectors and original rounding",
+    "Verify old/held/current totals and original local/transfer/endpoint costs against prior accounting",
+    "Report all predeclared cohort counts, available/missing denominators, medians and full ranges; no fitted threshold, policy or accuracy simulation",
+    "Independently recompute joined outputs/coverage/cohort arithmetic before interpreting any generic correction"
+  ],
+  "commands": [
+    "python3 -B -m unittest discover -s scripts -p coarse_timing_exposure_test.py",
+    "npm run check",
+    "npm run typecheck",
+    "npm run build",
+    "python3 -B scripts/coarse_timing_exposure.py data/coarse-quality/timing-exposure-v1 PLAN_SHA256"
+  ],
+  "onFailure": "Preserve failed output and all 83 planned IDs. Stop dependent work. No substituted cases, factor, query, source producer, provider/env/key/DB or runtime change.",
+  "scope": "Descriptive saved development evidence, not fitting or a new candidate. ORS recommended-fallback and 35 older Valhalla sensitivity remain explicit. Partial Census-subset coverage, not whole-route overlap, road identity or access. No national/traffic/area/holdout or app/cloud performance qualification."
+}

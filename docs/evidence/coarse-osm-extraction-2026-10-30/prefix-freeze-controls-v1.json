@@ -1,0 +1,17 @@
+{
+  "recipe": "docs/evidence/coarse-osm-extraction-2026-10-30/prefix-plan-controls-v1.json",
+  "sha256": "c22d99b9c35ec361d160c512ec59e00a6df60f90aea092e07a0e527ff258054d",
+  "output": "data/coarse-quality/us-osm-cell-prefix-controls-v1",
+  "command": "python3 -B scripts/run_osm_cell_prefix_v1.py docs/evidence/coarse-osm-extraction-2026-10-30/prefix-plan-controls-v1.json c22d99b9c35ec361d160c512ec59e00a6df60f90aea092e07a0e527ff258054d",
+  "limits": {
+    "hostSeconds": 600,
+    "workerSeconds": 300,
+    "inputBytes": 83,
+    "parts": 1,
+    "blocks": 1,
+    "rows": 4,
+    "codecRows": 2000000,
+    "codecCalls": 100000
+  },
+  "status": "Frozen before first execution; no replay after output exists"
+}

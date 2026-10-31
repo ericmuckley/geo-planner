@@ -1,0 +1,25 @@
+{
+  "status": "Frozen after12 synthetic host/Linux fixtures, before retained-data exclusion inventory",
+  "levels": "None or empty list is missing. Non-list, non-dictionary rule, absent/non-numeric/bool/nonfinite value, or invalid between interval is malformed. Valid between is None or numeric/nonbool [lo,hi] with0<=lo<hi<=1. Any nonempty extra field outside value/between is unsupported; every field/value remains in rawLevelRules.",
+  "levelCategoryPriority": [
+    "missing",
+    "malformed",
+    "unsupported_fields",
+    "partial (any valid interval not[0,1])",
+    "uniform_zero, uniform_nonzero or mixed"
+  ],
+  "valueCategory": "Separately preserve numeric value class: unknown if any invalid/absent rule value; otherwise uniform_zero if all0, uniform_nonzero if all same nonzero, mixed if differing. Partial/unsupported categories do not hide this underlying value observation. Overlap flag uses positive interval overlap, not touching endpoints. Zero is not a grade/access proof.",
+  "measurements": "For every excluded aligned row with two decoded endpoints, measure nearest own aligned samples and tied index intervals with the frozen25m distance and1e-9km tie tolerance, even if original metadata rejection skipped this step. Frozen progress applied only if no original base reason and inside window; distance rejection precedes tied/nonprogressing rejection. Additional measurement flags never replace/clear frozen reasons.",
+  "candidateOverlap": "For every excluded incidence intersect its aligned sample indices with the union of all saved candidate-member samples. Record shared count and original-weight incidence km once per incidence; intersect distinct nonnull raw endpoint IDs with candidate-member endpoint IDs. Record both/sample_only/endpoint_only/neither, or no_candidate_record. No adjacency, connector-distance or chain enumeration; an ID/sample overlap does not prove harmlessness, connectivity or uniqueness.",
+  "cohorts": [
+    "all",
+    "with_cache",
+    "empty_cache",
+    "candidate_bearing",
+    "without_candidate_with_cache",
+    "formerly_absent_positive",
+    "baseline_absent"
+  ],
+  "denominators": "Cohorts/reasons overlap. Incidences are per arc/window/excluded row; unique counts identify retained id/version pairs via their fixed original ordinal, not physical roads. Source arc km may repeat reverse alignments/windows. Per-incidence shared km must not be called road coverage. Retain all21 windows,85/105 classes,55120 rows,2469 arc records,85629 samples,82 chains/32 unresolved records,14 positives,0 caps and original parser/2.8270705809269594 baseline.",
+  "decision": "After independent accounting, specify one prospective geometry-only metadata/uncertainty hypothesis or stop this input. No revised matcher/policy, chain search, semantic permission/level admission, requests or runtime change."
+}

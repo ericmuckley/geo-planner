@@ -1,0 +1,83 @@
+{
+  "reviewedOn": "2026-10-26",
+  "scope": "Primary documentation only; no interpreter/status request, road object, tool binary or routing result fetched. Search results from other publishers were not relied on. Documentation retrieval is separate from a future metered data run; exact HTTP bytes/attempts behind browsing are not claimed.",
+  "sources": [
+    {
+      "id": "overture_client",
+      "url": "https://docs.overturemaps.org/getting-data/overturemaps-py/",
+      "title": "Python Client",
+      "documented": "BBox queries stream from cloud GeoParquet and target latest via STAC by default. Reviewed options do not specify a hard total HTTP/request cap for these21 windows.",
+      "designImplication": "No new CLI/package acquisition or release auto-selection; pruning is not an enforceable aggregate transfer bound."
+    },
+    {
+      "id": "overture_catalog",
+      "url": "https://docs.overturemaps.org/getting-data/cloud-sources/",
+      "title": "Accessing the Overture Catalog",
+      "documented": "STAC discovers releases and GeoParquet locations.",
+      "designImplication": "A release/path and bbox predicate alone do not measure complete-window speed/access coverage or enforce our resource envelope."
+    },
+    {
+      "id": "overpass_geometry",
+      "url": "https://dev.overpass-api.de/overpass-doc/en/full_data/osm_types.html",
+      "title": "Geometries",
+      "documented": "The manual explicitly includes ways crossing a bbox without a node inside; node(w) retrieves their referenced nodes. It warns against expanding collecting relations.",
+      "designImplication": "Use full selected-way node closure, no cropped geometry and no recursive relation expansion. This is a documented query contract, not a live completeness measurement."
+    },
+    {
+      "id": "overpass_ql",
+      "url": "https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL",
+      "title": "Overpass QL",
+      "documented": "Documents named sets, date snapshots, child/parent recursion, meta output and terminal type counts.",
+      "designImplication": "No out limit or geometry crop; retain raw tags and typed IDs. Generator/schema/response validation remains a live-run precondition."
+    },
+    {
+      "id": "overpass_history",
+      "url": "https://dev.overpass-api.de/overpass-doc/en/analysis/museum.html",
+      "title": "Working with Museum Data",
+      "documented": "A way version alone does not determine its geometry because referenced nodes can change independently; date snapshots provide consistent historical combinations.",
+      "designImplication": "Bind requested UTC snapshot, every node version/coordinate and ordered dependency hash, not just way id/version."
+    },
+    {
+      "id": "overpass_commons",
+      "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+      "title": "Commons",
+      "documented": "Describes status slots/cooldown,429/504 refusals and server timeout/RAM declarations. It discourages public production backends and world-scale bbox scraping.",
+      "designImplication": "One finite offline21-window pilot, sequential status/query pairs, no retry/failover; public instance is not a national acquisition strategy or app backend."
+    },
+    {
+      "id": "overpass_formats",
+      "url": "https://dev.overpass-api.de/overpass-doc/en/targets/formats.html",
+      "title": "Data Formats",
+      "documented": "Documents tags, geometry references, version/timestamp metadata and cropped-output limitations.",
+      "designImplication": "Keep raw response and full referenced-node geometry; accept variable nonessential metadata only by a frozen schema rule, never require editor usernames."
+    },
+    {
+      "id": "overpass_api",
+      "url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "title": "Overpass API",
+      "documented": "Documents the HTTPS interpreter POST form data parameter and JSON response envelope.",
+      "designImplication": "Allow only the selected hostname/status/interpreter endpoints. Freeze actual generator/schema and received hashes during the bounded run; no runtime API access."
+    },
+    {
+      "id": "osm_maxspeed",
+      "url": "https://wiki.openstreetmap.org/wiki/Key:maxspeed",
+      "title": "Key:maxspeed",
+      "documented": "Posted speed limits can have default km/h units, explicit other units and directional/conditional forms.",
+      "designImplication": "Preserve exact tag strings; no inferred statutory speed table, scoped-rule flattening or ETA conversion. A source adapter needs a separate tested freeze."
+    },
+    {
+      "id": "osm_restrictions",
+      "url": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+      "title": "Relation:restriction",
+      "documented": "Restriction relations have type=restriction and typed from/via/to members; missing relations do not capture all implicit rules.",
+      "designImplication": "Retain parent restriction relations and unresolved external members, without treating their absence as driving permission."
+    },
+    {
+      "id": "osm_license",
+      "url": "https://www.openstreetmap.org/copyright",
+      "title": "Copyright and License",
+      "documented": "OSM identifies ODbL and requires attribution.",
+      "designImplication": "Preserve source/license notice and provenance in raw/derived metadata; no derivative is published or deployed by this design."
+    }
+  ]
+}

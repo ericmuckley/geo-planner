@@ -1,0 +1,36 @@
+{
+  "recipeSha256": "cb198a2b6b2d4b4037a044831c932c59a869826935b63f9a42df71b99ecdd2ad",
+  "artifactSha256": "56cb0ae4020e9ea04586ea72e1f71a2f6a943d83222dfa42d40a0a4f65a42c9a",
+  "admissionSha256": "8d2b127b6afaef34a0778e5a148fb756c8de84c56c8d308d2773a79d7037d98a",
+  "sourceIdentity": {
+    "path": "data/coarse-quality/us-osm-input-v3/download/http/001.bin",
+    "bytes": 12229320016,
+    "sha256": "1b127070917e2f4e5d9e778e2412bb44d24116519cf084ab72fe13e679eb11ff",
+    "md5": "c5abaec55e724255277f22fb97941e5a",
+    "publisherState": "2026-10-25T21:21:21Z",
+    "counts": {
+      "node": 1606229364,
+      "way": 162688797,
+      "relation": 1624265
+    }
+  },
+  "caps": {
+    "hostSeconds": 7800,
+    "workSeconds": 7740,
+    "workerSeconds": 7200,
+    "hostHashSeconds": 240,
+    "passSeconds": 3000,
+    "lookupSeconds": 300,
+    "memoryBytes": 4294967296,
+    "tmpBytes": 268435456,
+    "workingBytesIncludingTmp": 1073741824,
+    "fileBytes": 67108864,
+    "reportBytes": 2097152,
+    "probeIndexBytes": 402653184,
+    "lookupShardBytes": 4294967296,
+    "lookupCodecRows": 256000000
+  },
+  "output": "data/coarse-quality/us-osm-country-screen-v3",
+  "command": "PYTHONPATH=scripts python3 -B scripts/run_osm_country_screen_v3.py --screen docs/evidence/coarse-osm-country-exec-2026-10-30/screen-plan.json cb198a2b6b2d4b4037a044831c932c59a869826935b63f9a42df71b99ecdd2ad data/coarse-quality/us-osm-country-screen-v3",
+  "scope": "Exact one bounded execution, no retries/resampling/cap increases. User explicitly authorized continuing through the bounded national test."
+}

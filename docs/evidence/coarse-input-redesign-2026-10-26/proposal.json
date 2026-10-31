@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "status": "Selected acquisition design for synthetic implementation; no reader implemented or data acquired here. Not an executable plan or source/model admission.",
+  "inputs": {
+    "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730",
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/next-input-design-plan.json": "df45f2c65cebc6b825220533ec9a46ffb65f9ea715132232f7b527dc2213edd6",
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/decision.json": "15756dc6138da3e160b82eb3d265abd980c96cd6df87af4cf0aeefcf70cd1604",
+    "docs/evidence/coarse-timing-fragments-run-2026-10-26/metrics.json": "0ff10aa5e1333da55ff7d88730561bc2c83ff61b3beaf946d8eab3d7f64b3d87",
+    "docs/evidence/coarse-timing-pilot-2026-10-25/state.json": "b8e3f2c9a810682f6c2bce61098ff3842698e3a94ad772270dfcf393f0298561",
+    "docs/evidence/coarse-input-redesign-2026-10-26/sources.json": "4cee84d363514169aaf75e6a3532d14116efc9a2595178c2f06c9d9fe2db1d31",
+    "docs/evidence/coarse-input-redesign-2026-10-26/queries.json": "a1e07317b394234111e2bd855e72bd69a4db45cdd861b4668667f40a620b8de0"
+  },
+  "selectionDecision": "Select one finite OSM/Overpass snapshot capture pilot. Do not select the reviewed Overture client path for this run: documented spatial pruning is useful but is not a replacement for our metered transport; no complete-window transfer/attribute forecast is established. This is not a finding that Overture is generally unsuitable.",
+  "approachesReviewed": [
+    "Overture cloud GeoParquet bbox extraction",
+    "OSM snapshot extracts through Overpass"
+  ],
+  "source": {
+    "provider": "OpenStreetMap through the public Overpass instance",
+    "host": "overpass-api.de",
+    "statusUrl": "https://overpass-api.de/api/status",
+    "queryUrl": "https://overpass-api.de/api/interpreter",
+    "snapshotUtc": "2026-10-21T00:00:00Z",
+    "queryManifest": "docs/evidence/coarse-input-redesign-2026-10-26/queries.json",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "pricingPolicy": "No credentials, paid service, subscription or paid fallback. Community service may refuse or time out; availability/completion is not promised.",
+    "identityResolution": "Bind exact query/form hashes and snapshot before access. On first successful response record JSON version0.6 and full Overpass API generator string; require the same generator string thereafter, valid osm3s base timestamp>=snapshot and element timestamps<=snapshot. Preserve all raw bytes/hashes. This is an observed capture identity, not a publisher immutable release guarantee."
+  },
+  "windows": {
+    "sourceProposal": "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json",
+    "sourceProposalSha256": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730",
+    "count": 21,
+    "ids": [
+      "origin-00",
+      "origin-01",
+      "origin-02",
+      "origin-03",
+      "origin-04",
+      "origin-05",
+      "origin-06",
+      "origin-07",
+      "origin-08",
+      "origin-09",
+      "origin-10",
+      "origin-11",
+      "origin-12",
+      "origin-13",
+      "origin-14",
+      "origin-15",
+      "origin-16",
+      "origin-17",
+      "origin-18",
+      "origin-19",
+      "origin-20"
+    ],
+    "selection": "Exactly the prior21 bboxes and order. All class85/105 Census records and original2078.237959868213 weighted km/85629 samples remain denominators; no case substitution or outcome filter. These windows are validation only, not runtime routing regions."
+  },
+  "queryContract": [
+    "Select all highway-tagged ways in the exact bbox, retain full node references and retrieve all referenced nodes without a spatial crop. Keep raw tags on ways and nodes, including speed/access/direction/level/barrier context.",
+    "Retain parent type=restriction relations from selected roads and their nodes, with full raw tags and typed member references. Do not recursively expand relation geometry or fetch external members. External members remain explicitly unresolved; query closure is for selected highway-way geometry, not a full routable graph.",
+    "Return untruncated meta objects and one terminal count record over the identical named payload set. Do not use out N, LIMIT, center geometry or bbox-cropped output. Official manual documents crossing-way selection; no live capability/completeness measurement is claimed by this design."
+  ],
+  "hardCaps": {
+    "totalHttpBodyBytes": 536870912,
+    "httpAttempts": 42,
+    "statusGets": 21,
+    "interpreterPosts": 21,
+    "toolDownloadBytes": 0,
+    "retries": 0,
+    "redirectsFollowed": 0,
+    "paidSpend": 0,
+    "routingProviderRequests": 0,
+    "databaseReadsWrites": 0,
+    "clientMemoryBytes": 1073741824,
+    "swapBytes": 0,
+    "workingBytes": 2147483648,
+    "normalizedExtractBytes": 134217728,
+    "uniqueSourceElementsAllTypes": 250000,
+    "elementOccurrencesAllWindows": 500000,
+    "singleNormalizedElementBytes": 1048576,
+    "wallSeconds": 3600,
+    "tmpBytes": 67108864,
+    "statusAcceptedBodyBytes": 65536,
+    "queryAcceptedBodyBytes": 16777216,
+    "oversizeSentinelBytesPerResponse": 1,
+    "maximumBodyBytesFromRequestPlan": 353697834
+  },
+  "timeouts": {
+    "serverQuerySeconds": 60,
+    "serverDeclaredRamBytes": 268435456,
+    "statusAbsoluteClientSeconds": 10,
+    "queryAbsoluteClientSeconds": 90,
+    "maximumStatusDirectedWaitSeconds": 30,
+    "globalIndependentWatchdogSeconds": 3600,
+    "scope": "Server maxsize is server RAM, not HTTP body/client memory. Client body meter, local cgroup and global watchdog enforce independent limits. A status wait is not a query retry; if unavailable beyond30s, malformed or declined, stop."
+  },
+  "transport": [
+    "One status GET per window, then at most one query POST in unchanged order. Wait only as reported by that status and only<=30s/global deadline. No polling, concurrency, mirror rotation, per-element calls or repair queries. Any429/504/error stops the run; preserve all remaining windows as unmeasured.",
+    "Only HTTPS host overpass-api.de, port443, exact status/interpreter paths; POST application/x-www-form-urlencoded data with the frozen body. Disable inherited proxies/credentials/cookies and redirects. Identity encoding only; reject unexpected compressed encoding. No library remote filesystem, extension fetch, external CLI or nonmetered I/O.",
+    "All status/data/error bodies use one client meter and budgeted disk spool. Read at most accepted limit+1 per response (the extra byte detects oversize); count and preserve every byte read. Stop/close on oversize, truncation, missing count, remark/error, invalid schema, identity drift or any cap. Do not consume an oversized declared body. Under42 planned attempts, maximum read bodies including sentinel bytes are353697834, below the512MiB envelope. No tool download is planned."
+  ],
+  "records": [
+    "Raw responses and HTTP/status/request ledgers stay ignored. Normalize only original object type/id/version/timestamp, complete raw tags, node coordinates, ordered way node IDs and typed relation member IDs/roles. Preserve optional unknown fields in raw hashes; editor usernames/UIDs are not required by the normalized schema.",
+    "Use snapshot+typed ID+version as source identity, validate duplicate objects consistently across windows. Bind each way geometry to its ordered node IDs, every referenced node version/coordinate and a canonical dependency hash. A way version alone is insufficient.",
+    "Count all received unique source elements and occurrences, including unsupported highways and external node geometry. Retain every original window outcome, zero and unsupported/missing field. Unknown tags/grade/direction/access are inventory observations, not new driving permission or model speeds."
+  ],
+  "captureAcceptance": [
+    "All21 requests produce complete valid response envelopes with no remark/error, exactly one final count and exact per-type/total count agreement; no output limit/crop or missing way nodes. Every object timestamp/snapshot/generator/typed identity/dependency check passes; duplicates are byte/field consistent. All limits and independent HTTP/disk/raw identity audits reconcile.",
+    "Complete means the documented query result and selected-way node closure for all21 windows, not complete real-world roads, all relation dependencies, usable attributes, a national graph or driving truth. No future capture can be marked complete after a cap/refusal/invalid response; retain partial data without claiming eligibility."
+  ],
+  "feasibilityGates": {
+    "dataReadiness": "All 21 window ledgers complete within caps, frozen schema/source identities intact, all parser/provenance/scoping checks reconcile independently.",
+    "feasibilityScreen": "At least 50% of clipped cached detailed-Census source km across all windows has a unique plausible match and usable limit; every window/layer/road-class denominator and 50-match review remains visible. The 50% is a prospective engineering screen for data usefulness, not an accuracy/national coverage claim.",
+    "failure": "Stop and document the exact cap, coverage, scope or matching failure; no national expansion or model cost change.",
+    "success": "Design and freeze one road-attribute timing policy separately, then specify a bounded nationwide input expansion. Pilot coverage alone does not authorize an active switch or establish arbitrary-origin accuracy."
+  },
+  "sourceAdapterGate": "Native OSM tags are not passed into the Overture parser as if their schemas were interchangeable. Before any usable-limit/matching conclusion, specify and synthetically freeze a separate lossless source adapter and parser classifications. Preserve every numeric/unit/directional/conditional/access/level/oneway/barrier/restriction case; unsupported or missing applicability remains unknown. Never infer car permission from generic allowed tags or speed by road class/statutory table. No adapter or semantic policy is implemented/admitted here.",
+  "matchingGate": "Retain original source-km denominators,25m/15deg/80% geometry criteria, all alternative/unknown/grade/access outcomes and independent50-match deterministic review. New source matching requires its own exact adapter/code/input/decision freeze and separate output, without editing/replaying old sealed producers. Capture completeness alone does not satisfy50% unique plausible usable-limit coverage.",
+  "implementationNext": {
+    "reader": "scripts/coarse_osm_input.py",
+    "tests": "scripts/coarse_osm_input_test.py",
+    "futurePlan": "docs/evidence/coarse-osm-pilot-2026-10-26/execution-plan.json",
+    "futureOutput": "data/coarse-quality/osm-timing-pilot-v1",
+    "dependencies": "Python standard library in cached Linux image sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402; no new tool download/npm dependency. Freeze exact implementation before live requests.",
+    "scope": "Implement/test metered transport, status/clock controls, raw capture, strict response counts/closure/identity/inventory and independent audit using synthetic fixtures first. No live access during implementation; freeze exact reader/dependencies/queries/inputs/limits/output before a later single capture."
+  },
+  "requiredFixtures": [
+    "All HTTP attempts and status/error/body bytes metered; oversized declared/streamed bodies and sentinel accounting; compression/redirect/proxy/credential denial;429/504/timeout/HTML/remark/truncated valid-prefix JSON; absolute slow-read/global time bounds; partial-file and all-window preservation.",
+    "Complete selected way crosses bbox with no vertex inside; child nodes outside bbox retained; duplicate typed IDs versus colliding node/way IDs; way version unchanged but node version/geometry changed; stale snapshot/generator drift; conflicting duplicates; missing/duplicate terminal count; wrong per-type count; missing way node; unknown relation members; raw scoped metadata roundtrip.",
+    "Row/occurrence/element/extract/disk/memory/zero-swap/watchdog guards enforce on cached Linux with --init/read-only code/root/bounded tmp, no env/credential mount; independent received-body/closure/identity/ledger audit rejects tampering."
+  ],
+  "scope": "Design only. No road/status/interpreter/tool request or new downloader now, no stopped-pilot retry, no new matcher/permission/timing semantics, runtime/env/DB/npm/config change, national expansion, commit/push/deployment. Public Overpass is only a finite offline pilot source, not a national scraping plan or production backend.",
+  "proposedCommands": {
+    "offlineImplementationChecks": [
+      "python3 -B -m unittest discover -s scripts -p 'coarse_osm_input_test.py'",
+      "npm run check",
+      "npm run typecheck",
+      "npm run build"
+    ],
+    "futureCaptureTemplate": "python3 -B scripts/coarse_osm_input.py data/coarse-quality/osm-timing-pilot-v1 FROZEN_EXECUTION_PLAN_SHA256",
+    "readiness": "Implementation/tests and executable plan do not exist. Replace the template with the actual frozen SHA command only after code/dependency/input/resource tests and a separately sealed executable recipe. Do not execute capture during design/implementation."
+  },
+  "originalIntegrationGates": {
+    "runtime": "A later producer could compile accepted attributes into existing static road-cost payloads with generic class fallback for missing/unsupported/unmatched data. The app would continue to compute offline in TypeScript on Vercel; no road-data request or cloud DB dependency per query. This is a proposed integration, not implemented or qualified.",
+    "national": "Use a fixed release and deterministic complete CONUS tiling; separately bounded national expansion required. These 21 windows are not national coverage or a router.",
+    "gates": "Every original 83/35 accuracy/finite/component/missed/tail/individual gate, physical/source/shore/transfer/path checks, <=70 MB function, retained decoded<=162238546 bytes, first packaged estimate<=5 s, API/software/shared-camera review remains. Actual compressed package, memory, matching coverage and accuracy must be measured; no forecast promoted to admission.",
+    "storage": "Raw GeoParquet/tool environment and provenance stay ignored and excluded from Vercel; preserve ODbL/source attribution and license metadata in later derivatives."
+  },
+  "selectedIntegration": {
+    "runtime": "Keep compiled static costs and generic fallback on Vercel; no per-query OSM/Overpass/road-data or DB dependency. This design changes no runtime.",
+    "storage": "Raw JSON/status/HTTP ledgers and normalized source extract stay ignored and excluded from Vercel. Preserve source/license metadata for any separately qualified derivative.",
+    "national": "This public Overpass pilot does not authorize tiled national scraping. A future complete CONUS source needs a separate documented bulk-data plan and all original gates."
+  }
+}

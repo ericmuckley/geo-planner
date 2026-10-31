@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "status": "Next separately frozen matching-only prototype; no implementation or chain search performed by the compatibility run",
+  "inputs": {
+    "docs/evidence/coarse-timing-compatibility-2026-10-26/decision.json": "f13b280767679221d5b41d6fa0d5ca6b76444f290465fe2ab522c3375830b856",
+    "docs/evidence/coarse-timing-compatibility-2026-10-26/report.json": "e5295c886077e784740f73f404ca15aa4e78927e9f0533f2444edcfb805fb9ab",
+    "docs/evidence/coarse-timing-compatibility-2026-10-26/audit.json": "92971a32fa42dd0887bfd4bc6a09751747a821d0c74c9cf7c79eb077eee07f36",
+    "docs/evidence/coarse-timing-compatibility-2026-10-26/execution-plan.json": "6361ce288088706c74722d39112acd7a9da31e364446f08fa84458145c41c3df",
+    "data/coarse-quality/overture-timing-compatibility-v1/support.jsonl": "13b72c2ffcb8ec4b026649d2ace6895295cd2019d040e9d01670e2e78e0ca493",
+    "data/coarse-quality/overture-timing-compatibility-v1/scopes.jsonl": "9be557bdef2a22fe0cdb1de913cd786c285885f23c0712ac976ae177b6d1ebab",
+    "data/coarse-quality/overture-timing-pilot-v1/segments.jsonl": "3b23132960cfc022256b0e0ed1e1061479da8db35d72147ad38dfd2d333647e4",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/matches.jsonl": "bc52cb3fc16d70f4e0ae0f2d0fb7bfe01e48087fe92dc59a24a9be2d4208842d",
+    "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730"
+  },
+  "hypothesis": "A generic endpoint-connected sequence of publisher segments can explain some >=80% union-supported Census arcs that fail single-segment coverage. Shared endpoint connector IDs plus geometry/progress checks are a matching hypothesis, not drivable connectivity or physical road identity.",
+  "implementation": "New scripts/coarse_timing_chains.py and scripts/coarse_timing_chains_test.py; reuse sealed sample/geometry/parser/namespace/output helpers without editing them. Freeze exact code, chain equivalence/ambiguity/progress rules, inputs, criteria and fresh output before execution.",
+  "output": "data/coarse-quality/overture-timing-chains-v1",
+  "resources": {
+    "network": "none",
+    "imagePull": "never",
+    "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "wallSeconds": 3600,
+    "outputBytes": 134217728,
+    "tmpBytes": 67108864,
+    "maximumRowsPerChain": 64,
+    "maximumExpandedStatesPerArc": 4096
+  },
+  "method": [
+    "Retain all 21 original incomplete windows, all 55,120 raw IDs, all 2,469 Census arc/window records, all 85,629 saved samples, original source weights and 85/105 classes. Sixteen empty windows remain unmeasured. Reproduce frozen classifications, 2.8270705809269594 provisional baseline km, publisher/Census denominator separation and raw speed/access counts.",
+    "Use only existing cached rows with aligned samples for the current Census arc. Preserve unsupported road roles and every raw scope outcome; restrict a proposed car-road geometry chain to roles supported by the sealed parser. No inference of access, level, turn permission or speed from a role or connector.",
+    "Proposed joins require equal raw connector_id values at raw line endpoints (at within 1e-9 of 0 or 1), coordinates<=25m apart and inside the same fixed window. Missing/interior-only/multiple endpoint identities, multipart geometries, unsupported levels and outside-window endpoints stay explicitly unresolved; never invent links or flatten them.",
+    "Enumerate simple oriented endpoint-connected chains with no repeated row. Require monotone progression along the saved ordered Census samples, fixed 25 m/15° sample support and>=80% original weighted arc km. The exact progression/tie rules and minimal-chain equivalence must be specified and frozen before execution. Deduplicate reverse representations of the same undirected chain; do not claim uniqueness by choosing a first path.",
+    "Stop expanding any arc at 64 rows per chain or 4,096 expanded states, report search_capped and preserve partial candidates. A capped or otherwise unresolved search cannot be reported as an exhaustive single/absent match. No cap increase or cutoff tuning after results.",
+    "Report zero/single/multiple/unsupported/capped cached-chain outcomes, exact row/connector IDs, endpoint checks, sample supports and original source weights. Shared connector IDs and geometric progression establish only the declared cached matching constraints, not a connected driving route or globally unique road.",
+    "Keep frozen speed/access parser outcomes unchanged per member; retain raw scoped values and different segment limits instead of averaging or granting bidirectional car access. No rule/property reinterpretation, timing/cost candidate, routing/ETA/contour query or original 50% feasibility qualification.",
+    "Independently reconcile all IDs/weights/windows/chain joins/ambiguity/caps/scopes. Support this bounded geometric hypothesis only if at least one formerly absent arc has an uncapped >=80% declared-valid connected chain; otherwise reject this prototype. Even a supported hypothesis does not establish national or usable speed coverage. Make one concrete next-input decision."
+  ],
+  "pass": "All source/window/sample/scope denominators and independent chain accounting reconcile, fixed hypothesis decision preserved, all failures/caps/ambiguities retained, no new acquisition or model admission.",
+  "deferred": "New source/tool/range/retry, endpoint-join tolerance or resource sweep, interior connector splitting, car-access/level/turn semantics, timing factors, runtime/API/DB/env/dependency changes, commit/push/deploy. Any later acquisition needs exact missing identities/ranges, verified cache reuse, complete range/ETag receipts, explicit retry/resource budgets and prior spending."
+}

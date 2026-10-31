@@ -1,0 +1,25 @@
+Installed Nitro server asset implementation (read-only excerpt).
+						etag,
+						mtime
+					};
+				}
+			}
+			return `
+const _assets = {\n${Object.entries(assets).map(([id, asset]) => `  [${JSON.stringify(normalizeKey(id))}]: {\n    import: () => import(${JSON.stringify("raw:" + asset.fsPath)}).then(r => r.default || r),\n    meta: ${JSON.stringify(asset.meta)}\n  }`).join(",\n")}\n}
+
+				if (id === HELPER_ID) return getHelpers();
+				if (id.startsWith(RESOLVED_PREFIX)) return promises.readFile(id.slice(18), isBinary(id) ? "binary" : "utf8");
+			}
+		},
+		transform: {
+			order: "pre",
+			filter: { id: new RegExp(`^${RESOLVED_PREFIX}`) },
+			handler(code, id) {
+				const path = id.slice(18);
+				if (isBinary(id)) return {
+					code: `import {base64ToUint8Array } from "${HELPER_ID}" \n export default base64ToUint8Array("${Buffer.from(code, "binary").toString("base64")}")`,
+					map: rawAssetMap(path)
+				};
+				return {
+					code: `export default ${JSON.stringify(code)}`,
+					map: rawAssetMap(path),

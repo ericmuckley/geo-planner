@@ -1,0 +1,68 @@
+{
+  "proposal": "one_isolated_arm64_native_build_closure_v1",
+  "status": "Unacquired, not hash-locked; selectors must never be executed as mutable tags.",
+  "builder": {
+    "repository": "quay.io/pypa/manylinux_2_28_aarch64",
+    "tagSelector": "latest",
+    "requiredPlatform": "linux/arm64",
+    "manifestDigest": null,
+    "reason": "Documented GCC14/glibc2.28 builder candidate; cached runtime is glibc2.34. This compatibility direction is an inference, not ABI qualification."
+  },
+  "headerSources": [
+    {
+      "repository": "https://github.com/osmcode/libosmium",
+      "tagSelector": "v2.23.1",
+      "fullCommit": null,
+      "tree": null,
+      "archiveSha256": null
+    },
+    {
+      "repository": "https://github.com/mapbox/protozero",
+      "tagSelector": "v1.8.2",
+      "fullCommit": null,
+      "tree": null,
+      "archiveSha256": null
+    }
+  ],
+  "buildMode": "C++17, PBF-only headers and standard library/zlib; no area/XML/GDAL/Boost matcher/pybind11 feature. Verify actual header/link closure; missing requirements stop this proposal rather than install fallback packages.",
+  "abiQualification": "Require compiler/header/library version receipts, build flags, artifact SHA256/ELF deps+symbol-version checks and actual ctypes load+tiny positive/negative reference fixtures in the cached runtime. No grafting unverified libraries or global LD_LIBRARY_PATH changes.",
+  "closureReservationBytes": 15032385536,
+  "componentCeilings": {
+    "compressedBuilderBytes": 2147483648,
+    "expandedBuilderBytes": 10737418240,
+    "buildOutputsAndScratchBytes": 1073741824,
+    "sourceTreesArchivesReceiptsBytes": 1073741824
+  },
+  "nextMetadataOnlyStage": {
+    "maximumRequests": 16,
+    "maximumBodyBytesEach": 2097152,
+    "maximumBodyBytesTotal": 16777216,
+    "hostSeconds": 600,
+    "retries": 0,
+    "endpoints": [
+      "https://quay.io/v2/pypa/manylinux_2_28_aarch64/manifests/latest",
+      "quay.io same-repository digest manifests/config and bounded anonymous auth challenge only",
+      "https://api.github.com/repos/osmcode/libosmium/git/ref/tags/v2.23.1",
+      "https://api.github.com/repos/mapbox/protozero/git/ref/tags/v1.8.2",
+      "Same-repository tag/commit/tree endpoints for full hashes only"
+    ],
+    "requiredOutput": "Content-digest-verified arm64 image index/manifest/config/layer descriptors and compressed size sum; full source commit/tree/blob hashes and sizes with non-truncated paths. Expanded image/body SHA256/source archive admission remain separate later gates.",
+    "forbidden": "No layer/source archive/binary bytes, image pull, install, compiler, PBF/sample/DB/provider call. No cross-host redirect, auth credential/log exposure, retry, fallback version or substitute image.",
+    "activation": "Implement and synthetically test a new bounded metadata launcher, then freeze exact code/input/request/stop/output bindings before its one attempt. This JSON is a proposal, not an executable network recipe."
+  },
+  "laterSampleProposal": {
+    "caseSeconds": 60,
+    "workerSeconds": 300,
+    "hostSeconds": 600,
+    "memoryBytes": 4294967296,
+    "cpus": 2,
+    "objectsPerCase": 200000,
+    "aggregateObjects": 2000000,
+    "ownedWritableAndTmpBytes": 1073741824,
+    "indexBytes": 33554432,
+    "proofCases": "Full projected fields and byte hashes on the saved64k prefix and re-encoded first1k/type, exact decoded coordinates, near-byte-cap fallback, adversarial independent two-pass controls; no national file mount.",
+    "performanceGateProposal": "Three fixed native fast-mode repeats, median<=0.070s for64k node open/decode/validate/index/seal/EOF work, plus lookup no worse than paired SQLite. This is an unmeasured target. Report work differences from all-JSON baselines; no fabricated same-hash speed comparison.",
+    "ordering": "Tool/header/archive/ABI qualification first; implementation controls next; separately freeze exact cases and proof-mode/fast-mode accounting before any real saved sample. No sample command is active now."
+  },
+  "fullImportAdmitted": false
+}

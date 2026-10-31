@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "status": "Exact runtime-package acquisition proposal; binary unacquired and executable runner not yet frozen",
+  "reason": "All inspected glibc cached libraries are absent or require GLIBC_2.36/2.38; target Python 3.13.5 image has glibc2.34. Do not replace glibc/interpreter.",
+  "package": {
+    "name": "libexpat1",
+    "version": "2.4.7-1ubuntu0.9",
+    "architecture": "arm64",
+    "filename": "libexpat1_2.4.7-1ubuntu0.9_arm64.deb",
+    "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/e/expat/libexpat1_2.4.7-1ubuntu0.9_arm64.deb",
+    "exactBytes": 83528,
+    "sha256": "b61d2bdf82134f6db0ba5c73d9cfe88805a64cbadbd0d0dffff8410958aab005",
+    "declaredDepends": "libc6 (>= 2.25)",
+    "declaredInstalledKiB": 399
+  },
+  "provenance": {
+    "officialIndexUrl": "https://ports.ubuntu.com/ubuntu-ports/dists/jammy-security/main/binary-arm64/Packages.xz",
+    "indexSha256": "f7f0301213a5b4546319e2fc9e33407ea7462b260a08c5fbd26d59844475db36",
+    "releaseBoundSizeAndSha256": true,
+    "repositorySignatureVerified": false,
+    "transport": "Verified TLS; exact raw Release/index saved. No claim of GPG repository signature verification."
+  },
+  "imageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "caps": {
+    "runtimePackageGetAttempts": 1,
+    "exactRuntimePackageBytes": 83528,
+    "maximumBodyBytesWithSentinel": 83529,
+    "totalHttpBodyBytes": 1048576,
+    "wheelGetAttempts": 0,
+    "metadataGetAttempts": 0,
+    "roadGetAttempts": 0,
+    "providerQueries": 0,
+    "retries": 0,
+    "redirects": 0,
+    "paidSpend": 0,
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "cpus": 2,
+    "wallSecondsIncludingCleanup": 600,
+    "workingBytesIncludingTmp": 536870912,
+    "tmpBytes": 67108864,
+    "maximumArchiveExpandedBytes": 8388608,
+    "maximumArchiveFiles": 128,
+    "maximumLibraryBytes": 4194304,
+    "maximumCopyrightBytes": 65536,
+    "validationBytes": 134217728,
+    "installedTreeBytes": 134217728,
+    "reportReserveBytes": 16777216
+  },
+  "freshOutput": "data/coarse-quality/us-osm-tools-v2",
+  "orderedWork": [
+    "Implement a separately versioned exact-one-GET runtime package acquisition/extraction/offline proof runner and tests. Reuse sealed wheel and native-smoke code without editing them. Read/check this exact metadata-bound pin, source/runtime preflight regression, all saved wheel hashes and earlier failed outputs.",
+    "Before any package GET, freeze executable code/dependencies/runtime input/mount/resource/network recipe and fresh output; run meaningful host/Linux synthetic controls and app check/typecheck/build. No new metadata, wheel re-resolution/download, apt/dpkg installation, image pull/build, package scripts, alternate package or trust change.",
+    "One owned bridge worker acquires only the exact HTTPS package under the byte/hash/wall caps, preserves failure/body/ledger and safely parses bounded ar/control/data members without executing maintainer scripts or arbitrary extraction paths/links. Accept only reviewed bounded compression implementations; stop on unsupported format rather than installing another decoder. Record control name/version/architecture/dependencies and retain copyright.",
+    "Extract only the runtime library/license into a new isolated bundle; keep libc/loader/Python unchanged. If an existing cached decompressor is needed, bind its exact file/image/SHA/API and bounded-output tests before use. Verify aarch64 ELF64, SHA, real loader glibc/version/library closure using the stricter output-aware guard; declared dependency metadata is not actual compatibility proof.",
+    "Use a separate owned network=none worker with saved six exact wheel archives for target-only installation and full import/ABI/tiny-native-PBF/projection/SQLite/four-pass extraction/separate audit/negative fixture proof. Scope LD_LIBRARY_PATH to the isolated runtime worker. Keep short native subprocess timeout, one shared ten-minute deadline and owned removal independently confirmed.",
+    "Preserve and independently reconcile exact archive/library/install/HTTP/version/resource/cleanup/failure receipts. Success clears the tiny native-tool proof only; no national source/model gate. Any incompatibility is a new preserved failure, not an alternate unpinned package or edited old evidence."
+  ],
+  "deferred": "National PBF/source/matcher/model/accuracy/ETA or app/UI/env/DB/npm/Vercel changes, larger source limits/state, paid/cloud resources, commit/push/deploy."
+}

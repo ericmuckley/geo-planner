@@ -1,0 +1,111 @@
+{
+  "status": "Prospective fixed-sample procedure; not executed on real samples in this preparation",
+  "sourceIdentity": {
+    "prefix": {
+      "path": "data/coarse-quality/us-osm-profile-v2/prefix.osm.pbf",
+      "bytes": 377536,
+      "sha256": "8c27122ee2321a320cf33c1f8c678fdd3041fee16621984380e768d4746d38b8",
+      "counts": {
+        "node": 64000
+      },
+      "canonicalSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7"
+    },
+    "mixed": {
+      "path": "data/coarse-quality/us-osm-inventory-v3/scan/samples.jsonl",
+      "bytes": 3304488,
+      "sha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95",
+      "counts": {
+        "node": 1000,
+        "way": 1000,
+        "relation": 1000
+      },
+      "canonicalSha256": "fd45e8844f790da058c708689548ee477382826d202ff06968d91db5ee1aee95"
+    }
+  },
+  "encoding": "Only saved mixed JSONL<=3000 records/1MiB line; preserve order and every projected raw field. ET XML then saved Pyosmium SimpleWriter(bufsz65536), header STATE=2026-10-25T21:21:21Z and generator geo-planner-fixed-sample-v1; exact round-trip compared with original mixed canonical SHA. No dependency synthesis or missing-ref ignore.",
+  "artifact": {
+    "path": "data/coarse-quality/us-osm-projector-v1/build/projector.so",
+    "bytes": 1935424,
+    "sha256": "9227bc577f3592f167d614329ecc25311c4f8505aa854d3121f9837073f75f26"
+  },
+  "caps": {
+    "hostSeconds": 600,
+    "workSeconds": 570,
+    "workerSeconds": 300,
+    "caseSeconds": 60,
+    "objectsPerCase": 200000,
+    "aggregateVisits": 2000000,
+    "workingBytesIncludingTmp": 1073741824,
+    "tmpBytes": 268435456,
+    "fileBytes": 67108864,
+    "indexBytes": 33554432,
+    "reportBytes": 2097152
+  },
+  "proofs": [
+    "prefix-python-proof",
+    "prefix-native-proof",
+    "mixed-python-proof",
+    "mixed-native-proof"
+  ],
+  "proofChecks": [
+    "Every canonical raw-field line byte-identical, with exact reference snapshot/order/visibility/identity/calendar/UTF8/copy/byte validation",
+    "All signedXY32 index rows compared against independently copied source coordinates by Python ReferenceCodec; implies exact binary64 division bits",
+    "C++ semantic seal equals independently generated full-field frame seal, distinct from original canonical JSON SHA",
+    "Prefix canonical SHA pinned from preserved prior measurements; mixed canonical SHA equals saved original JSONL hash",
+    "Every fast pair has identical count/sourceSHA/full-index manifest; new semantic seal matches full proof, reference JSON seal matches prior/original proof",
+    "Independent selected geometry/membership/audit remains synthetic under unchanged62 retained tests, no complete real extraction claim"
+  ],
+  "pairOrder": [
+    [
+      "pair-0-python",
+      "python"
+    ],
+    [
+      "pair-0-native",
+      "native"
+    ],
+    [
+      "pair-1-native",
+      "native"
+    ],
+    [
+      "pair-1-python",
+      "python"
+    ],
+    [
+      "pair-2-python",
+      "python"
+    ],
+    [
+      "pair-2-native",
+      "native"
+    ]
+  ],
+  "pairedBaseline": "Frozen Python NativeValidator + same deltaV2 index, codec, format, full queried-shard SHA snapshot policy as native EncodedIndex; isolates metadata/per-node Python vs C++ block handoff, no weaker-cache baseline.",
+  "lookup": "First1024 node IDs in source order, collected only during frozen reference proof; reversed list plus first128 duplicates (1152 for64k prefix). Exactly3 batches/case: cold cache+format set cleared, warm, repeat; report bit hashes and actual authenticated shard bytes. Limited first-ID/cache-local screen, not national lookup distribution.",
+  "timing": {
+    "protectedTotalSeconds": "From case entry before watchdog/source-framing through normal decode+validation/index+semantic EOF/index.finish, post-source SHA/stat and closing proof/empty files; excludes subsequent full-coordinate proof, lookup and watchdog teardown. Acceptance uses fast cases only. Includes index setup and safety checks.",
+    "decodeValidateIndexSealEofSeconds": "Native/Python PBF open/decode/metadata checks/index/semantic seal/normal EOF and index.finish; excludes preceding framing, index setup and post-hash.",
+    "framingSeconds": "Frozen full SHA/MD5/PBF framing/decompression/features/scale/state checks; explicitly separately timed and included in protectedTotal.",
+    "postSourceHashSeconds": "Whole file SHA + stable stat check after decode, separately timed and included in protectedTotal.",
+    "knownGuardReadBytes": "framingBytesRead + postSourceHashBytes; decoder/index/lookup reads not included in this named subtotal. Never an all-IO total.",
+    "lookupSeconds": "Three paired batches outside protectedTotal; preserve V2 full-shard authentication even on cache hits.",
+    "hostSeconds": "Input hashes/startup/all work/cleanup; no graph-search/HTTP/import time inference."
+  },
+  "visits": {
+    "prefixProofs": 128000,
+    "mixedProofs": 6000,
+    "mixedJsonReceiptAndXmlEncoding": 6000,
+    "prefixPairs": 384000,
+    "plannedTotal": 524000,
+    "maximum": 2000000,
+    "accounting": "All reference/native object receipts before filtering, and both JSON read and XML->PBF encoder views. Native case receipts charged even on exceptions; framing/blob bytes are separate. Decoder failures before an object receipt leave unknown undecoded objects and stop."
+  },
+  "pass": {
+    "correctness": "Every full-field/coordinate/index/seal/count/source/normal EOF/lookup test; no mismatches or incomplete cases",
+    "performance": "Median of3 native protectedTotalSeconds<=0.070 and strictly less than3 paired Python median. Same frozen index sizes/manifests and exact lookup bits. Failure preserves evidence; no retune/retry.",
+    "meaning": "Fixed-prefix metadata/index throughput and re-encoded mixed fields only; no national import/complete21-window/road attributes/matcher/physical/83ORS35Valhalla accuracy/model deployment admission."
+  },
+  "hardStops": "Separate60s case watchdog SIGKILLs worker even if C++ never calls Python; global300s watchdog/600s host. Normal/error exit/OOM/owned cleanup and independent absence required. File64MiB/index32MiB/1GiB working including256MiB tmp;4GiB zero swap/2CPU/64PID/network none/read-only all inputs/no capabilities.",
+  "executionState": "Control recipe runs synthetic71 tests with no real source/sample mounts. Sample recipe will be sealed only after successful actual target controls and independent cleanup, and remains unexecuted at handoff."
+}

@@ -1,0 +1,158 @@
+{
+  "status": "Post-result interpretation under the frozen existential hypothesis; no accuracy/coverage admission",
+  "inputs": {
+    "data/coarse-quality/overture-timing-chains-v1/report.json": "aca687330c34e5d3e92a25a9385722e50c8184fb3fca9f06d3ab9e3e619b3f37",
+    "data/coarse-quality/overture-timing-chains-v1/audit.json": "d7911b7e7047dd5a0887a777d7652344d853f1628c0fc298a7f595d8cf705cad",
+    "data/coarse-quality/overture-timing-chains-v1/chains.jsonl": "f3859217a0686cf95baa4347147a04984732f4b49d1e25ac32dbb17a53fc0f21"
+  },
+  "metrics": {
+    "retainedRows": 55120,
+    "arcWindowRecords": 2469,
+    "samples": 85629,
+    "candidateChains": 82,
+    "arcRecordsWithCandidates": 32,
+    "formerlyAbsentUncappedWithChain": 14,
+    "sourceKmOnThoseArcs": 21.25481114779464,
+    "cappedRecords": 0,
+    "allCandidateArcStatusesUnresolved": true,
+    "allMembersParserUsableCandidateChains": 13,
+    "exclusionReasonArcRowOccurrences": {
+      "endpoint_not_near_own_samples": 1171,
+      "unsupported_road_role": 766,
+      "unsupported_level_rules": 1385,
+      "nonprogressing_or_tied_endpoints": 37,
+      "outside_window_endpoint": 181
+    },
+    "chainLengthCounts": {
+      "1": 9,
+      "3": 9,
+      "2": 6,
+      "7": 4,
+      "10": 16,
+      "6": 2,
+      "15": 14,
+      "16": 16,
+      "14": 4,
+      "13": 2
+    },
+    "memberParserStatusOccurrencesAcrossCandidates": {
+      "usable": 28,
+      "access_scoped_or_restricted": 743,
+      "missing": 23,
+      "partial_scope": 2
+    },
+    "baselineProvisionalEligibleKmUnchanged": 2.827070580926959
+  },
+  "hypothesisSupported": true,
+  "positiveArcRecords": [
+    {
+      "windowId": "origin-01",
+      "arc": 901336,
+      "sourceKm": 0.3447405528459994,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 907436,
+      "sourceKm": 1.3519361921843605,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 2
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 917091,
+      "sourceKm": 2.190197328391858,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 921822,
+      "sourceKm": 2.1901973283918528,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 921828,
+      "sourceKm": 1.3137857510769895,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 921831,
+      "sourceKm": 1.3137857510769908,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 921837,
+      "sourceKm": 2.190197328391855,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 934856,
+      "sourceKm": 1.3519361921843596,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 2
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 938621,
+      "sourceKm": 1.4506163373159255,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 938630,
+      "sourceKm": 0.3447405528459994,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-01",
+      "arc": 938633,
+      "sourceKm": 1.4506163373159267,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-02",
+      "arc": 931171,
+      "sourceKm": 0.20231128350244024,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 1
+    },
+    {
+      "windowId": "origin-03",
+      "arc": 900947,
+      "sourceKm": 2.7798751061350395,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 18
+    },
+    {
+      "windowId": "origin-03",
+      "arc": 918995,
+      "sourceKm": 2.779875106135044,
+      "status": "unresolved_with_candidates",
+      "candidateCount": 18
+    }
+  ],
+  "decision": "The fixed existential connected-segment hypothesis passes, but none of the32 candidate-bearing arcs is resolved as exhaustive single/absent. Preserve the prototype; do not use it for timing or acquire more data now. Next perform one bounded audit of unresolved row/level/progress exclusions and specify one geometry-only input-policy decision before another matcher run.",
+  "limits": [
+    "Every source window remains incomplete;1924 records in sixteen empty-cache windows stay unmeasured. Unknown competitors prevent global uniqueness or a usable-coverage lower bound.",
+    "21.25481114779464km is original source length on formerly absent arcs with an uncapped declared-valid chain, not newly usable speed coverage or gained isochrone area.",
+    "All candidate-bearing arcs also have excluded/unresolved aligned rows. A valid chain establishes only the frozen connector/geometry/progress constraints, not drivable connectivity, permission, level/turn semantics or physical identity.",
+    "13 candidate chains have all members passing the existing parser, but unresolved competitors and incomplete data remain. No speed averaging, changed eligibility policy, original50% feasibility qualification or runtime switch.",
+    "Exclusion reasons count arc-row incidences with overlapping reasons; chain lengths/member statuses count candidate occurrences, not deduplicated roads or independent reference cases."
+  ],
+  "newNetworkRequests": 0,
+  "originalFeasibilityQualified": false,
+  "productionModelChanged": false
+}

@@ -1,0 +1,55 @@
+{
+  "phase": "failed-member-diagnostic-v2",
+  "source": {
+    "path": "data/coarse-quality/us-osm-input-v3/download/http/001.bin",
+    "bytes": 12229320016,
+    "sha256": "1b127070917e2f4e5d9e778e2412bb44d24116519cf084ab72fe13e679eb11ff",
+    "md5": "c5abaec55e724255277f22fb97941e5a",
+    "publisherState": "2026-10-25T21:21:21Z",
+    "counts": {
+      "node": 1606229364,
+      "way": 162688797,
+      "relation": 1624265
+    }
+  },
+  "afterRelationId": 1205149,
+  "failedRelationOrdinal": 56976,
+  "relationCount": 1624265,
+  "output": "data/coarse-quality/us-osm-member-diagnostic-v2",
+  "imageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "inputs": {
+    "scripts/diagnose_osm_member_v2.py": "5d07c022643bd407a9dceb32d857afd27922028a1b213522f3edf65ee79476aa",
+    "scripts/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182"
+  },
+  "mounts": {
+    "scripts/diagnose_osm_member_v2.py": "/code/diagnose_osm_member_v2.py",
+    "scripts/coarse_osm_bulk_pbf.py": "/code/coarse_osm_bulk_pbf.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py"
+  },
+  "workerFiles": {
+    "/code/diagnose_osm_member_v2.py": "5d07c022643bd407a9dceb32d857afd27922028a1b213522f3edf65ee79476aa",
+    "/code/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "/code/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "/code/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182"
+  },
+  "caps": {
+    "workerSeconds": 600,
+    "hostWorkSeconds": 870,
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "tmpBytes": 268435456,
+    "fileBytes": 67108864,
+    "ownedOutputBytes": 67108864,
+    "compressedTailBytes": 335544320,
+    "decompressedTailBytes": 4294967296,
+    "maxHeaders": 500000,
+    "maxRelations": 2000000,
+    "maxMembersPerObject": 262144,
+    "maxCanonicalRecordBytes": 16777216
+  },
+  "scope": "One fixed last256MiB window plus one-overlap blob, full pre/post SHA/MD5; diagnose exact next relation and complete relation-section size/identity census if all recorded relations are present. No source-wide metadata/semantic/EOF or extraction admission."
+}

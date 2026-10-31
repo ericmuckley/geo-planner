@@ -1,0 +1,28 @@
+{
+  "recipe": "docs/evidence/coarse-osm-extraction-2026-10-30/filtered-capture-plan-controls-v1.json",
+  "sha256": "2ffecc1bc31f47bb1e17dcc9b09354012f568523f76642e092cc07efdea5e95b",
+  "output": "data/coarse-quality/us-osm-filtered-capture-controls-v1",
+  "newProducerFiles": {
+    "scripts/run_osm_filtered_capture_v1.py": "b3a25e8859b4fd84fc96252827b0c2d46788be715445c89a91e5570f2b242a9e",
+    "scripts/coarse_osm_capture_resources_v1.py": "f488813f666f6a327b9ecdad1290c9f004368ccbc44b80bda792e5e1841996be",
+    "scripts/coarse_osm_capture_v1_test.py": "e3d901b7da8955cb22a33ee3507d9efee9e1e7498953a1b78897d616ca02cc13"
+  },
+  "command": "python3 -B scripts/run_osm_filtered_capture_v1.py docs/evidence/coarse-osm-extraction-2026-10-30/filtered-capture-plan-controls-v1.json 2ffecc1bc31f47bb1e17dcc9b09354012f568523f76642e092cc07efdea5e95b",
+  "limits": {
+    "hostSeconds": 600,
+    "hostWorkSeconds": 570,
+    "workerSeconds": 300,
+    "passSeconds": 90,
+    "hashSeconds": 30,
+    "requiredInitialFreeBytes": 3221225472,
+    "lookupBytesPerPass": 67108864,
+    "codecRows": 2000000,
+    "codecCalls": 10000,
+    "cellCodecRows": 2000000,
+    "cellCodecCalls": 100000,
+    "maskReferences": 2000000,
+    "maskCalls": 100000,
+    "fineVerificationBytes": 67108864
+  },
+  "status": "Frozen before first execution; no replay after output exists"
+}

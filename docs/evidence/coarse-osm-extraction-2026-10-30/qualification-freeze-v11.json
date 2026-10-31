@@ -1,0 +1,27 @@
+{
+  "recipeSha256": "e1f3c6f123d20a961b4c2c56340a20834b9195f41244d7608348b00b01023d70",
+  "newProducerFiles": {
+    "scripts/coarse_osm_revalidated_index_v1.py": "4f2c4340e8e9bb63d022bb0fade5a77a0e241673faa93eacd8fd5596d3fc0660",
+    "scripts/coarse_osm_revalidated_index_v1_test.py": "85072b5d8fa64c1ca4976836fe3c85c19f35497795061745d1b20726ad81db48",
+    "scripts/coarse_osm_readonly_extract_v1_test.py": "29f9bde9ac43d25b7167a4bd9ad1e7fbefa4431e1fd96b5a269a31bbf8c6e40d",
+    "scripts/run_osm_country_screen_v11.py": "0408a51dd8b29e314d074e91bd516662288db38d3b9c1fd3fa5b5009a0efe678"
+  },
+  "tests": 38,
+  "newSourceIndexTests": 7,
+  "newReadOnlyExtractionTests": 3,
+  "retainedRelevantBankMaskFilterTests": 28,
+  "reusedBuild": {
+    "path": "data/coarse-quality/us-osm-country-controls-v10/build",
+    "sha256": "a84d4641026dbe250fd13f8e098082ac2ba7987bf54b9e63ff5d1126d94bee38"
+  },
+  "readOnlySourceIndexPayloadBytesPerViewMaximum": 68719476736,
+  "sourceIndexFixtureNativeRowsLimit": 250000,
+  "sourceReceiptLimit": 2000000,
+  "cellCodecRowsLimit": 250000,
+  "maskReferenceLimit": 1000000,
+  "memoryBytes": 4294967296,
+  "sourceEof": "Source block comparison only establishes node bytes; fresh complete native source EOF/count/semantic and independent exact output remain required at the caller.",
+  "oldFailedEvidenceMutatedOrPromoted": false,
+  "nationalSourceOrStoppedIndexRead": false,
+  "statusAtFreeze": "unused"
+}

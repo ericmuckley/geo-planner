@@ -1,0 +1,45 @@
+{
+  "name": "geo-planner-projected-fields-v1",
+  "abiVersion": 65536,
+  "modes": {
+    "0": "fast-validated-blocks",
+    "1": "full-field-proof"
+  },
+  "frame": "Little endian GPF1 magic, kind:u8(0node/1way/2relation), visible:u8(1), reserved:u16(0), id:i64, version:i64, timestamp:LP, tags:u32+[key:LP,value:LP] sorted UTF-8 keys; nodeXY:i32,i32 OR refs:u32+i64[] OR members:u32+[kind:u8,ref:i64,role:LP]. LP=u32 byte length+strict scalar UTF-8. No pointers cross callback.",
+  "semantic": "SHA256 seeded with ASCII geo-planner-projected-fields-v1 followed by NUL, then each all-field frame prefixed u32 length. Every object, including unselected metadata; sorted tag key semantics. Distinct from old canonical-JSON hashes. On stop only delivered batches are hashed and EOF is false.",
+  "callbacks": {
+    "0": "Length-prefixed semantic frame batch; <=2MiB, flush at approximately1MiB",
+    "1": "Exact canonical-size Python fallback for ambiguous node; refusing/error stops",
+    "2": "One selected/raw full-field frame; all in proof, only way/relation/selected node IDs in fast",
+    "3": "4096-row-or-final node block: <IqqI> rows,first,last,payloadBytes plus frozen delta codec bytes; independently verified by frozen decoder into typed arrays",
+    "4": "Empty checkpoint each128 complete objects+final"
+  },
+  "bounds": {
+    "maxFrameAndCallback": 2097152,
+    "maxSyntheticInput": 16777216,
+    "singleElementMax": 1048576,
+    "nodeRowsPerBlock": 4096,
+    "maxSelectedIds": 250000,
+    "perEngineVisits": 2000000,
+    "testAggregateVisits": 2000000,
+    "receiptU64Fields": 10,
+    "syntheticPerCaseSeconds": 30
+  },
+  "receipt": [
+    "nodes",
+    "ways",
+    "relations",
+    "recognizedCompleteObjectsBeforeValidation",
+    "nativeEOF",
+    "fallbackAttempts",
+    "successfulNodeBlocks",
+    "successfulSemanticBytes",
+    "successfulProjectedFrames",
+    "checkpointAttempts"
+  ],
+  "sourceGuards": "Frozen Python framing/features/precision/state/whole-source SHA before C++ PBF validation, whole-source SHA after each scan, SHA+semantic comparison across independent passes. No source/sample mounts; synthetic file<=16MiB. Only successful Reader.close+callbacks+post-source validation qualify EOF.",
+  "metadata": "C++ type/order/strict positive signed63 ID/version, visible, real UTC whole-second calendar/snapshot (epoch0 allowed), strict scalar UTF8/duplicate tags, incremental copy caps256+key/value UTF8+64/tag,+32/ref,+128+role/member, positive refs/type/role and XY32 range. Validate all objects before filtering; libosmium keeps unresolved refs.",
+  "canonical": "Exact ensure_ascii JSON string/integer/syntax byte arithmetic. Includes DEL and nonBMP surrogate pair sizes. No native float formatter: lower6/upper64 bytes for finite node pair, ambiguous band uses frozen Python canonical(decode_frame) exact cap. Upper32 per float from prior proof. Capminus1/cap/capplus1 controls.",
+  "lifetime": "Synchronous C ABI only, primitive lengths/caller-owned arrays/bytes. Callback copies before returning; Python pins handles/arrays; reentry refused; callback exceptions stored/rethrown; C++ catches all; no exceptions cross ABI.",
+  "remaining": "SHA/file/catalog/cache/storage/canonical fallback/selected materialization in Python. No real sample, national run, native index IO equivalence, throughput, model admission or deployment."
+}

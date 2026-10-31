@@ -1,0 +1,19 @@
+{
+  "format": "proposed-block-id-delta-xy32-v1",
+  "status": "Design only; not implemented or admitted.",
+  "rowsPerBlock": 4096,
+  "blocksPerShard": 512,
+  "blockHeaderBytes": 64,
+  "directoryEntryBytes": 32,
+  "shardHeaderBytes": 128,
+  "coordinates": "Two exact signed32 little-endian XY values per node; no coordinate deltas or quantization change.",
+  "identity": "First positive ID64 in each block header; remaining strictly positive ID differences as shortest unsigned LEB128, at most9 bytes with checked signed63 accumulation. Format supports the whole signed63 positive domain; the conditional storage example is not a new ID cap.",
+  "headers": "Magic/version/flags/row count/first and last ID/payload length/SHA256/reserved bytes; exact64-byte layout must be fixed before implementation. Every unknown flag/reserved byte, malformed length, noncanonical varint, overflow, duplicate/order/missing-ID or checksum mismatch rejects.",
+  "directory": "Sorted last-ID/offset/length/row/shard entries, its own hash and bounded index header/receipts. Validate all byte ranges and checksums; no untrusted path strings.",
+  "lookup": "Binary search directory, decode at most4096 rows per block, batch queries by block and retain original order/duplicates. Fixed64-block decoded cache (~4MiB) plus bounded input/batch buffers; no unbounded map.",
+  "rotation": "Source-build each audit block independently. Keep primary shards until every corresponding audit block is sealed and equal; then verify primary file checksum and remove exact owned shard. Never rewrite or promote failed output. Peak includes one additional worst-case shard and both small directories/receipts.",
+  "nationalIdRangeKnown": false,
+  "storageAdmission": "See conditional resource-screen.json; full signed63 bound fails. A measured complete ID bound or another bounded proof is needed before full admission; no new national observation in this stage.",
+  "memory": "Original combined selection-state accounting256MiB, raw retention64MiB/stream, output128MiB/single element1MiB/250k unique/500k occurrences stay held. Account directory/cache/native/Python/batch buffers inside the same4GiB cgroup; measure total RSS and accounting before promotion.",
+  "fsAccounting": "Logical format bound includes conservative4KiB file rounding, not a proof of all filesystem metadata. Measure allocated bytes and enforce free-space/working limits. Unrelated unmounted research assets remain preserved and covered by host capacity checks."
+}

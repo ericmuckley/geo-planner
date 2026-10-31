@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "scope": "Tiny synthetic native fixture only; normalization/hash/decoder are shared with extractor audit.",
+  "tinyNativeDecoderQualified": true,
+  "nationalSourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "sourceIdentity": {
+    "publisherStateUtc": "2026-10-25T21:21:21Z",
+    "requiredFeatures": [
+      "DenseNodes",
+      "OsmSchema-V0.6"
+    ],
+    "framingBytesRead": 564,
+    "frames": 4,
+    "sourceSha256": "1dbfca4f9fc849aea04c371327967803e862abb3c1da6daf78da63982f6feddb",
+    "sourceMd5": "ea94f62995481fce42b58ec4caf3c981"
+  },
+  "inputRecords": 9,
+  "retainedRecords": 4,
+  "fourPassVisits": 36,
+  "negativeFramingChecks": [
+    {
+      "name": "truncated",
+      "rejected": true,
+      "error": "Truncated PBF frame",
+      "bytes": 563,
+      "sha256": "883066f4b27c2eb9aa795eb5c79531e07fb3ad48e1d243653c4a00a792d8f17a"
+    },
+    {
+      "name": "malformed-header",
+      "rejected": true,
+      "error": "PBF header bound",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "name": "sub-coordinate",
+      "rejected": true,
+      "error": "Unsupported sub-OSM coordinate precision",
+      "bytes": 62,
+      "sha256": "705526dd3bde16a9d6e7e01a664c94e3301e332d570090d468ae1e43438d835b"
+    },
+    {
+      "name": "subsecond",
+      "rejected": true,
+      "error": "Unsupported subsecond source precision",
+      "bytes": 62,
+      "sha256": "3a7f5b04779830e7d0f52071f9cfc728b00cb04ea71d510fd28ee850c6c9cf09"
+    },
+    {
+      "name": "offset-precision",
+      "rejected": true,
+      "error": "Unsupported coordinate offset precision",
+      "bytes": 62,
+      "sha256": "239e35c74e9afc64d36c9768ae9f8824944773bddf9025ff10ef673d8ed00d62"
+    },
+    {
+      "name": "decompression-overflow",
+      "rejected": true,
+      "error": "Invalid/oversized PBF decompression",
+      "bytes": 94,
+      "sha256": "ff2362c78eff69f504c9d7999de1b706f5116f24acd49c280e7ef024cd45ac35"
+    },
+    {
+      "name": "unsupported-compression",
+      "rejected": true,
+      "error": "Unsupported PBF compression/blob fields",
+      "bytes": 67,
+      "sha256": "6580063138d4ca0a8400cd01f2aa58beb51951a4648aa9e76ef3ea6ee9f179f5"
+    }
+  ],
+  "nativeTruncatedCheck": {
+    "rejected": true,
+    "errorType": "RuntimeError",
+    "error": "PBF error: unexpected EOF"
+  },
+  "sqliteVersion": "3.40.0",
+  "pbfBytes": 564,
+  "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c"
+}

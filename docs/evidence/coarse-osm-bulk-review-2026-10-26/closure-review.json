@@ -1,0 +1,25 @@
+{
+  "status": "Documentation-derived synthetic counterexample; no actual extraction executed",
+  "source": "https://docs.osmcode.org/osmium/latest/osmium-extract.html",
+  "bbox": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "wayNodes": [
+    [
+      -1,
+      0.5
+    ],
+    [
+      2,
+      0.5
+    ]
+  ],
+  "segmentIntersectsBox": true,
+  "anyNodeInsideBox": false,
+  "documentedCompleteWaysSeedSelectsThisWay": false,
+  "inference": "Completing a selected ways node references does not imply selecting every way whose segment crosses the bbox. A later extractor must test segments against the original bbox using a complete source and preserve all nodes; finite buffering alone is not a proof without a bound on segment length.",
+  "routingRulesChanged": false
+}

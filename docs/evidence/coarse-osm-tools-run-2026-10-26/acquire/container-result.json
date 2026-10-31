@@ -1,0 +1,109 @@
+{
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-26T23:11:32.402881754Z",
+    "FinishedAt": "2026-10-26T23:11:33.122375254Z"
+  },
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "Limits": {
+    "NetworkMode": "bridge",
+    "Memory": 1073741824,
+    "MemorySwap": 1073741824,
+    "ReadonlyRootfs": true,
+    "NanoCpus": 2000000000,
+    "PidsLimit": 64,
+    "Tmpfs": {
+      "/tmp": "rw,size=64m"
+    }
+  },
+  "Mounts": [
+    {
+      "destination": "/code/coarse_osm_bulk_transport.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/lock.json",
+      "writable": false
+    },
+    {
+      "destination": "/work",
+      "writable": true
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_pbf.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_input.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/proposal.json",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_backbone_paths.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_native_smoke.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_bulk_audit.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_audit.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/scope.json",
+      "writable": false
+    },
+    {
+      "destination": "/code/setup_osm_tools.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_timing_input.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_timing_parquet.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_backbone_codec.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_osm_records.py",
+      "writable": false
+    },
+    {
+      "destination": "/code/run_osm_capture.py",
+      "writable": false
+    },
+    {
+      "destination": "/inputs/recipe.json",
+      "writable": false
+    },
+    {
+      "destination": "/code/coarse_path_features.py",
+      "writable": false
+    }
+  ]
+}

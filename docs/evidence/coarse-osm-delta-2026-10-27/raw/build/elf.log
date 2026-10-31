@@ -1,0 +1,143 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          199288 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         9
+  Size of section headers:           64 (bytes)
+  Number of section headers:         27
+  Section header string table index: 26
+
+Dynamic section at offset 0x2fdf0 contains 25 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000000c (INIT)               0x10000
+ 0x000000000000000d (FINI)               0x105b4
+ 0x0000000000000019 (INIT_ARRAY)         0x3fdd8
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x3fde0
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x260
+ 0x0000000000000005 (STRTAB)             0x380
+ 0x0000000000000006 (SYMTAB)             0x290
+ 0x000000000000000a (STRSZ)              161 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x3ffe8
+ 0x0000000000000002 (PLTRELSZ)           48 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0x500
+ 0x0000000000000007 (RELA)               0x458
+ 0x0000000000000008 (RELASZ)             168 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffe (VERNEED)            0x438
+ 0x000000006fffffff (VERNEEDNUM)         1
+ 0x000000006ffffff0 (VERSYM)             0x422
+ 0x000000006ffffff9 (RELACOUNT)          3
+ 0x0000000000000000 (NULL)               0x0
+
+Symbol table '.dynsym' contains 10 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000010000     0 SECTION LOCAL  DEFAULT    9 
+     2: 0000000000040010     0 SECTION LOCAL  DEFAULT   21 
+     3: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTable
+     4: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@GLIBC_2.17 (2)
+     5: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+     6: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMCloneTable
+     7: 0000000000010168   452 FUNC    GLOBAL DEFAULT   11 gp_delta_encode
+     8: 000000000001032c   648 FUNC    GLOBAL DEFAULT   11 gp_delta_decode
+     9: 0000000000010160     8 FUNC    GLOBAL DEFAULT   11 gp_delta_abi
+
+Symbol table '.symtab' contains 68 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000238     0 SECTION LOCAL  DEFAULT    1 
+     2: 0000000000000260     0 SECTION LOCAL  DEFAULT    2 
+     3: 0000000000000290     0 SECTION LOCAL  DEFAULT    3 
+     4: 0000000000000380     0 SECTION LOCAL  DEFAULT    4 
+     5: 0000000000000422     0 SECTION LOCAL  DEFAULT    5 
+     6: 0000000000000438     0 SECTION LOCAL  DEFAULT    6 
+     7: 0000000000000458     0 SECTION LOCAL  DEFAULT    7 
+     8: 0000000000000500     0 SECTION LOCAL  DEFAULT    8 
+     9: 0000000000010000     0 SECTION LOCAL  DEFAULT    9 
+    10: 0000000000010020     0 SECTION LOCAL  DEFAULT   10 
+    11: 0000000000010060     0 SECTION LOCAL  DEFAULT   11 
+    12: 00000000000105b4     0 SECTION LOCAL  DEFAULT   12 
+    13: 0000000000020000     0 SECTION LOCAL  DEFAULT   13 
+    14: 0000000000020048     0 SECTION LOCAL  DEFAULT   14 
+    15: 000000000003fdd8     0 SECTION LOCAL  DEFAULT   15 
+    16: 000000000003fde0     0 SECTION LOCAL  DEFAULT   16 
+    17: 000000000003fde8     0 SECTION LOCAL  DEFAULT   17 
+    18: 000000000003fdf0     0 SECTION LOCAL  DEFAULT   18 
+    19: 000000000003ffc0     0 SECTION LOCAL  DEFAULT   19 
+    20: 000000000003ffe8     0 SECTION LOCAL  DEFAULT   20 
+    21: 0000000000040010     0 SECTION LOCAL  DEFAULT   21 
+    22: 0000000000000000     0 SECTION LOCAL  DEFAULT   22 
+    23: 0000000000040018     0 SECTION LOCAL  DEFAULT   23 
+    24: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crti.o
+    25: 0000000000010060     0 NOTYPE  LOCAL  DEFAULT   11 $x
+    26: 0000000000010060    20 FUNC    LOCAL  DEFAULT   11 call_weak_fn
+    27: 0000000000010000     0 NOTYPE  LOCAL  DEFAULT    9 $x
+    28: 00000000000105b4     0 NOTYPE  LOCAL  DEFAULT   12 $x
+    29: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtn.o
+    30: 000000000001000c     0 NOTYPE  LOCAL  DEFAULT    9 $x
+    31: 00000000000105bc     0 NOTYPE  LOCAL  DEFAULT   12 $x
+    32: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    33: 0000000000010080     0 NOTYPE  LOCAL  DEFAULT   11 $x
+    34: 0000000000010080     0 FUNC    LOCAL  DEFAULT   11 deregister_tm_clones
+    35: 00000000000100b0     0 FUNC    LOCAL  DEFAULT   11 register_tm_clones
+    36: 000000000003fde8     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    37: 00000000000100ec     0 FUNC    LOCAL  DEFAULT   11 __do_global_dtors_aux
+    38: 0000000000040010     1 OBJECT  LOCAL  DEFAULT   21 completed.0
+    39: 000000000003fde0     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    40: 000000000003fde0     0 OBJECT  LOCAL  DEFAULT   16 __do_global_dtors_aux_fini_array_entry
+    41: 0000000000010140     0 FUNC    LOCAL  DEFAULT   11 frame_dummy
+    42: 000000000003fdd8     0 NOTYPE  LOCAL  DEFAULT   15 $d
+    43: 000000000003fdd8     0 OBJECT  LOCAL  DEFAULT   15 __frame_dummy_init_array_entry
+    44: 000000000002005c     0 NOTYPE  LOCAL  DEFAULT   14 $d
+    45: 0000000000040010     0 NOTYPE  LOCAL  DEFAULT   21 $d
+    46: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS delta.cpp
+    47: 0000000000010160     0 NOTYPE  LOCAL  DEFAULT   11 $x
+    48: 00000000000200c0     0 NOTYPE  LOCAL  DEFAULT   14 $d
+    49: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    50: 0000000000020124     0 NOTYPE  LOCAL  DEFAULT   14 $d
+    51: 0000000000020124     0 OBJECT  LOCAL  DEFAULT   14 __FRAME_END__
+    52: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+    53: 00000000000105b4     0 FUNC    LOCAL  DEFAULT   12 _fini
+    54: 000000000003fde8     0 OBJECT  LOCAL  DEFAULT   17 __dso_handle
+    55: 000000000003fdf0     0 OBJECT  LOCAL  DEFAULT  ABS _DYNAMIC
+    56: 0000000000020000     0 NOTYPE  LOCAL  DEFAULT   13 __GNU_EH_FRAME_HDR
+    57: 0000000000040010     0 OBJECT  LOCAL  DEFAULT   20 __TMC_END__
+    58: 000000000003ffc0     0 OBJECT  LOCAL  DEFAULT  ABS _GLOBAL_OFFSET_TABLE_
+    59: 0000000000010000     0 FUNC    LOCAL  DEFAULT    9 _init
+    60: 0000000000010020     0 NOTYPE  LOCAL  DEFAULT   10 $x
+    61: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterTMCloneTable
+    62: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@GLIBC_2.17
+    63: 0000000000010160     8 FUNC    GLOBAL DEFAULT   11 gp_delta_abi
+    64: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    65: 0000000000010168   452 FUNC    GLOBAL DEFAULT   11 gp_delta_encode
+    66: 000000000001032c   648 FUNC    GLOBAL DEFAULT   11 gp_delta_decode
+    67: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMCloneTable
+
+Version symbols section '.gnu.version' contains 10 entries:
+ Addr: 0000000000000422  Offset: 0x000422  Link: 3 (.dynsym)
+  000:   0 (*local*)       0 (*local*)       0 (*local*)       1 (*global*)   
+  004:   2 (GLIBC_2.17)    1 (*global*)      1 (*global*)      1 (*global*)   
+  008:   1 (*global*)      1 (*global*)   
+
+Version needs section '.gnu.version_r' contains 1 entry:
+ Addr: 0x0000000000000438  Offset: 0x000438  Link: 4 (.dynstr)
+  000000: Version: 1  File: libc.so.6  Cnt: 1
+  0x0010:   Name: GLIBC_2.17  Flags: none  Version: 2

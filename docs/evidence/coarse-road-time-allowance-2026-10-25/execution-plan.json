@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "status": "Cost allowance execution frozen before the single benchmark; policy/source-cost and endpoint controls pass",
+  "designSha256": "649d83130dab0221157cc49c0d4d850a1872fb51f75d715f02c7e9da086dfe0f",
+  "inputs": {
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/next-cost-design.json": "5d37d23610bde4aefd9e4d8c513820c43701c09a79d4eea00bd292d17c162992",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/findings.json": "e72a9ac10c6d00c7e3ff6ec59495a00724354724df026df6461d19033abe0cb8",
+    "docs/evidence/coarse-backbone-path-audit-2026-10-25/sha256.json": "86ae8c04402586f59749f73707430414a95d3a207d4cd7e5a572aaba6d859981",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/execution-plan.json": "14ce73ea4e2008cb2f87cd21a3bf3d75a4cf5745af7fc00dc8d5649530200324",
+    "docs/evidence/coarse-backbone-routing-2026-10-25/paths.json.gz": "72f131a88bf54bbdcf8ca3d0828aa10762d371dbb71d0b0a9d286ff726181380",
+    "data/coarse-quality/backbone-binary-package-v3/probe/backbone.bin": "4d455bec6c02f3da5a189dd8bbe36b4e2da98be124cd4c45d8309f0234de4b20",
+    "data/coarse-quality/connector-timing-candidate-v1/base-links.json.gz": "dcd8c893240f137af276adc629d83ee7a9cb9868371363bea8f1977709bf4262",
+    "src/server/backbone-routing.ts": "aa2b54c707b8bc78959bd336ebe1152d168988cf27e856caa89bf9198641ae4a",
+    "src/server/backbone-geometry.ts": "9bd333d9b409754978ff24d0adbe05ef731f438656fe413ed556672619e929b8",
+    "src/server/coarse-grid.ts": "41d436d9e4059cb46589261602f5543dfd196a8f4ac263997b64317bd46f6a3e",
+    "src/server/coarse-data.server.ts": "14359b989b13a71cc695261bc03aa38f27993472807cb1a9807336a283aa77c3",
+    "scripts/backbone-binary-loader.mjs": "c27a1e087ba5790b5a35bfddc9eb5ddb6f1cfc81e8aeec67732e7c6f15d5e221",
+    "scripts/backbone-binary-format.mjs": "9bb4d4813b5728dcac3c87e91960bfde6ff062ead22b32da009cac8a2847f51e",
+    "scripts/backbone-binary-validate.mjs": "7334de37a1ae9c6b2b0180bfbf8ba34183d086da95eb4ade8933062e7420cb73",
+    "src/server/backbone-cost.ts": "2057f6f41171b54cb48398f9ed4a6b7126b46676331688b655aebc3d424d15e7",
+    "src/server/backbone-cost.test.ts": "be8062cc07df0614acb9d07d22bca0de2b4b9a97c0800676125becd1715290c1",
+    "scripts/prepare-road-time-allowance.mjs": "38cec178a5890b9e176acf04a596f1913b3e39504165fbcc691ef46462e5eaf3",
+    "scripts/compare-road-time-allowance.ts": "3526ab6307f16951c19ad2be6413b7b6f15d1080934c184f859e08f4335f6b23",
+    "scripts/verify-road-time-allowance.py": "5f2a490b9e4e8582fa2f038c9d322a8b446329d9f14d4b27c0da9819b26f2859",
+    "src/server/coarse-geography.ts": "29aa636f79fdb158203217feec31ef5a387b0f0b268650c0c7c68c3b6e0b286d",
+    "src/server/coarse-contours.ts": "1bc037eb86966320f480558cf223ce3b72fb7808d11978761345fe5006d57a39",
+    "src/lib/reachability.ts": "af2aebb4acb55ec944b59534ec521ed947622f7fd21e4d6566328366834f367a",
+    "package-lock.json": "344621884a6d42d99525db2be9bcd961ea2ddae06211b11a60be931cb7af6abc",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/policy.json": "4446789e20dab8e2e5d64ef74cba431dff8123977736f86a412c17f8e329b4c1",
+    "docs/evidence/coarse-road-time-allowance-2026-10-25/preparation-plan.json": "a4fc25ca465c36938ac88a4357b06ef68f24e755e783f1a6ba0a1ae6c05e7125",
+    "scripts/coarse-damped-gates.ts": "d3db1541837357fcf161ceefeb2731a8c554f61565f29156509ef450d588f64c",
+    "docs/evidence/coarse-path-features-2026-10-24/comparison.json": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a",
+    "data/coarse-quality/road-time-allowance-v1/backbone.bin": "f099563d48f5b7f31fc12768deeca9cfe388adbbae54a29f952f65974a896af3",
+    "data/coarse-quality/road-time-allowance-v1/manifest.json": "aac1b13ce142d369aa414ffd94a852d637d88a7098be4453d802c8bca2ace68b",
+    "data/coarse-quality/road-time-allowance-v1/control.json": "d2199f8d35eec83112977e95228b1f4e475d7af4341372bf1c23ec6214f70726"
+  },
+  "binary": "data/coarse-quality/road-time-allowance-v1/backbone.bin",
+  "binaryManifest": {
+    "bytes": 61907611,
+    "sha256": "f099563d48f5b7f31fc12768deeca9cfe388adbbae54a29f952f65974a896af3",
+    "sourceRoadTimeFactor": 1.1,
+    "policySha256": "4446789e20dab8e2e5d64ef74cba431dff8123977736f86a412c17f8e329b4c1"
+  },
+  "baseline": "docs/evidence/coarse-path-features-2026-10-24/comparison.json",
+  "output": "data/coarse-quality/road-time-allowance-comparison-v1",
+  "diagnosticBudgetMinutes": 900,
+  "gates": {
+    "primary": "All83 saved matched ORS development cases vs v9, not holdout/nationwide/traffic truth. Retain all35 Valhalla sensitivities and failures.",
+    "overallMaeMaximum": 26.33167687894809,
+    "frontierMaeMaximum": 40.166414408550864,
+    "originalMaeMaximum": 7.222683331642199,
+    "regionalMaeMaximum": 8.612811312916305,
+    "frontierMedianMaximum": 40.560596876175964,
+    "frontierP90Maximum": 97.8133333333343,
+    "allHorizonMeansAndP90NoWorseThanV9": true,
+    "valhallaGroupMeansNoWorseThanV9": true,
+    "maximumIndividualAbsoluteErrorIncreaseMinutes": {
+      "frontier": 20,
+      "older": 5
+    },
+    "maximumFrontierDefiniteErrors": 12,
+    "maximumFrontierMissed": 2,
+    "maximum12hMissed": 1,
+    "all83FiniteAndAll166PathSums": true,
+    "all35OlderDestinationsShadedAt720": true,
+    "maximumRetainedDecodedBytes": 162238546,
+    "maximumLocalFirstPackagedComputeAfterConfigMs": 5000,
+    "maximumFunctionBytes": 70000000,
+    "fullSourcePhysicalShoreTransferAndArbitraryOriginChecks": true,
+    "softwareAndGeneratedHandlerAndSharedCameraChecks": true
+  },
+  "additionalNoWorseTailChecks": [
+    "overallP90",
+    "originalP90",
+    "regionalP90"
+  ],
+  "commands": [
+    "node --import tsx scripts/compare-road-time-allowance.ts data/coarse-quality/road-time-allowance-comparison-v1 EXECUTION_PLAN_SHA256"
+  ],
+  "ordering": "Synthetic/software gates first; one frozen83/35 comparison only after they pass. Do not qualify a failed candidate further or activate. Preserve every necessary failure and all denominators.",
+  "scope": "One fixed10% road-only cost hypothesis on observed83 ORS/35 Valhalla development data vs unchanged v9; same900min diagnostic cap. No app/cloud full-query/accuracy activation claim."
+}

@@ -1,0 +1,65 @@
+{
+  "primaryDocumentationBrowsingPerformed": true,
+  "browsingHttpBytesAttemptsMeteredOrClaimed": false,
+  "sources": [
+    {
+      "id": "geofabrik-us",
+      "url": "https://download.geofabrik.de/north-america/us.html",
+      "date": "2026-10-26",
+      "facts": "Lists us-261025.osm.pbf at 12229320016 bytes; declares latest publisher state 2026-10-25T21:21:21Z. That state is a proposed header requirement, not yet observed in the dated PBF."
+    },
+    {
+      "id": "geofabrik-technical",
+      "url": "https://download.geofabrik.de/technical.html",
+      "date": "2026-10-26",
+      "facts": "Daily extracts use publisher clipping polygons; public data omits user/uid/changeset. No new global completeness or exact historical reconstruction claim follows."
+    },
+    {
+      "id": "pyosmium-stream",
+      "url": "https://docs.osmcode.org/pyosmium/latest/user_manual/01-First-Steps/",
+      "date": "2026-10-26",
+      "facts": "Streaming object views expire when processing advances; retained native fields must be copied. Repeated reading/caching resolves references."
+    },
+    {
+      "id": "pyosmium-processor",
+      "url": "https://docs.osmcode.org/pyosmium/latest/reference/File-Processing/",
+      "date": "2026-10-26",
+      "facts": "FileProcessor supports streaming; location caching defaults to flex_mem if enabled. Proposed reader deliberately avoids that national in-memory cache."
+    },
+    {
+      "id": "pyosmium-header",
+      "url": "https://docs.osmcode.org/pyosmium/latest/reference/IO/",
+      "date": "2026-10-26",
+      "facts": "Headers expose options and readers expose EOF/header access. Exact available source fields must be checked, not inferred."
+    },
+    {
+      "id": "pyosmium-package",
+      "url": "https://pypi.org/pypi/osmium/4.3.2/json",
+      "date": "2026-10-26",
+      "facts": "Captured metadata identifies the CPython3.13 Linux aarch64 wheel, size and SHA256; requests is the runtime dependency. Other listed extras are not requested. No wheel was fetched."
+    },
+    {
+      "id": "sqlite-limits",
+      "url": "https://www.sqlite.org/pragma.html",
+      "date": "2026-10-26",
+      "facts": "max_page_count bounds a database file; cache_size is a suggested cache limit, not a process-memory guarantee. mmap_size=0 disables mapped IO. temp_store may be affected by build options. OFF journals can leave corrupt derived indexes after errors/crashes; no recovery/resume may rely on them. PRAGMAs must be read back because unknown statements can be ignored."
+    },
+    {
+      "id": "pbf-format",
+      "url": "https://wiki.openstreetmap.org/wiki/PBF_Format",
+      "date": "2026-10-26",
+      "facts": "Requires BlobHeader under64KiB and uncompressed Blob under32MiB; raw/zlib are required encodings. Replication timestamp identifies database replication state, not a guarantee every object with an earlier timestamp is included. Proposed v2 uses publisher replication-state identity, not the old global time-query identity."
+    }
+  ],
+  "browserCouldNotOpen": [
+    "https://download.geofabrik.de/north-america/us-261025.osm.pbf.md5",
+    "https://download.geofabrik.de/north-america/us-latest.osm.pbf.md5"
+  ],
+  "directMetadataRequests": 5,
+  "directMetadataFailedTlsRequests": 3,
+  "directMetadataManuallyRepeatedRequests": 2,
+  "directMetadataAutomaticRetries": 0,
+  "directMetadataDeliveredBodyBytes": 51238,
+  "roadPbfRequests": 0,
+  "toolBinaryDownloads": 0
+}

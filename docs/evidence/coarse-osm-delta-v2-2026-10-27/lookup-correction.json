@@ -1,0 +1,8 @@
+{
+  "scope": "Versioned lookup integrity only; frozen V1 layout/native codec/metadata validator/limits unchanged.",
+  "formatPath": "docs/evidence/coarse-osm-delta-2026-10-27/format-spec.json",
+  "formatSha256": "6b33fc765368122f12f23e6f8e51757d0817f6ae4f86ceb31cf8c1af7644eafe",
+  "policy": "Every lookup batch verifies catalog bytes and full SHA256/size of every queried shard. Decode/cache rows only after authenticating a bounded immutable bytes snapshot. One shard snapshot at a time, <=35,679,872bytes plus bounded64-block typed cache <=4MiB payload; metadata never substitutes for integrity. Cache continues to save decode work, not full-shard reads. Initial full-format validation is separately retained.",
+  "regression": "Force unchanged file_stamp for a tampered cached shard: frozen V1 accepts cached data; V2 refuses by checksum. Original real Linux failure and every V1 byte remain unchanged.",
+  "deferred": "No real-sample lookup/time or native metadata/streaming IO claim. Full per-batch SHA is a correctness tradeoff to evaluate only after validator equivalence and a separate exact sample freeze."
+}

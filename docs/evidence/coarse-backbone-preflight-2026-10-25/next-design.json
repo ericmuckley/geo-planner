@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "status": "Next proposal only; no simplification/cell-crossing producer or routing candidate has run",
+  "reason": "Exact-source topology is broadly connected, but naive117.56MB and byte-exact-varint93.94MB projections fail unchanged70MB budget. Geometry accounts for most storage. Freeze a single25m protected simplification before a new separately versioned geometry preflight; do not retune codecs or reinterpret these failures.",
+  "inputs": {
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/plan.json": "56f9d1ac9fb1d0ff782ccbd09479ae90b3076b9ddf59a559c2ced2f1f98bcf54",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/report.json": "b75074f241bc4e92d05c2c305410d7f3a4653f0f35645795e5af6137e581efd5",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/codec-plan.json": "4f397a310ccc134d4b9ce22f0ce13fefb1cb9304f6fb521c3baf548ed6b0a0c0",
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/codec-report.json": "1f8b24913494c7cc88a44b9cb87bde31047cbbd4c42b53450c757b6e90eff15e"
+  },
+  "geometryPolicy": {
+    "maximumDeviationMeters": 25,
+    "justification": "Engineering tolerance below2% of the smallest1.8km display cell; not a fitted optimum or measured ETA accuracy. No tolerance sweep.",
+    "sources": "Same49 pinned Census partitions, exact geometry/class deduplication and source node identity. No download, endpoint snapping, new junction inference or city/region/query exception.",
+    "protectedVertices": [
+      "Every exact source endpoint/junction used in the accepted connectivity inventory",
+      "Every entry/exit intersection with the existing0.025-degree grid",
+      "Multipart boundaries and arc/part boundary positions"
+    ],
+    "simplification": "Deterministic Douglas-Peucker between protected positions; validate every original vertex against its corresponding retained span in a documented meter metric, including quantization within the25m total allowance. Retain full original source arc lengths/time costs. Do not derive weights from shortened geometry.",
+    "topology": "Add degree2 source/cell-crossing nodes without merging different source visits in one cell; junctions join only under the frozen exact-source rule. Preserve all source components and arc continuity. NE/local fallback remains explicitly coarse.",
+    "sourceProofs": "All source/part/junction IDs, protected locations, full-source cell visitation and cumulative source lengths retained in independent proof. Check per-span deviation, endpoint/chord bounds, source eligibility and no new water/border/access inference."
+  },
+  "earlyStopGates": {
+    "maximumTotalDeviationMeters": 25,
+    "sourceComponentsUnchanged": 3100,
+    "largestComponentRoadLengthFractionUnchanged": 0.9854365119558087,
+    "all166EndpointDenominatorsRetained": true,
+    "maximumProjectedFunctionBytesIncludingActualIndexesAnd4MiBReserve": 70000000,
+    "noCostOrSourceEligibilityChanges": true
+  },
+  "afterGeometryPass": "Freeze a separate exact candidate artifact recipe and evaluation plan BEFORE routing search; implement source-junction/cell-crossing states, paid continuous-land local25 transfers, source-speed105/85 travel and bounded indexed varint geometry access. No eager full int32 geometry expansion. Preserve v9 active until every gate passes.",
+  "prospectiveRoutingGates": {
+    "primary": "All83 saved matched ORS development cases vs v9, not holdout/nationwide/traffic truth. Retain all35 Valhalla sensitivities and failures.",
+    "overallMaeMaximum": 26.33167687894809,
+    "frontierMaeMaximum": 40.166414408550864,
+    "originalMaeMaximum": 7.222683331642199,
+    "regionalMaeMaximum": 8.612811312916305,
+    "frontierMedianMaximum": 40.560596876175964,
+    "frontierP90Maximum": 97.8133333333343,
+    "allHorizonMeansAndP90NoWorseThanV9": true,
+    "valhallaGroupMeansNoWorseThanV9": true,
+    "maximumIndividualAbsoluteErrorIncreaseMinutes": {
+      "frontier": 20,
+      "older": 5
+    },
+    "maximumFrontierDefiniteErrors": 12,
+    "maximumFrontierMissed": 2,
+    "maximum12hMissed": 1,
+    "all83FiniteAndAll166PathSums": true,
+    "all35OlderDestinationsShadedAt720": true,
+    "maximumRetainedDecodedBytes": 162238546,
+    "maximumLocalFirstPackagedComputeAfterConfigMs": 5000,
+    "maximumFunctionBytes": 70000000,
+    "fullSourcePhysicalShoreTransferAndArbitraryOriginChecks": true,
+    "softwareAndGeneratedHandlerAndSharedCameraChecks": true
+  },
+  "onFailure": "Preserve artifacts and exact failures; no threshold relaxation, alternate tolerance/source recipe, query replacement or activation. Version a new evidence-backed proposal separately.",
+  "scope": "Next geometry-size/semantics preflight before a routing candidate. No provider/source acquisition/key/env/DB access authorized; no new runtime model exists."
+}

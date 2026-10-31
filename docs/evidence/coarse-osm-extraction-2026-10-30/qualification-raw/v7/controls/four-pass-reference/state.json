@@ -1,0 +1,71 @@
+{
+  "status": "extracted_publisher_file_analysis_pending",
+  "stage": "complete",
+  "passes": [
+    {
+      "label": "primary-index-selection",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "primary-native-records",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "audit-index-selection",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "audit-native-records",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "a",
+      "status": "complete_from_acquired_file_only"
+    },
+    {
+      "id": "b",
+      "status": "complete_from_acquired_file_only"
+    }
+  ],
+  "sourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "sourceAdapterImplemented": false,
+  "nativeDecoderQualified": false,
+  "routingProviderRequests": 0,
+  "scanObjectVisits": 36,
+  "extractBytes": 1470,
+  "retainedElements": 4,
+  "windowOccurrences": 8,
+  "hashFramingBytesRead": 0,
+  "counterScope": "Projected native records counted on receipt; decoder failures before projection can leave unknown raw-object counts.",
+  "elapsedSeconds": 0.016235249990131706,
+  "sourceIdentity": {
+    "publisherStateUtc": "2026-10-25T21:21:21Z"
+  },
+  "externalInputReservationBytes": 0,
+  "publisherStateUtc": "2026-10-25T21:21:21Z",
+  "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+  "independentAuditComplete": true
+}

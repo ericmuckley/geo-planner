@@ -1,0 +1,12 @@
+{
+  "status": "v2 closed with oversize failure; v3 correction ready for one future metadata-only run",
+  "inputs": {
+    "docs/evidence/coarse-osm-tool-lock-run-2026-10-26/run-summary.json": "d3e040e9fd3ff1e744b65431730b7c06e104f55f6daff50191688b4922c5890d",
+    "docs/evidence/coarse-osm-tool-lock-run-2026-10-26/audit.json": "3a8b92a005392aebf36a693f9d6e598cb89481af9b6a8aa3d7c12db7e03f0a36",
+    "docs/evidence/coarse-osm-tool-lock-run-2026-10-26/metadata-v3-plan.json": "bd5bb8358cbbe41005f762578de83aae8ad34b8549008efd7b772da1a3b69044",
+    "docs/evidence/coarse-osm-tool-lock-run-2026-10-26/correction-readiness.json": "be6d44addf9061a59e08411f12d3fccdfa73e5885836edb93e36141ffc27254a"
+  },
+  "reason": "Full project catalogue includes release history and exceeded the assumed2MiB response bound. Header-only evidence establishes declared size, not the unfetched catalogue contents or package compatibility. Increase the new recipe individual catalogue bound to3MiB uniformly for four remaining catalogues while retaining16MiB total and all other small setup limits. Reuse only complete SHA-bound saved Requests metadata, not a partial lock or v2 allowance.",
+  "next": "Run exactly once the frozen metadata-v3-plan at new us-osm-tool-lock-v3; independently reconcile catalogues/lock/counters/resources/cleanup. Failure stays preserved without resume/retry/fallback. Success still needs lock review, separate tool-only binary/native proof and later exact data freeze.",
+  "deferred": "Any correction live request this checkpoint, binary download/install, PBF/road/provider/app DB access, source adapter/matcher/model/ETA, activated large caps/snapshot, app/env/npm/Vercel or commit/push/deploy."
+}

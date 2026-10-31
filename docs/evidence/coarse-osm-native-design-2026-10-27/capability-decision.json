@@ -1,0 +1,45 @@
+{
+  "decision": "cached_native_filters_are_insufficient_for_the_frozen_guard_contract; propose_one_isolated_native_build_closure",
+  "measured": {
+    "qualifiedImage": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "compilerOrBuildCommandsFoundOnPath": false,
+    "headersFoundAtNamedLibosmiumProtozeroZlibPaths": false,
+    "installedSiteHeaderFiles": 0,
+    "nativeLocationBackends": 8,
+    "runtimeGlibc": "2.34",
+    "runtimeZlib": "1.2.11"
+  },
+  "availableButInsufficient": [
+    {
+      "capability": "NodeLocationsForWays / create_map",
+      "available": true,
+      "gap": "Coordinate caching alone does not enforce the complete version/time/order/duplicate-tag/canonical-byte/counter/independent-audit contract. SimpleHandler locations=True calls ignore_errors; it cannot be substituted silently."
+    },
+    {
+      "capability": "Native Entity/Id/Key/Tag filters and IdTracker",
+      "available": true,
+      "gap": "Filtering can avoid Python objects but drops the evidence needed to validate discarded source metadata unless a native validating handler runs first."
+    },
+    {
+      "capability": "Python SimpleHandler / BufferIterator",
+      "available": true,
+      "gap": "Python callbacks retain per-node Python work; installed BufferIterator stub exposes no Python buffer-construction API for a new bulk validator."
+    }
+  ],
+  "selectedArchitecture": {
+    "core": "New C++17 PBF-only validation/index shared library behind a small C ABI, loaded via ctypes in the existing qualified Python worker; no C++ object or CPython extension ABI crossing.",
+    "build": "Separate digest-pinned linux/arm64 manylinux_2_28 builder; no alteration of cached runtime/site. Static libstdc++/libgcc if supported; only audited runtime dependencies, with real cached-runtime loader and fixture checks required.",
+    "pythonEvents": "Selected complete raw records, canonical-size boundary fallback, and bounded binary batches for hashlib/checksums/checkpoints; no ordinary per-node Python objects or canonical JSON.",
+    "metadataSeal": "Length-prefixed lossless binary projected-field tuples, with sorted UTF-8 tag keys, ordered refs/members, exact integer XY/time/ID/version/visibility. Python hashlib hashes bounded byte batches. This seal differs from full-stream canonical JSON hashes; prove its decoded fields equivalent and keep emitted selected canonical JSON identical.",
+    "independentAudit": "Preserve the two-pass proposal: primary selection on pass one; pass two independently rebuilds coordinate blocks/selection/membership and materializes raw objects. Primary IDs are hints only; independent exact key/output/geometry reconciliation rejects omissions/extras. No primary index reuse.",
+    "status": "Design only; core, ABI compatibility and native guard equivalence unimplemented/unqualified."
+  },
+  "notAuthorizedByThisDesign": [
+    "image/layer/source acquisition",
+    "compilation or a new sample benchmark",
+    "new national native or byte/ID-range scan",
+    "full extraction, model or app integration"
+  ],
+  "fullImportAdmitted": false,
+  "modelChanged": false
+}

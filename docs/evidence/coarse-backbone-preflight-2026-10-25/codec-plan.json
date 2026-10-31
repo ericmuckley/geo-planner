@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "status": "Frozen after failed naive storage preflight, before this codec result. Independent storage-only stage; original plan/gates/failed report unchanged.",
+  "algorithm": "Signed32 zigzag then canonical unsigned LEB128(max5bytes) then gzip level6/mtime0. Keep every integer in order, including repeats and part starts. No geometry simplification, rounding change, resampling, node/arc/offset/cost/source/query change or new source pass.",
+  "inputs": {
+    "docs/evidence/coarse-backbone-preflight-2026-10-25/plan.json": "56f9d1ac9fb1d0ff782ccbd09479ae90b3076b9ddf59a559c2ced2f1f98bcf54",
+    "data/coarse-quality/census-backbone-preflight-v1/report.json": "b75074f241bc4e92d05c2c305410d7f3a4653f0f35645795e5af6137e581efd5",
+    "data/coarse-quality/census-backbone-preflight-v1/pointDeltas.bin.gz": "b32bcda8f5e583c5e3192a99d48295635a80c68436653eb66396ae871eaa4192"
+  },
+  "expectedValues": 48900800,
+  "gates": {
+    "allSigned32IntegersRoundTripExactly": true,
+    "allOtherArraysRemainUnchanged": true,
+    "maximumProjectedFunctionBytes": 70000000,
+    "preserveOriginalIntegrationReserveBytes": 4194304,
+    "maximumSeconds": 300,
+    "maximumProducerRssBytes": 536870912
+  },
+  "runtimeDesignConstraint": "Future prototype retains inflated varint bytes plus sparse part/arc offsets and decodes bounded geometry spans; must not expand all195.6MB int32 deltas eagerly. This encoding preflight does not implement/qualify that runtime or prove retained/peak memory, startup/search/contour time, app packaging or road accuracy.",
+  "onFailure": "Preserve result, stop this encoding stage. No codec sweep or changed budget in this run.",
+  "next": "Only if byte parity, existing connectivity/proximity and unchanged<=70MB projected footprint pass, write a bounded runtime candidate design with prospective accuracy/physical/retention/latency/package gates before implementation. Active v9 unchanged."
+}

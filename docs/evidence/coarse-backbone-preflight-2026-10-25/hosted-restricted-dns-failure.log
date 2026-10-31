@@ -1,0 +1,19 @@
+node:internal/deps/undici/undici:15433
+      Error.captureStackTrace(err);
+            ^
+
+TypeError: fetch failed
+    at node:internal/deps/undici/undici:15433:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async request (/Users/eric/Documents/GitHub/geo-planner/scripts/verify-coarse-deployment-v9.ts:28:19)
+    at async <anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/verify-coarse-deployment-v9.ts:45:24) {
+  [cause]: Error: getaddrinfo ENOTFOUND geo-planner-orcin.vercel.app
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'geo-planner-orcin.vercel.app'
+  }
+}
+
+Node.js v24.5.0

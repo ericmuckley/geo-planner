@@ -1,0 +1,58 @@
+{
+  "status": "passed_native_delta_index_synthetic",
+  "stage": "materialize-independent-audit",
+  "passes": [
+    {
+      "label": "primary-selection",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    },
+    {
+      "label": "materialize-independent-audit",
+      "status": "eof",
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "a",
+      "status": "unmeasured"
+    },
+    {
+      "id": "b",
+      "status": "unmeasured"
+    }
+  ],
+  "sourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "sourceAdapterImplemented": false,
+  "nativeDecoderQualified": false,
+  "routingProviderRequests": 0,
+  "scanObjectVisits": 18,
+  "extractBytes": 1470,
+  "retainedElements": 4,
+  "windowOccurrences": 8,
+  "hashFramingBytesRead": 0,
+  "counterScope": "Projected native records counted on receipt; decoder failures before projection can leave unknown raw-object counts.",
+  "elapsedSeconds": 0.01205987500725314,
+  "publisherStateUtc": "2026-10-25T21:21:21Z",
+  "independentAuditComplete": true,
+  "outputSha256": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c",
+  "sourceRecordHashes": [
+    "e9cefacd976133f63f8399b452548ccff2464ff7640551fdaabe4dde6e6a01ba",
+    "e9cefacd976133f63f8399b452548ccff2464ff7640551fdaabe4dde6e6a01ba"
+  ],
+  "coordinateStoragePeakBytes": 1143,
+  "coordinateStorageLiveBytes": 1143,
+  "wholeExtractionQualified": false,
+  "nativeMetadataValidationQualified": false,
+  "indexFormat": "block-id-delta-xy32-v1"
+}

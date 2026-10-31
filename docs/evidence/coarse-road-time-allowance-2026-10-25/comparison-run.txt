@@ -1,0 +1,230 @@
+{
+  "accuracyGatesPassed": false,
+  "gates": {
+    "overallMean": true,
+    "frontierMean": true,
+    "originalMean": true,
+    "regionalMean": true,
+    "frontierP90": true,
+    "horizonMeans": true,
+    "horizonP90": false,
+    "frontierWorstRegression": false,
+    "olderWorstRegression": false,
+    "frontierDefiniteClassificationErrors": false,
+    "frontierMissed": false,
+    "twelveHourMissed": false,
+    "all83Paired": true,
+    "all166PathSums": true,
+    "all35StillShaded": true,
+    "frontierMedian": true,
+    "overallP90NoWorse": true,
+    "originalP90NoWorse": true,
+    "regionalP90NoWorse": true,
+    "valhallaOriginalNoWorse": true,
+    "valhallaRegionalNoWorse": true
+  },
+  "overall": {
+    "baseline": {
+      "planned": 83,
+      "pairedFinite": 83,
+      "unreached": 0,
+      "meanAbsoluteMinutes": 29.257418754386766,
+      "medianAbsoluteMinutes": 15.985262951534196,
+      "p90AbsoluteMinutes": 70.04833333333386,
+      "classifications": {
+        "correct": 67,
+        "falseReachable": 11,
+        "missedReachable": 2,
+        "ambiguous": 3
+      },
+      "pathSumsReconstructed": 83
+    },
+    "candidate": {
+      "planned": 83,
+      "pairedFinite": 83,
+      "unreached": 0,
+      "meanAbsoluteMinutes": 24.482463364947098,
+      "medianAbsoluteMinutes": 13.03043122827009,
+      "p90AbsoluteMinutes": 66.41791286629814,
+      "classifications": {
+        "correct": 67,
+        "falseReachable": 5,
+        "missedReachable": 8,
+        "ambiguous": 3
+      },
+      "pathSumsReconstructed": 83
+    }
+  },
+  "sets": {
+    "original": {
+      "baseline": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 7.222683331642199,
+        "medianAbsoluteMinutes": 5.0191929246498574,
+        "p90AbsoluteMinutes": 14.466666666666697,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "candidate": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 6.351675372190075,
+        "medianAbsoluteMinutes": 6.006399064005137,
+        "p90AbsoluteMinutes": 12.45834628251589,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      }
+    },
+    "regional": {
+      "baseline": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 8.612811312916305,
+        "medianAbsoluteMinutes": 8.50051179159388,
+        "p90AbsoluteMinutes": 14.581758773791819,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "candidate": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 7.187693247919936,
+        "medianAbsoluteMinutes": 7.4285431634315096,
+        "p90AbsoluteMinutes": 13.03043122827009,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      }
+    },
+    "frontier": {
+      "baseline": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 44.629349342834296,
+        "medianAbsoluteMinutes": 40.560596876175964,
+        "p90AbsoluteMinutes": 97.8133333333343,
+        "classifications": {
+          "correct": 32,
+          "falseReachable": 11,
+          "missedReachable": 2,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      },
+      "candidate": {
+        "planned": 48,
+        "pairedFinite": 48,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 37.28482067180084,
+        "medianAbsoluteMinutes": 32.64834813365454,
+        "p90AbsoluteMinutes": 81.53268670310558,
+        "classifications": {
+          "correct": 32,
+          "falseReachable": 5,
+          "missedReachable": 8,
+          "ambiguous": 3
+        },
+        "pathSumsReconstructed": 48
+      }
+    }
+  },
+  "valhallaSensitivity": {
+    "original": {
+      "baseline": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 14.895590827316441,
+        "medianAbsoluteMinutes": 13.6205833333333,
+        "p90AbsoluteMinutes": 25.282074559541627,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      },
+      "candidate": {
+        "planned": 11,
+        "pairedFinite": 11,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 12.419685063689645,
+        "medianAbsoluteMinutes": 11.366364030392774,
+        "p90AbsoluteMinutes": 21.82980580796118,
+        "classifications": {
+          "correct": 11,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 11
+      }
+    },
+    "regional": {
+      "baseline": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 13.388922679750129,
+        "medianAbsoluteMinutes": 10.82101666666663,
+        "p90AbsoluteMinutes": 23.712499999999892,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      },
+      "candidate": {
+        "planned": 24,
+        "pairedFinite": 24,
+        "unreached": 0,
+        "meanAbsoluteMinutes": 11.100042702017605,
+        "medianAbsoluteMinutes": 7.7841187124648705,
+        "p90AbsoluteMinutes": 29.671532355604242,
+        "classifications": {
+          "correct": 24,
+          "falseReachable": 0,
+          "missedReachable": 0,
+          "ambiguous": 0
+        },
+        "pathSumsReconstructed": 24
+      }
+    }
+  },
+  "worstRegressions": {
+    "frontier": 66.57757783184627,
+    "older": 7.584459404360672
+  },
+  "rows": 83,
+  "origins": 21,
+  "outboundCalls": 0
+}
+

@@ -1,0 +1,18 @@
+{
+  "recipeSha256": "2f502d0943e30cc5e0133f87838248113422cb218f53a399ca606b8b2ea9559f",
+  "newProducerFiles": {
+    "scripts/coarse_osm_full_extract_v2.py": "f766ee4afbcedb88073b102d6d1338d9dd59e5c8db83744e8f85e638817d8e0d",
+    "scripts/coarse_osm_full_extract_v3_test.py": "c2119b6ef4ad91fb92306a18af3b7a1265bca3de543ff34fd72522980e0fd21a",
+    "scripts/run_osm_country_screen_v8.py": "64881267627e79bb8a453fafa7f5b2d0a85ef27d8fe63f4ba116075d0adab3ef"
+  },
+  "tests": 260,
+  "reusedBuild": {
+    "path": "data/coarse-quality/us-osm-country-controls-v6/build",
+    "sha256": "1084fc1b6e9b1a627b52180fd91df0b46e01a967fbd399c2bad672a4f675f48a"
+  },
+  "change": "Separate128MiB temporary rows/keys/points heap from unchanged64MiB selected serialized retention; global4GiB unchanged. Add valid large-batch regression.",
+  "selectedOutputRecordBytes": 1048576,
+  "selectedRetentionBytes": 67108864,
+  "liveBatchHeapBytes": 134217728,
+  "priorAttemptsPreserved": true
+}

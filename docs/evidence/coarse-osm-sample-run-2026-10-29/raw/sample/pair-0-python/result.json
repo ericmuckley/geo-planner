@@ -1,0 +1,58 @@
+{
+  "mode": "python",
+  "proofMode": false,
+  "counts": {
+    "node": 64000
+  },
+  "eof": true,
+  "decodeValidateIndexSealEofSeconds": 1.1527280840091407,
+  "framingSeconds": 0.0031688750023022294,
+  "postSourceHashSeconds": 0.0003921249881386757,
+  "postSourceHashBytes": 377536,
+  "protectedTotalSeconds": 1.157833583012689,
+  "framingBytesRead": 377536,
+  "knownGuardReadBytes": 755072,
+  "guardReadScope": "Framing/pre-hash+post-hash only; decoder/index/lookup reads are separate, never an all-IO total.",
+  "sourceIdentity": {
+    "publisherStateUtc": "2026-10-25T21:21:21Z",
+    "requiredFeatures": [
+      "DenseNodes",
+      "OsmSchema-V0.6"
+    ],
+    "framingBytesRead": 377536,
+    "frames": 9,
+    "sourceSha256": "8c27122ee2321a320cf33c1f8c678fdd3041fee16621984380e768d4746d38b8",
+    "sourceMd5": "bc9ad71f2101919f247e5dc0bde16520"
+  },
+  "canonicalSha256": "e845926261ab0fc4d7c1d8a904e08bbde01fd9e063b582d6537fc4cdd0a957b7",
+  "semanticSha256": null,
+  "semanticFormat": "geo-planner-projected-fields-v1",
+  "indexBytes": 579134,
+  "indexManifestSha256": "bd20cfb3ae4f031e80906caaed195312d927b5e8c2e3abdaa3e5b1e17131bf54",
+  "lookup": [
+    {
+      "kind": "cold",
+      "seconds": 0.014825083024334162,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 1156352
+    },
+    {
+      "kind": "warm",
+      "seconds": 0.0035775419673882425,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 578176
+    },
+    {
+      "kind": "repeat",
+      "seconds": 0.003329708008095622,
+      "queries": 1152,
+      "coordinateBitsSha256": "611b915271de4dac1303c712b8bff0b68daa9b3e42d195813b1416ae31527da4",
+      "authenticatedShardBytesRead": 578176
+    }
+  ],
+  "queryIds": [],
+  "receipt": null,
+  "coordinateRowsProved": null
+}

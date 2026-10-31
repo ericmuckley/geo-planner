@@ -1,0 +1,29 @@
+{
+  "status": "diagnostic_complete_source_incomplete",
+  "memoryGuard": {
+    "memoryMaxBytes": 1073741824,
+    "swapMaxBytes": 0
+  },
+  "networkGuard": {
+    "interfaceFlags": {
+      "lo": 73,
+      "tunl0": 128,
+      "gre0": 128,
+      "gretap0": 4098,
+      "erspan0": 4098,
+      "ip_vti0": 128,
+      "ip6_vti0": 128,
+      "sit0": 128,
+      "ip6tnl0": 128,
+      "ip6gre0": 128
+    },
+    "ipv4Routes": "Iface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+    "ipv6Routes": "00000000000000000000000000000000 00 00000000000000000000000000000000 00 00000000000000000000000000000000 ffffffff 00000001 00000000 00200200       lo\n00000000000000000000000000000001 80 00000000000000000000000000000000 00 00000000000000000000000000000000 00000000 00000002 00000000 80200001       lo\n00000000000000000000000000000000 00 00000000000000000000000000000000 00 00000000000000000000000000000000 ffffffff 00000001 00000000 00200200       lo\n",
+    "scope": "No active non-loopback link or non-loopback route. Dormant kernel tunnel devices are permitted; Docker network mode must also be none."
+  },
+  "networkRequests": 0,
+  "routingQueries": 0,
+  "originalFeasibilityQualified": false,
+  "elapsedSeconds": 8.983996420982294,
+  "outputBytesMetered": 54395033
+}

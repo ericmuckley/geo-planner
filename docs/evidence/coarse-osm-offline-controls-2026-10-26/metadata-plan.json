@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "phase": "metadata_only_dependency_lock",
+  "imageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "imagePull": "never",
+  "network": "bridge",
+  "memoryBytes": 1073741824,
+  "tmpBytes": 67108864,
+  "output": "data/coarse-quality/us-osm-tool-lock-v2",
+  "caps": {
+    "attempts": 5,
+    "totalBytes": 16777216,
+    "kindBytes": {
+      "metadata": 16777216,
+      "wheel": 0,
+      "pbf": 0
+    },
+    "wallSeconds": 300,
+    "idleSeconds": 20,
+    "workingBytes": 536870912,
+    "errorBytes": 65536
+  },
+  "specs": [
+    {
+      "url": "https://pypi.org/pypi/requests/json",
+      "kind": "metadata",
+      "maxBytes": 2097152,
+      "seconds": 20
+    },
+    {
+      "url": "https://pypi.org/pypi/charset-normalizer/json",
+      "kind": "metadata",
+      "maxBytes": 2097152,
+      "seconds": 20
+    },
+    {
+      "url": "https://pypi.org/pypi/idna/json",
+      "kind": "metadata",
+      "maxBytes": 2097152,
+      "seconds": 20
+    },
+    {
+      "url": "https://pypi.org/pypi/urllib3/json",
+      "kind": "metadata",
+      "maxBytes": 2097152,
+      "seconds": 20
+    },
+    {
+      "url": "https://pypi.org/pypi/certifi/json",
+      "kind": "metadata",
+      "maxBytes": 2097152,
+      "seconds": 20
+    }
+  ],
+  "inputs": {
+    "scripts/coarse_osm_bulk.py": "000d7d5e7e2bfb4a8aef071a31849ddbfc7b488ac937e15c9177d14de69c37ea",
+    "scripts/coarse_osm_bulk_audit.py": "b029424c1f0f45252396b649f4c1f9c8e7a95a4e94940ef7417b67f1dee227e2",
+    "scripts/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "scripts/coarse_osm_bulk_transport.py": "a4a664b49eacc6ce72a35d1105151e0ac7eb7df508bb4d81538f4125680ff89f",
+    "scripts/coarse_osm_bulk_test.py": "ae055f6f33ae2d7dccf955d652c1121a895c4b827e63b484f6e668dc53c490b7",
+    "scripts/coarse_osm_bulk_resource_probe.py": "0e854d562a9b06c941108907a99b16981da06b54321299f1b2cc0e2e6524b7f6",
+    "scripts/prepare_osm_bulk.py": "aaf54a05799e8f926f7206748a428e13b064c109ca88e48023935afd94a7fc37",
+    "scripts/coarse_osm_input.py": "3f61c015477dfd233c5d77d62dd5f7fa209e95748bb70bc07e7f7ec5e01170ca",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json": "38c8246d32faa3082b0786aff0e08fa0a7838cbf876f50e9b2369317f8559194",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/linux-metadata/pyosmium-json.bin": "a59a5dd21e003748167b81068b7bafce5c1cf54834a6cd096e6f44fabe029eb6"
+  },
+  "mounts": {
+    "scripts/prepare_osm_bulk.py": "/code/prepare_osm_bulk.py",
+    "scripts/coarse_osm_bulk_transport.py": "/code/coarse_osm_bulk_transport.py",
+    "scripts/coarse_osm_input.py": "/code/coarse_osm_input.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json": "/inputs/proposal.json",
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/linux-metadata/pyosmium-json.bin": "/inputs/osmium.json"
+  },
+  "workerFiles": {
+    "/code/prepare_osm_bulk.py": "aaf54a05799e8f926f7206748a428e13b064c109ca88e48023935afd94a7fc37",
+    "/code/coarse_osm_bulk_transport.py": "a4a664b49eacc6ce72a35d1105151e0ac7eb7df508bb4d81538f4125680ff89f",
+    "/code/coarse_osm_input.py": "3f61c015477dfd233c5d77d62dd5f7fa209e95748bb70bc07e7f7ec5e01170ca",
+    "/code/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "/code/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "/inputs/proposal.json": "38c8246d32faa3082b0786aff0e08fa0a7838cbf876f50e9b2369317f8559194",
+    "/inputs/osmium.json": "a59a5dd21e003748167b81068b7bafce5c1cf54834a6cd096e6f44fabe029eb6"
+  },
+  "proposal": "/inputs/proposal.json",
+  "captured": "/inputs/osmium.json",
+  "scope": "One future metadata-only setup, not executed here. No binary/data acquisition, source admission, activated national limits or snapshot. Exact wheel closure first; later separate binary setup/native ABI proof/data freeze."
+}

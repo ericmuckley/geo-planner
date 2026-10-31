@@ -1,0 +1,17 @@
+{
+  "status": "Prospective interface names only; scripts/lock/executable recipe DO NOT EXIST",
+  "safeNow": [
+    "python3 -B docs/evidence/coarse-osm-offline-plan-2026-10-26/verify.py",
+    "python3 -B docs/evidence/coarse-osm-offline-plan-2026-10-26/verify.py --local-assets"
+  ],
+  "futureImplementationChecks": [
+    "python3 -B scripts/coarse_osm_bulk_test.py",
+    "npm run check",
+    "npm run typecheck",
+    "npm run build"
+  ],
+  "futureMetadataLock": "python3 -B scripts/prepare_osm_bulk.py --resolve-lock docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json data/coarse-quality/us-osm-tool-lock-v2",
+  "futureResourceProof": "python3 -B scripts/prepare_osm_bulk.py --synthetic-resource-proof data/coarse-quality/us-osm-tool-lock-v2",
+  "futureAcquisitionTemplate": "python3 -B scripts/prepare_osm_bulk.py --run data/coarse-quality/us-osm-input-v2 --recipe-sha256 LATER_FROZEN_EXECUTION_PLAN_SHA256",
+  "order": "Implement stdlib controls/lock resolver/PBF reader and separate audit, test synthetic transport/native geometry/SQLite/decompression guards without tools/data. Resolve exact wheels under separately frozen metadata/tool setup limits; obtain only locked tool binaries and smoke-test before the data recipe. Freeze exact code/dependencies/source/windows/caps and a new executable SHA, then later one bounded PBF acquisition. No live larger/data/tool command is ready now; placeholders are not valid execution permission."
+}

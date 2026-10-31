@@ -1,0 +1,63 @@
+{
+  "status": "Completed offline saved-path/provider audit; active v9 and rejected candidate unchanged",
+  "cases": 83,
+  "valhallaCases": 35,
+  "missingReferences": 0,
+  "capturedDetailedCensusEdges": 22316,
+  "capturedBaseRoadEdges": 6576,
+  "orsFallbackWarnings": 83,
+  "warning": "Preference 'fastest' has been deprecated, using 'recommended'.",
+  "orsMinusValhallaMedianMinutes": 14.458249999999992,
+  "orsToValhallaMedianDistanceRatio": 0.9989023184487177,
+  "orsSlowerCases": 35,
+  "wholeProviderMedianWithin1KmBothDirections": [
+    1.0,
+    1.0
+  ],
+  "wholeProviderMeanWithin1KmBothDirections": [
+    0.8561598223009274,
+    0.8616814872662433
+  ],
+  "timeShares": {
+    "detailedCensusMinutes": 0.7011382837045668,
+    "coarseBaseRoadMinutes": 0.2735466261467896,
+    "localMinutes": 0.007675356593625928,
+    "transferMinutes": 0.009777939532740273,
+    "unresolvedOriginMinutes": 0.004870998404557438,
+    "unresolvedDestinationMinutes": 0.0029907956177200688,
+    "unresolvedDirectRoadMinutes": 0.0
+  },
+  "coarseBaseKinds": {
+    "natural-earth": 6575,
+    "census": 1
+  },
+  "coarseBaseCensusCases": 1,
+  "coarseBaseCensusTimeShare": 5.3885961241206786e-05,
+  "detailedSourceCorridor3KmMedian": 0.9257962431915672,
+  "detailedSourceCorridorCases": 80,
+  "noDetailedSourceGeometryCases": [
+    "regional/palm-springs--idyllwild",
+    "regional/idyllwild--palm-springs",
+    "regional/san-clemente--escondido"
+  ],
+  "interpretation": [
+    "Saved ORS service reports recommended fallback despite fastest request/query metadata; preserve primary rejection rather than reclassifying old gates.",
+    "All35 ORS durations exceed Valhalla by2.804\u201332.285min. Similar median distances/proximity show length alone is insufficient; different route choices, profiles, source dates and speed/turn rules remain confounded. Mean overlaps below medians retain substantial route differences in some cases.",
+    "Candidate full-Census geometry covers70.114% of aggregate time and matches ORS within3km at a92.580% per-case median over80 detailed-source cases. This subset is not complete route geometry or verified road identity/legality.",
+    "Retained coarse base is mixed-source, correcting the earlier NE-only shorthand. Only1 captured base road edge is Census (1.597min in1case);6575 are Natural Earth. This selected-path issue does not explain the broad83-case timing shift.",
+    "All captured source/base costs reconcile. The report does not determine a causal speed correction or justify a fitted factor. Next specify one generic cost-only hypothesis with fixed geometry/access and original gates before any new search."
+  ],
+  "software": {
+    "newPythonTests": 14,
+    "totalPythonTests": 85,
+    "biomeFiles": 190,
+    "ordinaryBuild": true
+  },
+  "newRoutingQueries": 0,
+  "providerRequests": 0,
+  "sourceDownloads": 0,
+  "databaseWrites": 0,
+  "envKeyDbInput": false,
+  "runtimeChanged": false,
+  "commitPushDeployment": false
+}

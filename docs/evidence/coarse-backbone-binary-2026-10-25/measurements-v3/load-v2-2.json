@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "entries": 29,
+    "graphArrays": 17,
+    "keptBlobs": 12,
+    "keptJsonSha256": "7ddd09269b1f4bcc19ef7d4ace039e010a3cbafeaf96c5221a57118a9a9a0454",
+    "binarySha256": "4d455bec6c02f3da5a189dd8bbe36b4e2da98be124cd4c45d8309f0234de4b20",
+    "allGzipAndRawHashes": true,
+    "nodes": 978572,
+    "arcs": 1234223,
+    "originalNodes": 245842,
+    "interiorVertices": 1415730,
+    "indexedCells": 326538,
+    "allFormatAndIndexChecks": true,
+    "loadDecodeValidateMs": 582.494708,
+    "baseLandCells": 2454400,
+    "baseRoadVisits": 123116,
+    "probeOnly": true,
+    "routingAvailable": false,
+    "scope": "Local file load, exact parity and format/index/base validation; no search, contour or cloud cold-start claim.",
+    "loads": 1,
+    "retainedGraphBytes": 92126186,
+    "baseLandBytes": 2454400
+  },
+  "moduleAndConfigMs": 53.275834,
+  "firstLocalHandlerMs": 584.0075830000001,
+  "baseline": {
+    "rss": 80494592,
+    "heapTotal": 32849920,
+    "heapUsed": 14817136,
+    "external": 3420147,
+    "arrayBuffers": 23041
+  },
+  "after": {
+    "rss": 408961024,
+    "heapTotal": 55394304,
+    "heapUsed": 19118856,
+    "external": 158395631,
+    "arrayBuffers": 154974419
+  },
+  "retainedHeapDelta": 4301720,
+  "retainedArrayBufferDelta": 154951378,
+  "retainedDecodedBytes": 159253098,
+  "outboundCalls": 0,
+  "disabledExperiment": true,
+  "missingDatabaseFallback": true,
+  "contoursUnavailable": true,
+  "publicBinaryUnavailable": true,
+  "gates": {
+    "firstLocalHandler": true,
+    "loadDecodeValidate": true,
+    "retainedDecodedStorage": true
+  },
+  "passed": true,
+  "scope": "Generated Vercel handler invoked locally; three forced GC cycles with event-loop yields before/after first load. Heap+arrayBuffers delta retains every graph/base buffer. RSS is observed, not peak memory. Module/config time separate; no query/cloud timing or accuracy claim."
+}

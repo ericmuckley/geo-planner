@@ -1,0 +1,60 @@
+{
+  "checkedDate": "2026-10-25",
+  "scope": "Official documentation/schema/release metadata only; no road-data file or tool downloaded.",
+  "sources": [
+    {
+      "url": "https://docs.overturemaps.org/guides/transportation/",
+      "facts": [
+        "Transportation is a global segment/connector dataset with OSM and additional sources.",
+        "Published examples allow bbox and property filtering of cloud GeoParquet.",
+        "US examples are illustrative, not evidence that required timing fields cover every US road."
+      ]
+    },
+    {
+      "url": "https://docs.overturemaps.org/guides/transportation/roads/",
+      "facts": [
+        "Roads can carry speed_limits, access_restrictions and prohibited_transitions.",
+        "Rules may be direction/time/mode/vehicle scoped or apply to subranges.",
+        "Implied speed limits are not populated by the schema; absent explicit data must remain unknown."
+      ]
+    },
+    {
+      "url": "https://docs.overturemaps.org/schema/reference/transportation/segment/",
+      "facts": [
+        "Schema includes geometry, sources, connectors, level_rules and scoped speed_limits with explicit units.",
+        "These are schema capabilities, not observed coverage or speed measurements in our pilot."
+      ]
+    },
+    {
+      "url": "https://docs.overturemaps.org/getting-data/duckdb/",
+      "facts": [
+        "Road queries can select segments whose bboxes intersect the target bbox, including crossing features.",
+        "SQL row limits or output size do not establish a network-transfer limit; our proposed byte meter is separate."
+      ]
+    },
+    {
+      "url": "https://docs.overturemaps.org/release-calendar/",
+      "facts": [
+        "Documentation reports release 2026-10-21.0 and schema v2.0.0 on the inspection date.",
+        "Public releases have limited retention; the proposed reader must verify and freeze actual manifests/object identities before any data request, and stop if the pinned release is unavailable."
+      ]
+    },
+    {
+      "url": "https://docs.overturemaps.org/attribution/",
+      "facts": [
+        "Transportation is published under ODbL and credits OpenStreetMap contributors and TomTom.",
+        "Attribution/source-license metadata must be retained in any later derivative; no new derivative is published by this proposal."
+      ]
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Key:maxspeed",
+      "facts": [
+        "maxspeed denotes a legal speed limit, with units, rather than measured average journey speed."
+      ]
+    }
+  ],
+  "metadataAttempt": {
+    "url": "https://stac.overturemaps.org/catalog.json",
+    "result": "Not accessible through the web tool; no catalog or data-object manifest verified. This remains a preparation requirement, not proof of missing road data."
+  }
+}

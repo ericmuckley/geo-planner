@@ -1,0 +1,12 @@
+{
+  "producer": [
+    "python3",
+    "-B",
+    "scripts/prepare_osm_native_lock_v1.py",
+    "docs/evidence/coarse-osm-native-lock-2026-10-27/execution-plan.json",
+    "698a0269066901147b60c60b72b074ddb29e1c24c975f46db11b04c38ca38348",
+    "data/coarse-quality/us-osm-native-lock-v1"
+  ],
+  "executedAtFreeze": false,
+  "scope": "One metadata-only lock. No image/source archive acquisition, compiler, source/sample/DB/provider call."
+}

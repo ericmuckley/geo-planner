@@ -1,0 +1,16 @@
+{
+  "imageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "path": "/usr/lib64/libzstd.so.1.5.5",
+  "sha256": "512958c830b5d563df9e9f245133f1bae1a614fc988c2cbd5bf80db5e0f2cfce",
+  "versionNumber": 10505,
+  "bytes": 730584,
+  "nativeApiPresent": [
+    "ZSTD_decompress",
+    "ZSTD_isError",
+    "ZSTD_findFrameCompressedSize",
+    "ZSTD_getFrameContentSize"
+  ],
+  "network": "none",
+  "actualBoundedNativeDecoderTests": "valid/declared-overflow/truncated/concatenated frame tests pass in17-test Linux run",
+  "source": "https://raw.githubusercontent.com/facebook/zstd/v1.5.5/lib/zstd.h"
+}

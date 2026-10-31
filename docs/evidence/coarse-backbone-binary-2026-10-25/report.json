@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "648c731",
+  "status": "Binary package/load probe passes; no routing candidate or active change",
+  "buildRecipe": "plan-v3.json",
+  "measurementRecipe": "measurement-plan-v3.json",
+  "binaryBytes": 60846203,
+  "binarySha256": "4d455bec6c02f3da5a189dd8bbe36b4e2da98be124cd4c45d8309f0234de4b20",
+  "functionBytes": 64511568,
+  "functionFiles": 29,
+  "reserveBytes": 4194304,
+  "functionPlusReserveBytes": 68705872,
+  "byteGate": 70000000,
+  "firstLocalHandlerMs": [
+    581.8404169999999,
+    584.0075830000001,
+    583.7877920000001
+  ],
+  "loadDecodeValidateMs": [
+    580.117834,
+    582.494708,
+    582.2791669999999
+  ],
+  "moduleAndConfigMs": [
+    56.036125,
+    53.275834,
+    53.345083
+  ],
+  "retainedDecodedBytes": [
+    159253098,
+    159253098,
+    159253562
+  ],
+  "retainedStorageGateBytes": 162238546,
+  "firstLoadGateMs": 3000,
+  "observedPostGcRssBytes": [
+    409042944,
+    408961024,
+    408780800
+  ],
+  "rssScope": "Single post-GC observation, not measured peak/cloud memory",
+  "graphArrays": 17,
+  "keptBlobs": 12,
+  "graphRawBytes": 92126186,
+  "allValuesAndHashesEqual": true,
+  "independentPythonAudit": true,
+  "serverOnlyBinary": true,
+  "noInlineOrPublicData": true,
+  "noRawSourceOrEnvFilesCopied": true,
+  "experimentCredentialInputs": false,
+  "outboundFetches": 0,
+  "disabledResearchAndMissingDatabaseFallback": true,
+  "routingAvailable": false,
+  "runtimeChanged": false,
+  "providerRequests": 0,
+  "databaseWrites": 0,
+  "sourceDownloads": 0,
+  "commitPushDeployment": false,
+  "software": {
+    "nodeFixtures": 8,
+    "pythonFixtures": 71,
+    "biomeFiles": 186,
+    "typecheck": true,
+    "ordinaryRootBuild": true,
+    "ordinaryProbeBuild": true,
+    "vercelProbeBuild": true
+  },
+  "preservedAttempts": [
+    {
+      "version": 1,
+      "result": "Failed import resolution: standalone Nitro rollup:before hook bypassed by Vite final environment"
+    },
+    {
+      "version": 2,
+      "result": "Both builds passed, but required binary missing; Vite defaults emitAssets false for server environments"
+    },
+    {
+      "verification": "Initial verifier invocation rejected parent output directory before scanning/loading; rerun used required child directory without changing verifier or thresholds"
+    }
+  ],
+  "remaining": "Freeze and implement one exact routing candidate/evaluation recipe before search; all original accuracy, source/physical, full first-estimate <=5s, storage, package and shared-camera gates still required. No cloud/area/nationwide accuracy claim.",
+  "fileCacheScope": "Fresh Node processes; OS file cache warm from build/package scanning/parity audit. No disk-cold or cloud cold-start claim."
+}

@@ -1,0 +1,17 @@
+{
+  "method": "Separate read-only host docker inspect of the two exact owned IDs after driver completion",
+  "workers": [
+    {
+      "phase": "acquire",
+      "ownedContainer": "6e82765429c32d040155a0721e8c98cfe9ea0974342760a08e9a82dc5eda1ec3",
+      "independentInspectAbsent": true,
+      "inspectExitCode": 1
+    },
+    {
+      "phase": "offline",
+      "ownedContainer": "5d393314b8912a6c2c6db09d0c62d3c83adaaa267b444473df05fe9f4f86c5fc",
+      "independentInspectAbsent": true,
+      "inspectExitCode": 1
+    }
+  ]
+}

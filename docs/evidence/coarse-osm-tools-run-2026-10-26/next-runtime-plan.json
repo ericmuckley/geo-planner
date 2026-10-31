@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "status": "Next isolated runtime-correction design; not an executable acquisition or source-data recipe",
+  "problem": "The exact osmium 4.3.2 wheel installs but cannot import in the frozen Lambda Python 3.13.5/aarch64 image: missing libexpat.so.1.",
+  "preserve": [
+    "data/coarse-quality/us-osm-tools-v1",
+    "docs/evidence/coarse-osm-tools-run-2026-10-26"
+  ],
+  "savedWheels": [
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/001.bin",
+      "filename": "certifi-2026.10.23-py3-none-any.whl",
+      "bytes": 135082,
+      "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
+    },
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/002.bin",
+      "filename": "charset_normalizer-3.5.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "bytes": 244624,
+      "sha256": "849df64e889b2e17230d58410a03dba311a65b163508fd33679b2b737d4b7858"
+    },
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/003.bin",
+      "filename": "idna-3.20-py3-none-any.whl",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/004.bin",
+      "filename": "osmium-4.3.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "bytes": 1729855,
+      "sha256": "456234255186a6f9aae83e70cce3e878f51673c37595f116d54f2cd861151b61"
+    },
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/005.bin",
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    {
+      "path": "data/coarse-quality/us-osm-tools-v1/acquire/http/006.bin",
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    }
+  ],
+  "orderedWork": [
+    "Read-only inspection of cached runtimes/ELF dependencies: identify a compatible aarch64 libexpat runtime source, its license, version, immutable source image/package identity, exact file/size/SHA and transitive libraries. Preserve Python 3.13 ABI and the exact six locked wheels; do not substitute the older cached Pyosmium 4.3.1.",
+    "Prefer a self-contained hash-bound library bundle from an already cached compatible image, without changing host/global/app environments or cached images. Check ELF machine/glibc requirements/library closure. If local cache cannot supply a compatible bundle, record that and specify a minimal official runtime-package acquisition with exact endpoints/size/SHA/caps before any new download; no implicit apt/image pull.",
+    "Create separately versioned runtime setup/smoke code and meaningful tests, retaining the failed v1 runner/output. Preflight runtime-library closure before another native proof. Freeze exact library/interpreter/wheel/code/mount/network-none/resource bindings and a fresh output before execution.",
+    "Only after the runtime correction is concretely frozen, execute one bounded offline native proof using the saved wheels (zero new wheel/metadata/road/provider requests), with target-only installation, native import, real tiny-PBF framing/projection/four-pass extraction/audit, exact fixture assertions and malformed/precision controls. Preserve any failure, independent cleanup and all timing/resource scopes."
+  ],
+  "prospectiveOfflineCaps": {
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "cpus": 2,
+    "wallSeconds": 600,
+    "workingBytesIncludingTmp": 536870912,
+    "tmpBytes": 67108864,
+    "validationBytes": 134217728,
+    "installedTreeBytes": 134217728,
+    "newWheelRequests": 0,
+    "metadataRequests": 0,
+    "roadRequests": 0,
+    "providerRequests": 0
+  },
+  "acceptance": "A compatible exact runtime correction and one successful bounded offline tiny native proof, or a preserved new failure with concrete next action. If a local-only correction is infeasible, deliver an exact minimal official-package acquisition proposal and leave it unexecuted. No national/model qualification from this stage.",
+  "deferred": "No national PBF, source/matcher/model/accuracy/package promotion, larger source caps/publisher state, paid/cloud/app/UI/env/DB/npm/Vercel, commit/push/deploy."
+}

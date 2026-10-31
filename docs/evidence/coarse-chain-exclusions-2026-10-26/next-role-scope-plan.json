@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "status": "Next reporting-only declared-role uncertainty test; not executed or admitted by the exclusion audit",
+  "inputs": {
+    "docs/evidence/coarse-chain-exclusions-2026-10-26/decision.json": "71eeff97d3e9c5abb3cd0c2d1668f6af5b0cef5a9ef6cd71ab8a692e757f60e2",
+    "docs/evidence/coarse-chain-exclusions-2026-10-26/report.json": "a0b7315831d4d46e8bde59e26d25ecb28e7bdaeb8e41db101fc1eff7cf33d313",
+    "docs/evidence/coarse-chain-exclusions-2026-10-26/audit.json": "9709db0a5f00c1755e449fef2a556bd2fe5c7365c10244f7ba73dd90e868d029",
+    "docs/evidence/coarse-chain-exclusions-2026-10-26/execution-plan.json": "e11b33da9461de3aaf3a7874fe749896f2050b86722b3de2cc051d0b2546c0f1",
+    "data/coarse-quality/overture-timing-chain-exclusions-v1/exclusions.jsonl": "7e546ac5041385434a7128c3db35ea149ae995a7c110132f76a14eabfc713c75",
+    "data/coarse-quality/overture-timing-chain-exclusions-v1/levels.jsonl": "1931d2ac5fc58ecc5b71a29367a2b7e27e597d87bf6e8d8a664742ad4ea225d5",
+    "data/coarse-quality/overture-timing-chains-v1/rows.jsonl": "1cdcafabb00b244b2c6a2b6a48efb218a99f3801138e9f1cce402e4b0958e3bf",
+    "data/coarse-quality/overture-timing-chains-v1/chains.jsonl": "f3859217a0686cf95baa4347147a04984732f4b49d1e25ac32dbb17a53fc0f21",
+    "data/coarse-quality/overture-timing-pilot-v1/segments.jsonl": "3b23132960cfc022256b0e0ed1e1061479da8db35d72147ad38dfd2d333647e4",
+    "data/coarse-quality/overture-timing-compatibility-v1/support.jsonl": "13b72c2ffcb8ec4b026649d2ace6895295cd2019d040e9d01670e2e78e0ca493",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/matches.jsonl": "bc52cb3fc16d70f4e0ae0f2d0fb7bfe01e48087fe92dc59a24a9be2d4208842d",
+    "docs/evidence/coarse-timing-design-2026-10-25/data-input-proposal.json": "7a9ec8c6c174d8091cc44eff95fdc22df0ad9b90116862d68bed86343fcf1730"
+  },
+  "output": "data/coarse-quality/overture-timing-chain-role-scope-v1",
+  "implementation": "New scripts/classify_chain_uncertainty.py and scripts/coarse_chain_uncertainty_test.py. Freeze exact code/inputs/new field definitions/decision/output before execution; do not edit old producers or statuses.",
+  "resources": {
+    "network": "none",
+    "cachedImageId": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "imagePull": "never",
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "wallSeconds": 3600,
+    "outputBytes": 134217728,
+    "tmpBytes": 67108864
+  },
+  "hypothesis": "Some conservative unresolved candidate records may be exhaustive only within the frozen declared supported-role universe. A row already carrying unsupported_road_role cannot be a member of that particular role-constrained candidate graph; this is not a real-world car-access assertion or proof of physical uniqueness.",
+  "method": [
+    "Retain all 55,120 IDs, 2,469 arc/window records, 85,629 original sample weights, 21 incomplete windows, 85/105 classes and all 82 candidate chains / 14 existential positives / 0 caps / 2.8270705809269594 baseline km. Reconcile raw role/parser/level/connector/scope hashes; no new geometry, node, adjacency or chain enumeration.",
+    "Add new fields only. Preserve originalStatus and originalSearchExhaustive fields exactly. For the separate declared-role scope, partition excluded rows into declared_out_of_role iff frozenReasons contains unsupported_road_role, versus unresolved_in_role for every remaining row. Additional reasons on out-of-role rows remain recorded; do not reinterpret any role, level, access or permission.",
+    "A role-scoped search is exhaustive only if cache is nonempty, original search is uncapped and unresolved_in_role is empty. Otherwise retain empty-cache/capped/unresolved states. If exhaustive, label zero/single/multiple cached candidates according to the unchanged saved candidate count. Never choose a first candidate or erase alternatives.",
+    "Known partial nonzero levels, missing/malformed IDs, outside-window endpoints, endpoint-distance/tie and all other in-role uncertainty remain blockers. No zero-level default, interval flattening, tolerance change, scope grant or lowered source/accuracy gate.",
+    "Independently audit every ID, old outcome, role partition, candidate count, cap/cache condition, source/class/window/sample denominator and raw scope. Support this reporting-only hypothesis iff at least one of the 32 original candidate-bearing unresolved records becomes exhaustive within the declared-role scope under the fixed rule; otherwise reject the reporting refinement.",
+    "Report all source windows still incomplete and every role-scoped result provisional. Contract-scoped exhaustiveness/uniqueness does not establish physical/global identity, absent competitors, driving access, usable speed coverage or ETA accuracy. Make one explicit next-input decision without changing the deployed model."
+  ],
+  "pass": "All original records/outcomes/weights/scopes and independent role-scoped reporting logic reconcile; fixed hypothesis decision preserved, no old status overwrite or source/model admission.",
+  "deferred": "New data/tool/request/retry, revised graph/matcher/chain enumeration, role/level/access/turn semantics, threshold or cap sweep, timing/cost policy, route/ETA/contour query, runtime/env/DB/npm change, commit/push/deploy. Any later acquisition or policy needs its own exact specification and original qualification gates."
+}

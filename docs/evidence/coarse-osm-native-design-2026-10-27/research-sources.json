@@ -1,0 +1,31 @@
+{
+  "kind": "Primary documentation browsing, separate from controlled offline probe; no binary/source archives or registry/API lock query acquired.",
+  "sources": [
+    {
+      "url": "https://github.com/pypa/manylinux/blob/main/README.rst",
+      "supports": "manylinux_2_28 arm64/GCC14/glibc2.28 candidate; builder manifest digest and actual contents remain unmeasured."
+    },
+    {
+      "url": "https://github.com/osmcode/libosmium/releases/tag/v2.23.1",
+      "supports": "Chosen release selector exists; no full commit/archive body acquired."
+    },
+    {
+      "url": "https://github.com/osmcode/libosmium",
+      "supports": "C++17/header-only library; exact PBF compilation closure still needs qualification."
+    },
+    {
+      "url": "https://osmcode.org/libosmium/manual.html",
+      "supports": "PBF requires zlib/protozero; XML/other features have additional dependencies. Manual C++11 text is older than repository C++17 requirement; choose C++17 and verify pinned source."
+    },
+    {
+      "url": "https://github.com/mapbox/protozero/blob/master/CHANGELOG.md",
+      "supports": "Chosen1.8.2 selector listed; release-page fetch failed, full tag/commit/tree still unqualified."
+    }
+  ],
+  "unavailablePages": [
+    "https://github.com/osmcode/libosmium/blob/v2.23.1/README.md",
+    "https://github.com/mapbox/protozero/releases/tag/v1.8.2",
+    "https://github.com/pypa/manylinux/blob/main/docker/build_scripts/build-deps.sh"
+  ],
+  "scope": "Documentation facts and proposed selectors only, not publisher signatures, locked image identity, dependency acquisition or compile/ABI proof. Browser search/doc traffic is not counted as zero-network probe traffic."
+}

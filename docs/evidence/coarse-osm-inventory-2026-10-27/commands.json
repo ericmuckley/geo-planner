@@ -1,0 +1,12 @@
+{
+  "executeOnce": [
+    "python3",
+    "-B",
+    "scripts/run_osm_inventory_v1.py",
+    "docs/evidence/coarse-osm-inventory-2026-10-27/execution-plan.json",
+    "32459e6f534412de7dad837f5b6241712ab043ad108dcd0f97fb1efcd3e7641d",
+    "data/coarse-quality/us-osm-inventory-v1"
+  ],
+  "executedAtFreeze": false,
+  "scope": "Separate bounded read-only native inventory; no source request, global coordinate index or full road extraction."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "Frozen before first completed generated-handler load; identical worker/gates, corrected server asset emission",
+  "planSha256": "54d29cdf431822f7253f3e7258289dcfc8e7bec852075f28ea48745d9ce562e5",
+  "inputs": {
+    "scripts/verify-backbone-binary-probe.mjs": "5363ca86f91f2f92ef6f756169b0b1f3e40a78c8146bb8530e75919961fdcd5b",
+    "scripts/backbone-binary-worker.mjs": "5899ad43e4a02befa1edcadf1d48b89f3f3ee312a7fd918dda29be8eb2669507",
+    "scripts/verify-backbone-binary-parity.py": "72c8344fee18de458305c5cd4eb71e76d401bdd29ec6b909879e4092017a07ef",
+    "scripts/prepare-backbone-binary-probe-v3.mjs": "dbeb493d36001c3747cec843187e982b8c231b4ae8d5e4b42ce249bac295f150",
+    "data/coarse-quality/backbone-binary-package-v3/probe.json": "d4668dda740ab3d5d5234aab0fbb3e9b841bc3e545f6069d7598e68fd264345d",
+    "data/coarse-quality/backbone-binary-package-v3/vite.config.ts": "e0367225c7bbc3772258b317304ce00ed34af1acb76a874574c747855667fa0c"
+  },
+  "freshProcesses": 3,
+  "firstLocalHandlerMs": 3000,
+  "retainedHeapPlusArrayBuffersDeltaBytes": 162238546,
+  "functionPlus4194304ReserveBytes": 70000000,
+  "gc": "Three explicit collections separated by setImmediate, before/after load. Baseline after module/config. Full graph and base stay live.",
+  "onFailure": "Preserve every output and stop; no data, threshold or format adjustment."
+}

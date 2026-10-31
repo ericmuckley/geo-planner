@@ -1,0 +1,37 @@
+{
+  "actualHostField": "hostSecondsIncludingInputHashesControlsCleanup",
+  "actualHostSeconds": 7.7474491249304265,
+  "actualHostScope": "Input/asset/code hashes, worker startup, mixed-record re-encoding, all reference/native full-field/coordinate proofs, six paired prefix cases, lookup, cleanup. The raw field name mentions controls, but no new74-test suite runs in this sample worker; it verifies the frozen prior admission.",
+  "resourcePhaseField": "The raw resource-guards phase=controls is the reused guard helper label, not a new control-suite execution. Actual recipe phase is sample; network none and resource limits are verified independently.",
+  "protectedScope": "From case entry: watchdog setup, source framing/decompression/SHA/MD5/features/precision/state, index setup, PBF open/decode/metadata/index/semantic/normal EOF/index.finish, full post-source SHA/stable stat and output file close. Excludes later coordinate proof/lookup/watchdog teardown. Acceptance uses fast cases only.",
+  "loopScope": "decodeValidateIndexSealEofSeconds includes PBF open/decode/metadata validation/index/semantic seal/normal EOF/index.finish. Framing, index setup and post-source hash are separate and included in protected total.",
+  "guardBytes": "755072 bytes per prefix case =377536 framing/prehash+377536 post-source hash. Not a count of decoder/index/lookup/all IO. Lookup separately reports1,156,352 authenticated shard bytes for cold application state,578,176 for warm/repeat batches.",
+  "sharedHostCaveat": "The read-only parent --local-assets proof was still running when the sample driver was launched; exact overlap with timed cases was not measured. These are this shared-host run with uncontrolled OS cache, not a quiet-host/cold-filesystem/cloud/national benchmark. No replay or post-result retuning.",
+  "medianSeconds": {
+    "python": {
+      "protectedTotalSeconds": 1.1122069170232862,
+      "decodeValidateIndexSealEofSeconds": 1.1079866669606417,
+      "framingSeconds": 0.0032464159885421395,
+      "postSourceHashSeconds": 0.0003921249881386757
+    },
+    "native": {
+      "protectedTotalSeconds": 0.023119126039091498,
+      "decodeValidateIndexSealEofSeconds": 0.018462959036696702,
+      "framingSeconds": 0.003252583963330835,
+      "postSourceHashSeconds": 0.0003888329956680536
+    }
+  },
+  "medianLookupSeconds": {
+    "python": {
+      "cold": 0.014825083024334162,
+      "warm": 0.0034930409747175872,
+      "repeat": 0.003114291001111269
+    },
+    "native": {
+      "cold": 0.014584709017071873,
+      "warm": 0.003324833989609033,
+      "repeat": 0.0030862080166116357
+    }
+  },
+  "noNationalForecast": true
+}

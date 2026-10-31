@@ -1,0 +1,21 @@
+✔ streaming source geometry preserves negative deltas, bends and stored cumulative costs (0.835958ms)
+✔ geometry rejects overflow, noncanonical, truncated and extra coordinates (0.285167ms)
+✔ ties-to-even seeds match Python for positive and negative halves (0.101041ms)
+✔ junction CSR and crossing incidence preserve separate coincident road identities (0.649458ms)
+✔ closed-cell boundary transfers are symmetric, including upper/right indexed endpoints (0.305917ms)
+✔ coincident cross-layer transfers remain positive and paid (0.055458ms)
+✔ strict local transfers cannot cross a lake or an island channel (0.093ms)
+✔ direct same-arc attachment avoids endpoint detours and pays interpolated source costs (0.93225ms)
+✔ partial source cost has a physical chord lower bound even at zero cumulative difference (0.055834ms)
+✔ an explicit source bridge can traverse water while local access cannot (0.164334ms)
+✔ display arrival respects partial arc progress and does not shade a distant endpoint cell early (0.336041ms)
+✔ arbitrary-origin search matches independent Bellman-Ford relaxation and reconstructs physical edges (1.321917ms)
+✔ invalid inputs are rejected and unsupported accepted origins remain isolated without mask mutation (0.169959ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 118.068458
