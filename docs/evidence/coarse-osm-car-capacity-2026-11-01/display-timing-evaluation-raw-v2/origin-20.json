@@ -1,0 +1,125 @@
+{
+  "origin": [
+    -117.612,
+    33.4269
+  ],
+  "diagnostic": {
+    "timings": {
+      "san-clemente--temecula": {
+        "ticks": 52691,
+        "kind": "local-grid",
+        "roadTicks": null,
+        "localGridTicks": 52691,
+        "localWitness": {
+          "terminalTicks": 171,
+          "edgeSeconds": 6060,
+          "seedSeconds": 505,
+          "seedCell": 1104843,
+          "seedKind": 8,
+          "steps": 74
+        }
+      },
+      "san-clemente--escondido": {
+        "ticks": 64368,
+        "kind": "local-grid",
+        "roadTicks": null,
+        "localGridTicks": 64368,
+        "localWitness": {
+          "terminalTicks": 248,
+          "edgeSeconds": 7510,
+          "seedSeconds": 505,
+          "seedCell": 1104843,
+          "seedKind": 8,
+          "steps": 86
+        }
+      }
+    },
+    "frame": {
+      "west": -121675000,
+      "south": 29975000,
+      "step": 5000,
+      "width": 1638,
+      "height": 1367
+    },
+    "stats": {
+      "envelopeMs": 218.20795900000007,
+      "maskMs": 560.7167910000003,
+      "seedMs": 211.90754199999992,
+      "fillMs": 97.03062499999987,
+      "contourMs": 29.681125000000065,
+      "displayMs": 1117.6134170000003,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 6338,
+      "activeSpans": 2814,
+      "settles": 766456,
+      "maximumHeapEntries": 2744,
+      "selectedCells": 766464,
+      "localCells": 766456,
+      "roadOnlyCells": 8,
+      "edges": 5578,
+      "rings": 2,
+      "vertices": 3074,
+      "jsonBytes": 51965,
+      "retries": []
+    },
+    "phaseMs": 1123.555375,
+    "output": {
+      "filename": "origin-20-900.geojson",
+      "bytes": 51965,
+      "sha256": "7186e2c33c749e71620df82da00a345101420856fb0c5d6730af56a94ec2fb95"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "san-clemente--temecula": true,
+        "san-clemente--escondido": true
+      },
+      "frame": {
+        "west": -120870000,
+        "south": 30650000,
+        "step": 5000,
+        "width": 1316,
+        "height": 1097
+      },
+      "stats": {
+        "envelopeMs": 212.82774999999992,
+        "maskMs": 417.82445899999993,
+        "seedMs": 208.01062500000035,
+        "fillMs": 66.17608299999984,
+        "contourMs": 14.797458000000006,
+        "displayMs": 919.6539169999996,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 6338,
+        "activeSpans": 2814,
+        "settles": 498175,
+        "maximumHeapEntries": 2278,
+        "selectedCells": 498183,
+        "localCells": 498175,
+        "roadOnlyCells": 8,
+        "edges": 4424,
+        "rings": 2,
+        "vertices": 2434,
+        "jsonBytes": 41154,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-20-720.geojson",
+        "bytes": 41154,
+        "sha256": "e1c9b5a736e8b09f7e4cd2f0ab2fef61533006fbc33004a5ac04be8897e41ed1"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 473186304,
+    "heapTotal": 83460096,
+    "heapUsed": 14543912,
+    "external": 143928313,
+    "arrayBuffers": 141389547
+  },
+  "reusedV1Record": null
+}

@@ -1,0 +1,38 @@
+test_deferred_imports_include_the_complete_reader_chain (coarse_osm_python_bindings_v1_test.Tests.test_deferred_imports_include_the_complete_reader_chain) ... ok
+test_missing_payload_fails_before_execution (coarse_osm_python_bindings_v1_test.Tests.test_missing_payload_fails_before_execution) ... ok
+test_outside_repository_roots_fail (coarse_osm_python_bindings_v1_test.Tests.test_outside_repository_roots_fail) ... ok
+test_standard_library_imports_and_cycles_are_bounded (coarse_osm_python_bindings_v1_test.Tests.test_standard_library_imports_and_cycles_are_bounded) ... ok
+test_wrong_module_filename_fails (coarse_osm_python_bindings_v1_test.Tests.test_wrong_module_filename_fails) ... ok
+test_duplicate_capture_identity_is_rejected (coarse_osm_car_cost_capture_v3_test.ConversionTests.test_duplicate_capture_identity_is_rejected) ... ok
+test_lexical_capture_is_reordered_with_exact_metadata_and_semantic_seal (coarse_osm_car_cost_capture_v3_test.ConversionTests.test_lexical_capture_is_reordered_with_exact_metadata_and_semantic_seal) ... ERROR
+test_source_hash_corruption_is_not_admitted (coarse_osm_car_cost_capture_v3_test.ConversionTests.test_source_hash_corruption_is_not_admitted) ... ok
+test_closed_source_way_retains_native_points_and_unreachable_cases (coarse_osm_car_cost_capture_v3_test.QueryOracleTests.test_closed_source_way_retains_native_points_and_unreachable_cases) ... ok
+test_only_turn_respects_history_and_allows_pretrip_source (coarse_osm_car_cost_capture_v3_test.QueryOracleTests.test_only_turn_respects_history_and_allows_pretrip_source) ... ok
+test_paid_internal_aliases_direct_travel_and_directional_costs (coarse_osm_car_cost_capture_v3_test.QueryOracleTests.test_paid_internal_aliases_direct_travel_and_directional_costs) ... ok
+test_every_object_metadata_unicode_members_and_coordinate_seal (coarse_osm_car_cost_capture_v3_test.Tests.test_every_object_metadata_unicode_members_and_coordinate_seal) ... ok
+test_repeated_nodes_reverse_and_relation_member_types (coarse_osm_car_cost_capture_v3_test.Tests.test_repeated_nodes_reverse_and_relation_member_types) ... ok
+test_wrong_epoch_still_fails_after_conversion (coarse_osm_car_cost_capture_v3_test.Tests.test_wrong_epoch_still_fails_after_conversion) ... ok
+
+======================================================================
+ERROR: test_lexical_capture_is_reordered_with_exact_metadata_and_semantic_seal (coarse_osm_car_cost_capture_v3_test.ConversionTests.test_lexical_capture_is_reordered_with_exact_metadata_and_semantic_seal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_car_cost_capture_v3_test.py", line 95, in test_lexical_capture_is_reordered_with_exact_metadata_and_semantic_seal
+    result = convert(source, destination, expected)
+  File "/code/coarse_osm_car_cost_capture_v3.py", line 84, in convert
+    record = json.loads(line);element = validate_record(record, STATE)
+                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/code/coarse_osm_attributes_v1.py", line 38, in validate_record
+    element=record.get('element');normalize(element,snapshot,RECORD_LIMIT)
+                                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/coarse_osm_records.py", line 58, in normalize
+    require(isinstance(tags, dict) and isinstance(tags.get('highway'), str) and tags['highway'], 'Returned non-highway way')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/coarse_timing_input.py", line 27, in require
+    raise PilotError(message)
+coarse_timing_input.PilotError: Returned non-highway way
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.030s
+
+FAILED (errors=1)

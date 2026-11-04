@@ -1,0 +1,55 @@
+{
+  "status": "national_entry_resolution_and_independent_audit_passed",
+  "nativeCounts": [
+    46533,
+    23009,
+    23387,
+    137,
+    149699,
+    99508,
+    22835,
+    9837326,
+    9703850
+  ],
+  "independentAudit": {
+    "status": "independent_complete_entry_resolution_audit_passed",
+    "waysChecked": 4227238,
+    "preArcsChecked": 9837326,
+    "candidateRulesChecked": 46533,
+    "decisionsChecked": 46533,
+    "entryPairsChecked": 22835,
+    "originalClosureIdsChecked": 149699,
+    "overrideClosureIdsChecked": 99508,
+    "originalPostArcs": 9620680,
+    "candidatePostArcs": 9703850,
+    "allPairsUseActualSourceNodeIdentity": true,
+    "fallbackUnionExact": true,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "scope": "Every metadata decision/pair/closure and pre-arc field checked with dense typed source arrays and bounded per-rule maps. Costs are range checked; original geometry/cost semantic seals remain inherited. No graph/package/ETA admission."
+  },
+  "nativeSecondsIncludingInputReadsAndOutput": 0.3353787499945611,
+  "independentAuditSeconds": 20.48258763400372,
+  "workerSecondsIncludingBindingsAndBothOperations": 21.16615575994365,
+  "assets": {
+    "resolved/entry-pairs-pre.u32": {
+      "bytes": 182680,
+      "sha256": "1eeae7ce3d0339e27cf966e23c52ec1627857da832a9e1b5b6c1608b0c04bd44"
+    },
+    "resolved/closures-0000.bin": {
+      "bytes": 796064,
+      "sha256": "4b6736e863a849358b2f212b1e8e71a84f3b551264d2b9bc1d94123e82034a63"
+    },
+    "resolved/decisions.bin": {
+      "bytes": 744528,
+      "sha256": "330456c6c3c701ecd090ac9e8c4a5ab35b77381ee9248895715042463c9850ce"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "runtimeGraphBuilt": false,
+  "appActivated": false,
+  "scope": "Resolved only restriction metadata against all pre-closure facts, with exhaustive independent typed source/pair/decision/closure proof. Routing/spatial/paid geometry/codec/ETA/app qualification are separate."
+}

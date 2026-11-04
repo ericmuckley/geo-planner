@@ -1,0 +1,26 @@
+{
+  "status": "Fixed paid geometry specification before captured/country production; implementation/control/audit freeze pending",
+  "parentCapacityDesign": "docs/evidence/coarse-osm-car-capacity-2026-11-01/geometry-length-index-design-v1.json",
+  "parentCapacityDesignSha256": "e041e345e2ac5bf9f0d865fde993ff8366433a8778fda8c65de956ded595a374",
+  "sourceVertexGeometryToleranceMeters": 100,
+  "sourceVertexTimeInterpolationToleranceMs": 10000,
+  "nativeGeometryNumericToleranceMeters": 0.001,
+  "nativeTimeNumericToleranceMs": 0.001,
+  "simplification": "At each candidate source interval, project each interior native point to the minor great-circle segment. Split at the largest normalized geometry/forward-prefix/backward-prefix error; retain a point whenever geometry exceeds 100 m or either enabled-direction paid prefix differs by more than 10 s from the segment interpolation. Recheck discarded source vertices. This bounds named source-vertex interpolation, not continuous curves, global nearest-road snap or actual ETA error.",
+  "sourceWeights": "Recompute primitive integer-ms prefixes with the frozen cost kernel and verify whole-span totals against source arc facts. Core weights/topology/flags/turns and identities remain unchanged.",
+  "canonicalGeometry": "One record per physical span that retains interior points, oriented along the smallest existing spatial CSR arc ID. Exact source E7 coordinate deltas are modular zigzag varints. Each interior point has two u16 source-time prefix fractions; implicit endpoints are 0/full. Retain source-way/position/direction provenance offline.",
+  "longIndex": "Full source-curve length >1000 m: u24 canonical arc ID + u16 ceil(length/8m)+1. Sentinel 65535 uses sparse u24 key/u32 unit overflow. The conservative length-circle endpoint bound avoids bounding-box storage and geographic corner cases; measure query scan time.",
+  "originalGeometryOnlyForecast": "153460092 B retained including geography/JS reserves is from shape-only counts; the additional paid-prefix constraint may retain more points. Measure actual counts/bytes; no fit claim or permission to discard cases.",
+  "requiredControls": [
+    "Independent great-circle projection checks; straight/bent/closed/zero curves; time-progress backtracking even when spatial error is zero.",
+    "Forward/backward speed asymmetry, native-ID coincident versus identical zero steps, canonical reversal, full integer-ms sum equality, prefix quantization and malformed data.",
+    "Monotone source positions, bounds/positive costs, source closures and length-unit overflow/rounding; frozen raw CSR-to-spatial correspondence.",
+    "Independent full captured source/packet/prefix/provenance/length audit before country command, then independent complete country audit and all old core queries."
+  ],
+  "deferred": [
+    "Origin transfer/shore/source permission checks, actual nearest-source-snap ambiguity/error and continuous-curve bounds.",
+    "Final geometry compression/loader footprint, complete app/83 ORS/35 Valhalla accuracy/physical/API/visual/startup/package admission."
+  ],
+  "geometryArtifactBuilt": false,
+  "modelChanged": false
+}

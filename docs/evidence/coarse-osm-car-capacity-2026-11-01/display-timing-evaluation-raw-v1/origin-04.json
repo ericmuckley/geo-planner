@@ -1,0 +1,165 @@
+{
+  "origin": [
+    -92.1005,
+    46.7867
+  ],
+  "diagnostic": {
+    "timings": {
+      "duluth-mn-360-inside": {
+        "ticks": 155013,
+        "kind": "road-foot",
+        "roadTicks": 155013,
+        "localGridTicks": 156143,
+        "localWitness": {
+          "terminalTicks": 559,
+          "edgeSeconds": 0,
+          "seedSeconds": 19448,
+          "seedCell": 1802003,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-360-outside": {
+        "ticks": 166691,
+        "kind": "road-foot",
+        "roadTicks": 166691,
+        "localGridTicks": 167101,
+        "localWitness": {
+          "terminalTicks": 573,
+          "edgeSeconds": 0,
+          "seedSeconds": 20816,
+          "seedCell": 1703931,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-600-inside": {
+        "ticks": 268578,
+        "kind": "road-foot",
+        "roadTicks": 268578,
+        "localGridTicks": 269465,
+        "localWitness": {
+          "terminalTicks": 473,
+          "edgeSeconds": 0,
+          "seedSeconds": 33624,
+          "seedCell": 1039299,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-600-outside": {
+        "ticks": 274735,
+        "kind": "road-foot",
+        "roadTicks": 274735,
+        "localGridTicks": 275183,
+        "localWitness": {
+          "terminalTicks": 263,
+          "edgeSeconds": 0,
+          "seedSeconds": 34365,
+          "seedCell": 1353285,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-720-inside": {
+        "ticks": 297174,
+        "kind": "local-grid",
+        "roadTicks": 300670,
+        "localGridTicks": 297174,
+        "localWitness": {
+          "terminalTicks": 822,
+          "edgeSeconds": 0,
+          "seedSeconds": 37044,
+          "seedCell": 1958853,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-720-outside": {
+        "ticks": 317052,
+        "kind": "road-foot",
+        "roadTicks": 317052,
+        "localGridTicks": 318640,
+        "localWitness": {
+          "terminalTicks": 848,
+          "edgeSeconds": 0,
+          "seedSeconds": 39724,
+          "seedCell": 1878725,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -111526821,
+      "south": 34609406,
+      "step": 13723,
+      "width": 2228,
+      "height": 1122
+    },
+    "stats": {
+      "envelopeMs": 623.174417000002,
+      "maskMs": 618.1017089999987,
+      "seedMs": 2231.664958000001,
+      "fillMs": 252.66999999999825,
+      "contourMs": 36.63554199999999,
+      "displayMs": 3762.4453329999997,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 4649479,
+      "activeSpans": 1573281,
+      "settles": 1390436,
+      "maximumHeapEntries": 464523,
+      "selectedCells": 1392754,
+      "localCells": 1390436,
+      "roadOnlyCells": 2318,
+      "edges": 22632,
+      "rings": 171,
+      "vertices": 13433,
+      "jsonBytes": 311010,
+      "retries": []
+    },
+    "phaseMs": 4105.474582999999,
+    "output": {
+      "filename": "origin-04-900.geojson",
+      "bytes": 311010,
+      "sha256": "ac10d95b30bfbf56123f262af2d1f1d53b1d9baf252bdb5851f29d6a05379ad2"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "duluth-mn-360.geojson",
+        "bytes": 303725,
+        "sha256": "61996de3de85e633321ec63bde4fa25c3d237865e3c7c2f479829f07065926b5"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "duluth-mn-600.geojson",
+        "bytes": 301122,
+        "sha256": "a85554441db69dd30bf44bd688e53ea5ce1f33bbeba18c4278f559da851d7d4e"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "duluth-mn-720.geojson",
+        "bytes": 317900,
+        "sha256": "c3dc7e6de88751fa7e55ad8ad29c3244bcf50351370cded17e2825e8c3d9d6f6"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 454115328,
+    "heapTotal": 82673664,
+    "heapUsed": 14367080,
+    "external": 143847177,
+    "arrayBuffers": 141308411
+  }
+}

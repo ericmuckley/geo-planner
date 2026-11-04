@@ -1,0 +1,29 @@
+{
+  "id": "saved-water-source-gap-dependencies-v1",
+  "roots": "data/coarse-quality/us-osm-water-relations-run-v1/water-relations.jsonl.gz",
+  "descendants": "data/coarse-quality/us-osm-water-closure-run-v1/water-relations.jsonl.gz",
+  "missingWays": "data/coarse-quality/us-osm-water-union-source-run-v1/missing-member-way-ids.u64",
+  "closureReport": "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-closure-run-raw-v1/report.json",
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-source-gap-dependencies-v1.json",
+  "qualification": {
+    "tests": 4,
+    "successful": true,
+    "errors": 0,
+    "failures": 0,
+    "skips": 0
+  },
+  "scope": "Saved metadata dependency facts only, no source PBF/native producer/active capture/model query/provider/DB operation. Source-gap propagation is not polygon eligibility or geographic impact.",
+  "inputs": {
+    "data/coarse-quality/us-osm-water-relations-run-v1/water-relations.jsonl.gz": "d2c521646485a401f124ec955d272c2b05f498d0f3d806481922d7a6ac0d6511",
+    "data/coarse-quality/us-osm-water-closure-run-v1/water-relations.jsonl.gz": "5f67984cbb1f91c34f85ee4c793a70eb658f66d371879af14f844d91de8e5954",
+    "data/coarse-quality/us-osm-water-union-source-run-v1/missing-member-way-ids.u64": "15ea2f13d6ebb9598bade6733da39583710a4a4b4bfb0530fce9f6b8fa8e381a",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-closure-run-raw-v1/report.json": "24db2a818b169c939ef50dc31a596dfd758c9ff92c81310d880cf2988cd77c8d",
+    "scripts/analyze_osm_water_source_gaps_v1.py": "a63ccc972437420d5830b2d46908aa65ce4d62c1e2aa57a9045cd79d6248d49c",
+    "scripts/analyze_osm_water_source_gaps_v1_test.py": "a1ea10fcf3991425245c4b063d6a2cac7af7f0484e4e11326f7343e5a438d3c2",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-relations-run-closed-v1.json": "0c6dcdfa5f82940628230af8894f8f6763654b755291587a8fa7100fef794452",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-closure-run-closed-v1.json": "05c68f23b3cf51d1d4219fcae3951d46c929a009cb79b0c255f8ff110ea0995a",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-source-run-closed-v1.json": "6b54ed7027119ffd0d5e9fd9100426baf487cc9ec0db92eb90fbe1a69d4b7872",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-source-run-raw-v1/report.json": "a0d26df5d9de22de49fd9297c104c61552a6d2638d608248bc6c7061076c79b5"
+  }
+}

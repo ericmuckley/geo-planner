@@ -2,6 +2,20 @@
 
 Recovering a disconnected session: read [the agent handoff](agent-handoff.md) before starting processes or changing environment values. It explains local-only data, the dirty working tree, safe health checks and the current graph. The main page defaults to the bundled coarse estimator; the hosted provider and local experiment use separate APIs.
 
+## Latest offline diagnosis recovery
+
+The finer candidate remains rejected and unintegrated. The user chose unchanged accuracy gates. All 80 finite paths/20 display identities reconcile, with all three unavailable cases retained. Mask/path diagnoses are terminal/closed; never replay used producers for documentation. Read [next steps](next-steps.md) for the qualified water-data feasibility prototype. The captured graph, national typed metadata, native equivalence and national resolution experiments are complete/closed. The new packed graph and spatial index are also complete/closed. Paid geometry and both independent byte audits are also complete/closed. All79 endpoint inputs are recomputed; the new accuracy evaluation is complete/rejected (same80 MAE33.7261875min/3 nulls) and all80 new path/source-speed diagnosis is complete. The national water metadata census passed/closed; lossless water relation/member-ID extraction passed/closed and nested source-relation closure finished with one source-absent relation explicit; national member-way union census passed/closed; exact compressed-reference prototype passes62 Linux controls/tiny full-pipeline and national capture/audit passed/closed, no polygon, mask or model change yet. Recover fresh host process/terminal state in the handoff before continuing.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_water_excluded_bounds_run_v1.py
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_restriction_entry_v1_test coarse_osm_entry_graph_v1_test
+node --expose-gc --import tsx --test scripts/coarse_osm_road_witness_v2_test.ts scripts/coarse_osm_trace_display_v1_test.ts scripts/coarse_osm_local_witness_v1_test.ts scripts/coarse_osm_witness_geometry_v1_test.ts
+```
+
+The composed proof reads small mirrors/bound code only. Source metadata, geometry, compressed paths and preview assets remain ignored/local-only. New path roots are `data/coarse-quality/us-osm-car-access-path-diagnostic-{v1,v2}/`; V1 preserves a release-guard stop after 14 saved paths, V2 succeeds with 14 reused/66 new searches. `us-osm-car-mask-diagnostic-v1/` is also closed. Newer closed allocation 3,778,031,616 B/133 roots plus prior 64.5 GB and 100 MiB metadata reserve stays under 64 GiB. Tracing/parent workspaces exceed production 64 MiB intentionally and must never ship. The read-only preview server may remain on 4717; rediscover process/port state instead of relying on old PIDs. App/env/cloud DB/dependencies/Vercel stay unchanged.
+
+All relation/graph/spatial/geometry/codec/access/numerical/path/source-attribute and water-coordinate/endpoint roots are complete/closed. Never rerun used recipes. Exact coordinate V2 checks all101,738,006 requested nodes/0 missing against source bytes; V1 disk stop/partial files stay preserved. Endpoint diagnosis checks all2,829,193 ways/104,806,243 refs/458,255 member rows/68,751 diagnostics;68,652 roots have explicit-role closed chains,82 others stay explicit. It reads no PBF/coordinates and establishes no polygon validity.147 closed roots5,296,963,584B under separately versioned72GiB local research envelope. The strict cached area helper passes20 Linux controls/200 generated independent geometry cases. The typed catalog passes30 Linux controls, complete tiny saved-data polygon pipeline43. Country polygon construction/source replay is complete/closed:2,439,095 features/2,648,285 rings/102,511,022 exact source-coordinate occurrences,908.22MB geometry gzip (offline only). Every invalid/source-gap case remains. Exact all245-point scan passed/closed, every point outside accepted water. Excluded-source bounds diagnosis passed/closed after45 Linux controls:594 excluded features/3,201,109 available reference occurrences;12 saved points overlap known excluded bounds,one source-incomplete relation remains spatially unqualified. Old unsupported input hits neither accepted water nor known excluded bounds. No active producer. Next qualify the proposed compact storage component synthetically; no country derivative command admitted yet. Outside accepted polygons is not proven land; no mask/ETA/app admission. Preserved manifest/startup/short-pin failures stay. No new env vars/dependencies/acquisition/provider/DB/app/deployment operation. [Budget provenance/clarification](evidence/coarse-osm-car-capacity-2026-11-01/water-coordinate-storage-revision-v2-clarification-v1.json). Portable proof reads small bound mirrors/code only.
+
 ## Start the workspace
 
 Use Node 22.12+ (this session used Node 24.5) and npm:
@@ -47,20 +61,25 @@ The route generator also runs during Vite builds. Use `npm run generate-routes` 
 
 **Closed national continuation:** V4's two full source passes, census/metadata/source/lookup/reference/resource/storage gates and independent default/local proofs pass. [Result/recovery](evidence/coarse-osm-country-exec-2026-10-30/README.md). USED roots`data/coarse-quality/us-osm-country-controls-v4/` and`.../us-osm-country-screen-v4/` are closed, workers absent. Never replay. Only eight fixed node-index portions are retained; national physical index/extraction/model remains unqualified. V5 road-batch component passes206 Linux controls/no skips at`data/coarse-quality/us-osm-country-controls-v5/`, artifact2,003,456bytes/SHA`9c81c86e3605738430b1c8f9f762bce71830740e5c46737485371ef8c0561166`. Its four producers/recipe are used/immutable; the full-source batching measurement is now USED/passed/closed at`data/coarse-quality/us-osm-way-batch-run-v2/`, recipeSHA`55a558f4575682d70ff3df009b104e5119eb72194aa639fd9d2cbd7fdc72c175`; [exact freeze/recovery](evidence/coarse-osm-way-batch-2026-10-30/measurement-freeze-v2.json). The worker is independently absent; inspect closed records and never replay. V2controller passes7Linux tests plus full fixture/independent proof; V1harness failure is preserved. [Completed batching result](evidence/coarse-osm-way-batch-2026-10-30/README.md); [completed saved-query replay](evidence/coarse-osm-lookup-2026-10-30/README.md):`data/coarse-quality/us-osm-lookup-v3-run/`, used recipeSHA`e60b9b81e307f8241b38a1405e0864a4c71594101175f71d9a0fd209c7b8b1c6`. It passed/closed; the exact worker is independently absent. No replay/retuning. All3lookup producers are used/immutable;6Linux controls/400native coordinates pass. No national PBF mount/read. [Complete extraction prototype](evidence/coarse-osm-extraction-2026-10-30/README.md) passes260Linux controls/no skips and independent four-pass output; V6/V7/V8roots are closed and workers absent. Full V1monitor failure and V2operator feasibility stop are closed/preserved. The corrected controller passed19Linux controls/no skips, tiny physical index/rebuild/reference output and independent proof. V2built the full766shard/14.5GB first index, but no whole-source EOF/output/second pass; worker absent. Do not replay/resume/repair/delete either used output. Safe proof:`python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_full_run_v2.py`. Cell codec V9passes276Linux tests; bank/independent masks/filtered extraction V10passes304Linux tests and exact tiny four-pass output, workers absent. Safe proof:`python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_qualification_v10.py`. Read-only V12passes38Linux tests/independent tiny output/input preservation, V11reporter stop preserved. Census controller11Linux/tiny2passes pass. Actual`data/coarse-quality/us-osm-cell-census-run-v1/` is stopped/closed at2GiB bank cap/98.2%ofnodes,31parts retained, no EOF/complete bank. Worker absent; never replay/resume/delete. Safe`python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_cell_census_stop_v1.py`. Next separately version lossless ID-gap runs under unchanged limits; preserve all frozen files/failed bytes. [Result/next scope](evidence/coarse-osm-extraction-2026-10-30/README.md). No new dependencies/environment variables/runtime/DB/Vercel setup.
 
-**Latest offline result:** national capacity passes two full traversals and identical938MBbanks. Road capture V1is USED/stopped/closed at250kselected guard,11,201,886ways recognized/no EOF/output; worker absent. Never replay/resume. Next separately versioned disk-backed selection/native2Mselected-ID controls, under unchanged4GiB/four-hour/64GiB global limits. No new source run yet. Safe saved proofs:
+**Latest offline result:** national acquired-file capture and facts-reader controls are passed/closed, with no active extraction/qualification worker. Do not replay their producer roots. Native/runtime/source/index/bank/large output assets stay ignored; only small proof records are mirrored. No app/environment/dependency/Postgres/Vercel configuration change. Source adequacy, timing permissions, matching and model gates remain.
+
+Safe saved proofs (default does not read PBF/native/large ignored assets):
 
 ```sh
-python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_cell_census_run_v2.py
-python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_filtered_capture_stop_v1.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_disk_capture_run_v1.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_controls_v2.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_polygon_review_v1.py
 ```
 
-Safe host-only checks for the unfrozen native attribute-facts draft (no source reads):
+Optional`verify_disk_capture_run_v1.py --local-assets`hashes new closed derived files(~3GB), opens the two readonly SQLite files and independently reconstructs every output record/membership/geometry seal. It already passed; do not repeat for docs alone. No old fine-index/source read or producer replay.
+
+Host-only component checks, with no target source acquisition:
 
 ```sh
-PYTHONPATH=scripts python3 -B -m unittest coarse_osm_attributes_v1_test
+PYTHONPATH=scripts python3 -B -m unittest coarse_osm_attributes_v1_test coarse_osm_attribute_controls_v1_test coarse_osm_polygon_review_v1_test
 ```
 
-Expect9passing synthetic tests. This does not qualify source adequacy, usable limits, actual Linux target data, matching or a model change. Every result keeps driving permission unreviewed and usableForTiming=False. Freeze and qualify a separate applicability/inventory policy before any captured-data feasibility conclusion.
+Expect22host tests (11reader+4controller+7geometry). Actual Linux facts qualification is11tests/no skips plus tiny preservation; geometry checks are host diagnostics. Never execute the preserved failed`verify_attribute_controls_v1.py`as the current proof; its one-ULP assertion error remains documented and V2is current. Next inventory needs a separate policy/freeze/controls before reading actual captured records.
 
 Safe saved-evidence checks (no Docker/native/national reads):
 
@@ -1753,3 +1772,222 @@ npm run check:vercel
 ```
 
 `check:vercel` is the retained Valhalla/provider check: it requires that selected graph service, invokes the generated handler locally and saves `vercel-verification.json` in its data directory. For the default coarse model, use `npm run check:coarse:vercel` instead; no routing service is required. Neither check deploys anything. The compact coarse artifact is bundled server-side, while large research graphs and environment files are excluded. Only the optional connected model requires a reachable provider. Default coarse v8 and the min 30 slider are committed through `9b3e83b`, user-reported deployed; fifteen public hosted checks and automatic slider browser checks pass. Public responses do not independently expose the Git SHA; hosted history writes were not repeated. The subsequent approved 48-route reference run is complete and shows material long-horizon error; its single-run quota budget is consumed. The class-timing candidate was measured and rejected; the separately approved six-route comparison is complete and shows materially different ORS/Valhalla timings; its quota budget is consumed. Actual connected-provider contour cloud verification remains separate and open.
+
+
+### Closed raw attribute inventory
+
+The all-record inventory is complete and closed; no worker remains. All captured239,253ways/21areas are retained. Saved proof checks small mirrored records by default; optional mode independently reads only477MBof closed derived JSONL and already passed. V1's optional canonical byte-count error is preserved; useV2. Do not replay either inventory recipe or edit used producers. No app configuration or dependencies change.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_inventory_run_v2.py
+# Only when the closed derived input/statistics need rechecking:
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_inventory_run_v2.py --local-assets
+```
+
+[Result, resource scopes and next diagnostic](evidence/coarse-osm-extraction-2026-10-30/README.md#captured-metadata-inventory-passed-and-independently-audited).
+
+
+### Closed Census geometry-opportunity diagnostic
+
+All 2,469 original Census arc/window records and 85,629 weighted samples are preserved. Ten Linux controls and independent full-mask geometry reconstruction pass; all workers are absent. Numeric-tag geometry overlaps about 81% of original Census weight, with no usable-limit/unique-match/model admission. [Exact results and scopes](evidence/coarse-osm-extraction-2026-10-30/README.md#census-geometry-opportunity-passed-full-matching-remains). Use current V2 for the small original-span audit; V1 optional exact-float comparison failure is preserved. No producer replay or extra source scan is needed.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_speed_opportunity_v2.py --stage run
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_speed_geometry_v1.py
+```
+
+
+### Closed native connected-matcher diagnostic
+
+The first native node-ID adapter/terminal matcher completed all 2,469 Census records without search caps. Its conservative single-path numeric opportunity is 2.7393%, not usable coverage. Fifteen actual Linux controls and independent saved native-part/geometry/weight/lineage audit pass. All workers are absent; native V1 scripts/recipes/results are immutable. [Exact result, timing/resource scopes and next prototype](evidence/coarse-osm-extraction-2026-10-30/README.md#native-matcher-v1-completed-conservative-geometry-bottleneck-measured).
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_native_match_controls_v1.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_native_match_run_v1.py
+```
+
+Optional `--local-assets` on the run proof already passed; it reads only closed derived matcher outputs, the separate sealed audit SQLite and original small saved Census spans. It does not read the source PBF/old fine index, run a worker, spend routing quota or access the application database. Large derived files remain ignored and absent from a fresh clone. No app/env/dependency/deployment changes.
+
+
+### Continuous matcher memory stop and controller correction
+
+V1 is stopped/closed after a configured 1 GiB OOM: four complete areas and a partial fifth, with no full coverage result. V2 keeps the exact matching helper/thresholds/cases/weights, releases already-written per-case detail from resident aggregation, and uses 2 GiB/zero swap within the existing 4 GiB envelope. Nineteen actual Linux controls pass, with a byte-identical persisted geometry report. [Recovery and exact active recipe](agent-handoff.md).
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_continuous_match_run_v1.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_continuous_match_controls_v2.py
+```
+
+The actual V2 root is `data/coarse-quality/us-osm-continuous-match-run-v2/`; rediscover its owner/state and never replay an existing root. After it terminates, close exactly once with `python3 -B scripts/close_osm_continuous_match_v2.py run`, then verify its full result and unchanged V1 byte prefixes independently. No PBF/fine/native/provider/application DB access, app configuration or dependency change. Large derived files remain ignored. All used controllers/helpers/recipes/evidence are immutable.
+
+
+<a id="latest-completed-offline-work-and-pending-architecture-choice"></a>
+
+### Earlier completed Census-enrichment work
+
+All workers from the capture/matching/topology stages are closed and independently absent. Continuous controller V2 completed all original areas; its independent proof verifies every source weight/native binding/candidate mask and exact V1byte prefixes. Saved topology analysis and a separate disjoint-set audit also pass. The current strategy yields21.6495%raw geometric/numeric corridor opportunity; no source/car/physical/usable-match/model gate is admitted. [Latest result](evidence/coarse-osm-extraction-2026-10-30/README.md#latest-completed-results-and-road-model-decision), [pending choice](next-steps.md#1-choose-the-next-road-data-architecture).
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_continuous_match_run_v2.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_corridor_families_v1.py
+```
+
+Defaults read small mirrored records and stored independent audits; no worker/PBF/fine/native/provider/DB access. Optional derived scans already passed and need not be repeated for docs. All referenced producer/closer commands above are completed historical commands and must not be replayed. V1memory stop, V1topology-closer timestamp stop and every old failed byte remain preserved. Topology closure usesV2records/mirror; files over1MiBremain ignored. Source/app/env/DB/npm/Vercel configuration is unchanged. The user subsequently selected the direct-road prototype; its completed lineage follow-up and current next action are below.
+
+
+## Direct OSM geometry prototype
+
+Completed October31. The user selected native graph construction instead of further Census enrichment. [Selected scope/results](evidence/coarse-osm-backbone-prototype-2026-10-31/README.md). New standard-library-only scripts `coarse_osm_backbone_v1.py`, its tests, `run_osm_backbone_v1.py` and `close_osm_backbone_v1.py` are used/immutable. Graphs use native IDs/full geometry and geometric-meter weights, with no car permission, ETA cost or active app integration.
+
+All captured input records/21areas are preserved. All-highway and fixed major-road profiles pass15actual Linux controls/independent tiny binary proof and complete actual independent source-edge/anchor/geometry/length/CSR/query audit. Major routing+full geometry gzip3,249,310bytes; national/function/retained-app memory/latency remain unmeasured. Current v9/env/Postgres/npm/Vercel configuration is unchanged.
+
+```sh
+python3 -B docs/evidence/coarse-osm-backbone-prototype-2026-10-31/verify_controls_v1.py
+python3 -B docs/evidence/coarse-osm-backbone-prototype-2026-10-31/verify_run_v1.py
+```
+
+Default checks read small mirrors/audits and execute no worker/source/provider/DB. Optional run `--local-assets` already passed; it reads only new derived graph artifacts and the sealed read-only capture audit SQLite, never countryPBF/old fine/native/provider/applicationDB. Do not repeat large scans for documentation. Local-only artifacts live at `data/coarse-quality/us-osm-backbone-{controls,run}-v1/`; actual binary/gzip/provenance files remain ignored. Workers are independently absent; never replay producer/closer roots or reuse old owner PIDs/sessions.
+
+The national cardinality and exact topology censuses are now passed/closed, including the complete independent derived audit. Cached source/compiler/runtime locations remain in [handoff](agent-handoff.md). No environment-variable, dependency, DB or Vercel configuration changed.
+
+## Native way-lineage geometry and next cost prototype
+
+[Complete result and recovery](evidence/coarse-osm-way-lineage-prototype-2026-11-01/README.md).12Linux controls and independent tiny binary proof pass. Actual21-area source geometry/metadata/native-point aliases and all41original native-distance pairs are independently audited. These are geometric lengths, not ETA accuracy. All producer/audit workers are closed and independently absent.
+
+```sh
+python3 -B docs/evidence/coarse-osm-way-lineage-prototype-2026-11-01/verify_audit_v1.py
+python3 -B docs/evidence/coarse-osm-topology-census-2026-11-01/verify_audit_v1.py
+```
+
+Defaults read repository code and small stored mirrors/audits only; they read no ignored binary/SQLite/PBF/tool assets and execute no worker/native/provider/applicationDB call. Large actual audits already passed and must not be repeated just for documentation. Every command in completed freeze files is historical/single-use; never replay a producer/closer root or reuse old owners/PIDs. V1lineage-closer audit-only manifest stop is preserved; V2closed the unchanged successful audit.
+
+Local-only assets under `data/coarse-quality/us-osm-lineage-{controls,run,audit}-v1/` include all graph/full-geometry/alias/gzip binaries; the37national topology spools under `us-osm-topology-run-v1/streams/` total1,775,576,920bytes. These and the cached country/compiler/runtime/auditSQLite are ignored and absent from a fresh clone. Recover owners from actual`owner.json`only if diagnosing a future job; all workers from these stages are absent. Keep64.5GBprior reserve within original4GiB/zero swap/2CPU/four-hour/64GiBoverall, adding every newer closed allocation.
+
+The [car-cost follow-up](evidence/coarse-osm-car-prototype-2026-11-01/README.md) below completes the previous captured-data cost/encoding task. A hypothetical 149 MB national u16 layout excludes actual turn/snap/overflow/geography/app overhead and grants no fit/ETA/coverage admission. Normal npm check/typecheck/build remain required for implementation changes; documentation-only work uses safe proofs/link/anchor/diff checks.
+
+## Road-only car costs and compact encoding
+
+[Completed policy, counts, resources and recovery](evidence/coarse-osm-car-prototype-2026-11-01/README.md). All 26 protected Linux tests/no skips, independent tiny binary proof, 82 directional checks of the original 41 geometric pairs and complete independent source audit pass. All 14 unreachable results remain recorded. Ferries are deferred by the user. No app/env/DB/npm/service/deployment change is needed to inspect these results.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-prototype-2026-11-01/verify_audit_v1.py
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_car_v1_test -q
+npm run check
+npm run typecheck
+npm run build
+```
+
+The portable proof reads small mirrors and repository code only. Synthetic tests use in-memory source fixtures, without ignored source/SQLite/graph/tool data, network or Docker. The source audit is completed; do not repeat it for documentation. All frozen producer/closer/audit commands are single-use historical records. Used code/recipes/results remain immutable; version corrections separately.
+
+Local-only inputs: the existing 477 MB capture/336 MB sealed auditSQLite, lineage graph/geometry/aliases and cached runtime. New roots `data/coarse-quality/us-osm-car-{controls,run,audit}-v1/` retain binary payloads and terminal ownership/resource records. These assets are ignored and absent from a fresh clone; mirrored small proof records live under `docs/evidence/coarse-osm-car-prototype-2026-11-01/car-raw/`. All three workers are closed and independently absent. Recover actual owners from `owner.json` for any future diagnosis, never an old PID/session. Car closed conservative allocations total 5,275,648 B beyond the prior 64.5 GB reserve.
+
+[Next task and acceptance](evidence/coarse-osm-car-prototype-2026-11-01/next-national-cost-scope-v1.json): account for unreachable cases, qualify typed native national car capacity and budget full app snapping/geography/runtime/search/JS/package data before any frozen country artifact. No next country command exists. Preserve original 4 GiB/zero swap/2 CPU/four-hour/64 GiB limits and original 83/35 accuracy/physical/package/startup/API gates. No paid/provider/applicationDB/download/deployment operation is implied.
+
+## Native car capacity, packed routing and compressed loader
+
+[Current evidence, frozen recipes and limits](evidence/coarse-osm-car-capacity-2026-11-01/README.md). National costs, independent derived audit, packed routing, spatial permutation and storage codec are all complete, closed and independently audited. Never replay their single-use producers or stale PIDs/sessions. The final core/index is 45,859,429 B compressed and retains 129,399,391 B of backing buffers. A fresh host load/hash/inflate/decode/validation + first saved vertex query takes 850.933542 ms; this is not the complete app/packaged estimate or cloud latency.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_country_cost_v1.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_search_v2.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_country_v1.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_wire_codec_v1.py
+node --import tsx --test scripts/coarse_osm_packed_car_v1_test.ts scripts/coarse_osm_packed_search_v1_test.ts scripts/coarse_osm_packed_codec_v1_test.ts scripts/coarse_osm_packed_loader_v1_test.ts
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_car_spatial_controller_v1_test coarse_osm_car_spatial_audit_v1_test coarse_osm_packed_codec_audit_v1_test -q
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/coarse_osm_packed_loader_v1.ts scripts/coarse_osm_packed_loader_v1_test.ts scripts/profile_osm_wire_codec_v1.ts
+```
+
+Proof defaults read only small mirrors/bound code. Synthetic controls create temporary fixtures and use installed `tsx`/TypeScript; no install/download, ignored graph/PBF/SQLite/native library, worker, provider or application DB call. Native tests require their explicit pinned artifact; host skips do not establish target qualification.
+
+Latest ignored roots under `data/coarse-quality/`: `us-osm-car-cost-country-{run,audit}-v1/`; `us-osm-car-packed-country-{controls,run,audit,profile}-v1/`; `us-osm-car-spatial-build-v1/`, preserved `us-osm-car-spatial-controls-v1/`, successful `us-osm-car-spatial-{controls,equivalence}-v2/`; `us-osm-car-spatial-country-{controls,run,audit,profile}-v1/`; `us-osm-car-wire-codec-v1/`, `us-osm-car-wire-codec-audit-v1/`, `us-osm-car-wire-codec-profile-v1/`. The final storage asset is `us-osm-car-wire-codec-v1/manifest.json` plus thirteen `fields/*.gz` files. Full geometry/cost facts and permutation tables stay offline; do not include offline maps in app footprint/package totals.
+
+Plain gzip's 97.17 MB V1 and 83.09 MB spatial profiles remain preserved; the final modular-delta/zigzag/byte-plane codec restores every original bit and passes a separate full Python decoder. All 82 original captured costs/14 unreachable and four frozen national physical query costs/failures remain. An anchor index is not a paid arbitrary-origin road snap. Next qualify geometry/snap/display within the remaining app budgets; all full app/accuracy gates remain open. Cached source/compiler/runtime/large graph assets are ignored and absent from a fresh clone. Environment, PostgreSQL, dependencies and deployed v9 remain unchanged.
+
+### Paid geometry and combined loader recovery
+
+The six `us-osm-car-paid-geometry-{build,controls,captured,captured-audit,country,country-audit}-v1/` roots and three host storage/profile roots are complete/closed. Nineteen target Linux controls/no skips and complete independent captured/country source audits pass. All 6,408,084 physical spans preserve source whole costs; the seven runtime fields total 11,469,870 B and compress to 7,895,857 B. Offline source-position provenance never ships. Final geometry storage is `data/coarse-quality/us-osm-car-paid-geometry-codec-v1/manifest.json` plus seven `fields/*.gz` files. All assets remain ignored/local-only; fresh HEAD clones lack them.
+
+Combined routing/index/geometry is 53,755,286 B compressed/140,869,261 B retained. Fresh host load + first original vertex query takes 1,068.689584 ms, excluding arbitrary-coordinate snapping, geography/display and the complete app. All four original national query costs/failures/settles remain exact. Geometry interpolation limits apply at discarded source vertices, not to continuous source curves, snap error or real ETAs. Next is geometric nearest-road search, followed by shore-safe paid origin connections and complete app gates.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_paid_geometry_v1.py
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_car_paid_geometry_audit_v1_test
+node --experimental-strip-types --test scripts/coarse_osm_paid_geometry_v1_test.ts scripts/coarse_osm_paid_geometry_loader_v1_test.ts
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/coarse_osm_paid_geometry_v1.ts scripts/coarse_osm_paid_geometry_loader_v1.ts scripts/profile_osm_paid_geometry_v1.ts
+```
+
+The portable proof reads small mirrored records/bound code only; synthetic controls create temporary fixtures. No native artifact, graph/source decode, Docker, provider or DB operation. The nineteen target checks are preserved evidence, not replaced by host skips. All used `paid-geometry-plan-*-v1.json` commands are historical single-use producers; never replay or overwrite them. The compiler artifact SHA is `b02ad89a559c3848c13a7e1d1423909c20550dc36523334c4894fdcb055bacd5`. Newer unique closed allocations now total 2,292,981,760 B beyond the 64.5 GB prior reserve; keep the separate 100 MiB metadata/host scratch reserve and all future owned/tmp reservations inside 64 GiB. No environment, database, app or deployment change.
+
+### Arbitrary-position and coarse origin-connection recovery
+
+Geometric nearest-road search, paid modeled-road positions and coarse input-to-road connections now pass controls and closed host national software checks. All 56 saved endpoints are retained; the first full data load + priced connection takes 1,035.501417 ms locally, excluding field/display/app. Ordinary connections use unchanged continuous land/lake crossings and 25 km/h; a separately declared one-meter modeled-road allowance handles inputs already on a road where generalized geography omits the position. The observed split is 55 strict land checks/one allowance. It is not real coast, private-access or ETA certification.
+
+The small geography asset at `data/coarse-quality/us-osm-car-geography-v1/{manifest.json,geography.json.gz}` has 27,784 unchanged source points/197,528 compressed bytes and a separate full independent equality audit. No inactive 61 MB grid is loaded by `coarse_osm_origin_geography_v1.ts`. Final compressed candidate data totals 53,952,814 B; measured source-prototype heap + arrayBuffers is 153,150,344 B after GC. These are partial prototype scopes. The field/display and every complete app gate remain next.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_origin_connections_v1.py
+node --import tsx --test scripts/coarse_osm_geometric_snap_v1_test.ts scripts/coarse_osm_paid_positions_v1_test.ts scripts/coarse_osm_origin_connections_v1_test.ts
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/coarse_osm_origin_connections_v1.ts scripts/coarse_osm_origin_geography_v1.ts scripts/profile_osm_origin_connections_v1.ts
+```
+
+The portable proof does not load graph/native/PBF/DB/provider inputs; synthetic tests create only fixtures. Roots `us-osm-car-geometric-snap-profile-v1/`, `us-osm-car-paid-positions-profile-v1/`, `us-osm-car-origin-shore-screen-v1/`, `us-osm-car-geography-v1/` and `us-osm-car-origin-connections-profile-v1/` are closed. Never replay their used commands or format checksum-bound producers. `biome.json` has five precise import-order exceptions for frozen files; other lint/type/functional checks remain enabled. Unique new closed allocations total 2,298,830,848 B beyond the 64.5 GB prior reserve, plus 100 MiB metadata/host scratch. No app/environment/DB/dependency/deployment change; the tooling override is local/uncommitted.
+
+### Road-field recovery
+
+`coarse_osm_road_field_v1.ts`/`coarse_osm_min_queue_v1.ts` and the V3 host profile are qualified/closed: eleven control groups, 3,000 generated pair comparisons, four lifetime groups, all 32 fields (eight sources ×2/6/10/12h) and all 48 country pair software comparisons. Nineteen finite/29 null results at those horizons remain; no provider-time/accuracy evaluation. Field backing buffers max 57,946,526 B under 64 MiB; returned views 49,946,526 B are per-query scratch and must be discarded after display. Field allocation/search takes 5.867–582.181 ms over these workloads; host data load+origin+first 2h field/summaries/release/GC is 1,132.496042 ms, excluding filled display/full app/packaged/cloud timing.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_road_field_v3.py
+node --import tsx --test scripts/coarse_osm_road_field_v1_test.ts
+node --expose-gc --import tsx --test scripts/coarse_osm_phase_lifetime_v1_test.ts scripts/coarse_osm_pair_phase_v1_test.ts
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/coarse_osm_road_field_v1.ts scripts/profile_osm_road_field_v3.ts
+```
+
+The portable proof reads only small mirrored records/bound code. V1/V2 host lifetime stops and V3 success live at `us-osm-car-road-field-profile-{v1,v2,v3}/`; all are terminal/closed and must not be replayed. V3 releases both field and reference-search phases under the same memory guard, without changing routing code or workloads. Newer unique closed allocations total 2,302,255,104 B beyond the 64.5 GB prior reserve, plus 100 MiB metadata/host scratch. No source acquisition/PBF decode, provider, application DB or deployment operation. Next is bounded finer display and all complete app gates.
+
+
+### Finer display and fixed numerical-screen recovery
+
+The `us-osm-car-filled-display-profile-v1/` root is complete/closed; its frozen32 outputs must not be replayed. `coarse_osm_filled_display_v1.ts`, grid/contour helpers and eight controls are checksum-bound. Maximum conservative scratch66,494,595 B; no field/raster cache survives queries. See [measured scope](evidence/coarse-osm-car-capacity-2026-11-01/README.md#finer-filled-display-v1-completed-november-2).
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_filled_display_v1.py
+node --import tsx --test scripts/coarse_osm_filled_display_v1_test.ts
+node --import tsx --test scripts/coarse_osm_display_timing_v1_test.ts scripts/coarse_osm_display_gates_v1_test.ts
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/evaluate_osm_display_timing_v1.ts scripts/coarse_osm_filled_display_v1.ts
+```
+
+The separately frozen numerical/shading screen uses all 83/35 saved references,21 origins,37 original source/budget displays (reusing24 existing frontier outputs) and21 separate900min timing diagnostics. Six controls pass before execution. The field/display diagnostic copies differ only in comment/entry point/900min ceiling, checked by exact source equality; original production/query ceiling remains720. Source connector policy remains unchanged. Numerical results do not replace166 full road/local witness sums, physical or full app/package gates.
+
+Historical single-use command (inspect fresh process/terminal state; **never replay** an existing/completed root):
+
+```sh
+# node --expose-gc --import tsx scripts/evaluate_osm_display_timing_v1.ts docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-plan-v1.json 7ad4cd02b908bdd057c689e5a752780c610e5881a65e7d9a7198b3198d07c203
+```
+
+Historical V1 recovery root is `data/coarse-quality/us-osm-car-display-timing-evaluation-v1/`; it is now closed/failed. V2 completed the all-case screen and the later initial-access candidate is also complete/rejected. `report.json` or `failure.json` is terminal; use the latest recovery section below. A fresh clone lacks all ignored runtime/source/output assets. Do not use old process/tool-session IDs. Newer unique closed allocation at the display checkpoint is2,311,897,088 B/77roots; additionally reserve the active numerical-screen128MiB owned cap plus prior64.5GB and100MiB metadata/host scratch under64GiB. No new env names/dependencies/DB/provider/network data or deployment changes.
+
+
+### Latest rejected initial-access candidate and static review
+
+The user explicitly chose to keep all accuracy gates and improve the engine before app integration. The latest candidate has80/83 finite routes and three shoreline-related nulls. On the same 80 routes, MAE31.371151min versus v9’s 30.001169min; full numerical acceptance fails. All old model/harness/capacity stops remain unchanged. The latest worker and preview builder are closed; do not rerun their single-use commands.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_access_preview_v1.py
+node --import tsx --test scripts/coarse_osm_origin_access_v3_test.ts scripts/coarse_osm_access_road_field_v1_test.ts scripts/coarse_osm_access_display_v1_test.ts
+node node_modules/typescript/bin/tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --allowImportingTsExtensions --skipLibCheck --types node scripts/evaluate_osm_access_candidate_v1.ts scripts/coarse_osm_access_road_field_v1_test.ts scripts/coarse_osm_access_display_v1_test.ts
+```
+
+Portable proof reads small mirrored records/bound code only. Node controls are synthetic and do not load the national graph/PBF/native library or use a provider/DB. Current closed roots under `data/coarse-quality/`: `us-osm-car-origin-access-profile-{v2,v3}/`, `us-osm-car-access-candidate-evaluation-v1/`, `us-osm-car-access-preview-v1/`; prior display/timing roots remain preserved. All assets and generated preview are ignored/local-only and absent from a fresh clone. Twelve new packed-field/display controls plus prior suites give110 Node tests/no skips; npm check/typecheck/build and strict new-tool types pass. Existing sealed lint warnings are unchanged.
+
+The static comparison is available at `http://127.0.0.1:4717/` while its read-only server runs. It compares three saved6h cases, has no arbitrary-query backend and does not load env/database configuration. Browser review checks all three selections, identical camera transforms, whole/detail, zoom, keyboard pan, visible all 83/same 80 metrics and screenshots. No mobile viewport test. One unrelated browser-extension exception is recorded separately from zero preview-origin errors.
+
+To restore only this static review, first check whether the port already serves it; if absent and the ignored artifact exists, run:
+
+```sh
+python3 -B -m http.server 4717 --bind 127.0.0.1 --directory data/coarse-quality/us-osm-car-access-preview-v1
+```
+
+Serve only that directory; no app server or database change is needed. Reuse the marked Chrome deliverable tab if available; otherwise open the URL. Rediscover process owners; do not use old PIDs or tool-session IDs. The Superset browser CLI and in-app browser were unavailable, so verification used the existing Chrome/Cua controls without installs or setting changes. `access-workers-absence-v2.json` corrects the earlier server-detection false negative; both inventory records remain.
+
+Latest unique closed allocation2,347,032,576 B/83roots plus prior64.5GB and100MiB metadata/host scratch. New witness experiments need separately reserved owned/tmp capacity under64GiB. Their offline parent/trace arrays are distinct from production64MiB query scratch and must never be bundled into Vercel. Production/src/env/DB/npm dependencies stay unchanged; no reference quota or source download was used.

@@ -1,0 +1,80 @@
+{
+  "rootRelations": 68734,
+  "additionalRelations": 17,
+  "rootTypeCounts": {
+    "multipolygon": 68720,
+    "site": 8,
+    "water": 1,
+    "waterway": 4,
+    "route": 1
+  },
+  "additionalTypeCounts": {
+    "route": 1,
+    "multipolygon": 16
+  },
+  "memberRoleCounts": {
+    "way": {
+      "outer": 229198,
+      "inner": 239288,
+      "": 47,
+      "main_stream": 131,
+      "perimeter": 1
+    },
+    "node": {
+      "label": 4,
+      "": 250
+    },
+    "relation": {
+      "outer": 6,
+      "member": 1,
+      "inner": 16,
+      "": 12,
+      "approach": 1
+    }
+  },
+  "sourceMissingWayIds": [
+    56217101,
+    56217353,
+    56217389,
+    56218029,
+    56218064,
+    56218389,
+    56219144,
+    56219236,
+    56221017,
+    56221074,
+    56221270,
+    67972125,
+    67972893,
+    67973075,
+    509694737,
+    1143705261,
+    1143705262
+  ],
+  "sourceMissingRelationIds": [
+    21607544
+  ],
+  "directRootSourceGapCount": 0,
+  "rootsDependingOnMissingWays": 1,
+  "rootsDependingOnMissingRelations": 1,
+  "rootsDependingOnAnyKnownSourceGap": 1,
+  "affectedRootsAndReasonBits": [
+    [
+      111577,
+      3
+    ]
+  ],
+  "reasonBits": {
+    "1": "At least one missing way in the descendant chain.",
+    "2": "At least one missing relation in the descendant chain."
+  },
+  "eligibilityPolygonOrGeographicImpactEstablished": false,
+  "nodeCoordinatesAudited": false,
+  "status": "saved_water_source_gap_dependencies_complete",
+  "recipeSha256": "c1b20e434f60e34cf86ba4c34749f76454f1b23ac78c955cad85370898c15b2b",
+  "sourcePbfReads": 0,
+  "nativeProducerExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "hostSecondsIncludingBindingsSelectedRecordDecodeAndAnalysis": 0.6149901249445975
+}

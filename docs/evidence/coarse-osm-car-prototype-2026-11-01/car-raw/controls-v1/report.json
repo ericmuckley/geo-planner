@@ -1,0 +1,137 @@
+{
+  "format": "native-road-only-car-prototype-v1",
+  "policy": {
+    "id": "native-road-only-static-car-prototype-v1",
+    "roles": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link",
+      "secondary",
+      "secondary_link",
+      "tertiary",
+      "tertiary_link"
+    ],
+    "defaultSpeedsKph": {
+      "motorway": 100,
+      "motorway_link": 40,
+      "trunk": 80,
+      "trunk_link": 40,
+      "primary": 55,
+      "primary_link": 35,
+      "secondary": 45,
+      "secondary_link": 30,
+      "tertiary": 40,
+      "tertiary_link": 30
+    },
+    "signalDelayMs": 5000,
+    "uTurnDelayMs": 20000,
+    "tickMs": 125,
+    "ferries": "excluded",
+    "conditional": "conservative closure; no date/time evaluation",
+    "viaWay": "conservative member-way closure in this first cost prototype",
+    "uTurns": "Exact reverse physical arc only; permitted at source-way ends, selected-profile junctions, tagged or explicit relation nodes. Validation-window cuts never grant reversal permission.",
+    "scope": "Assumed static travel costs and limited OSM car rules; no traffic, current availability, vehicle dimensions or nationwide ETA/coverage certification."
+  },
+  "captureReceipt": {
+    "rows": 4,
+    "bytes": 1196,
+    "sha256": "848a7fcd3a9e0706e87dd2c465f62d0a603327b04a7ab64e1bbe1532268d950c",
+    "types": {
+      "node": 3,
+      "way": 1
+    },
+    "memberships": 4
+  },
+  "sourceMetadata": {
+    "selectedTaggedNodes": 0,
+    "selectedBlockedNodes": 0,
+    "selectedSignalNodes": 0,
+    "majorReferences": 3,
+    "ways:way-eligible": 1,
+    "eligibleDirections": 2,
+    "defaultSpeedDirections": 2,
+    "onewayWays": 0,
+    "unsupportedMemberWaysPresent": 0,
+    "supportedViaNodeRules": 0
+  },
+  "selectedWays": 1,
+  "selectedNativeNodes": 3,
+  "rawArcs": 4,
+  "contractedArcs": 2,
+  "payload": {
+    "vertices": 2,
+    "arcs": 2,
+    "payloadBytes": 44,
+    "costOverflowEntries": 0,
+    "reverseOverflowEntries": 0,
+    "forbiddenTurnPairs": 0,
+    "scope": "Isolated captured-data payload; excludes source snapping/geography/runtime/search/JS/app/package overhead. No national extrapolation."
+  },
+  "queries": [
+    {
+      "windowId": "synthetic",
+      "sourceNodeIds": [
+        1,
+        3
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 14558,
+        "fragments": 2,
+        "settled": 2,
+        "searchSeconds": 1.3791956007480621e-05
+      },
+      "contracted": {
+        "costMs": 14558,
+        "fragments": 1,
+        "settled": 1,
+        "searchSeconds": 2.5830231606960297e-06
+      },
+      "quantized": {
+        "costMs": 14625,
+        "fragments": 1,
+        "settled": 1,
+        "searchSeconds": 2.624932676553726e-06
+      },
+      "binaryQuantizedMs": 14625
+    },
+    {
+      "windowId": "synthetic",
+      "sourceNodeIds": [
+        3,
+        1
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 14558,
+        "fragments": 2,
+        "settled": 2,
+        "searchSeconds": 3.750086762011051e-06
+      },
+      "contracted": {
+        "costMs": 14558,
+        "fragments": 1,
+        "settled": 1,
+        "searchSeconds": 1.584063284099102e-06
+      },
+      "quantized": {
+        "costMs": 14625,
+        "fragments": 1,
+        "settled": 1,
+        "searchSeconds": 1.7499551177024841e-06
+      },
+      "binaryQuantizedMs": 14625
+    }
+  ],
+  "queryChecksSeconds": 4.287506453692913e-05,
+  "allNativePointAliases": 1,
+  "etaQualified": false,
+  "nationalArtifactBuilt": false,
+  "vercelQualified": false,
+  "modelChanged": false
+}

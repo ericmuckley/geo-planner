@@ -1,0 +1,165 @@
+{
+  "origin": [
+    -123.8313,
+    46.1879
+  ],
+  "diagnostic": {
+    "timings": {
+      "astoria-or-360-inside": {
+        "ticks": 185059,
+        "kind": "road-foot",
+        "roadTicks": 185059,
+        "localGridTicks": 185817,
+        "localWitness": {
+          "terminalTicks": 441,
+          "edgeSeconds": 0,
+          "seedSeconds": 23172,
+          "seedCell": 2135530,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-360-outside": {
+        "ticks": 192329,
+        "kind": "road-foot",
+        "roadTicks": 192329,
+        "localGridTicks": 192820,
+        "localWitness": {
+          "terminalTicks": 364,
+          "edgeSeconds": 0,
+          "seedSeconds": 24057,
+          "seedCell": 2151085,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-600-inside": {
+        "ticks": 316587,
+        "kind": "road-foot",
+        "roadTicks": 316587,
+        "localGridTicks": 317353,
+        "localWitness": {
+          "terminalTicks": 369,
+          "edgeSeconds": 0,
+          "seedSeconds": 39623,
+          "seedCell": 1094764,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-600-outside": {
+        "ticks": 301420,
+        "kind": "local-grid",
+        "roadTicks": null,
+        "localGridTicks": 301420,
+        "localWitness": {
+          "terminalTicks": 668,
+          "edgeSeconds": 6925,
+          "seedSeconds": 30669,
+          "seedCell": 1277818,
+          "seedKind": 8,
+          "steps": 35
+        }
+      },
+      "astoria-or-720-inside": {
+        "ticks": 369637,
+        "kind": "road-foot",
+        "roadTicks": 369637,
+        "localGridTicks": 369724,
+        "localWitness": {
+          "terminalTicks": 500,
+          "edgeSeconds": 0,
+          "seedSeconds": 46153,
+          "seedCell": 383479,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-720-outside": {
+        "ticks": 358050,
+        "kind": "local-grid",
+        "roadTicks": 358193,
+        "localGridTicks": 358050,
+        "localWitness": {
+          "terminalTicks": 530,
+          "edgeSeconds": 0,
+          "seedSeconds": 44690,
+          "seedCell": 390508,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -125000448,
+      "south": 34958985,
+      "step": 10389,
+      "width": 1726,
+      "height": 1448
+    },
+    "stats": {
+      "envelopeMs": 381.85920799999985,
+      "maskMs": 751.6124579999996,
+      "seedMs": 1031.641458,
+      "fillMs": 217.98812499999985,
+      "contourMs": 38.230875000001106,
+      "displayMs": 2421.8887919999997,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 1911736,
+      "activeSpans": 668506,
+      "settles": 1333589,
+      "maximumHeapEntries": 169171,
+      "selectedCells": 1335191,
+      "localCells": 1333589,
+      "roadOnlyCells": 1602,
+      "edges": 19080,
+      "rings": 140,
+      "vertices": 11406,
+      "jsonBytes": 271629,
+      "retries": []
+    },
+    "phaseMs": 2561.6674999999996,
+    "output": {
+      "filename": "origin-01-900.geojson",
+      "bytes": 271629,
+      "sha256": "b4cb2ae168fa03c9809795ac56d0dd7a1b4a705d4262e72d39423c60ad894381"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "astoria-or-360.geojson",
+        "bytes": 162999,
+        "sha256": "37a9ea14dd68efa36dd451d769e55ef9b6e04d8d6f21d66b7d551ecdbb759f68"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "astoria-or-600.geojson",
+        "bytes": 244433,
+        "sha256": "2fd2f37b533b5959f1a357f83f93e70d5a0a856094877cd115344c9da0d37764"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "astoria-or-720.geojson",
+        "bytes": 267290,
+        "sha256": "97c52daa64ece498a018e70c24166ce5154f664535d517516dd0b11d1729d06c"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 412794880,
+    "heapTotal": 48857088,
+    "heapUsed": 13210216,
+    "external": 143519208,
+    "arrayBuffers": 140980442
+  }
+}

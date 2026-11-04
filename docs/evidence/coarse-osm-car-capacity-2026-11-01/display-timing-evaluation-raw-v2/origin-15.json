@@ -1,0 +1,126 @@
+{
+  "origin": [
+    -116.602,
+    33.0787
+  ],
+  "diagnostic": {
+    "timings": {
+      "julian--borrego-springs": {
+        "ticks": 22953,
+        "kind": "road-foot",
+        "roadTicks": 22953,
+        "localGridTicks": 24323,
+        "localWitness": {
+          "terminalTicks": 819,
+          "edgeSeconds": 0,
+          "seedSeconds": 2938,
+          "seedCell": 658772,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "julian--el-centro": {
+        "ticks": 46771,
+        "kind": "road-foot",
+        "roadTicks": 46771,
+        "localGridTicks": 48052,
+        "localWitness": {
+          "terminalTicks": 884,
+          "edgeSeconds": 0,
+          "seedSeconds": 5896,
+          "seedCell": 579323,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -125003736,
+      "south": 29420820,
+      "step": 11583,
+      "width": 1988,
+      "height": 1256
+    },
+    "stats": {
+      "envelopeMs": 478.66825000000244,
+      "maskMs": 614.2374169999966,
+      "seedMs": 1372.5223750000005,
+      "fillMs": 193.28945799999929,
+      "contourMs": 20.77675000000454,
+      "displayMs": 2679.663041000007,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2500871,
+      "activeSpans": 1015335,
+      "settles": 1102314,
+      "maximumHeapEntries": 134094,
+      "selectedCells": 1103178,
+      "localCells": 1102314,
+      "roadOnlyCells": 864,
+      "edges": 17030,
+      "rings": 85,
+      "vertices": 10311,
+      "jsonBytes": 245454,
+      "retries": []
+    },
+    "phaseMs": 2886.368042000002,
+    "output": {
+      "filename": "origin-15-900.geojson",
+      "bytes": 245454,
+      "sha256": "df129ed0b27bacb5dc1b52f997d4daa56cc3bf193d3467a4474d995db604b3ad"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "julian--borrego-springs": true,
+        "julian--el-centro": true
+      },
+      "frame": {
+        "west": -124118070,
+        "south": 30095968,
+        "step": 9266,
+        "width": 1982,
+        "height": 1261
+      },
+      "stats": {
+        "envelopeMs": 444.54841699999815,
+        "maskMs": 591.1910829999979,
+        "seedMs": 1194.3786249999976,
+        "fillMs": 184.76183299999684,
+        "contourMs": 19.375333999996656,
+        "displayMs": 2434.3613329999935,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 2193431,
+        "activeSpans": 889370,
+        "settles": 1073190,
+        "maximumHeapEntries": 122666,
+        "selectedCells": 1073856,
+        "localCells": 1073190,
+        "roadOnlyCells": 666,
+        "edges": 15864,
+        "rings": 66,
+        "vertices": 9412,
+        "jsonBytes": 221936,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-15-720.geojson",
+        "bytes": 221936,
+        "sha256": "fbf87caeb3caeaea9510d3571ae75da00e6bc2b02993089d12165cd895f588e3"
+      },
+      "reusedFromV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-15.json"
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 427032576,
+    "heapTotal": 82935808,
+    "heapUsed": 14037752,
+    "external": 143928313,
+    "arrayBuffers": 141389547
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-15.json"
+}

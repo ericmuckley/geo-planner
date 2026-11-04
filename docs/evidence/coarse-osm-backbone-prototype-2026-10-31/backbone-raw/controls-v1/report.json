@@ -1,0 +1,201 @@
+{
+  "format": "native-osm-geometry-backbone-prototype-v1",
+  "captureReceipt": {
+    "rows": 4,
+    "bytes": 1235,
+    "sha256": "f7dc4937afb8b9325e7024705cf49d5cc9877a7dcb6e2f7f216df4d474c2cff7",
+    "types": {
+      "node": 3,
+      "way": 1
+    },
+    "memberships": 4
+  },
+  "relationContext": {
+    "relations": 0,
+    "memberOccurrences": 0,
+    "memberTypes": {},
+    "uniqueMemberWays": 0,
+    "missingMemberWayIds": 0,
+    "missingMemberNodeOccurrences": 0,
+    "missingMemberRelationIds": 0,
+    "ordinaryCarApplicabilityReviewed": false
+  },
+  "profiles": [
+    {
+      "id": "all-highways",
+      "roles": null,
+      "selectedWays": 1,
+      "selectedNativeNodes": 3,
+      "sourceReferences": 3,
+      "primitiveEdges": 2,
+      "contractedVertices": 2,
+      "contractedEdges": 1,
+      "geometryNodeOccurrences": 3,
+      "primitiveToContractedEdgeReduction": 0.5,
+      "rawComponents": {
+        "count": 1,
+        "vertices": 3,
+        "largest": 3
+      },
+      "contractedComponents": {
+        "count": 1,
+        "vertices": 2,
+        "largest": 2
+      },
+      "anchorReasons": {
+        "sourceWayEnd": 2,
+        "taggedNode": 0,
+        "relationNode": 0,
+        "relationWay": 0,
+        "areaBoundary": 0,
+        "degreeNotTwo": 2,
+        "outsideArea": 0
+      },
+      "sourceRoles": {
+        "primary": 1
+      },
+      "windows": {
+        "a": {
+          "ways": 1,
+          "references": 3,
+          "primitiveEdges": 2,
+          "verificationPairs": 1,
+          "reachablePairs": 1,
+          "unreachablePairs": 0
+        },
+        "empty": {
+          "ways": 0,
+          "references": 0,
+          "primitiveEdges": 0,
+          "verificationPairs": 0,
+          "reachablePairs": 0,
+          "unreachablePairs": 0
+        }
+      },
+      "routingDecodedBytes": 52,
+      "routingGzipBytes": 110,
+      "geometryDecodedBytes": 44,
+      "geometryGzipBytes": 85,
+      "queries": [
+        {
+          "windowId": "a",
+          "sourceNodeIds": [
+            1,
+            3
+          ],
+          "rawMeters": 222.38985328911747,
+          "contractedMeters": 222.38985328911747,
+          "rawSettled": 3,
+          "contractedSettled": 2,
+          "rawSearchSeconds": 2.4170149117708206e-06,
+          "contractedSearchSeconds": 8.75093974173069e-07
+        }
+      ],
+      "verificationSettles": 5,
+      "distanceMeters": 222.38985328911747,
+      "undirectedGeometryOnly": true,
+      "carPermissionReviewed": false,
+      "etaModelQualified": false,
+      "nationalFootprintQualified": false,
+      "vercelPackageQualified": false,
+      "modelChanged": false
+    },
+    {
+      "id": "major-roads",
+      "roles": [
+        "motorway",
+        "motorway_link",
+        "trunk",
+        "trunk_link",
+        "primary",
+        "primary_link",
+        "secondary",
+        "secondary_link",
+        "tertiary",
+        "tertiary_link"
+      ],
+      "selectedWays": 1,
+      "selectedNativeNodes": 3,
+      "sourceReferences": 3,
+      "primitiveEdges": 2,
+      "contractedVertices": 2,
+      "contractedEdges": 1,
+      "geometryNodeOccurrences": 3,
+      "primitiveToContractedEdgeReduction": 0.5,
+      "rawComponents": {
+        "count": 1,
+        "vertices": 3,
+        "largest": 3
+      },
+      "contractedComponents": {
+        "count": 1,
+        "vertices": 2,
+        "largest": 2
+      },
+      "anchorReasons": {
+        "sourceWayEnd": 2,
+        "taggedNode": 0,
+        "relationNode": 0,
+        "relationWay": 0,
+        "areaBoundary": 0,
+        "degreeNotTwo": 2,
+        "outsideArea": 0
+      },
+      "sourceRoles": {
+        "primary": 1
+      },
+      "windows": {
+        "a": {
+          "ways": 1,
+          "references": 3,
+          "primitiveEdges": 2,
+          "verificationPairs": 1,
+          "reachablePairs": 1,
+          "unreachablePairs": 0
+        },
+        "empty": {
+          "ways": 0,
+          "references": 0,
+          "primitiveEdges": 0,
+          "verificationPairs": 0,
+          "reachablePairs": 0,
+          "unreachablePairs": 0
+        }
+      },
+      "routingDecodedBytes": 52,
+      "routingGzipBytes": 110,
+      "geometryDecodedBytes": 44,
+      "geometryGzipBytes": 85,
+      "queries": [
+        {
+          "windowId": "a",
+          "sourceNodeIds": [
+            3,
+            1
+          ],
+          "rawMeters": 222.38985328911747,
+          "contractedMeters": 222.38985328911747,
+          "rawSettled": 3,
+          "contractedSettled": 2,
+          "rawSearchSeconds": 2.7080532163381577e-06,
+          "contractedSearchSeconds": 7.910421118140221e-07
+        }
+      ],
+      "verificationSettles": 5,
+      "distanceMeters": 222.38985328911747,
+      "undirectedGeometryOnly": true,
+      "carPermissionReviewed": false,
+      "etaModelQualified": false,
+      "nationalFootprintQualified": false,
+      "vercelPackageQualified": false,
+      "modelChanged": false
+    }
+  ],
+  "undirectedGeometryOnly": true,
+  "carPermissionReviewed": false,
+  "etaModelQualified": false,
+  "nationalFootprintQualified": false,
+  "vercelPackageQualified": false,
+  "modelChanged": false,
+  "scope": "All captured native highway geometry and fixed major-road subset; conservative within-way contraction with exact geometry/length/native-ID/metadata boundaries. Degree is within acquired capture, not globalOSM. No car direction/access/turn permission or timing cost. Sampled length-search validation is not ETA accuracy, national reachability, first app estimate or Vercel package proof."
+}

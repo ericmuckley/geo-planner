@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-31",
+  "status": "selected_by_user",
+  "userInstruction": "pursue the prototype if you think it will be advantageous",
+  "selected": "Bounded direct-OSM road graph/contraction/topology/footprint prototype",
+  "priorProposal": "docs/evidence/coarse-osm-extraction-2026-10-30/next-road-model-decision-v1.json",
+  "priorProposalSha256": "3025baf85ebd5ed15448eeeaea3310aecf79ca7e3a9d030afd9e58af455e5ff6",
+  "supersedes": "Census enrichment as the active workstream and its strategy-specific50%match screen; historical results/failures remain unchanged.",
+  "scope": "Use existing complete captured JSONL, all21original areas and cached tools. No new countryPBF pass, download, routing provider, applicationDB, deployment or active timing model. Graph is undirected native geometry only; no car permission or ETA claim.",
+  "profiles": [
+    {
+      "id": "all-highways",
+      "roles": null,
+      "scope": "All acquired highway geometry; complete topology comparison, not car eligibility."
+    },
+    {
+      "id": "major-roads",
+      "roles": [
+        "motorway",
+        "motorway_link",
+        "trunk",
+        "trunk_link",
+        "primary",
+        "primary_link",
+        "secondary",
+        "secondary_link",
+        "tertiary",
+        "tertiary_link"
+      ],
+      "scope": "Preselected generic backbone experiment. Other roads remain in all-highways/source denominators; local access/ordinary car policy remains future work."
+    }
+  ],
+  "contraction": "Within a source way only. Preserve source-way endpoints, captured graph degree!=2, all tagged nodes, relation member nodes/all nodes of relation member ways, original area boundary segments and every outside-area node. Preserve exact full native geometry/edge partition and lengths, parallel edges and loops. Never join by coordinates.",
+  "acceptance": "Synthetic independent raw-vs-contracted reachability/length checks; complete input/area/role accounting, independent actual edge/node/geometry/length/metadata invariants, deterministic sampled raw-vs-contracted path checks including failures, byte measurements and lossless gzip roundtrip. National/Vercel/ETA/model acceptance remains unqualified.",
+  "limits": "At most2GiBzero swap/1CPU/600sworker/660shost/64MiBtmp/128MiBfile/256MiBowned under original4GiB/four-hour/64GiBoverall. Reserve62.4GBprior work.",
+  "future": "Only after this prototype is promising prepare a separate national count/footprint/input recipe. Runtime remainsv9."
+}

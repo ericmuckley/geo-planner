@@ -1,0 +1,276 @@
+{
+  "status": "water_coordinate_controller_pipeline_passed",
+  "checks": {
+    "positivePipeline": true,
+    "wrongSourceRejected": true,
+    "nationalSourceMounted": false,
+    "nationalIndexMounted": false,
+    "sourceCoordinateShadowExact": true,
+    "completeRequestedIdPartition": true,
+    "producerBuffersReleasedBeforeAudit": true
+  },
+  "tiny": {
+    "receipt": {
+      "nodes": 4,
+      "ways": 3,
+      "relations": 2,
+      "visits": 9,
+      "nativeEof": true,
+      "fallbacks": 0,
+      "blocks": 1,
+      "semanticBytes": 930,
+      "projectedFrames": 0,
+      "checkpoints": 1,
+      "acceptedNodes": 4,
+      "acceptedWays": 3,
+      "acceptedRelations": 2,
+      "maxNodeId": 4,
+      "maxWayId": 4,
+      "maxRelationId": 2,
+      "references": 6,
+      "members": 4,
+      "canonicalLowerBytes": 1380,
+      "canonicalUpperBytes": 1612,
+      "copyBytes": 3842,
+      "maxCopyBytes": 833,
+      "tags": 10,
+      "tagUtf8Bytes": 181,
+      "maxCanonicalLowerBytes": 288,
+      "maxCanonicalUpperBytes": 288,
+      "maxVersion": 1,
+      "sourceEncodeRows": 4,
+      "sourceDecodeRows": 4,
+      "sourceCodecCalls": 2,
+      "highwayWays": 2,
+      "longHighwayWays": 0,
+      "outOfRangeHighwayWays": 0,
+      "eligibleHighwayWays": 2,
+      "traceWays": 2,
+      "traceReferences": 4,
+      "witnessRows": 0,
+      "maxReferences": 2,
+      "maxMembers": 3,
+      "examinedHighwayReferences": 4,
+      "nextExcludedPriority": 0,
+      "nextExcludedId": 0,
+      "nextExcludedOrdinal": 0,
+      "nodeSpanStartNs": 547792,
+      "nodeSpanEndNs": 551334,
+      "waySpanStartNs": 551334,
+      "waySpanEndNs": 613125,
+      "relationSpanStartNs": 613125,
+      "relationSpanEndNs": 2386125,
+      "maxTags": 4,
+      "nodeMembers": 1,
+      "wayMembers": 3,
+      "relationMembers": 0,
+      "batchWays": 0,
+      "batchReferences": 0,
+      "wayBatches": 0,
+      "topologyTaggedNodes": 0,
+      "topologyWays": 0,
+      "topologyReferences": 0,
+      "topologyRelationNodes": 0,
+      "topologyRelationWays": 0,
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      },
+      "semanticSha256": "04630ed15b3eb0925917fb1d4dcabb51991d3cfe65eee84bc5a76b7652b9ed81",
+      "semanticFormat": "geo-planner-projected-fields-v1",
+      "error": "",
+      "pythonProjectionFrames": 0,
+      "callbackEvents": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalFallbackExactSizes": [],
+      "metadata": {
+        "node": {
+          "count": 4,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 11,
+          "maxTags": 1,
+          "maxVersion": 1,
+          "maxCopyBytes": 331,
+          "maxReferences": 0,
+          "maxMembers": 0
+        },
+        "way": {
+          "count": 3,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 69,
+          "maxTags": 4,
+          "maxVersion": 1,
+          "maxCopyBytes": 645,
+          "maxReferences": 2,
+          "maxMembers": 0
+        },
+        "relation": {
+          "count": 2,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 56,
+          "maxTags": 2,
+          "maxVersion": 1,
+          "maxCopyBytes": 833,
+          "maxReferences": 0,
+          "maxMembers": 3
+        }
+      },
+      "deliveredBatchWays": 0,
+      "deliveredBatchReferences": 0,
+      "selectedNodeProjections": 0,
+      "restrictionProjections": 0,
+      "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+      "histogram": {
+        "totals": {
+          "nodes": 4,
+          "taggedNodes": 1,
+          "ways": 3,
+          "highwayWays": 2,
+          "nonHighwayWays": 1,
+          "relations": 2,
+          "restrictionRelations": 2,
+          "relationNodeMembers": 1,
+          "relationWayMembers": 3,
+          "relationRelationMembers": 0,
+          "restrictionNodeMembers": 1,
+          "restrictionWayMembers": 3,
+          "restrictionRelationMembers": 0,
+          "taggedWays": 3,
+          "taggedRelations": 2,
+          "allWayReferences": 6,
+          "nonHighwayReferences": 2,
+          "allWayPrimitiveEdges": 3,
+          "nonHighwayPrimitiveEdges": 1
+        },
+        "highwayRoles": {
+          "primary": {
+            "ways": 1,
+            "references": 2,
+            "primitiveEdges": 1,
+            "wayEndOccurrences": 2,
+            "closedWays": 0,
+            "longWays": 0,
+            "maxReferences": 2
+          },
+          "secondary": {
+            "ways": 1,
+            "references": 2,
+            "primitiveEdges": 1,
+            "wayEndOccurrences": 2,
+            "closedWays": 0,
+            "longWays": 0,
+            "maxReferences": 2
+          }
+        },
+        "restrictionMemberRoles": {
+          "from": {
+            "node": 0,
+            "way": 2,
+            "relation": 0
+          },
+          "to": {
+            "node": 0,
+            "way": 1,
+            "relation": 0
+          },
+          "via": {
+            "node": 1,
+            "way": 0,
+            "relation": 0
+          }
+        }
+      },
+      "sourceIdentity": {
+        "publisherStateUtc": "2026-10-25T21:21:21Z",
+        "requiredFeatures": [
+          "DenseNodes",
+          "OsmSchema-V0.6"
+        ],
+        "framingBytesRead": 564,
+        "frames": 4,
+        "sourceSha256": "1dbfca4f9fc849aea04c371327967803e862abb3c1da6daf78da63982f6feddb",
+        "sourceMd5": "ea94f62995481fce42b58ec4caf3c981"
+      },
+      "framingSeconds": 0.0009101249743252993,
+      "nativeSeconds": 0.0038301669992506504,
+      "postSourceHashSeconds": 0.00012808304745703936,
+      "postSourceHashBytes": 564,
+      "knownGuardReadBytes": 1128
+    },
+    "coordinates": {
+      "capture": {
+        "requested": 5,
+        "present": 4,
+        "missing": 1,
+        "encodedBytes": 34,
+        "canonicalBytes": 64,
+        "missingBytes": 8,
+        "complete": 1,
+        "reserved7": 0
+      },
+      "stored": {
+        "encoded": {
+          "parts": [
+            {
+              "name": "water-coordinates.wxy-0000.gz",
+              "rawBytes": 34,
+              "rawSha256": "82c8fe30f25d0b5acd637b606ffa71b685122e6a573a9ef6de81470f30838b01",
+              "bytes": 55,
+              "sha256": "2196a51c43dec80e8bb505af3efb703d622ba6296cddd5f27c1e83bf3f3dec73"
+            }
+          ],
+          "rawBytes": 34,
+          "rawSha256": "82c8fe30f25d0b5acd637b606ffa71b685122e6a573a9ef6de81470f30838b01",
+          "compressedBytes": 55
+        },
+        "missing": {
+          "parts": [
+            {
+              "name": "missing-node-ids.u64-0000.gz",
+              "rawBytes": 8,
+              "rawSha256": "e5fa955a6229fd3a588454c68fa6398c3cf02d476de47d92ae5f592261e5f2da",
+              "bytes": 23,
+              "sha256": "d84fa00fcedd23604d20a21f2aa46d1ece20c5b5f4ab2caab9baffdc8726187a"
+            }
+          ],
+          "rawBytes": 8,
+          "rawSha256": "e5fa955a6229fd3a588454c68fa6398c3cf02d476de47d92ae5f592261e5f2da",
+          "compressedBytes": 23
+        },
+        "sourceShadow": {
+          "bytes": 64,
+          "sha256": "acf0e9bea64b22ba4096784f08466f250858d9ee03466316d33cefb92ce62b39"
+        },
+        "compressedBytes": 78,
+        "coordinatesRetained": true,
+        "ringsConstructed": false
+      }
+    }
+  },
+  "independentAudit": {
+    "requestedIdsIndependentlyPartitioned": 5,
+    "presentCoordinatesIndependentlyDecoded": 4,
+    "missingIdsIndependentlyCompared": 1,
+    "allCanonicalSourceIdXYBytesCompared": 64,
+    "canonicalSourceShadowSha256": "acf0e9bea64b22ba4096784f08466f250858d9ee03466316d33cefb92ce62b39",
+    "sourceCoordinatesChangedOrRingsConstructed": false
+  }
+}

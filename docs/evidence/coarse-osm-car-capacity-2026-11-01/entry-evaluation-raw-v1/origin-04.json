@@ -1,0 +1,305 @@
+{
+  "origin": [
+    -92.1005,
+    46.7867
+  ],
+  "initialChoices": 2,
+  "accessInput": {
+    "filename": "endpoint-22.json.gz",
+    "rawBytes": 643,
+    "rawSha256": "39108ee7ce9b4d134cc7a11a3111d10f2beb2f530a263839c0fbd7de38d5b674",
+    "compressedBytes": 276,
+    "sha256": "d9813f9adb20aec1113548ad23af3e5fc42819025f462d8ead18d668040ee846"
+  },
+  "diagnostic": {
+    "timings": {
+      "duluth-mn-360-inside": {
+        "ticks": 154974,
+        "kind": "road-foot",
+        "roadTicks": 154974,
+        "localGridTicks": 155025,
+        "localWitness": {
+          "terminalTicks": 57,
+          "edgeSeconds": 0,
+          "seedSeconds": 19371,
+          "seedCell": 1801753,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-360-outside": {
+        "ticks": 166652,
+        "kind": "road-foot",
+        "roadTicks": 166652,
+        "localGridTicks": 167737,
+        "localWitness": {
+          "terminalTicks": 545,
+          "edgeSeconds": 0,
+          "seedSeconds": 20899,
+          "seedCell": 1703328,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-600-inside": {
+        "ticks": 267272,
+        "kind": "road-foot",
+        "roadTicks": 267272,
+        "localGridTicks": 268549,
+        "localWitness": {
+          "terminalTicks": 893,
+          "edgeSeconds": 0,
+          "seedSeconds": 33457,
+          "seedCell": 1038551,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-600-outside": {
+        "ticks": 274696,
+        "kind": "road-foot",
+        "roadTicks": 274696,
+        "localGridTicks": 275379,
+        "localWitness": {
+          "terminalTicks": 523,
+          "edgeSeconds": 0,
+          "seedSeconds": 34357,
+          "seedCell": 1353666,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-720-inside": {
+        "ticks": 297653,
+        "kind": "local-grid",
+        "roadTicks": 300631,
+        "localGridTicks": 297653,
+        "localWitness": {
+          "terminalTicks": 861,
+          "edgeSeconds": 0,
+          "seedSeconds": 37099,
+          "seedCell": 1959175,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "duluth-mn-720-outside": {
+        "ticks": 317013,
+        "kind": "road-foot",
+        "roadTicks": 317013,
+        "localGridTicks": 317828,
+        "localWitness": {
+          "terminalTicks": 876,
+          "edgeSeconds": 0,
+          "seedSeconds": 39619,
+          "seedCell": 1880995,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 2507953,
+      "maximumHeapEntries": 4779,
+      "maximumBackingBufferBytes": 50279334,
+      "returnedBackingBufferBytes": 50279334,
+      "seedBackingBufferBytes": 128,
+      "starts": 2
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -111525656,
+      "south": 34609036,
+      "step": 13772,
+      "width": 2236,
+      "height": 1118
+    },
+    "stats": {
+      "envelopeMs": 643.2872919999936,
+      "maskMs": 644.0099589999954,
+      "seedMs": 2278.079291000002,
+      "fillMs": 267.3491670000003,
+      "contourMs": 36.17687499999738,
+      "displayMs": 3869.1115419999987,
+      "maximumBackingBufferBytes": 58827403,
+      "borrowedVertexWorkspace": true,
+      "samples": 4706207,
+      "activeSpans": 1598619,
+      "settles": 1386122,
+      "maximumHeapEntries": 465089,
+      "selectedCells": 1388426,
+      "localCells": 1386122,
+      "roadOnlyCells": 2304,
+      "edges": 22498,
+      "rings": 162,
+      "vertices": 13238,
+      "jsonBytes": 303103,
+      "retries": []
+    },
+    "phaseMs": 4290.940542000004,
+    "output": {
+      "filename": "origin-04-900.geojson",
+      "bytes": 303103,
+      "sha256": "b10488196dbeec60b16f2905f385117bafd42472d83943715167e704f20053c1"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 360,
+      "classified": {
+        "duluth-mn-360-inside": true,
+        "duluth-mn-360-outside": true
+      },
+      "fieldStats": {
+        "settles": 423392,
+        "maximumHeapEntries": 2705,
+        "maximumBackingBufferBytes": 50279334,
+        "returnedBackingBufferBytes": 50279334,
+        "seedBackingBufferBytes": 128,
+        "starts": 2
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -98883888,
+        "south": 41990197,
+        "step": 6113,
+        "width": 2083,
+        "height": 1199
+      },
+      "stats": {
+        "envelopeMs": 302.3454580000034,
+        "maskMs": 744.1042919999963,
+        "seedMs": 761.6707920000044,
+        "fillMs": 242.64920799999527,
+        "contourMs": 39.25074999999924,
+        "displayMs": 2090.0531670000055,
+        "maximumBackingBufferBytes": 58827403,
+        "borrowedVertexWorkspace": true,
+        "samples": 1312804,
+        "activeSpans": 278910,
+        "settles": 1354101,
+        "maximumHeapEntries": 268079,
+        "selectedCells": 1356287,
+        "localCells": 1354101,
+        "roadOnlyCells": 2186,
+        "edges": 21812,
+        "rings": 208,
+        "vertices": 13314,
+        "jsonBytes": 303776,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-04-360.geojson",
+        "bytes": 303776,
+        "sha256": "360400a6cc579f43b8f07bdee379b460f6865dd9180c1dab37ffa35dd4d69f88"
+      }
+    },
+    {
+      "minutes": 600,
+      "classified": {
+        "duluth-mn-600-inside": true,
+        "duluth-mn-600-outside": true
+      },
+      "fieldStats": {
+        "settles": 1188115,
+        "maximumHeapEntries": 3271,
+        "maximumBackingBufferBytes": 50279334,
+        "returnedBackingBufferBytes": 50279334,
+        "seedBackingBufferBytes": 128,
+        "starts": 2
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -105281592,
+        "south": 38528412,
+        "step": 10023,
+        "width": 2182,
+        "height": 1145
+      },
+      "stats": {
+        "envelopeMs": 432.62983299999905,
+        "maskMs": 624.5439170000027,
+        "seedMs": 1310.1417909999946,
+        "fillMs": 218.27641700000095,
+        "contourMs": 36.46450000000186,
+        "displayMs": 2622.175624999996,
+        "maximumBackingBufferBytes": 58827403,
+        "borrowedVertexWorkspace": true,
+        "samples": 2547927,
+        "activeSpans": 773654,
+        "settles": 1170340,
+        "maximumHeapEntries": 337678,
+        "selectedCells": 1172598,
+        "localCells": 1170340,
+        "roadOnlyCells": 2258,
+        "edges": 22190,
+        "rings": 196,
+        "vertices": 13136,
+        "jsonBytes": 303275,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-04-600.geojson",
+        "bytes": 303275,
+        "sha256": "8ffcf8fb08bdfa54ad9d36bb914a57743a55b8e61ad73873b2ee08de66038e79"
+      }
+    },
+    {
+      "minutes": 720,
+      "classified": {
+        "duluth-mn-720-inside": true,
+        "duluth-mn-720-outside": true
+      },
+      "fieldStats": {
+        "settles": 1570481,
+        "maximumHeapEntries": 3801,
+        "maximumBackingBufferBytes": 50279334,
+        "returnedBackingBufferBytes": 50279334,
+        "seedBackingBufferBytes": 128,
+        "starts": 2
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -107912376,
+        "south": 36643360,
+        "step": 11596,
+        "width": 2169,
+        "height": 1152
+      },
+      "stats": {
+        "envelopeMs": 493.29008299999987,
+        "maskMs": 1153.388583,
+        "seedMs": 1778.2223340000055,
+        "fillMs": 241.22362499999872,
+        "contourMs": 39.95079099999566,
+        "displayMs": 3706.2342500000013,
+        "maximumBackingBufferBytes": 58827403,
+        "borrowedVertexWorkspace": true,
+        "samples": 3197031,
+        "activeSpans": 1017206,
+        "settles": 1255609,
+        "maximumHeapEntries": 384608,
+        "selectedCells": 1257822,
+        "localCells": 1255609,
+        "roadOnlyCells": 2213,
+        "edges": 23006,
+        "rings": 217,
+        "vertices": 13619,
+        "jsonBytes": 311681,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-04-720.geojson",
+        "bytes": 311681,
+        "sha256": "a044a5dba7d6db237a215306eb98e2ac7035e03eda1916f66afc394db2b35ec2"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 420724736,
+    "heapTotal": 84508672,
+    "heapUsed": 13641240,
+    "external": 144191283,
+    "arrayBuffers": 141652517
+  }
+}

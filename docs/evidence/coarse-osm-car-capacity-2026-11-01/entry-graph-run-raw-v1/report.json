@@ -1,0 +1,134 @@
+{
+  "status": "national_entry_graph_and_independent_complete_audit_passed",
+  "basePackedResult": {
+    "selectedNodes": 42993567,
+    "vertices": 5731903,
+    "majorWays": 4227238,
+    "preClosureArcs": 9837326,
+    "postClosureArcs": 9703850,
+    "sourceTurnRecords": 409178,
+    "costOverflowEntries": 2,
+    "reverseOverflowEntries": 0,
+    "forbiddenTurnPairs": 231508,
+    "payloadBytes": 128395001,
+    "maximumOutDegree": 21,
+    "relevantSourceTurnRecords": 291413
+  },
+  "augmentationCounts": [
+    22835,
+    231508,
+    19496,
+    3339,
+    249140,
+    9703850
+  ],
+  "independentAudit": {
+    "status": "independent_complete_entry_graph_audit_passed",
+    "baseFields": {
+      "status": "independent_complete_packed_routing_audit_passed",
+      "verticesChecked": 5731903,
+      "directedCostsAndPhysicalReversesChecked": 9703850,
+      "sourceTurnRecordsChecked": 409178,
+      "relevantSourceTurnRecords": 291413,
+      "forbiddenTurnPairsChecked": 231508,
+      "costOverflowEntries": 2,
+      "reverseOverflowEntries": 0,
+      "secondsIndependentDerivedAudit": 25.140405760961585,
+      "sourcePbfReads": 0,
+      "nativeLibraryExecutions": 0,
+      "sourceConstructorExecutions": 0,
+      "etaQualified": false,
+      "vercelQualified": false
+    },
+    "allPreArcMappingsChecked": 9837326,
+    "oldDirectedArcsRetained": 9620680,
+    "reopenedDirectedArcs": 83170,
+    "augmentationCounts": [
+      22835,
+      231508,
+      19496,
+      3339,
+      249140,
+      9703850
+    ],
+    "finalForbiddenPairsChecked": 249140,
+    "closureSubsetExact": true,
+    "newEntryPairsOnlyTouchOriginallyClosedArcs": true,
+    "oldAllowedTransitionsPreserved": true,
+    "supersetReason": "Every original open source arc retains cost/flags/reverse and supported-turn semantics; every added entry prohibition touches two originally closed arcs. The final turn set is exactly the supported set union mapped entries.",
+    "secondsIndependentAuditIncludingAllBaseFields": 32.73188780597411,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "routingQueries": 0,
+    "accuracyOrAppQualified": false
+  },
+  "assets": {
+    "routing/xy.i32": {
+      "path": "base-routing/xy.i32",
+      "bytes": 45855224,
+      "sha256": "266423bb8f5bbc1cfe58109ad941acf4abc863cc9c188b5df500ff3137c05862"
+    },
+    "routing/targets.u24": {
+      "path": "base-routing/targets.u24",
+      "bytes": 29111550,
+      "sha256": "f0eed820c2b31412f2e83b5246526c2a8997d28abddacd21b4a3528040cf0fdb"
+    },
+    "routing/cost-overflow-ticks.u32": {
+      "path": "base-routing/cost-overflow-ticks.u32",
+      "bytes": 8,
+      "sha256": "f9aa34aaad16065aef67a27b06db541aa572a7d8b8157fb0fbc6e85395c6afa8"
+    },
+    "routing/reverse.u8": {
+      "path": "base-routing/reverse.u8",
+      "bytes": 9703850,
+      "sha256": "c39dcc815977b049a6f9f92ac353c8b0f2c9054a18eeccace764b72e24b59d1e"
+    },
+    "routing/forbidden-turns.u24": {
+      "path": "entry-forbidden.u24",
+      "bytes": 1494840,
+      "sha256": "ba0abd0a498d8145ab912988b6738493652dd8482419d313ddb1f7aae3a3f642"
+    },
+    "routing/node-flags.u8": {
+      "path": "base-routing/node-flags.u8",
+      "bytes": 5731903,
+      "sha256": "474e5bdbfa58668ceb0a09f9154634abc097bae6d3dea43d1de389aa4134ad2f"
+    },
+    "routing/reverse-overflow-arcs.u24": {
+      "path": "base-routing/reverse-overflow-arcs.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/offsets.u24": {
+      "path": "base-routing/offsets.u24",
+      "bytes": 17195712,
+      "sha256": "3ae713cf446074499efe51e59a9dcb59c04c53fc54cee5f487dd2b701a82ef8d"
+    },
+    "routing/cost-overflow-arcs.u24": {
+      "path": "base-routing/cost-overflow-arcs.u24",
+      "bytes": 6,
+      "sha256": "72ba317b18c7967dbfa9d122a49969a030c370c449d38e23f060d2a027e2957d"
+    },
+    "routing/reverse-overflow-targets.u24": {
+      "path": "base-routing/reverse-overflow-targets.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/costs.u16": {
+      "path": "base-routing/costs.u16",
+      "bytes": 19407700,
+      "sha256": "fd8a2293469618b6aba6378b056702607f0c03764ed9e2bc6cd46d4801cb5274"
+    }
+  },
+  "finalPayloadBytes": 128500793,
+  "nativeEncodingSeconds": 3.6702152519719675,
+  "nativeAugmentationSeconds": 0.8708946679253131,
+  "independentAuditSeconds": 32.746614680974744,
+  "workerSecondsIncludingBindingsAndAllOperations": 40.37418989301659,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "spatialOrPaidGeometryOrCodecBuilt": false,
+  "appActivated": false,
+  "scope": "New complete packed graph/source cost/flags/reverse/supported and entry-turn audit. Original open arcs/allowed transitions retained. Spatial/paid geometry/codec/ETA/app remain separate."
+}

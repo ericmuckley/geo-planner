@@ -1,0 +1,78 @@
+{
+  "status": "host_compressed_core_paid_geometry_and_original_queries_passed",
+  "recipeSha256": "e3dae22f36b42f3b0806e370e427dd6d0bec27b2083d46455975ca76c80ae635",
+  "vertices": 5731903,
+  "arcs": 9620680,
+  "spatialCells": 56970,
+  "compressedBytes": 53755286,
+  "geometryCompressedBytes": 7895857,
+  "geometryDecodedBytes": 11469870,
+  "curvedSpans": 296701,
+  "longSpans": 529205,
+  "decodedWireBytes": 139666676,
+  "retainedDataBackingBufferBytes": 140869261,
+  "loadMsIncludingReadsHashesInflateDecodeAndValidation": 925.452791,
+  "hostFirstLoadAndQueryMsIncludingGc": 1068.6895840000002,
+  "baseline": {
+    "rss": 91389952,
+    "heapTotal": 13762560,
+    "heapUsed": 8589680,
+    "external": 8522144,
+    "arrayBuffers": 32940
+  },
+  "retained": {
+    "rss": 389513216,
+    "heapTotal": 10584064,
+    "heapUsed": 4573896,
+    "external": 149334386,
+    "arrayBuffers": 140899369
+  },
+  "afterQueries": {
+    "rss": 390463488,
+    "heapTotal": 10846208,
+    "heapUsed": 4641600,
+    "external": 149331730,
+    "arrayBuffers": 140899369
+  },
+  "queries": [
+    {
+      "index": 0,
+      "sourceVertex": 1074750,
+      "targetVertex": 2272446,
+      "ticks": 296763,
+      "settles": 1228168,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 141.1294160000001
+    },
+    {
+      "index": 1,
+      "sourceVertex": 3998660,
+      "targetVertex": 2860057,
+      "ticks": 256312,
+      "settles": 2430602,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 292.48020799999995
+    },
+    {
+      "index": 2,
+      "sourceVertex": 5699478,
+      "targetVertex": 5463759,
+      "ticks": null,
+      "settles": 1598245,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 185.26537499999995
+    },
+    {
+      "index": 3,
+      "sourceVertex": 257905,
+      "targetVertex": 4478013,
+      "ticks": null,
+      "settles": 1328986,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 150.03679199999988
+    }
+  ],
+  "hostTotalMs": 1701.700625,
+  "scope": "Host-only cold process after module/config loading, core routing + anchor index + paid geometry only. Reads/hashes/inflate/decode/validation and first vertex-pair query include GC. No arbitrary-coordinate snap, display/geography, full app/packaged estimate, protected Linux or Vercel admission.",
+  "modelChanged": false
+}

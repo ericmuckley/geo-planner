@@ -1,0 +1,18 @@
+{
+  "source": "data/coarse-quality/us-osm-car-run-v1",
+  "output": "data/coarse-quality/us-osm-car-packed-v1",
+  "artifactsSha256": "52763a44cba80f3196b18dfc755d1073f3136397ce038e5de5bae3f242deb770",
+  "reportSha256": "c8abbf67a01039f1c0a1a1812066fadfee054725470f2a5217aa82e7d9a510ff",
+  "codeBindings": {
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7",
+    "scripts/coarse_osm_u24_v1_test.ts": "7902646f91a6f84b651570b2e4ffde78fd9981dff2ad72edc57d597e60afe093",
+    "scripts/check_osm_car_u24_v1.ts": "0919a7d5057b99cd5d09f5bec73418b5bd97da79fc3cf6ba8e322676d19c3b2e"
+  },
+  "scope": "Host bounded functional wire conversion only; source<=8MiB, eachfile<=4MiB,30scheck, Node128MiBheap. All routing indices exact, unchangedcosts/coordinates/nativeIDs; no graph/source/PBF/provider/appDB/model operation. Not a national/app-memory gate.",
+  "tests": {
+    "node": 4,
+    "strictScriptTypecheck": true
+  },
+  "retainedReservationBytes": 64500000000,
+  "newLogicalOutputCapBytes": 8388608
+}

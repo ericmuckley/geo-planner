@@ -1,0 +1,31 @@
+{
+  "id": "saved-water-exact-point-evidence-v1",
+  "date": "2026-11-03",
+  "code": {
+    "scripts/coarse_osm_water_point_scan_v1.py": "fc931a3287926a80c66278b256524eaf3bebc46fbaaac64aa9d8cfab6293edbc",
+    "scripts/coarse_osm_water_point_scan_v1_test.py": "e1376e679a550dc624f6323058f5b0f22532de1a07caf40211d6c29631986462",
+    "scripts/run_osm_water_points_v1.py": "fdbec6d077e39097ae1788f3f2d425b211bc03c09464bd3c60ac1a16a988a834",
+    "scripts/close_osm_water_points_v1.py": "495cc0e90c4b353fabc701e40ccf7b1e8b1fbd6d43b68b67dc1172f34fd53a3a"
+  },
+  "scope": "Five host point controls pass. First13 actual Linux controls, then separately freeze a complete accepted-polygon scan for all79 saved inputs/all166 returned reference endpoints. No model/provider/DB/mask/ETA/app operation.",
+  "semantics": "Exact rational decimal queries against pinned planar E7 rings, holes/islands/overlaps preserved. Outside accepted water means no accepted-water evidence, NOT proven land. Boundary explicit; any water hit across other overlapping features preserved.",
+  "limits": {
+    "queries": 512,
+    "featurePoints": 2000000,
+    "queryOverlapFeatures": 10000,
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "cpus": 1,
+    "tmpBytes": 67108864,
+    "ownedBytes": 67108864,
+    "fileBytes": 67108864,
+    "workerSeconds": 900,
+    "hostSeconds": 960,
+    "retainedBytes": 77309411328
+  },
+  "priorProof": "verify_water_polygons_run_v2.py",
+  "priorProofSha256": "91ac0f74339f31633a3d09ebdb5555cf177c3b4bc7b5c77266a1c30f7d59792c",
+  "previousClosedAllocationBytes": 5290315776,
+  "previousClosedRoots": 143,
+  "metadataReserveBytes": 104857600
+}

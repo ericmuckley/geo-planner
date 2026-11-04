@@ -1,0 +1,23 @@
+{
+  "source": "data/coarse-quality/us-osm-car-spatial-country-run-v1",
+  "output": "data/coarse-quality/us-osm-car-wire-codec-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-closed-run-v1.json",
+  "bindings": {
+    "scripts/pack_osm_spatial_country_v1.ts": "fc7aac5a9e80693276789fd39726aa3f621398643bb8faf931c115fda7062b57",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-closed-run-v1.json": "abca5a04eb7a1c7fabe3417fb25542b7342a058a5485805285d9c7bd2673dcc7",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-closed-audit-v1.json": "f4c4c00abb296beb0132bbf8f57bba5e505907b8ff485e8da74f2d6ed5e5e85f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/wire-codec-independent-plan-v1.json": "7bad7c7043489a211ce1a48808217280b629eb06f96712984243c966596f9180"
+  },
+  "rawBytesExpected": 128196806,
+  "fields": 13,
+  "maxFieldBytes": 67108864,
+  "maxDecodedAndOwnedBytesEach": 201326592,
+  "hostSeconds": 120,
+  "newClosedAllocationBytes": 2185986048,
+  "priorReserveBytes": 64500000000,
+  "metadataScratchReserveBytes": 104857600,
+  "scope": "Host-only lossless storage encoding and full original-byte roundtrip; independent decoder frozen before use. No model/source/provider/app DB/deployment operation."
+}

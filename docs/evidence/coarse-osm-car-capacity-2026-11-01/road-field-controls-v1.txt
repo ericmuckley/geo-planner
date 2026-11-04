@@ -1,0 +1,19 @@
+✔ frontier prefixes remain reachable when a whole head is beyond horizon (1.168167ms)
+✔ cheap partial seed and later loop prefix preserve their unpaid gap (0.264292ms)
+✔ paid connector initial cost is separate from a shorter road portion (0.153583ms)
+✔ flat quantized prefixes never give a partial seed free upstream access (0.16625ms)
+✔ signals, blocked arrival/source departure and forbidden turns remain active (0.256459ms)
+✔ exact physical reversal permissions and delay stay distinct from parallel roads (0.191ms)
+✔ both source directions keep independent costs/prefixes even without head reach (0.123583ms)
+✔ uint32 maximum full cost records entry only, without arithmetic wrap (0.0875ms)
+✔ generated fields agree with qualified pair search on every sampled position (10.592958ms)
+✔ heap/settle/source/horizon and scratch budget refuse invalid work (0.780833ms)
+✔ bounded queue returns ordered costs and refuses overflow/empty pops (0.693541ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 84.579209

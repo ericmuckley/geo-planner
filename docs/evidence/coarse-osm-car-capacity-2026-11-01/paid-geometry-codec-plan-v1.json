@@ -1,0 +1,41 @@
+{
+  "source": "data/coarse-quality/us-osm-car-paid-geometry-country-v1",
+  "output": "data/coarse-quality/us-osm-car-paid-geometry-codec-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-closed-country-v1.json",
+  "bindings": {
+    "scripts/pack_osm_paid_geometry_v1.ts": "ffcd57816bcc1ef9ded61e71bb511b939b493ac15a47cceb0e31b34664014c0e",
+    "scripts/coarse_osm_paid_geometry_v1.ts": "cde912277d5ef70233fe9e4cb9b8d7843bf601a9267a233efc7847b8a57ab940",
+    "scripts/coarse_osm_paid_geometry_v1_test.ts": "1d55422a53560da10f91d6301a4b72d67a5f58b23979d0671daaf2ae01ad3b52",
+    "scripts/coarse_osm_paid_geometry_loader_v1.ts": "0d49de75da9e2e101dbc3ec8cf7f229f62fdb5a6d2be960fbb62abf37fe22319",
+    "scripts/coarse_osm_paid_geometry_loader_v1_test.ts": "4972fd43719b4c1659a6e0ba1863af9833ca79b4a6f17b5dc296da4b9ae68520",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/audit_osm_paid_geometry_codec_v1.py": "545fedc92e6cf3e13a59d4c8a2f87b80d8e02991c2535d22c8414eff2cc73779",
+    "scripts/coarse_osm_packed_codec_audit_v1.py": "e3b8218486311898bc9b14aa18f23c912638e1bff3c49ada5035e7fad0536f4b",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-closed-country-v1.json": "a2b7873bfedbb5b2893d5a02a5fba94e56950af6314616c90e850a121c5fe54f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-closed-country-audit-v1.json": "d002e946a600c9611022619182ec635b6d285787f7fef63cae75196a73781fea"
+  },
+  "qualification": {
+    "linuxNativeAndIndependentControls": 19,
+    "nodeReaderAndLoaderTests": 9,
+    "fullNationalSourceAudit": {
+      "status": "independent_complete_paid_geometry_source_packet_prefix_length_audit_passed",
+      "physicalSpansChecked": 6408084,
+      "directedSourceCostsChecked": 9620680,
+      "curvedSpansChecked": 296701,
+      "interiorPositionsChecked": 690468,
+      "longSpansChecked": 529205,
+      "lengthOverflowsChecked": 0,
+      "runtimeBytes": 11469870,
+      "maximumDiscardedSourcePointErrorMeters": 99.99984509483471,
+      "maximumDiscardedSourceTimeErrorMs": 9997.0,
+      "maximumFullSpanMeters": 93726.62350793267,
+      "secondsIndependentSourceAudit": 107.79317667300347,
+      "sourcePbfReads": 0,
+      "nativeProducerExecutions": 0,
+      "originSnapOrEtaOrAppQualified": false,
+      "secondsIncludingBindingsAndTests": 108.87273871595971
+    }
+  },
+  "scope": "Single host-only lossless storage encoding. No raw PBF, provider, application DB or app/model change."
+}

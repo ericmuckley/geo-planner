@@ -1,0 +1,57 @@
+{
+  "status": "saved_national_profile_gap_inventory_no_new_source_or_model",
+  "sourceReceipt": "docs/evidence/coarse-osm-national-footprint-2026-11-01/raw-run-v1/receipt.json",
+  "sourceReceiptSha256": "0bff10741a66a14b970825d359593998830e7e150b2babb26aec9f311aba2c82",
+  "currentProfile": [
+    "motorway",
+    "motorway_link",
+    "trunk",
+    "trunk_link",
+    "primary",
+    "primary_link",
+    "secondary",
+    "secondary_link",
+    "tertiary",
+    "tertiary_link"
+  ],
+  "omittedProfiles": {
+    "unclassified": {
+      "ways": 802255,
+      "references": 20343389,
+      "primitiveEdges": 19541134,
+      "wayEndOccurrences": 1604510,
+      "closedWays": 4775,
+      "longWays": 176,
+      "maxReferences": 1838
+    },
+    "residential": {
+      "ways": 9231433,
+      "references": 112210586,
+      "primitiveEdges": 102979153,
+      "wayEndOccurrences": 18462866,
+      "closedWays": 157455,
+      "longWays": 28,
+      "maxReferences": 1849
+    },
+    "service": {
+      "ways": 23915905,
+      "references": 165152264,
+      "primitiveEdges": 141236359,
+      "wayEndOccurrences": 47831810,
+      "closedWays": 287857,
+      "longWays": 8,
+      "maxReferences": 1427
+    }
+  },
+  "measuredScope": "All source metadata from the earlier complete national census, not a selected validation region. Counts are raw source classifications before car access/direction/restriction and shared-node contraction.",
+  "inference": "The current major-road profile omits unclassified rural/local roads as well as residential/service roads. Some detours may depend on missing road-class connectivity; this inventory does not identify a causal missing link or establish that an expanded graph fits or improves accuracy.",
+  "smallestNextProfileScope": "After shoreline feasibility, assess adding all eligible unclassified ways generically before considering much larger residential/service profiles. Require source/topology/contracted-anchor/arc/scratch/retained/compressed/package capacity screens and independent permissions before an accuracy candidate. No selection by validation route or region.",
+  "futureCapacityWarnings": [
+    "Current source geometry/reference cap64million would need a separately versioned capacity qualification if all20,343,389 raw unclassified references were added to current48,163,649. Their sum68,507,038 is an upper-input accounting observation, not actual selected unique-node count.",
+    "More arcs can exhaust64MiB query backing even when compressed storage fits. Do not reduce precision, heap capacity or accuracy gates; qualify a compact label layout if measured dimensions require it."
+  ],
+  "modelQueries": 0,
+  "sourcePbfReads": 0,
+  "providerRequests": 0,
+  "policyChanged": false
+}

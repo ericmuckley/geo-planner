@@ -1,0 +1,18 @@
+{
+  "status": "Fixed prototype connection semantics after complete saved-shore diagnostic and before implementation/route evaluation",
+  "evidence": "All 56 saved geometric endpoints checked: 55 continuous-mask land connections; one origin and foot both outside generalized mask but only 0.025m apart on a modeled road. No cases removed and no geographic exception.",
+  "coverage": "Explicit source geography bounds from unchanged v9 asset; the approximate national boundary/lake mask is reused. No new source acquisition, coast repair or administrative permission claim.",
+  "onModeledRoadMeters": 1,
+  "onModeledRoadMeaning": "An input within one meter of a modeled road can attach to it even where the generalized geography mask omits a bridge/coast/road. This is a named position tolerance on simplified modeled geometry, not a guarantee of real pavement or border/access legality. Every positive connector still pays travel time.",
+  "ordinaryConnections": "Outside that one-meter allowance, both input and target and the full coordinate-linear connection must pass the existing continuous polygon-crossing land test. No water-prefix tolerance, ferry edge or mid-link water gap is introduced.",
+  "localSpeedKph": 25,
+  "price": "Ceil full connector length / 25kmh to 125ms ticks. Length is the sum of spherical distances along coordinate-linear segments no more than 0.01 degrees in either axis; <=4096 segments. No initial free-distance discount. Exact identical coordinates cost zero.",
+  "maximumConnectorMeters": 300000,
+  "maximumConnectorTicks": 345600,
+  "maximumMeaning": "Derived from the supported 12h horizon at 25kmh. A source connection beyond that cannot reach the road within any supported budget. Local-only display inside the budget remains a later field/display task.",
+  "selection": "Use the qualified global nearest geometric foot if eligible and within the price cap. Otherwise find the nearest eligible candidate among each retained road segment's geometric foot and endpoints, with deterministic canonical-arc/segment/fraction tie order. This finite candidate rule is approximate; it does not claim the closest possible legal connection on continuous original geometry.",
+  "fallback": "Bounded radius passes at 1000,2000,4000,...,256000,300000m. Short outgoing tails use full 1000m source-length allowance; every long canonical key uses both endpoints plus the conservative half-source-length bound. Stop at the first pass with an eligible candidate. No per-country coordinate/tail maps or city/region/query exceptions.",
+  "isolation": "Connections attach only the input or destination to one existing physical road position. They never connect different roads, create junctions or alter core costs, directions, barriers, signals, forbidden turns or reversal permissions.",
+  "requiredControls": ["Nearest foot accepted on continuous land with positive priced distance", "Narrow channel/lake rejects and alternate-road/endpoint fallback", "One-meter modeled-road tolerance is global, separately reported and never a free-price allowance", "Outside mask/bounds, disconnected islands and over-budget sources remain explicit failures", "One-way sink/long span endpoint candidate coverage and deterministic ties", "No mutation of source geography or graph; partial-road adapter remains unchanged"],
+  "notAdmitted": ["Actual coast, road-source completeness or legal local access", "83 ORS/35 Valhalla route accuracy", "Reachability field/filled display, complete app, startup/function/retained gates or deployment"]
+}

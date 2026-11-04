@@ -1,10 +1,10 @@
 # Next steps for coding agents
 
-Updated October 30, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
+Updated November 3, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-**Current work:** national bank capacity passes with identical 938 MB banks. Road capture stopped at the old 250,000 selected-element limit; all failure evidence is closed and preserved. Next is bounded disk-backed selection under the same 4 GiB memory, four-hour and 64 GiB storage limits. [Evidence and recovery](evidence/coarse-osm-extraction-2026-10-30/README.md). Deployed v9 is unchanged.
+**Current work:** the rebuilt national entry candidate is rejected: same80 mean error33.7261875min versus prior31.371151/v9 30.001169;3 nulls. Graph/spatial/geometry/storage/all79 access/all80 path and source-speed diagnosis are complete/closed. The full national water metadata census passed/closed; lossless relation/member-ID extraction passed/closed and nested closure finished with one source-absent relation explicit; national way/reference union census passed/closed for the independent shoreline-source problem. Production v9 and every original gate remain. [Recovery/results](evidence/coarse-osm-car-capacity-2026-11-01/README.md).
 
 
 <a id="1-publish-and-verify-latest-v8"></a>
@@ -144,16 +144,52 @@ Updated October 30, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handof
 
 <a id="1-complete-and-audit-the-running-filtered-road-capture"></a>
 
-## 1. Qualify bounded disk-backed selected records
+<a id="1-measure-captured-road-metadata-before-timing-model-use"></a>
 
-National capacity passes two complete source traversals and identical938MBbanks. The subsequent capture is USED/stopped/closed at its250kselected-element guard:11,201,886ways recognized, no first EOF/second pass/output. Worker absent; no OOM or measured wall/IO cap. Safe`python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_filtered_capture_stop_v1.py`. All used code/recipes/source/failed files remain immutable. [Evidence](evidence/coarse-osm-extraction-2026-10-30/README.md).
+<a id="1-choose-the-next-road-data-architecture"></a>
 
-1. Implement separate versioned disk-backed primary/audit selected records, ordered geometry/field/membership hashes and streaming output/audit. Preserve raw fields, unresolved restriction members, independent predicates/materialization and missing-reference failure. No source/window/class/ID exceptions or resampling.
-2. Expand the new native selected-ID boundary to2M under a new ABI/bridge, preserving all source metadata/semantic/EOF/framing/coordinate/callback/row guards. Qualify actual Linux beyond250kselection/projection, cap+1/ABI/sentinel/error cases, disk limits/transactions/corruption/ownership and exact tiny frozen four-pass output/input preservation/independent tamper detection. No national run before controls/proof/lifecycle/freeze.
-3. Same4GiB RAM/zero swap/twoCPU/four-hour/64GiB retained total and original21windows. New internal selected allowance2Munique/4Moccurrences,512MiBraw/state,1GiBnormalized output/8MiBselected row; source-copy/canonical4MiB/frame8MiB unchanged. Proposed two SQLite spools<=1.25GiB/cache8MiB each, OS file cap2GiB, cell writes bound to exact qualified938,364,831byte bank. After actual retained58,226,331,751 +64MiBmetadata +256MiBtmp, owned<=10,157,600,665bytes. Prove worst-case writable allocation and preserve every failed byte; never change a used cap/result in place.
-4. Only after qualification freeze a new bounded complete capture. Require two full source EOF/count/semantic traversals, every highway reference/geometry, independent full raw/window output audit, readonly fine validation and complete resource/owned cleanup proof. Then source/publisher adequacy, separately frozen native speed/access applicability/inventory, >=50%usable-limit/independent matching and physical checks; later one frozen timing candidate and all83ORS/35Valhalla/package/API/model gates.
+<a id="1-build-the-approved-direct-osm-prototype"></a>
 
-The attribute-facts draft passes9host checks but remains unfrozen/unqualified on real data; all timing permissions stay unreviewed. No provider/paid/DB/push/deploy/model switch. All48/6/29 reference budgets stay consumed; v9remains deployed. User authorized autonomous local work until a real resource/architecture/product decision needs guidance.
+<a id="1-prepare-a-bounded-national-footprint-census"></a>
+
+<a id="1-qualify-and-complete-the-exact-routing-only-topology-census"></a>
+
+<a id="1-qualify-static-car-costs-and-compact-encoding-on-the-captured-native-graph"></a>
+
+## 1. Qualify the finer road candidate against the original app gates
+
+**National cost construction, compact routing, spatial permutation and lossless storage encoding are complete, closed and independently audited. Never replay those producers.** Routing/index storage alone is 45,859,429 B compressed; paid geometry is also complete as described below. All 82 original captured queries/14 unreachable cases and four original national profile cases are preserved. [Measurements and limits](evidence/coarse-osm-car-capacity-2026-11-01/README.md). V9 stays deployed.
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_country_cost_v1.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_search_v2.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_country_v1.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_road_field_v3.py
+```
+
+**Display milestone complete/closed:** [portable proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_filled_display_v1.py) verifies eight control groups, all 32 source/horizon fields/displays, unchanged road labels/restored summaries and24,544,809 exact positive local parent links. Every2h grid is0.005°; 12h grids are0.007910–0.013953°. Max query scratch66,494,595 B; first host load/connection/field/display plus validation/write/release/GC1,962.715625ms. Neither timing is a packaged/full-app or cloud admission. All used producers/results are sealed; never replay them.
+
+**User direction (November 2): keep every accuracy gate and improve the engine before app integration.** The latest paid-initial-alternatives candidate is rejected:80/83 finite, same 80-route ORS MAE31.371151min versus v9’s 30.001169min, with three nulls involving one coarse-mask shoreline endpoint. Full20 diagnostic/36 supported original-budget displays,71 road-superset comparisons and12 field/display controls pass; these do not replace numerical acceptance or complete road witnesses. [Safe completed proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_access_preview_v1.py). All used producers, including static preview generation, are closed; never replay them for documentation.
+
+**Path/shore diagnosis completed:** all 80 finite road/local witnesses reconcile; all 20 output SHAs match. V1 release stop/14 saved paths are preserved; V2 releases work arrays and completes with 14 reused/66 new searches. Three nulls remain. Raw and simplified geography both reject the unavailable input/provider endpoint; simplification alone cannot fix it. See [findings](evidence/coarse-osm-car-capacity-2026-11-01/path-findings-v1.json), [saved inputs](evidence/coarse-osm-car-capacity-2026-11-01/saved-input-diagnostic-v2.json). No speed sweep or allowance change follows.
+
+**Captured prototype complete:** all 82 old optima and every old allowed transition reproduce. The conservative entry graph resolves 295 source relations, retains 524 fallbacks, restores six of 14 failures, shortens seven old finite routes and independently source-replays all 74 finite paths. TypeScript agrees on all 82 costs. This is captured source/permission feasibility, not national ETA acceptance. [Safe full proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_entry_capture_v1.py), [closed result](evidence/coarse-osm-car-capacity-2026-11-01/restriction-entry-capture-raw-v1/report.json). Never replay this producer.
+
+**National relation metadata complete/closed:** exact 1,624,265 relation count and original 409,178 turn/70,376 unsupported/149,699 closure-ID/two invalid-record parity pass. The original whole-source hashes/stat are unchanged; earlier node/way semantic seals are reused. The 21.12 MB selected metadata is local-only. Source run/failed control/corrected control are closed and must never be replayed. [Safe proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_relation_metadata_v1.py).
+
+1. Qualify the [compact geography storage prototype](evidence/coarse-osm-car-capacity-2026-11-01/water-geography-storage-proposal-v1.json), synthetic first. Country polygon/source/point/exclusion stages are complete/closed; never replay. Raw908.22MB geometry cannot ship. Proposed0.005°/61,360,000-cell/two-bit-plane backing15,340,000B gives a forecast156,992,517B settled arrays, under162,238,546B; compression/other geography/JavaScript/first-load/full-app fit remain unmeasured. Independent exact small-grid tests must cover holes/islands/disjoint/overlapping feature union, thin geometry, grid-line/corner boundary uncertainty, negatives/clipping, malformed input/caps/chunks, exact binary/gzip roundtrip and release. No new dependencies/PBF scan/acquisition/provider/DB/app operation; no coordinate/name/validation-place exception or parameter sweep. Only after controls freeze a new country derivative recipe bound to every completed geometry/exclusion shard/record and all resources.
+2. Before new routing, specify and qualify one generic geography policy for country/coast fallback, accepted water, boundary/excluded/incomplete source uncertainty and continuous paid connectors. All245 points are outside accepted water;12 overlap known excluded bounds,one source-incomplete relation remains unlocated. The previously unsupported input has no accepted-water/known-exclusion-bound hit, but no land or route recovery is proven. Keep every uncertainty and every original accuracy gate.147 closed roots5,296,963,584B plus prior64.5GB/100MiB metadata;7,407,590,144B remains under72GiB before active tmp/owned. Preserve all original64GiB evidence and all failures; no national Python node dictionary/raw coordinate temporary/evidence deletion.
+3. After national source/physical/superset checks, evaluate ONE frozen candidate against all 83/35 references and every path/shading gate. Keep every failure and accuracy threshold. Speed and mask/data corrections remain separate, without parameter sweeps. Only after all gates pass integrate and require retained decoded<=162,238,546 B, function<=70 MB, first packaged estimate<=5 s and software/API/shared-camera review. Production stays v9.
+
+Safe completed checks (no real graph/provider/source replay):
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_water_excluded_bounds_run_v1.py
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_restriction_entry_v1_test coarse_osm_entry_graph_v1_test
+node --expose-gc --import tsx --test scripts/coarse_osm_road_witness_v2_test.ts scripts/coarse_osm_trace_display_v1_test.ts scripts/coarse_osm_local_witness_v1_test.ts scripts/coarse_osm_witness_geometry_v1_test.ts
+```
+
+Keep 4 GiB zero swap/2 CPU/four-hour and the separately versioned72 GiB local working/retained limit, 64.5 GB prior reserve plus every newer unique closed allocation and the 100 MiB metadata/host-scratch reserve. No Python national-node dictionary/projection, per-way random fine lookup, detailed-engine restart, old source PBF/constructor replay outside the separately qualified new metadata task, paid/provider/application DB operation or deployment. Vehicle ferries remain deferred. All 48/6/29 reference budgets are consumed. Preserve every failed attempt and used code/recipe/evidence; version corrections separately.
 
 ## 2. Produce a new timing candidate only after data feasibility and a policy freeze
 
@@ -167,4 +203,4 @@ Saved 83/35 are observed development data, not a fresh holdout/national/area/tra
 
 ## Deferred scope
 
-The runtime stays v9. Further display-resolution increases, traffic/turns/terrain/access, precise borders/coasts, caching, accounts/sharing/import, PostGIS and advanced regional research remain deferred. Detailed six-hour expansion stays held at 9.290 GiB versus 4 GiB. [Six-hour report](six-hour-preflight.md), [two-hour baseline](two-hour-region.md).
+The runtime stays v9. Display resolution beyond the fixed prototype, traffic/turns/terrain/access, precise borders/coasts, caching, accounts/sharing/import, PostGIS and advanced regional research remain deferred. Detailed six-hour expansion stays held at 9.290 GiB versus 4 GiB. [Six-hour report](six-hour-preflight.md), [two-hour baseline](two-hour-region.md).

@@ -1,0 +1,1718 @@
+{
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,size=256m"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": 64,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "fsize",
+        "Hard": 2147483648,
+        "Soft": 2147483648
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v14/build",
+        "Target": "/artifacts",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-projector-v1/build/projector.so",
+        "Target": "/legacy/projector.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v1/build/country-screen.so",
+        "Target": "/legacy-country/country-screen.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v5/build/country-screen.so",
+        "Target": "/legacy-v5/country-screen.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v4/build/country-screen.so",
+        "Target": "/legacy-v4/country-screen.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v2/build/country-screen.so",
+        "Target": "/legacy-v2/country-screen.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_input_v3.py",
+        "Target": "/code/prepare_osm_input_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+        "Target": "/code/coarse_timing_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_parquet.py",
+        "Target": "/code/coarse_timing_parquet.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_path_features.py",
+        "Target": "/code/coarse_path_features.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_paths.py",
+        "Target": "/code/coarse_backbone_paths.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_codec.py",
+        "Target": "/code/coarse_backbone_codec.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_input.py",
+        "Target": "/code/coarse_osm_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_capture.py",
+        "Target": "/code/run_osm_capture.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_audit.py",
+        "Target": "/code/coarse_osm_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+        "Target": "/code/coarse_osm_records.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data_v3.py",
+        "Target": "/code/coarse_osm_data_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data.py",
+        "Target": "/code/coarse_osm_data.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_transport.py",
+        "Target": "/code/coarse_osm_bulk_transport.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+        "Target": "/code/coarse_osm_bulk.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_audit.py",
+        "Target": "/code/coarse_osm_bulk_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+        "Target": "/code/coarse_osm_bulk_pbf.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_validation_v4.py",
+        "Target": "/code/coarse_osm_validation_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_validation_v4_test.py",
+        "Target": "/code/coarse_osm_validation_v4_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile.py",
+        "Target": "/code/coarse_osm_profile.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile_test.py",
+        "Target": "/code/coarse_osm_profile_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_import_v1.py",
+        "Target": "/code/profile_osm_import_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile_driver_test.py",
+        "Target": "/code/coarse_osm_profile_driver_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_test.py",
+        "Target": "/code/coarse_osm_bulk_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_bulk.py",
+        "Target": "/code/prepare_osm_bulk.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile_v2.py",
+        "Target": "/code/coarse_osm_profile_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_import_v2.py",
+        "Target": "/code/profile_osm_import_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile_driver_v2_test.py",
+        "Target": "/code/coarse_osm_profile_driver_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory.py",
+        "Target": "/code/coarse_osm_inventory.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_test.py",
+        "Target": "/code/coarse_osm_inventory_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_inventory_v1.py",
+        "Target": "/code/run_osm_inventory_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_driver_test.py",
+        "Target": "/code/coarse_osm_inventory_driver_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_smoke.py",
+        "Target": "/code/coarse_osm_native_smoke.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_v2.py",
+        "Target": "/code/coarse_osm_inventory_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_inventory_v2.py",
+        "Target": "/code/run_osm_inventory_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_driver_v2_test.py",
+        "Target": "/code/coarse_osm_inventory_driver_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_v3.py",
+        "Target": "/code/coarse_osm_inventory_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_inventory_v3.py",
+        "Target": "/code/run_osm_inventory_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_inventory_driver_v3_test.py",
+        "Target": "/code/coarse_osm_inventory_driver_v3_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_compact_v1.py",
+        "Target": "/code/coarse_osm_compact_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_v1.py",
+        "Target": "/code/coarse_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_v1_test.py",
+        "Target": "/code/coarse_osm_stream_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_stream_v1.py",
+        "Target": "/code/profile_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_stream_v1.py",
+        "Target": "/code/run_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_driver_v1_test.py",
+        "Target": "/code/coarse_osm_stream_driver_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v1.py",
+        "Target": "/code/coarse_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_native_lock_v1.py",
+        "Target": "/code/prepare_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v1_test.py",
+        "Target": "/code/coarse_osm_native_lock_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v2.py",
+        "Target": "/code/coarse_osm_native_lock_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_native_lock_v2.py",
+        "Target": "/code/prepare_osm_native_lock_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v2_test.py",
+        "Target": "/code/coarse_osm_native_lock_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_build_v1.py",
+        "Target": "/code/coarse_osm_build_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_build_v1.py",
+        "Target": "/code/run_osm_build_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_build_v1_test.py",
+        "Target": "/code/coarse_osm_build_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_build_smoke_v1.cpp",
+        "Target": "/code/coarse_osm_build_smoke_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1.cpp",
+        "Target": "/code/coarse_osm_delta_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1.py",
+        "Target": "/code/coarse_osm_delta_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v1.py",
+        "Target": "/code/coarse_osm_delta_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1_test.py",
+        "Target": "/code/coarse_osm_delta_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v1.py",
+        "Target": "/code/run_osm_delta_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json",
+        "Target": "/docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2.py",
+        "Target": "/code/coarse_osm_delta_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v2.py",
+        "Target": "/code/coarse_osm_delta_extract_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2_test.py",
+        "Target": "/code/coarse_osm_delta_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v2.py",
+        "Target": "/code/run_osm_delta_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1.cpp",
+        "Target": "/code/coarse_osm_projector_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1.py",
+        "Target": "/code/coarse_osm_projector_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_extract_v1.py",
+        "Target": "/code/coarse_osm_projector_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1_test.py",
+        "Target": "/code/coarse_osm_projector_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_projector_v1.py",
+        "Target": "/code/run_osm_projector_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1.py",
+        "Target": "/code/coarse_osm_sample_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1_test.py",
+        "Target": "/code/coarse_osm_sample_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_sample_v1.py",
+        "Target": "/code/run_osm_sample_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v2.py",
+        "Target": "/code/coarse_osm_sample_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v2_test.py",
+        "Target": "/code/coarse_osm_sample_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_sample_v2.py",
+        "Target": "/code/run_osm_sample_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1.cpp",
+        "Target": "/code/coarse_osm_country_screen_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1.py",
+        "Target": "/code/coarse_osm_country_screen_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1_test.py",
+        "Target": "/code/coarse_osm_country_screen_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v1.py",
+        "Target": "/code/run_osm_country_screen_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-native-build-2026-10-27/asset_contents.py",
+        "Target": "/code/qualified_asset_contents.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-country-helper-2026-10-30/qualification-plan.json",
+        "Target": "/inputs/recipe.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v2.cpp",
+        "Target": "/code/coarse_osm_country_screen_v2.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v2.py",
+        "Target": "/code/coarse_osm_country_screen_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v2_test.py",
+        "Target": "/code/coarse_osm_country_screen_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v2.py",
+        "Target": "/code/run_osm_country_screen_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v4.cpp",
+        "Target": "/code/coarse_osm_country_screen_v4.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v4.py",
+        "Target": "/code/coarse_osm_country_screen_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v4_test.py",
+        "Target": "/code/coarse_osm_country_screen_v4_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v4.py",
+        "Target": "/code/run_osm_country_screen_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_wire_v4.py",
+        "Target": "/code/coarse_osm_country_wire_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-country-exec-2026-10-30/member-diagnostic-regression.json",
+        "Target": "/inputs/member-regression.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v5.cpp",
+        "Target": "/code/coarse_osm_country_screen_v5.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v5.py",
+        "Target": "/code/coarse_osm_country_screen_v5.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v5_test.py",
+        "Target": "/code/coarse_osm_country_screen_v5_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v5.py",
+        "Target": "/code/run_osm_country_screen_v5.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v6.cpp",
+        "Target": "/code/coarse_osm_country_screen_v6.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v6.py",
+        "Target": "/code/coarse_osm_country_screen_v6.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v6_test.py",
+        "Target": "/code/coarse_osm_country_screen_v6_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_extract_v1.py",
+        "Target": "/code/coarse_osm_full_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_extract_v1_test.py",
+        "Target": "/code/coarse_osm_full_extract_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v6.py",
+        "Target": "/code/run_osm_country_screen_v6.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lookup_v3.py",
+        "Target": "/code/coarse_osm_lookup_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lookup_v3_test.py",
+        "Target": "/code/coarse_osm_lookup_v3_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-country-exec-2026-10-30/screen-raw-v4/screen/pass-b/global-catalog.json",
+        "Target": "/inputs/global/global-catalog.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-country-exec-2026-10-30/screen-raw-v4/screen/pass-b/global-directory.bin",
+        "Target": "/inputs/global/global-directory.bin",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_extract_v2_test.py",
+        "Target": "/code/coarse_osm_full_extract_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v7.py",
+        "Target": "/code/run_osm_country_screen_v7.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_extract_v2.py",
+        "Target": "/code/coarse_osm_full_extract_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_extract_v3_test.py",
+        "Target": "/code/coarse_osm_full_extract_v3_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v8.py",
+        "Target": "/code/run_osm_country_screen_v8.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v1.py",
+        "Target": "/code/coarse_osm_window_cells_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v1_test.py",
+        "Target": "/code/coarse_osm_window_cells_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v1.cpp",
+        "Target": "/code/coarse_osm_window_cells_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v1.py",
+        "Target": "/code/coarse_osm_window_codec_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v1_test.py",
+        "Target": "/code/coarse_osm_window_codec_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v9.py",
+        "Target": "/code/run_osm_country_screen_v9.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v1.py",
+        "Target": "/code/coarse_osm_window_bank_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v1_test.py",
+        "Target": "/code/coarse_osm_window_bank_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_masks_v1.cpp",
+        "Target": "/code/coarse_osm_window_masks_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_masks_v1.py",
+        "Target": "/code/coarse_osm_window_masks_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_masks_v1_test.py",
+        "Target": "/code/coarse_osm_window_masks_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v1.py",
+        "Target": "/code/coarse_osm_filtered_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v1_test.py",
+        "Target": "/code/coarse_osm_filtered_extract_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v10.py",
+        "Target": "/code/run_osm_country_screen_v10.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v2.cpp",
+        "Target": "/code/coarse_osm_window_cells_v2.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v2.py",
+        "Target": "/code/coarse_osm_window_codec_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v2_test.py",
+        "Target": "/code/coarse_osm_window_codec_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v2.py",
+        "Target": "/code/coarse_osm_window_bank_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v2_test.py",
+        "Target": "/code/coarse_osm_window_bank_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v2.py",
+        "Target": "/code/coarse_osm_filtered_extract_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v2_test.py",
+        "Target": "/code/coarse_osm_filtered_extract_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_readonly_extract_v2_test.py",
+        "Target": "/code/coarse_osm_readonly_extract_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v13.py",
+        "Target": "/code/run_osm_country_screen_v13.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_revalidated_index_v1.py",
+        "Target": "/code/coarse_osm_revalidated_index_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_revalidated_index_v1_test.py",
+        "Target": "/code/coarse_osm_revalidated_index_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v7.cpp",
+        "Target": "/code/coarse_osm_country_screen_v7.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v7.py",
+        "Target": "/code/coarse_osm_country_screen_v7.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v7_test.py",
+        "Target": "/code/coarse_osm_country_screen_v7_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_store_v1.py",
+        "Target": "/code/coarse_osm_selected_store_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_store_v1_test.py",
+        "Target": "/code/coarse_osm_selected_store_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_audit_v1.py",
+        "Target": "/code/coarse_osm_selected_audit_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_audit_v1_test.py",
+        "Target": "/code/coarse_osm_selected_audit_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v3.py",
+        "Target": "/code/coarse_osm_filtered_extract_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v3_test.py",
+        "Target": "/code/coarse_osm_filtered_extract_v3_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_qualification_v1.py",
+        "Target": "/code/coarse_osm_selected_qualification_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v14.py",
+        "Target": "/code/run_osm_country_screen_v14.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_qualification_v2.py",
+        "Target": "/code/coarse_osm_selected_qualification_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v15.py",
+        "Target": "/code/run_osm_country_screen_v15.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_selected_qualification_v1.py",
+        "Target": "/code/close_osm_selected_qualification_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site",
+        "Target": "/tools/site",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1",
+        "Target": "/tools/runtime/libexpat.so.1",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/copyright",
+        "Target": "/tools/runtime/copyright",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-country-controls-v15/controls",
+        "Target": "/work"
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-extraction-2026-10-30/qualification-plan-v15.json",
+        "Target": "/inputs/recipe-v15.json",
+        "ReadOnly": true
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "Mounts": [
+    {
+      "Destination": "/tools/runtime/libexpat.so.1",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/recipe-v15.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_lookup_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_compact_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_build_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v4.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v6.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_extract_v3_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_revalidated_index_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v6_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/global/global-catalog.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_data.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_validation_v4.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile_driver_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v5.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v5_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_extract_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_cells_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_lookup_v3_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_bank_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_masks_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_delta_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_bank_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v15.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_input_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_codec.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_driver_v3_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_delta_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_wire_v4.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_codec_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v9.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_codec_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v3_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_qualification_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_native_lock_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_lock_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_capture.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_smoke.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_projector_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_sample_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_inventory_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_inventory_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_inventory_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_build_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_audit_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/profile_osm_import_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_stream_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_build_smoke_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v4.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v5.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_qualification_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v2.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/legacy-v4/country-screen.so",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_records.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile_driver_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_lock_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_projector_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_store_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/work",
+      "RW": true
+    },
+    {
+      "Destination": "/artifacts",
+      "RW": false
+    },
+    {
+      "Destination": "/legacy/projector.so",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_path_features.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/member-regression.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v6.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_data_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v13.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/close_osm_selected_qualification_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_build_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_projector_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/recipe.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v8.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_cells_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_codec_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v4_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v5.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_audit_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/legacy-v5/country-screen.so",
+      "RW": false
+    },
+    {
+      "Destination": "/legacy-v2/country-screen.so",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_sample_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/profile_osm_import_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/profile_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_sample_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_bank_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_transport.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/qualified_asset_contents.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_extract_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_extract_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v6.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/global/global-directory.bin",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_masks_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/tools/site",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_masks_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_stream_driver_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_cells_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_bank_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_revalidated_index_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/tools/runtime/copyright",
+      "RW": false
+    },
+    {
+      "Destination": "/legacy-country/country-screen.so",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v7.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_parquet.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_pbf.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_bulk.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_sample_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v14.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_driver_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_extract_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_lock_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_projector_extract_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_sample_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_readonly_extract_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v7_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_paths.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_validation_v4_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_lock_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_extract_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v10.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_cells_v2.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_selected_store_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_projector_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_inventory_driver_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_native_lock_v2.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v1.cpp",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v7.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_window_codec_v2_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_country_screen_v7.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_delta_extract_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_country_screen_v4.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_sample_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_filtered_extract_v2.py",
+      "RW": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "osm-water-relation-member-closure-v1",
+  "date": "2026-11-03",
+  "objective": "Preserve every selected national water relation, all original tags/metadata/members/roles/order and a sorted unique member-way ID index as prerequisites for generic geometry closure.",
+  "selector": "Exactly natural=water OR waterway=riverbank OR landuse=reservoir, all original-source relations. No names/regions/coordinates/query selection.",
+  "input": "Completed full native water census; exact original whole source SHA/MD5/stat before and after fixed256MiB relation-tail projection. All1624265 relations must be counted in strict source order. Earlier node/way semantics inherited from complete native census, not re-decoded.",
+  "caps": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "ownedBytes": 67108864,
+    "tmpBytes": 268435456,
+    "rawJsonBytes": 268435456,
+    "gzipBytes": 33554432,
+    "lineBytes": 8388608,
+    "selectedMemberOccurrences": 500000,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "overallRetainedBytes": 68719476736
+  },
+  "acceptance": [
+    "26 actual Linux controls/no skips including existing tail guards, new water selection/roles/nesting/order/independent saved-index audit/corruption/caps and positive/wrong-source guard.",
+    "All selected relation/member-kind/role/type/max-member counters exactly equal the independently completed native census.",
+    "Lossless gzip records and unique u64 way IDs independently reopened, all counts/semantic bytes/hash/index values exact. Nested/nonmultipolygon/other-role cases remain visible; missing source members are not presumed resolved.",
+    "Original whole source identity/stat stable before and after; full header/framing EOF and complete relation count.",
+    "Bounded worker/client both0, noOOM/zero swap, exact owned removal/independent absence, close every output and include actual allocation in next aggregate."
+  ],
+  "deferred": [
+    "No water geometry/coordinates, polygon assembly, source replacement, allowance change, road model/query, provider/acquisition/DB/env/app/deployment.",
+    "Next measure the union of all water-tag ways and selected relation-member ways, preserving missing IDs, before geometry allocation.",
+    "No speed ratio sweep or timing candidate from the fixed-path sensitivity."
+  ]
+}

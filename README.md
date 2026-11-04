@@ -6,7 +6,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](docs/evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-**Current work:** national bank capacity passes with identical 938 MB banks. Road capture stopped at the old 250,000 selected-element limit; all failure evidence is closed and preserved. Next is bounded disk-backed selection under the same 4 GiB memory, four-hour and 64 GiB storage limits. [Evidence and recovery](docs/evidence/coarse-osm-extraction-2026-10-30/README.md). Deployed v9 is unchanged.
+**Current work:** the finer national road engine remains **rejected for app integration**:same80-route mean error33.73min versus v9’s30.00, with3 unavailable routes. The user chose to keep every accuracy gate. The raw water-data stage is now complete:all101.74million requested coordinates are independently exact;2,439,095 water features/2,648,285 rings preserve source edges, roles, coordinates and holes.72 invalid standalone ways/522 excluded relations remain explicit. All245 saved input/reference points are outside accepted water, including the old unsupported shoreline input. Known excluded-feature bounds overlap12 other points;one source-incomplete relation cannot be fully located. These are source observations, not proof of land or repaired routes. The908.22MB geometry is offline-only. Next qualify compact geography storage, then one generic mask policy and all original routing/accuracy/app gates. Production stays v9; app/env/DB/dependencies/deployment unchanged, new code/evidence local/uncommitted. [Results and recovery](docs/evidence/coarse-osm-car-capacity-2026-11-01/README.md).
 
 
 ## What works today
@@ -19,7 +19,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md).
 
-Offline work is preparing additional OpenStreetMap road attributes. The complete source is downloaded and verified; national census/batching and the faster lookup checks pass. Complete two-pass extraction passes260Linux controls and independent reference output. Its corrected full-run controller passes19more Linux controls; the bounded national raw capture is running. The earlier checkpoint-monitor failure is preserved. Complete capture, source suitability, usable speed/access data, matching and model accuracy remain separate checks. The deployed map has not changed. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
+Offline OpenStreetMap capture, national count/topology audits and the captured-data road-only cost prototype are complete. Complete app footprint and countrywide ETA accuracy still need qualification. Large research assets remain ignored and absent from a fresh clone. [Progress](docs/progress.md), [next steps](docs/next-steps.md).
 
 ## Run locally
 

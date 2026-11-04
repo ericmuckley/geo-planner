@@ -1,0 +1,7 @@
+{
+  "reason": "V1 closer compared complete stat including access time; reading a file changed atime and stopped before a closed record. V2 uses the existing stable stat_key helper. The completed profile/data are unchanged; no profile/query/compression replay.",
+  "closerV1Sha256": "216546a9ee213a932522a98c4282b8deb196e99bb53964b1bdab9b6c769b9653",
+  "v1ClosedRecordCreated": false,
+  "v1PartialMirrorPreserved": "packed-country-profile-raw-v1",
+  "replacementCloser": "scripts/close_osm_car_packed_profile_v2.py"
+}

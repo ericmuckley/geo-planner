@@ -1,0 +1,19 @@
+{
+  "status": "Fixed geometric search design before implementation/control/country profile; no origin-transfer admission",
+  "source": "Closed core/index and independently source-audited paid geometry; source graph, costs and permissions unchanged",
+  "target": "Nearest point on the simplified modeled minor-great-circle road geometry, with deterministic canonical-arc/segment tie order; not nearest original source curve or a legal/land-safe origin connection",
+  "initialUpperBound": "Nearest outgoing tail vertex, found by scanning qualified anchor cells with conservative spherical rectangle distance lower bounds. An outgoing tail is on a modeled physical span. Isolated vertices do not create an upper bound; empty graph returns null.",
+  "shortSpanCandidates": "Scan outgoing arcs from tails within currentBestDistance+1000m, using source full length <=1000m for spans absent from the long table. This full-length bound includes one-way sink approaches without an incoming index. Canonicalize physical reverses without merging parallel or coincident native identities.",
+  "longSpanCandidates": "Scan every sorted long-span canonical key, using its upward full-source length bound. Any point on simplified geometry is within half that length of at least one physical endpoint. Reject only when both endpoints are farther than bestDistance+lengthUpper/2. Cheap latitude lower bounds precede exact distances; no region-specific shortcut.",
+  "numericPruningAllowanceMeters": 1,
+  "tieToleranceMeters": 0.000001,
+  "output": "Canonical physical arc, retained segment ordinal/fraction, coordinate on modeled geometry, distance, and both directional paid-prefix fractions. Full core weights are preserved; connection price/access/shore checks and source-state construction remain separate.",
+  "memory": "Retain existing packed fields only; no full tail/incoming/coordinate map or per-country object list. Per-query work is bounded counters/current best plus one decoded span. No all-origin cache.",
+  "controlsBeforeCountryProfile": [
+    "Independent global spherical projection and cell-lower-bound checks including tiny/polar/wrapped/degenerate segments",
+    "Exact comparison with exhaustive generated-graph physical-span oracle for arbitrary coordinates, retaining all cases",
+    "One-way sinks, empty/isolated components, parallel/coincident identities, long bent/loop/backtracking spans, reversed/asymmetric paid lanes and deterministic equal-distance ties",
+    "Fixed independently selected saved country origins/profile recipe; measure all cases, no city-specific implementation branches or post-result tuning"
+  ],
+  "notQualified": ["Origin source/shore/access/connector permission and pricing", "Actual source-curve or real ETA error", "Reachability field, filled areas, complete app or Vercel admission"]
+}

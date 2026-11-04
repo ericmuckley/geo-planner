@@ -1,0 +1,12 @@
+{
+  "status": "official_matching_version_source_review_not_host_config_proof",
+  "reviewDate": "2026-11-03",
+  "observedSavedEngineVersion": "9.10.0",
+  "sourceUrl": "https://github.com/GIScience/openrouteservice/blob/v9.10.0/ors-engine/src/main/java/org/heigit/ors/routing/graphhopper/extensions/flagencoders/VehicleFlagEncoder.java#L338-L341",
+  "behavior": "In this published version, applyMaxSpeed uses90% of a valid explicit maxspeed; without one it keeps the assumed speed. Separate surface, acceleration, roundabout, default and encoding behavior also exists.",
+  "comparison": "This app prototype prices directed source speeds directly and records whether each direction used a default. Ninety percent for explicitly tagged directions is therefore a source-informed isolated hypothesis, not a parameter inferred from route residuals.",
+  "hostedConfigOrExactProviderReproductionProved": false,
+  "modelChanged": false,
+  "quoteWords": 0,
+  "scope": "Published source/version identity alone does not prove hosted settings, build commit, actual driving speeds or causal agreement. No upstream source code is copied."
+}

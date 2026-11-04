@@ -1,0 +1,36 @@
+{
+  "id": "osm-water-exact-source-coordinate-closure-v1",
+  "date": "2026-11-03",
+  "objective": "Resolve every101738006 audited unique water-reference node ID to exact existing source E7 X/Y, preserve missing IDs and independently decode/partition/compare every canonical source byte.",
+  "source": "Original cached PBF/full pre-post SHA/MD5/stat/header/frame/EOF/count/semantic guards; immutable full-source validator. Sorted input-ID gzip shards already independently audited, raw813904048B/SHA587da8a37ae28bfaae38709faf3f016cc03383b61dfef56e06d8be8428c988fd. No geographic/query filters.",
+  "format": "Frozen WXY1 positive-ID/zigzag E7-X/Y deltas. Separate sorted missing-ID u64 shards. Source shadow <Qii ID/X/Y raw bytes hashed but not retained as a duplicate. No new quantization.",
+  "caps": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "inputIdCapacity": 150000000,
+    "actualInputIds": 101738006,
+    "actualNativeIdArrayBytes": 813904048,
+    "rawShardBytes": 16777216,
+    "fileBytes": 67108864,
+    "plannedOwnedBytes": 469762048,
+    "plannedEncodedCompressedSoftBytes": 411041792,
+    "plannedMissingCompressedSoftBytes": 8388608,
+    "tmpBytes": 268435456,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "overallRetainedBytes": 68719476736
+  },
+  "acceptance": [
+    "55 actual Linux tests/no skips:23 unchanged source+12 native coordinate+7 frozen codec+5 coordinate-store+8 existing shard-reader controls. Include100 generated exact byte/partition sets,100k output-boundary fixture and actual tiny PBF.",
+    "Load all sorted IDs natively in bounded typed chunks; no Python national-node dictionary/full coordinate temporary file. Full source counts/semantic/pre-post identity exact, no ordinary Python source-object projection.",
+    "Found/missing streams exactly partition all requested IDs; real(0,0) never sentinel. Complete canonical ID/X/Y source-shadow SHA/bytes must reproduce after independent decoding and all missing IDs compare.",
+    "Release producer native-ID buffers before audit reload. Stored codec decoded independently from source GPF parser; all requested indices/coordinates/missing IDs and canonical source bytes checked.",
+    "Encoded/missing streams have separate soft caps and16MiB raw shards; owned448MiB/tmp256MiB fit aggregate only after all newer closes. Source/worker both0/noOOM/zero swap/exact cleanup/absence/close; preserve failures and source gaps."
+  ],
+  "next": "Only after complete coordinate/byte/resource proof, qualify native-ID water rings/roles/holes/missing/source/physical coverage and one generic geographic candidate; keep all original accuracy/app gates.",
+  "deferred": [
+    "No ring/polygon/mask/input/ETA/app activation by coordinate feasibility.",
+    "No data acquisition/provider/DB/env/dependency/deployment, timing sweep or source-gap/lake deletion."
+  ]
+}

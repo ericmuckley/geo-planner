@@ -1,0 +1,1603 @@
+{
+  "format": "native-osm-geometry-backbone-prototype-v1",
+  "captureReceipt": {
+    "rows": 1368072,
+    "bytes": 477852579,
+    "sha256": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4",
+    "types": {
+      "node": 1123919,
+      "relation": 4900,
+      "way": 239253
+    },
+    "memberships": 1368072
+  },
+  "relationContext": {
+    "relations": 4900,
+    "memberOccurrences": 14650,
+    "memberTypes": {
+      "node": 4364,
+      "way": 10286
+    },
+    "uniqueMemberWays": 6350,
+    "missingMemberWayIds": 113,
+    "missingMemberNodeOccurrences": 0,
+    "missingMemberRelationIds": 0,
+    "ordinaryCarApplicabilityReviewed": false
+  },
+  "profiles": [
+    {
+      "id": "all-highways",
+      "roles": null,
+      "selectedWays": 239253,
+      "selectedNativeNodes": 1123919,
+      "sourceReferences": 1530030,
+      "primitiveEdges": 1290777,
+      "contractedVertices": 484166,
+      "contractedEdges": 651024,
+      "geometryNodeOccurrences": 1941801,
+      "primitiveToContractedEdgeReduction": 0.4956340250872149,
+      "rawComponents": {
+        "count": 1007,
+        "vertices": 1123919,
+        "largest": 153467
+      },
+      "contractedComponents": {
+        "count": 1007,
+        "vertices": 484166,
+        "largest": 84544
+      },
+      "anchorReasons": {
+        "sourceWayEnd": 324759,
+        "taggedNode": 110157,
+        "relationNode": 2727,
+        "relationWay": 27392,
+        "areaBoundary": 8219,
+        "degreeNotTwo": 340625,
+        "outsideArea": 46069
+      },
+      "sourceRoles": {
+        "primary": 6913,
+        "secondary": 7799,
+        "residential": 26765,
+        "tertiary": 6854,
+        "unclassified": 1961,
+        "motorway_link": 3028,
+        "service": 83795,
+        "steps": 2418,
+        "footway": 83614,
+        "track": 2084,
+        "trunk": 747,
+        "trunk_link": 102,
+        "secondary_link": 323,
+        "living_street": 218,
+        "cycleway": 2246,
+        "primary_link": 400,
+        "motorway": 2655,
+        "proposed": 48,
+        "pedestrian": 1308,
+        "tertiary_link": 174,
+        "path": 5149,
+        "construction": 208,
+        "busway": 56,
+        "road": 2,
+        "bus_stop": 5,
+        "bridleway": 59,
+        "platform": 17,
+        "corridor": 278,
+        "elevator": 13,
+        "services": 2,
+        "raceway": 10,
+        "crossing": 1,
+        "rest_area": 1
+      },
+      "windows": {
+        "origin-00": {
+          "ways": 2660,
+          "references": 19405,
+          "primitiveEdges": 16745,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-01": {
+          "ways": 14347,
+          "references": 114007,
+          "primitiveEdges": 99660,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-02": {
+          "ways": 9125,
+          "references": 73938,
+          "primitiveEdges": 64813,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-03": {
+          "ways": 12735,
+          "references": 71411,
+          "primitiveEdges": 58676,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-04": {
+          "ways": 46697,
+          "references": 232196,
+          "primitiveEdges": 185499,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-05": {
+          "ways": 6704,
+          "references": 52118,
+          "primitiveEdges": 45414,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-06": {
+          "ways": 28815,
+          "references": 150131,
+          "primitiveEdges": 121316,
+          "verificationPairs": 2,
+          "reachablePairs": 1,
+          "unreachablePairs": 1
+        },
+        "origin-07": {
+          "ways": 1940,
+          "references": 31062,
+          "primitiveEdges": 29122,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-08": {
+          "ways": 830,
+          "references": 15312,
+          "primitiveEdges": 14482,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-09": {
+          "ways": 8579,
+          "references": 63426,
+          "primitiveEdges": 54847,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-10": {
+          "ways": 923,
+          "references": 9679,
+          "primitiveEdges": 8756,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-11": {
+          "ways": 4467,
+          "references": 38360,
+          "primitiveEdges": 33893,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-12": {
+          "ways": 1222,
+          "references": 8791,
+          "primitiveEdges": 7569,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-13": {
+          "ways": 38,
+          "references": 896,
+          "primitiveEdges": 858,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-14": {
+          "ways": 15048,
+          "references": 102836,
+          "primitiveEdges": 87788,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-15": {
+          "ways": 7821,
+          "references": 55151,
+          "primitiveEdges": 47330,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-16": {
+          "ways": 7956,
+          "references": 58070,
+          "primitiveEdges": 50114,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-17": {
+          "ways": 32499,
+          "references": 186851,
+          "primitiveEdges": 154352,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-18": {
+          "ways": 12997,
+          "references": 102870,
+          "primitiveEdges": 89873,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-19": {
+          "ways": 13272,
+          "references": 68840,
+          "primitiveEdges": 55568,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-20": {
+          "ways": 10578,
+          "references": 74680,
+          "primitiveEdges": 64102,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        }
+      },
+      "routingDecodedBytes": 21434572,
+      "routingGzipBytes": 14321763,
+      "geometryDecodedBytes": 19362656,
+      "geometryGzipBytes": 11249066,
+      "queries": [
+        {
+          "windowId": "origin-00",
+          "sourceNodeIds": [
+            2569034089,
+            2571167511
+          ],
+          "rawMeters": 5198.354433745133,
+          "contractedMeters": 5198.3544337451385,
+          "rawSettled": 9763,
+          "contractedSettled": 3938,
+          "rawSearchSeconds": 0.00596666696947068,
+          "contractedSearchSeconds": 0.002831916091963649
+        },
+        {
+          "windowId": "origin-00",
+          "sourceNodeIds": [
+            37831107,
+            11935893147
+          ],
+          "rawMeters": 1521.2967204595275,
+          "contractedMeters": 1521.296720459528,
+          "rawSettled": 2704,
+          "contractedSettled": 1172,
+          "rawSearchSeconds": 0.001984041999094188,
+          "contractedSearchSeconds": 0.000797332962974906
+        },
+        {
+          "windowId": "origin-01",
+          "sourceNodeIds": [
+            14062747536,
+            13048999547
+          ],
+          "rawMeters": 2065.817952333768,
+          "contractedMeters": 2065.8179523337685,
+          "rawSettled": 12595,
+          "contractedSettled": 6311,
+          "rawSearchSeconds": 0.007852416951209307,
+          "contractedSearchSeconds": 0.0042139160213992
+        },
+        {
+          "windowId": "origin-01",
+          "sourceNodeIds": [
+            7857470003,
+            14062976548
+          ],
+          "rawMeters": 888.8449449704401,
+          "contractedMeters": 888.8449449704403,
+          "rawSettled": 3037,
+          "contractedSettled": 2123,
+          "rawSearchSeconds": 0.002085665939375758,
+          "contractedSearchSeconds": 0.001472083036787808
+        },
+        {
+          "windowId": "origin-02",
+          "sourceNodeIds": [
+            13529662893,
+            95357965
+          ],
+          "rawMeters": 5056.604391748894,
+          "contractedMeters": 5056.604391748892,
+          "rawSettled": 29134,
+          "contractedSettled": 10992,
+          "rawSearchSeconds": 0.017583958921022713,
+          "contractedSearchSeconds": 0.007187832961790264
+        },
+        {
+          "windowId": "origin-02",
+          "sourceNodeIds": [
+            6789872526,
+            8208117423
+          ],
+          "rawMeters": 8432.87922177787,
+          "contractedMeters": 8432.879221777868,
+          "rawSettled": 35077,
+          "contractedSettled": 12599,
+          "rawSearchSeconds": 0.0199252919992432,
+          "contractedSearchSeconds": 0.007618124946020544
+        },
+        {
+          "windowId": "origin-03",
+          "sourceNodeIds": [
+            13420376744,
+            8763260759
+          ],
+          "rawMeters": 9033.977146108758,
+          "contractedMeters": 9033.977146108758,
+          "rawSettled": 35526,
+          "contractedSettled": 18508,
+          "rawSearchSeconds": 0.02197595895268023,
+          "contractedSearchSeconds": 0.012398165999911726
+        },
+        {
+          "windowId": "origin-03",
+          "sourceNodeIds": [
+            3987524788,
+            13310235404
+          ],
+          "rawMeters": 2868.2641377764794,
+          "contractedMeters": 2868.264137776479,
+          "rawSettled": 4811,
+          "contractedSettled": 3038,
+          "rawSearchSeconds": 0.003165625035762787,
+          "contractedSearchSeconds": 0.0020825830288231373
+        },
+        {
+          "windowId": "origin-04",
+          "sourceNodeIds": [
+            11476279988,
+            12883039261
+          ],
+          "rawMeters": 3297.1774476962014,
+          "contractedMeters": 3297.1774476962005,
+          "rawSettled": 46110,
+          "contractedSettled": 23884,
+          "rawSearchSeconds": 0.03178637498058379,
+          "contractedSearchSeconds": 0.01762333302758634
+        },
+        {
+          "windowId": "origin-04",
+          "sourceNodeIds": [
+            1378066282,
+            13026735985
+          ],
+          "rawMeters": 5496.698519725876,
+          "contractedMeters": 5496.6985197258755,
+          "rawSettled": 105224,
+          "contractedSettled": 57436,
+          "rawSearchSeconds": 0.07315287506207824,
+          "contractedSearchSeconds": 0.042980290949344635
+        },
+        {
+          "windowId": "origin-05",
+          "sourceNodeIds": [
+            7675075263,
+            341883377
+          ],
+          "rawMeters": 12854.339418410327,
+          "contractedMeters": 12854.33941841033,
+          "rawSettled": 36399,
+          "contractedSettled": 11782,
+          "rawSearchSeconds": 0.02046870905905962,
+          "contractedSearchSeconds": 0.00713925005402416
+        },
+        {
+          "windowId": "origin-05",
+          "sourceNodeIds": [
+            3695869593,
+            11042831880
+          ],
+          "rawMeters": 7031.453222250813,
+          "contractedMeters": 7031.453222250812,
+          "rawSettled": 26724,
+          "contractedSettled": 10098,
+          "rawSearchSeconds": 0.014377957908436656,
+          "contractedSearchSeconds": 0.005994499893859029
+        },
+        {
+          "windowId": "origin-06",
+          "sourceNodeIds": [
+            49086764,
+            5572056232
+          ],
+          "rawMeters": 726.8533918864289,
+          "contractedMeters": 726.8533918864289,
+          "rawSettled": 627,
+          "contractedSettled": 381,
+          "rawSearchSeconds": 0.0005753750447183847,
+          "contractedSearchSeconds": 0.00030783400870859623
+        },
+        {
+          "windowId": "origin-06",
+          "sourceNodeIds": [
+            2430682050,
+            5536665854
+          ],
+          "rawMeters": null,
+          "contractedMeters": null,
+          "rawSettled": 100329,
+          "contractedSettled": 50669,
+          "rawSearchSeconds": 0.06267120793927461,
+          "contractedSearchSeconds": 0.03363874997012317
+        },
+        {
+          "windowId": "origin-07",
+          "sourceNodeIds": [
+            4933671748,
+            3753109909
+          ],
+          "rawMeters": 1803.487944901774,
+          "contractedMeters": 1803.487944901774,
+          "rawSettled": 1041,
+          "contractedSettled": 293,
+          "rawSearchSeconds": 0.000725707970559597,
+          "contractedSearchSeconds": 0.00023316696751862764
+        },
+        {
+          "windowId": "origin-07",
+          "sourceNodeIds": [
+            1205524875,
+            13890058197
+          ],
+          "rawMeters": 10734.887964657612,
+          "contractedMeters": 10734.887964657615,
+          "rawSettled": 19215,
+          "contractedSettled": 3382,
+          "rawSearchSeconds": 0.010016625048592687,
+          "contractedSearchSeconds": 0.0019413329428061843
+        },
+        {
+          "windowId": "origin-08",
+          "sourceNodeIds": [
+            49283510,
+            468613263
+          ],
+          "rawMeters": 4848.504734757536,
+          "contractedMeters": 4848.50473475754,
+          "rawSettled": 2534,
+          "contractedSettled": 265,
+          "rawSearchSeconds": 0.0014411249430850148,
+          "contractedSearchSeconds": 0.000225124997086823
+        },
+        {
+          "windowId": "origin-08",
+          "sourceNodeIds": [
+            49080397,
+            12758111893
+          ],
+          "rawMeters": 3635.319859893443,
+          "contractedMeters": 3635.3198598934405,
+          "rawSettled": 1793,
+          "contractedSettled": 350,
+          "rawSearchSeconds": 0.0010607909644022584,
+          "contractedSearchSeconds": 0.0002733749570325017
+        },
+        {
+          "windowId": "origin-09",
+          "sourceNodeIds": [
+            3180590529,
+            3705939234
+          ],
+          "rawMeters": 6288.683284883876,
+          "contractedMeters": 6288.683284883875,
+          "rawSettled": 39717,
+          "contractedSettled": 15072,
+          "rawSearchSeconds": 0.023240791051648557,
+          "contractedSearchSeconds": 0.009549875045195222
+        },
+        {
+          "windowId": "origin-09",
+          "sourceNodeIds": [
+            54405024,
+            10227755143
+          ],
+          "rawMeters": 3581.1783153374463,
+          "contractedMeters": 3581.1783153374454,
+          "rawSettled": 22328,
+          "contractedSettled": 9160,
+          "rawSearchSeconds": 0.013622208032757044,
+          "contractedSearchSeconds": 0.006018541986122727
+        },
+        {
+          "windowId": "origin-10",
+          "sourceNodeIds": [
+            4173626114,
+            2432759837
+          ],
+          "rawMeters": 11593.008998304249,
+          "contractedMeters": 11593.008998304249,
+          "rawSettled": 7135,
+          "contractedSettled": 2264,
+          "rawSearchSeconds": 0.0038140829419717193,
+          "contractedSearchSeconds": 0.0012942500179633498
+        },
+        {
+          "windowId": "origin-10",
+          "sourceNodeIds": [
+            3351582492,
+            3351582498
+          ],
+          "rawMeters": 123.47400902229843,
+          "contractedMeters": 123.47400902229843,
+          "rawSettled": 28,
+          "contractedSettled": 17,
+          "rawSearchSeconds": 0.00019166700076311827,
+          "contractedSearchSeconds": 8.387502748519182e-05
+        },
+        {
+          "windowId": "origin-11",
+          "sourceNodeIds": [
+            10203624171,
+            7360135528
+          ],
+          "rawMeters": 2986.7701407760883,
+          "contractedMeters": 2986.770140776088,
+          "rawSettled": 6589,
+          "contractedSettled": 3070,
+          "rawSearchSeconds": 0.00370104203466326,
+          "contractedSearchSeconds": 0.0017891250317916274
+        },
+        {
+          "windowId": "origin-11",
+          "sourceNodeIds": [
+            7527460102,
+            7488990583
+          ],
+          "rawMeters": 4046.3514207307085,
+          "contractedMeters": 4046.3514207307085,
+          "rawSettled": 8622,
+          "contractedSettled": 3415,
+          "rawSearchSeconds": 0.004647459019906819,
+          "contractedSearchSeconds": 0.0019112089648842812
+        },
+        {
+          "windowId": "origin-12",
+          "sourceNodeIds": [
+            87680222,
+            87701719
+          ],
+          "rawMeters": 3029.237820758342,
+          "contractedMeters": 3029.237820758342,
+          "rawSettled": 1016,
+          "contractedSettled": 485,
+          "rawSearchSeconds": 0.0007779579609632492,
+          "contractedSearchSeconds": 0.0003743330016732216
+        },
+        {
+          "windowId": "origin-12",
+          "sourceNodeIds": [
+            87730019,
+            87709842
+          ],
+          "rawMeters": 1843.9330739231918,
+          "contractedMeters": 1843.9330739231918,
+          "rawSettled": 636,
+          "contractedSettled": 301,
+          "rawSearchSeconds": 0.000534999999217689,
+          "contractedSearchSeconds": 0.00025716691743582487
+        },
+        {
+          "windowId": "origin-13",
+          "sourceNodeIds": [
+            87715577,
+            10308187013
+          ],
+          "rawMeters": 355.15767312168305,
+          "contractedMeters": 355.15767312168305,
+          "rawSettled": 36,
+          "contractedSettled": 35,
+          "rawSearchSeconds": 0.0002130840439349413,
+          "contractedSearchSeconds": 9.733298793435097e-05
+        },
+        {
+          "windowId": "origin-13",
+          "sourceNodeIds": [
+            87726789,
+            10308178207
+          ],
+          "rawMeters": 848.343080015372,
+          "contractedMeters": 848.343080015372,
+          "rawSettled": 87,
+          "contractedSettled": 63,
+          "rawSearchSeconds": 0.00022625003475695848,
+          "contractedSearchSeconds": 0.00011541706044226885
+        },
+        {
+          "windowId": "origin-14",
+          "sourceNodeIds": [
+            7745901715,
+            7648281729
+          ],
+          "rawMeters": 4388.201027132971,
+          "contractedMeters": 4388.201027132971,
+          "rawSettled": 39785,
+          "contractedSettled": 21188,
+          "rawSearchSeconds": 0.02662820799741894,
+          "contractedSearchSeconds": 0.015373166068457067
+        },
+        {
+          "windowId": "origin-14",
+          "sourceNodeIds": [
+            13504973671,
+            11006426221
+          ],
+          "rawMeters": 1147.496637715224,
+          "contractedMeters": 1147.496637715224,
+          "rawSettled": 4204,
+          "contractedSettled": 2307,
+          "rawSearchSeconds": 0.0027276669861748815,
+          "contractedSearchSeconds": 0.0016088749980553985
+        },
+        {
+          "windowId": "origin-15",
+          "sourceNodeIds": [
+            120168759,
+            13249512030
+          ],
+          "rawMeters": 872.5707229351897,
+          "contractedMeters": 872.5707229351898,
+          "rawSettled": 4594,
+          "contractedSettled": 3314,
+          "rawSearchSeconds": 0.0030294579919427633,
+          "contractedSearchSeconds": 0.0021980409510433674
+        },
+        {
+          "windowId": "origin-15",
+          "sourceNodeIds": [
+            13273430150,
+            120047892
+          ],
+          "rawMeters": 1457.9086135364478,
+          "contractedMeters": 1457.9086135364478,
+          "rawSettled": 10244,
+          "contractedSettled": 7056,
+          "rawSearchSeconds": 0.00681787496432662,
+          "contractedSearchSeconds": 0.004806082928553224
+        },
+        {
+          "windowId": "origin-16",
+          "sourceNodeIds": [
+            12874850535,
+            10700080631
+          ],
+          "rawMeters": 5809.012557288009,
+          "contractedMeters": 5809.012557288009,
+          "rawSettled": 30854,
+          "contractedSettled": 11338,
+          "rawSearchSeconds": 0.018277417053468525,
+          "contractedSearchSeconds": 0.007456000079400837
+        },
+        {
+          "windowId": "origin-16",
+          "sourceNodeIds": [
+            188158500,
+            10309217067
+          ],
+          "rawMeters": 2236.2354137541633,
+          "contractedMeters": 2236.2354137541643,
+          "rawSettled": 9349,
+          "contractedSettled": 3253,
+          "rawSearchSeconds": 0.005528458044864237,
+          "contractedSearchSeconds": 0.0021654170705005527
+        },
+        {
+          "windowId": "origin-17",
+          "sourceNodeIds": [
+            229928943,
+            13256706296
+          ],
+          "rawMeters": 909.0713939551662,
+          "contractedMeters": 909.0713939551661,
+          "rawSettled": 3385,
+          "contractedSettled": 2480,
+          "rawSearchSeconds": 0.0023163340520113707,
+          "contractedSearchSeconds": 0.0017288340022787452
+        },
+        {
+          "windowId": "origin-17",
+          "sourceNodeIds": [
+            229623841,
+            3764554736
+          ],
+          "rawMeters": 3488.1506818503335,
+          "contractedMeters": 3488.1506818503326,
+          "rawSettled": 48857,
+          "contractedSettled": 25739,
+          "rawSearchSeconds": 0.03390033298637718,
+          "contractedSearchSeconds": 0.019441624986939132
+        },
+        {
+          "windowId": "origin-18",
+          "sourceNodeIds": [
+            7874256038,
+            169557521
+          ],
+          "rawMeters": 9372.495395112872,
+          "contractedMeters": 9372.495395112865,
+          "rawSettled": 68463,
+          "contractedSettled": 20536,
+          "rawSearchSeconds": 0.039492957992479205,
+          "contractedSearchSeconds": 0.012925375020131469
+        },
+        {
+          "windowId": "origin-18",
+          "sourceNodeIds": [
+            2448812899,
+            169785867
+          ],
+          "rawMeters": 14127.439467965207,
+          "contractedMeters": 14127.439467965189,
+          "rawSettled": 79880,
+          "contractedSettled": 23640,
+          "rawSearchSeconds": 0.043676916975528,
+          "contractedSearchSeconds": 0.014069791999645531
+        },
+        {
+          "windowId": "origin-19",
+          "sourceNodeIds": [
+            7915898930,
+            7956141735
+          ],
+          "rawMeters": 6310.676804401488,
+          "contractedMeters": 6310.676804401487,
+          "rawSettled": 12697,
+          "contractedSettled": 7167,
+          "rawSearchSeconds": 0.008674875018186867,
+          "contractedSearchSeconds": 0.004816374974325299
+        },
+        {
+          "windowId": "origin-19",
+          "sourceNodeIds": [
+            13622474008,
+            11915111107
+          ],
+          "rawMeters": 4228.312066841178,
+          "contractedMeters": 4228.312066841178,
+          "rawSettled": 25141,
+          "contractedSettled": 15905,
+          "rawSearchSeconds": 0.016573207918554544,
+          "contractedSearchSeconds": 0.01090062502771616
+        },
+        {
+          "windowId": "origin-20",
+          "sourceNodeIds": [
+            10272718238,
+            2988148081
+          ],
+          "rawMeters": 5167.305138857899,
+          "contractedMeters": 5167.305138857898,
+          "rawSettled": 25638,
+          "contractedSettled": 9599,
+          "rawSearchSeconds": 0.014759249985218048,
+          "contractedSearchSeconds": 0.0061188749969005585
+        },
+        {
+          "windowId": "origin-20",
+          "sourceNodeIds": [
+            13371932769,
+            5369296705
+          ],
+          "rawMeters": 3614.265253497992,
+          "contractedMeters": 3614.265253497993,
+          "rawSettled": 22292,
+          "contractedSettled": 9300,
+          "rawSearchSeconds": 0.01294683397281915,
+          "contractedSearchSeconds": 0.005844792001880705
+        }
+      ],
+      "verificationSettles": 1358145,
+      "distanceMeters": 28734358.876554422,
+      "undirectedGeometryOnly": true,
+      "carPermissionReviewed": false,
+      "etaModelQualified": false,
+      "nationalFootprintQualified": false,
+      "vercelPackageQualified": false,
+      "modelChanged": false
+    },
+    {
+      "id": "major-roads",
+      "roles": [
+        "motorway",
+        "motorway_link",
+        "trunk",
+        "trunk_link",
+        "primary",
+        "primary_link",
+        "secondary",
+        "secondary_link",
+        "tertiary",
+        "tertiary_link"
+      ],
+      "selectedWays": 28995,
+      "selectedNativeNodes": 143560,
+      "sourceReferences": 177956,
+      "primitiveEdges": 148961,
+      "contractedVertices": 62520,
+      "contractedEdges": 67921,
+      "geometryNodeOccurrences": 216882,
+      "primitiveToContractedEdgeReduction": 0.5440350158766388,
+      "rawComponents": {
+        "count": 41,
+        "vertices": 143560,
+        "largest": 24778
+      },
+      "contractedComponents": {
+        "count": 41,
+        "vertices": 62520,
+        "largest": 14225
+      },
+      "anchorReasons": {
+        "sourceWayEnd": 26222,
+        "taggedNode": 24323,
+        "relationNode": 2469,
+        "relationWay": 19631,
+        "areaBoundary": 1452,
+        "degreeNotTwo": 9695,
+        "outsideArea": 7371
+      },
+      "sourceRoles": {
+        "primary": 6913,
+        "secondary": 7799,
+        "tertiary": 6854,
+        "motorway_link": 3028,
+        "trunk": 747,
+        "trunk_link": 102,
+        "secondary_link": 323,
+        "primary_link": 400,
+        "motorway": 2655,
+        "tertiary_link": 174
+      },
+      "windows": {
+        "origin-00": {
+          "ways": 303,
+          "references": 2776,
+          "primitiveEdges": 2473,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-01": {
+          "ways": 1021,
+          "references": 7975,
+          "primitiveEdges": 6954,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-02": {
+          "ways": 1418,
+          "references": 7986,
+          "primitiveEdges": 6568,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-03": {
+          "ways": 2013,
+          "references": 14115,
+          "primitiveEdges": 12102,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-04": {
+          "ways": 7401,
+          "references": 33279,
+          "primitiveEdges": 25878,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-05": {
+          "ways": 1485,
+          "references": 7907,
+          "primitiveEdges": 6422,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-06": {
+          "ways": 6143,
+          "references": 30247,
+          "primitiveEdges": 24104,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-07": {
+          "ways": 59,
+          "references": 2211,
+          "primitiveEdges": 2152,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-08": {
+          "ways": 45,
+          "references": 1780,
+          "primitiveEdges": 1735,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-09": {
+          "ways": 639,
+          "references": 3647,
+          "primitiveEdges": 3008,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-10": {
+          "ways": 88,
+          "references": 1690,
+          "primitiveEdges": 1602,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-11": {
+          "ways": 97,
+          "references": 748,
+          "primitiveEdges": 651,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-12": {
+          "ways": 143,
+          "references": 1199,
+          "primitiveEdges": 1056,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-13": {
+          "ways": 1,
+          "references": 109,
+          "primitiveEdges": 108,
+          "verificationPairs": 1,
+          "reachablePairs": 1,
+          "unreachablePairs": 0
+        },
+        "origin-14": {
+          "ways": 702,
+          "references": 6714,
+          "primitiveEdges": 6012,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-15": {
+          "ways": 163,
+          "references": 2277,
+          "primitiveEdges": 2114,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-16": {
+          "ways": 872,
+          "references": 7170,
+          "primitiveEdges": 6298,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-17": {
+          "ways": 3348,
+          "references": 18016,
+          "primitiveEdges": 14668,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-18": {
+          "ways": 1053,
+          "references": 11079,
+          "primitiveEdges": 10026,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-19": {
+          "ways": 1174,
+          "references": 8711,
+          "primitiveEdges": 7537,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        },
+        "origin-20": {
+          "ways": 827,
+          "references": 8320,
+          "primitiveEdges": 7493,
+          "verificationPairs": 2,
+          "reachablePairs": 2,
+          "unreachablePairs": 0
+        }
+      },
+      "routingDecodedBytes": 2380348,
+      "routingGzipBytes": 1729690,
+      "geometryDecodedBytes": 2287696,
+      "geometryGzipBytes": 1519620,
+      "queries": [
+        {
+          "windowId": "origin-00",
+          "sourceNodeIds": [
+            37815620,
+            2564179411
+          ],
+          "rawMeters": 2642.996179865116,
+          "contractedMeters": 2642.996179865116,
+          "rawSettled": 301,
+          "contractedSettled": 55,
+          "rawSearchSeconds": 0.0003326660953462124,
+          "contractedSearchSeconds": 4.054210148751736e-05
+        },
+        {
+          "windowId": "origin-00",
+          "sourceNodeIds": [
+            3486775582,
+            37802504
+          ],
+          "rawMeters": 8568.483775719513,
+          "contractedMeters": 8568.483775719498,
+          "rawSettled": 1872,
+          "contractedSettled": 616,
+          "rawSearchSeconds": 0.0010484590893611312,
+          "contractedSearchSeconds": 0.0003119999310001731
+        },
+        {
+          "windowId": "origin-01",
+          "sourceNodeIds": [
+            12908627257,
+            6258304203
+          ],
+          "rawMeters": 1008.0874032461122,
+          "contractedMeters": 1008.0874032461122,
+          "rawSettled": 601,
+          "contractedSettled": 345,
+          "rawSearchSeconds": 0.0005032080225646496,
+          "contractedSearchSeconds": 0.00018587498925626278
+        },
+        {
+          "windowId": "origin-01",
+          "sourceNodeIds": [
+            13323523067,
+            12973052923
+          ],
+          "rawMeters": 5408.205226237751,
+          "contractedMeters": 5408.20522623775,
+          "rawSettled": 5876,
+          "contractedSettled": 2227,
+          "rawSearchSeconds": 0.003173584002070129,
+          "contractedSearchSeconds": 0.001177875092253089
+        },
+        {
+          "windowId": "origin-02",
+          "sourceNodeIds": [
+            13529771908,
+            13081301616
+          ],
+          "rawMeters": 7384.942315479915,
+          "contractedMeters": 7384.942315479914,
+          "rawSettled": 5854,
+          "contractedSettled": 2583,
+          "rawSearchSeconds": 0.0032927499851211905,
+          "contractedSearchSeconds": 0.0014355829916894436
+        },
+        {
+          "windowId": "origin-02",
+          "sourceNodeIds": [
+            847371175,
+            95440346
+          ],
+          "rawMeters": 4348.418947566576,
+          "contractedMeters": 4348.418947566578,
+          "rawSettled": 1222,
+          "contractedSettled": 398,
+          "rawSearchSeconds": 0.0008112919749692082,
+          "contractedSearchSeconds": 0.00021670805290341377
+        },
+        {
+          "windowId": "origin-03",
+          "sourceNodeIds": [
+            13655123676,
+            13964478901
+          ],
+          "rawMeters": 5208.900496631155,
+          "contractedMeters": 5208.900496631154,
+          "rawSettled": 6553,
+          "contractedSettled": 2504,
+          "rawSearchSeconds": 0.0038570419419556856,
+          "contractedSearchSeconds": 0.0014446249697357416
+        },
+        {
+          "windowId": "origin-03",
+          "sourceNodeIds": [
+            88702949,
+            13621979770
+          ],
+          "rawMeters": 6954.347138248804,
+          "contractedMeters": 6954.347138248801,
+          "rawSettled": 7678,
+          "contractedSettled": 2913,
+          "rawSearchSeconds": 0.004240249982103705,
+          "contractedSearchSeconds": 0.0016369170043617487
+        },
+        {
+          "windowId": "origin-04",
+          "sourceNodeIds": [
+            67619050,
+            123442619
+          ],
+          "rawMeters": 5672.590180176879,
+          "contractedMeters": 5672.590180176879,
+          "rawSettled": 16653,
+          "contractedSettled": 9778,
+          "rawSearchSeconds": 0.009693874977529049,
+          "contractedSearchSeconds": 0.0055614999728277326
+        },
+        {
+          "windowId": "origin-04",
+          "sourceNodeIds": [
+            4031314059,
+            4060016286
+          ],
+          "rawMeters": 9066.683272557937,
+          "contractedMeters": 9066.68327255794,
+          "rawSettled": 22340,
+          "contractedSettled": 12668,
+          "rawSearchSeconds": 0.012308250064961612,
+          "contractedSearchSeconds": 0.006910040974617004
+        },
+        {
+          "windowId": "origin-05",
+          "sourceNodeIds": [
+            4020629241,
+            10647923180
+          ],
+          "rawMeters": 4022.576350788416,
+          "contractedMeters": 4022.576350788416,
+          "rawSettled": 3329,
+          "contractedSettled": 1496,
+          "rawSearchSeconds": 0.0020496250363066792,
+          "contractedSearchSeconds": 0.0008416670607402921
+        },
+        {
+          "windowId": "origin-05",
+          "sourceNodeIds": [
+            8520993671,
+            122827648
+          ],
+          "rawMeters": 5222.760390417875,
+          "contractedMeters": 5222.760390417876,
+          "rawSettled": 5213,
+          "contractedSettled": 2229,
+          "rawSearchSeconds": 0.002928833942860365,
+          "contractedSearchSeconds": 0.0012430420611053705
+        },
+        {
+          "windowId": "origin-06",
+          "sourceNodeIds": [
+            278084564,
+            9485242674
+          ],
+          "rawMeters": 1204.1284811758014,
+          "contractedMeters": 1204.1284811758014,
+          "rawSettled": 2167,
+          "contractedSettled": 1461,
+          "rawSearchSeconds": 0.001686665927991271,
+          "contractedSearchSeconds": 0.0008894170168787241
+        },
+        {
+          "windowId": "origin-06",
+          "sourceNodeIds": [
+            1734859920,
+            12388734547
+          ],
+          "rawMeters": 11183.911567131425,
+          "contractedMeters": 11183.911567131427,
+          "rawSettled": 19929,
+          "contractedSettled": 10375,
+          "rawSearchSeconds": 0.011406249948777258,
+          "contractedSearchSeconds": 0.0057908749440684915
+        },
+        {
+          "windowId": "origin-07",
+          "sourceNodeIds": [
+            9522822426,
+            54463532
+          ],
+          "rawMeters": 2354.7317240382417,
+          "contractedMeters": 2354.7317240382417,
+          "rawSettled": 593,
+          "contractedSettled": 89,
+          "rawSearchSeconds": 0.0004999169614166021,
+          "contractedSearchSeconds": 5.512498319149017e-05
+        },
+        {
+          "windowId": "origin-07",
+          "sourceNodeIds": [
+            8459739699,
+            1205525756
+          ],
+          "rawMeters": 9685.272433998614,
+          "contractedMeters": 9685.27243399861,
+          "rawSettled": 1408,
+          "contractedSettled": 219,
+          "rawSearchSeconds": 0.0008148750057443976,
+          "contractedSearchSeconds": 0.00010729103814810514
+        },
+        {
+          "windowId": "origin-08",
+          "sourceNodeIds": [
+            698282083,
+            11339482100
+          ],
+          "rawMeters": 1655.2273126860186,
+          "contractedMeters": 1655.2273126860186,
+          "rawSettled": 143,
+          "contractedSettled": 24,
+          "rawSearchSeconds": 0.00023233296815305948,
+          "contractedSearchSeconds": 2.174999099224806e-05
+        },
+        {
+          "windowId": "origin-08",
+          "sourceNodeIds": [
+            49625258,
+            12424513695
+          ],
+          "rawMeters": 10947.103018564143,
+          "contractedMeters": 10947.103018564132,
+          "rawSettled": 1541,
+          "contractedSettled": 242,
+          "rawSearchSeconds": 0.0008730830159038305,
+          "contractedSearchSeconds": 0.00012500002048909664
+        },
+        {
+          "windowId": "origin-09",
+          "sourceNodeIds": [
+            54654091,
+            54364751
+          ],
+          "rawMeters": 1303.8201135894203,
+          "contractedMeters": 1303.82011358942,
+          "rawSettled": 420,
+          "contractedSettled": 186,
+          "rawSearchSeconds": 0.00040591706056147814,
+          "contractedSearchSeconds": 0.00011229200754314661
+        },
+        {
+          "windowId": "origin-09",
+          "sourceNodeIds": [
+            1015189930,
+            54308420
+          ],
+          "rawMeters": 1820.898181790795,
+          "contractedMeters": 1820.898181790795,
+          "rawSettled": 583,
+          "contractedSettled": 240,
+          "rawSearchSeconds": 0.00046374998055398464,
+          "contractedSearchSeconds": 0.00013195897918194532
+        },
+        {
+          "windowId": "origin-10",
+          "sourceNodeIds": [
+            10158835399,
+            49162077
+          ],
+          "rawMeters": 5306.868965018697,
+          "contractedMeters": 5306.868965018695,
+          "rawSettled": 542,
+          "contractedSettled": 138,
+          "rawSearchSeconds": 0.00045725004747509956,
+          "contractedSearchSeconds": 8.525000885128975e-05
+        },
+        {
+          "windowId": "origin-10",
+          "sourceNodeIds": [
+            10158835401,
+            10158835409
+          ],
+          "rawMeters": 698.2234331007681,
+          "contractedMeters": 698.2234331007681,
+          "rawSettled": 20,
+          "contractedSettled": 7,
+          "rawSearchSeconds": 0.00018420792184770107,
+          "contractedSearchSeconds": 1.3166922144591808e-05
+        },
+        {
+          "windowId": "origin-11",
+          "sourceNodeIds": [
+            10266218541,
+            13233928552
+          ],
+          "rawMeters": 6203.9046117162015,
+          "contractedMeters": 6203.904611716202,
+          "rawSettled": 442,
+          "contractedSettled": 96,
+          "rawSearchSeconds": 0.00040900008752942085,
+          "contractedSearchSeconds": 5.9292069636285305e-05
+        },
+        {
+          "windowId": "origin-11",
+          "sourceNodeIds": [
+            11346977876,
+            11346977870
+          ],
+          "rawMeters": 797.920901538467,
+          "contractedMeters": 797.920901538467,
+          "rawSettled": 28,
+          "contractedSettled": 20,
+          "rawSearchSeconds": 0.0001840420300140977,
+          "contractedSearchSeconds": 1.8125050701200962e-05
+        },
+        {
+          "windowId": "origin-12",
+          "sourceNodeIds": [
+            87732164,
+            1890771264
+          ],
+          "rawMeters": 1884.622443174135,
+          "contractedMeters": 1884.6224431741348,
+          "rawSettled": 95,
+          "contractedSettled": 18,
+          "rawSearchSeconds": 0.00023100001271814108,
+          "contractedSearchSeconds": 2.0249979570508003e-05
+        },
+        {
+          "windowId": "origin-12",
+          "sourceNodeIds": [
+            87732566,
+            1497913449
+          ],
+          "rawMeters": 2104.5977789237872,
+          "contractedMeters": 2104.5977789237872,
+          "rawSettled": 188,
+          "contractedSettled": 59,
+          "rawSearchSeconds": 0.00028062507044523954,
+          "contractedSearchSeconds": 4.337495192885399e-05
+        },
+        {
+          "windowId": "origin-13",
+          "sourceNodeIds": [
+            87704747,
+            87745562
+          ],
+          "rawMeters": 9229.270344380588,
+          "contractedMeters": 9229.270344380588,
+          "rawSettled": 103,
+          "contractedSettled": 46,
+          "rawSearchSeconds": 0.0002292500576004386,
+          "contractedSearchSeconds": 2.9292074032127857e-05
+        },
+        {
+          "windowId": "origin-14",
+          "sourceNodeIds": [
+            2833013316,
+            10682894231
+          ],
+          "rawMeters": 894.0491122655255,
+          "contractedMeters": 894.0491122655255,
+          "rawSettled": 545,
+          "contractedSettled": 311,
+          "rawSearchSeconds": 0.0004601249238476157,
+          "contractedSearchSeconds": 0.00017404207028448582
+        },
+        {
+          "windowId": "origin-14",
+          "sourceNodeIds": [
+            44894439,
+            3497342105
+          ],
+          "rawMeters": 4167.761786475694,
+          "contractedMeters": 4167.761786475694,
+          "rawSettled": 3520,
+          "contractedSettled": 1639,
+          "rawSearchSeconds": 0.002040749997831881,
+          "contractedSearchSeconds": 0.0008802500087767839
+        },
+        {
+          "windowId": "origin-15",
+          "sourceNodeIds": [
+            11134234347,
+            9886240959
+          ],
+          "rawMeters": 5022.0360726034405,
+          "contractedMeters": 5022.036072603439,
+          "rawSettled": 1488,
+          "contractedSettled": 408,
+          "rawSearchSeconds": 0.0009814579971134663,
+          "contractedSearchSeconds": 0.00022454105783253908
+        },
+        {
+          "windowId": "origin-15",
+          "sourceNodeIds": [
+            11226350332,
+            11111055510
+          ],
+          "rawMeters": 3793.120700404252,
+          "contractedMeters": 3793.1207004042517,
+          "rawSettled": 1202,
+          "contractedSettled": 331,
+          "rawSearchSeconds": 0.0007706660544499755,
+          "contractedSearchSeconds": 0.000177707988768816
+        },
+        {
+          "windowId": "origin-16",
+          "sourceNodeIds": [
+            1583449202,
+            9140759118
+          ],
+          "rawMeters": 8540.785844084998,
+          "contractedMeters": 8540.785844084994,
+          "rawSettled": 5079,
+          "contractedSettled": 1551,
+          "rawSearchSeconds": 0.002898207982070744,
+          "contractedSearchSeconds": 0.0008913329802453518
+        },
+        {
+          "windowId": "origin-16",
+          "sourceNodeIds": [
+            3666852349,
+            708938749
+          ],
+          "rawMeters": 8068.816212411684,
+          "contractedMeters": 8068.816212411683,
+          "rawSettled": 4828,
+          "contractedSettled": 1474,
+          "rawSearchSeconds": 0.0026218330021947622,
+          "contractedSearchSeconds": 0.0008022090187296271
+        },
+        {
+          "windowId": "origin-17",
+          "sourceNodeIds": [
+            230044564,
+            13471678203
+          ],
+          "rawMeters": 6314.7161550321325,
+          "contractedMeters": 6314.716155032134,
+          "rawSettled": 12522,
+          "contractedSettled": 6086,
+          "rawSearchSeconds": 0.007422583061270416,
+          "contractedSearchSeconds": 0.003531915950588882
+        },
+        {
+          "windowId": "origin-17",
+          "sourceNodeIds": [
+            13387406710,
+            12378160396
+          ],
+          "rawMeters": 6127.54436574198,
+          "contractedMeters": 6127.54436574198,
+          "rawSettled": 11175,
+          "contractedSettled": 5245,
+          "rawSearchSeconds": 0.0063021250534802675,
+          "contractedSearchSeconds": 0.0029334999853745103
+        },
+        {
+          "windowId": "origin-18",
+          "sourceNodeIds": [
+            169675002,
+            4892607416
+          ],
+          "rawMeters": 3769.123429701659,
+          "contractedMeters": 3769.1234297016586,
+          "rawSettled": 2953,
+          "contractedSettled": 842,
+          "rawSearchSeconds": 0.0017852919409051538,
+          "contractedSearchSeconds": 0.000480332993902266
+        },
+        {
+          "windowId": "origin-18",
+          "sourceNodeIds": [
+            449425614,
+            169623065
+          ],
+          "rawMeters": 6862.360821457066,
+          "contractedMeters": 6862.360821457065,
+          "rawSettled": 5814,
+          "contractedSettled": 1455,
+          "rawSearchSeconds": 0.0033039579866454005,
+          "contractedSearchSeconds": 0.00082633295096457
+        },
+        {
+          "windowId": "origin-19",
+          "sourceNodeIds": [
+            67015149,
+            4028989372
+          ],
+          "rawMeters": 6408.479219481955,
+          "contractedMeters": 6408.479219481954,
+          "rawSettled": 4169,
+          "contractedSettled": 1599,
+          "rawSearchSeconds": 0.0025604170514270663,
+          "contractedSearchSeconds": 0.0009465839248150587
+        },
+        {
+          "windowId": "origin-19",
+          "sourceNodeIds": [
+            67033093,
+            12557855712
+          ],
+          "rawMeters": 3653.9883840118478,
+          "contractedMeters": 3653.988384011848,
+          "rawSettled": 3355,
+          "contractedSettled": 1348,
+          "rawSearchSeconds": 0.0020163749577477574,
+          "contractedSearchSeconds": 0.0007969590369611979
+        },
+        {
+          "windowId": "origin-20",
+          "sourceNodeIds": [
+            10879628140,
+            5369244126
+          ],
+          "rawMeters": 4117.985673502977,
+          "contractedMeters": 4117.985673502977,
+          "rawSettled": 3644,
+          "contractedSettled": 1312,
+          "rawSearchSeconds": 0.0022242499981075525,
+          "contractedSearchSeconds": 0.0007641250267624855
+        },
+        {
+          "windowId": "origin-20",
+          "sourceNodeIds": [
+            13687165283,
+            10951682635
+          ],
+          "rawMeters": 1294.3520527636945,
+          "contractedMeters": 1294.352052763695,
+          "rawSettled": 975,
+          "contractedSettled": 463,
+          "rawSearchSeconds": 0.0006819999543949962,
+          "contractedSearchSeconds": 0.0002669160021468997
+        }
+      ],
+      "verificationSettles": 242059,
+      "distanceMeters": 4880341.8314925125,
+      "undirectedGeometryOnly": true,
+      "carPermissionReviewed": false,
+      "etaModelQualified": false,
+      "nationalFootprintQualified": false,
+      "vercelPackageQualified": false,
+      "modelChanged": false
+    }
+  ],
+  "undirectedGeometryOnly": true,
+  "carPermissionReviewed": false,
+  "etaModelQualified": false,
+  "nationalFootprintQualified": false,
+  "vercelPackageQualified": false,
+  "modelChanged": false,
+  "scope": "All captured native highway geometry and fixed major-road subset; conservative within-way contraction with exact geometry/length/native-ID/metadata boundaries. Degree is within acquired capture, not globalOSM. No car direction/access/turn permission or timing cost. Sampled length-search validation is not ETA accuracy, national reachability, first app estimate or Vercel package proof."
+}

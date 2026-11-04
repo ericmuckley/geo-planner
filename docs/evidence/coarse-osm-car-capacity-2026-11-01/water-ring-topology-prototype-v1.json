@@ -1,0 +1,20 @@
+{
+  "id": "water-native-id-degree-two-chain-prototype-v1",
+  "date": "2026-11-03",
+  "scope": "Synthetic endpoint graph prototype only; no real way/coordinate/source read, area assembler, polygon eligibility or mask change.",
+  "behavior": "Joins way chains only by identical native endpoint IDs with degree2, preserving member direction and disconnected cycles. Reports degree1/branch/touch/short-closed/duplicate cases, never invents a coordinate/name join. Closed chains are not polygon validity; geometry, distinct vertices, self-intersections, orientation, containment and roles remain mandatory.",
+  "bindings": {
+    "scripts/coarse_osm_water_ring_topology_v1.py": "dcfd2bed428b88f9219f34254042c65173082b86431fc97f566412e1843c4ce3",
+    "scripts/coarse_osm_water_ring_topology_v1_test.py": "23489d4c7b320c6ff00e811a98af72e42954606d0979c599dbc15664a846c651",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182"
+  },
+  "qualification": {
+    "environment": "Host Python only",
+    "tests": 7,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "nationalOrPolygonAdmission": false
+}

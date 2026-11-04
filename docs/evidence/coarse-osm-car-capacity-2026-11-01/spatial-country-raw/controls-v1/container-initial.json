@@ -1,0 +1,1018 @@
+{
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,size=256m"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": 64,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "fsize",
+        "Hard": 67108864,
+        "Soft": 67108864
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/offline_timing_runner.py",
+        "Target": "/code/offline_timing_runner.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial_country_driver_v1.py",
+        "Target": "/code/spatial_country_driver_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_python_bindings_v1.py",
+        "Target": "/code/coarse_osm_python_bindings_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_fragments.py",
+        "Target": "/code/coarse_timing_fragments.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+        "Target": "/code/coarse_osm_records.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/maneuver_graph.py",
+        "Target": "/reference/maneuver_graph.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_spatial_audit_v1_test.py",
+        "Target": "/code/coarse_osm_car_spatial_audit_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_input_v3.py",
+        "Target": "/code/prepare_osm_input_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_cache_audit.py",
+        "Target": "/code/coarse_timing_cache_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_spatial_native_v1.py",
+        "Target": "/code/coarse_osm_car_spatial_native_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_validation_v4.py",
+        "Target": "/code/coarse_osm_validation_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/analyze_timing_cache.py",
+        "Target": "/code/analyze_timing_cache.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_codec.py",
+        "Target": "/code/coarse_backbone_codec.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data_v3.py",
+        "Target": "/code/coarse_osm_data_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_packed_audit_v1.py",
+        "Target": "/code/coarse_osm_car_packed_audit_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_car_spatial_country_v1.py",
+        "Target": "/code/close_osm_car_spatial_country_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/analyze_timing_compatibility.py",
+        "Target": "/code/analyze_timing_compatibility.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_parquet.py",
+        "Target": "/code/coarse_timing_parquet.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_audit.py",
+        "Target": "/code/coarse_osm_bulk_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_audit.py",
+        "Target": "/code/coarse_osm_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_capture.py",
+        "Target": "/code/run_osm_capture.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/anchors.py",
+        "Target": "/reference/anchors.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_chains_audit.py",
+        "Target": "/code/coarse_timing_chains_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_paths.py",
+        "Target": "/code/coarse_backbone_paths.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_match_v1.py",
+        "Target": "/code/coarse_osm_match_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_v1.py",
+        "Target": "/code/coarse_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_spatial_audit_v1.py",
+        "Target": "/code/coarse_osm_car_spatial_audit_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/import_maneuvers.py",
+        "Target": "/reference/import_maneuvers.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_backbone_v1.py",
+        "Target": "/code/coarse_osm_backbone_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_native_lock_v1.py",
+        "Target": "/code/prepare_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+        "Target": "/code/coarse_osm_bulk.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_compact_v1.py",
+        "Target": "/code/coarse_osm_compact_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_policy_v1.py",
+        "Target": "/code/coarse_osm_car_policy_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_stream_v1.py",
+        "Target": "/code/run_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_smoke.py",
+        "Target": "/code/coarse_osm_native_smoke.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_spatial_controller_v1_test.py",
+        "Target": "/code/coarse_osm_car_spatial_controller_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v1.py",
+        "Target": "/code/coarse_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile.py",
+        "Target": "/code/coarse_osm_profile.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_timing_cache.py",
+        "Target": "/code/run_timing_cache.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_spatial_reference_v1.py",
+        "Target": "/code/coarse_osm_car_spatial_reference_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/import_roads.py",
+        "Target": "/reference/import_roads.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_monitor_v1.py",
+        "Target": "/code/coarse_osm_full_monitor_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_packed_capture_v1.py",
+        "Target": "/code/coarse_osm_packed_capture_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/barrier_policy.py",
+        "Target": "/reference/barrier_policy.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_transport.py",
+        "Target": "/code/coarse_osm_bulk_transport.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_path_features.py",
+        "Target": "/code/coarse_path_features.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+        "Target": "/code/coarse_osm_bulk_pbf.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/state_graph.py",
+        "Target": "/reference/state_graph.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_fragments_audit.py",
+        "Target": "/code/coarse_timing_fragments_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+        "Target": "/code/coarse_timing_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_chains.py",
+        "Target": "/code/coarse_timing_chains.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_stream_v1.py",
+        "Target": "/code/profile_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data.py",
+        "Target": "/code/coarse_osm_data.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_attributes_v1.py",
+        "Target": "/code/coarse_osm_attributes_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_input.py",
+        "Target": "/code/coarse_osm_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_compatibility_audit.py",
+        "Target": "/code/coarse_timing_compatibility_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_attribute_inventory_v1.py",
+        "Target": "/code/coarse_osm_attribute_inventory_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1",
+        "Target": "/runtime/libexpat.so.1",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-arcs.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-arcs.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-ticks.u32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-ticks.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/costs.u16",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/costs.u16",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/forbidden-turns.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/forbidden-turns.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/node-flags.u8",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/node-flags.u8",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/offsets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/offsets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-arcs.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-arcs.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-targets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-targets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse.u8",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse.u8",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/targets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/targets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-packed-capture-v1/routing/xy.i32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/xy.i32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-keys.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-keys.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-offsets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-offsets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-arcs.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-arcs.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-ticks.u32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-ticks.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/costs.u16",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/costs.u16",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/forbidden-turns.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/forbidden-turns.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/new-vertex-to-old.u32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/new-vertex-to-old.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/node-flags.u8",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/node-flags.u8",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/offsets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/offsets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/old-arc-to-new.u32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/old-arc-to-new.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-arcs.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-arcs.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-targets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-targets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse.u8",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse.u8",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/targets.u24",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/targets.u24",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/xy.i32",
+        "Target": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/xy.i32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-independent-plan-v1.json",
+        "Target": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-independent-plan-v1.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-native-closed-controls-v2.json",
+        "Target": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-native-closed-controls-v2.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-search-runtime-v1.json",
+        "Target": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-search-runtime-v1.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/packed-country-closed-audit-v1.json",
+        "Target": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/packed-country-closed-audit-v1.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-spatial-country-controls-v1",
+        "Target": "/work"
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-plan-controls-v1.json",
+        "Target": "/inputs/recipe.json",
+        "ReadOnly": true
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "Mounts": [
+    {
+      "Destination": "/code/close_osm_car_spatial_country_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_compact_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_spatial_reference_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_attribute_inventory_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/costs.u16",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/targets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_cache_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_chains_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_smoke.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_timing_cache.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-arcs.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-independent-plan-v1.json",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-native-closed-controls-v2.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_python_bindings_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/maneuver_graph.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/anchors.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/offsets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/packed-country-closed-audit-v1.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_input_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_policy_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_transport.py",
+      "RW": false
+    },
+    {
+      "Destination": "/work",
+      "RW": true
+    },
+    {
+      "Destination": "/code/coarse_osm_match_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/node-flags.u8",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/xy.i32",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-keys.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-search-runtime-v1.json",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/recipe.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_records.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_spatial_native_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_parquet.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/prepare_osm_native_lock_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_native_lock_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/cost-overflow-ticks.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/targets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-arcs.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_data_v3.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_capture.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_full_monitor_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse.u8",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_codec.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_fragments_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/runtime/libexpat.so.1",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-arcs.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/reverse-overflow-targets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_fragments.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_spatial_audit_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/xy.i32",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_spatial_audit_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_backbone_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_spatial_controller_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/barrier_policy.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/state_graph.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_chains.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_data.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/offline_timing_runner.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_path_features.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/offsets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/costs.u16",
+      "RW": false
+    },
+    {
+      "Destination": "/code/analyze_timing_compatibility.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/import_maneuvers.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_packed_capture_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/spatial_country_driver_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/import_roads.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-targets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/code/profile_osm_stream_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_validation_v4.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_packed_audit_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_paths.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_attributes_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/forbidden-turns.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/new-vertex-to-old.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/node-flags.u8",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse.u8",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_profile.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_pbf.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_compatibility_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-packed-capture-v1/routing/forbidden-turns.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cell-offsets.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/cost-overflow-ticks.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/old-arc-to-new.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/repo/data/coarse-quality/us-osm-car-spatial-equivalence-v2/routing/reverse-overflow-arcs.u24",
+      "RW": false
+    },
+    {
+      "Destination": "/code/analyze_timing_cache.py",
+      "RW": false
+    }
+  ]
+}

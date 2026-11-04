@@ -1,0 +1,30 @@
+{
+  "id": "saved-water-typed-geometry-catalog-v1",
+  "date": "2026-11-03",
+  "scope": "Synthetic helper build/controls only, before a separately qualified complete saved-data coordinate/way/chain pipeline. No source PBF or real coordinate/way/relation data mounted.",
+  "parentProof": "verify_water_area_controls_v1.py",
+  "parentProofSha256": "900d1d0596e51e5fa932f933669676b2dc579506084105b777a17890694b52b6",
+  "code": {
+    "scripts/coarse_osm_water_catalog_v1.cpp": "9c2bb1be32a0da13a230398ee8794f995171db84b48b0ab5b78805f6e359b100",
+    "scripts/coarse_osm_water_catalog_v1.py": "863e6021a939e404a759e73fd87025d6561f6a817c2fc0dcad5c8765a2919e8c",
+    "scripts/coarse_osm_water_catalog_v1_test.py": "a4e97b55cf019c193a2320e53c71de96f803bf010134877a2f9ee1a24365dab4",
+    "scripts/run_osm_water_catalog_v1.py": "c9554da158902f42098cc5fba58dacd3a4b17743c347c66254266c2d27ac95e0",
+    "scripts/close_osm_water_catalog_v1.py": "901217ab7517e0d210f534f8f222778aa6a191138b472a09bbc0adbf0e706fd7"
+  },
+  "frozenAreaCodeSha256": "517cb738e285c84eb8632ad7e393470b38245af8c23c07a6a5edb3d110fa92b6",
+  "plannedCountryCounts": {
+    "nodes": 101738006,
+    "ways": 2829193,
+    "references": 104806243
+  },
+  "exactPlannedTableBackingBytes": 2514354329,
+  "coordinatePhaseBackingBytesBeforeOldDecoderRelease": 2441712144,
+  "requiredLifetime": "Release old independent coordinate decoder/ID vector before any way-array reservation. No national Python node dictionary, raw coordinate temporary file or source scan.",
+  "safety": "Failed input/callback poisons catalog until release; fixed original population caps. Output coordinate/source-way shadow SHA must equal independently decoded source before any geometry. Missing ways/nodes/chain discontinuity not guessed.",
+  "countryProducerQualified": false,
+  "sourceGeometryOrMaskChanged": false,
+  "retainedBytes": 77309411328,
+  "previousClosedAllocationBytes": 4298035200,
+  "previousClosedRoots": 138,
+  "hostMetadataReserveBytes": 104857600
+}

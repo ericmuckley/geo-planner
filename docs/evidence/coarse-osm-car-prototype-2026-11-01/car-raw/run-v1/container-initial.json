@@ -1,0 +1,738 @@
+{
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,size=64m"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 2147483648,
+    "NanoCpus": 1000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 2147483648,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": 32,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "fsize",
+        "Hard": 134217728,
+        "Soft": 134217728
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_policy_v1.py",
+        "Target": "/code/coarse_osm_car_policy_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_codec_v1.py",
+        "Target": "/code/coarse_osm_car_codec_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_graph_v1.py",
+        "Target": "/code/coarse_osm_car_graph_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_payload_v1.py",
+        "Target": "/code/coarse_osm_car_payload_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_car_v1_test.py",
+        "Target": "/code/coarse_osm_car_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_car_v1.py",
+        "Target": "/code/run_osm_car_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+        "Target": "/code/coarse_osm_bulk_pbf.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_lineage_v1.py",
+        "Target": "/code/run_osm_lineage_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lineage_v1.py",
+        "Target": "/code/coarse_osm_lineage_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lineage_v1_test.py",
+        "Target": "/code/coarse_osm_lineage_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_backbone_v1.py",
+        "Target": "/code/coarse_osm_backbone_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_backbone_v1_test.py",
+        "Target": "/code/coarse_osm_backbone_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_match_v1.py",
+        "Target": "/code/coarse_osm_match_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_match_v1_test.py",
+        "Target": "/code/coarse_osm_match_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_attribute_inventory_v1.py",
+        "Target": "/code/coarse_osm_attribute_inventory_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_attributes_v1.py",
+        "Target": "/code/coarse_osm_attributes_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+        "Target": "/code/coarse_osm_records.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_path_features.py",
+        "Target": "/code/coarse_path_features.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_chains.py",
+        "Target": "/code/coarse_timing_chains.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_fragments.py",
+        "Target": "/code/coarse_timing_fragments.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_fragments_audit.py",
+        "Target": "/code/coarse_timing_fragments_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_compatibility_audit.py",
+        "Target": "/code/coarse_timing_compatibility_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/analyze_timing_cache.py",
+        "Target": "/code/analyze_timing_cache.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/analyze_timing_compatibility.py",
+        "Target": "/code/analyze_timing_compatibility.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+        "Target": "/code/coarse_timing_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_parquet.py",
+        "Target": "/code/coarse_timing_parquet.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_paths.py",
+        "Target": "/code/coarse_backbone_paths.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_codec.py",
+        "Target": "/code/coarse_backbone_codec.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/import_roads.py",
+        "Target": "/reference/import_roads.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/barrier_policy.py",
+        "Target": "/reference/barrier_policy.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/import_maneuvers.py",
+        "Target": "/reference/import_maneuvers.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/maneuver_graph.py",
+        "Target": "/reference/maneuver_graph.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/state_graph.py",
+        "Target": "/reference/state_graph.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/anchors.py",
+        "Target": "/reference/anchors.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/routing/coverage_census.py",
+        "Target": "/reference/coverage_census.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1",
+        "Target": "/runtime/libexpat.so.1",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-disk-capture-run-v1/extract/elements.jsonl",
+        "Target": "/inputs/captured.jsonl",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/report.json",
+        "Target": "/inputs/lineage/report.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/artifacts.json",
+        "Target": "/inputs/lineage/artifacts.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/xy.i32",
+        "Target": "/inputs/lineage/routing/xy.i32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/offsets.u32",
+        "Target": "/inputs/lineage/routing/offsets.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/targets.u32",
+        "Target": "/inputs/lineage/routing/targets.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/meters.f64",
+        "Target": "/inputs/lineage/routing/meters.f64",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/xy.i32",
+        "Target": "/inputs/lineage/geometry/xy.i32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/offsets.u32",
+        "Target": "/inputs/lineage/geometry/offsets.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/nodes.u32",
+        "Target": "/inputs/lineage/geometry/nodes.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/edges.bin",
+        "Target": "/inputs/lineage/provenance/edges.bin",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/vertices.u32",
+        "Target": "/inputs/lineage/provenance/vertices.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/selected-nodes.u32",
+        "Target": "/inputs/lineage/provenance/selected-nodes.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/geometry-source-nodes.u32",
+        "Target": "/inputs/lineage/provenance/geometry-source-nodes.u32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/alias-edge.i32",
+        "Target": "/inputs/lineage/provenance/alias-edge.i32",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/alias-prefix.f64",
+        "Target": "/inputs/lineage/provenance/alias-prefix.f64",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/provenance/alias-suffix.f64",
+        "Target": "/inputs/lineage/provenance/alias-suffix.f64",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/xy.i32.gz",
+        "Target": "/inputs/lineage/routing/xy.i32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/offsets.u32.gz",
+        "Target": "/inputs/lineage/routing/offsets.u32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/targets.u32.gz",
+        "Target": "/inputs/lineage/routing/targets.u32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/routing/meters.f64.gz",
+        "Target": "/inputs/lineage/routing/meters.f64.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/xy.i32.gz",
+        "Target": "/inputs/lineage/geometry/xy.i32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/offsets.u32.gz",
+        "Target": "/inputs/lineage/geometry/offsets.u32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-lineage-run-v1/geometry/nodes.u32.gz",
+        "Target": "/inputs/lineage/geometry/nodes.u32.gz",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-car-run-v1",
+        "Target": "/work"
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-prototype-2026-11-01/plan-run-v1.json",
+        "Target": "/inputs/recipe.json",
+        "ReadOnly": true
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "Mounts": [
+    {
+      "Destination": "/inputs/lineage/provenance/alias-prefix.f64",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_match_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_chains.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/targets.u32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_lineage_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/maneuver_graph.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/nodes.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/edges.bin",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_payload_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/targets.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/meters.f64.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_fragments.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/captured.jsonl",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/geometry-source-nodes.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/offsets.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/vertices.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/offsets.u32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/xy.i32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_lineage_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_backbone_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/analyze_timing_cache.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/xy.i32",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_codec_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_attribute_inventory_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/recipe.json",
+      "RW": false
+    },
+    {
+      "Destination": "/code/run_osm_car_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_match_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_paths.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/artifacts.json",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/alias-edge.i32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/alias-suffix.f64",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_records.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_v1_test.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_bulk_pbf.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_parquet.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/xy.i32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/offsets.u32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_lineage_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_attributes_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_compatibility_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_backbone_codec.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/barrier_policy.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_backbone_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/import_roads.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/import_maneuvers.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/state_graph.py",
+      "RW": false
+    },
+    {
+      "Destination": "/runtime/libexpat.so.1",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/provenance/selected-nodes.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/work",
+      "RW": true
+    },
+    {
+      "Destination": "/inputs/lineage/report.json",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/offsets.u32",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/nodes.u32.gz",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_fragments_audit.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/coverage_census.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/routing/meters.f64",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_policy_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_osm_car_graph_v1.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_path_features.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/analyze_timing_compatibility.py",
+      "RW": false
+    },
+    {
+      "Destination": "/code/coarse_timing_input.py",
+      "RW": false
+    },
+    {
+      "Destination": "/reference/anchors.py",
+      "RW": false
+    },
+    {
+      "Destination": "/inputs/lineage/geometry/xy.i32",
+      "RW": false
+    }
+  ]
+}

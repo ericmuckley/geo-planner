@@ -1,0 +1,126 @@
+{
+  "origin": [
+    -116.5453,
+    33.8303
+  ],
+  "diagnostic": {
+    "timings": {
+      "palm-springs--idyllwild": {
+        "ticks": 25146,
+        "kind": "local-grid",
+        "roadTicks": 36698,
+        "localGridTicks": 25146,
+        "localWitness": {
+          "terminalTicks": 634,
+          "edgeSeconds": 3029,
+          "seedSeconds": 35,
+          "seedCell": 695126,
+          "seedKind": 9,
+          "steps": 15
+        }
+      },
+      "palm-springs--big-bear-lake": {
+        "ticks": 48726,
+        "kind": "road-foot",
+        "roadTicks": 48726,
+        "localGridTicks": 49920,
+        "localWitness": {
+          "terminalTicks": 616,
+          "edgeSeconds": 0,
+          "seedSeconds": 6163,
+          "seedCell": 766519,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -125002860,
+      "south": 29749284,
+      "step": 11639,
+      "width": 1984,
+      "height": 1260
+    },
+    "stats": {
+      "envelopeMs": 494.7413749999978,
+      "maskMs": 613.0250839999935,
+      "seedMs": 1408.0955000000104,
+      "fillMs": 211.9900409999973,
+      "contourMs": 22.669584000002942,
+      "displayMs": 2750.675415999998,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2647889,
+      "activeSpans": 1062237,
+      "settles": 1228812,
+      "maximumHeapEntries": 150259,
+      "selectedCells": 1229774,
+      "localCells": 1228812,
+      "roadOnlyCells": 962,
+      "edges": 19718,
+      "rings": 120,
+      "vertices": 11768,
+      "jsonBytes": 280242,
+      "retries": []
+    },
+    "phaseMs": 2967.7677919999987,
+    "output": {
+      "filename": "origin-13-900.geojson",
+      "bytes": 280242,
+      "sha256": "c14356424db5117d4690d8b48b504536e734581dc3c381ffaee58b8958845415"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "palm-springs--idyllwild": true,
+        "palm-springs--big-bear-lake": true
+      },
+      "frame": {
+        "west": -124419163,
+        "south": 30424529,
+        "step": 9481,
+        "width": 1982,
+        "height": 1261
+      },
+      "stats": {
+        "envelopeMs": 452.274207999988,
+        "maskMs": 612.2307080000028,
+        "seedMs": 1231.3432919999905,
+        "fillMs": 200.44737500000338,
+        "contourMs": 19.931958000001032,
+        "displayMs": 2516.3317499999976,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 2273493,
+        "activeSpans": 914764,
+        "settles": 1180622,
+        "maximumHeapEntries": 130517,
+        "selectedCells": 1181319,
+        "localCells": 1180622,
+        "roadOnlyCells": 697,
+        "edges": 16214,
+        "rings": 56,
+        "vertices": 9728,
+        "jsonBytes": 231439,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-13-720.geojson",
+        "bytes": 231439,
+        "sha256": "904a2ae8ece6ea4d8aef895913720ff8ea74cf4d1adb7483547ee6b7b21130ee"
+      },
+      "reusedFromV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-13.json"
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 427032576,
+    "heapTotal": 82935808,
+    "heapUsed": 14034952,
+    "external": 143928313,
+    "arrayBuffers": 141389547
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-13.json"
+}

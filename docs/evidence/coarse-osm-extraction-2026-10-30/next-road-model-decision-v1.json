@@ -1,0 +1,38 @@
+{
+  "status": "proposed;awaiting user architecture choice",
+  "date": "2026-10-31",
+  "currentProduction": "coarse-road-grid-v9 unchanged",
+  "measuredBasis": {
+    "rawNumericCensusOverlapFraction": 0.807509395368961,
+    "firstNativeSinglePathNumericFraction": 0.027393255571979684,
+    "continuousSinglePathNumericFraction": 0.12667130807116667,
+    "savedUnbranchedCorridorNumericSupportedFraction": 0.21649506656924633,
+    "originalCensusKm": 2078.237959868213,
+    "originalArcWindowRecords": 2469,
+    "originalWeightedSamples": 85629,
+    "windows": 21,
+    "originalUsableLimitFeasibilityTarget": 0.5,
+    "usableLimitOrMatchingQualified": false
+  },
+  "recommendedOption": "Bounded direct-OSM road-backbone prototype",
+  "reason": "The source has substantial geometric/speed information, but cross-dataset road matching remains a large unresolved research step. Using native OSM geometry/node identities directly could remove that dependency; this is an architecture hypothesis, not proven accuracy, national footprint or deployability.",
+  "recommendedFirstScope": {
+    "input": "Only existing complete captured JSONL for all original21validation areas and qualified cached tools. No new PBF pass/download/provider/DB access or selected-route exceptions.",
+    "implementation": "Build native node-ID road graph and a compact degree-two contraction prototype with raw-way/node/metadata lineage and explicit boundary/unknown access/direction/structure/restriction context. Preserve junctions and every relevant metadata/barrier/restriction boundary; do not invent coordinate joins.",
+    "semantics": "First measure topology/geometry/footprint, with separate explicit coarse car-cost/direction/access policy freeze before ETA evaluation. Missing/scoped speed limits stay visible; any later generic class fallback is a declared estimate, not inferred legal permission.",
+    "bounds": "Keep overall4GiBzero swap/four-hour/64GiBretained work, reserve all prior closed allocations; propose<=256MiBnew owned/64MiBtmp for this small prototype and freeze exact caps/controller before execution.",
+    "acceptance": [
+      "Synthetic and independent raw-versus-contracted native-ID reachability/geometry/length invariants, source/raw seals and every original-area denominator reconcile.",
+      "Measure actual prototype raw/packed/decoded bytes and operations; do not extrapolate21areas as nationwide proof.",
+      "If promising, propose a separate bounded nationwide count/footprint/input plan before country graph construction; no national-source replay in the first prototype.",
+      "Keep deployed v9. Any active model still needs independently measured national coverage/physical/source/path checks, original83/35accuracy gates,<=70MBfunction,decoded<=162238546bytes,firstpackagedestimate<=5s,software/API/shared-camera review."
+    ],
+    "vercel": "Preserve existing TanStack Start/React/Vercel app and PostgreSQL history. Aim for compact compiled data with offline preparation; no new live routing service or application DB road query. National package/runtime fit remains to be measured."
+  },
+  "alternativeOption": {
+    "name": "Continue OSM-to-Census enrichment research",
+    "firstScope": "Diagnose all594no-path/701disconnected-corridor/185branch-or-cycle/6capped cases from saved outputs; specify one new generic matching hypothesis with fixed thresholds/weights/independent controls before another experiment. Then native semantic applicability/source adequacy/physical review still precede original50%usable-match gate.",
+    "tradeoff": "Preserves current data architecture but requires further matching work with uncertain payoff; no date or accuracy gain is forecast."
+  },
+  "decisionRequired": "Choosing native graph construction supersedes the current Census-enrichment workstream and its strategy-specific50%matching gate. User guidance is needed before that material change. All old results/failures and application accuracy/physical/package gates remain preserved. No model switch, commit, push, deployment, paid request or resource increase is authorized by this proposal."
+}

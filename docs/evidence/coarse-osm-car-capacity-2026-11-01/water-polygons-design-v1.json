@@ -1,0 +1,41 @@
+{
+  "id": "complete-saved-water-polygon-feasibility-v1",
+  "date": "2026-11-03",
+  "scope": "Synthetic complete pipeline first; only after43 actual Linux controls freeze a country run against saved coordinate/reference/chain assets. No PBF scan/acquisition/provider/DB/mask/routing/app change.",
+  "code": {
+    "scripts/prepare_osm_water_catalog_v1.py": "e894acaa40f075f75a3b21085af9a1e17c6e34ebe6bc7009ac17a790ec6a9556",
+    "scripts/prepare_osm_water_catalog_v1_test.py": "79f60780c083e79d7eb15bf55006e27c2f2829870e31aacc01e7034c23dd0c34",
+    "scripts/assemble_osm_water_polygons_v1.py": "be001ab2cc218cf38b8f1c300135d62971179a943ec2d860dcbfbfec230d2545",
+    "scripts/run_osm_water_polygons_v1.py": "2848902512e9f7c53c8f1c6728a276b82a5ac022442ed3d12bc1f143e320749a",
+    "scripts/close_osm_water_polygons_v1.py": "e2bd11aeac9a7681eb9e0e11495a3a499af2e89ec961811a3f6ed2019de82140"
+  },
+  "priorProof": "verify_water_catalog_controls_v1.py",
+  "priorProofSha256": "ae7f0fc42ac99efba6946fe2e57e5efe83ed5285217e23d48c889cabe22bb8ef",
+  "requiredAudits": [
+    "Decode exact saved WXY1 against every original requested ID and canonical source-shadow SHA",
+    "Emit every retained coordinate for source-shadow SHA; release old decoder IDs before way allocation",
+    "Independently decode every source GPF and compare retained native way ID/water selector/reference canonical shadow",
+    "All tagged ways/root/descendant relations get explicit diagnostics; member ways never treated as independent water polygons",
+    "Use only explicit-role native-ID closed chains; preserve all other statuses without repair or coordinate merge",
+    "Every accepted native output edge/role/ID/coordinate/reference independently replayed in Python; saved geometry/diagnostics fully reopened for structure/count/field/SHA audit"
+  ],
+  "interpretation": "Pinned planar E7 kernel and source-byte preservation, not geographic completeness/geodetic/shoreline accuracy or a replacement mask policy. Full app accuracy remains rejected.",
+  "resources": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "tmpBytes": 268435456,
+    "ownedBytes": 2147483648,
+    "fileBytes": 67108864,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "retainedBytes": 77309411328,
+    "geometryCompressedSoftBytes": 1879048192,
+    "diagnosticCompressedSoftBytes": 134217728
+  },
+  "previousClosedRoots": 140,
+  "previousClosedAllocationBytes": 4303839232,
+  "metadataReserveBytes": 104857600,
+  "countryTableBackingBytes": 2514354329,
+  "frozenPolicy": "Exclude tagged member ways as independent objects, retaining relation holes; no source-role inference/nested-relation flattening/antimeridian repair. Unqualified capacity/source/geometry cases explicit, no region/place/query exceptions."
+}

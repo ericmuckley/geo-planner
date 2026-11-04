@@ -1,0 +1,11 @@
+{
+  "status": "closure_stopped_before_mirroring",
+  "stage": "audit",
+  "errorType": "FileNotFoundError",
+  "error": "Audit-only root has no artifacts.json;V1closer incorrectly required a producer artifact roster.",
+  "closerSha256": "6db342e214a7029b652f4e82c86ed6cfbbb63e95024e0e4b817af3008db74b44",
+  "workerAnalysisSuccessful": true,
+  "producerOrAuditReplayed": false,
+  "partialMirrorCreated": false,
+  "correction": "V2treats only the audit stage as having no binary producer roster; source analysis/artifacts/metrics remain unchanged."
+}

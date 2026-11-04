@@ -1,0 +1,124 @@
+{
+  "origin": [
+    -119.0187,
+    35.3733
+  ],
+  "diagnostic": {
+    "timings": {
+      "bakersfield--big-bear-lake": {
+        "ticks": 93192,
+        "kind": "road-foot",
+        "roadTicks": 93192,
+        "localGridTicks": 93855,
+        "localWitness": {
+          "terminalTicks": 599,
+          "edgeSeconds": 256,
+          "seedSeconds": 11401,
+          "seedCell": 610360,
+          "seedKind": 8,
+          "steps": 1
+        }
+      },
+      "bakersfield--palm-springs": {
+        "ticks": 102430,
+        "kind": "road-foot",
+        "roadTicks": 102430,
+        "localGridTicks": 102806,
+        "localWitness": {
+          "terminalTicks": 630,
+          "edgeSeconds": 709,
+          "seedSeconds": 12063,
+          "seedCell": 552146,
+          "seedKind": 8,
+          "steps": 3
+        }
+      }
+    },
+    "frame": {
+      "west": -125010050,
+      "south": 30137558,
+      "step": 12286,
+      "width": 1820,
+      "height": 1373
+    },
+    "stats": {
+      "envelopeMs": 511.63395899999887,
+      "maskMs": 670.2688750000016,
+      "seedMs": 1515.4857919999995,
+      "fillMs": 197.93483299999934,
+      "contourMs": 22.630833000002895,
+      "displayMs": 2918.128791999996,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2814842,
+      "activeSpans": 1136384,
+      "settles": 1145583,
+      "maximumHeapEntries": 153893,
+      "selectedCells": 1146663,
+      "localCells": 1145583,
+      "roadOnlyCells": 1080,
+      "edges": 17012,
+      "rings": 118,
+      "vertices": 10326,
+      "jsonBytes": 243476,
+      "retries": []
+    },
+    "phaseMs": 3154.2284999999974,
+    "output": {
+      "filename": "origin-11-900.geojson",
+      "bytes": 243476,
+      "sha256": "a5bd13f92c264e1cd1890d2344d2f7bda6317e19671b67277f07cbbbed4a5e8e"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "bakersfield--big-bear-lake": true,
+        "bakersfield--palm-springs": true
+      },
+      "frame": {
+        "west": -125000688,
+        "south": 30804320,
+        "step": 10133,
+        "width": 1830,
+        "height": 1366
+      },
+      "stats": {
+        "envelopeMs": 450.1959169999973,
+        "maskMs": 659.9067500000019,
+        "seedMs": 1235.1137089999902,
+        "fillMs": 194.1833750000078,
+        "contourMs": 20.19062500000291,
+        "displayMs": 2559.7054579999967,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 2291248,
+        "activeSpans": 918136,
+        "settles": 1126347,
+        "maximumHeapEntries": 132076,
+        "selectedCells": 1127059,
+        "localCells": 1126347,
+        "roadOnlyCells": 712,
+        "edges": 14334,
+        "rings": 73,
+        "vertices": 8795,
+        "jsonBytes": 209286,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-11-720.geojson",
+        "bytes": 209286,
+        "sha256": "7473918bb256f88c5e73aa1d7a559c9406dbec14fe6e0d9b450d74c7f946a460"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 330383360,
+    "heapTotal": 83460096,
+    "heapUsed": 14944544,
+    "external": 143921052,
+    "arrayBuffers": 141382286
+  }
+}

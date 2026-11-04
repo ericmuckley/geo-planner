@@ -1,0 +1,74 @@
+{
+  "status": "host_compressed_national_loader_and_original_queries_passed",
+  "recipeSha256": "275e228fbbc0663060bd82b92ac8d4580548349c6efdc335f0a70eb5265ce0ff",
+  "vertices": 5731903,
+  "arcs": 9620680,
+  "spatialCells": 56970,
+  "compressedBytes": 45859429,
+  "decodedWireBytes": 128196806,
+  "retainedDataBackingBufferBytes": 129399391,
+  "loadMsIncludingReadsHashesInflateDecodeAndValidation": 713.75875,
+  "hostFirstLoadAndQueryMsIncludingGc": 850.933542,
+  "baseline": {
+    "rss": 99549184,
+    "heapTotal": 12681216,
+    "heapUsed": 6868312,
+    "external": 2560438,
+    "arrayBuffers": 32182
+  },
+  "retained": {
+    "rss": 377749504,
+    "heapTotal": 17137664,
+    "heapUsed": 5972408,
+    "external": 131965900,
+    "arrayBuffers": 129428741
+  },
+  "afterQueries": {
+    "rss": 386580480,
+    "heapTotal": 17137664,
+    "heapUsed": 6047440,
+    "external": 131961117,
+    "arrayBuffers": 129428741
+  },
+  "queries": [
+    {
+      "index": 0,
+      "sourceVertex": 1074750,
+      "targetVertex": 2272446,
+      "ticks": 296763,
+      "settles": 1228168,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 136.0977919999999
+    },
+    {
+      "index": 1,
+      "sourceVertex": 3998660,
+      "targetVertex": 2860057,
+      "ticks": 256312,
+      "settles": 2430602,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 290.4107499999999
+    },
+    {
+      "index": 2,
+      "sourceVertex": 5699478,
+      "targetVertex": 5463759,
+      "ticks": null,
+      "settles": 1598245,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 175.45000000000005
+    },
+    {
+      "index": 3,
+      "sourceVertex": 257905,
+      "targetVertex": 4478013,
+      "ticks": null,
+      "settles": 1328986,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 145.22004100000004
+    }
+  ],
+  "hostTotalMs": 1466.126667,
+  "scope": "Host-only cold process after module/config loading, core routing + anchor index only. Reads/hashes/inflate/decode/validation and first vertex-pair query include GC. No arbitrary-coordinate snap, paid geometry, display/geography, full app/packaged estimate, protected Linux or Vercel admission.",
+  "modelChanged": false
+}

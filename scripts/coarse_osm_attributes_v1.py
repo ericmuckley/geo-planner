@@ -8,7 +8,7 @@ import re
 from coarse_osm_records import canonical,normalize
 from coarse_timing_input import require
 
-RECORD_LIMIT=1024**2
+RECORD_LIMIT=8*1024**2
 SPEED=re.compile(r'([0-9]+(?:\.[0-9]+)?)(?: (mph|km/h))?')
 ANNOTATIONS={'maxspeed:type','maxspeed:reason'}
 ROAD_ROLES={'motorway','trunk','primary','secondary','tertiary','residential','living_street','unclassified','service'}
@@ -53,7 +53,9 @@ def way_facts(record,nodes,*,snapshot):
         ordered.append(node);hashes.append(nodes[identity]['elementSha256'])
         if (node.get('tags') or {}).get('barrier') is not None:barriers.append(identity)
     require(hashlib.sha256(canonical([snapshot,ordered])).hexdigest()==record.get('geometryDependencySha256'),'Native attribute geometry dependency drift')
-    tags=way['tags'];role=tags['highway'];scopes={k:v for k,v in tags.items() if k.startswith('maxspeed:') and k not in ANNOTATIONS}
+    tags=way['tags'];role=tags.get('highway')
+    require(isinstance(role,str) and bool(role),'Native attribute nonempty highway role')
+    scopes={k:v for k,v in tags.items() if k.startswith('maxspeed:') and k not in ANNOTATIONS}
     speed=numeric_speed(tags.get('maxspeed'))
     return {'format':'native-osm-road-facts-v1','sourceRecord':deepcopy(record),
             'coordinates':[[node['lon'],node['lat']] for node in ordered],'orderedNodeElementSha256':hashes,

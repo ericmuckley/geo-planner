@@ -1,0 +1,16 @@
+{
+  "id": "water-endpoint-controls-preinput-stop-v1",
+  "recipe": "water-endpoints-controls-plan-v1.json",
+  "recipeSha256": "0747cc2f519f3b8474858550f929d68834e0154a16d1b35e77e985b27e596e27",
+  "reason": "Inherited source-controller recipe retained unused native-artifact mounts, outside this pure metadata controller allowed destinations. Guard rejected before output/owner/worker/source. V2 removes only those unused artifacts; code/tests/scope unchanged.",
+  "removedUnusedArtifactMounts": {
+    "data/coarse-quality/us-osm-water-census-v2-build-v1/water-census.so": "/artifacts/water-census.so",
+    "data/coarse-quality/us-osm-water-union-build-v1/water-union.so": "/artifacts/water-union.so",
+    "data/coarse-quality/us-osm-water-references-build-v1/water-references.so": "/artifacts/water-references.so",
+    "data/coarse-quality/us-osm-water-coordinates-build-v1/water-coordinates.so": "/artifacts/water-coordinates.so"
+  },
+  "outputCreated": false,
+  "workerCreated": false,
+  "sourcePbfRead": false,
+  "coordinatesRead": false
+}

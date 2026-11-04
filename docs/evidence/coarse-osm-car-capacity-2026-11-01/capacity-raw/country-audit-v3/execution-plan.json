@@ -1,0 +1,46 @@
+{
+  "caps": {
+    "memoryBytes": 2147483648,
+    "tmpBytes": 67108864,
+    "fileBytes": 67108864,
+    "ownedBytes": 67108864,
+    "workerSeconds": 600,
+    "hostSeconds": 660
+  },
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "source": "data/coarse-quality/us-osm-car-capacity-run-v3",
+  "output": "data/coarse-quality/us-osm-car-capacity-country-audit-v2",
+  "mounts": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_v2.py": "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_v2.py",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_driver_v2.py": "/code/country_audit_driver_v2.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1"
+  },
+  "hostFiles": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_v2.py": "0301b930ecf9559fe1f60cbffdce0558145ab250136ce4bb03c11fb990328d48",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_driver_v2.py": "4e1e1295fdde32965fee3a98c5c578858b408fbc50c61c87c8b28cafadd9db3c",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/unlocatable-restrictions.u64": "617501338d7c95fa54710d2c6eaa904addc15ed040581776e6c776d8407d0b58",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/unsupported-member-ways.u64": "9072c10eebaa3d6b7aa62a0fb357fda2eefbc8bf51f9fa1a0a9dadd7bc1017f9",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0000.bin": "0dacd092952907e87e9e221de0f2b57d1f390f6be7b0eede30a0b9f4fe6ea2c1",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0001.bin": "7f214fe645772e4cece1031864ae2798873809805c2e7b11d75357759db02cad",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0002.bin": "f1c187157a50b0a13f49bc4719e75c120f9c2fee02048086ea99a563a9e4940d",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0003.bin": "71b5c3ee1f780b4bee5ffef97a48a9b805ef278a0ee52960a2ec21f5218fd4ca",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0004.bin": "40e921aad171fe979c4e9c23cc03297485096cb1e7fe768f9114830f5dcfdce0",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0005.bin": "276ca848b7ee58a8b389bb1bffed43ae267544ec99351387143f0a1c0570af9c",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0006.bin": "79686776d4339d71d1445e7997cdef658d60c5520d28570b8ef7a5f38f030008",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0007.bin": "bc9bd11a021d9c91d818a169db635dec1c585ca49b38d911668b2422891efc9d",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/way-facts/ways-0008.bin": "0a6c5f2d53e2076e9407bb383dcec0b7415ca9151af15b8ab94defd9b4ad47d5",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/result.json": "6409e95a613c9776da9d1cb77fb779fd5aa917e9d9b644e87bac1c0e565e903c",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/receipt.json": "14bd648b112e6d0eed95a5ee4d82e1cb2ef3fec7b9479f3534208130bec8c0fe",
+    "data/coarse-quality/us-osm-car-capacity-run-v3/artifacts.json": "3d32bd42a7eba264bf9dbb8e5807e4a5d29d3dbde78dad8709be3272106d1a1e"
+  },
+  "workerFiles": {
+    "/repo/docs/evidence/coarse-osm-car-capacity-2026-11-01/country_audit_v2.py": "0301b930ecf9559fe1f60cbffdce0558145ab250136ce4bb03c11fb990328d48",
+    "/code/country_audit_driver_v2.py": "4e1e1295fdde32965fee3a98c5c578858b408fbc50c61c87c8b28cafadd9db3c",
+    "/code/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be"
+  },
+  "scope": "Independent every typed way fact/flags/role/closure and arc sums, complete source receipt seals. No native/PBF/provider/appDB/network or graph admission."
+}

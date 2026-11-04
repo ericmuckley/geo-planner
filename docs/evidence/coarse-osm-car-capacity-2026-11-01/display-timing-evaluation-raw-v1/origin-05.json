@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -82.9988,
+    39.9612
+  ],
+  "diagnostic": {
+    "timings": {
+      "columbus-oh-360-inside": {
+        "ticks": 173958,
+        "kind": "road-foot",
+        "roadTicks": 173958,
+        "localGridTicks": 175097,
+        "localWitness": {
+          "terminalTicks": 817,
+          "edgeSeconds": 0,
+          "seedSeconds": 21785,
+          "seedCell": 1119117,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "columbus-oh-360-outside": {
+        "ticks": 190129,
+        "kind": "road-foot",
+        "roadTicks": 190129,
+        "localGridTicks": 190536,
+        "localWitness": {
+          "terminalTicks": 216,
+          "edgeSeconds": 0,
+          "seedSeconds": 23790,
+          "seedCell": 955763,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "columbus-oh-600-inside": {
+        "ticks": 347288,
+        "kind": "road-foot",
+        "roadTicks": 347288,
+        "localGridTicks": 348182,
+        "localWitness": {
+          "terminalTicks": 854,
+          "edgeSeconds": 0,
+          "seedSeconds": 43416,
+          "seedCell": 1108432,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "columbus-oh-600-outside": {
+        "ticks": 325533,
+        "kind": "road-foot",
+        "roadTicks": 325533,
+        "localGridTicks": 327213,
+        "localWitness": {
+          "terminalTicks": 861,
+          "edgeSeconds": 0,
+          "seedSeconds": 40794,
+          "seedCell": 1230409,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "columbus-oh-720-inside": {
+        "ticks": 401329,
+        "kind": "road-foot",
+        "roadTicks": 401329,
+        "localGridTicks": 401618,
+        "localWitness": {
+          "terminalTicks": 178,
+          "edgeSeconds": 0,
+          "seedSeconds": 50180,
+          "seedCell": 2013073,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "columbus-oh-720-outside": {
+        "ticks": null,
+        "kind": "unreached",
+        "roadTicks": null,
+        "localGridTicks": null,
+        "localWitness": null
+      }
+    },
+    "frame": {
+      "west": -98861862,
+      "south": 29213470,
+      "step": 14498,
+      "width": 1968,
+      "height": 1270
+    },
+    "stats": {
+      "envelopeMs": 1072.194958,
+      "maskMs": 820.888167000001,
+      "seedMs": 4921.617875,
+      "fillMs": 270.255250000002,
+      "contourMs": 58.2297499999986,
+      "displayMs": 7143.389875000001,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 9086542,
+      "activeSpans": 3320901,
+      "settles": 1346593,
+      "maximumHeapEntries": 651491,
+      "selectedCells": 1350582,
+      "localCells": 1346593,
+      "roadOnlyCells": 3989,
+      "edges": 27652,
+      "rings": 413,
+      "vertices": 17539,
+      "jsonBytes": 396473,
+      "retries": []
+    },
+    "phaseMs": 7873.743166,
+    "output": {
+      "filename": "origin-05-900.geojson",
+      "bytes": 396473,
+      "sha256": "6d99114721e7715e9acb928113adcb68c4f3460c4b82cd334e7d743392812f16"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "columbus-oh-360.geojson",
+        "bytes": 249729,
+        "sha256": "c192fbe1ba34601d001ed96cf9227f59760c42cdc74b72d22eedbd1f6d28b5a7"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "columbus-oh-600.geojson",
+        "bytes": 360151,
+        "sha256": "dadffea599360373f61899218758703350f8c9272e6bc891cf0b7086b655da2a"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "columbus-oh-720.geojson",
+        "bytes": 410973,
+        "sha256": "9bdfd1b3f3a268ede1c7e30180d3c8dbb0f403cfc2a3014721d2fbcdfcb3ebe5"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 265912320,
+    "heapTotal": 82673664,
+    "heapUsed": 14357648,
+    "external": 143837108,
+    "arrayBuffers": 141298342
+  }
+}

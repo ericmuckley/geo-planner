@@ -1,0 +1,36 @@
+{
+  "auditorSha256": "b4d7f3e46beed46b8fe6ed9a0fc633f49a5c70bcc8af5fb4f0865987869387b6",
+  "closedRosterSha256": "8d3fd46f07d962b3cd37c721ccde16d52fc572c48da2f1a36f2d77a5e17992ce",
+  "reportSha256": "f90efccb069b6be8f3e348fd72686d80b56a844a37d0824d32420313317685eb",
+  "completeIndependentNativeGraphAudit": true,
+  "profiles": [
+    {
+      "id": "all-highways",
+      "primitiveEdgesChecked": 1290777,
+      "contractedEdgesChecked": 651024,
+      "nativeAnchorsChecked": 484166,
+      "geometryOccurrencesChecked": 1941801,
+      "components": 1007,
+      "sampledDistancesChecked": 42
+    },
+    {
+      "id": "major-roads",
+      "primitiveEdgesChecked": 148961,
+      "contractedEdgesChecked": 67921,
+      "nativeAnchorsChecked": 62520,
+      "geometryOccurrencesChecked": 216882,
+      "components": 41,
+      "sampledDistancesChecked": 41
+    }
+  ],
+  "sampledNativeLengthQueriesChecked": 83,
+  "auditSettles": 1600204,
+  "seconds": 15.9091152921319,
+  "method": "Independent sealed audit-SQLite native nodes/ways/memberships/relations, incidence and protected anchors; every source-edge partition/native geometry/length; independent linked adjacency versus serializedCSR; source-ranked pairs checked with separate raw/contracted Dijkstra. Shared source snapshot/crypto, no producer call or physical/ordinary-car/national accuracy admission.",
+  "pbfOrFineReads": 0,
+  "appDatabaseReads": 0,
+  "modelChanged": false,
+  "etaModelQualified": false,
+  "nationalFootprintQualified": false,
+  "vercelPackageQualified": false
+}

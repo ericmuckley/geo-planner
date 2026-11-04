@@ -83,3 +83,19 @@ class Tests(unittest.TestCase):
             way,nodes=fixture({'highway':role,'maxspeed':'US:custom','name':'arbitrary'})
             result=way_facts(way,nodes,snapshot=STATE)
             self.assertEqual(result['roadRoleSupportedForLaterScreen'],supported);self.assertIsNone(result['speed']['kmh']);self.assertFalse(result['usableForTiming'])
+
+    def test_new_selected_row_limit_preserves_metadata_above_one_mib(self):
+        way,nodes=fixture({'note':'x'*(1024**2+1)})
+        way['elementSha256']=hashlib.sha256(canonical(way['element'])).hexdigest()
+        result=way_facts(way,nodes,snapshot=STATE)
+        self.assertEqual(result['sourceRecord'],way);self.assertFalse(result['usableForTiming'])
+
+    def test_row_cap_and_missing_or_empty_highway_fail_closed(self):
+        for role in [None,'']:
+            way,nodes=fixture();way['element']['tags'].pop('highway')
+            if role is not None:way['element']['tags']['highway']=role
+            way['elementSha256']=hashlib.sha256(canonical(way['element'])).hexdigest()
+            with self.assertRaises(PilotError):way_facts(way,nodes,snapshot=STATE)
+        way,nodes=fixture({'note':'x'*(8*1024**2)})
+        way['elementSha256']=hashlib.sha256(canonical(way['element'])).hexdigest()
+        with self.assertRaises(PilotError):way_facts(way,nodes,snapshot=STATE)

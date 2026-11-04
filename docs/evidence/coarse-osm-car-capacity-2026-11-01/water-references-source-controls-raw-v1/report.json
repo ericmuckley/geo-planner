@@ -1,0 +1,336 @@
+{
+  "status": "water_reference_controller_pipeline_passed",
+  "checks": {
+    "positivePipeline": true,
+    "wrongSourceRejected": true,
+    "nationalSourceMounted": false,
+    "memberWayUnionExact": true,
+    "referenceBytesAndUniqueIdsExact": true,
+    "producerBuffersReleasedBeforeAudit": true
+  },
+  "tiny": {
+    "receipt": {
+      "nodes": 4,
+      "ways": 3,
+      "relations": 2,
+      "visits": 9,
+      "nativeEof": true,
+      "fallbacks": 0,
+      "blocks": 1,
+      "semanticBytes": 970,
+      "projectedFrames": 0,
+      "checkpoints": 1,
+      "acceptedNodes": 4,
+      "acceptedWays": 3,
+      "acceptedRelations": 2,
+      "maxNodeId": 4,
+      "maxWayId": 4,
+      "maxRelationId": 2,
+      "references": 6,
+      "members": 4,
+      "canonicalLowerBytes": 1416,
+      "canonicalUpperBytes": 1648,
+      "copyBytes": 3994,
+      "maxCopyBytes": 909,
+      "tags": 12,
+      "tagUtf8Bytes": 205,
+      "maxCanonicalLowerBytes": 306,
+      "maxCanonicalUpperBytes": 306,
+      "maxVersion": 1,
+      "sourceEncodeRows": 4,
+      "sourceDecodeRows": 4,
+      "sourceCodecCalls": 2,
+      "highwayWays": 2,
+      "longHighwayWays": 0,
+      "outOfRangeHighwayWays": 0,
+      "eligibleHighwayWays": 2,
+      "traceWays": 2,
+      "traceReferences": 4,
+      "witnessRows": 0,
+      "maxReferences": 2,
+      "maxMembers": 3,
+      "examinedHighwayReferences": 4,
+      "nextExcludedPriority": 0,
+      "nextExcludedId": 0,
+      "nextExcludedOrdinal": 0,
+      "nodeSpanStartNs": 475208,
+      "nodeSpanEndNs": 478583,
+      "waySpanStartNs": 478583,
+      "waySpanEndNs": 501750,
+      "relationSpanStartNs": 501750,
+      "relationSpanEndNs": 3312083,
+      "maxTags": 5,
+      "nodeMembers": 1,
+      "wayMembers": 3,
+      "relationMembers": 0,
+      "batchWays": 0,
+      "batchReferences": 0,
+      "wayBatches": 0,
+      "topologyTaggedNodes": 0,
+      "topologyWays": 0,
+      "topologyReferences": 0,
+      "topologyRelationNodes": 0,
+      "topologyRelationWays": 0,
+      "counts": {
+        "node": 4,
+        "way": 3,
+        "relation": 2
+      },
+      "semanticSha256": "318d50c632cdcfc58cfbd3f73307c006b1de805719b4d0d0bf7c990755c89270",
+      "semanticFormat": "geo-planner-projected-fields-v1",
+      "error": "",
+      "pythonProjectionFrames": 0,
+      "callbackEvents": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "canonicalFallbackExactSizes": [],
+      "metadata": {
+        "node": {
+          "count": 4,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 11,
+          "maxTags": 1,
+          "maxVersion": 1,
+          "maxCopyBytes": 331,
+          "maxReferences": 0,
+          "maxMembers": 0
+        },
+        "way": {
+          "count": 3,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 81,
+          "maxTags": 5,
+          "maxVersion": 1,
+          "maxCopyBytes": 721,
+          "maxReferences": 2,
+          "maxMembers": 0
+        },
+        "relation": {
+          "count": 2,
+          "minTimestamp": "2026-10-20T00:00:00Z",
+          "maxTimestamp": "2026-10-20T00:00:00Z",
+          "maxTagUtf8Bytes": 68,
+          "maxTags": 3,
+          "maxVersion": 1,
+          "maxCopyBytes": 909,
+          "maxReferences": 0,
+          "maxMembers": 3
+        }
+      },
+      "deliveredBatchWays": 0,
+      "deliveredBatchReferences": 0,
+      "selectedNodeProjections": 0,
+      "restrictionProjections": 0,
+      "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+      "histogram": {
+        "totals": {
+          "nodes": 4,
+          "taggedNodes": 1,
+          "ways": 3,
+          "highwayWays": 2,
+          "nonHighwayWays": 1,
+          "relations": 2,
+          "restrictionRelations": 2,
+          "relationNodeMembers": 1,
+          "relationWayMembers": 3,
+          "relationRelationMembers": 0,
+          "restrictionNodeMembers": 1,
+          "restrictionWayMembers": 3,
+          "restrictionRelationMembers": 0,
+          "taggedWays": 3,
+          "taggedRelations": 2,
+          "allWayReferences": 6,
+          "nonHighwayReferences": 2,
+          "allWayPrimitiveEdges": 3,
+          "nonHighwayPrimitiveEdges": 1
+        },
+        "highwayRoles": {
+          "primary": {
+            "ways": 1,
+            "references": 2,
+            "primitiveEdges": 1,
+            "wayEndOccurrences": 2,
+            "closedWays": 0,
+            "longWays": 0,
+            "maxReferences": 2
+          },
+          "secondary": {
+            "ways": 1,
+            "references": 2,
+            "primitiveEdges": 1,
+            "wayEndOccurrences": 2,
+            "closedWays": 0,
+            "longWays": 0,
+            "maxReferences": 2
+          }
+        },
+        "restrictionMemberRoles": {
+          "from": {
+            "node": 0,
+            "way": 2,
+            "relation": 0
+          },
+          "to": {
+            "node": 0,
+            "way": 1,
+            "relation": 0
+          },
+          "via": {
+            "node": 1,
+            "way": 0,
+            "relation": 0
+          }
+        }
+      },
+      "sourceIdentity": {
+        "publisherStateUtc": "2026-10-25T21:21:21Z",
+        "requiredFeatures": [
+          "DenseNodes",
+          "OsmSchema-V0.6"
+        ],
+        "framingBytesRead": 594,
+        "frames": 4,
+        "sourceSha256": "79fe27db9683ff434e22ae79b34d3608e301c59789e035334595a74b0c1b538e",
+        "sourceMd5": "8f8dd4abf37a8c9fa95de8c24fa70420"
+      },
+      "framingSeconds": 0.0012679999927058816,
+      "nativeSeconds": 0.00406266690697521,
+      "postSourceHashSeconds": 0.00013429205864667892,
+      "postSourceHashBytes": 594,
+      "knownGuardReadBytes": 1188
+    },
+    "water": {
+      "nodes": 4,
+      "ways": 3,
+      "relations": 2,
+      "waterWays": 1,
+      "waterWayReferences": 2,
+      "closedWaterWays": 0,
+      "openWaterWays": 1,
+      "waterRelations": 1,
+      "waterWayMembers": 2,
+      "waterNodeMembers": 1,
+      "waterRelationMembers": 0,
+      "outerWayMembers": 0,
+      "innerWayMembers": 0,
+      "otherRoleWayMembers": 2,
+      "selectedEncodedBytes": 389,
+      "maximumWaterWayReferences": 2,
+      "maximumWaterRelationMembers": 3,
+      "selectedTagUtf8Bytes": 149,
+      "naturalWaterFeatures": 2,
+      "riverbankFeatures": 0,
+      "reservoirLanduseFeatures": 0,
+      "multipolygonWaterRelations": 0,
+      "otherTypeWaterRelations": 1,
+      "waterWaysAlsoHighways": 1,
+      "lastWaterWayId": 1,
+      "lastWaterRelationId": 1,
+      "complete": 1,
+      "reserved27": 0,
+      "lakeFeatures": 0,
+      "reservoirFeatures": 0,
+      "riverFeatures": 0,
+      "pondFeatures": 0,
+      "basinFeatures": 0,
+      "canalFeatures": 0,
+      "lagoonFeatures": 0,
+      "otherWaterSubtypeFeatures": 2,
+      "shortClosedWaterWays": 0,
+      "reserved37": 0,
+      "reserved38": 0,
+      "reserved39": 0,
+      "union": {
+        "unionWays": 2,
+        "unionReferences": 4,
+        "closedUnionWays": 0,
+        "openUnionWays": 2,
+        "taggedWays": 1,
+        "taggedReferences": 2,
+        "memberWaysFound": 2,
+        "memberWayReferences": 4,
+        "taggedMemberOverlapWays": 1,
+        "taggedMemberOverlapReferences": 2,
+        "memberOnlyWays": 1,
+        "memberOnlyReferences": 2,
+        "maximumUnionWayReferences": 2,
+        "unionEncodedBytes": 287,
+        "missingMemberWays": 1,
+        "firstUnionWayId": 1,
+        "lastUnionWayId": 4,
+        "requestedMemberWays": 3,
+        "complete": 1,
+        "reserved19": 0
+      },
+      "missingMemberWayIds": [
+        5
+      ],
+      "referenceCapture": {
+        "ways": 2,
+        "references": 4,
+        "rawGpfBytes": 295,
+        "uniqueNodes": 4,
+        "wayChunks": 1,
+        "nodeChunks": 1,
+        "complete": 1,
+        "reserved7": 0
+      },
+      "referenceStore": {
+        "ways": {
+          "parts": [
+            {
+              "name": "water-ways.gpf-0000.gz",
+              "rawBytes": 295,
+              "rawSha256": "b72732dbf52af97c82fda2f5c3ef0c851639c6e7a24b86375652eff0ae94efb1",
+              "bytes": 186,
+              "sha256": "1ae57e6216aad51e2796c3f9d9c6bb6bfc27bb34c557f87d7b4f6caf3f54241d"
+            }
+          ],
+          "rawBytes": 295,
+          "rawSha256": "b72732dbf52af97c82fda2f5c3ef0c851639c6e7a24b86375652eff0ae94efb1",
+          "compressedBytes": 186
+        },
+        "nodes": {
+          "parts": [
+            {
+              "name": "node-ids.u64-0000.gz",
+              "rawBytes": 32,
+              "rawSha256": "73e200e2b048c86d4e8c86b86bf62bbda84c7384e34e250b01aa30ab29d234a4",
+              "bytes": 31,
+              "sha256": "3290bece2ff59e80cf21b0dd234913174caf1a71f83439d875b396932f4769fc"
+            }
+          ],
+          "rawBytes": 32,
+          "rawSha256": "73e200e2b048c86d4e8c86b86bf62bbda84c7384e34e250b01aa30ab29d234a4",
+          "compressedBytes": 31
+        },
+        "compressedBytes": 217,
+        "uniqueNodes": 4,
+        "coordinatesRetained": false
+      }
+    }
+  },
+  "independentAudit": {
+    "allWayRecordsAndFieldsDecoded": 2,
+    "allReferenceOccurrencesChecked": 4,
+    "allUniqueNodeIdsIndependentlyCompared": 4,
+    "allSavedGpfBytesChecked": 295,
+    "allRawIdBytesCompared": 32,
+    "coordinatesOrRingsConstructed": false
+  }
+}

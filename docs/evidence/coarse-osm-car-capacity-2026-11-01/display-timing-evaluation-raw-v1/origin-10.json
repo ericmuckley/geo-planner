@@ -1,0 +1,124 @@
+{
+  "origin": [
+    -118.2437,
+    34.0522
+  ],
+  "diagnostic": {
+    "timings": {
+      "los-angeles--bakersfield": {
+        "ticks": 56292,
+        "kind": "road-foot",
+        "roadTicks": 56292,
+        "localGridTicks": 56553,
+        "localWitness": {
+          "terminalTicks": 345,
+          "edgeSeconds": 0,
+          "seedSeconds": 7026,
+          "seedCell": 880806,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "los-angeles--ventura": {
+        "ticks": 31851,
+        "kind": "local-grid",
+        "roadTicks": null,
+        "localGridTicks": 31851,
+        "localWitness": {
+          "terminalTicks": 635,
+          "edgeSeconds": 0,
+          "seedSeconds": 3902,
+          "seedCell": 707736,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -125000830,
+      "south": 29752958,
+      "step": 12002,
+      "width": 1881,
+      "height": 1329
+    },
+    "stats": {
+      "envelopeMs": 503.19670799999585,
+      "maskMs": 647.2831669999941,
+      "seedMs": 1451.6163330000054,
+      "fillMs": 203.10433299999568,
+      "contourMs": 21.334584000003815,
+      "displayMs": 2826.7033329999977,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2776776,
+      "activeSpans": 1122784,
+      "settles": 1179045,
+      "maximumHeapEntries": 151958,
+      "selectedCells": 1179995,
+      "localCells": 1179045,
+      "roadOnlyCells": 950,
+      "edges": 16874,
+      "rings": 106,
+      "vertices": 10122,
+      "jsonBytes": 238656,
+      "retries": []
+    },
+    "phaseMs": 3059.4015,
+    "output": {
+      "filename": "origin-10-900.geojson",
+      "bytes": 238656,
+      "sha256": "a04adde52bf2e3bd072ed4eb0ac960cca0016998bc22b67e5dcf639bdce15df2"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "los-angeles--bakersfield": true,
+        "los-angeles--ventura": true
+      },
+      "frame": {
+        "west": -124922658,
+        "south": 30426452,
+        "step": 9898,
+        "width": 1889,
+        "height": 1323
+      },
+      "stats": {
+        "envelopeMs": 451.66370800000004,
+        "maskMs": 642.6419999999998,
+        "seedMs": 1219.0222080000021,
+        "fillMs": 192.4252919999999,
+        "contourMs": 20.244207999996434,
+        "displayMs": 2526.126167000002,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 2262798,
+        "activeSpans": 910459,
+        "settles": 1141666,
+        "maximumHeapEntries": 128870,
+        "selectedCells": 1142339,
+        "localCells": 1141666,
+        "roadOnlyCells": 673,
+        "edges": 14976,
+        "rings": 72,
+        "vertices": 9146,
+        "jsonBytes": 215733,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-10-720.geojson",
+        "bytes": 215733,
+        "sha256": "28f7c730afc3cf267e743061d06a7118e9ef3707723ddb481c8c460bf4294248"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 330186752,
+    "heapTotal": 83460096,
+    "heapUsed": 14927928,
+    "external": 143921052,
+    "arrayBuffers": 141382286
+  }
+}

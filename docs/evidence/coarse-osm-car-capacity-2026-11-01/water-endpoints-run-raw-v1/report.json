@@ -1,0 +1,100 @@
+{
+  "status": "national_water_endpoint_and_relation_chain_diagnosis_complete",
+  "captured": {
+    "sourceWayRecords": 2829193,
+    "sourceReferenceOccurrences": 104806243,
+    "sourceRawGpfBytes": 1209111100,
+    "memberWayIds": 458255,
+    "foundMemberWays": 458238,
+    "missingMemberWayIds": [
+      56217101,
+      56217353,
+      56217389,
+      56218029,
+      56218064,
+      56218389,
+      56219144,
+      56219236,
+      56221017,
+      56221074,
+      56221270,
+      67972125,
+      67972893,
+      67973075,
+      509694737,
+      1143705261,
+      1143705262
+    ],
+    "endpointFactsRawBytes": 14664160,
+    "coordinatesExamined": false
+  },
+  "independentEndpointAudit": {
+    "allSavedSourceWaysDecoded": 2829193,
+    "allSavedSourceReferencesDecoded": 104806243,
+    "allMemberEndpointRowsChecked": 458255,
+    "coordinatesOrPolygonValidityEstablished": false
+  },
+  "endpointStore": {
+    "parts": [
+      {
+        "name": "member-way-endpoints-0000.gz",
+        "rawBytes": 14664160,
+        "rawSha256": "4142ffaa6b3324cd869c340ee8d5d41ef82f7c38c8972fb317eb9802238df8e1",
+        "bytes": 4274029,
+        "sha256": "c3f2c2954ef107f8c62c6717b8e26f99136ac4fa0b3368ef6ac13f08021814f7"
+      }
+    ],
+    "rawBytes": 14664160,
+    "rawSha256": "4142ffaa6b3324cd869c340ee8d5d41ef82f7c38c8972fb317eb9802238df8e1",
+    "compressedBytes": 4274029
+  },
+  "chainStore": {
+    "parts": [
+      {
+        "name": "relation-chain-diagnostics-0000.gz",
+        "rawBytes": 16777216,
+        "rawSha256": "2177633d4ac0bca475f30126f669b80112ae48078d56512c0be42d350be3ccc3",
+        "bytes": 1075482,
+        "sha256": "6f1ab4edde2feb8d30aa98baa7154108522921b33125b89b2b9c74765331715a"
+      },
+      {
+        "name": "relation-chain-diagnostics-0001.gz",
+        "rawBytes": 16777216,
+        "rawSha256": "ae3925f38b0ee9805211ed43e4c3da603e553e5eabdf737b1086723d64072e4a",
+        "bytes": 811917,
+        "sha256": "69e011d5c2e339ca9fc569fa04be832e1a63cc0dd8a3c3277ae35f5e104a7584"
+      },
+      {
+        "name": "relation-chain-diagnostics-0002.gz",
+        "rawBytes": 10610810,
+        "rawSha256": "22adf5c331c2a7e44268d7713a6fea7f38a036b5c6af338e2f7cb34acf4673f8",
+        "bytes": 425103,
+        "sha256": "a70aecad123d70ed7dadaf0c74d15f2db01d7a17d78f1bae40cb0a7421a49ca5"
+      }
+    ],
+    "rawBytes": 44165242,
+    "rawSha256": "15a5368002ce325998ef7528795ca0899220a6ec77b1170fd1a45bbdcb6defcf",
+    "compressedBytes": 2312502
+  },
+  "rootStatusCounts": {
+    "explicit_role_degree2_closed_chains": 68652,
+    "duplicate_way_member_occurrence": 3,
+    "native_endpoint_topology_requires_geometry_or_missing_closure": 46,
+    "nested_relation_roles_need_geometry_policy": 18,
+    "not_direct_multipolygon": 14,
+    "way_role_requires_explicit_policy": 1
+  },
+  "additionalStatusCounts": {
+    "not_direct_multipolygon": 1,
+    "explicit_role_degree2_closed_chains": 16
+  },
+  "allRelationDiagnosticsReopened": 68751,
+  "explicitRoleChainMemberOccurrencesIndependentlyReplayed": 467295,
+  "compressedBytes": 6586531,
+  "sourcePbfReads": 0,
+  "coordinatesExamined": false,
+  "polygonValidityEstablished": false,
+  "maskOrModelChanged": false,
+  "workerSecondsIncludingBindingsSavedFieldAuditAndChainReplay": 49.230643438058905,
+  "scope": "Saved native-ID endpoint/role/degree2 chain facts only. Every source way/member endpoint and emitted closed-chain member/direction replayed. Open/branch/touch/short/duplicate/nested/unknown-role/source-gap cases remain explicit. No coordinate/ring area/polygon/shore/input/ETA/app admission."
+}

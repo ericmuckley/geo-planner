@@ -1,0 +1,10 @@
+{
+  "status": "Proposed offline refinement; no graph or app change",
+  "hypothesis": "Static simple no-left/right/straight/U-turn relations with one from/via-way/to can conservatively forbid all actual from->via entry arc pairs, instead of closing all member roads. Any route completing the prohibited sequence must include such an entry. Unrelated traffic can still use the via/to roads. Legal from->via exits may still be overblocked; exact history-dependent via-way semantics are not claimed.",
+  "scope": "Only existing closed-unsupported car relations, exactly3 way members/one per role, one via-way distinct from from/to, static four no_* kinds. Same from/to permitted. Keep original car-mode precedence/exemptions. only_*, conditional, no_entry/no_exit, missing/unknown/multiple-via or unresolved shapes retain old conservative fallback.",
+  "resolution": "Resolve against complete pre-relation-closure permitted source arcs and actual shared node IDs, enumerate every from-head/via-tail pair; missing any member group/no entry pairs => old full closure. Never use coordinate coincidence or a sampled subset. Final closed roads are union of every fallback relation, never old global closure set minus converted member IDs. Packed incoming-arc forbidden pairs support this without query-history state.",
+  "proof": "Seven synthetic groups including400 prohibited paths of varying via length/multiple directions/intersections, identity/missing/caps and mode/conditional guards. Actual captured graph replay and independent source/path audit required next; national inputs/footprint/83+35+166 gates follow before app use.",
+  "sourceSemantics": "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+  "sourceInterpretation": "OSM describes prohibitory restrictions as forbidding traversal along the from/via/to geometry. The proposed stronger entry prohibition is our conservative inference, not an OSM instruction.",
+  "resources": "New small metadata-only captured4900-relation scan under existing100MiB metadata reserve. No PBF/source constructor/graph query/provider/DB operation."
+}

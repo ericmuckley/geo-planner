@@ -1,0 +1,2384 @@
+{
+  "format": "native-road-only-car-prototype-v1",
+  "policy": {
+    "id": "native-road-only-static-car-prototype-v1",
+    "roles": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link",
+      "secondary",
+      "secondary_link",
+      "tertiary",
+      "tertiary_link"
+    ],
+    "defaultSpeedsKph": {
+      "motorway": 100,
+      "motorway_link": 40,
+      "trunk": 80,
+      "trunk_link": 40,
+      "primary": 55,
+      "primary_link": 35,
+      "secondary": 45,
+      "secondary_link": 30,
+      "tertiary": 40,
+      "tertiary_link": 30
+    },
+    "signalDelayMs": 5000,
+    "uTurnDelayMs": 20000,
+    "tickMs": 125,
+    "ferries": "excluded",
+    "conditional": "conservative closure; no date/time evaluation",
+    "viaWay": "conservative member-way closure in this first cost prototype",
+    "uTurns": "Exact reverse physical arc only; permitted at source-way ends, selected-profile junctions, tagged or explicit relation nodes. Validation-window cuts never grant reversal permission.",
+    "scope": "Assumed static travel costs and limited OSM car rules; no traffic, current availability, vehicle dimensions or nationwide ETA/coverage certification."
+  },
+  "captureReceipt": {
+    "rows": 1368072,
+    "bytes": 477852579,
+    "sha256": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4",
+    "types": {
+      "node": 1123919,
+      "relation": 4900,
+      "way": 239253
+    },
+    "memberships": 1368072
+  },
+  "sourceMetadata": {
+    "selectedTaggedNodes": 24323,
+    "selectedBlockedNodes": 81,
+    "selectedSignalNodes": 5319,
+    "relations:via-node": 4078,
+    "relations:closed-unsupported": 819,
+    "relations:non-car": 3,
+    "majorReferences": 177956,
+    "ways:way-eligible": 28610,
+    "eligibleDirections": 42389,
+    "defaultSpeedDirections": 20396,
+    "onewayWays": 14831,
+    "ways:conditional-or-way-restriction": 155,
+    "ways:access": 198,
+    "ways:lane-access": 32,
+    "unsupportedMemberWaysPresent": 1404,
+    "supportedViaNodeRules": 4078
+  },
+  "selectedWays": 28995,
+  "selectedNativeNodes": 143560,
+  "rawArcs": 218666,
+  "contractedArcs": 86517,
+  "payload": {
+    "vertices": 53672,
+    "arcs": 86517,
+    "payloadBytes": 1321511,
+    "costOverflowEntries": 0,
+    "reverseOverflowEntries": 0,
+    "forbiddenTurnPairs": 2269,
+    "scope": "Isolated captured-data payload; excludes source snapping/geography/runtime/search/JS/app/package overhead. No national extrapolation."
+  },
+  "queries": [
+    {
+      "windowId": "origin-00",
+      "sourceNodeIds": [
+        37815620,
+        2564179411
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 127986,
+        "fragments": 81,
+        "settled": 436,
+        "searchSeconds": 0.0005560420686379075
+      },
+      "contracted": {
+        "costMs": 127986,
+        "fragments": 14,
+        "settled": 76,
+        "searchSeconds": 0.0001437499886378646
+      },
+      "quantized": {
+        "costMs": 128875,
+        "fragments": 14,
+        "settled": 75,
+        "searchSeconds": 0.00012695800978690386
+      },
+      "binaryQuantizedMs": 128875
+    },
+    {
+      "windowId": "origin-00",
+      "sourceNodeIds": [
+        2564179411,
+        37815620
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 127986,
+        "fragments": 81,
+        "settled": 421,
+        "searchSeconds": 0.0004902080399915576
+      },
+      "contracted": {
+        "costMs": 127986,
+        "fragments": 14,
+        "settled": 135,
+        "searchSeconds": 0.00021279207430779934
+      },
+      "quantized": {
+        "costMs": 128875,
+        "fragments": 14,
+        "settled": 134,
+        "searchSeconds": 0.00021079101134091616
+      },
+      "binaryQuantizedMs": 128875
+    },
+    {
+      "windowId": "origin-00",
+      "sourceNodeIds": [
+        3486775582,
+        37802504
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 557785,
+        "fragments": 338,
+        "settled": 3052,
+        "searchSeconds": 0.0038195420056581497
+      },
+      "contracted": {
+        "costMs": 557785,
+        "fragments": 79,
+        "settled": 936,
+        "searchSeconds": 0.00144866609480232
+      },
+      "quantized": {
+        "costMs": 562375,
+        "fragments": 79,
+        "settled": 936,
+        "searchSeconds": 0.001528667053207755
+      },
+      "binaryQuantizedMs": 562375
+    },
+    {
+      "windowId": "origin-00",
+      "sourceNodeIds": [
+        37802504,
+        3486775582
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 557785,
+        "fragments": 338,
+        "settled": 3056,
+        "searchSeconds": 0.004028624971397221
+      },
+      "contracted": {
+        "costMs": 557785,
+        "fragments": 79,
+        "settled": 1040,
+        "searchSeconds": 0.0016047499375417829
+      },
+      "quantized": {
+        "costMs": 562375,
+        "fragments": 79,
+        "settled": 1035,
+        "searchSeconds": 0.001612875028513372
+      },
+      "binaryQuantizedMs": 562375
+    },
+    {
+      "windowId": "origin-01",
+      "sourceNodeIds": [
+        12908627257,
+        6258304203
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 124809,
+        "fragments": 41,
+        "settled": 451,
+        "searchSeconds": 0.0006547080120071769
+      },
+      "contracted": {
+        "costMs": 124809,
+        "fragments": 25,
+        "settled": 307,
+        "searchSeconds": 0.0004623749991878867
+      },
+      "quantized": {
+        "costMs": 126125,
+        "fragments": 25,
+        "settled": 304,
+        "searchSeconds": 0.0004290000069886446
+      },
+      "binaryQuantizedMs": 126125
+    },
+    {
+      "windowId": "origin-01",
+      "sourceNodeIds": [
+        6258304203,
+        12908627257
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 149785,
+        "fragments": 61,
+        "settled": 659,
+        "searchSeconds": 0.0008240829920396209
+      },
+      "contracted": {
+        "costMs": 149785,
+        "fragments": 35,
+        "settled": 354,
+        "searchSeconds": 0.0004974999465048313
+      },
+      "quantized": {
+        "costMs": 151875,
+        "fragments": 35,
+        "settled": 357,
+        "searchSeconds": 0.0005167500348761678
+      },
+      "binaryQuantizedMs": 151875
+    },
+    {
+      "windowId": "origin-01",
+      "sourceNodeIds": [
+        13323523067,
+        12973052923
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 346957,
+        "fragments": 156,
+        "settled": 5291,
+        "searchSeconds": 0.007414416060782969
+      },
+      "contracted": {
+        "costMs": 346957,
+        "fragments": 53,
+        "settled": 2306,
+        "searchSeconds": 0.0033861250849440694
+      },
+      "quantized": {
+        "costMs": 349750,
+        "fragments": 53,
+        "settled": 2297,
+        "searchSeconds": 0.003511957940645516
+      },
+      "binaryQuantizedMs": 349750
+    },
+    {
+      "windowId": "origin-01",
+      "sourceNodeIds": [
+        12973052923,
+        13323523067
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 351471,
+        "fragments": 159,
+        "settled": 3251,
+        "searchSeconds": 0.0039070830680429935
+      },
+      "contracted": {
+        "costMs": 351471,
+        "fragments": 52,
+        "settled": 1356,
+        "searchSeconds": 0.0019185830606147647
+      },
+      "quantized": {
+        "costMs": 355000,
+        "fragments": 52,
+        "settled": 1353,
+        "searchSeconds": 0.002090832917019725
+      },
+      "binaryQuantizedMs": 355000
+    },
+    {
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        13529771908,
+        13081301616
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 532155,
+        "fragments": 245,
+        "settled": 4260,
+        "searchSeconds": 0.005148083087988198
+      },
+      "contracted": {
+        "costMs": 532155,
+        "fragments": 86,
+        "settled": 1400,
+        "searchSeconds": 0.002027499955147505
+      },
+      "quantized": {
+        "costMs": 537250,
+        "fragments": 86,
+        "settled": 1402,
+        "searchSeconds": 0.002042750013060868
+      },
+      "binaryQuantizedMs": 537250
+    },
+    {
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        13081301616,
+        13529771908
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 4020,
+        "searchSeconds": 0.0042305419920012355
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 1332,
+        "searchSeconds": 0.0016303330194205046
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 1332,
+        "searchSeconds": 0.001748209004290402
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        847371175,
+        95440346
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 1.6669509932398796e-06
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 4.00003045797348e-06
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 8.329516276717186e-07
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        95440346,
+        847371175
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 4020,
+        "searchSeconds": 0.0042782078962773085
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 1332,
+        "searchSeconds": 0.0016104999231174588
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 1332,
+        "searchSeconds": 0.0018179999897256494
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-03",
+      "sourceNodeIds": [
+        13655123676,
+        13964478901
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 467157,
+        "fragments": 131,
+        "settled": 8868,
+        "searchSeconds": 0.01233854191377759
+      },
+      "contracted": {
+        "costMs": 467157,
+        "fragments": 40,
+        "settled": 2663,
+        "searchSeconds": 0.0043518750462681055
+      },
+      "quantized": {
+        "costMs": 469750,
+        "fragments": 30,
+        "settled": 2658,
+        "searchSeconds": 0.006483666016720235
+      },
+      "binaryQuantizedMs": 469750
+    },
+    {
+      "windowId": "origin-03",
+      "sourceNodeIds": [
+        13964478901,
+        13655123676
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 473060,
+        "fragments": 129,
+        "settled": 7409,
+        "searchSeconds": 0.009185916977003217
+      },
+      "contracted": {
+        "costMs": 473060,
+        "fragments": 41,
+        "settled": 1985,
+        "searchSeconds": 0.0030538749415427446
+      },
+      "quantized": {
+        "costMs": 475875,
+        "fragments": 41,
+        "settled": 1986,
+        "searchSeconds": 0.0031779579585418105
+      },
+      "binaryQuantizedMs": 475875
+    },
+    {
+      "windowId": "origin-03",
+      "sourceNodeIds": [
+        88702949,
+        13621979770
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 571135,
+        "fragments": 208,
+        "settled": 6971,
+        "searchSeconds": 0.00855295907240361
+      },
+      "contracted": {
+        "costMs": 571135,
+        "fragments": 65,
+        "settled": 2240,
+        "searchSeconds": 0.003242415958084166
+      },
+      "quantized": {
+        "costMs": 575125,
+        "fragments": 65,
+        "settled": 2243,
+        "searchSeconds": 0.0035267920466139913
+      },
+      "binaryQuantizedMs": 575125
+    },
+    {
+      "windowId": "origin-03",
+      "sourceNodeIds": [
+        13621979770,
+        88702949
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 378616,
+        "fragments": 96,
+        "settled": 4077,
+        "searchSeconds": 0.004991833004169166
+      },
+      "contracted": {
+        "costMs": 378616,
+        "fragments": 45,
+        "settled": 1360,
+        "searchSeconds": 0.002004083013162017
+      },
+      "quantized": {
+        "costMs": 381625,
+        "fragments": 45,
+        "settled": 1360,
+        "searchSeconds": 0.002235333900898695
+      },
+      "binaryQuantizedMs": 381625
+    },
+    {
+      "windowId": "origin-04",
+      "sourceNodeIds": [
+        67619050,
+        123442619
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 562770,
+        "fragments": 215,
+        "settled": 29200,
+        "searchSeconds": 0.04833362495992333
+      },
+      "contracted": {
+        "costMs": 562770,
+        "fragments": 122,
+        "settled": 15968,
+        "searchSeconds": 0.029511084081605077
+      },
+      "quantized": {
+        "costMs": 569750,
+        "fragments": 122,
+        "settled": 16001,
+        "searchSeconds": 0.03160074993502349
+      },
+      "binaryQuantizedMs": 569750
+    },
+    {
+      "windowId": "origin-04",
+      "sourceNodeIds": [
+        123442619,
+        67619050
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 543274,
+        "fragments": 281,
+        "settled": 20487,
+        "searchSeconds": 0.03354091593064368
+      },
+      "contracted": {
+        "costMs": 543274,
+        "fragments": 140,
+        "settled": 11798,
+        "searchSeconds": 0.021802208037115633
+      },
+      "quantized": {
+        "costMs": 551750,
+        "fragments": 140,
+        "settled": 11796,
+        "searchSeconds": 0.022651250008493662
+      },
+      "binaryQuantizedMs": 551750
+    },
+    {
+      "windowId": "origin-04",
+      "sourceNodeIds": [
+        4031314059,
+        4060016286
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 579549,
+        "fragments": 277,
+        "settled": 24872,
+        "searchSeconds": 0.039727792027406394
+      },
+      "contracted": {
+        "costMs": 579549,
+        "fragments": 113,
+        "settled": 13618,
+        "searchSeconds": 0.02396504208445549
+      },
+      "quantized": {
+        "costMs": 586625,
+        "fragments": 113,
+        "settled": 13615,
+        "searchSeconds": 0.025301250047050416
+      },
+      "binaryQuantizedMs": 586625
+    },
+    {
+      "windowId": "origin-04",
+      "sourceNodeIds": [
+        4060016286,
+        4031314059
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 609663,
+        "fragments": 279,
+        "settled": 24254,
+        "searchSeconds": 0.038111125002615154
+      },
+      "contracted": {
+        "costMs": 609663,
+        "fragments": 113,
+        "settled": 13723,
+        "searchSeconds": 0.024072459083981812
+      },
+      "quantized": {
+        "costMs": 616625,
+        "fragments": 113,
+        "settled": 13694,
+        "searchSeconds": 0.02562229207251221
+      },
+      "binaryQuantizedMs": 616625
+    },
+    {
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        4020629241,
+        10647923180
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 643,
+        "searchSeconds": 0.0007609999738633633
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 261,
+        "searchSeconds": 0.0003400419373065233
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 261,
+        "searchSeconds": 0.0003389590419828892
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        10647923180,
+        4020629241
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 6180,
+        "searchSeconds": 0.007891791057772934
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 2044,
+        "searchSeconds": 0.003109834040515125
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 2044,
+        "searchSeconds": 0.003215332981199026
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        8520993671,
+        122827648
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 13,
+        "searchSeconds": 1.3791956007480621e-05
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 7,
+        "searchSeconds": 7.709022611379623e-06
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 7,
+        "searchSeconds": 6.166985258460045e-06
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        122827648,
+        8520993671
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 76,
+        "searchSeconds": 8.708296809345484e-05
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 37,
+        "searchSeconds": 4.5874970965087414e-05
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 37,
+        "searchSeconds": 4.937499761581421e-05
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-06",
+      "sourceNodeIds": [
+        278084564,
+        9485242674
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 148463,
+        "fragments": 45,
+        "settled": 2150,
+        "searchSeconds": 0.003027374972589314
+      },
+      "contracted": {
+        "costMs": 148463,
+        "fragments": 35,
+        "settled": 1536,
+        "searchSeconds": 0.002365041058510542
+      },
+      "quantized": {
+        "costMs": 150875,
+        "fragments": 35,
+        "settled": 1516,
+        "searchSeconds": 0.0021124579943716526
+      },
+      "binaryQuantizedMs": 150875
+    },
+    {
+      "windowId": "origin-06",
+      "sourceNodeIds": [
+        9485242674,
+        278084564
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 236212,
+        "fragments": 99,
+        "settled": 5603,
+        "searchSeconds": 0.008385499939322472
+      },
+      "contracted": {
+        "costMs": 236212,
+        "fragments": 54,
+        "settled": 3581,
+        "searchSeconds": 0.005855750059708953
+      },
+      "quantized": {
+        "costMs": 239125,
+        "fragments": 54,
+        "settled": 3579,
+        "searchSeconds": 0.0061900420114398
+      },
+      "binaryQuantizedMs": 239125
+    },
+    {
+      "windowId": "origin-06",
+      "sourceNodeIds": [
+        1734859920,
+        12388734547
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 1063709,
+        "fragments": 402,
+        "settled": 27195,
+        "searchSeconds": 0.039186749956570566
+      },
+      "contracted": {
+        "costMs": 1063709,
+        "fragments": 124,
+        "settled": 13731,
+        "searchSeconds": 0.023199249990284443
+      },
+      "quantized": {
+        "costMs": 1071000,
+        "fragments": 124,
+        "settled": 13725,
+        "searchSeconds": 0.0257332919863984
+      },
+      "binaryQuantizedMs": 1071000
+    },
+    {
+      "windowId": "origin-06",
+      "sourceNodeIds": [
+        12388734547,
+        1734859920
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 741102,
+        "fragments": 335,
+        "settled": 24792,
+        "searchSeconds": 0.03716283303219825
+      },
+      "contracted": {
+        "costMs": 741102,
+        "fragments": 125,
+        "settled": 12958,
+        "searchSeconds": 0.02233945799525827
+      },
+      "quantized": {
+        "costMs": 748750,
+        "fragments": 125,
+        "settled": 12967,
+        "searchSeconds": 0.023390291957184672
+      },
+      "binaryQuantizedMs": 748750
+    },
+    {
+      "windowId": "origin-07",
+      "sourceNodeIds": [
+        9522822426,
+        54463532
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 175627,
+        "fragments": 93,
+        "settled": 625,
+        "searchSeconds": 0.0007587909931316972
+      },
+      "contracted": {
+        "costMs": 175627,
+        "fragments": 11,
+        "settled": 80,
+        "searchSeconds": 0.00012908398639410734
+      },
+      "quantized": {
+        "costMs": 176000,
+        "fragments": 11,
+        "settled": 80,
+        "searchSeconds": 0.00012883299496024847
+      },
+      "binaryQuantizedMs": 176000
+    },
+    {
+      "windowId": "origin-07",
+      "sourceNodeIds": [
+        54463532,
+        9522822426
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 175627,
+        "fragments": 93,
+        "settled": 383,
+        "searchSeconds": 0.00039795797783881426
+      },
+      "contracted": {
+        "costMs": 175627,
+        "fragments": 11,
+        "settled": 48,
+        "searchSeconds": 7.50409672036767e-05
+      },
+      "quantized": {
+        "costMs": 176000,
+        "fragments": 11,
+        "settled": 48,
+        "searchSeconds": 9.145902004092932e-05
+      },
+      "binaryQuantizedMs": 176000
+    },
+    {
+      "windowId": "origin-07",
+      "sourceNodeIds": [
+        8459739699,
+        1205525756
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 1915,
+        "searchSeconds": 0.001915083033964038
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 599,
+        "searchSeconds": 0.0006298330845311284
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 599,
+        "searchSeconds": 0.000666750012896955
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-07",
+      "sourceNodeIds": [
+        1205525756,
+        8459739699
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 681504,
+        "fragments": 624,
+        "settled": 2399,
+        "searchSeconds": 0.002491833991371095
+      },
+      "contracted": {
+        "costMs": 681504,
+        "fragments": 33,
+        "settled": 332,
+        "searchSeconds": 0.0004093750612810254
+      },
+      "quantized": {
+        "costMs": 683000,
+        "fragments": 33,
+        "settled": 332,
+        "searchSeconds": 0.0004326249472796917
+      },
+      "binaryQuantizedMs": 683000
+    },
+    {
+      "windowId": "origin-08",
+      "sourceNodeIds": [
+        698282083,
+        11339482100
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 125175,
+        "fragments": 37,
+        "settled": 253,
+        "searchSeconds": 0.0003222080413252115
+      },
+      "contracted": {
+        "costMs": 125175,
+        "fragments": 12,
+        "settled": 43,
+        "searchSeconds": 8.254102431237698e-05
+      },
+      "quantized": {
+        "costMs": 126125,
+        "fragments": 12,
+        "settled": 43,
+        "searchSeconds": 7.049995474517345e-05
+      },
+      "binaryQuantizedMs": 126125
+    },
+    {
+      "windowId": "origin-08",
+      "sourceNodeIds": [
+        11339482100,
+        698282083
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 125175,
+        "fragments": 37,
+        "settled": 261,
+        "searchSeconds": 0.0003030000953003764
+      },
+      "contracted": {
+        "costMs": 125175,
+        "fragments": 12,
+        "settled": 54,
+        "searchSeconds": 8.166697807610035e-05
+      },
+      "quantized": {
+        "costMs": 126125,
+        "fragments": 12,
+        "settled": 54,
+        "searchSeconds": 8.841697126626968e-05
+      },
+      "binaryQuantizedMs": 126125
+    },
+    {
+      "windowId": "origin-08",
+      "sourceNodeIds": [
+        49625258,
+        12424513695
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 611072,
+        "fragments": 379,
+        "settled": 2176,
+        "searchSeconds": 0.00229350000154227
+      },
+      "contracted": {
+        "costMs": 611072,
+        "fragments": 22,
+        "settled": 297,
+        "searchSeconds": 0.00039054208900779486
+      },
+      "quantized": {
+        "costMs": 612375,
+        "fragments": 22,
+        "settled": 297,
+        "searchSeconds": 0.0003773750504478812
+      },
+      "binaryQuantizedMs": 612375
+    },
+    {
+      "windowId": "origin-08",
+      "sourceNodeIds": [
+        12424513695,
+        49625258
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 611072,
+        "fragments": 379,
+        "settled": 1762,
+        "searchSeconds": 0.0017958750249817967
+      },
+      "contracted": {
+        "costMs": 611072,
+        "fragments": 22,
+        "settled": 386,
+        "searchSeconds": 0.0004170839674770832
+      },
+      "quantized": {
+        "costMs": 612375,
+        "fragments": 22,
+        "settled": 386,
+        "searchSeconds": 0.0004580420209094882
+      },
+      "binaryQuantizedMs": 612375
+    },
+    {
+      "windowId": "origin-09",
+      "sourceNodeIds": [
+        54654091,
+        54364751
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 134711,
+        "fragments": 64,
+        "settled": 534,
+        "searchSeconds": 0.0007299170829355717
+      },
+      "contracted": {
+        "costMs": 134711,
+        "fragments": 33,
+        "settled": 221,
+        "searchSeconds": 0.0003626249963417649
+      },
+      "quantized": {
+        "costMs": 136500,
+        "fragments": 33,
+        "settled": 222,
+        "searchSeconds": 0.00033774995245039463
+      },
+      "binaryQuantizedMs": 136500
+    },
+    {
+      "windowId": "origin-09",
+      "sourceNodeIds": [
+        54364751,
+        54654091
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 132087,
+        "fragments": 45,
+        "settled": 544,
+        "searchSeconds": 0.0007168329320847988
+      },
+      "contracted": {
+        "costMs": 132087,
+        "fragments": 29,
+        "settled": 224,
+        "searchSeconds": 0.00033658300526440144
+      },
+      "quantized": {
+        "costMs": 133875,
+        "fragments": 29,
+        "settled": 225,
+        "searchSeconds": 0.0003654579631984234
+      },
+      "binaryQuantizedMs": 133875
+    },
+    {
+      "windowId": "origin-09",
+      "sourceNodeIds": [
+        1015189930,
+        54308420
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 192120,
+        "fragments": 83,
+        "settled": 940,
+        "searchSeconds": 0.0011412090389057994
+      },
+      "contracted": {
+        "costMs": 192120,
+        "fragments": 24,
+        "settled": 333,
+        "searchSeconds": 0.00047387508675456047
+      },
+      "quantized": {
+        "costMs": 193625,
+        "fragments": 24,
+        "settled": 333,
+        "searchSeconds": 0.0005339169874787331
+      },
+      "binaryQuantizedMs": 193625
+    },
+    {
+      "windowId": "origin-09",
+      "sourceNodeIds": [
+        54308420,
+        1015189930
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 243011,
+        "fragments": 86,
+        "settled": 947,
+        "searchSeconds": 0.0011064170394092798
+      },
+      "contracted": {
+        "costMs": 243011,
+        "fragments": 26,
+        "settled": 269,
+        "searchSeconds": 0.00039599998854100704
+      },
+      "quantized": {
+        "costMs": 244875,
+        "fragments": 26,
+        "settled": 270,
+        "searchSeconds": 0.000430332962423563
+      },
+      "binaryQuantizedMs": 244875
+    },
+    {
+      "windowId": "origin-10",
+      "sourceNodeIds": [
+        10158835399,
+        49162077
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 396289,
+        "fragments": 65,
+        "settled": 729,
+        "searchSeconds": 0.0009087909711524844
+      },
+      "contracted": {
+        "costMs": 396289,
+        "fragments": 15,
+        "settled": 141,
+        "searchSeconds": 0.00025104195810854435
+      },
+      "quantized": {
+        "costMs": 397500,
+        "fragments": 15,
+        "settled": 141,
+        "searchSeconds": 0.0002483749995008111
+      },
+      "binaryQuantizedMs": 397500
+    },
+    {
+      "windowId": "origin-10",
+      "sourceNodeIds": [
+        49162077,
+        10158835399
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 408728,
+        "fragments": 87,
+        "settled": 1433,
+        "searchSeconds": 0.0015810000477358699
+      },
+      "contracted": {
+        "costMs": 408728,
+        "fragments": 21,
+        "settled": 167,
+        "searchSeconds": 0.0002611670643091202
+      },
+      "quantized": {
+        "costMs": 410375,
+        "fragments": 21,
+        "settled": 167,
+        "searchSeconds": 0.00029066705610603094
+      },
+      "binaryQuantizedMs": 410375
+    },
+    {
+      "windowId": "origin-10",
+      "sourceNodeIds": [
+        10158835401,
+        10158835409
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 62844,
+        "fragments": 9,
+        "settled": 20,
+        "searchSeconds": 2.5165965780615807e-05
+      },
+      "contracted": {
+        "costMs": 62844,
+        "fragments": 3,
+        "settled": 7,
+        "searchSeconds": 1.166702713817358e-05
+      },
+      "quantized": {
+        "costMs": 63125,
+        "fragments": 3,
+        "settled": 7,
+        "searchSeconds": 1.308403443545103e-05
+      },
+      "binaryQuantizedMs": 63125
+    },
+    {
+      "windowId": "origin-10",
+      "sourceNodeIds": [
+        10158835409,
+        10158835401
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 62844,
+        "fragments": 9,
+        "settled": 160,
+        "searchSeconds": 0.0001658749533817172
+      },
+      "contracted": {
+        "costMs": 62844,
+        "fragments": 3,
+        "settled": 40,
+        "searchSeconds": 5.687493830919266e-05
+      },
+      "quantized": {
+        "costMs": 63125,
+        "fragments": 3,
+        "settled": 39,
+        "searchSeconds": 6.116705480962992e-05
+      },
+      "binaryQuantizedMs": 63125
+    },
+    {
+      "windowId": "origin-11",
+      "sourceNodeIds": [
+        10266218541,
+        13233928552
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 252482,
+        "fragments": 168,
+        "settled": 711,
+        "searchSeconds": 0.0008506670128554106
+      },
+      "contracted": {
+        "costMs": 252482,
+        "fragments": 7,
+        "settled": 179,
+        "searchSeconds": 0.0002631670795381069
+      },
+      "quantized": {
+        "costMs": 253000,
+        "fragments": 7,
+        "settled": 179,
+        "searchSeconds": 0.00026812509167939425
+      },
+      "binaryQuantizedMs": 253000
+    },
+    {
+      "windowId": "origin-11",
+      "sourceNodeIds": [
+        13233928552,
+        10266218541
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 252482,
+        "fragments": 168,
+        "settled": 520,
+        "searchSeconds": 0.000526249990798533
+      },
+      "contracted": {
+        "costMs": 252482,
+        "fragments": 7,
+        "settled": 42,
+        "searchSeconds": 5.862500984221697e-05
+      },
+      "quantized": {
+        "costMs": 253000,
+        "fragments": 7,
+        "settled": 42,
+        "searchSeconds": 6.095890421420336e-05
+      },
+      "binaryQuantizedMs": 253000
+    },
+    {
+      "windowId": "origin-11",
+      "sourceNodeIds": [
+        11346977876,
+        11346977870
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 44672,
+        "fragments": 13,
+        "settled": 43,
+        "searchSeconds": 5.4208096116781235e-05
+      },
+      "contracted": {
+        "costMs": 44672,
+        "fragments": 8,
+        "settled": 29,
+        "searchSeconds": 3.966700751334429e-05
+      },
+      "quantized": {
+        "costMs": 45250,
+        "fragments": 8,
+        "settled": 29,
+        "searchSeconds": 4.3625012040138245e-05
+      },
+      "binaryQuantizedMs": 45250
+    },
+    {
+      "windowId": "origin-11",
+      "sourceNodeIds": [
+        11346977870,
+        11346977876
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 44672,
+        "fragments": 13,
+        "settled": 64,
+        "searchSeconds": 7.687497418373823e-05
+      },
+      "contracted": {
+        "costMs": 44672,
+        "fragments": 8,
+        "settled": 39,
+        "searchSeconds": 5.2541960030794144e-05
+      },
+      "quantized": {
+        "costMs": 45250,
+        "fragments": 8,
+        "settled": 39,
+        "searchSeconds": 5.429098382592201e-05
+      },
+      "binaryQuantizedMs": 45250
+    },
+    {
+      "windowId": "origin-12",
+      "sourceNodeIds": [
+        87732164,
+        1890771264
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 169627,
+        "fragments": 22,
+        "settled": 142,
+        "searchSeconds": 0.00017741601914167404
+      },
+      "contracted": {
+        "costMs": 169627,
+        "fragments": 5,
+        "settled": 27,
+        "searchSeconds": 5.791697185486555e-05
+      },
+      "quantized": {
+        "costMs": 170000,
+        "fragments": 5,
+        "settled": 27,
+        "searchSeconds": 5.545897874981165e-05
+      },
+      "binaryQuantizedMs": 170000
+    },
+    {
+      "windowId": "origin-12",
+      "sourceNodeIds": [
+        1890771264,
+        87732164
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 169627,
+        "fragments": 22,
+        "settled": 143,
+        "searchSeconds": 0.00016875006258487701
+      },
+      "contracted": {
+        "costMs": 169627,
+        "fragments": 5,
+        "settled": 54,
+        "searchSeconds": 8.050003089010715e-05
+      },
+      "quantized": {
+        "costMs": 170000,
+        "fragments": 5,
+        "settled": 54,
+        "searchSeconds": 8.050003089010715e-05
+      },
+      "binaryQuantizedMs": 170000
+    },
+    {
+      "windowId": "origin-12",
+      "sourceNodeIds": [
+        87732566,
+        1497913449
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 109065,
+        "fragments": 17,
+        "settled": 101,
+        "searchSeconds": 0.0001372919650748372
+      },
+      "contracted": {
+        "costMs": 109065,
+        "fragments": 14,
+        "settled": 43,
+        "searchSeconds": 7.358298171311617e-05
+      },
+      "quantized": {
+        "costMs": 110125,
+        "fragments": 14,
+        "settled": 43,
+        "searchSeconds": 6.804207805544138e-05
+      },
+      "binaryQuantizedMs": 110125
+    },
+    {
+      "windowId": "origin-12",
+      "sourceNodeIds": [
+        1497913449,
+        87732566
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 103761,
+        "fragments": 14,
+        "settled": 81,
+        "searchSeconds": 9.316590148955584e-05
+      },
+      "contracted": {
+        "costMs": 103761,
+        "fragments": 11,
+        "settled": 44,
+        "searchSeconds": 5.6582968682050705e-05
+      },
+      "quantized": {
+        "costMs": 104500,
+        "fragments": 11,
+        "settled": 44,
+        "searchSeconds": 6.41250517219305e-05
+      },
+      "binaryQuantizedMs": 104500
+    },
+    {
+      "windowId": "origin-13",
+      "sourceNodeIds": [
+        87704747,
+        87745562
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 604128,
+        "fragments": 58,
+        "settled": 103,
+        "searchSeconds": 0.00010562501847743988
+      },
+      "contracted": {
+        "costMs": 604128,
+        "fragments": 1,
+        "settled": 46,
+        "searchSeconds": 4.22910088673234e-05
+      },
+      "quantized": {
+        "costMs": 604250,
+        "fragments": 1,
+        "settled": 46,
+        "searchSeconds": 4.470802377909422e-05
+      },
+      "binaryQuantizedMs": 604250
+    },
+    {
+      "windowId": "origin-13",
+      "sourceNodeIds": [
+        87745562,
+        87704747
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 604128,
+        "fragments": 58,
+        "settled": 70,
+        "searchSeconds": 6.25409884378314e-05
+      },
+      "contracted": {
+        "costMs": 604128,
+        "fragments": 1,
+        "settled": 13,
+        "searchSeconds": 1.2666918337345123e-05
+      },
+      "quantized": {
+        "costMs": 604250,
+        "fragments": 1,
+        "settled": 13,
+        "searchSeconds": 1.325004268437624e-05
+      },
+      "binaryQuantizedMs": 604250
+    },
+    {
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        2833013316,
+        10682894231
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 156125,
+        "fragments": 111,
+        "settled": 1129,
+        "searchSeconds": 0.001401207991875708
+      },
+      "contracted": {
+        "costMs": 156125,
+        "fragments": 47,
+        "settled": 454,
+        "searchSeconds": 0.0006949590751901269
+      },
+      "quantized": {
+        "costMs": 159250,
+        "fragments": 47,
+        "settled": 454,
+        "searchSeconds": 0.000672041904181242
+      },
+      "binaryQuantizedMs": 159250
+    },
+    {
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        10682894231,
+        2833013316
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 9544,
+        "searchSeconds": 0.012212457950226963
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3777,
+        "searchSeconds": 0.0053229579934850335
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3777,
+        "searchSeconds": 0.005704041919670999
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        44894439,
+        3497342105
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 306885,
+        "fragments": 114,
+        "settled": 3901,
+        "searchSeconds": 0.004944666987285018
+      },
+      "contracted": {
+        "costMs": 306885,
+        "fragments": 32,
+        "settled": 1723,
+        "searchSeconds": 0.0024114999687299132
+      },
+      "quantized": {
+        "costMs": 309000,
+        "fragments": 32,
+        "settled": 1710,
+        "searchSeconds": 0.002666959073394537
+      },
+      "binaryQuantizedMs": 309000
+    },
+    {
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        3497342105,
+        44894439
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 4,
+        "searchSeconds": 6.417045369744301e-06
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3,
+        "searchSeconds": 3.2919924706220627e-06
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3,
+        "searchSeconds": 3.3329706639051437e-06
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-15",
+      "sourceNodeIds": [
+        11134234347,
+        9886240959
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 383308,
+        "fragments": 252,
+        "settled": 2365,
+        "searchSeconds": 0.002906750072725117
+      },
+      "contracted": {
+        "costMs": 383308,
+        "fragments": 60,
+        "settled": 653,
+        "searchSeconds": 0.0009855420794337988
+      },
+      "quantized": {
+        "costMs": 387250,
+        "fragments": 60,
+        "settled": 654,
+        "searchSeconds": 0.0010379170998930931
+      },
+      "binaryQuantizedMs": 387250
+    },
+    {
+      "windowId": "origin-15",
+      "sourceNodeIds": [
+        9886240959,
+        11134234347
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 427708,
+        "fragments": 95,
+        "settled": 1154,
+        "searchSeconds": 0.0012482079910114408
+      },
+      "contracted": {
+        "costMs": 427708,
+        "fragments": 21,
+        "settled": 352,
+        "searchSeconds": 0.0004622919950634241
+      },
+      "quantized": {
+        "costMs": 429125,
+        "fragments": 21,
+        "settled": 352,
+        "searchSeconds": 0.0004797079600393772
+      },
+      "binaryQuantizedMs": 429125
+    },
+    {
+      "windowId": "origin-15",
+      "sourceNodeIds": [
+        11226350332,
+        11111055510
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 314141,
+        "fragments": 166,
+        "settled": 1911,
+        "searchSeconds": 0.002153499983251095
+      },
+      "contracted": {
+        "costMs": 314141,
+        "fragments": 49,
+        "settled": 533,
+        "searchSeconds": 0.0007317919516935945
+      },
+      "quantized": {
+        "costMs": 317250,
+        "fragments": 49,
+        "settled": 533,
+        "searchSeconds": 0.000820250017568469
+      },
+      "binaryQuantizedMs": 317250
+    },
+    {
+      "windowId": "origin-15",
+      "sourceNodeIds": [
+        11111055510,
+        11226350332
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 318476,
+        "fragments": 191,
+        "settled": 1884,
+        "searchSeconds": 0.0020881659584119916
+      },
+      "contracted": {
+        "costMs": 318476,
+        "fragments": 46,
+        "settled": 501,
+        "searchSeconds": 0.0006628329865634441
+      },
+      "quantized": {
+        "costMs": 321125,
+        "fragments": 46,
+        "settled": 502,
+        "searchSeconds": 0.0007598339579999447
+      },
+      "binaryQuantizedMs": 321125
+    },
+    {
+      "windowId": "origin-16",
+      "sourceNodeIds": [
+        1583449202,
+        9140759118
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 643120,
+        "fragments": 269,
+        "settled": 7729,
+        "searchSeconds": 0.010235583991743624
+      },
+      "contracted": {
+        "costMs": 643120,
+        "fragments": 86,
+        "settled": 2465,
+        "searchSeconds": 0.004021874978207052
+      },
+      "quantized": {
+        "costMs": 648875,
+        "fragments": 86,
+        "settled": 2469,
+        "searchSeconds": 0.004124291939660907
+      },
+      "binaryQuantizedMs": 648875
+    },
+    {
+      "windowId": "origin-16",
+      "sourceNodeIds": [
+        9140759118,
+        1583449202
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 595683,
+        "fragments": 241,
+        "settled": 8645,
+        "searchSeconds": 0.010991750052198768
+      },
+      "contracted": {
+        "costMs": 595683,
+        "fragments": 80,
+        "settled": 2778,
+        "searchSeconds": 0.004266124917194247
+      },
+      "quantized": {
+        "costMs": 600375,
+        "fragments": 80,
+        "settled": 2781,
+        "searchSeconds": 0.004773333086632192
+      },
+      "binaryQuantizedMs": 600375
+    },
+    {
+      "windowId": "origin-16",
+      "sourceNodeIds": [
+        3666852349,
+        708938749
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 569980,
+        "fragments": 272,
+        "settled": 7883,
+        "searchSeconds": 0.00970449997112155
+      },
+      "contracted": {
+        "costMs": 569980,
+        "fragments": 84,
+        "settled": 2555,
+        "searchSeconds": 0.0037546659586951137
+      },
+      "quantized": {
+        "costMs": 575875,
+        "fragments": 84,
+        "settled": 2563,
+        "searchSeconds": 0.004244750016368926
+      },
+      "binaryQuantizedMs": 575875
+    },
+    {
+      "windowId": "origin-16",
+      "sourceNodeIds": [
+        708938749,
+        3666852349
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 1,
+      "raw": {
+        "costMs": 617453,
+        "fragments": 241,
+        "settled": 8353,
+        "searchSeconds": 0.011159208021126688
+      },
+      "contracted": {
+        "costMs": 617453,
+        "fragments": 68,
+        "settled": 2685,
+        "searchSeconds": 0.005789624992758036
+      },
+      "quantized": {
+        "costMs": 621750,
+        "fragments": 68,
+        "settled": 2677,
+        "searchSeconds": 0.005455542006529868
+      },
+      "binaryQuantizedMs": 621750
+    },
+    {
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        230044564,
+        13471678203
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 457839,
+        "fragments": 146,
+        "settled": 12312,
+        "searchSeconds": 0.022214624914340675
+      },
+      "contracted": {
+        "costMs": 457839,
+        "fragments": 63,
+        "settled": 5795,
+        "searchSeconds": 0.011929957894608378
+      },
+      "quantized": {
+        "costMs": 461625,
+        "fragments": 63,
+        "settled": 5765,
+        "searchSeconds": 0.010195292066782713
+      },
+      "binaryQuantizedMs": 461625
+    },
+    {
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        13471678203,
+        230044564
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 19378,
+        "searchSeconds": 0.027280707960017025
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 8572,
+        "searchSeconds": 0.013387333950959146
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 8572,
+        "searchSeconds": 0.014558791066519916
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        13387406710,
+        12378160396
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 2.6669586077332497e-06
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 1.834006980061531e-06
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 0,
+        "searchSeconds": 5.00003807246685e-07
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        12378160396,
+        13387406710
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 19378,
+        "searchSeconds": 0.028133957996033132
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 8572,
+        "searchSeconds": 0.013738582958467305
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 8572,
+        "searchSeconds": 0.015629207948222756
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-18",
+      "sourceNodeIds": [
+        169675002,
+        4892607416
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 370286,
+        "fragments": 172,
+        "settled": 4693,
+        "searchSeconds": 0.006268874974921346
+      },
+      "contracted": {
+        "costMs": 370286,
+        "fragments": 45,
+        "settled": 1161,
+        "searchSeconds": 0.0019197500078007579
+      },
+      "quantized": {
+        "costMs": 373250,
+        "fragments": 45,
+        "settled": 1162,
+        "searchSeconds": 0.0019121250370517373
+      },
+      "binaryQuantizedMs": 373250
+    },
+    {
+      "windowId": "origin-18",
+      "sourceNodeIds": [
+        4892607416,
+        169675002
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 488787,
+        "fragments": 239,
+        "settled": 8610,
+        "searchSeconds": 0.010911084013059735
+      },
+      "contracted": {
+        "costMs": 488787,
+        "fragments": 42,
+        "settled": 2132,
+        "searchSeconds": 0.003283875063061714
+      },
+      "quantized": {
+        "costMs": 491375,
+        "fragments": 42,
+        "settled": 2126,
+        "searchSeconds": 0.0033537090057507157
+      },
+      "binaryQuantizedMs": 491375
+    },
+    {
+      "windowId": "origin-18",
+      "sourceNodeIds": [
+        449425614,
+        169623065
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 608112,
+        "fragments": 296,
+        "settled": 7514,
+        "searchSeconds": 0.009303250000812113
+      },
+      "contracted": {
+        "costMs": 608112,
+        "fragments": 55,
+        "settled": 1853,
+        "searchSeconds": 0.0026727080112323165
+      },
+      "quantized": {
+        "costMs": 611625,
+        "fragments": 55,
+        "settled": 1853,
+        "searchSeconds": 0.002953708986751735
+      },
+      "binaryQuantizedMs": 611625
+    },
+    {
+      "windowId": "origin-18",
+      "sourceNodeIds": [
+        169623065,
+        449425614
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 459672,
+        "fragments": 214,
+        "settled": 6873,
+        "searchSeconds": 0.008838374982587993
+      },
+      "contracted": {
+        "costMs": 459672,
+        "fragments": 36,
+        "settled": 1666,
+        "searchSeconds": 0.0025405000196769834
+      },
+      "quantized": {
+        "costMs": 462000,
+        "fragments": 36,
+        "settled": 1662,
+        "searchSeconds": 0.002561583067290485
+      },
+      "binaryQuantizedMs": 462000
+    },
+    {
+      "windowId": "origin-19",
+      "sourceNodeIds": [
+        67015149,
+        4028989372
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 518932,
+        "fragments": 184,
+        "settled": 5854,
+        "searchSeconds": 0.00732554099522531
+      },
+      "contracted": {
+        "costMs": 518932,
+        "fragments": 69,
+        "settled": 2251,
+        "searchSeconds": 0.0032458750065416098
+      },
+      "quantized": {
+        "costMs": 523250,
+        "fragments": 69,
+        "settled": 2257,
+        "searchSeconds": 0.0034627499990165234
+      },
+      "binaryQuantizedMs": 523250
+    },
+    {
+      "windowId": "origin-19",
+      "sourceNodeIds": [
+        4028989372,
+        67015149
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 416146,
+        "fragments": 143,
+        "settled": 5966,
+        "searchSeconds": 0.007798208040185273
+      },
+      "contracted": {
+        "costMs": 416146,
+        "fragments": 68,
+        "settled": 2172,
+        "searchSeconds": 0.0033338749781250954
+      },
+      "quantized": {
+        "costMs": 420375,
+        "fragments": 68,
+        "settled": 2174,
+        "searchSeconds": 0.0035551670007407665
+      },
+      "binaryQuantizedMs": 420375
+    },
+    {
+      "windowId": "origin-19",
+      "sourceNodeIds": [
+        67033093,
+        12557855712
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 637481,
+        "fragments": 198,
+        "settled": 6196,
+        "searchSeconds": 0.007926249993033707
+      },
+      "contracted": {
+        "costMs": 637481,
+        "fragments": 59,
+        "settled": 2365,
+        "searchSeconds": 0.00348829198628664
+      },
+      "quantized": {
+        "costMs": 641125,
+        "fragments": 59,
+        "settled": 2364,
+        "searchSeconds": 0.003580583957955241
+      },
+      "binaryQuantizedMs": 641125
+    },
+    {
+      "windowId": "origin-19",
+      "sourceNodeIds": [
+        12557855712,
+        67033093
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 341900,
+        "fragments": 119,
+        "settled": 4732,
+        "searchSeconds": 0.006098624900914729
+      },
+      "contracted": {
+        "costMs": 341900,
+        "fragments": 51,
+        "settled": 1650,
+        "searchSeconds": 0.0024457910330966115
+      },
+      "quantized": {
+        "costMs": 345000,
+        "fragments": 51,
+        "settled": 1652,
+        "searchSeconds": 0.002556084073148668
+      },
+      "binaryQuantizedMs": 345000
+    },
+    {
+      "windowId": "origin-20",
+      "sourceNodeIds": [
+        10879628140,
+        5369244126
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 11464,
+        "searchSeconds": 0.013955333968624473
+      },
+      "contracted": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3663,
+        "searchSeconds": 0.005252583068795502
+      },
+      "quantized": {
+        "costMs": null,
+        "fragments": 0,
+        "settled": 3663,
+        "searchSeconds": 0.005449457908980548
+      },
+      "binaryQuantizedMs": null
+    },
+    {
+      "windowId": "origin-20",
+      "sourceNodeIds": [
+        5369244126,
+        10879628140
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 475013,
+        "fragments": 269,
+        "settled": 7286,
+        "searchSeconds": 0.008710333029739559
+      },
+      "contracted": {
+        "costMs": 475013,
+        "fragments": 79,
+        "settled": 2512,
+        "searchSeconds": 0.0034465419594198465
+      },
+      "quantized": {
+        "costMs": 480125,
+        "fragments": 79,
+        "settled": 2511,
+        "searchSeconds": 0.003866374958306551
+      },
+      "binaryQuantizedMs": 480125
+    },
+    {
+      "windowId": "origin-20",
+      "sourceNodeIds": [
+        13687165283,
+        10951682635
+      ],
+      "reverseOfOriginal": false,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 144275,
+        "fragments": 68,
+        "settled": 1440,
+        "searchSeconds": 0.0017538750544190407
+      },
+      "contracted": {
+        "costMs": 144275,
+        "fragments": 35,
+        "settled": 666,
+        "searchSeconds": 0.0009497910505160689
+      },
+      "quantized": {
+        "costMs": 146500,
+        "fragments": 35,
+        "settled": 671,
+        "searchSeconds": 0.0010549579747021198
+      },
+      "binaryQuantizedMs": 146500
+    },
+    {
+      "windowId": "origin-20",
+      "sourceNodeIds": [
+        10951682635,
+        13687165283
+      ],
+      "reverseOfOriginal": true,
+      "internalEndpoints": 0,
+      "raw": {
+        "costMs": 145879,
+        "fragments": 59,
+        "settled": 995,
+        "searchSeconds": 0.0011507919989526272
+      },
+      "contracted": {
+        "costMs": 145879,
+        "fragments": 32,
+        "settled": 343,
+        "searchSeconds": 0.00046366697642952204
+      },
+      "quantized": {
+        "costMs": 148000,
+        "fragments": 32,
+        "settled": 343,
+        "searchSeconds": 0.0005237919976934791
+      },
+      "binaryQuantizedMs": 148000
+    }
+  ],
+  "queryChecksSeconds": 1.3650040419306606,
+  "allNativePointAliases": 89888,
+  "etaQualified": false,
+  "nationalArtifactBuilt": false,
+  "vercelQualified": false,
+  "modelChanged": false
+}

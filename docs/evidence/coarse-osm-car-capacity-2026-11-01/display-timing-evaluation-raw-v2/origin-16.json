@@ -1,0 +1,126 @@
+{
+  "origin": [
+    -116.375,
+    33.2559
+  ],
+  "diagnostic": {
+    "timings": {
+      "borrego-springs--anza": {
+        "ticks": 48188,
+        "kind": "road-foot",
+        "roadTicks": 48188,
+        "localGridTicks": 49528,
+        "localWitness": {
+          "terminalTicks": 672,
+          "edgeSeconds": 0,
+          "seedSeconds": 6107,
+          "seedCell": 701603,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "borrego-springs--julian": {
+        "ticks": 22754,
+        "kind": "road-foot",
+        "roadTicks": 22754,
+        "localGridTicks": 23460,
+        "localWitness": {
+          "terminalTicks": 596,
+          "edgeSeconds": 0,
+          "seedSeconds": 2858,
+          "seedCell": 617021,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -124974168,
+      "south": 29594664,
+      "step": 11352,
+      "width": 2014,
+      "height": 1241
+    },
+    "stats": {
+      "envelopeMs": 478.20604200000525,
+      "maskMs": 622.2123750000028,
+      "seedMs": 1383.3437080000003,
+      "fillMs": 198.96716699999524,
+      "contourMs": 21.579292000009445,
+      "displayMs": 2704.449833999999,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2497594,
+      "activeSpans": 1010453,
+      "settles": 1149760,
+      "maximumHeapEntries": 136597,
+      "selectedCells": 1150670,
+      "localCells": 1149760,
+      "roadOnlyCells": 910,
+      "edges": 17568,
+      "rings": 108,
+      "vertices": 10624,
+      "jsonBytes": 250023,
+      "retries": []
+    },
+    "phaseMs": 2907.878417,
+    "output": {
+      "filename": "origin-16-900.geojson",
+      "bytes": 250023,
+      "sha256": "0d51386c08f8627422a75c66d0576f61d9e41c4fe9a05d50c249b3d4e65f750d"
+    }
+  },
+  "productions": [
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": false,
+      "classified": {
+        "borrego-springs--anza": true,
+        "borrego-springs--julian": true
+      },
+      "frame": {
+        "west": -123988775,
+        "south": 30270363,
+        "step": 9001,
+        "width": 2015,
+        "height": 1240
+      },
+      "stats": {
+        "envelopeMs": 448.0680420000135,
+        "maskMs": 596.0155830000003,
+        "seedMs": 1207.9521669999958,
+        "fillMs": 191.74575000000186,
+        "contourMs": 19.274875000002794,
+        "displayMs": 2463.1542920000065,
+        "maximumBackingBufferBytes": 66494595,
+        "borrowedVertexWorkspace": true,
+        "samples": 2217221,
+        "activeSpans": 894864,
+        "settles": 1122647,
+        "maximumHeapEntries": 127364,
+        "selectedCells": 1123360,
+        "localCells": 1122647,
+        "roadOnlyCells": 713,
+        "edges": 15248,
+        "rings": 58,
+        "vertices": 8900,
+        "jsonBytes": 211889,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-16-720.geojson",
+        "bytes": 211889,
+        "sha256": "c73d94a253517b78a99f7f14975690202ad2bd4833ee5aaff3e341bb1d72877e"
+      },
+      "reusedFromV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-16.json"
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 427032576,
+    "heapTotal": 82935808,
+    "heapUsed": 14038976,
+    "external": 143928313,
+    "arrayBuffers": 141389547
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-16.json"
+}

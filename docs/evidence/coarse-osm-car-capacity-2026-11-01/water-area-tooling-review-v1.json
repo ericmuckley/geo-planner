@@ -1,0 +1,20 @@
+{
+  "id": "cached-water-area-tooling-review-v1",
+  "date": "2026-11-03",
+  "scope": "Read cached already-qualified primary header source only; no build/native/source/coordinate/area/model execution. APIs/behavior are specific to these pinned cached headers, not a claim about other library versions.",
+  "headerBindings": {
+    "data/coarse-quality/us-osm-native-build-v1/prepare/source-1/include/osmium/area/assembler.hpp": "912d947d5534d204b9e0805a9792102969324bdc7fd9afac4c2240ad8eb0a721",
+    "data/coarse-quality/us-osm-native-build-v1/prepare/source-1/include/osmium/area/assembler_config.hpp": "0e8c1e5cba2a060c1a18bb607beb804b213de5bdfcb0c1693c60fae5c00e4d05",
+    "data/coarse-quality/us-osm-native-build-v1/prepare/source-1/include/osmium/area/detail/node_ref_segment.hpp": "3868e88e8fda720ab5858776ec2dc42115a554c9500fa3f3fa585008966dbd5d"
+  },
+  "facts": [
+    "AssemblerConfig documents that multipolygon roles are ignored during construction; check_roles=true checks/reports them only afterward. Strict source-role acceptance must be explicit.",
+    "ignore_invalid_locations defaults false and must stay false; its comment warns enabling it can produce geometrically valid but wrong areas.",
+    "create_empty_areas defaults true, preserving invalid objects for detection rather than silently discarding.",
+    "Assembler::operator()(Way) reports different first/last native IDs but continues area construction, so its success alone does not prove native-ID closure.",
+    "NodeRefSegment comparison/equality uses locations, so this kernel cannot replace a native-ID endpoint topology proof."
+  ],
+  "proposedUse": "First establish complete source membership/native-ID closed chains; keep open/branch/touch/duplicate/short cases explicit. If reusing the cached kernel afterward, separately audit source roles, source-edge coverage, holes/containment/self-intersections and every reported repair/problem. Test distinct native IDs at identical coordinates and missing geometry before any country polygon producer. No area/routing/app admission follows from this review.",
+  "prototype": "water-ring-topology-prototype-v1.json",
+  "nationalOrPolygonAdmission": false
+}

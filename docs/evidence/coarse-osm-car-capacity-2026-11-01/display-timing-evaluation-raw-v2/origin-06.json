@@ -1,0 +1,166 @@
+{
+  "origin": [
+    -82.5515,
+    35.5951
+  ],
+  "diagnostic": {
+    "timings": {
+      "asheville-nc-360-inside": {
+        "ticks": 164421,
+        "kind": "road-foot",
+        "roadTicks": 164421,
+        "localGridTicks": 165007,
+        "localWitness": {
+          "terminalTicks": 303,
+          "edgeSeconds": 0,
+          "seedSeconds": 20588,
+          "seedCell": 780663,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "asheville-nc-360-outside": {
+        "ticks": 168887,
+        "kind": "road-foot",
+        "roadTicks": 168887,
+        "localGridTicks": 170501,
+        "localWitness": {
+          "terminalTicks": 997,
+          "edgeSeconds": 0,
+          "seedSeconds": 21188,
+          "seedCell": 720314,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "asheville-nc-600-inside": {
+        "ticks": 275986,
+        "kind": "road-foot",
+        "roadTicks": 275986,
+        "localGridTicks": 276229,
+        "localWitness": {
+          "terminalTicks": 157,
+          "edgeSeconds": 0,
+          "seedSeconds": 34509,
+          "seedCell": 1270516,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "asheville-nc-600-outside": {
+        "ticks": 306115,
+        "kind": "road-foot",
+        "roadTicks": 306115,
+        "localGridTicks": 307397,
+        "localWitness": {
+          "terminalTicks": 669,
+          "edgeSeconds": 0,
+          "seedSeconds": 38341,
+          "seedCell": 1319908,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "asheville-nc-720-inside": {
+        "ticks": 371545,
+        "kind": "road-foot",
+        "roadTicks": 371545,
+        "localGridTicks": 371718,
+        "localWitness": {
+          "terminalTicks": 766,
+          "edgeSeconds": 0,
+          "seedSeconds": 46369,
+          "seedCell": 2124305,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "asheville-nc-720-outside": {
+        "ticks": 374082,
+        "kind": "road-foot",
+        "roadTicks": 374082,
+        "localGridTicks": 374942,
+        "localWitness": {
+          "terminalTicks": 470,
+          "edgeSeconds": 0,
+          "seedSeconds": 46809,
+          "seedCell": 2089604,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -98749812,
+      "south": 25509232,
+      "step": 15148,
+      "width": 1830,
+      "height": 1366
+    },
+    "stats": {
+      "envelopeMs": 1153.8302909999984,
+      "maskMs": 845.9647079999995,
+      "seedMs": 4392.192084000002,
+      "fillMs": 234.6472500000018,
+      "contourMs": 52.70441600000049,
+      "displayMs": 6679.575041000004,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 9346712,
+      "activeSpans": 3562303,
+      "settles": 1156366,
+      "maximumHeapEntries": 571183,
+      "selectedCells": 1160155,
+      "localCells": 1156366,
+      "roadOnlyCells": 3789,
+      "edges": 25932,
+      "rings": 398,
+      "vertices": 16580,
+      "jsonBytes": 374103,
+      "retries": []
+    },
+    "phaseMs": 7455.270375,
+    "output": {
+      "filename": "origin-06-900.geojson",
+      "bytes": 374103,
+      "sha256": "402017ef560bfebc64eecbe8a002dee51e63bfefd2d7df6346b02ad5018f04d4"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "asheville-nc-360.geojson",
+        "bytes": 346806,
+        "sha256": "ad5269fa4a70c5436253ad1721b40f3cbd8c97a3b8d4954f8e185b03b90472f1"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "asheville-nc-600.geojson",
+        "bytes": 381768,
+        "sha256": "a774a06a71226eb075d38dfe56d232958d89833a7b2cb9e9bb412508bf5eda9c"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "asheville-nc-720.geojson",
+        "bytes": 388677,
+        "sha256": "a2ae1e1af720b3c29e62ea4e97c1dac45d7fef24f545185dc47f515c778ac4e9"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 421429248,
+    "heapTotal": 49381376,
+    "heapUsed": 13994472,
+    "external": 143937442,
+    "arrayBuffers": 141398676
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-06.json"
+}

@@ -1,0 +1,126 @@
+{
+  "windows": [
+    {
+      "id": "a",
+      "bbox": [
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "empty",
+      "bbox": [
+        2,
+        2,
+        3,
+        3
+      ]
+    }
+  ],
+  "sourceSnapshotUtc": "2026-10-25T21:21:21Z",
+  "selectedDecisionSha256": "b33fb1316caebd1316b33f161d913c72bcc57ef747b009dd3686904c22bdb39a",
+  "phase": "native_way_lineage_v1",
+  "stage": "controls",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-lineage-controls-v1",
+  "caps": {
+    "memoryBytes": 2147483648,
+    "tmpBytes": 67108864,
+    "fileBytes": 134217728,
+    "ownedBytes": 268435456,
+    "workerSeconds": 600,
+    "hostSeconds": 660
+  },
+  "dataCaps": {
+    "records": 2000000,
+    "rowBytes": 8388608,
+    "inputBytes": 1073741824,
+    "nodeCanonicalBytes": 1048576,
+    "geometryReferences": 4000000,
+    "relationReferences": 4000000,
+    "edges": 4000000,
+    "chainReferences": 8000000,
+    "querySettles": 20000000,
+    "queryHeap": 500000
+  },
+  "profiles": [
+    {
+      "id": "major-roads",
+      "roles": [
+        "motorway",
+        "motorway_link",
+        "trunk",
+        "trunk_link",
+        "primary",
+        "primary_link",
+        "secondary",
+        "secondary_link",
+        "tertiary",
+        "tertiary_link"
+      ]
+    }
+  ],
+  "mounts": {
+    "scripts/coarse_osm_bulk_pbf.py": "/code/coarse_osm_bulk_pbf.py",
+    "scripts/run_osm_lineage_v1.py": "/code/run_osm_lineage_v1.py",
+    "scripts/coarse_osm_lineage_v1.py": "/code/coarse_osm_lineage_v1.py",
+    "scripts/coarse_osm_lineage_v1_test.py": "/code/coarse_osm_lineage_v1_test.py",
+    "scripts/coarse_osm_backbone_v1.py": "/code/coarse_osm_backbone_v1.py",
+    "scripts/coarse_osm_backbone_v1_test.py": "/code/coarse_osm_backbone_v1_test.py",
+    "scripts/coarse_osm_match_v1.py": "/code/coarse_osm_match_v1.py",
+    "scripts/coarse_osm_match_v1_test.py": "/code/coarse_osm_match_v1_test.py",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "/code/coarse_osm_attribute_inventory_v1.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_path_features.py": "/code/coarse_path_features.py",
+    "scripts/coarse_timing_chains.py": "/code/coarse_timing_chains.py",
+    "scripts/coarse_timing_fragments.py": "/code/coarse_timing_fragments.py",
+    "scripts/coarse_timing_fragments_audit.py": "/code/coarse_timing_fragments_audit.py",
+    "scripts/coarse_timing_compatibility_audit.py": "/code/coarse_timing_compatibility_audit.py",
+    "scripts/analyze_timing_cache.py": "/code/analyze_timing_cache.py",
+    "scripts/analyze_timing_compatibility.py": "/code/analyze_timing_compatibility.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "scripts/coarse_timing_parquet.py": "/code/coarse_timing_parquet.py",
+    "scripts/coarse_backbone_paths.py": "/code/coarse_backbone_paths.py",
+    "scripts/coarse_backbone_codec.py": "/code/coarse_backbone_codec.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1"
+  },
+  "inputs": {
+    "scripts/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "scripts/run_osm_lineage_v1.py": "d0e2b71cc106f30181fdf81a0a446e1d5ff82bfc6fd9cdf299d99f0263a5a253",
+    "scripts/coarse_osm_lineage_v1.py": "347188b37cbd3bba955a694d78c3dac97427edd9634872b4f98d0df0a3c32192",
+    "scripts/coarse_osm_lineage_v1_test.py": "e4578f8c62476dc09c9f103b803f794bf1684dfb619e3753ad5e1e7bde3df995",
+    "scripts/coarse_osm_backbone_v1.py": "68093391fab2c074d9a99cb04e43116bcdf114451304d39a96c20b0d299c8504",
+    "scripts/coarse_osm_backbone_v1_test.py": "1e3951176c6ccd639ad17eabf6ac2ea8c72fca71776e515e963501c447790a2c",
+    "scripts/coarse_osm_match_v1.py": "8142d31f33ca556fc6af137aa3b71600f675d41965b4aa8880e5d500478ebb4a",
+    "scripts/coarse_osm_match_v1_test.py": "0060557cd02a4f124888780f35a1f8a8fdb6e2115e2f6be52f5fc0e2eb1ebc4a",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "scripts/coarse_timing_chains.py": "e2b3651c1ee402232a2502941d43430175fca674066b87e7a82253048fbf754f",
+    "scripts/coarse_timing_fragments.py": "98a0fa4bef9a694e507d9f114691811ad03a2050578bae6664083ca555c9d8ec",
+    "scripts/coarse_timing_fragments_audit.py": "6b9b87d6b5cfeeef8925119bad9842a30e82074fa65d1e0456d7b07c195198bf",
+    "scripts/coarse_timing_compatibility_audit.py": "b089d4777aa556490e4c41b4136f577d5bc846b8e54dc076749fb2586a023112",
+    "scripts/analyze_timing_cache.py": "912014f4b530821d80b43d3e38d10e6969d00decd28a7ebaade1c633598fefa8",
+    "scripts/analyze_timing_compatibility.py": "227bca34f3640c74f131ddb934b9be23e02c3aa3c7c6a4526fce906cc82919e7",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be"
+  },
+  "retainedReservationBytes": 64500000000,
+  "overallEnvelopeBytes": {
+    "memory": 4294967296,
+    "swap": 0,
+    "cpus": 2,
+    "seconds": 14400,
+    "retained": 68719476736
+  },
+  "scope": "Generic geometry-only metadata-preserving way-lineage contraction. Full capture/field/geometry/source-way lineage remains offline. Original junction/tag/node/window/endpoint anchors retained; way membership alone does not create interior anchors. No city/coordinate/query exceptions, PBF/provider/appDB or model change.",
+  "acceptance": "12Linux/no skips and independent tiny serialization/lineage proof; full original capture; all41original major-profile native distance pairs including removed internal-node endpoints, no resampling; unchanged components and full edge partition/geometry/metadata provenance. Native geometry only, not original83ORS accuracy cases.",
+  "binary": "Same little-endian routing/geometry/edge provenance formats as prototypeV1; additional selected-node alias edge.i32/prefix.f64/suffix.f64 are offline native-point query provenance, not a Vercel runtime fit claim."
+}

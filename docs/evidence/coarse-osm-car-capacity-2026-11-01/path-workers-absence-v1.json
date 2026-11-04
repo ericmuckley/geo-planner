@@ -1,0 +1,21 @@
+{
+  "status": "all_new_host_diagnostic_workers_absent",
+  "workers": [],
+  "readOnlyPreviewServers": [
+    {
+      "pid": 94382,
+      "args": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python",
+        "-B",
+        "-m",
+        "http.server",
+        "4717",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "data/coarse-quality/us-osm-car-access-preview-v1"
+      ]
+    }
+  ],
+  "scope": "Fresh host process argv inventory after terminal/closed stages. Rediscover instead of reusing recorded PIDs; no claim about unrelated services or Linux-container absence."
+}

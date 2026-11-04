@@ -1,0 +1,14 @@
+{
+  "auditor": "scripts/coarse_osm_car_spatial_audit_v1.py",
+  "auditorSha256": "ef7d7d6fbf4dd511b7eb9279c0bc0eab8d51cae9eff06eb212a343416d10bc85",
+  "referenceSha256": "3f36fa713b7ac0f38e1884ec6c37e07be037cc9629524fc23f742351e221330a",
+  "nativeSourceSha256": "6819366fd2bd52ead2142fca192f63138588895488831b99973d852e0df87776",
+  "hostControls": 11,
+  "seededWholeWirePermutations": 100,
+  "countryOperation": "Future separately frozen transform of closed national packed arrays; no original source or constructor replay.",
+  "checks": "All coordinates/flags/CSR rows, stable bijective Morton order, all costs/targets/physical reverse identities/overflow/turn pairs and sparse spatial-cell coverage; offline permutation tables never enter app footprint. Every original captured and four national query cases must preserve costs/failures.",
+  "nationalMaxOwnedBytes": 268435456,
+  "nationalMemoryBytes": 4294967296,
+  "spatialIndexBudgetBytes": 1048576,
+  "appOrSnappingQualified": false
+}

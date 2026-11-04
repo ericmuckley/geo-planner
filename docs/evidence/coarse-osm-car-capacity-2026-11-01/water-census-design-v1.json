@@ -1,0 +1,21 @@
+{
+  "id": "osm-water-metadata-feasibility-v1",
+  "date": "2026-11-03",
+  "objective": "Measure whether cached national OSM water features can support a generic replacement/refinement of coarse lake masks, before retaining geometry or changing the app.",
+  "selector": "All source ways/relations with natural=water OR waterway=riverbank OR landuse=reservoir. No place names, regions, coordinates, query IDs or chosen validation windows.",
+  "retained": "Fixed40 u64 metadata counters only, bounded GPF pending frame, standard complete-source receipt and guard records. No node/way coordinates, country dictionaries, polygon boundaries, selected ID lists, graph, raster or source copy.",
+  "sourceIdentity": "Use the original cached12229320016-byte source and exact source counts/semantic seal/SHA/MD5/publisher; immutable source validator and delta codec. New census consumer/recipe only; never old completed producers.",
+  "acceptance": [
+    "32 actual Linux source/water tests pass/no skips, original failed controls preserved.",
+    "New tiny actual PBF/controller positive pipeline and changed-source rejection pass before country freeze.",
+    "Exact full-source EOF/counts/semantic identity and pre/post source identity/stat match; counter type totals reconcile.",
+    "4GiB hard memory/zero swap/2CPU/network none/read-only source/64MiB owned/256MiB tmp/2700s worker/3000s host; prior64500000000 + all closed allocations +104857600 scratch + owned/tmp under64GiB.",
+    "Metadata feasibility is not polygon/shore/input coverage/ETA accuracy or app admission."
+  ],
+  "nextAfterCensus": "Use measured count/reference/member/encoded bounds to design a separately qualified water geometry/reference-closure stage. Retain incomplete/nested/unsupported features and all existing physical/accuracy gates; never patch a validation place or silently remove lakes.",
+  "deferred": [
+    "No national polygon construction before feasibility and independent geometry/coverage design.",
+    "No new data acquisition, routing/provider quota, database, environment, dependency, application integration or deployment.",
+    "No speed-ratio retuning or full timing candidate from the fixed-path sensitivity."
+  ]
+}

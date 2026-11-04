@@ -1,0 +1,28 @@
+{
+  "recipe": "docs/evidence/coarse-osm-extraction-2026-10-30/disk-capture-plan-controls-v1.json",
+  "sha256": "c0b0a3a1a868830f49ebd873699e3a155b603c314c26ca771546921a36dc8e5e",
+  "output": "data/coarse-quality/us-osm-disk-capture-controls-v1",
+  "newProducerFiles": {
+    "scripts/run_osm_disk_capture_v1.py": "9d45d2629151126fc79dd0dc9b1c10252bde87281f32b715a0c60e4faa650bca",
+    "scripts/coarse_osm_disk_resources_v1.py": "b7be2077bcde165f9d21057815c631346c0b45400bb08610ddfd902deedfe018",
+    "scripts/coarse_osm_disk_capture_v1_test.py": "ec5cf84f726e5b3f5bf3a4d09a621c2869c3d2ae0ba5a76c70221cd1784b0b5a"
+  },
+  "command": "python3 -B scripts/run_osm_disk_capture_v1.py docs/evidence/coarse-osm-extraction-2026-10-30/disk-capture-plan-controls-v1.json c0b0a3a1a868830f49ebd873699e3a155b603c314c26ca771546921a36dc8e5e",
+  "limits": {
+    "hostSeconds": 600,
+    "hostWorkSeconds": 570,
+    "workerSeconds": 300,
+    "passSeconds": 90,
+    "hashSeconds": 30,
+    "requiredInitialFreeBytes": 3221225472,
+    "lookupBytesPerPass": 67108864,
+    "codecRows": 2000000,
+    "codecCalls": 10000,
+    "cellCodecRows": 2000000,
+    "cellCodecCalls": 100000,
+    "maskReferences": 2000000,
+    "maskCalls": 100000,
+    "fineVerificationBytes": 67108864
+  },
+  "status": "Frozen before first execution; no replay after output exists"
+}

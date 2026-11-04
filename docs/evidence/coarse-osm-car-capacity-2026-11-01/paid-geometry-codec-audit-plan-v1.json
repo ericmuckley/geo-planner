@@ -1,0 +1,15 @@
+{
+  "source": "data/coarse-quality/us-osm-car-paid-geometry-country-v1",
+  "codec": "data/coarse-quality/us-osm-car-paid-geometry-codec-v1",
+  "output": "data/coarse-quality/us-osm-car-paid-geometry-codec-audit-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-closed-country-v1.json",
+  "manifestSha256": "7ff38ea50c6d8c758015ab04caae691ca97bd8710a4ff79d3b3b40e571023e29",
+  "bindings": {
+    "scripts/audit_osm_paid_geometry_codec_v1.py": "545fedc92e6cf3e13a59d4c8a2f87b80d8e02991c2535d22c8414eff2cc73779",
+    "scripts/coarse_osm_packed_codec_audit_v1.py": "e3b8218486311898bc9b14aa18f23c912638e1bff3c49ada5035e7fad0536f4b",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-closed-country-v1.json": "a2b7873bfedbb5b2893d5a02a5fba94e56950af6314616c90e850a121c5fe54f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/paid-geometry-codec-closed-v1.json": "b045760355e3fd053307551134d2d166a1ba0e5e15d5a1554493127a58f0e4c6"
+  },
+  "scope": "Host independent decode/compare every geometry byte; no native, provider or source decoder execution."
+}

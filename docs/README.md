@@ -1,10 +1,10 @@
 # Geo Planner documentation
 
-For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). Updated October 30, 2026. A fresh clone at `648c731` includes v9, floating controls and all prior qualification/reference work. New backbone preflight/codec/geometry/binary/routing/path-audit/cost-policy/path-control/exposure/distance/timing-input/importer/cache-analysis/compatibility/chain/exclusion/role-scope/fragment scripts, native-OSM capture controls/input-design evidence and current-doc updates are local/uncommitted. Raw sources, research datasets and secrets remain ignored.
+For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). Updated November 3, 2026. The current repository baseline is user commit`77d7818`; it includes the prior offline work and disk-selection drafts. The newer qualification/capture/census/lineage/car-policy code and evidence remain local/uncommitted. Large source/index/bank/archive/runtime assets and secrets remain ignored and absent from a fresh clone.
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-**Current work:** national bank capacity passes with identical 938 MB banks. Road capture stopped at the old 250,000 selected-element limit; all failure evidence is closed and preserved. Next is bounded disk-backed selection under the same 4 GiB memory, four-hour and 64 GiB storage limits. [Evidence and recovery](evidence/coarse-osm-extraction-2026-10-30/README.md). Deployed v9 is unchanged.
+**Current work:** the finer national road engine remains **rejected for app integration**:same80-route mean error33.73min versus v9’s30.00, with3 unavailable routes. The user chose to keep every accuracy gate. The raw water-data stage is now complete:all101.74million requested coordinates are independently exact;2,439,095 water features/2,648,285 rings preserve source edges, roles, coordinates and holes.72 invalid standalone ways/522 excluded relations remain explicit. All245 saved input/reference points are outside accepted water, including the old unsupported shoreline input. Known excluded-feature bounds overlap12 other points;one source-incomplete relation cannot be fully located. These are source observations, not proof of land or repaired routes. The908.22MB geometry is offline-only. Next qualify compact geography storage, then one generic mask policy and all original routing/accuracy/app gates. Production stays v9; app/env/DB/dependencies/deployment unchanged, new code/evidence local/uncommitted. [Results and recovery](evidence/coarse-osm-car-capacity-2026-11-01/README.md).
 
 
 ## Current documents
@@ -14,13 +14,19 @@ For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [t
 | [Agent handoff](agent-handoff.md) | Recovery checks, graph/data locations, restart commands and resume prompt |
 | [Implementation status](implementation-status.md) | Current capabilities, limits, code map and validation |
 | [Local development](local-development.md) | App setup and the separate experimental/provider APIs |
-| [Next steps](next-steps.md) | Qualify disk-backed selection after250kcapture stop |
+| [Next steps](next-steps.md) | Fit the national road graph into a deployable app |
+| [Native car construction](evidence/coarse-osm-car-capacity-2026-11-01/README.md) | National costs/storage, rejected finer candidate, path diagnosis and conservative turn proposal |
+| [Road-only car prototype](evidence/coarse-osm-car-prototype-2026-11-01/README.md) | Frozen costs/direction/access/turns, compact binary and independent source audit |
+| [Way-lineage geometry prototype](evidence/coarse-osm-way-lineage-prototype-2026-11-01/README.md) | Complete metadata/geometry/internal-point proof preceding car-cost qualification |
+| [Exact topology census](evidence/coarse-osm-topology-census-2026-11-01/README.md) | Complete national incidences/anchors/array bounds and independent derived audit |
+| [National footprint census](evidence/coarse-osm-national-footprint-2026-11-01/README.md) | Complete country counts, full-source guards and format bounds |
+| [Direct OSM prototype](evidence/coarse-osm-backbone-prototype-2026-10-31/README.md) | Complete native-ID geometry/contraction/footprint proof; next national screen scope |
 | [National execution/diagnostic evidence](evidence/coarse-osm-country-exec-2026-10-30/README.md) | Preserved guard stop/diagnostic,170-test correction and passed national census/probe |
 | [Countrywide helper result](evidence/coarse-osm-country-helper-2026-10-30/README.md) | 103 actual Linux controls; source/byte/index/lookup core proof, no national execution |
 | [Countrywide screen plan](evidence/coarse-osm-country-screen-plan-2026-10-29/README.md) | Fixed eight-shard design, resource arithmetic and qualification gates; no national run yet |
 | [Road-batch prototype](evidence/coarse-osm-way-batch-2026-10-30/README.md) | 206 helper/7controller controls; passed full source/batch/coordinate measurement |
 | [Typed-ID lookup work](evidence/coarse-osm-lookup-2026-10-30/README.md) | Six Linux controls; fixed replay passes with19.6%lower lookup time and identical results |
-| [Extraction prototype scope](evidence/coarse-osm-extraction-2026-10-30/README.md) | National capacity passes;250kcapture cap stop and disk-backed next step |
+| [Extraction prototype scope](evidence/coarse-osm-extraction-2026-10-30/README.md) | Complete capture/audits, matching/topology feasibility results and proposed architecture choice |
 | [Coarse estimator](coarse-estimator.md) | Implemented nationwide grid model, assumptions, sources and local Vercel evidence |
 | [Six-hour preflight](six-hour-preflight.md) | Unclipped planning, source gaps and the current resource screen |
 | [Two-hour regional baseline](two-hour-region.md) | Current graph's exact recipes, provenance, measurements and evidence |

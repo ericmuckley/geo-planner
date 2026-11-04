@@ -1,0 +1,17 @@
+{
+  "status": "backing_scope_labels_clarified_no_code_or_record_rewrite",
+  "originalControlsSha256": "8acf9b968fe2adb04058ad424a31d24a8a823d7cc948e9f8a5d69f46f70ff7ae",
+  "reason": "The two original conservativeSearchBackingBytes properties included the display allocation allowance. Their numbers are valid conservative field-plus-display bounds; the original property labels were too broad for search-only scope. Original evidence and checks stay unchanged.",
+  "sourceMaximum": 4096,
+  "resolvedArcs": 9703850,
+  "vertices": 5731903,
+  "searchFormula": "4*arcs + 2*vertices + 64*starts (heap borrows vertex buffer)",
+  "resolvedSearchBackingBytes": 50541350,
+  "preClosureSearchBackingBytes": 51075254,
+  "displayAllocationAllowanceBytes": 8548069,
+  "resolvedSearchAndDisplayConservativeBoundBytes": 59089419,
+  "preClosureSearchAndDisplayConservativeBoundBytes": 59623323,
+  "scratchLimitBytes": 67108864,
+  "codeChanged": false,
+  "accuracyOrScratchGateChanged": false
+}

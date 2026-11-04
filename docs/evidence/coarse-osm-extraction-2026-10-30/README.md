@@ -1,5 +1,9 @@
 # Complete road extraction and bounded national capture
 
+Updated October 31, 2026. **Latest: complete acquired-file capture, metadata inventory, continuous matcher V2 and independent saved-output audits passed. The data-enrichment strategy still misses its feasibility gate: only 21.650% raw geometric/numeric corridor opportunity before source/car/physical review.** All original 2,469 Census records/85,629 weighted midpoints/21 areas remain. V9 is unchanged; the next step needs a data-architecture choice. [Latest result and decision](#latest-completed-results-and-road-model-decision), [resume guide](../../agent-handoff.md), [next steps](../../next-steps.md). Earlier named stages retain their original scope.
+
+**Earlier checkpoint:**
+
 October 30,2026. **Lossless format/prefix and new controller pass; national capacity census V2 passes and complete filtered capture stopped at its250kselected guard.** V9 remains unchanged. This is offline raw input preparation, with no measured map/accuracy improvement. [Prior typed lookup result](../coarse-osm-lookup-2026-10-30/README.md).
 
 <a id="latest-national-result-and-safe-recovery"></a>
@@ -196,3 +200,253 @@ Osmium documents complete-way selection through nodes inside the extraction regi
 Host1845.746947seconds including binding/cleanup; worker1816.602107seconds. Kernel peak4GiB/cache reclaim,333558max events,oom0/oom_kill0; worker/client2/not OOM/independently absent. Closed62files/938,722,550bytes, conservative allocation940,490,752.14ignored bank parts still match accepted census hashes; this does not promote the stopped stage. Process rchar420,079,682,208includes multiple IO scopes, not authenticated fine IO or graph-search time. Source/fine/old failures unchanged. Unexecuted success-only closer/proof drafts were withdrawn; actual stop closer/proof executed/passed and are immutable.
 
 Next is separately versioned disk-backed primary/audit selected data and a native2Mselected-ID bridge. Same4GiB/zero swap/twoCPU/four-hour/64GiB global budget, original21windows and every source/geometry/independence/matching/model gate. New proposed2Munique/4Moccurrences,512MiBraw/state,1GiBnormalized output/8MiBselected row; source-copy/canonical4MiB/frame8MiB unchanged. Proposed SQLite files<=1.25GiB/cache8MiB each, OS file cap2GiB; new bank writes must match exact938,364,831byte accepted capacity output. Actual retained58,226,331,751 plus64MiBmetadata/256MiBtmp leaves10,157,600,665owned bytes. Worst-case2DBs2.5GiB +2journals4GiB +two banks1,876,729,662 +1GiBoutput +64MiBmetadata =9,996,902,206, below owned by160,698,459. Qualify arithmetic/SQLite/native beyond-old-cap and exact tiny output/tamper/ownership/lifecycle before any new national freeze. No request for a larger global budget or changed source/window/model scope.
+
+
+## Disk-backed selection qualification
+
+New primary/audit SQLite spools stream raw fields and output with fixed8MiBcache/1.25GiBpage cap each. Selection supports2Munique/4Mwindow occurrences,512MiBraw/state,1GiBoutput/8MiBselected row. Source copy/canonical4MiB/frame8MiB remain. Native source ABI6changes exactly the selected-count guard and ABI constant; typed64-bit Python buffer avoids a giant argument tuple. Every geometry/reference/metadata/semantic/EOF/independence guard remains.
+
+[V14recipe](qualification-plan-v14.json)/[freeze](qualification-freeze-v14.json) compiled the helper and passed71Linux tests, then its separately persisted four-pass reference stopped before source reads on `SQLite index arithmetic`. This was a qualification-fixture configuration error. Failed files/code/recipe remain immutable; [closed53files/3,366,421bytes](qualification-closed-v14.json), conservative5,070,848, workers absent.
+
+[V15recipe](qualification-plan-v15.json)/[freeze](qualification-freeze-v15.json), SHA`79289164e7c5a1ae7936543062fa8d05184d87e15ab640a6e09e0f36b34fa5b9`, corrects only the tiny reference index page/cache settings and reuses the compiled library. **71actual Linux tests/no skips pass**, including250,001SQLite raw nodes/500,002memberships, all caps/ABI/transactions/page-full/configuration/tamper/ownership controls, exact tiny independent output and zero-highway fine-file verification. [Result](qualification-raw/v15/controls/result.json).
+
+Persisted tiny output is1470bytes/SHA`dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c`,4objects/8memberships/18native visits; both primary/audit DBs sealed/closed and independently checked. All3fine input files unchanged, no copied fine index, two581byte banks. [Tiny proof](qualification-raw/v15/controls/tiny-proof.json).
+
+The separate native proof projects **2,000,000selected nodes**, IDs`9223372036852775808..9223372036854775807`, and compares every raw field and coordinate to an independent deterministic synthetic source formula. Complete native EOF/count/semantic/metadata/witness/field receipts pass. All full fields are saved in an ignored gzip archive; the saved proof independently checks every archived row and complete semantic seal without native/PBF decoding. [Boundary proof](qualification-raw/v15/controls/native-boundary-proof.json). This is synthetic boundary correctness, not national capture or accuracy.
+
+Host36.332697seconds including bindings/tests/proofs/cleanup; kernel137,768,960bytes/no OOM/swap. Closed40files/16,298,408bytes, conservative18,726,912; worker/client0/independently absent. [Closed](qualification-closed-v15.json), [cleanup](cleanup-audit-v15.json). Large archive/PBF/library remain ignored; small records mirrored. Library`data/coarse-quality/us-osm-country-controls-v14/build/country-screen.so`,2,004,888bytes/SHA`eaf28ec03eb32da954fedb68b300caa62a89cf29f28a158a94a39829c18b3600`. All11V14producers plus3V15producers/recipes are USED/immutable; no national source/fine/bank mount/read.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_qualification_v15.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_qualification_v15.py --local-assets
+```
+
+Controller: [controls recipe](disk-capture-plan-controls-v1.json)/[freeze](disk-capture-freeze-controls-v1.json),16actual Linux tests/no skips and complete tiny capture/reference/resource/lifecycle pass. [Closed28files/213,827bytes](disk-capture-closed-controls-v1.json), conservative1,609,728; host1.697620seconds including bindings/cleanup, worker/client0/absent. [Safe proof](verify_disk_capture_controls_v1.py). It reserves all58,226,331,751prior retained bytes,64MiBqualification(actual23,797,760),64MiBmetadata and256MiBtmp. Owned10,090,491,801; worst writable9,996,902,206. Every bank write size/hash must match the accepted bank receipt. National [recipe](disk-capture-plan-run-v1.json)/[freeze](disk-capture-freeze-run-v1.json), SHA`2942796a1920a862a2e524160247a0506dd143a2aff8111cdcaf754f2869d1be`, is USED/running at`data/coarse-quality/us-osm-disk-capture-run-v1/`. Rediscover its actual owner; no duplicate/replay/resume. Require complete two-pass capture/output/independent audit/resource/lifecycle before admission. No global budget/source/window/model change. App check197/typecheck/build pass. Latest base commit is`77d7818`(user commit); this resumed qualification/controller work remains local/uncommitted.
+
+
+### Saved publisher metadata and host containment diagnostic
+
+A separately frozen public-metadata attempt [V1](polygon-metadata-plan-v1.json) stopped on the host Python certificate trust error before a response body; [original failure/closure](polygon-metadata-closed-v1.json) is preserved. [V2](polygon-metadata-plan-v2.json) uses system curl with certificate verification enabled/user configuration disabled. Four successful metadata GETs return27,759body bytes in2.129823seconds; no PBF/source-road/routing-provider request. [Result](polygon-metadata-raw/v2/result.json), [transport](polygon-metadata-raw/v2/transport.json), [closed16files/35,604bytes](polygon-metadata-closed-v2.json). Both used producers/recipes remain immutable; no CA/environment/dependency changes.
+
+The archived US polygon file is from repository commit`9e71ba22cb4a7b7b1c4228031e2afdfc514d6b6e`, dated2025-07-31T12:51:53Z, before the acquired source's2026-10-25state. The bounded later-history query returned no file changes in its checked interval. Archived repository polygon SHA`69e21474d28b074d198ca504a516ddeafc75e6a2f483e9a6dc2169d7801f4ee6`; current deployed polygon SHA`5b36ffe960cba918b5b33bd998bca090ce4279828590dab382d097d4a3b7a2f3`. Bytes/vertices differ, as can happen with the publisher's documented effective-boundary processing; the cause of these particular differences is not independently established.
+
+[Host diagnostic recipe](polygon-review-plan-v1.json), SHA`f3b5f2b92530aa92817f30697f37d82d065018bed55027cfa9755d29200cc2ed`, pins those two small files and the original21windows. Seven host controls cover exact edges, holes, nonconvex cuts, disjoint/oriented rings, bounded numeric input and failure cases. **All21window rectangles lie strictly inside both saved polygons**, with no boundary intersection. Archived/current files each have two outer rings/no holes,438/428vertices. [Measured result](polygon-review-raw/v1/result.json), [closed3files/16,416bytes](polygon-review-closed-v1.json). The independent saved proof uses a separate ray/parametric clipping implementation and verifies all42window checks. Small polygon bytes are mirrored for fresh-clone proof; API/raw headers remain ignored. Polygon data: ©OpenStreetMap contributors; publisher Geofabrik. [Publisher source/history](https://github.com/geofabrik/polygons_download.geofabrik.de).
+
+This is host diagnostic evidence, not Linux/native/timing admission, OGC topology validation, proof of the effective deployed boundary on the source date, or proof about omitted long road segments. Source/publisher/model admission flags stayfalse. The metadata/review work overlapped the running national capture; elapsed scopes are shared-host processing, not isolated throughput or graph-search measurements.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_polygon_review_v1.py
+PYTHONPATH=scripts python3 -B -m unittest coarse_osm_polygon_review_v1_test
+```
+
+
+### Earlier web-only publisher review
+
+The official [polygon-history repository](https://github.com/geofabrik/polygons_download.geofabrik.de) and its [README](https://github.com/geofabrik/polygons_download.geofabrik.de/blob/master/README.md), [contribution guidance](https://github.com/geofabrik/polygons_download.geofabrik.de/blob/master/CONTRIBUTING.md) and [current deployed US polygon](https://download.geofabrik.de/north-america/us.poly) were read before the separately frozen metadata snapshot. Repository/deployed polygons may differ after effective-boundary processing; current URLs alone do not bind the acquired2026-10-25PBF. At that checkpoint no local checksum-bound polygon snapshot or containment test existed. The later saved snapshot/diagnostic above supersedes that preparation state, with source/model admission still false.
+
+Earlier closure/reader preparation: the unexecuted V2closer was prepared to preserve large SQLite sidecars without duplicate evidence copies; the actual completed closure now uses it. The facts reader's selected-row cap became8MiB and missing/empty highway failed explicitly;11host controls passed before the subsequent actual Linux qualification. All source/provider/model semantics remained unreviewed.
+
+
+## National disk-backed capture passed and closed
+
+[Used recipe](disk-capture-plan-run-v1.json), SHA`2942796a1920a862a2e524160247a0506dd143a2aff8111cdcaf754f2869d1be`, completed at`data/coarse-quality/us-osm-disk-capture-run-v1/`. Two normal-EOF passes each have1,606,229,364nodes/162,688,797ways/1,624,265relations and GPF1seal`209cc5927bdd36c667277afd06a4ba301c753797dbf518de7df84e78301d9b16`. Total3,541,084,852visits. [Controller result](disk-capture-raw/run-v1/result.json), [complete extraction result](disk-capture-raw/run-v1/extraction-result.json), [all21window ledger](disk-capture-raw/run-v1/window-ledger.json).
+
+| Measured scope | Result |
+| --- | --- |
+| Normalized output |477,852,579bytes/SHA`efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4` |
+| Records/occurrences |1,368,072/1,368,072 |
+| Types |1,123,919nodes;239,253ways;4,900relations |
+| Rebuilt cell banks |938,364,831bytes each/14parts; byte-identical to accepted census |
+| Primary/audit SQLite files |357,265,408/336,826,368bytes; sealed/integrity checked/closed |
+| Canonical raw bytes per independent store |229,630,917 |
+| Live batch conservative heap peak |35,654,012bytes, below128MiB |
+| Full highway delivery per pass |52,053,199ways/509,547,029references |
+| Certified-outside ways / fine references per pass |51,813,944 /1,530,046 |
+
+The legacy`examinedHighwayReferences`receipt is508,093,741because the bounded-probe trace skips1,148ways with>1024refs. Complete mode queues those ways before that branch; the full delivered509,547,029references include them. These scopes differ; no reference is trimmed to match an old counter or an example.
+
+Each fresh readonly fine view compares all1,606,229,364source node rows and completes one whole-file verification,43,472,344,176payload bytes/pass. [Fine revalidation](disk-capture-raw/run-v1/fine-revalidation.json). No duplicate fine index/deletion/repair; prior failed admissions remain unchanged. Fine lookup authenticates2,260,508,334,182shard bytes/pass. Hash/format2492.398656/2556.247047s and block decode328.023635/338.784789s are measured separately; these are not physical disk-byte or graph-search metrics.
+
+Native loops5651.571356/5947.101867s include callbacks/lookup/storage; framing99.647079/110.575269s and post-source hashes11.011113/10.392395s are separate. Complete protected extraction11942.319828s includes framing, callbacks, fresh fine validation, bank writes, independent materialization, output audit and close. Host11993.307143s includes bindings/cleanup (~3h20m). Shared-host offline processing under the frozen four-hour limit; no query/Vercel runtime forecast.
+
+Actual4GiB/zero swap/twoCPU/original21windows/64GiBretained envelope remains. Kernel peak4GiB includes page cache/reclaim(max3507426),oom0/oom_kill0. Worker/client0/not OOM/owned removal/separate absence pass. [Metrics](disk-capture-raw/run-v1/metrics-end.json), [cleanup](disk-capture-cleanup-run-v1.json). [Closed249files/3,049,088,532bytes](disk-capture-closed-run-v1.json), conservative3,089,563,648. Used`close_osm_disk_capture_v2.py`is immutable.31large bank/SQLite/output assets remain ignored; small records/directories mirrored. Every old source/failed SQLite/index/prefix/attempt is preserved.
+
+Default and local saved proofs pass. Local hashes only new derived files, verifies both readonly SQLite tables/key sets/memberships/raw bytes/integrity and independently reconstructs every output raw field/geometry seal/order/window ledger. No old fine/PBF/native execution. It already passed; do not repeat the~3GBscan just for docs.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_disk_capture_run_v1.py
+# Optional closed-derived-asset recheck only:
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_disk_capture_run_v1.py --local-assets
+```
+
+This qualifies complete acquired-file capture for the validation dataset. Source/publisher adequacy, usable driving limits, matching/physical/accuracy/package/API/model gates remainfalse/unadmitted. Generic routing rules and deployed v9 are unchanged. No routing-provider call, DB write or app deployment.
+
+
+## Facts reader Linux controls passed
+
+[Recipe](attribute-controls-plan-v1.json), SHA`7f0f99f0b109a1ebb132496e5cb1d7e2b0dcb9a1f47c445ea8f4b276106c9e7e`, was used after the national worker closed.15host preparation tests(11reader+4controller), then11actual Linux tests/no skips and full tiny facts preservation pass. [Host preparation](attribute-host-controls-v1.json), [result](attribute-controls-raw/v1/result.json), [facts](attribute-controls-raw/v1/facts.json). Source raw/ordered geometry/metadata, numeric mph/kmh, private access, conditional scopes and barriers remain intact. Car permission staysunreviewed/usableForTiming=False; this adapter has read no national records.
+
+Actual512MiB/zero swap/oneCPU/32MiBtmp+file limits/network none/readonly/no capabilities. Peak48,295,936bytes/no OOM; protected0.058038s, host0.702448s. [Closed12files/13,163bytes](attribute-controls-closed-v1.json), conservative1,208,320; worker/client0/independently absent. Four facts/controller files and used recipes are immutable.
+
+The original saved V1verifier compared Decimal-rounded88.51392to the binary product`55*1.609344`(88.51392000000001), failing by one ULP. [Original verifier/failure receipt](attribute-verifier-stop-v1.json) is preserved. New V2uses the exact Decimal unit conversion and passes; no source/parser/producer/data/policy change.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_controls_v2.py
+```
+
+## Raw metadata inventory controls passed; target controller finished
+
+New three producers implement a bounded typed node/canonical-byte arena, exact source-field/geometry-seal validation, raw speed/unit/scope/access/direction/role counts and spherical clipped-length metrics. Overlapping windows are unioned for aggregate length. All records/areas remain included; permissions/usable limits/matching/source adequacy/costs stay unreviewed/false.
+
+[Controls recipe](attribute-inventory-plan-controls-v1.json), SHA`4892fd1fe53b154b2727431421d5accd1e99b84aeaa53f05bf333f20d0aaf0cf`, passes8actual Linux tests/no skips and tiny4record/2window positive inventory. [Closed12files/23,734bytes](attribute-inventory-closed-controls-v1.json), conservative1,216,512; peak22,913,024bytes/no OOM, worker/client0/absent. [Safe proof](verify_attribute_inventory_controls_v1.py). All used producers/recipes immutable.
+
+[Actual recipe](attribute-inventory-plan-run-v1.json), SHA`a406a2202962e8e20fcbfa20768534b4b5a507d30c715a2d5517cca91a7843db`, was USED at`data/coarse-quality/us-osm-attribute-inventory-run-v1/`. The controller now reports exit0 in36.439003seconds. Target inventory has not yet been closed/independently verified or interpreted in this checkpoint.512MiB/zero swap/oneCPU/32MiBtmp/file limits/network none/readonly input;300sworker/360shost,256MiBnode arena/2Mrecords/4Moccurrences/4Mrefs/1GiBinput/8MiBrow caps. It reads qualified captured JSONL only, not PBF/old fine/native helper/provider/DB. Close once with`close_osm_attribute_inventory_v1.py run`, then independently verify saved raw statistics. Never equate raw tag presence/clipped source length with usable limits or matched-route coverage.
+
+A documentation write-target error during this update was caught by relative-link checks. This unsealed report was restored from its Git baseline plus recorded update blocks and saved measurement records; no frozen recipe, producer, raw/closed record or data asset was changed.
+
+
+## Captured metadata inventory passed and independently audited
+
+The [run recipe](attribute-inventory-plan-run-v1.json), SHA`a406a2202962e8e20fcbfa20768534b4b5a507d30c715a2d5517cca91a7843db`, is USED/passed/closed. All1,368,072records/21areas,1,530,030ordered way references, raw node/way seals and geometry dependencies pass. [Saved inventory](attribute-inventory-raw/run-v1/inventory.json), SHA`bbf6ab5238a8e63af7c3399132eeac2355d3750d4ec07837f99091322af76f09`. No source/permission/matching/model gate is promoted.
+
+| Raw numeric tag presence | Captured clipped km | Numeric base-tag length | Numeric without additional speed scopes |
+| --- | ---: | ---: | ---: |
+| Every captured highway role |27,228.499|11.921%|11.121%|
+| Supported road roles, including service roads/links |18,801.017|17.189%|16.031%|
+| Motorway |644.530|91.717%|65.402%|
+| Primary |746.156|64.789%|63.266%|
+| Secondary |1,009.746|47.834%|47.455%|
+| Residential |6,580.490|11.398%|11.387%|
+| Service |7,296.537|3.725%|3.722%|
+
+20,602of239,253ways have a plain numeric base tag;19,610also have no additional speed scopes. Supported roles account for141,734ways;20,474numeric/19,482unscoped.28,556captured nodes have a barrier tag. Counts retain every original area, unknown role/unit and scope/access/direction case. Tags are source limits, not measured driving speeds or reviewed car permissions. These source-polyline lengths are **not** the original clipped Census-km denominator; these percentages cannot establish success or failure of the>=50%unique plausible usable-limit Census-km gate. Geographic variation is descriptive of the original validation areas, not nationwide coverage.
+
+Host36.439003seconds, protected35.649053seconds (input checks/stream/geometry/inventory/output; not graph search). Actual512MiB memory/zero swap/oneCPU/32MiBtmp/file limits/network none/readonly input. Kernel peak536,870,912bytes includes page cache;974memory.max events with0OOM/0OOM kills. No PBF/fine/native-helper/provider/DB reads. [Closed11files/50,152bytes](attribute-inventory-closed-run-v1.json), conservative allocation1,228,800; client/worker0 and independently absent. All used producers/recipes/closer are immutable. Retain the original capture3,089,563,648bytes plus this result in later budgets.
+
+[Current safe proof](verify_attribute_inventory_run_v2.py) passes in default mode and with`--local-assets`. Optional mode independently streams the477MBcaptured JSONL, reconstructs every tag count and every area/role length using separate slab clipping/haversine calculations and typed node coordinate arrays, and checks the exact input hash. It does not call the inventory producer or read source PBF/old fine/native/Docker. Full input geometry dependency seals were also checked by the bounded producer and earlier independent capture proof. Do not repeat the local scan merely for documentation. V1default proof passed but optional byte accounting used UTF-8characters instead of sealed canonical ASCII escaping (10bytes); [failure](attribute-inventory-verifier-stop-v1.json) and V1remain preserved. V2fixes that verifier convention only; measured producer/data unchanged.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_inventory_run_v2.py
+# Optional closed derived-input audit, already passed:
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_inventory_run_v2.py --local-assets
+```
+
+Next diagnostic: compare raw numeric-tag geometry opportunity with **all2,469original Census arc/window records**, keeping their saved weights/classes/areas. A generous geometric union can test whether enough potential exists before implementing full semantic/connected matching. It cannot establish car permission, unique matches, source adequacy or usable speed coverage. Freeze exact inputs/25m/15degree/midpoint rules/caps/implementation before actual access, qualify synthetic controls first, and preserve failures rather than selecting easier roads or dropping areas.
+
+
+## Census geometry opportunity passed; full matching remains
+
+The [frozen actual recipe](speed-opportunity-plan-run-v1.json), SHA `63ce0dc1c1d0b97aded04027b8367f71700d5aa11a50944cabf1005a85def8ce`, is USED/passed/closed. Ten actual Linux synthetic controls and a complete split-way positive fixture passed first ([controls closure](speed-opportunity-closed-controls-v1.json)). The actual diagnostic retains every original **2,469 arc/window record, 2,078.237959868 Census km, 85,629 weighted midpoints, 21 areas and 85/105 source class**. All 1,368,072 captured records and 1,530,030 way references were read with unchanged input hash. It clips captured segments to their original windows and preserves the frozen <=25 m distance/midpoint spacing and <=15 degree undirected tangent rules.
+
+| Captured geometry category | Aligned Census km | Aligned sample weight | Whole-arc opportunity at >=80% union |
+| --- | ---: | ---: | ---: |
+| Any captured highway | 2,073.235 | 99.759% | 99.852% |
+| Any maxspeed-family tag, including symbolic/scoped/annotation | 1,682.135 | 80.940% | 78.746% |
+| Plain numeric base maxspeed | 1,678.197 | 80.751% | 78.386% |
+| Numeric base without additional speed scopes | 1,383.084 | 66.551% | 62.351% |
+
+[All results and area/class breakdowns](speed-opportunity-raw/run-v1/opportunity.json), SHA `e6d4c2c8817b84e19f01eb3fbc2644fd2dc4ec3a9bbf6d1738d0bdbf1ce599bc`. Whole-arc opportunity deliberately counts the entire source arc when its geometric union reaches 80%; it is an optimistic category bound under this sampling rule, not observed matched/usable km. The 17.189% raw supported-road-polyline statistic and 80.751% Census-weighted statistic use different denominators. The data therefore supports continuing with native matching; the earlier sparse overall tag presence does not demonstrate a failed Census feasibility screen.
+
+These unions can mix separate, disconnected or competing ways and ignore access, direction, grade, conflicting limits and road identity. They prove neither a unique plausible connected match nor a usable car limit. Source-date publisher adequacy and all original matching/physical/model gates remain false. No original 50% usable-limit/matching gate is admitted, and no nationwide accuracy claim follows from these validation areas.
+
+Host **31.236569 s**, protected **30.244511 s** (bindings/streamed node coordinates/segment/sample unions/output, not graph search or app latency). Actual 512 MiB/zero swap/one CPU/32 MiB tmp/file/network none/read-only inputs; kernel peak 536,870,912 bytes includes cache/reclaim, 81 memory.max events, 0 OOM/0 OOM kills. 3,658,273 bin visits/942,969 final comparisons stayed below frozen caps. [Closed 13 files/1,476,811 bytes](speed-opportunity-closed-run-v1.json), conservative allocation 2,674,688; worker/client zero and independently absent. All four used producers, recipes and closed records are immutable. Source PBF/fine/native/provider/DB reads: zero.
+
+[Current saved proof](verify_speed_opportunity_v2.py) passes in default and optional original-small-span modes. It independently reconciles every arc/window/class summary, sample mask weight and original denominator. V1 default proof passed; its optional exact-float comparison failed on 10 sourceKm sums by roundoff. [Preserved failure](speed-opportunity-verifier-stop-v1.json); V2 uses the existing 1e-9 km reconciliation tolerance for that comparison, changing no data/producer.
+
+A [separate full-mask audit](speed-opportunity-independent-geometry-v1.json) independently streamed the derived input, used separate slab clipping, dot/cos tangent, projection/atan2 distance, numeric classification and a different bin size, and reconstructed **every one of the 85,629 four-category midpoint masks exactly**. Hash `0ac85754d605b4c0bdcb86da86a02c0680fc16a47b2811e1126915095746d001`; 2,289,677 bin visits/2,166,262 comparisons, 6.439517 s host audit. This verifies the saved geometric statistic, not road identity. Default proof reads the small audit/mirrors only; do not repeat the derived-input scan for docs.
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_speed_opportunity_v2.py --stage run
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_speed_geometry_v1.py
+# Optional original920KBsaved Census span audit, already passed:
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_speed_opportunity_v2.py --stage run --local-assets
+```
+
+Next: a native OSM geometry adapter and bounded endpoint-connected/terminal-fragment matcher, using every captured alternative and unchanged source weights. OSM ways must split at shared native node identities; no coordinate-only joins, invented connectors or Overture attribute conversion. Keep raw speed/access/direction/structure context and unresolved alternatives visible. Qualify synthetic matching/ambiguity/junction/resource controls before any new exact actual run; native applicability/source adequacy and independent deterministic match review still precede feasibility/model admission.
+
+
+## Native connected matcher controls passed; actual recipe frozen
+
+Fifteen host and actual Linux tests/no skips pass, including a separate reference fragment/search implementation. Native ways split at shared node IDs; coincident coordinates without matching IDs do not connect. Parallel/grade/unknown-role alternatives, node metadata/geometry drift, missing nodes, barriers, raw private/conditional/oneway tags, overhanging terminals, reversal, every input/index/projection/search cap and original denominator are retained/tested. Native tags remain outside the Overture attribute parser and all car/timing/physical/source/model flags remain false.
+
+[Controls closure](native-match-closed-controls-v1.json):17files/25,911bytes, conservative1,294,336; host0.702697s/protected0.026336s/peak24,793,088/no OOM/worker0/absent. [Safe proof](verify_native_match_controls_v1.py). All four new producers and used recipes are immutable. [Actual recipe](native-match-plan-run-v1.json), SHA `251fda35d24c5de9433584fe4132170ba9e06f5fd218250201d084e451259ca9`, is frozen for one later execution at `data/coarse-quality/us-osm-native-match-run-v1/`. No actual result at this checkpoint. Read-only derived JSONL/original Census spans only,1GiB/zero swap/oneCPU/1800sworker/1860shost/64MiBtmp/128MiBfile/512MiBowned. One full captured geometry-seal/node traversal plus21rebound window traversals; no sourcePBF/fine/native/provider/DB. Emit every original Census record and capped/unknown alternative, per-window native-part bindings, all area/class summaries and deterministic50record review selection. No usable-match or accuracy admission. Never replay an existing root.
+
+
+## Native matcher V1 completed; conservative geometry bottleneck measured
+
+[Actual recipe](native-match-plan-run-v1.json), SHA `251fda35d24c5de9433584fe4132170ba9e06f5fd218250201d084e451259ca9`, is USED/passed as a diagnostic/closed. Every original 2,469 arc/window record, 2,078.237959868 Census km and 85,629 midpoint weight is preserved; no search/projection cap fired. [Report](native-match-raw/run-v1/report.json), SHA `fac07762233a9c99ad6a8646c9636d0320af93cbd3326fad6dc99143b4db182f`.
+
+| Acquired-file geometry outcome | Records | Original Census km |
+| --- | ---: | ---: |
+| Unresolved aligned alternatives | 2,162 | 1,865.739 |
+| Multiple geometric paths | 151 | 98.363 |
+| Single geometric path | 155 | 114.135 |
+| No path under these rules | 1 | 0.000364 |
+
+Single paths whose parts all have unscoped numeric base limits support **56.929704 km / 2.7393%** of the original denominator. This is an unqualified geometric/numeric opportunity, not usable car coverage. It is below the original 50% gate even before native semantic/source/physical checks. No feasibility/model admission follows. It does not establish poor OSM geometry or prove that another generic matcher cannot work: the separate 80.751% numeric union statistic remains valid under its own scope.
+
+Host **163.470526 s**, protected **162.488227 s**, including complete input seals/ordered node geometry and 21 rebound derived-input window traversals, adaptation/sampling/fragment enumeration/output; not graph search/app latency. Actual 1 GiB/zero swap/one CPU/64 MiB tmp/128 MiB file/512 MiB owned bounds, network none/read-only inputs. Kernel peak 1,073,741,824 bytes includes page cache; 977 memory.max events, 0 OOM/0 OOM kills. [Closed 76 files/31,043,244 bytes](native-match-closed-run-v1.json), conservative allocation 33,492,992; worker/client zero and independently absent. Files over 1 MiB remain ignored; all small records are mirrored. All used producers/recipes/closer/evidence immutable.
+
+[Independent saved audit](native-match-independent-audit-v1.json) passed: all 24,946 aligned native-part bindings reconstructed from the separate sealed read-only audit SQLite (including full raw tags/field/ordered node/geometry/record seals), every 3,980 saved candidate variant mask/weight/true node-ID join, all area/class/arc weights and the exact deterministic 50-record review selection. Audit 6.735768 s. Shared qualified numeric-unit parser is explicit. This is not independent exhaustive geometric enumeration or physical road review. The audit reads derived SQLite/output/small Census spans, never original PBF/fine/native/provider/application DB. Source adequacy, access/direction/grade/restriction applicability, physical identities and usable timing remain unqualified. Safe default proof uses saved small records/audit only:
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_native_match_run_v1.py
+# Optional closed derived-output/SQLite audit, already passed:
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_native_match_run_v1.py --local-assets
+```
+
+The same fixed saved-output audit diagnoses 34,615 unrepresented part occurrences (parts can repeat across source arcs). **19,728 are at most 25 m long**. Reasons include 23,090 unsupported-role occurrences, 5,116 insufficient-projection-progress, 4,158 no-eligible-variant and 2,052 projection-tangent mismatch. Insufficient progress affects 1,702 arcs / 1,489.876 original km; unsupported roles affect 1,248 / 1,061.738 km. Reason exposures overlap and are not an additive partition. Numeric results and all original failed/unknown cases remain unchanged.
+
+Next hypothesis: map native geometry to continuous progress along the unchanged Census source polyline, allowing short and zero-midpoint native junction connectors to retain true node-ID connectivity. Keep the **same original positive midpoint weights and 25 m/15 degree/80% criteria**; extra geometry probes carry no Census weight. Enumerate geometry for all roles and report unsupported-role candidate paths separately, without assuming car permission. Preserve rejected/uncertain alternatives, finite projection/index/search budgets and independent reference controls. This is a new generic prototype, not a source-coverage waiver or permission to reinterpret the V1 result. Synthetic qualification and a separate exact freeze must precede any new real-data run; no national/source PBF replay or production model change.
+
+
+## Continuous-progress controls passed; actual experiment frozen
+
+[Controls](continuous-match-closed-controls-v1.json):16actual Linux tests/no skips, independent straight-source graph oracle and a persisted genuine zero-original-midpoint connector pass; unchanged45positive samples/7source km/full support. Reversed parts, real node-ID joins, missing joins, all-role parallel competitors, rejected side branches, access/scopes, source progress ties/incident tangents, distances, terminals and every new/search cap are tested. Host0.709508s/protected0.030000s/peak24,412,160bytes/no OOM/worker absent;18files/29,471bytes/conservative1,306,624. [Safe proof](verify_continuous_match_controls_v1.py).
+
+[Actual recipe](continuous-match-plan-run-v1.json), SHA `91538f9f64af5766d734c2ddf393497f045119b467a767bcecec319b20401d42`, is frozen for one later execution at `data/coarse-quality/us-osm-continuous-match-run-v1/`. No actual result at this checkpoint. All four new producers/used recipes immutable. Reuses native V1qualified raw/geometry/node/part adapter. Original2469Census records/85629positive midpoint weights/21areas/classes and25m/15degree/80%rules remain. Additional native-curve geometry probes carry no Census weight; continuous source progress allows short/zero-midpoint native ID connectors. All roles remain geometric competitors. Rejected aligned alternatives remain visible; uniqueness is conditional on the new corridor/window/progress/terminal eligibility rules, which is a different policy from V1's automatic unresolved-alternative block. All source/car/physical/usable/model gates remain false. New actual experiment still needs terminal closure, independent audit and deterministic review; no production change.
+
+1GiB/zero swap/oneCPU/1800sworker/1860shost/64MiBtmp/128MiBfile/512MiBowned;61.7GBprior retained reserve+new owned/tmp fits64GiB. Reads only derived captured JSONL/original small Census spans, no PBF/fine/native/provider/appDB. Exact hypothesis, rejection/tie/probe/search semantics, caps and cap-sentinel accounting are in the recipe. Preserve all results/failures without post-result tuning.
+
+
+## Continuous V1 memory stop preserved; V2 controller qualified
+
+The1GiB [V1actual run](continuous-match-plan-run-v1.json) stopped after71.438720host seconds: worker/client137, DockerOOMKilledtrue. Complete node/field/geometry-seal traversal and4area reports/partial119fifth-area records remain. No complete report/result or terminal kernel peak was produced; do not infer all-area coverage or graph-search time. [Closed23files/75,606,743bytes](continuous-match-closed-run-v1.json), conservative80,056,320; worker independently absent. [Safe stop proof](verify_continuous_match_run_v1.py) passes default and optional derived partial-file hashes. All V1helpers/code/recipes/failed evidence immutable.
+
+V2changes only controller memory/retention:2GiB hardRAM/zero swap within original4GiBoverall, and retain aggregate scalars after writing full detailed output. Same used V1matching algorithm, inputs, criteria, weights, probes and cases.19actual Linux tests/no skips pass, including3new aggregate-equivalence/bounded-retention/capped-outcome checks. Persisted fixture report is byte-identicalV1SHA `3d1b41c57c74fa1bea57d1377d62bc92ab25f77962bd9e233ee889faef1ee1fe`. [Controls closure](continuous-match-closed-controls-v2.json):18files/30,899bytes/conservative1,306,624; host0.718479s/protected0.035103s/peak24,571,904/noOOM/worker absent. [Safe proof](verify_continuous_match_controls_v2.py).
+
+[ActualV2recipe](continuous-match-plan-run-v2.json), SHA `54573c32c46f359cbe0ffcb56b0228394c7ef09f081f12f98e6bedfc1a0c4b91`, is frozen for one execution at `data/coarse-quality/us-osm-continuous-match-run-v2/`. No actualV2result at this checkpoint. Require identical output for4completed V1areas and exact119record fifth-area prefix, with independent audit after closure.2GiB/zero swap/oneCPU/1800sworker/1860shost/64MiBtmp/128MiBfile/512MiBowned;61.8GBprior retained reserve includes failed80,056,320bytes, total stays below64GiB. No PBF/fine/native/provider/appDB. Matching/source/car/physical/usable/model caveats remain unchanged.
+
+
+## Latest completed results and road-model decision
+
+Continuous **controller V2 completed all 21 areas**, all 2,469 original records/85,629 positive midpoint weights/2,078.237959868 Census km. [Full report](continuous-match-raw/run-v2/report.json), SHA `bdc784b7fc6000228c592b1a5240686a8ba6214c567fa7ff2f29fabe6a85e25b`: 610 single geometric paths, 1,259 multiple paths, 594 no-path records and 6 explicit search caps. Conditional single-path unscoped numeric opportunity **263.253121 km / 12.6671%**. The new continuous policy has stricter whole-curve corridor/progress eligibility and retains rejected alternatives; this percentage is not an apples-to-apples accuracy improvement over V1 or a usable/physical/source admission.
+
+Host **205.168694 s**, protected **204.200463 s** including binding/seals/22 derived-input traversals/adaptation/probes/connected enumeration/output, not routing-engine search or app HTTP time. Actual 2 GiB/zero swap/one CPU/64 MiB tmp/128 MiB file/512 MiB owned limits. Kernel peak **1,180,360,704 bytes**, 0 memory.max events/0 OOM/0 OOM kills. [Closed 76 files/374,960,483 bytes](continuous-match-closed-run-v2.json), conservative allocation **384,417,792**; worker/client zero and independently absent. The 1 GiB V1 failure remains preserved.
+
+[Independent V2 audit](continuous-match-independent-audit-v2.json) passes every original weight/class/area, 24,946 raw native-part/node/geometry/lineage bindings, 7,475 saved candidate variant masks/weights/true node-ID joins and exact deterministic 50-record review selection. It also proves **byte equality of all four completed V1 area files and the 119-record fifth-area prefix: 71,853,104 bytes across five files**. Audit 11.837365 s, using only closed derived outputs/sealed audit SQLite/original small Census spans. Source/car/physical/usable/model flags remain false; the packet has not been promoted to independent physical-road approval.
+
+The subsequent [frozen saved-candidate topology diagnostic](corridor-family-plan-v1.json), SHA `d4b59ed2673695f1c386e036289e20b1ccccad80a780892bcf0a24936c11b59c`, changes no matches. Eight Linux controls/no skips pass before classification. It asks whether alternative saved paths are overlapping subpaths of the same connected, acyclic native-node corridor with no branching. True branches/cycles/disconnected alternatives remain ambiguous. Every original case/class/weight and rejected-geometry context stays visible.
+
+| Saved candidate-union topology | Records | Original Census km |
+| --- | ---: | ---: |
+| One unbranched native corridor | 983 | 876.856 |
+| Multiple disconnected corridors | 701 | 284.008 |
+| Branch or cycle | 185 | 263.068 |
+| No saved candidate | 594 | 637.473 |
+| Original search capped | 6 | 16.833 |
+
+[Topology result](corridor-family-raw-v2/report.json): unbranched corridors whose parts all have supported road roles and unscoped numeric base limits support **449.928265 km / 21.6495%** of original Census weight. Raw access/direction/grade/physical/source applicability is still unreviewed; even this optimistic figure is below the original **50% usable-limit/matching** target. It does not establish that no better matcher exists or that OSM itself lacks useful information. The 80.751% raw numeric overlap remains a different, nonconnected statistic.
+
+Topology analysis **2.148415 s after input bindings**, including 8 tests/read/classification/output, not graph search or total launch time. Actual 1 GiB/zero swap/two CPU/64 MiB tmp/network none/read-only derived inputs; kernel peak **455,303,168 bytes**, 0 OOM/0 kills. [Closed 31 files/1,777,562 bytes](corridor-family-closed-v2.json), conservative allocation **3,604,480**; worker zero and independently absent. A closer V1 full-stat comparison stopped while reading; [failure](corridor-family-closure-stop-v1.json)/used closer/partial mirror remain. V2 uses the established content-change stat key excluding access time; analysis/data unchanged. Prepared code copies are ignored at `data/coarse-quality/us-osm-corridor-families-prep-v1/code/`.
+
+[Independent topology audit](corridor-family-independent-audit-v1.json) reconstructs all **2,860 candidate components** via a separate disjoint-set/degree implementation, plus every original identity/weight/class/area/mask and summary, in 1.939406 s. It does not infer car permission, physical uniqueness, publisher adequacy or nationwide accuracy. All stages are closed. Safe proofs (optional derived scans already passed; do not repeat just for docs):
+
+```sh
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_continuous_match_run_v2.py
+python3 -B docs/evidence/coarse-osm-extraction-2026-10-30/verify_corridor_families_v1.py
+```
+
+**Decision needed:** continue cross-dataset Census enrichment research, or prototype a compact native OSM road backbone. [Concrete proposal and preserved gates](next-road-model-decision-v1.json). Recommended: a bounded **direct-OSM graph prototype** using the existing complete 21-area capture, true native node identities and degree-two contraction, first measuring topology/geometry/footprint. This could remove cross-dataset matching as a prerequisite; it is not a proven accuracy, national-footprint or Vercel-fit result. Keep the existing Vercel/TanStack app/PostgreSQL history and deployed v9; no new service or live routing DB is proposed. Native semantic policy still precedes ETA evaluation. A separate national count/footprint/input freeze follows only if the small prototype is promising; no new country PBF pass is included now.
+
+Choosing this direction supersedes the current Census-enrichment workstream and its strategy-specific 50% matching screen, so user guidance is required before that material change. All old failures/results, generic arbitrary-location rules, 83/35 accuracy/physical/source/path checks, <=70 MB function, decoded <=162,238,546 bytes, first packaged estimate <=5 s and software/API/visual gates remain. Alternative: diagnose the preserved no-path/disconnected/branch/cap cases and specify one further generic matcher hypothesis; payoff is uncertain. No further producer, model switch, source replay, provider/paid/DB request, commit, push or deployment follows from this proposal.

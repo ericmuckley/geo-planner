@@ -1,0 +1,32 @@
+{
+  "id": "osm-water-source-derived-relation-closure-v1",
+  "date": "2026-11-03",
+  "objective": "Resolve all nested relation IDs reachable from all68734 water roots before way/reference geometry work. Initial saved-root inspection finds34 nested targets,17 outside tagged roots; no source/body selection by validation place.",
+  "source": "Original full source SHA/MD5/stat before/after, qualified fixed256MiB tail reader, all1624265 relations/header walk/EOF each pass. Earlier full native source semantic proof is inherited, not rerun.",
+  "selection": "All saved water roots plus transitive member-relation IDs derived solely from source members, regardless of water tags or type. Never rewrite tags or roles.",
+  "caps": {
+    "closurePasses": 4,
+    "newRelations": 10000,
+    "newMemberOccurrences": 500000,
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "ownedBytes": 67108864,
+    "tmpBytes": 268435456,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "overallRetainedBytes": 68719476736
+  },
+  "acceptance": [
+    "34 actual Linux tests/no skips, including inherited source and water selection/identity/limits controls, exact untagged descendant projection, cycles/missing/depth/nonrequested/duplicate/cap and independent saved closure audit.",
+    "Preserve every fetched descendant/member/role, source-absent IDs, depth-limited IDs and cycle back-edges. Report closure completeness/acyclicity separately; unresolved references never become polygon success.",
+    "Reopen saved descendants and complete union member-way index, independently replay all root reachability/source-missing IDs/counts/hash/index entries.",
+    "Whole source unchanged before/after; all relation counts/EOF/headers exact for every required pass.",
+    "Both worker/client0/noOOM/zero swap, exact owned cleanup/absence, close output and add its actual conservative allocation before new reservation."
+  ],
+  "deferred": [
+    "No way/node coordinates, polygon assembly, mask/input/ETA repair or graph/model/app change.",
+    "Next measure all tagged water ways UNION all member ways from completed relation closure; keep missing way IDs explicit.",
+    "No acquisition/provider quota/DB/env/dependency/deployment or speed sweep."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "source": "data/coarse-quality/us-osm-car-wire-codec-v1",
+  "output": "data/coarse-quality/us-osm-car-wire-codec-profile-v1",
+  "manifestSha256": "c1037d021db5f621a08338a02249624775940bea2c622504d43750a5fb44ea1e",
+  "queryReference": "docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-profile-raw-v1/report.json",
+  "bindings": {
+    "scripts/profile_osm_wire_codec_v1.ts": "383c15da55f55b3fe3af67d617362175150bfd3588501ee5dc84b87c24d3ddae",
+    "scripts/coarse_osm_packed_loader_v1.ts": "40a4b677b8be74b603e0a560e105fb4cbd052bb3e227f8cc0253f471f2ebd6f8",
+    "scripts/coarse_osm_packed_loader_v1_test.ts": "55863fa683915a51dd8ddcc9bcf0d2581987e1e94c314736352cacee2bc02f11",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_packed_search_v1.ts": "aba56b15839d70659ed69d7f95aa5a0456defcfe441ba05c1688d02d1f02e23f",
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/wire-codec-closed-v1.json": "04acac55c5f0c82218a7091075046a28d4e7912705d2dc65068db898cfc0377f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/wire-codec-closed-audit-v1.json": "b0729bb0b4fbe47c1210a84ccb3c5219e5eb529aaefe909b15531589876e8452",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/spatial-country-profile-raw-v1/report.json": "685d55250b3bea4e74167b89b3b575d450129e1678626fae08e37862c5eee0d6"
+  },
+  "hostSeconds": 120,
+  "maxOwnedBytes": 67108864,
+  "newClosedAllocationBytes": 2234331136,
+  "priorReserveBytes": 64500000000,
+  "metadataScratchReserveBytes": 104857600,
+  "independentFullByteAuditPassed": true,
+  "nodeStorageControls": 4,
+  "pythonDecoderControls": 8,
+  "loaderControls": 5,
+  "preserveOriginalPhysicalQueryCases": 4,
+  "scope": "Fresh host process after module/config loading; compressed core routing+anchor index read/hash/inflate/decode/validation plus exact original vertex queries. No arbitrary-coordinate snap, paid geometry, geography/display, full app/packaged estimate/Linux/Vercel admission."
+}

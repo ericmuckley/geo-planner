@@ -1,0 +1,90 @@
+{
+  "status": "host_national_spatial_profile_and_original_queries_passed",
+  "recipeSha256": "be9de1ea465d2885607d442378a63ad064d6c18f4e73c2bba0819727f18f4ae3",
+  "vertices": 5731903,
+  "arcs": 9620680,
+  "spatialCells": 56970,
+  "routingAndSpatialWireBytes": 128196806,
+  "routingAndSpatialCompressedBytes": 83090627,
+  "coreRetainedBackingBufferBytes": 129057568,
+  "spatialRetainedBackingBufferBytes": 341823,
+  "retainedDataBackingBufferBytes": 129399391,
+  "baseline": {
+    "rss": 122339328,
+    "heapTotal": 12156928,
+    "heapUsed": 6862272,
+    "external": 25456917,
+    "arrayBuffers": 20913
+  },
+  "retained": {
+    "rss": 387530752,
+    "heapTotal": 10584064,
+    "heapUsed": 5952464,
+    "external": 131923577,
+    "arrayBuffers": 129418310
+  },
+  "afterQueries": {
+    "rss": 392429568,
+    "heapTotal": 10584064,
+    "heapUsed": 6026352,
+    "external": 131921583,
+    "arrayBuffers": 129418310
+  },
+  "compressionMs": 8052.441871999998,
+  "readHashCopyAndCompressionMs": 8204.743666,
+  "readerAndIndexValidationMs": 271.97212500000023,
+  "queries": [
+    {
+      "index": 0,
+      "oldSourceVertex": 945113,
+      "oldTargetVertex": 5073746,
+      "sourceVertex": 1074750,
+      "targetVertex": 2272446,
+      "expectedTicks": 296763,
+      "ticks": 296763,
+      "settles": 1228168,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 139.0591660000009
+    },
+    {
+      "index": 1,
+      "oldSourceVertex": 3285378,
+      "oldTargetVertex": 5189146,
+      "sourceVertex": 3998660,
+      "targetVertex": 2860057,
+      "expectedTicks": 256312,
+      "ticks": 256312,
+      "settles": 2430602,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 288.2107909999995
+    },
+    {
+      "index": 2,
+      "oldSourceVertex": 311896,
+      "oldTargetVertex": 1353026,
+      "sourceVertex": 5699478,
+      "targetVertex": 5463759,
+      "expectedTicks": null,
+      "ticks": null,
+      "settles": 1598245,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 178.29091700000026
+    },
+    {
+      "index": 3,
+      "oldSourceVertex": 5393891,
+      "oldTargetVertex": 3451150,
+      "sourceVertex": 257905,
+      "targetVertex": 4478013,
+      "expectedTicks": null,
+      "ticks": null,
+      "settles": 1328986,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 145.9043330000004
+    }
+  ],
+  "compressedHeadroomToCompleteFunctionGate": -13090627,
+  "hostTotalMs": 9312.313375,
+  "scope": "Host-only core routing/index profile and exactly preserved V1 physical vertex-pair cases. Offline permutation tables are released/excluded. No arbitrary-coordinate snapping, paid geometry, display/geography, packaged first estimate, full app/peak memory, protected Linux or Vercel qualification.",
+  "modelChanged": false
+}

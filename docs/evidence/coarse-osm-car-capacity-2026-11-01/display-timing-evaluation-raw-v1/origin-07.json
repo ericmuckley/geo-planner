@@ -1,0 +1,165 @@
+{
+  "origin": [
+    -70.2568,
+    43.6591
+  ],
+  "diagnostic": {
+    "timings": {
+      "portland-me-360-inside": {
+        "ticks": 202343,
+        "kind": "road-foot",
+        "roadTicks": 202343,
+        "localGridTicks": 202949,
+        "localWitness": {
+          "terminalTicks": 333,
+          "edgeSeconds": 0,
+          "seedSeconds": 25327,
+          "seedCell": 937037,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-360-outside": {
+        "ticks": 218396,
+        "kind": "road-foot",
+        "roadTicks": 218396,
+        "localGridTicks": 218690,
+        "localWitness": {
+          "terminalTicks": 634,
+          "edgeSeconds": 351,
+          "seedSeconds": 26906,
+          "seedCell": 903014,
+          "seedKind": 8,
+          "steps": 3
+        }
+      },
+      "portland-me-600-inside": {
+        "ticks": 330745,
+        "kind": "road-foot",
+        "roadTicks": 330745,
+        "localGridTicks": 331825,
+        "localWitness": {
+          "terminalTicks": 537,
+          "edgeSeconds": 0,
+          "seedSeconds": 41411,
+          "seedCell": 689609,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-600-outside": {
+        "ticks": 360054,
+        "kind": "road-foot",
+        "roadTicks": 360054,
+        "localGridTicks": 360604,
+        "localWitness": {
+          "terminalTicks": 372,
+          "edgeSeconds": 234,
+          "seedSeconds": 44795,
+          "seedCell": 975899,
+          "seedKind": 8,
+          "steps": 2
+        }
+      },
+      "portland-me-720-inside": {
+        "ticks": 387624,
+        "kind": "road-foot",
+        "roadTicks": 387624,
+        "localGridTicks": 388010,
+        "localWitness": {
+          "terminalTicks": 186,
+          "edgeSeconds": 0,
+          "seedSeconds": 48478,
+          "seedCell": 324483,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-720-outside": {
+        "ticks": 393650,
+        "kind": "road-foot",
+        "roadTicks": 393650,
+        "localGridTicks": 393914,
+        "localWitness": {
+          "terminalTicks": 202,
+          "edgeSeconds": 0,
+          "seedSeconds": 49214,
+          "seedCell": 256290,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -83251040,
+      "south": 35880080,
+      "step": 9640,
+      "width": 1790,
+      "height": 1396
+    },
+    "stats": {
+      "envelopeMs": 543.333292000003,
+      "maskMs": 774.0166660000032,
+      "seedMs": 1744.5334169999987,
+      "fillMs": 144.2265830000033,
+      "contourMs": 34.92491699999664,
+      "displayMs": 3241.151042000005,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 3406400,
+      "activeSpans": 1214864,
+      "settles": 739950,
+      "maximumHeapEntries": 286338,
+      "selectedCells": 742781,
+      "localCells": 739950,
+      "roadOnlyCells": 2831,
+      "edges": 21840,
+      "rings": 204,
+      "vertices": 13620,
+      "jsonBytes": 280045,
+      "retries": []
+    },
+    "phaseMs": 3506.6976670000004,
+    "output": {
+      "filename": "origin-07-900.geojson",
+      "bytes": 280045,
+      "sha256": "bb4be164cffe47b2b12b6fec5e1b49761d67b21ada6bb601d8eb8eadceb4270c"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "portland-me-360.geojson",
+        "bytes": 175083,
+        "sha256": "f72347e90acbb51e34a28b91591e4c194619059899ced2f41f306a02637d4772"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "portland-me-600.geojson",
+        "bytes": 249673,
+        "sha256": "49680bf583bc86f07cdbe6ceda880f80f90b7b259e1b585c3b76fb6d483a8ebc"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "portland-me-720.geojson",
+        "bytes": 250975,
+        "sha256": "5fc6b768801c2453655892f1935f4737f11b70b565ac3ffa8802843d4d654f9d"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 350797824,
+    "heapTotal": 82935808,
+    "heapUsed": 14639328,
+    "external": 143907885,
+    "arrayBuffers": 141369119
+  }
+}

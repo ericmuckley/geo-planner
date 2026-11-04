@@ -1,0 +1,45 @@
+test_closed_source_way_retains_native_points_and_unreachable_cases (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_closed_source_way_retains_native_points_and_unreachable_cases) ... ERROR
+test_only_turn_respects_history_and_allows_pretrip_source (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_only_turn_respects_history_and_allows_pretrip_source) ... ERROR
+test_paid_internal_aliases_direct_travel_and_directional_costs (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_paid_internal_aliases_direct_travel_and_directional_costs) ... ERROR
+test_every_object_metadata_unicode_members_and_coordinate_seal (coarse_osm_car_cost_capture_v2_test.Tests.test_every_object_metadata_unicode_members_and_coordinate_seal) ... ok
+test_repeated_nodes_reverse_and_relation_member_types (coarse_osm_car_cost_capture_v2_test.Tests.test_repeated_nodes_reverse_and_relation_member_types) ... ok
+test_wrong_epoch_still_fails_after_conversion (coarse_osm_car_cost_capture_v2_test.Tests.test_wrong_epoch_still_fails_after_conversion) ... ok
+
+======================================================================
+ERROR: test_closed_source_way_retains_native_points_and_unreachable_cases (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_closed_source_way_retains_native_points_and_unreachable_cases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_car_cost_capture_v2_test.py", line 61, in test_closed_source_way_retains_native_points_and_unreachable_cases
+    result = self.fixture({101}, [self.case(22, 33, None, None), self.case(11, 44, None, None)])
+  File "/code/coarse_osm_car_cost_capture_v2_test.py", line 50, in fixture
+    from graph_capture_query_oracle_v2 import query_checks
+  File "/code/graph_capture_query_oracle_v2.py", line 10, in <module>
+    from coarse_osm_car_payload_v1 import Payload
+ModuleNotFoundError: No module named 'coarse_osm_car_payload_v1'
+
+======================================================================
+ERROR: test_only_turn_respects_history_and_allows_pretrip_source (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_only_turn_respects_history_and_allows_pretrip_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_car_cost_capture_v2_test.py", line 65, in test_only_turn_respects_history_and_allows_pretrip_source
+    from graph_capture_query_oracle_v2 import query_checks
+  File "/code/graph_capture_query_oracle_v2.py", line 10, in <module>
+    from coarse_osm_car_payload_v1 import Payload
+ModuleNotFoundError: No module named 'coarse_osm_car_payload_v1'
+
+======================================================================
+ERROR: test_paid_internal_aliases_direct_travel_and_directional_costs (coarse_osm_car_cost_capture_v2_test.QueryOracleTests.test_paid_internal_aliases_direct_travel_and_directional_costs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/code/coarse_osm_car_cost_capture_v2_test.py", line 57, in test_paid_internal_aliases_direct_travel_and_directional_costs
+    result = self.fixture(set(), [self.case(22, 33, 100, 250), self.case(33, 22, 150, 250), self.case(22, 44, 200, 250)])
+  File "/code/coarse_osm_car_cost_capture_v2_test.py", line 50, in fixture
+    from graph_capture_query_oracle_v2 import query_checks
+  File "/code/graph_capture_query_oracle_v2.py", line 10, in <module>
+    from coarse_osm_car_payload_v1 import Payload
+ModuleNotFoundError: No module named 'coarse_osm_car_payload_v1'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+FAILED (errors=3)

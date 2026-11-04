@@ -1,0 +1,22 @@
+{
+  "status": "Codec frozen before real field encoding",
+  "nodeControls": 4,
+  "pythonIndependentControls": 8,
+  "algorithm": "For width>1, signed modular word delta followed by zigzag and per-byte planes, then gzip level 9. Separate x/y predictor lanes for E7 coordinates; other multi-byte fields use one lane. Byte fields are unchanged before gzip. Decode restores exact original word bits, including modular wrap.",
+  "fields": 13,
+  "rawBytesExpected": 128196806,
+  "source": "data/coarse-quality/us-osm-car-spatial-country-run-v1",
+  "independentAuditor": "scripts/coarse_osm_packed_codec_audit_v1.py",
+  "codeBindings": {
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_packed_codec_v1_test.ts": "9f437dc5b539ff522175b435f3991fb4dd5d7a207d6432d70c36249ea99ce55a",
+    "scripts/coarse_osm_packed_codec_audit_v1.py": "e3b8218486311898bc9b14aa18f23c912638e1bff3c49ada5035e7fad0536f4b",
+    "scripts/coarse_osm_packed_codec_audit_v1_test.py": "879d64c55322fcbbc9a897bb423b30780d4a2a978ccc1bf5fbd19fcd364ee305"
+  },
+  "bounds": {
+    "fieldBytes": 67108864,
+    "totalBytesEachDecodedOwned": 201326592,
+    "hostSeconds": 120
+  },
+  "appOrEtaQualified": false
+}

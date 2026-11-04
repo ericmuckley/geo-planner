@@ -1,0 +1,135 @@
+{
+  "status": "national_water_relation_closure_measured",
+  "scans": [
+    {
+      "relations": 1624265,
+      "recordsSelected": 17,
+      "headersVisited": 221321,
+      "compressedTailBytes": 268479971,
+      "decodedTailBytes": 835465185,
+      "earlierNodeWayBodiesValidated": false,
+      "nodeWayObjectsProjected": 0
+    },
+    {
+      "relations": 1624265,
+      "recordsSelected": 0,
+      "headersVisited": 221321,
+      "compressedTailBytes": 268479971,
+      "decodedTailBytes": 835465185,
+      "earlierNodeWayBodiesValidated": false,
+      "nodeWayObjectsProjected": 0
+    }
+  ],
+  "closure": {
+    "rootRelations": 68734,
+    "descendantRelations": 17,
+    "descendantMembers": 59,
+    "rounds": [
+      {
+        "requestedIds": [
+          7459023,
+          13804965,
+          13804966,
+          18073181,
+          19437141,
+          19549316,
+          19549318,
+          19936921,
+          19936922,
+          19936923,
+          20433321,
+          20509157,
+          20509158,
+          20743712,
+          21054241,
+          21114867,
+          21420135
+        ],
+        "foundIds": [
+          7459023,
+          13804965,
+          13804966,
+          18073181,
+          19437141,
+          19549316,
+          19549318,
+          19936921,
+          19936922,
+          19936923,
+          20433321,
+          20509157,
+          20509158,
+          20743712,
+          21054241,
+          21114867,
+          21420135
+        ],
+        "absentIds": []
+      },
+      {
+        "requestedIds": [
+          21607544
+        ],
+        "foundIds": [],
+        "absentIds": [
+          21607544
+        ]
+      }
+    ],
+    "sourceAbsentRelationIds": [
+      21607544
+    ],
+    "depthLimitedRelationIds": [],
+    "cycleBackEdges": [],
+    "referenceClosureComplete": false,
+    "acyclic": true,
+    "uniqueWayIds": 458255
+  },
+  "stored": {
+    "counts": {
+      "relations": 17,
+      "wayMembers": 57,
+      "nodeMembers": 0,
+      "relationMembers": 2,
+      "outerWayMembers": 28,
+      "innerWayMembers": 5,
+      "otherRoleWayMembers": 24,
+      "multipolygons": 16,
+      "otherTypes": 1,
+      "maxMembers": 26
+    },
+    "uniqueMemberWays": 57,
+    "rawJsonBytes": 5807,
+    "rawJsonSha256": "39cc531e969023360ca8b78f6e1a7b5e4c1ca2f85776eb63ea6869063ef4cfe3",
+    "gzipBytes": 1045,
+    "memberIndexBytes": 456
+  },
+  "independentAudit": {
+    "allRootRelationsChecked": 68734,
+    "allDescendantsChecked": 17,
+    "allDescendantMemberOccurrencesChecked": 59,
+    "allUniqueWayIdsChecked": 458255,
+    "allSourceDerivedReachabilityAndMissingIdsChecked": true
+  },
+  "outputs": {
+    "water-relations.jsonl.gz": {
+      "bytes": 1045,
+      "sha256": "5f67984cbb1f91c34f85ee4c793a70eb658f66d371879af14f844d91de8e5954"
+    },
+    "member-way-ids.u64": {
+      "bytes": 456,
+      "sha256": "51426612d30e16cce0a2cecf230c68c95c9a4fd73ef1e96a85d22f637eefd040"
+    },
+    "closure-member-way-ids.u64": {
+      "bytes": 3666040,
+      "sha256": "051cb0f33ae8370aad9644c07df9a088896eca4fdd2b2148fa1bf610332c242b"
+    }
+  },
+  "workerSecondsIncludingBindingsSourceGuardsAudit": 133.37963001802564,
+  "missingMemberWaysResolved": false,
+  "coordinatesOrGeometryRetained": false,
+  "maskOrModelChanged": false,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "appActivated": false
+}

@@ -1,0 +1,25 @@
+{
+  "verifierSha256": "9bbbad96ce347d978027a0596f69ddb417735ad555f697c4405ef4a667ca6bc5",
+  "controlsProofPassed": true,
+  "runDefaultProofPassed": true,
+  "runOptionalProofPassed": false,
+  "failure": "Optional proof compared saved sourceKm and a sum of its unchanged original spans using exact float equality.",
+  "roundoffRecords": 10,
+  "examples": [
+    {
+      "ordinal": 85,
+      "windowId": "origin-00",
+      "arc": 882591,
+      "originalSourceKm": 1.4615271437724946,
+      "sumOfOriginalSpansKm": 1.4615271437724948
+    },
+    {
+      "ordinal": 757,
+      "windowId": "origin-06",
+      "arc": 916681,
+      "originalSourceKm": 1.9957582643770662,
+      "sumOfOriginalSpansKm": 1.995758264377066
+    }
+  ],
+  "correction": "V2 retains exact identities/classes but uses the existing1e-9km reconciliation tolerance for sourceKm. No measured producer/input/output change."
+}

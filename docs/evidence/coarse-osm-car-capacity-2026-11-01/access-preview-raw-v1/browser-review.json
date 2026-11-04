@@ -1,0 +1,31 @@
+{
+  "status": "local_comparison_verified_in_chrome",
+  "url": "http://127.0.0.1:4717/",
+  "controlsVerified": [
+    "All three origin selections update both contours and spacing",
+    "Whole-area/detail views keep identical camera transforms",
+    "Zoom in changes4x to6x on both maps",
+    "Arrow-key pan changes both camera transforms identically",
+    "All83 availability and same80-route error metrics visible",
+    "Finer coast boundary inspected against v9 at matching camera"
+  ],
+  "pageOriginConsoleErrors": 0,
+  "unrelatedExtensionErrors": 1,
+  "responsiveViewportOverrideUsed": false,
+  "screenshots": {
+    "astoria-detail.png": {
+      "bytes": 68354,
+      "sha256": "7c9eb0aca3736faf3e3c9758fc0d335ddbf2709b9e3b8c0ad8986939b9c30d4a"
+    },
+    "comparison.png": {
+      "bytes": 102206,
+      "sha256": "d1ec685a9b64f98c938fdf7e4196e7991f5554d95fa1db77c175239778ec1646"
+    },
+    "hays-overview.png": {
+      "bytes": 76950,
+      "sha256": "ebd7f6a5a2e4d0961dc37dfd5d199e4ebef61ec6d32331cbe83710e14779a33b"
+    }
+  },
+  "closingWrapperSha256": "15ad490b5eb6eb44ec1983df8249d4554d77eddbfcc1933da0faa9ab4d96dcdc",
+  "scope": "Browser review of an offline static comparison, not the deployed application or arbitrary-query UI/full-app acceptance. One unrelated wallet-provider browser-extension exception was excluded from page-origin errors. No browser extension/settings change."
+}

@@ -1,0 +1,6492 @@
+{
+  "status": "completed_frozen_car_reachability_diagnosis",
+  "diagnosticOnly": true,
+  "counts": {
+    "baselineChecks": 82,
+    "restored:without-unsupported-closures": 10,
+    "restored:without-direction-limits": 6,
+    "restored:geometry-only": 14,
+    "restored:without-way-exclusions": 3,
+    "restored:without-supported-turns": 2
+  },
+  "cases": [
+    {
+      "originalDirectionalIndex": 9,
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        13081301616,
+        13529771908
+      ],
+      "baselineSettles": 4020,
+      "baselineReachableNodes": 2773,
+      "reachableOutsideWindowPoints": 105,
+      "reachableOutsideWindowWayEnds": 10,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 7126,
+          "witness": {
+            "primitiveArcCount": 249,
+            "sourceWayIds": [
+              10725722,
+              10725798,
+              37125278,
+              37125305,
+              39274433,
+              76359812,
+              76372176,
+              122900702,
+              186246486,
+              245013740,
+              349896343,
+              430465421,
+              430465423,
+              430465430,
+              430465434,
+              430465478,
+              430465481,
+              430465482,
+              467641316,
+              469500743,
+              469500745,
+              507118425,
+              672952772,
+              672952773,
+              775844847,
+              777186305,
+              843730247,
+              843730248,
+              845874479,
+              845874480,
+              957123024,
+              986183311,
+              986183315,
+              986183316,
+              1037103227,
+              1049495868,
+              1049495869,
+              1049495871,
+              1146867002,
+              1152848560,
+              1169303718,
+              1169303719,
+              1169303720,
+              1196263229,
+              1201881747,
+              1201881748,
+              1201881749,
+              1201881750,
+              1201881751,
+              1201881752,
+              1201881753,
+              1201881754,
+              1359522948,
+              1359524678,
+              1359524679,
+              1359524680,
+              1359527322,
+              1359527323,
+              1361087450,
+              1361087451,
+              1361087452,
+              1361087453,
+              1369013260,
+              1370248989,
+              1396134825,
+              1423246199,
+              1423246200,
+              1423246201,
+              1462978603,
+              1462978605,
+              1462984884,
+              1465513504,
+              1531858549,
+              1531858550,
+              1531858559,
+              1531858560
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "37125305": [
+                9995218
+              ],
+              "76372176": [
+                18880084
+              ],
+              "245013740": [
+                3312732
+              ],
+              "430465423": [
+                9995218,
+                9995220,
+                9995221
+              ],
+              "469500743": [
+                14265232
+              ],
+              "1037103227": [
+                19322023
+              ],
+              "1361087452": [
+                18878388
+              ],
+              "1531858549": [
+                18876663
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 4036
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 4148
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 5765,
+          "witness": {
+            "primitiveArcCount": 225,
+            "sourceWayIds": [
+              10724906,
+              10735672,
+              37058695,
+              37058697,
+              37058702,
+              37058703,
+              37058706,
+              37058740,
+              76561355,
+              122900708,
+              186246508,
+              205013443,
+              298925841,
+              349896340,
+              507118425,
+              775844847,
+              837276687,
+              986169078,
+              986169080,
+              1036220802,
+              1036220803,
+              1036220806,
+              1041413248,
+              1041421612,
+              1041421613,
+              1042848935,
+              1049495868,
+              1049495869,
+              1049495871,
+              1151176496,
+              1152848560,
+              1169004750,
+              1170505194,
+              1196263229,
+              1201881747,
+              1201881748,
+              1201881749,
+              1201881750,
+              1201881751,
+              1201881752,
+              1201881753,
+              1201881754,
+              1371043060,
+              1394071188,
+              1396775359,
+              1396775360,
+              1421524143,
+              1423246199,
+              1423246200,
+              1423246201,
+              1462978604,
+              1462978605,
+              1462984884
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              10724906,
+              37058695,
+              37058697,
+              37058702,
+              37058703,
+              37058706,
+              37058740,
+              122900708,
+              186246508,
+              298925841,
+              1036220802,
+              1036220803,
+              1036220806,
+              1041413248,
+              1041421612,
+              1041421613,
+              1042848935,
+              1151176496,
+              1169004750,
+              1170505194,
+              1462978604
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 4124
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 9895,
+          "witness": {
+            "primitiveArcCount": 198,
+            "sourceWayIds": [
+              37058702,
+              37058703,
+              37058740,
+              37125278,
+              39274433,
+              76359812,
+              76372176,
+              122900749,
+              245013740,
+              298912987,
+              298925841,
+              349896343,
+              467398951,
+              467641316,
+              469500743,
+              469500745,
+              507118425,
+              775844847,
+              843730247,
+              845872800,
+              986183311,
+              986183315,
+              986183316,
+              1041407881,
+              1041413248,
+              1041421612,
+              1041421613,
+              1049495868,
+              1049495869,
+              1049495871,
+              1152848560,
+              1154445483,
+              1169004750,
+              1196263229,
+              1201881747,
+              1201881748,
+              1201881749,
+              1201881750,
+              1201881751,
+              1201881752,
+              1201881753,
+              1201881754,
+              1359522948,
+              1361087450,
+              1361087451,
+              1361087452,
+              1361087453,
+              1369013260,
+              1370248989,
+              1396134825,
+              1423246199,
+              1423246200,
+              1423246201,
+              1462978603,
+              1462978605,
+              1462984884,
+              1465513504,
+              1531858549,
+              1531858550,
+              1531858560
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "76372176": [
+                18880084
+              ],
+              "245013740": [
+                3312732
+              ],
+              "469500743": [
+                14265232
+              ],
+              "1154445483": [
+                19322023
+              ],
+              "1361087452": [
+                18878388
+              ],
+              "1531858549": [
+                18876663
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              37058702,
+              37058703,
+              37058740,
+              122900749,
+              298912987,
+              298925841,
+              845872800,
+              1041407881,
+              1041413248,
+              1041421612,
+              1041421613,
+              1154445483,
+              1169004750
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 10,
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        847371175,
+        95440346
+      ],
+      "baselineSettles": 0,
+      "baselineReachableNodes": 1,
+      "reachableOutsideWindowPoints": 0,
+      "reachableOutsideWindowWayEnds": 0,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 2666,
+          "witness": {
+            "primitiveArcCount": 364,
+            "sourceWayIds": [
+              10722962,
+              10732386,
+              10740129,
+              10740147,
+              31798359,
+              37058497,
+              37058698,
+              37058707,
+              37058708,
+              37842944,
+              47443268,
+              122900725,
+              479168942,
+              628240226,
+              638342131,
+              638342132,
+              638342133,
+              738481909,
+              782608581,
+              886066442,
+              957123025,
+              1042954844,
+              1066169065,
+              1333297286,
+              1333297287,
+              1343456831,
+              1370848074,
+              1370850203,
+              1375447387,
+              1385057970,
+              1415674500,
+              1415674501,
+              1456584912,
+              1480640022,
+              1481161360,
+              1481161361,
+              1482183663,
+              1482183664,
+              1485571489,
+              1485571490,
+              1485571491,
+              1514039361
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "10732386": [
+                18887672
+              ],
+              "10740147": [
+                18887707
+              ],
+              "638342131": [
+                18887707
+              ],
+              "1370848074": [
+                18887672
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 0
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 3351,
+          "witness": {
+            "primitiveArcCount": 106,
+            "sourceWayIds": [
+              10732386,
+              10740244,
+              37886020,
+              37886021,
+              71179413,
+              202215420,
+              777199455,
+              782608581,
+              1049792777,
+              1049792778,
+              1049792780,
+              1374400804,
+              1374400806,
+              1375447387,
+              1476728660,
+              1476728662,
+              1479458628,
+              1485571489,
+              1485571490,
+              1485571491,
+              1514039361
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "10732386": [
+                18887672
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              10732386,
+              71179413
+            ],
+            "blockedControlsCrossed": [
+              95635128
+            ],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 11,
+      "windowId": "origin-02",
+      "sourceNodeIds": [
+        95440346,
+        847371175
+      ],
+      "baselineSettles": 4020,
+      "baselineReachableNodes": 2773,
+      "reachableOutsideWindowPoints": 105,
+      "reachableOutsideWindowWayEnds": 10,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 6740,
+          "witness": {
+            "primitiveArcCount": 192,
+            "sourceWayIds": [
+              10724906,
+              10725404,
+              10732386,
+              10740129,
+              32551747,
+              37058697,
+              37058706,
+              47443267,
+              47443268,
+              50408301,
+              50408326,
+              298925840,
+              479168942,
+              628240227,
+              638342134,
+              738481909,
+              777186303,
+              782608581,
+              845874478,
+              957123025,
+              957123026,
+              1042848935,
+              1151176496,
+              1333297286,
+              1333297287,
+              1333297288,
+              1355895919,
+              1368386871,
+              1375447387,
+              1382243652,
+              1382243653,
+              1382243654,
+              1382243655,
+              1385057970,
+              1415674500,
+              1415674501,
+              1456584912,
+              1480640022,
+              1482183663,
+              1482183664,
+              1485571489,
+              1485571490,
+              1485571491,
+              1514039361,
+              1531858557,
+              1531858558
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "10732386": [
+                18887672
+              ],
+              "50408301": [
+                18887707
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 4036
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 4148
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 9571
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 4124
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 3552,
+          "witness": {
+            "primitiveArcCount": 106,
+            "sourceWayIds": [
+              10732386,
+              10740244,
+              37886020,
+              37886021,
+              71179413,
+              202215423,
+              777199454,
+              782608581,
+              1049792777,
+              1049792779,
+              1374400804,
+              1374400806,
+              1375447387,
+              1476728660,
+              1476728662,
+              1479458628,
+              1485571489,
+              1485571490,
+              1485571491,
+              1514039361
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "10732386": [
+                18887672
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [
+              95635128
+            ],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 20,
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        4020629241,
+        10647923180
+      ],
+      "baselineSettles": 643,
+      "baselineReachableNodes": 429,
+      "reachableOutsideWindowPoints": 0,
+      "reachableOutsideWindowWayEnds": 0,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 3755,
+          "witness": {
+            "primitiveArcCount": 91,
+            "sourceWayIds": [
+              13286984,
+              13286993,
+              31255432,
+              124165079,
+              171586740,
+              171586770,
+              171586772,
+              171586775,
+              352344503,
+              385851016,
+              385851019,
+              385851022,
+              385851023,
+              390521997,
+              394196714,
+              394196716,
+              394196717,
+              394196721,
+              394242178,
+              399327765,
+              399484997,
+              399484999,
+              399485007,
+              399485015,
+              399485017,
+              399485022,
+              399485163,
+              399490082,
+              501448477,
+              501448478,
+              539624785,
+              553312071,
+              566808529,
+              737181911,
+              765136178,
+              915732072,
+              917429346,
+              1376158803,
+              1376158804,
+              1456118201,
+              1456118204
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "352344503": [
+                904555
+              ],
+              "390521997": [
+                14324637
+              ],
+              "765136178": [
+                10607816
+              ],
+              "1376158804": [
+                18488067
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 643
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 643
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 944
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 643
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 6187,
+          "witness": {
+            "primitiveArcCount": 84,
+            "sourceWayIds": [
+              13279137,
+              13279235,
+              31255432,
+              32133486,
+              32133488,
+              171586742,
+              171586764,
+              171586771,
+              171586777,
+              352344503,
+              390521997,
+              394196714,
+              394196716,
+              394196717,
+              394196721,
+              394242178,
+              399307233,
+              399327765,
+              399484997,
+              399484999,
+              399485007,
+              399485015,
+              399485017,
+              399485022,
+              399485164,
+              399491306,
+              399491308,
+              399491310,
+              487165553,
+              487165554,
+              553312070,
+              569461469,
+              765136178,
+              915707988,
+              915893110,
+              917429346,
+              921359084,
+              1456118201,
+              1456118204
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "352344503": [
+                904555
+              ],
+              "390521997": [
+                14324637
+              ],
+              "553312070": [
+                18488067
+              ],
+              "765136178": [
+                10607816
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              13279137,
+              32133486,
+              32133488,
+              171586742,
+              171586764,
+              171586771,
+              171586777,
+              399485164,
+              399491306,
+              399491308,
+              399491310,
+              487165553,
+              487165554,
+              553312070,
+              569461469,
+              915707988,
+              915893110,
+              921359084
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 21,
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        10647923180,
+        4020629241
+      ],
+      "baselineSettles": 6180,
+      "baselineReachableNodes": 3530,
+      "reachableOutsideWindowPoints": 26,
+      "reachableOutsideWindowWayEnds": 5,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 4522,
+          "witness": {
+            "primitiveArcCount": 116,
+            "sourceWayIds": [
+              13279137,
+              13346735,
+              26558175,
+              31255432,
+              171586742,
+              171586764,
+              171586771,
+              171586777,
+              352344503,
+              385851021,
+              390521999,
+              394196712,
+              394196715,
+              394196719,
+              399327757,
+              399327758,
+              399327770,
+              399485003,
+              399485019,
+              399485020,
+              399485021,
+              399485164,
+              399491306,
+              399491308,
+              399491310,
+              487165553,
+              487165554,
+              501448478,
+              569461469,
+              760524065,
+              915893110,
+              921359084,
+              1076052944,
+              1076052945
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "352344503": [
+                904555
+              ],
+              "399327757": [
+                9432309,
+                9432310
+              ],
+              "399327758": [
+                9432310
+              ],
+              "399327770": [
+                9432310
+              ],
+              "399485019": [
+                10607816
+              ],
+              "1076052944": [
+                14324637
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 6183
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 6180
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 7979
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 6886
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 5189,
+          "witness": {
+            "primitiveArcCount": 84,
+            "sourceWayIds": [
+              13279137,
+              13279235,
+              31255432,
+              32133486,
+              32133488,
+              171586742,
+              171586764,
+              171586771,
+              171586777,
+              352344503,
+              390521997,
+              394196714,
+              394196716,
+              394196717,
+              394196721,
+              394242178,
+              399307233,
+              399327765,
+              399484997,
+              399484999,
+              399485007,
+              399485015,
+              399485017,
+              399485022,
+              399485164,
+              399491306,
+              399491308,
+              399491310,
+              487165553,
+              487165554,
+              553312070,
+              569461469,
+              765136178,
+              915707988,
+              915893110,
+              917429346,
+              921359084,
+              1456118201,
+              1456118204
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "352344503": [
+                904555
+              ],
+              "390521997": [
+                14324637
+              ],
+              "553312070": [
+                18488067
+              ],
+              "765136178": [
+                10607816
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              13279235,
+              390521997,
+              394196714,
+              394196716,
+              394196717,
+              394196721,
+              399307233,
+              399327765,
+              399484997,
+              399484999,
+              399485007,
+              399485015,
+              399485017,
+              399485022,
+              765136178,
+              917429346,
+              1456118201,
+              1456118204
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 22,
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        8520993671,
+        122827648
+      ],
+      "baselineSettles": 13,
+      "baselineReachableNodes": 14,
+      "reachableOutsideWindowPoints": 0,
+      "reachableOutsideWindowWayEnds": 0,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 8058,
+          "witness": {
+            "primitiveArcCount": 164,
+            "sourceWayIds": [
+              30814714,
+              390521999,
+              391805063,
+              391805066,
+              391805068,
+              391805071,
+              391805076,
+              391805087,
+              391805088,
+              391805089,
+              391805099,
+              394196712,
+              394196715,
+              394196719,
+              394196725,
+              398255058,
+              399485001,
+              399485003,
+              399485009,
+              399485019,
+              399485020,
+              399485021,
+              399485026,
+              399485028,
+              399485128,
+              399485129,
+              399485130,
+              399485131,
+              399485132,
+              399485133,
+              399485134,
+              399485136,
+              399485137,
+              399485138,
+              399485139,
+              399485140,
+              399485141,
+              399485142,
+              399485143,
+              399485145,
+              399485146,
+              399490074,
+              399990737,
+              399990738,
+              399990739,
+              399990740,
+              492443760,
+              492443761,
+              492443762,
+              492443763,
+              492443764,
+              553312071,
+              737181911,
+              759776276,
+              760524065,
+              761620058,
+              761620062,
+              816400158,
+              892427864,
+              917429346,
+              1057086500,
+              1057086501,
+              1076052944,
+              1076052945,
+              1376158803,
+              1376158804
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "394196725": [
+                18488067
+              ],
+              "399485019": [
+                10607816
+              ],
+              "399490074": [
+                14292573
+              ],
+              "761620058": [
+                10555826
+              ],
+              "1057086501": [
+                14103696
+              ],
+              "1076052944": [
+                14324637
+              ],
+              "1376158804": [
+                18488067
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 13
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 13
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 7979
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 424
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 12270,
+          "witness": {
+            "primitiveArcCount": 134,
+            "sourceWayIds": [
+              13288415,
+              26810814,
+              30814714,
+              391805063,
+              391805068,
+              391805069,
+              391805071,
+              391805089,
+              391805099,
+              394196736,
+              394196742,
+              394196744,
+              398255058,
+              399485029,
+              399485060,
+              399485064,
+              399485091,
+              399485096,
+              399485097,
+              399485103,
+              399485106,
+              399485111,
+              399485128,
+              399485129,
+              399485130,
+              399485131,
+              399485132,
+              399485133,
+              399485134,
+              399485137,
+              399485138,
+              399485139,
+              399485140,
+              399485141,
+              399485142,
+              399485143,
+              399485145,
+              399485146,
+              399485167,
+              399485168,
+              399485169,
+              399490074,
+              399990737,
+              399990738,
+              399990739,
+              399990740,
+              492443760,
+              492443761,
+              492443762,
+              492443763,
+              492443764,
+              569461460,
+              816400158,
+              892427864,
+              915815153,
+              915815154,
+              917429346,
+              985814246,
+              986166403
+            ],
+            "excludedWaysUsed": {
+              "569461460": "lane-access"
+            },
+            "unsupportedClosuresUsed": {
+              "399485060": [
+                9442688
+              ],
+              "399485096": [
+                9222048
+              ],
+              "399485167": [
+                7682931
+              ],
+              "399490074": [
+                14292573
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              391805069,
+              399485064,
+              399485091,
+              399485096,
+              399485103,
+              399485106
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 23,
+      "windowId": "origin-05",
+      "sourceNodeIds": [
+        122827648,
+        8520993671
+      ],
+      "baselineSettles": 76,
+      "baselineReachableNodes": 45,
+      "reachableOutsideWindowPoints": 1,
+      "reachableOutsideWindowWayEnds": 1,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 3049,
+          "witness": {
+            "primitiveArcCount": 144,
+            "sourceWayIds": [
+              13322627,
+              30814714,
+              390521997,
+              391805061,
+              391805062,
+              391805065,
+              391805067,
+              391805069,
+              391805073,
+              391805079,
+              391805082,
+              391805090,
+              391805091,
+              391805094,
+              391805097,
+              391805098,
+              394196714,
+              394196716,
+              394196717,
+              394196721,
+              398255058,
+              399484997,
+              399484999,
+              399485007,
+              399485012,
+              399485015,
+              399485016,
+              399485017,
+              399485022,
+              399485025,
+              399485128,
+              399485129,
+              399485130,
+              399485131,
+              399485132,
+              399485133,
+              399485134,
+              399485137,
+              399485138,
+              399485139,
+              399485140,
+              399485141,
+              399485142,
+              399485143,
+              399485145,
+              399485146,
+              399490069,
+              399490070,
+              399990737,
+              399990738,
+              399990739,
+              399990740,
+              492443760,
+              492443761,
+              492443762,
+              492443763,
+              492443764,
+              761620060,
+              762721626,
+              765136178,
+              780127487,
+              892427864,
+              1057086498,
+              1456118201,
+              1456118204
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "390521997": [
+                14324637
+              ],
+              "399490070": [
+                14292573
+              ],
+              "761620060": [
+                10555826
+              ],
+              "765136178": [
+                10607816
+              ],
+              "780127487": [
+                14292573
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 78
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 76
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 88
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 76
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 5046,
+          "witness": {
+            "primitiveArcCount": 134,
+            "sourceWayIds": [
+              13288415,
+              26810814,
+              30814714,
+              391805063,
+              391805068,
+              391805069,
+              391805071,
+              391805089,
+              391805099,
+              394196736,
+              394196742,
+              394196744,
+              398255058,
+              399485029,
+              399485060,
+              399485064,
+              399485091,
+              399485096,
+              399485097,
+              399485103,
+              399485106,
+              399485111,
+              399485128,
+              399485129,
+              399485130,
+              399485131,
+              399485132,
+              399485133,
+              399485134,
+              399485137,
+              399485138,
+              399485139,
+              399485140,
+              399485141,
+              399485142,
+              399485143,
+              399485145,
+              399485146,
+              399485167,
+              399485168,
+              399485169,
+              399490074,
+              399990737,
+              399990738,
+              399990739,
+              399990740,
+              492443760,
+              492443761,
+              492443762,
+              492443763,
+              492443764,
+              569461460,
+              816400158,
+              892427864,
+              915815153,
+              915815154,
+              917429346,
+              985814246,
+              986166403
+            ],
+            "excludedWaysUsed": {
+              "569461460": "lane-access"
+            },
+            "unsupportedClosuresUsed": {
+              "399485060": [
+                9442688
+              ],
+              "399485096": [
+                9222048
+              ],
+              "399485167": [
+                7682931
+              ],
+              "399490074": [
+                14292573
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              26810814,
+              391805063,
+              391805068,
+              391805071,
+              391805089,
+              391805099,
+              394196736,
+              394196742,
+              394196744,
+              399485029,
+              399485060,
+              399485097,
+              399485111,
+              399485167,
+              399485168,
+              399485169,
+              399490074,
+              816400158,
+              915815153,
+              915815154,
+              917429346,
+              985814246,
+              986166403
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 30,
+      "windowId": "origin-07",
+      "sourceNodeIds": [
+        8459739699,
+        1205525756
+      ],
+      "baselineSettles": 1915,
+      "baselineReachableNodes": 960,
+      "reachableOutsideWindowPoints": 238,
+      "reachableOutsideWindowWayEnds": 1,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": false,
+          "settled": 1915
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 1915
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 1915
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 3182,
+          "witness": {
+            "primitiveArcCount": 624,
+            "sourceWayIds": [
+              7195825,
+              7275651,
+              7295361,
+              7325832,
+              103641983,
+              104366910,
+              104366911,
+              104366912,
+              104366960,
+              365024101,
+              365995407,
+              370382256,
+              379799838,
+              697898025,
+              911051269,
+              911051270,
+              1187435226,
+              1187435227
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              103641983
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": true,
+          "settled": 2945,
+          "witness": {
+            "primitiveArcCount": 498,
+            "sourceWayIds": [
+              7275651,
+              7325832,
+              104366910,
+              104366911,
+              104366912,
+              104366927,
+              104366960,
+              104366965,
+              365024101,
+              365995407,
+              370382255,
+              370382256,
+              379799838,
+              697898025,
+              911051269,
+              911051270,
+              1187435226,
+              1187435227
+            ],
+            "excludedWaysUsed": {
+              "104366927": "conditional-or-way-restriction",
+              "370382255": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 3072,
+          "witness": {
+            "primitiveArcCount": 498,
+            "sourceWayIds": [
+              7275651,
+              7325832,
+              104366910,
+              104366911,
+              104366912,
+              104366927,
+              104366960,
+              104366965,
+              365024101,
+              365995407,
+              370382255,
+              370382256,
+              379799838,
+              697898025,
+              911051269,
+              911051270,
+              1187435226,
+              1187435227
+            ],
+            "excludedWaysUsed": {
+              "104366927": "conditional-or-way-restriction",
+              "370382255": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 55,
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        10682894231,
+        2833013316
+      ],
+      "baselineSettles": 9544,
+      "baselineReachableNodes": 5684,
+      "reachableOutsideWindowPoints": 465,
+      "reachableOutsideWindowWayEnds": 20,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": false,
+          "settled": 9626
+        },
+        "without-supported-turns": {
+          "reachable": true,
+          "settled": 1735,
+          "witness": {
+            "primitiveArcCount": 84,
+            "sourceWayIds": [
+              70461354,
+              151777775,
+              342857640,
+              342857644,
+              342857664,
+              342865004,
+              342865005,
+              342865014,
+              342865020,
+              342865028,
+              759391951,
+              1107962987,
+              1148176255,
+              1177172870,
+              1196296602,
+              1475344759,
+              1475344761
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": [
+              4866463
+            ]
+          }
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 9544
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 1532,
+          "witness": {
+            "primitiveArcCount": 63,
+            "sourceWayIds": [
+              69750052,
+              70452747,
+              342865008,
+              342865011,
+              342865017,
+              342865018,
+              342865020,
+              630458245,
+              912235800,
+              1148176255,
+              1291235245,
+              1291235246,
+              1356676444,
+              1475344762
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              70452747,
+              342865008,
+              342865011,
+              342865017,
+              342865018,
+              342865020,
+              912235800,
+              1291235246
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 9544
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 676,
+          "witness": {
+            "primitiveArcCount": 31,
+            "sourceWayIds": [
+              133541885,
+              342865004,
+              342865005,
+              342865009,
+              342865012,
+              342865013,
+              342865014,
+              342865020,
+              1107962987,
+              1148176255,
+              1291235246
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "342865009": [
+                14745282
+              ],
+              "342865012": [
+                4866465
+              ],
+              "342865013": [
+                4866464
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              342865020
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 57,
+      "windowId": "origin-14",
+      "sourceNodeIds": [
+        3497342105,
+        44894439
+      ],
+      "baselineSettles": 4,
+      "baselineReachableNodes": 5,
+      "reachableOutsideWindowPoints": 0,
+      "reachableOutsideWindowWayEnds": 0,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 2204,
+          "witness": {
+            "primitiveArcCount": 101,
+            "sourceWayIds": [
+              5776707,
+              342777945,
+              342777949,
+              342777960,
+              342777962,
+              342857653,
+              812640631,
+              812640632,
+              812640633,
+              812640634,
+              846942458,
+              848258895,
+              848258899,
+              848258900
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "342777945": [
+                4864723,
+                4864724
+              ],
+              "342777960": [
+                4864723
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": true,
+          "settled": 4366,
+          "witness": {
+            "primitiveArcCount": 173,
+            "sourceWayIds": [
+              5773997,
+              5775232,
+              5775563,
+              94163746,
+              94163894,
+              342777943,
+              342777947,
+              342777949,
+              342777951,
+              562522902,
+              633307815,
+              785226769,
+              785226772,
+              785226774,
+              847588081,
+              847588082,
+              912239026,
+              987348698,
+              1138594819,
+              1138594820,
+              1193859384,
+              1193859385,
+              1193859401,
+              1193859402,
+              1206682205
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": [
+              4864728
+            ]
+          }
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 4
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 3035,
+          "witness": {
+            "primitiveArcCount": 108,
+            "sourceWayIds": [
+              5776707,
+              96216177,
+              124126977,
+              342777943,
+              342777944,
+              342777946,
+              342777950,
+              342857653,
+              812640631,
+              812640632,
+              812640633,
+              812640634,
+              846942458,
+              848258895,
+              848258899,
+              848258900
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              96216177,
+              124126977,
+              342777943,
+              342777944,
+              342777946,
+              342777950
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 4
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 3138,
+          "witness": {
+            "primitiveArcCount": 99,
+            "sourceWayIds": [
+              5776707,
+              96216177,
+              342777949,
+              342777954,
+              342857653,
+              812640631,
+              812640632,
+              812640633,
+              812640634,
+              846942458,
+              848258895,
+              848258899,
+              848258900
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "342777954": [
+                4864723
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              96216177,
+              342777954
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 67,
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        13471678203,
+        230044564
+      ],
+      "baselineSettles": 19378,
+      "baselineReachableNodes": 12298,
+      "reachableOutsideWindowPoints": 303,
+      "reachableOutsideWindowWayEnds": 46,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 4725,
+          "witness": {
+            "primitiveArcCount": 153,
+            "sourceWayIds": [
+              21348994,
+              21358746,
+              21362617,
+              21395523,
+              29316383,
+              29316387,
+              29316418,
+              29316424,
+              29316438,
+              29316587,
+              29336746,
+              29336776,
+              29336780,
+              29336786,
+              29369392,
+              29369396,
+              30595097,
+              30595098,
+              30595441,
+              33112767,
+              42391385,
+              59244240,
+              86578316,
+              86578318,
+              122615261,
+              122615263,
+              122615264,
+              592506340,
+              607473247,
+              899348201,
+              1102877483,
+              1311621567,
+              1311621568,
+              1311621569,
+              1311621570,
+              1312473573,
+              1312473574,
+              1312534308,
+              1312534309,
+              1332783566,
+              1411765729,
+              1451530415
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "29316587": [
+                21578255
+              ],
+              "1451530415": [
+                19851604
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 19476
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 19657
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 6324,
+          "witness": {
+            "primitiveArcCount": 141,
+            "sourceWayIds": [
+              21348994,
+              21358746,
+              21362617,
+              21391302,
+              21395523,
+              21421112,
+              29316383,
+              29316387,
+              29316418,
+              29316424,
+              29316438,
+              29336746,
+              29336776,
+              29336780,
+              29336786,
+              29369392,
+              29369396,
+              30595097,
+              30595098,
+              33112767,
+              42391385,
+              59244240,
+              86578316,
+              86578318,
+              122615261,
+              122615263,
+              122615264,
+              527720515,
+              607473247,
+              899348201,
+              1102877483,
+              1311621567,
+              1311621568,
+              1311621569,
+              1311621570,
+              1312473575,
+              1312534308,
+              1312534309,
+              1312534322,
+              1332783566,
+              1411765729
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              1312473575
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 19416
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 6799,
+          "witness": {
+            "primitiveArcCount": 138,
+            "sourceWayIds": [
+              21346162,
+              21347010,
+              21350918,
+              21351630,
+              21358746,
+              21362617,
+              21395523,
+              29316587,
+              29336744,
+              29336792,
+              29336793,
+              29336794,
+              29336855,
+              29336957,
+              30595097,
+              30595098,
+              32802446,
+              32802447,
+              32802971,
+              42391385,
+              86578315,
+              86578318,
+              121341598,
+              137065020,
+              183062755,
+              247343608,
+              593153695,
+              607473234,
+              607473246,
+              899348199,
+              899348200,
+              899348202,
+              1093530089,
+              1312473573,
+              1312473574,
+              1312534304,
+              1332783561,
+              1332783565,
+              1411765729,
+              1451530415
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "29316587": [
+                21578255
+              ],
+              "1451530415": [
+                19851604
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              21346162,
+              21347010,
+              21350918,
+              21351630,
+              29336744,
+              29336792,
+              29336793,
+              29336794,
+              29336855,
+              29336957,
+              32802446,
+              32802447,
+              32802971,
+              86578315,
+              121341598,
+              137065020,
+              247343608,
+              593153695,
+              607473234,
+              607473246,
+              899348200,
+              1093530089,
+              1312534304,
+              1332783561,
+              1332783565
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 68,
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        13387406710,
+        12378160396
+      ],
+      "baselineSettles": 0,
+      "baselineReachableNodes": 1,
+      "reachableOutsideWindowPoints": 0,
+      "reachableOutsideWindowWayEnds": 0,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 0
+        },
+        "without-way-exclusions": {
+          "reachable": true,
+          "settled": 14014,
+          "witness": {
+            "primitiveArcCount": 236,
+            "sourceWayIds": [
+              21382651,
+              21397146,
+              29314824,
+              29314825,
+              29314826,
+              29314965,
+              29314968,
+              29314972,
+              29314985,
+              29343269,
+              29343321,
+              32990628,
+              36807472,
+              44935809,
+              44935810,
+              230998836,
+              379034761,
+              527778073,
+              560328442,
+              592554631,
+              592554642,
+              594198481,
+              607361897,
+              612198521,
+              612697962,
+              612697971,
+              625741644,
+              625741645,
+              754780702,
+              754780705,
+              754780707,
+              754780709,
+              754780710,
+              754780713,
+              754780714,
+              754780716,
+              754780718,
+              754804115,
+              1303400443,
+              1303400444,
+              1303400445,
+              1303400446,
+              1313409347,
+              1337453687,
+              1337453688,
+              1337453689,
+              1337453690,
+              1337453691,
+              1337453692,
+              1337453693,
+              1337453694,
+              1338210784,
+              1338210785,
+              1338210786,
+              1338210829,
+              1338210830,
+              1338210831,
+              1338210833,
+              1338210834,
+              1338210836,
+              1357789599,
+              1459658998,
+              1531222183,
+              1531222184
+            ],
+            "excludedWaysUsed": {
+              "230998836": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 24538,
+          "witness": {
+            "primitiveArcCount": 214,
+            "sourceWayIds": [
+              21363702,
+              21397554,
+              21397558,
+              29314569,
+              29314570,
+              36807472,
+              42974052,
+              204081886,
+              230998836,
+              379034761,
+              404414502,
+              527782713,
+              557125915,
+              568499124,
+              568499125,
+              568679647,
+              568679648,
+              592554631,
+              592554642,
+              715318716,
+              715318717,
+              754780707,
+              754780709,
+              754804115,
+              1115158956,
+              1312843255,
+              1338210784,
+              1338210785,
+              1338210786,
+              1338210829,
+              1338210830,
+              1338210831,
+              1338210833,
+              1338210834,
+              1338210836,
+              1338546756
+            ],
+            "excludedWaysUsed": {
+              "230998836": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {
+              "21363702": [
+                9939329
+              ],
+              "568499125": [
+                7607568
+              ],
+              "715318716": [
+                9939329,
+                9939333
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 69,
+      "windowId": "origin-17",
+      "sourceNodeIds": [
+        12378160396,
+        13387406710
+      ],
+      "baselineSettles": 19378,
+      "baselineReachableNodes": 12298,
+      "reachableOutsideWindowPoints": 303,
+      "reachableOutsideWindowWayEnds": 46,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": false,
+          "settled": 21751
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 19476
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 19657
+        },
+        "without-direction-limits": {
+          "reachable": false,
+          "settled": 26660
+        },
+        "without-way-exclusions": {
+          "reachable": true,
+          "settled": 6430,
+          "witness": {
+            "primitiveArcCount": 222,
+            "sourceWayIds": [
+              21346514,
+              21363693,
+              30164035,
+              30164120,
+              36807472,
+              36807477,
+              44936293,
+              86463665,
+              86551416,
+              135632452,
+              135632845,
+              230999207,
+              234879552,
+              422410890,
+              592256643,
+              754804115,
+              1057426367,
+              1094447662,
+              1223669686,
+              1223669687,
+              1223669688,
+              1313409344,
+              1313409345,
+              1313409346,
+              1336674277,
+              1336674278,
+              1336674279,
+              1337453731,
+              1337633674,
+              1337917648,
+              1338210829,
+              1338210830,
+              1338210831,
+              1338210833,
+              1338210834,
+              1338210836,
+              1338210837,
+              1338210838,
+              1338210839,
+              1368045939,
+              1459659001,
+              1460535478
+            ],
+            "excludedWaysUsed": {
+              "1459659001": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 11683,
+          "witness": {
+            "primitiveArcCount": 214,
+            "sourceWayIds": [
+              21363702,
+              21397554,
+              21397558,
+              29314569,
+              29314570,
+              36807472,
+              42974052,
+              204081886,
+              230998836,
+              379034761,
+              404414502,
+              527782713,
+              557125915,
+              568499124,
+              568499125,
+              568679647,
+              568679648,
+              592554631,
+              592554642,
+              715318716,
+              715318717,
+              754780707,
+              754780709,
+              754804115,
+              1115158956,
+              1312843255,
+              1338210784,
+              1338210785,
+              1338210786,
+              1338210829,
+              1338210830,
+              1338210831,
+              1338210833,
+              1338210834,
+              1338210836,
+              1338546756
+            ],
+            "excludedWaysUsed": {
+              "230998836": "conditional-or-way-restriction"
+            },
+            "unsupportedClosuresUsed": {
+              "21363702": [
+                9939329
+              ],
+              "568499125": [
+                7607568
+              ],
+              "715318716": [
+                9939329,
+                9939333
+              ]
+            },
+            "disallowedDirectionWaysUsed": [
+              21363702,
+              29314569,
+              29314570,
+              42974052,
+              379034761,
+              404414502,
+              557125915,
+              568679647,
+              568679648,
+              715318716,
+              715318717,
+              754780707,
+              754780709,
+              1115158956,
+              1312843255
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": [
+              17869651
+            ]
+          }
+        }
+      }
+    },
+    {
+      "originalDirectionalIndex": 78,
+      "windowId": "origin-20",
+      "sourceNodeIds": [
+        10879628140,
+        5369244126
+      ],
+      "baselineSettles": 11464,
+      "baselineReachableNodes": 6875,
+      "reachableOutsideWindowPoints": 372,
+      "reachableOutsideWindowWayEnds": 22,
+      "outsideScopeInterpretation": "Exposure only; existence of a legal missing detour outside this capture remains unproven.",
+      "counterfactuals": {
+        "without-unsupported-closures": {
+          "reachable": true,
+          "settled": 6405,
+          "witness": {
+            "primitiveArcCount": 220,
+            "sourceWayIds": [
+              11385402,
+              11388006,
+              11392007,
+              11415210,
+              11417314,
+              30767304,
+              30767329,
+              30809669,
+              30809670,
+              50089194,
+              50089201,
+              50090232,
+              50090240,
+              50090244,
+              50090245,
+              50090246,
+              120619291,
+              121865062,
+              131817924,
+              132633521,
+              180342571,
+              240745369,
+              461497688,
+              461497708,
+              700356980,
+              700356981,
+              700356985,
+              730921853,
+              731223620,
+              922482317,
+              939426816,
+              939426818,
+              1132939573,
+              1227220237,
+              1300155380
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {
+              "731223620": [
+                19644918
+              ],
+              "922482317": [
+                19644918
+              ]
+            },
+            "disallowedDirectionWaysUsed": [],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-supported-turns": {
+          "reachable": false,
+          "settled": 11474
+        },
+        "without-blocked-controls": {
+          "reachable": false,
+          "settled": 11464
+        },
+        "without-direction-limits": {
+          "reachable": true,
+          "settled": 6688,
+          "witness": {
+            "primitiveArcCount": 173,
+            "sourceWayIds": [
+              11385615,
+              11388006,
+              11412224,
+              30767328,
+              30809669,
+              30809670,
+              50089201,
+              50090242,
+              50090243,
+              65377811,
+              120619291,
+              121865062,
+              180342571,
+              240745369,
+              461497686,
+              461497688,
+              461497704,
+              461497708,
+              700356980,
+              700356981,
+              700356985,
+              730921853,
+              731223864,
+              732316874,
+              922482316,
+              1426763331
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              11388006,
+              11412224,
+              30767328,
+              50090242,
+              50090243,
+              461497704,
+              732316874
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        },
+        "without-way-exclusions": {
+          "reachable": false,
+          "settled": 11562
+        },
+        "geometry-only": {
+          "reachable": true,
+          "settled": 7611,
+          "witness": {
+            "primitiveArcCount": 173,
+            "sourceWayIds": [
+              11385615,
+              11388006,
+              11412224,
+              30767328,
+              30809669,
+              30809670,
+              50089201,
+              50090242,
+              50090243,
+              65377811,
+              120619291,
+              121865062,
+              180342571,
+              240745369,
+              461497686,
+              461497688,
+              461497704,
+              461497708,
+              700356980,
+              700356981,
+              700356985,
+              730921853,
+              731223864,
+              732316874,
+              922482316,
+              1426763331
+            ],
+            "excludedWaysUsed": {},
+            "unsupportedClosuresUsed": {},
+            "disallowedDirectionWaysUsed": [
+              11388006,
+              11412224,
+              30767328,
+              50090242,
+              50090243,
+              461497704,
+              732316874
+            ],
+            "blockedControlsCrossed": [],
+            "supportedTurnRuleIdsAtViolations": []
+          }
+        }
+      }
+    }
+  ],
+  "witnessSourceRelations": {
+    "10555826": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 761620058,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 761620061,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 761620060,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "10607816": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399485019,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 765136177,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 765136178,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "14103696": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 1057086499,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 391805064,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1057086501,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "14265232": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 469500743,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 10740417,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 469500749,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "14292573": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399490074,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 780127487,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 399490070,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "14324637": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 390521997,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 390522031,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1076052944,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "14745282": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_left_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 342865009,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 342865029,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 342865030,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18488067": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 394196725,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 553312070,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1376158804,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18876663": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 467398952,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 897715891,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1531858549,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18878388": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 1370427475,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 487853562,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1361087452,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18880084": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 76372176,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 843730246,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1370427475,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18887672": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 10732386,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 1370848073,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1370848074,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "18887707": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 50408301,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 10740147,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 638342131,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "19322023": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 1037103227,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 1154445483,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1154445484,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "19644918": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 731223620,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 11419801,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 922482317,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "19851604": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 1312473576,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 137231752,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 1451530415,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "21578255": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 29316587,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 137231752,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 684366367,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "3312732": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 245013742,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 245013740,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 245013741,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "4864723": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "source": "Bing",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 342777954,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 342777945,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 342777960,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "4864724": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "source": "Bing",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 342777956,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 342777945,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 342777953,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "4866464": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "source": "Bing",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 342865013,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 342865002,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 342865007,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "4866465": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "source": "Bing",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 342865015,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 342865002,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 342865012,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "7607568": {
+      "reason": "unsupported-or-conditional",
+      "tags": {
+        "restriction:conditional": "no_left_turn @ (Mo-Fr 06:00-21:00)",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 229931310,
+          "role": "via",
+          "type": "node"
+        },
+        {
+          "ref": 568499125,
+          "role": "to",
+          "type": "way"
+        },
+        {
+          "ref": 1337917658,
+          "role": "from",
+          "type": "way"
+        }
+      ]
+    },
+    "7682931": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 26825822,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 399485167,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 399485083,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "904555": {
+      "reason": "unsupported-or-conditional",
+      "tags": {
+        "restriction": "no_right_turn_on_red",
+        "source": "yahoo_imagery;survey;image",
+        "source_ref": "AM909_DSCU2704",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 13359288,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 122940584,
+          "role": "via",
+          "type": "node"
+        },
+        {
+          "ref": 352344503,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9222048": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399485073,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 400516832,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 399485096,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9432309": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399327762,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 399327757,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 399327766,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9432310": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399327770,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 399327757,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 399327758,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9442688": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 399485060,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 680384542,
+          "role": "to",
+          "type": "way"
+        },
+        {
+          "ref": 680384541,
+          "role": "via",
+          "type": "way"
+        }
+      ]
+    },
+    "9939329": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_left_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 21363702,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 715318716,
+          "role": "via",
+          "type": "way"
+        }
+      ]
+    },
+    "9939333": {
+      "reason": "unsupported-or-conditional",
+      "tags": {
+        "restriction": "no_left_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 715318716,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 5358270864,
+          "role": "via",
+          "type": "node"
+        }
+      ]
+    },
+    "9995218": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 430465433,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 430465423,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 37125305,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9995220": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 430465423,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 37125296,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 37125300,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    },
+    "9995221": {
+      "reason": "via-way",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "ref": 37125296,
+          "role": "from",
+          "type": "way"
+        },
+        {
+          "ref": 430465433,
+          "role": "via",
+          "type": "way"
+        },
+        {
+          "ref": 430465423,
+          "role": "to",
+          "type": "way"
+        }
+      ]
+    }
+  },
+  "witnessConstrainedWayTags": {
+    "1036220802": {
+      "highway": "secondary",
+      "lanes": "4",
+      "maxspeed": "40 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Victoria",
+      "tiger:name_direction_prefix": "S",
+      "tiger:name_type": "Ave"
+    },
+    "1036220803": {
+      "highway": "secondary",
+      "lanes": "4",
+      "maxspeed": "40 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Victoria",
+      "tiger:name_direction_prefix": "S",
+      "tiger:name_type": "Ave"
+    },
+    "1036220806": {
+      "highway": "secondary",
+      "lanes": "4",
+      "maxspeed": "40 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Victoria",
+      "tiger:name_direction_prefix": "S",
+      "tiger:name_type": "Ave"
+    },
+    "103641983": {
+      "cycleway:right": "no",
+      "foot": "yes",
+      "highway": "primary_link",
+      "lane_markings": "no",
+      "maxspeed": "30 mph",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "source": "bing_imagery_0.25m_201005",
+      "surface": "asphalt"
+    },
+    "1037103227": {
+      "cycleway:right": "shared_lane",
+      "highway": "secondary",
+      "lanes": "5",
+      "maxspeed": "40 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "surface": "asphalt",
+      "turn:lanes": "left|left|||"
+    },
+    "1041407881": {
+      "bicycle": "no",
+      "destination": "Main Street",
+      "destination:lanes": "East Main Street|none|none;West Main Street;Mills Road",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA",
+      "turn:lanes": "left|through|through;right"
+    },
+    "1041413248": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "destination:lanes": "San Francisco|San Francisco|Main Street;Ventura;Santa Clarita",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "turn:lanes": "||through;slight_right",
+      "unsigned_ref": "CA 1"
+    },
+    "1041421612": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "cycleway:both": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "unsigned_ref": "CA 1"
+    },
+    "1041421613": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "destination:lanes": "none|none|none;Telephone Road|Telephone Road",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "4",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "turn:lanes": "none|none|through;slight_right|slight_right",
+      "unsigned_ref": "CA 1"
+    },
+    "1042848935": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "destination:lanes": "none|none|none;Seaward Avenue",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "turn:lanes": "none|none|through;slight_right",
+      "unsigned_ref": "CA 1"
+    },
+    "104366927": {
+      "alt_name": "Banning-Idyllwild Road",
+      "cycleway:both": "no",
+      "highway": "primary",
+      "lanes": "2",
+      "maxspeed": "30 mph",
+      "maxspeed:conditional": "25 mph @ children_present",
+      "name": "Banning-Idyllwild Panoramic Highway",
+      "official_name": "Esperanza Firefighters Memorial Highway",
+      "ref": "CA 243",
+      "sidewalk:both": "no",
+      "source": "GPS;bing_imagery_0.25m_201005;survey;image;CDOT",
+      "source:lanes": "survey;image",
+      "source:maxspeed": "survey;image",
+      "source_ref": "AM909_DSCX1886",
+      "source_ref:lanes": "AM909_DSCX1706",
+      "source_ref:maxspeed": "AM909_DSCX1878",
+      "surface": "asphalt"
+    },
+    "1057086501": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "5",
+      "maxspeed": "45 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "reverse;left|left|||"
+    },
+    "10724906": {
+      "bicycle": "no",
+      "destination": "Seaward Avenue",
+      "highway": "motorway_link",
+      "junction:ref": "68",
+      "lit": "yes",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA"
+    },
+    "10732386": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "maxspeed": "35 mph",
+      "name": "Spinnaker Drive",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Spinnaker",
+      "tiger:name_type": "Dr"
+    },
+    "10740147": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "maxspeed": "55 mph",
+      "name": "Olivas Park Drive",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Olivas Park",
+      "tiger:name_type": "Dr"
+    },
+    "1076052944": {
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "1093530089": {
+      "destination": "Leonard Avenue",
+      "embankment": "yes",
+      "highway": "motorway_link",
+      "junction:ref": "6",
+      "lanes": "2",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "turn:lanes": "left|through;right"
+    },
+    "1115158956": {
+      "hgv": "no",
+      "highway": "tertiary",
+      "lanes": "1",
+      "lit": "yes",
+      "maxspeed": "30 mph",
+      "name": "South Third Street",
+      "oneway": "yes",
+      "placement": "left_of:1",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "22'",
+      "width:carriageway": "22'"
+    },
+    "11388006": {
+      "cycleway:both": "no",
+      "highway": "primary_link",
+      "lanes": "1",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Cumberland, ME",
+      "tiger:reviewed": "no"
+    },
+    "11412224": {
+      "highway": "primary",
+      "name": "State Street",
+      "oneway": "yes",
+      "ref": "ME 77",
+      "surface": "asphalt",
+      "tiger:cfcc": "A35",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "State",
+      "tiger:name_base_1": "State Route 77",
+      "tiger:name_type": "St"
+    },
+    "1151176496": {
+      "bicycle": "no",
+      "destination": "Seaward Avenue",
+      "highway": "motorway_link",
+      "lanes": "4",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA",
+      "turn:lanes": "left|left;through|right|right"
+    },
+    "1154445483": {
+      "bicycle": "no",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA"
+    },
+    "1169004750": {
+      "bicycle": "no",
+      "destination": "Ventura",
+      "destination:ref": "US 101 North",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA"
+    },
+    "1170505194": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "layer": "1",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "unsigned_ref": "CA 1"
+    },
+    "121341598": {
+      "cycleway:left": "lane",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "North 4th Street",
+      "old_ref:fap": "22",
+      "oneway": "yes",
+      "ref": "US 23",
+      "sidewalk": "separate",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "46'",
+      "width:carriageway": "46'"
+    },
+    "122900708": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "unsigned_ref": "CA 1"
+    },
+    "122900749": {
+      "bicycle": "no",
+      "destination": "Main Street",
+      "highway": "motorway_link",
+      "junction:ref": "66B",
+      "lit": "yes",
+      "oneway": "yes",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA"
+    },
+    "124126977": {
+      "destination:ref": "S-263",
+      "foot": "no",
+      "highway": "trunk_link",
+      "lanes": "1",
+      "name": "Mullan Road",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "source": "Bing",
+      "surface": "asphalt"
+    },
+    "1291235246": {
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "name_1": "Bitterroot Road",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo,TIGER",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "tiger:zip_left_1": "59804",
+      "tiger:zip_right": "59801"
+    },
+    "1312473575": {
+      "cycleway": "shared_lane",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "25 mph",
+      "name": "East Nationwide Boulevard",
+      "oneway": "yes",
+      "placement": "right_of:2",
+      "shoulder": "right",
+      "shoulder:right:width": "7'",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "surface": "asphalt",
+      "turn:lanes": "left|through|through;right",
+      "width": "33'",
+      "width:carriageway": "33'"
+    },
+    "1312534304": {
+      "cycleway:left": "lane",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "North 4th Street",
+      "old_ref:fap": "22",
+      "oneway": "yes",
+      "ref": "US 23",
+      "sidewalk:left": "separate",
+      "sidewalk:right": "no",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "46'",
+      "width:carriageway": "46'"
+    },
+    "1312843255": {
+      "cycleway:right": "shared_lane",
+      "destination:lanes": "Wheeling;I-70 East;Fulton Street;US 23|Wheeling;I-70 East;Fulton Street;US 23;Livingston Avenue;US 33|Third Street|I-71 South;I-70 West",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref": "US 23",
+      "old_ref:fap": "22",
+      "oneway": "yes",
+      "placement": "middle_of:3",
+      "ref": "US 33",
+      "sidewalk": "both",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "42'",
+      "width:carriageway": "42'"
+    },
+    "13279137": {
+      "destination": "Avenida Pico",
+      "highway": "motorway_link",
+      "junction:ref": "76",
+      "lanes": "1",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "13279235": {
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "turn:lanes": "left|left;right"
+    },
+    "1332783561": {
+      "destination": "Leonard Avenue",
+      "embankment": "yes",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "turn:lanes": "left|through;right"
+    },
+    "1332783565": {
+      "NHS": "Interstate",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "placement": "left_of:3",
+      "ref": "I 670",
+      "shoulder": "both",
+      "shoulder:left:width": "15'",
+      "shoulder:right:width": "10'",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "width": "48'",
+      "width:carriageway": "48'"
+    },
+    "1361087452": {
+      "highway": "primary",
+      "lanes": "3",
+      "maxspeed": "45 mph",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "ref": "US 101 BUS",
+      "source": "usgs_imagery_2007_0.5ft;survey;image",
+      "source:lanes": "usgs_imagery_2007_0.5ft",
+      "source_ref": "AM909_DSCS7566",
+      "tiger:cfcc": "A45",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Main",
+      "tiger:name_direction_prefix": "E",
+      "tiger:name_type": "St",
+      "tiger:reviewed": "no"
+    },
+    "137065020": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "embankment": "yes",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "1370848074": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "maxspeed": "35 mph",
+      "name": "Spinnaker Drive",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Spinnaker",
+      "tiger:name_type": "Dr"
+    },
+    "1376158804": {
+      "cycleway:right": "link",
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "placement": "right_of:3",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "left|left|through|through"
+    },
+    "1451530415": {
+      "cycleway": "shared_lane",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "25 mph",
+      "name": "East Nationwide Boulevard",
+      "oneway": "yes",
+      "shoulder": "right",
+      "shoulder:right:width": "7'",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "surface": "asphalt",
+      "width": "22'",
+      "width:carriageway": "22'"
+    },
+    "1456118201": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "1456118204": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "1459659001": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "maxspeed:conditional": "20 mph @ (Mo-Fr 07:00-17:00)",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "parking:condition:left": "ticket",
+      "parking:lane:left": "parallel",
+      "sidewalk": "separate",
+      "surface": "asphalt",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "1462978604": {
+      "highway": "secondary",
+      "lanes": "5",
+      "maxspeed": "40 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Victoria",
+      "tiger:name_direction_prefix": "S",
+      "tiger:name_type": "Ave",
+      "turn:lanes": "||||right"
+    },
+    "1531858549": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "2",
+      "maxspeed": "45 mph",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "ref": "US 101 BUS",
+      "source": "usgs_imagery_2007_0.5ft;survey;image",
+      "source:lanes": "usgs_imagery_2007_0.5ft",
+      "source_ref": "AM909_DSCS7566",
+      "tiger:cfcc": "A45",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Main",
+      "tiger:name_direction_prefix": "E",
+      "tiger:name_type": "St",
+      "tiger:reviewed": "no"
+    },
+    "171586742": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "171586764": {
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "layer": "1",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "171586771": {
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "layer": "1",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "171586777": {
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "186246508": {
+      "bicycle": "no",
+      "highway": "motorway_link",
+      "lane_markings": "yes",
+      "lanes": "2",
+      "oneway": "yes",
+      "sidewalk:both": "no"
+    },
+    "21346162": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "21347010": {
+      "NHS": "yes",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "shoulder": "both",
+      "shoulder:left:width": "5'",
+      "shoulder:right:width": "10'",
+      "surface": "asphalt",
+      "width": "24'",
+      "width:carriageway": "24'"
+    },
+    "21350918": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "destination": "Airport",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "21351630": {
+      "destination": "Leonard Avenue",
+      "embankment": "yes",
+      "highway": "motorway_link",
+      "junction:ref": "6",
+      "lanes": "1",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "21363702": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "230998836": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "maxspeed:conditional": "20 mph @ (Mo-Fr 07:00-17:00)",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "parking:condition:left": "ticket",
+      "parking:lane:left": "parallel",
+      "sidewalk": "separate",
+      "surface": "asphalt",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "245013740": {
+      "highway": "secondary",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "source": "usgs_imagery_2007_0.5ft;survey;image",
+      "source_ref": "AM909_DSCS7566",
+      "surface": "asphalt",
+      "tiger:cfcc": "A45",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Main",
+      "tiger:name_direction_prefix": "E",
+      "tiger:name_type": "St"
+    },
+    "247343608": {
+      "NHS": "Interstate",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "ref": "I 670",
+      "shoulder": "both",
+      "shoulder:left:width": "15'",
+      "shoulder:right:width": "10'",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "width": "48'",
+      "width:carriageway": "48'"
+    },
+    "26810814": {
+      "destination": "Avenida Vista Hermosa",
+      "highway": "motorway_link",
+      "junction:ref": "77",
+      "lanes": "1",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "surface": "asphalt"
+    },
+    "29314569": {
+      "NHS": "yes",
+      "destination:lanes": "US 33;Livingston Avenue|Third Street",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref:fap": "11",
+      "oneway": "yes",
+      "ref": "US 33",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "24'",
+      "width:carriageway": "24'"
+    },
+    "29314570": {
+      "NHS": "yes",
+      "destination:lanes": "US 33;Livingston Avenue|Third Street",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref:fap": "11",
+      "oneway": "yes",
+      "ref": "US 33",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "turn:lanes": "left|through",
+      "width": "24'",
+      "width:carriageway": "24'"
+    },
+    "29316587": {
+      "cycleway": "shared_lane",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "25 mph",
+      "name": "East Nationwide Boulevard",
+      "oneway": "yes",
+      "shoulder": "right",
+      "shoulder:right:width": "7'",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "surface": "asphalt",
+      "width": "22'",
+      "width:carriageway": "22'"
+    },
+    "29336744": {
+      "NHS": "Interstate",
+      "bicycle": "no",
+      "bridge": "yes",
+      "destination:lanes": "||Fifth Avenue|Leonard Avenue",
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "4",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "ref": "I 670",
+      "shoulder": "both",
+      "shoulder:left:width": "15'",
+      "shoulder:right:width": "10'",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "turn:lanes": "|||slight_right",
+      "width": "48'",
+      "width:carriageway": "48'"
+    },
+    "29336792": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "29336793": {
+      "NHS": "yes",
+      "embankment": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "29336794": {
+      "NHS": "yes",
+      "bridge": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "concrete"
+    },
+    "29336855": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "29336957": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "298912987": {
+      "bicycle": "no",
+      "destination": "West Main Street;Mills Road",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA",
+      "turn:lanes": "through|through;right|right"
+    },
+    "298925841": {
+      "bicycle": "no",
+      "destination": "Ventura",
+      "destination:ref": "US 101 North",
+      "highway": "motorway_link",
+      "lanes": "1",
+      "lit": "yes",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Ventura, CA"
+    },
+    "30767328": {
+      "cycleway:left": "no",
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "name": "Casco Bay Bridge",
+      "oneway": "yes",
+      "parking:both": "no",
+      "ref": "ME 77",
+      "sidewalk:both": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A35",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "Casco Bay;Broadway",
+      "tiger:name_base_1": "State Route 77",
+      "tiger:name_type": "Brg"
+    },
+    "32133486": {
+      "bicycle": "no",
+      "bridge": "yes",
+      "bridge:name": "El Camino Real",
+      "bridge_ref": "5/ORA/55-0203",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "layer": "1",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "milepost:county": "1.64",
+      "name": "San Diego Freeway",
+      "note": "Bridge ref pic from I-5 South",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:bridge": "yahoo_imagery;survey;image",
+      "source:maxspeed": "sign",
+      "source_ref:bridge": "AM909_DSCU2607",
+      "surface": "concrete",
+      "tiger:cfcc": "A11",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "I-5",
+      "tiger:name_base_1": "San Diego",
+      "tiger:name_type_1": "Fwy"
+    },
+    "32133488": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "32802446": {
+      "NHS": "yes",
+      "bridge": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "32802447": {
+      "NHS": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "32802971": {
+      "NHS": "Interstate",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "5",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "placement": "left_of:3",
+      "ref": "I 670",
+      "shoulder": "both",
+      "shoulder:left:width": "15'",
+      "shoulder:right:width": "10'",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "turn:lanes": "||||merge_to_left",
+      "width": "60'",
+      "width:carriageway": "60'"
+    },
+    "342777943": {
+      "foot": "designated",
+      "highway": "primary",
+      "name": "Mullan Road",
+      "name_1": "Fas 263",
+      "oneway": "yes",
+      "ref": "MT 263",
+      "sidewalk": "right",
+      "source": "Bing",
+      "surface": "paved",
+      "symbol": "http://upload.wikimedia.org/wikipedia/commons/9/9c/MT-sec-263.svg",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Missoula, MT",
+      "tiger:name_base": "Mullan",
+      "tiger:name_base_1": "Fas 263",
+      "tiger:name_type": "Rd",
+      "tiger:reviewed": "no"
+    },
+    "342777944": {
+      "foot": "no",
+      "highway": "primary",
+      "lanes": "4",
+      "name": "Mullan Road",
+      "name_1": "Fas 263",
+      "oneway": "yes",
+      "ref": "MT 263",
+      "sidewalk": "no",
+      "source": "Bing",
+      "surface": "paved",
+      "symbol": "http://upload.wikimedia.org/wikipedia/commons/9/9c/MT-sec-263.svg",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Missoula, MT",
+      "tiger:name_base": "Mullan",
+      "tiger:name_base_1": "Fas 263",
+      "tiger:name_type": "Rd",
+      "tiger:reviewed": "no"
+    },
+    "342777945": {
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "name": "Mullan Road",
+      "name_1": "Fas 263",
+      "ref": "US 93;MT 263",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "paved",
+      "symbol": "http://upload.wikimedia.org/wikipedia/commons/9/9c/MT-sec-263.svg",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Missoula, MT",
+      "tiger:name_base": "Mullan",
+      "tiger:name_base_1": "Fas 263",
+      "tiger:name_type": "Rd",
+      "tiger:reviewed": "no"
+    },
+    "342777946": {
+      "foot": "designated",
+      "highway": "primary",
+      "lanes": "2",
+      "name": "Mullan Road",
+      "name_1": "Fas 263",
+      "oneway": "yes",
+      "ref": "S-263",
+      "sidewalk": "right",
+      "source": "Bing",
+      "surface": "paved",
+      "symbol": "http://upload.wikimedia.org/wikipedia/commons/9/9c/MT-sec-263.svg"
+    },
+    "342777950": {
+      "destination:ref": "S-263",
+      "foot": "designated",
+      "highway": "trunk_link",
+      "lanes": "1",
+      "name": "Mullan Road",
+      "oneway": "yes",
+      "sidewalk": "right",
+      "source": "Bing",
+      "surface": "asphalt"
+    },
+    "342777954": {
+      "NHS": "yes",
+      "change:lanes": "no|not_left|not_right",
+      "cycleway:right": "lane",
+      "expressway": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "maxspeed": "45 mph",
+      "name": "North Reserve Street",
+      "oneway": "yes",
+      "overtaking": "no",
+      "ref": "US 93",
+      "source": "Yahoo;TIGER;Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "turn:lanes": "left|none|none"
+    },
+    "342777960": {
+      "NHS": "yes",
+      "cycleway:right": "lane",
+      "expressway": "no",
+      "foot": "designated",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "maxspeed": "45 mph",
+      "name": "North Reserve Street",
+      "oneway": "yes",
+      "ref": "US 93",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo;TIGER;Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore"
+    },
+    "342865008": {
+      "alt_name": "Bitterroot Road",
+      "foot": "designated",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt"
+    },
+    "342865009": {
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "name_1": "Bitterroot Road",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk": "no",
+      "source": "Yahoo,TIGER",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "tiger:zip_left_1": "59804",
+      "tiger:zip_right": "59801"
+    },
+    "342865011": {
+      "alt_name": "Bitterroot Road",
+      "foot": "designated",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt"
+    },
+    "342865012": {
+      "cycleway:right": "lane",
+      "foot": "designated",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "name_1": "Bitterroot Road",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo;TIGER;Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "tiger:zip_left_1": "59804",
+      "tiger:zip_right": "59801"
+    },
+    "342865013": {
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "4",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "name_1": "Bitterroot Road",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo,TIGER",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "tiger:zip_left_1": "59804",
+      "tiger:zip_right": "59801"
+    },
+    "342865017": {
+      "alt_name": "Bitterroot Road",
+      "foot": "designated",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt"
+    },
+    "342865018": {
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "name_1": "Bitterroot Road",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo,TIGER",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "tiger:zip_left_1": "59804",
+      "tiger:zip_right": "59801",
+      "turn:lanes": "left||"
+    },
+    "342865020": {
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk_link",
+      "lanes": "1",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Business",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt"
+    },
+    "352344503": {
+      "cycleway:both": "no",
+      "highway": "primary",
+      "lanes": "5",
+      "lanes:backward": "3",
+      "lanes:forward": "2",
+      "maxspeed": "30 mph",
+      "name": "South El Camino Real",
+      "old_ref": "US 101",
+      "surface": "asphalt",
+      "turn:lanes:backward": "left|none|none"
+    },
+    "370382255": {
+      "alt_name": "Banning-Idyllwild Road",
+      "highway": "primary",
+      "lanes": "2",
+      "maxspeed": "30 mph",
+      "maxspeed:conditional": "25 mph @ children_present",
+      "name": "Banning-Idyllwild Panoramic Highway",
+      "official_name": "Esperanza Firefighters Memorial Highway",
+      "ref": "CA 243",
+      "source": "GPS;bing_imagery_0.25m_201005;survey;image;CDOT",
+      "source:lanes": "survey;image",
+      "source:maxspeed": "survey;image",
+      "source_ref": "AM909_DSCX1886",
+      "source_ref:lanes": "AM909_DSCX1706",
+      "source_ref:maxspeed": "AM909_DSCX1878",
+      "surface": "asphalt"
+    },
+    "37058695": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "2",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "unsigned_ref": "CA 1"
+    },
+    "37058697": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "unsigned_ref": "CA 1"
+    },
+    "37058702": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "destination:lanes": "San Francisco|San Francisco|Main Street",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "turn:lanes": "none|none|slight_right",
+      "unsigned_ref": "CA 1"
+    },
+    "37058703": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "layer": "1",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "unsigned_ref": "CA 1"
+    },
+    "37058706": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "bridge": "yes",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "layer": "1",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "unsigned_ref": "CA 1"
+    },
+    "37058740": {
+      "NHS": "STRAHNET",
+      "bicycle": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:towing": "55 mph",
+      "name": "Ventura Freeway",
+      "name_1": "El Camino Real",
+      "oneway": "yes",
+      "ref": "US 101",
+      "sidewalk:both": "no",
+      "surface": "concrete",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "United States Highway 101:Ventura",
+      "tiger:name_base_1": "El Camino Real:United States Highway 101",
+      "tiger:name_base_2": "El Camino Real:Ventura",
+      "tiger:name_type": "Fwy",
+      "tiger:name_type_2": "Fwy",
+      "tiger:reviewed": "no",
+      "unsigned_ref": "CA 1"
+    },
+    "37125305": {
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "50 mph",
+      "name": "South Victoria Avenue",
+      "oneway": "yes",
+      "placement": "right_of:2",
+      "surface": "asphalt"
+    },
+    "379034761": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "lanes": "1",
+      "maxspeed": "35 mph",
+      "name": "South Ohio Avenue",
+      "oneway": "yes",
+      "parking:both": "lane",
+      "parking:both:orientation": "parallel",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "10'",
+      "width:carriageway": "10'"
+    },
+    "390521997": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "left|||"
+    },
+    "391805063": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "link",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "source": "physical survey",
+      "surface": "paved",
+      "turn:lanes": "left|none|none"
+    },
+    "391805068": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "lane",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "source": "physical survey",
+      "surface": "paved"
+    },
+    "391805069": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "link",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "source": "physical survey",
+      "surface": "paved",
+      "turn:lanes": "left|none|none"
+    },
+    "391805071": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "lane",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "sidewalk": "right",
+      "source": "physical survey",
+      "surface": "paved"
+    },
+    "391805089": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "link",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "placement": "right_of:2",
+      "sidewalk": "right",
+      "source": "physical survey",
+      "surface": "paved",
+      "turn:lanes": "left|none|none"
+    },
+    "391805099": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "lane",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "sidewalk": "right",
+      "source": "physical survey",
+      "surface": "paved"
+    },
+    "394196714": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "394196716": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "through|none|none|none"
+    },
+    "394196717": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "placement": "right_of:3",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "through|none|none|right"
+    },
+    "394196721": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "394196725": {
+      "alt_name": "Avenida Pico",
+      "cycleway:right": "link",
+      "highway": "trunk",
+      "lanes": "5",
+      "maxspeed": "35 mph",
+      "name": "East Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "separate",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "tiger:name_base_1": "Avenida Pico",
+      "tiger:name_direction_prefix": "E",
+      "tiger:zip_left": "92672",
+      "tiger:zip_right": "92672",
+      "turn:lanes": "left|left|through|through|through"
+    },
+    "394196736": {
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "394196742": {
+      "destination:ref": "I 5 North",
+      "destination:street": "San Diego Freeway",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "394196744": {
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "399307233": {
+      "destination": "El Camino Real",
+      "highway": "motorway_link",
+      "junction:ref": "74",
+      "lane_markings": "no",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2700",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "399327757": {
+      "highway": "tertiary",
+      "lanes": "2",
+      "lanes:backward": "1",
+      "lanes:forward": "1",
+      "maxspeed": "35 mph",
+      "name": "Avenida Vista Montana",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Montana",
+      "tiger:zip_left": "92672",
+      "tiger:zip_right": "92672",
+      "turn:lanes:forward": "left"
+    },
+    "399327758": {
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "maxweight:hgv": "4 st",
+      "name": "Calle del Cerro",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Calle del Cerro",
+      "tiger:zip_left": "92672",
+      "tiger:zip_right": "92672"
+    },
+    "399327765": {
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "maxweight:hgv": "4 st",
+      "name": "Calle del Cerro",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Calle del Cerro",
+      "tiger:zip_left": "92672",
+      "tiger:zip_right": "92672",
+      "turn:lanes": "left|left|right"
+    },
+    "399327770": {
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "maxweight:hgv": "4 st",
+      "name": "Calle del Cerro",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Calle del Cerro",
+      "tiger:zip_left": "92672",
+      "tiger:zip_right": "92672",
+      "turn:lanes": "none|right"
+    },
+    "399484997": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "399484999": {
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "3",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "399485007": {
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "399485015": {
+      "expressway": "yes",
+      "highway": "trunk",
+      "lanes": "5",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "left||||"
+    },
+    "399485017": {
+      "highway": "trunk",
+      "lanes": "6",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "reverse;left|left||||"
+    },
+    "399485019": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "separate",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "399485022": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk:both": "no",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "399485029": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa;Avenue Vista Hermosa"
+    },
+    "399485060": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa;Avenue Vista Hermosa",
+      "turn:lanes": "||right"
+    },
+    "399485064": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "hgv:hour_off": "22:00",
+      "hgv:hour_on": "07:00",
+      "hgv:minaxles": "4",
+      "highway": "secondary",
+      "lanes": "4",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "source_ref:hgv": "AM909_DSCU9814",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa",
+      "turn:lanes": "left|||"
+    },
+    "399485091": {
+      "cycleway:right": "link",
+      "expressway": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa;Avenue Vista Hermosa",
+      "turn:lanes": "left||"
+    },
+    "399485096": {
+      "expressway": "yes",
+      "hgv:hour_off": "22:00",
+      "hgv:hour_on": "07:00",
+      "hgv:minaxles": "3",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "35 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "source_ref:hgv": "AM909_DSCU9814",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa",
+      "turn:lanes": "|through;right|right"
+    },
+    "399485097": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "secondary",
+      "lanes": "4",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa;Avenue Vista Hermosa",
+      "turn:lanes": "left|through|through|right"
+    },
+    "399485103": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "hgv:hour_off": "22:00",
+      "hgv:hour_on": "07:00",
+      "hgv:minaxles": "3",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "source_ref:hgv": "AM909_DSCU9814",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa"
+    },
+    "399485106": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "hgv:hour_off": "22:00",
+      "hgv:hour_on": "07:00",
+      "hgv:minaxles": "2",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "source_ref:hgv": "AM909_DSCU9814",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa"
+    },
+    "399485111": {
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Avenida Vista Hermosa",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Vista Hermosa;Avenue Vista Hermosa"
+    },
+    "399485164": {
+      "bicycle": "no",
+      "destination:lanes": "|||Avenida Vista Hermosa|Avenida Pico",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "5",
+      "lit": "no",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "placement": "right_of:2",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt",
+      "turn:lanes": "||||right"
+    },
+    "399485167": {
+      "destination:ref:to": "I 5 North",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "turn:lanes": "left|left"
+    },
+    "399485168": {
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "turn:lanes": "through|through"
+    },
+    "399485169": {
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "turn:lanes": "left|left;right|right"
+    },
+    "399490070": {
+      "bicycle": "yes",
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "45 mph",
+      "name": "Camino de Los Mares",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "paved"
+    },
+    "399490074": {
+      "bicycle": "yes",
+      "cycleway:right": "lane",
+      "expressway": "yes",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "45 mph",
+      "name": "Camino de Los Mares",
+      "oneway": "yes",
+      "sidewalk": "right",
+      "surface": "paved"
+    },
+    "399491306": {
+      "destination": "Avenida Pico",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA",
+      "turn:lanes": "left|right|right"
+    },
+    "399491308": {
+      "destination": "Avenida Pico",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "399491310": {
+      "destination": "Avenida Pico",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA",
+      "turn:lanes": "left|right|right"
+    },
+    "404414502": {
+      "NHS": "yes",
+      "bridge": "yes",
+      "destination:lanes": "US 33;Livingston Avenue|Third Street",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "2",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref:fap": "11",
+      "oneway": "yes",
+      "ref": "US 33",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "turn:lanes": "left|through",
+      "width": "24'",
+      "width:carriageway": "24'"
+    },
+    "42974052": {
+      "NHS": "yes",
+      "destination:lanes": "US 33;Livingston Avenue|Third Street",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref:fap": "11",
+      "oneway": "yes",
+      "ref": "US 33",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "24'",
+      "width:carriageway": "24'"
+    },
+    "430465423": {
+      "highway": "secondary",
+      "lanes": "4",
+      "name": "Valentine Road",
+      "oneway": "yes",
+      "placement": "middle_of:3",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Valentine",
+      "tiger:name_type": "Rd",
+      "turn:lanes": "left|left|left;through|right"
+    },
+    "461497704": {
+      "highway": "primary",
+      "lanes": "2",
+      "name": "State Street",
+      "oneway": "yes",
+      "parking:both": "lane",
+      "parking:both:orientation": "parallel",
+      "ref": "ME 77",
+      "surface": "asphalt",
+      "tiger:cfcc": "A31",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "State",
+      "tiger:name_base_1": "State Route 77",
+      "tiger:name_type": "St"
+    },
+    "469500743": {
+      "highway": "secondary",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate"
+    },
+    "487165553": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "487165554": {
+      "bicycle": "no",
+      "destination:lanes": "none|none|none|Avenida Pico|Avenida Presidio;San Clemente",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "5",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt",
+      "turn:lanes": "none|none|none|none|right"
+    },
+    "50090242": {
+      "cycleway:left": "no",
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "name": "Casco Bay Bridge",
+      "oneway": "yes",
+      "ref": "ME 77",
+      "surface": "asphalt",
+      "tiger:cfcc": "A35",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "Casco Bay;Broadway",
+      "tiger:name_base_1": "State Route 77",
+      "tiger:name_type": "Brg"
+    },
+    "50090243": {
+      "bridge": "yes",
+      "cycleway:left": "no",
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "2",
+      "layer": "1",
+      "name": "Casco Bay Bridge",
+      "oneway": "yes",
+      "parking:both": "no",
+      "ref": "ME 77",
+      "surface": "asphalt",
+      "tiger:cfcc": "A35",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "Casco Bay;Broadway",
+      "tiger:name_base_1": "State Route 77",
+      "tiger:name_type": "Brg"
+    },
+    "50408301": {
+      "cycleway": "lane",
+      "highway": "secondary",
+      "maxspeed": "50 mph",
+      "name": "East Harbor Boulevard",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A49",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Harbor",
+      "tiger:name_type": "Blvd"
+    },
+    "553312070": {
+      "destination": "Los Angeles",
+      "destination:ref": "I 5 North",
+      "highway": "trunk_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "557125915": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "parking:condition:left": "ticket",
+      "parking:lane:left": "perpendicular",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "568499125": {
+      "cycleway": "shared_lane",
+      "highway": "tertiary",
+      "lanes": "3",
+      "lanes:backward": "1",
+      "lanes:forward": "2",
+      "lit": "yes",
+      "maxspeed": "35 mph",
+      "name": "East Whittier Street",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "turn:lanes:forward": "left|through;right",
+      "width": "36'",
+      "width:carriageway": "36'"
+    },
+    "568679647": {
+      "cycleway:right": "shared_lane",
+      "destination:lanes": "Wheeling;I-70 East;Fulton Street;US 23|Wheeling;I-70 East;Fulton Street;US 23;Livingston Avenue;US 33|Third Street|I-71 South;I-70 West",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref": "US 23",
+      "old_ref:fap": "22",
+      "oneway": "yes",
+      "parking:lane:both": "no",
+      "placement": "middle_of:3",
+      "ref": "US 33",
+      "sidewalk": "both",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "turn:lanes": "left|left;through|through|right",
+      "width": "42'",
+      "width:carriageway": "42'"
+    },
+    "568679648": {
+      "cycleway:right": "lane",
+      "destination:lanes": "Wheeling;I-70 East;Fulton Street;US 23|Wheeling;I-70 East;Fulton Street;US 23;Livingston Avenue;US 33|Third Street|I-71 South;I-70 West",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "primary",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "South Third Street",
+      "old_ref": "US 23",
+      "old_ref:fap": "22",
+      "oneway": "yes",
+      "placement": "middle_of:3",
+      "ref": "US 33",
+      "sidewalk": "both",
+      "source:hgv:national_network": "Title 23: Highways Part 658 http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&rgn=div5&view=text&node=23:1.0.1.7.33&idno=23",
+      "source:old_ref:fap": "ODOT http://www.dot.state.oh.us/Divisions/Planning/TechServ/prod_services/Pages/RI06.aspx http://www.dot.state.oh.us/Divisions/ContractAdmin/Contracts/Pages/NHS-FAP.aspx",
+      "surface": "asphalt",
+      "width": "42'",
+      "width:carriageway": "42'"
+    },
+    "569461460": {
+      "bicycle": "no",
+      "destination:lanes": "none|none|none|none|none|none;Avenida Vista Hermosa",
+      "hgv": "designated",
+      "highway": "motorway",
+      "hov:lanes": "designated|yes|yes|yes|yes|yes",
+      "hov:minimum": "2",
+      "lanes": "6",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "motor_vehicle:lanes": "no|yes|yes|yes|yes|yes",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt",
+      "turn:lanes": "|||||through;slight_right"
+    },
+    "569461469": {
+      "bicycle": "no",
+      "change:lanes": "yes|yes|yes|not_right|not_left",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "5",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "placement": "right_of:2",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "asphalt"
+    },
+    "593153695": {
+      "NHS": "yes",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt"
+    },
+    "607473234": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "turn:lanes": "||merge_to_left"
+    },
+    "607473246": {
+      "NHS": "yes",
+      "bicycle": "no",
+      "destination:lanes": "Airport|Airport|Cleveland",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "55 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "placement": "right_of:1",
+      "surface": "asphalt",
+      "turn:lanes": "none|none|slight_right"
+    },
+    "638342131": {
+      "cycleway": "lane",
+      "highway": "secondary",
+      "maxspeed": "50 mph",
+      "name": "East Harbor Boulevard",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A49",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Harbor",
+      "tiger:name_type": "Blvd"
+    },
+    "70452747": {
+      "cycleway:right": "lane",
+      "foot": "designated",
+      "highway": "trunk_link",
+      "lanes": "1",
+      "oneway": "yes",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "surface": "asphalt"
+    },
+    "71179413": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "maxspeed": "55 mph",
+      "name": "Olivas Park Drive",
+      "oneway": "yes"
+    },
+    "715318716": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "715318717": {
+      "cycleway:right": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "25 mph",
+      "name": "East Mound Street",
+      "oneway": "yes",
+      "parking:condition:left": "ticket",
+      "parking:lane:left": "perpendicular",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "turn:lanes": "left;through|through|through",
+      "width": "32'",
+      "width:carriageway": "32'"
+    },
+    "731223620": {
+      "NHS": "yes",
+      "cycleway:right": "lane",
+      "highway": "trunk",
+      "lanes": "3",
+      "name": "Forest Avenue",
+      "old_ref": "US 1",
+      "oneway": "yes",
+      "placement": "left_of:2",
+      "ref": "US 302;ME 100",
+      "route": "bicycle",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "surface": "asphalt",
+      "tiger:cfcc": "A21",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "Forest",
+      "tiger:name_base_1": "United States Highway 302",
+      "tiger:name_type": "Ave",
+      "tiger:reviewed": "no",
+      "tiger:zip_left": "04092",
+      "tiger:zip_right": "04092",
+      "turn:lanes": "left|through|through;right"
+    },
+    "732316874": {
+      "highway": "motorway_link",
+      "lanes": "1",
+      "oneway": "yes",
+      "placement": "transition",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Cumberland, ME",
+      "tiger:reviewed": "no"
+    },
+    "754780707": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "lanes": "1",
+      "lit": "yes",
+      "maxspeed": "35 mph",
+      "name": "South Ohio Avenue",
+      "oneway": "yes",
+      "parking:both": "lane",
+      "parking:both:orientation": "parallel",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "10'",
+      "width:carriageway": "10'"
+    },
+    "754780709": {
+      "cycleway:right": "lane",
+      "highway": "tertiary",
+      "lanes": "1",
+      "lit": "yes",
+      "maxspeed": "35 mph",
+      "name": "South Ohio Avenue",
+      "oneway": "yes",
+      "parking:both": "lane",
+      "parking:both:orientation": "parallel",
+      "sidewalk": "both",
+      "surface": "asphalt",
+      "width": "10'",
+      "width:carriageway": "10'"
+    },
+    "761620058": {
+      "cycleway:right": "link",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Camino Vera Cruz"
+    },
+    "761620060": {
+      "cycleway:right": "lane",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Camino Vera Cruz",
+      "turn:lanes": "left|none|none"
+    },
+    "76372176": {
+      "highway": "primary",
+      "lanes": "3",
+      "maxspeed": "45 mph",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "ref": "US 101 BUS",
+      "source": "usgs_imagery_2007_0.5ft;survey;image",
+      "source:lanes": "usgs_imagery_2007_0.5ft",
+      "source_ref": "AM909_DSCS7566",
+      "tiger:cfcc": "A45",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Main",
+      "tiger:name_direction_prefix": "E",
+      "tiger:name_type": "St",
+      "tiger:reviewed": "no",
+      "turn:lanes": "none|none|right"
+    },
+    "765136178": {
+      "highway": "trunk",
+      "lanes": "4",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico"
+    },
+    "780127487": {
+      "description": "Picked teriary as there is a center stripe the whole way and the posted speed is above that for residential or unclassified",
+      "highway": "tertiary",
+      "maxspeed": "35 mph",
+      "name": "Portico del Sur",
+      "sidewalk": "both",
+      "source:maxspeed": "sign"
+    },
+    "816400158": {
+      "access": "yes",
+      "bicycle": "yes",
+      "cycleway:right": "link",
+      "foot": "yes",
+      "highway": "secondary",
+      "lanes": "3",
+      "maxspeed": "40 mph",
+      "name": "Camino Vera Cruz",
+      "oneway": "yes",
+      "source": "physical survey",
+      "surface": "paved",
+      "turn:lanes": "left|none|none"
+    },
+    "845872800": {
+      "highway": "primary",
+      "lanes": "7",
+      "maxspeed": "40 mph",
+      "name": "East Main Street",
+      "oneway": "yes",
+      "parking:lane:both": "no_stopping",
+      "parking:lane:right": "no_stopping",
+      "ref": "US 101 BUS",
+      "source": "usgs_imagery_2007_0.5ft;survey;image",
+      "source:lanes": "usgs_imagery_2007_0.5ft;survey;image",
+      "source_ref": "AM909_DSCS7566",
+      "surface": "asphalt",
+      "tiger:cfcc": "A45",
+      "tiger:county": "Ventura, CA",
+      "tiger:name_base": "Main",
+      "tiger:name_direction_prefix": "E",
+      "tiger:name_type": "St",
+      "tiger:reviewed": "no",
+      "turn:lanes": "left|left||||right|right"
+    },
+    "86578315": {
+      "NHS": "Interstate",
+      "bicycle": "no",
+      "embankment": "yes",
+      "foot": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "motorway",
+      "horse": "no",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "65 mph",
+      "name": "Northeast Freeway",
+      "oneway": "yes",
+      "ref": "I 670",
+      "shoulder": "both",
+      "shoulder:left:width": "15'",
+      "shoulder:right:width": "10'",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt",
+      "width": "48'",
+      "width:carriageway": "48'"
+    },
+    "899348200": {
+      "destination": "Leonard Avenue",
+      "embankment": "yes",
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "surface": "asphalt",
+      "turn:lanes": "left|through"
+    },
+    "912235800": {
+      "alt_name": "Bitterroot Road",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "mdt_base_route": "P-7",
+      "name": "Brooks Street",
+      "oneway": "yes",
+      "ref": "US 12;US 93 Bus",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Bing",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore",
+      "surface": "asphalt"
+    },
+    "915707988": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "maxspeed": "65 mph",
+      "maxspeed:hgv": "55 mph",
+      "maxspeed:trailer": "55 mph",
+      "name": "San Diego Freeway",
+      "official_name": "Route 5",
+      "oneway": "yes",
+      "ref": "I 5",
+      "source:maxspeed": "sign",
+      "surface": "concrete:plates"
+    },
+    "915815153": {
+      "highway": "motorway_link",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "915815154": {
+      "highway": "motorway_link",
+      "lanes": "1",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "surface": "asphalt",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "915893110": {
+      "destination": "Avenida Pico",
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA"
+    },
+    "917429346": {
+      "cycleway:right": "lane",
+      "highway": "trunk",
+      "lanes": "5",
+      "maxspeed": "35 mph",
+      "name": "Avenida Pico",
+      "oneway": "yes",
+      "placement": "right_of:3",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "tiger:cfcc": "A41",
+      "tiger:county": "Orange, CA",
+      "tiger:name_base": "Avenida Pico",
+      "turn:lanes": "through|through|through|through|right"
+    },
+    "921359084": {
+      "destination:street": "Avenida Pico",
+      "highway": "motorway_link",
+      "junction:ref": "76",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2581;AM909_DSCU2582",
+      "tiger:cfcc": "A63",
+      "tiger:county": "Orange, CA",
+      "turn:lanes": "through|through"
+    },
+    "922482317": {
+      "NHS": "yes",
+      "cycleway:right": "lane",
+      "highway": "trunk",
+      "lanes": "2",
+      "name": "Forest Avenue",
+      "old_ref": "US 1",
+      "oneway": "yes",
+      "ref": "US 302;ME 100",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "surface": "asphalt",
+      "tiger:cfcc": "A25",
+      "tiger:county": "Cumberland, ME",
+      "tiger:name_base": "Forest",
+      "tiger:name_base_1": "State Route 100",
+      "tiger:name_base_2": "United States Highway 302",
+      "tiger:name_base_3": "United States Highway 1",
+      "tiger:name_type": "Ave",
+      "tiger:reviewed": "no"
+    },
+    "96216177": {
+      "NHS": "yes",
+      "addr:postcode": "59808",
+      "cycleway:right": "lane",
+      "expressway": "no",
+      "hgv": "designated",
+      "hgv:national_network": "yes",
+      "highway": "trunk",
+      "lanes": "2",
+      "maxspeed": "45 mph",
+      "name": "North Reserve Street",
+      "oneway": "yes",
+      "ref": "US 93",
+      "sidewalk:left": "no",
+      "sidewalk:right": "separate",
+      "source": "Yahoo,TIGER",
+      "source:hgv:national_network": "https://hepgis-usdot.hub.arcgis.com/apps/usdot::national-network-conventional-combination-trucks-map/explore"
+    },
+    "985814246": {
+      "highway": "motorway_link",
+      "lanes": "3",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "turn:lanes": "left|left;right|right"
+    },
+    "986166403": {
+      "destination:street": "Avenida Vista Hermosa",
+      "highway": "motorway_link",
+      "junction:ref": "77",
+      "lanes": "2",
+      "oneway": "yes",
+      "source": "yahoo_imagery;survey;image",
+      "source_ref": "AM909_DSCU2585",
+      "surface": "asphalt"
+    }
+  },
+  "settles": 921450,
+  "modes": {
+    "baseline": [],
+    "without-unsupported-closures": [
+      "closures"
+    ],
+    "without-supported-turns": [
+      "turns"
+    ],
+    "without-blocked-controls": [
+      "controls"
+    ],
+    "without-direction-limits": [
+      "directions"
+    ],
+    "without-way-exclusions": [
+      "ways"
+    ],
+    "geometry-only": [
+      "closures",
+      "controls",
+      "directions",
+      "reversal",
+      "turns",
+      "ways"
+    ]
+  },
+  "interpretation": "Single-constraint removals show sufficient counterfactual changes, not unique causes or valid route corrections. Geometry-only deliberately ignores vehicle permissions. No evidence of a legal outside-capture detour is inferred.",
+  "modelChanged": false,
+  "etaQualified": false,
+  "networkRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePbfReads": 0,
+  "secondsIncludingSourceBindingsReconstructionQueries": 2.906755126081407,
+  "diagnoserSha256": "c5140c7fc2eef943b408412f3f4f87d26cbe454566efd26eb88ff62c81c357b5"
+}

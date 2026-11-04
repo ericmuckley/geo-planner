@@ -1,0 +1,77 @@
+{
+  "phase": "speed_geometry_opportunity_v1",
+  "stage": "controls",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-speed-opportunity-controls-v1",
+  "caps": {
+    "memoryBytes": 536870912,
+    "tmpBytes": 33554432,
+    "fileBytes": 33554432,
+    "ownedBytes": 4194304,
+    "workerSeconds": 300,
+    "hostSeconds": 360
+  },
+  "dataCaps": {
+    "sourceRecords": 5000,
+    "samples": 500000,
+    "records": 2000000,
+    "memberships": 4000000,
+    "references": 4000000,
+    "inputBytes": 1073741824,
+    "rowBytes": 8388608,
+    "binsPerSegment": 20000,
+    "binVisits": 20000000,
+    "comparisons": 50000000
+  },
+  "mounts": {
+    "scripts/run_osm_speed_opportunity_v1.py": "/code/run_osm_speed_opportunity_v1.py",
+    "scripts/coarse_osm_speed_opportunity_v1.py": "/code/coarse_osm_speed_opportunity_v1.py",
+    "scripts/coarse_osm_speed_opportunity_v1_test.py": "/code/coarse_osm_speed_opportunity_v1_test.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "scripts/coarse_timing_parquet.py": "/code/coarse_timing_parquet.py",
+    "scripts/coarse_backbone_paths.py": "/code/coarse_backbone_paths.py",
+    "scripts/coarse_backbone_codec.py": "/code/coarse_backbone_codec.py",
+    "scripts/coarse_path_features.py": "/code/coarse_path_features.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1"
+  },
+  "inputs": {
+    "scripts/run_osm_speed_opportunity_v1.py": "696aa530f3cf233eaf04e32724942bcadf04d74895fce28805db0689592b403a",
+    "scripts/coarse_osm_speed_opportunity_v1.py": "58167045015e4eac492067520e2c1bcf41853bb34531d5ef38b6ba2ea53a6e09",
+    "scripts/coarse_osm_speed_opportunity_v1_test.py": "5d64f9ad1b53c84750f8da1f5a49775523a313c1c1cdde500f04461a0e378113",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be"
+  },
+  "sourceSnapshotUtc": "2026-10-25T21:21:21Z",
+  "windows": [
+    {
+      "id": "outer",
+      "bbox": [
+        0,
+        0,
+        0.003,
+        0.003
+      ]
+    },
+    {
+      "id": "inner",
+      "bbox": [
+        0.0005,
+        0.0005,
+        0.0025,
+        0.0025
+      ]
+    }
+  ],
+  "scope": "Synthetic controls only;10Linux tests plus complete persisted split-way geometric union. No actual national captured input or original Census record is mounted.",
+  "retainedReservationBytes": 61450113127,
+  "overallEnvelopeBytes": 68719476736,
+  "modelChanged": false
+}

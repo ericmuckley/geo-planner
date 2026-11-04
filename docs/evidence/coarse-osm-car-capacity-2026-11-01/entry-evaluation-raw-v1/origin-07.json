@@ -1,0 +1,305 @@
+{
+  "origin": [
+    -70.2568,
+    43.6591
+  ],
+  "initialChoices": 549,
+  "accessInput": {
+    "filename": "endpoint-43.json.gz",
+    "rawBytes": 159850,
+    "rawSha256": "a257c9f0dfe1891407125e4d23b662b58541194d7f12ac08396fe61cce3e61e5",
+    "compressedBytes": 17803,
+    "sha256": "be811ac87437af7e6a89535d48c140fdb847073ad00bc7bc883500803e039483"
+  },
+  "diagnostic": {
+    "timings": {
+      "portland-me-360-inside": {
+        "ticks": 189598,
+        "kind": "road-foot",
+        "roadTicks": 189598,
+        "localGridTicks": 190280,
+        "localWitness": {
+          "terminalTicks": 384,
+          "edgeSeconds": 0,
+          "seedSeconds": 23737,
+          "seedCell": 1011713,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-360-outside": {
+        "ticks": 201502,
+        "kind": "local-grid",
+        "roadTicks": 202223,
+        "localGridTicks": 201502,
+        "localWitness": {
+          "terminalTicks": 310,
+          "edgeSeconds": 321,
+          "seedSeconds": 24828,
+          "seedCell": 980056,
+          "seedKind": 8,
+          "steps": 2
+        }
+      },
+      "portland-me-600-inside": {
+        "ticks": 314278,
+        "kind": "road-foot",
+        "roadTicks": 314278,
+        "localGridTicks": 314948,
+        "localWitness": {
+          "terminalTicks": 556,
+          "edgeSeconds": 0,
+          "seedSeconds": 39299,
+          "seedCell": 777503,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-600-outside": {
+        "ticks": 347309,
+        "kind": "road-foot",
+        "roadTicks": 347309,
+        "localGridTicks": 347695,
+        "localWitness": {
+          "terminalTicks": 527,
+          "edgeSeconds": 360,
+          "seedSeconds": 43036,
+          "seedCell": 1053404,
+          "seedKind": 8,
+          "steps": 2
+        }
+      },
+      "portland-me-720-inside": {
+        "ticks": 371157,
+        "kind": "road-foot",
+        "roadTicks": 371157,
+        "localGridTicks": 371742,
+        "localWitness": {
+          "terminalTicks": 630,
+          "edgeSeconds": 0,
+          "seedSeconds": 46389,
+          "seedCell": 429452,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "portland-me-720-outside": {
+        "ticks": 377183,
+        "kind": "road-foot",
+        "roadTicks": 377183,
+        "localGridTicks": 378482,
+        "localWitness": {
+          "terminalTicks": 762,
+          "edgeSeconds": 0,
+          "seedSeconds": 47215,
+          "seedCell": 362480,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 2068066,
+      "maximumHeapEntries": 3190,
+      "maximumBackingBufferBytes": 50314342,
+      "returnedBackingBufferBytes": 50314342,
+      "seedBackingBufferBytes": 35136,
+      "starts": 549
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -83473032,
+      "south": 35204622,
+      "step": 9942,
+      "width": 1758,
+      "height": 1422
+    },
+    "stats": {
+      "envelopeMs": 692.9089170000079,
+      "maskMs": 837.7896250000049,
+      "seedMs": 2470.015957999989,
+      "fillMs": 170.8835420000105,
+      "contourMs": 38.65570799999114,
+      "displayMs": 4210.371291999996,
+      "maximumBackingBufferBytes": 58862411,
+      "borrowedVertexWorkspace": true,
+      "samples": 3705388,
+      "activeSpans": 1329742,
+      "settles": 754106,
+      "maximumHeapEntries": 301886,
+      "selectedCells": 757089,
+      "localCells": 754106,
+      "roadOnlyCells": 2983,
+      "edges": 22012,
+      "rings": 243,
+      "vertices": 13799,
+      "jsonBytes": 312049,
+      "retries": []
+    },
+    "phaseMs": 4591.382958000002,
+    "output": {
+      "filename": "origin-07-900.geojson",
+      "bytes": 312049,
+      "sha256": "af0175743488c31ed96aa1023a9516d5d4ca82e827f424a5455139c9c53a0a68"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 360,
+      "classified": {
+        "portland-me-360-inside": false,
+        "portland-me-360-outside": false
+      },
+      "fieldStats": {
+        "settles": 685429,
+        "maximumHeapEntries": 1802,
+        "maximumBackingBufferBytes": 50314342,
+        "returnedBackingBufferBytes": 50314342,
+        "seedBackingBufferBytes": 35136,
+        "starts": 549
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -74800000,
+        "south": 40475000,
+        "step": 5000,
+        "width": 1660,
+        "height": 1360
+      },
+      "stats": {
+        "envelopeMs": 502.41366600000765,
+        "maskMs": 762.0173749999958,
+        "seedMs": 1032.0907920000027,
+        "fillMs": 161.93624999999884,
+        "contourMs": 32.2961670000077,
+        "displayMs": 2490.7561660000065,
+        "maximumBackingBufferBytes": 58862411,
+        "borrowedVertexWorkspace": true,
+        "samples": 1349648,
+        "activeSpans": 432344,
+        "settles": 859734,
+        "maximumHeapEntries": 170023,
+        "selectedCells": 862030,
+        "localCells": 859734,
+        "roadOnlyCells": 2296,
+        "edges": 18734,
+        "rings": 127,
+        "vertices": 11285,
+        "jsonBytes": 179443,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-07-360.geojson",
+        "bytes": 179443,
+        "sha256": "ce84f7db949f321f388a2a8d645758ecbb3209a145a1eefbcefe6516e6bf526a"
+      }
+    },
+    {
+      "minutes": 600,
+      "classified": {
+        "portland-me-600-inside": false,
+        "portland-me-600-outside": false
+      },
+      "fieldStats": {
+        "settles": 1234109,
+        "maximumHeapEntries": 2093,
+        "maximumBackingBufferBytes": 50314342,
+        "returnedBackingBufferBytes": 50314342,
+        "seedBackingBufferBytes": 35136,
+        "starts": 549
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -78599840,
+        "south": 38725643,
+        "step": 6919,
+        "width": 1822,
+        "height": 1372
+      },
+      "stats": {
+        "envelopeMs": 535.2802919999958,
+        "maskMs": 761.0954579999961,
+        "seedMs": 1461.4343339999905,
+        "fillMs": 164.42766600000323,
+        "contourMs": 32.9055420000077,
+        "displayMs": 2955.1908330000006,
+        "maximumBackingBufferBytes": 58862411,
+        "borrowedVertexWorkspace": true,
+        "samples": 2275485,
+        "activeSpans": 780163,
+        "settles": 836324,
+        "maximumHeapEntries": 239235,
+        "selectedCells": 838850,
+        "localCells": 836324,
+        "roadOnlyCells": 2526,
+        "edges": 19838,
+        "rings": 148,
+        "vertices": 12000,
+        "jsonBytes": 273733,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-07-600.geojson",
+        "bytes": 273733,
+        "sha256": "62776ff25554efd283096ce400e61bbd3feec8522fdf8d187838d1c3d21ea380"
+      }
+    },
+    {
+      "minutes": 720,
+      "classified": {
+        "portland-me-720-inside": false,
+        "portland-me-720-outside": false
+      },
+      "fieldStats": {
+        "settles": 1559113,
+        "maximumHeapEntries": 2117,
+        "maximumBackingBufferBytes": 50314342,
+        "returnedBackingBufferBytes": 50314342,
+        "seedBackingBufferBytes": 35136,
+        "starts": 549
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -80804070,
+        "south": 37511820,
+        "step": 8130,
+        "width": 1821,
+        "height": 1372
+      },
+      "stats": {
+        "envelopeMs": 605.210791999998,
+        "maskMs": 817.4860829999961,
+        "seedMs": 1734.3406669999968,
+        "fillMs": 158.1455419999984,
+        "contourMs": 33.12691600000835,
+        "displayMs": 3348.386541999993,
+        "maximumBackingBufferBytes": 58862411,
+        "borrowedVertexWorkspace": true,
+        "samples": 2803173,
+        "activeSpans": 1001740,
+        "settles": 775867,
+        "maximumHeapEntries": 255069,
+        "selectedCells": 778461,
+        "localCells": 775867,
+        "roadOnlyCells": 2594,
+        "edges": 20822,
+        "rings": 167,
+        "vertices": 12691,
+        "jsonBytes": 264181,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-07-720.geojson",
+        "bytes": 264181,
+        "sha256": "1b88fe7198b1e722bee3b4be6cdf45b5dfa085f08a329d3c14edbb3ded28491e"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 321748992,
+    "heapTotal": 151355392,
+    "heapUsed": 13924904,
+    "external": 144191283,
+    "arrayBuffers": 141652517
+  }
+}

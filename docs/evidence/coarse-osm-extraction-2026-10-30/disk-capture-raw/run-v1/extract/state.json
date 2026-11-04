@@ -1,0 +1,477 @@
+{
+  "status": "passed_disk_selected_extraction_prototype",
+  "stage": "all-highway-independent-materialization",
+  "passes": [
+    {
+      "label": "all-highway-primary-selection",
+      "status": "eof",
+      "counts": {
+        "node": 1606229364,
+        "way": 162688797,
+        "relation": 1624265
+      }
+    },
+    {
+      "label": "all-highway-independent-materialization",
+      "status": "eof",
+      "counts": {
+        "node": 1606229364,
+        "way": 162688797,
+        "relation": 1624265
+      }
+    }
+  ],
+  "windows": [
+    {
+      "id": "origin-00",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-01",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-02",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-03",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-04",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-05",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-06",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-07",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-08",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-09",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-10",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-11",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-12",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-13",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-14",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-15",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-16",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-17",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-18",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-19",
+      "status": "unmeasured"
+    },
+    {
+      "id": "origin-20",
+      "status": "unmeasured"
+    }
+  ],
+  "sourceFeasibilityQualified": false,
+  "publisherBoundaryQualified": false,
+  "sourceAdapterImplemented": false,
+  "nativeDecoderQualified": false,
+  "routingProviderRequests": 0,
+  "scanObjectVisits": 3541084852,
+  "extractBytes": 477852579,
+  "retainedElements": 1368072,
+  "windowOccurrences": 1368072,
+  "hashFramingBytesRead": 0,
+  "counterScope": "Recognized native source objects including rejected/cap+1; full count/seal only at normal EOF.",
+  "elapsedSeconds": 11932.902080310916,
+  "publisherStateUtc": "2026-10-25T21:21:21Z",
+  "selectedStores": [
+    {
+      "unique": 1368072,
+      "occurrences": 1368072,
+      "objects": 1368072,
+      "rawBytes": 229630917,
+      "pendingMutations": 0,
+      "commits": 1061,
+      "closed": true,
+      "sealed": true,
+      "sqliteVersion": "3.40.0",
+      "scope": "Received selected operations; failed close can roll back an uncommitted tail. Admission requires seal/integrity/count checks and independent output audit.",
+      "databaseSha256": "cbb3e2469129acd217ed341fd700cfff516b53d8bef74fc0788e5a66ad4fee93",
+      "databaseBytes": 357265408,
+      "integrityOk": true
+    },
+    {
+      "unique": 1368072,
+      "occurrences": 1368072,
+      "objects": 1368072,
+      "rawBytes": 229630917,
+      "pendingMutations": 0,
+      "commits": 1002,
+      "closed": true,
+      "sealed": true,
+      "sqliteVersion": "3.40.0",
+      "scope": "Received selected operations; failed close can roll back an uncommitted tail. Admission requires seal/integrity/count checks and independent output audit.",
+      "databaseSha256": "00788f4b0176fe4cea3708160e41740af5ec3b71411e683f0df21897b296a922",
+      "databaseBytes": 336826368,
+      "integrityOk": true
+    }
+  ],
+  "independentAuditComplete": true,
+  "outputSha256": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4",
+  "nativeReceipts": [
+    {
+      "nodes": 1606229364,
+      "ways": 162688797,
+      "relations": 1624265,
+      "visits": 1770542426,
+      "nativeEof": true,
+      "fallbacks": 0,
+      "blocks": 392146,
+      "semanticBytes": 146698184997,
+      "projectedFrames": 480196,
+      "checkpoints": 27017,
+      "acceptedNodes": 1606229364,
+      "acceptedWays": 162688797,
+      "acceptedRelations": 1624265,
+      "maxNodeId": 14319708500,
+      "maxWayId": 1571764908,
+      "maxRelationId": 21794149,
+      "references": 1867096915,
+      "members": 14687657,
+      "canonicalLowerBytes": 254746634000,
+      "canonicalUpperBytes": 347907937112,
+      "copyBytes": 574208165352,
+      "maxCopyBytes": 3664144,
+      "tags": 721592425,
+      "tagUtf8Bytes": 13090358316,
+      "maxCanonicalLowerBytes": 1266503,
+      "maxCanonicalUpperBytes": 1266503,
+      "maxVersion": 2787,
+      "sourceEncodeRows": 1606229364,
+      "sourceDecodeRows": 1606229364,
+      "sourceCodecCalls": 784292,
+      "highwayWays": 52053199,
+      "longHighwayWays": 1148,
+      "outOfRangeHighwayWays": 51777481,
+      "eligibleHighwayWays": 274570,
+      "traceWays": 128,
+      "traceReferences": 987,
+      "witnessRows": 0,
+      "maxReferences": 2000,
+      "maxMembers": 27531,
+      "examinedHighwayReferences": 508093741,
+      "nextExcludedPriority": 8315811814339228,
+      "nextExcludedId": 1330098023,
+      "nextExcludedOrdinal": 136690406,
+      "nodeSpanStartNs": 136094042,
+      "nodeSpanEndNs": 525029440152,
+      "waySpanStartNs": 525029440152,
+      "waySpanEndNs": 5645955195825,
+      "relationSpanStartNs": 5645955195825,
+      "relationSpanEndNs": 5651566803995,
+      "maxTags": 383,
+      "nodeMembers": 1201443,
+      "wayMembers": 13455382,
+      "relationMembers": 30832,
+      "batchWays": 52053199,
+      "batchReferences": 509547029,
+      "wayBatches": 7779,
+      "counts": {
+        "node": 1606229364,
+        "way": 162688797,
+        "relation": 1624265
+      },
+      "semanticSha256": "209cc5927bdd36c667277afd06a4ba301c753797dbf518de7df84e78301d9b16",
+      "semanticFormat": "geo-planner-projected-fields-v1",
+      "error": "",
+      "pythonProjectionFrames": 480196,
+      "callbackEvents": [
+        139903,
+        0,
+        480196,
+        392146,
+        27017,
+        128,
+        0,
+        3,
+        7779
+      ],
+      "canonicalFallbackExactSizes": [],
+      "metadata": {
+        "node": {
+          "count": 1606229364,
+          "minTimestamp": "2005-11-17T01:42:27Z",
+          "maxTimestamp": "2026-10-25T21:21:01Z",
+          "maxTagUtf8Bytes": 12636,
+          "maxTags": 346,
+          "maxVersion": 531,
+          "maxCopyBytes": 35036,
+          "maxReferences": 0,
+          "maxMembers": 0
+        },
+        "way": {
+          "count": 162688797,
+          "minTimestamp": "2006-03-22T20:54:52Z",
+          "maxTimestamp": "2026-10-25T21:21:21Z",
+          "maxTagUtf8Bytes": 5796,
+          "maxTags": 120,
+          "maxVersion": 307,
+          "maxCopyBytes": 65001,
+          "maxReferences": 2000,
+          "maxMembers": 0
+        },
+        "relation": {
+          "count": 1624265,
+          "minTimestamp": "2008-11-11T17:01:21Z",
+          "maxTimestamp": "2026-10-25T21:20:33Z",
+          "maxTagUtf8Bytes": 14034,
+          "maxTags": 383,
+          "maxVersion": 2787,
+          "maxCopyBytes": 3664144,
+          "maxReferences": 0,
+          "maxMembers": 27531
+        }
+      },
+      "deliveredBatchWays": 52053199,
+      "deliveredBatchReferences": 509547029,
+      "selectedNodeProjections": 0,
+      "restrictionProjections": 480196,
+      "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+      "sourceIdentity": {
+        "publisherStateUtc": "2026-10-25T21:21:21Z",
+        "requiredFeatures": [
+          "DenseNodes",
+          "OsmSchema-V0.6"
+        ],
+        "framingBytesRead": 12229320016,
+        "frames": 221321,
+        "sourceSha256": "1b127070917e2f4e5d9e778e2412bb44d24116519cf084ab72fe13e679eb11ff",
+        "sourceMd5": "c5abaec55e724255277f22fb97941e5a"
+      },
+      "framingSeconds": 99.64707946201088,
+      "nativeSeconds": 5651.571356495027,
+      "postSourceHashSeconds": 11.011112671927549,
+      "postSourceHashBytes": 12229320016,
+      "knownGuardReadBytes": 24458640032
+    },
+    {
+      "nodes": 1606229364,
+      "ways": 162688797,
+      "relations": 1624265,
+      "visits": 1770542426,
+      "nativeEof": true,
+      "fallbacks": 0,
+      "blocks": 392146,
+      "semanticBytes": 146698184997,
+      "projectedFrames": 1604115,
+      "checkpoints": 27017,
+      "acceptedNodes": 1606229364,
+      "acceptedWays": 162688797,
+      "acceptedRelations": 1624265,
+      "maxNodeId": 14319708500,
+      "maxWayId": 1571764908,
+      "maxRelationId": 21794149,
+      "references": 1867096915,
+      "members": 14687657,
+      "canonicalLowerBytes": 254746634000,
+      "canonicalUpperBytes": 347907937112,
+      "copyBytes": 574208165352,
+      "maxCopyBytes": 3664144,
+      "tags": 721592425,
+      "tagUtf8Bytes": 13090358316,
+      "maxCanonicalLowerBytes": 1266503,
+      "maxCanonicalUpperBytes": 1266503,
+      "maxVersion": 2787,
+      "sourceEncodeRows": 1606229364,
+      "sourceDecodeRows": 1606229364,
+      "sourceCodecCalls": 784292,
+      "highwayWays": 52053199,
+      "longHighwayWays": 1148,
+      "outOfRangeHighwayWays": 51777481,
+      "eligibleHighwayWays": 274570,
+      "traceWays": 128,
+      "traceReferences": 987,
+      "witnessRows": 1123919,
+      "maxReferences": 2000,
+      "maxMembers": 27531,
+      "examinedHighwayReferences": 508093741,
+      "nextExcludedPriority": 8315811814339228,
+      "nextExcludedId": 1330098023,
+      "nextExcludedOrdinal": 136690406,
+      "nodeSpanStartNs": 190853750,
+      "nodeSpanEndNs": 665330622470,
+      "waySpanStartNs": 665330622470,
+      "waySpanEndNs": 5933284206949,
+      "relationSpanStartNs": 5933284206949,
+      "relationSpanEndNs": 5946956215455,
+      "maxTags": 383,
+      "nodeMembers": 1201443,
+      "wayMembers": 13455382,
+      "relationMembers": 30832,
+      "batchWays": 52053199,
+      "batchReferences": 509547029,
+      "wayBatches": 7779,
+      "counts": {
+        "node": 1606229364,
+        "way": 162688797,
+        "relation": 1624265
+      },
+      "semanticSha256": "209cc5927bdd36c667277afd06a4ba301c753797dbf518de7df84e78301d9b16",
+      "semanticFormat": "geo-planner-projected-fields-v1",
+      "error": "",
+      "pythonProjectionFrames": 1604115,
+      "callbackEvents": [
+        139903,
+        0,
+        1604115,
+        392146,
+        27017,
+        128,
+        275,
+        3,
+        7779
+      ],
+      "canonicalFallbackExactSizes": [],
+      "metadata": {
+        "node": {
+          "count": 1606229364,
+          "minTimestamp": "2005-11-17T01:42:27Z",
+          "maxTimestamp": "2026-10-25T21:21:01Z",
+          "maxTagUtf8Bytes": 12636,
+          "maxTags": 346,
+          "maxVersion": 531,
+          "maxCopyBytes": 35036,
+          "maxReferences": 0,
+          "maxMembers": 0
+        },
+        "way": {
+          "count": 162688797,
+          "minTimestamp": "2006-03-22T20:54:52Z",
+          "maxTimestamp": "2026-10-25T21:21:21Z",
+          "maxTagUtf8Bytes": 5796,
+          "maxTags": 120,
+          "maxVersion": 307,
+          "maxCopyBytes": 65001,
+          "maxReferences": 2000,
+          "maxMembers": 0
+        },
+        "relation": {
+          "count": 1624265,
+          "minTimestamp": "2008-11-11T17:01:21Z",
+          "maxTimestamp": "2026-10-25T21:20:33Z",
+          "maxTagUtf8Bytes": 14034,
+          "maxTags": 383,
+          "maxVersion": 2787,
+          "maxCopyBytes": 3664144,
+          "maxReferences": 0,
+          "maxMembers": 27531
+        }
+      },
+      "deliveredBatchWays": 52053199,
+      "deliveredBatchReferences": 509547029,
+      "selectedNodeProjections": 1123919,
+      "restrictionProjections": 480196,
+      "semanticScope": "Complete only on success; failure digest covers delivered batches only",
+      "sourceIdentity": {
+        "publisherStateUtc": "2026-10-25T21:21:21Z",
+        "requiredFeatures": [
+          "DenseNodes",
+          "OsmSchema-V0.6"
+        ],
+        "framingBytesRead": 12229320016,
+        "frames": 221321,
+        "sourceSha256": "1b127070917e2f4e5d9e778e2412bb44d24116519cf084ab72fe13e679eb11ff",
+        "sourceMd5": "c5abaec55e724255277f22fb97941e5a"
+      },
+      "framingSeconds": 110.57526854902972,
+      "nativeSeconds": 5947.10186674702,
+      "postSourceHashSeconds": 10.392394630005583,
+      "postSourceHashBytes": 12229320016,
+      "knownGuardReadBytes": 24458640032
+    }
+  ],
+  "lookups": [
+    {
+      "authenticatedShardBytes": 2260508334182,
+      "hashAndFormatSeconds": 2492.398656431935,
+      "blockDecodeSeconds": 328.02363528718706
+    },
+    {
+      "authenticatedShardBytes": 2260508334182,
+      "hashAndFormatSeconds": 2556.247047380195,
+      "blockDecodeSeconds": 338.7847885650117
+    }
+  ],
+  "cellBankStoragePeakBytes": 1876729662,
+  "cellBankStorageLiveBytes": 1876729662,
+  "cellBankBytesPeak": 938364831,
+  "coarseLookups": [
+    {
+      "label": "all-highway-primary-selection",
+      "bankBytes": 938364831,
+      "bankBlocks": 392146,
+      "codecRowsCumulative": 124975600436,
+      "codecCallsCumulative": 30511629,
+      "maskReferencesCumulative": 509547029,
+      "maskCallsCumulative": 7779,
+      "queryBlocks": 28943045,
+      "examinedReferences": 509547029,
+      "fineReferences": 1530046,
+      "certifiedOutsideWays": 51813944
+    },
+    {
+      "label": "all-highway-independent-materialization",
+      "bankBytes": 938364831,
+      "bankBlocks": 392146,
+      "codecRowsCumulative": 249951200872,
+      "codecCallsCumulative": 61023258,
+      "maskReferencesCumulative": 1019094058,
+      "maskCallsCumulative": 15558,
+      "queryBlocks": 28943045,
+      "examinedReferences": 509547029,
+      "fineReferences": 1530046,
+      "certifiedOutsideWays": 51813944
+    }
+  ],
+  "liveBatchHeapLimitBytes": 134217728,
+  "liveBatchConservativeHeapPeakBytes": 35654012,
+  "nativeDiskSelectedPrototypeQualified": true,
+  "wholeExtractionQualified": false,
+  "modelChanged": false
+}

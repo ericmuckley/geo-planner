@@ -1,0 +1,55 @@
+{
+  "id": "water-coordinate-local-storage-revision-v2",
+  "date": "2026-11-03",
+  "decision": "Version the local retained/working research envelope from64GiB to72GiB under the existing autonomous development instruction. The64GiB figure originated in the October26 offline plan; no explicit user-set disk ceiling was found. This reversible local-file allowance adds no acquisition/provider/DB/app/deployment scope.",
+  "reason": "V1 exact-coordinate source-order gzip exceeded its392MiB soft allowance and stopped before source EOF. Preserve that failed run unchanged; use the identical qualified native encoder with a separately frozen bounded retry and a sufficient output allowance.",
+  "failure": {
+    "recipe": "water-coordinates-source-run-plan-v1.json",
+    "recipeSha256": "b643320bd5d71e4367a3d37f09baaedbf475c19bcccac0da3b4f23cf544e5cf1",
+    "closedRecord": "water-coordinates-source-run-closed-v1.json",
+    "closedRecordSha256": "14e3c77a989042d6d1a0525555dead64bab37ae979f3c36ac0a09e95cacb7879",
+    "compressedBytesPreserved": 411411168,
+    "conservativeAllocatedBytes": 427286528,
+    "workerExit": 2,
+    "sourceEofOrCompleteCoordinates": false,
+    "ownedHardLimitRespected": true,
+    "oom": false,
+    "independentOwnedRemoval": true
+  },
+  "oldRetainedBytes": 68719476736,
+  "newRetainedBytes": 77309411328,
+  "unchanged": {
+    "workerMemoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "tmpBytes": 268435456,
+    "fileBytes": 67108864,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "sourceAndNodeIndexIdentity": true,
+    "nativeEncoderAndIndependentDecoderArtifactSha256": "460f16df0e612990e4c27daf7046634b01717a518d129e616d908cb0f8d2c438",
+    "originalAccuracyAndAppGates": true
+  },
+  "newRun": {
+    "ownedBytes": 2415919104,
+    "encodedCompressedSoftBytes": 2147483648,
+    "missingCompressedSoftBytes": 1073741824,
+    "actualRequestedIds": 101738006,
+    "jointRawOutputUpperBytes": 1933022118,
+    "rawBoundReason": "For P present and M missing with P+M=N:encoded<=4+19P, missing<=8M, so joint raw<=4+19N. Shards, gzip expansion, allocation and metadata remain additionally guarded by the owned hard limit.",
+    "initialHostFreeMinimumBytes": 94489280512,
+    "duringHostFreeMinimumBytes": 17179869184
+  },
+  "capacityObservation": {
+    "utc": "2026-11-04T04:32:46.947948+00:00",
+    "totalBytes": 494384795648,
+    "usedBytes": 378690596864,
+    "freeBytes": 115694198784
+  },
+  "allocationBeforeNewQualification": {
+    "priorReserveBytes": 64500000000,
+    "closedAllocationBytes": 3776536576,
+    "metadataScratchReserveBytes": 104857600
+  },
+  "scope": "Local research files only. No new download, dependency, provider/routing query, database write, model activation or deployment. Preserve every previous record/code/recipe/output; never relabel V1 as passed."
+}

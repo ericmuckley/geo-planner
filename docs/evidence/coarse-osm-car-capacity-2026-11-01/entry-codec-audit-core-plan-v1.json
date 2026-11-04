@@ -1,0 +1,30 @@
+{
+  "kind": "core",
+  "source": "data/coarse-quality/us-osm-car-entry-derived-spatial-v1",
+  "codec": "data/coarse-quality/us-osm-car-entry-codec-core-v1",
+  "output": "data/coarse-quality/us-osm-car-entry-codec-audit-core-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/entry-derived-spatial-closed-v1.json",
+  "codecClosedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/entry-codec-core-closed-v1.json",
+  "manifestSha256": "193cc583f3f3a06775d092781035f855e8f3f2d09953c0aba8e58dd4895b185b",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 2780332032,
+  "metadataScratchReserveBytes": 104857600,
+  "additionalActiveReservationBytes": 536870912,
+  "bindings": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/entry-codec-core-closed-v1.json": "90c77a8dd63984dab39aaaf3f1982cde67e5a0444a2a5fe79e59ae1ec0a49c7c",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/entry-derived-spatial-closed-v1.json": "74e783f2b1b545d1de99e08b920dcc0eec02e0cf744be18d102a15ce57e39dda",
+    "scripts/audit_osm_entry_storage_v1.py": "dc625be0e720d53cb490f741ce1ff88b02dd62a655547dd279aaf109e19055c2",
+    "scripts/audit_osm_paid_geometry_codec_v1.py": "545fedc92e6cf3e13a59d4c8a2f87b80d8e02991c2535d22c8414eff2cc73779",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "scripts/close_osm_entry_storage_host_v1.py": "69b48250e2e40673ec495fceab1b3119ad4635420343d8773cda17414f23d63a",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "scripts/coarse_osm_full_monitor_v1.py": "5f9e2d916998722c808825d8b8fd68d671ebbbd75e4324d008f4918392dd7581",
+    "scripts/coarse_osm_packed_codec_audit_v1.py": "e3b8218486311898bc9b14aa18f23c912638e1bff3c49ada5035e7fad0536f4b",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388"
+  }
+}

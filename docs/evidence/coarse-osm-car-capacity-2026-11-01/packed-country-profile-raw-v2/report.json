@@ -1,0 +1,74 @@
+{
+  "status": "host_national_packed_candidate_profile_complete",
+  "recipeSha256": "b7c7935431ced5c59bef22e614154c43e0ff82ea5c886adc99f184a7f27c8e34",
+  "vertices": 5731903,
+  "arcs": 9620680,
+  "wireBytes": 127854983,
+  "compressedBytes": 97172415,
+  "retainedBackingBufferBytes": 129057568,
+  "baseline": {
+    "rss": 99500032,
+    "heapTotal": 12419072,
+    "heapUsed": 6813344,
+    "external": 2529128,
+    "arrayBuffers": 20500
+  },
+  "retained": {
+    "rss": 407420928,
+    "heapTotal": 10584064,
+    "heapUsed": 5888992,
+    "external": 134111741,
+    "arrayBuffers": 131608468
+  },
+  "afterQueries": {
+    "rss": 411746304,
+    "heapTotal": 10584064,
+    "heapUsed": 5963384,
+    "external": 134111741,
+    "arrayBuffers": 131608468
+  },
+  "compressionMs": 7253.500957,
+  "readHashCopyAndCompressionMs": 7423.516250000001,
+  "readerValidationMs": 452.7100420000006,
+  "queries": [
+    {
+      "index": 0,
+      "sourceVertex": 945113,
+      "targetVertex": 5073746,
+      "ticks": 296763,
+      "settles": 1228168,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 181.36766700000044
+    },
+    {
+      "index": 1,
+      "sourceVertex": 3285378,
+      "targetVertex": 5189146,
+      "ticks": 256312,
+      "settles": 2430602,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 417.20337500000096
+    },
+    {
+      "index": 2,
+      "sourceVertex": 311896,
+      "targetVertex": 1353026,
+      "ticks": null,
+      "settles": 1598245,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 230.13479200000074
+    },
+    {
+      "index": 3,
+      "sourceVertex": 5393891,
+      "targetVertex": 3451150,
+      "ticks": null,
+      "settles": 1328986,
+      "searchBufferBytes": 46482720,
+      "hostQueryMsIncludingPostQueryGc": 192.38966699999946
+    }
+  ],
+  "hostTotalMs": 8903.061749999999,
+  "scope": "Host isolated reader/search/compression only, no arbitrary-coordinate snapping, display/geography, app loader or function bundle. Hash/copy/compression and reader validation are separate from query timing, which includes post-query GC. Seeded vertices have no reachability/accuracy expectations; empty/unreachable cases are preserved. No protected Linux or app/Vercel admission.",
+  "modelChanged": false
+}

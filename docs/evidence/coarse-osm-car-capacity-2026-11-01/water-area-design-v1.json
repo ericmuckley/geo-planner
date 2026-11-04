@@ -1,0 +1,30 @@
+{
+  "id": "strict-water-ring-area-adapter-v1",
+  "date": "2026-11-03",
+  "scope": "Qualify a cached kernel on synthetic native-ID preclosed rings only, before any country geometry consumer. No PBF/coordinate/reference/relations/source dataset mounted. No mask policy/accuracy/app admission.",
+  "parentProof": "verify_water_endpoints_run_v1.py",
+  "parentProofSha256": "810fe595f50d4bff1830b1aad5165532ef229d1b9fd568e375e7af009e200d8e",
+  "inputs": "Explicit-role native-ID closed rings, exact existing E7 values. Per object <=100000 rings/2000000 point occurrences; oversize stays explicit, no partial geometry.",
+  "strictChecks": [
+    "Native ID and XY closure, no repeated/touching IDs or distinct IDs at identical XY",
+    "Valid E7 ranges, nonzero exact integer signed area, no antimeridian-crossing edge",
+    "Pinned libosmium Assembler with check_roles=true, ignore_invalid_locations=false, create_empty_areas=false",
+    "Reject every topology/repair/intersection/role/invalid-location problem statistic; retain exact rejection",
+    "Every output native source coordinate and undirected source edge/role/reference count exact; orientation and output parent explicit",
+    "Independent tiny integer winding/segment-intersection/source-edge oracle, valid/invalid fixtures,200 generated cases and64KiB callback boundary"
+  ],
+  "countryAdmission": false,
+  "sourceRoleInference": false,
+  "newDependenciesOrNetwork": false,
+  "code": {
+    "scripts/coarse_osm_water_area_v1.cpp": "517cb738e285c84eb8632ad7e393470b38245af8c23c07a6a5edb3d110fa92b6",
+    "scripts/coarse_osm_water_area_v1.py": "2216907244ea50394e88087518947da6f18e39062681875c4537114299bb4d13",
+    "scripts/coarse_osm_water_area_v1_test.py": "bf482c7a58fa6feb5ffe3fb78f662207eaff2a046100304d0c9eb2a13874c5ad",
+    "scripts/run_osm_water_area_v1.py": "b96ba3a4478ae2ee5bcf1e308e9673632ae493f8c99b7df24c98e9280889e67d",
+    "scripts/close_osm_water_area_v1.py": "dd7594caaf74d8fd5f6ac566d46d57ecdf90b4594ac1c198bd8d98b83d306094"
+  },
+  "retainedBytes": 77309411328,
+  "previousClosedAllocationBytes": 4292411392,
+  "previousClosedRoots": 136,
+  "hostMetadataReserveBytes": 104857600
+}

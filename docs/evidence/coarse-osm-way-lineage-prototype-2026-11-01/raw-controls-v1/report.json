@@ -1,0 +1,92 @@
+{
+  "format": "native-way-lineage-geometry-prototype-v1",
+  "captureReceipt": {
+    "rows": 5,
+    "bytes": 1558,
+    "sha256": "c18f7f44b57459f60046701a998f7c091fb65bbb18ecb0031f2445dd593fc898",
+    "types": {
+      "node": 3,
+      "relation": 1,
+      "way": 1
+    },
+    "memberships": 5
+  },
+  "relationContext": {
+    "relations": 1,
+    "memberOccurrences": 1,
+    "memberTypes": {
+      "way": 1
+    },
+    "uniqueMemberWays": 1,
+    "missingMemberWayIds": 0,
+    "missingMemberNodeOccurrences": 0,
+    "missingMemberRelationIds": 0,
+    "ordinaryCarApplicabilityReviewed": false
+  },
+  "profile": {
+    "id": "major-roads",
+    "roles": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link",
+      "secondary",
+      "secondary_link",
+      "tertiary",
+      "tertiary_link"
+    ]
+  },
+  "selectedWays": 1,
+  "selectedNativeNodes": 3,
+  "primitiveEdges": 2,
+  "oldAnchors": 3,
+  "anchors": 2,
+  "contractedEdges": 1,
+  "geometryNodeOccurrences": 3,
+  "sizes": {
+    "routing": {
+      "rawBytes": 52,
+      "gzipBytes": 110
+    },
+    "geometry": {
+      "rawBytes": 44,
+      "gzipBytes": 85
+    }
+  },
+  "queries": [
+    {
+      "windowId": "a",
+      "sourceNodeIds": [
+        2,
+        3
+      ],
+      "rawMeters": 111.19492664455873,
+      "lineageMeters": 111.19492664455873,
+      "rawSettled": 3,
+      "lineageSettled": 2,
+      "rawSearchSeconds": 2.124928869307041e-06,
+      "lineageSearchSeconds": 2.7080532163381577e-06,
+      "internalPointQueries": 1
+    }
+  ],
+  "querySettles": 5,
+  "rawComponents": {
+    "count": 1,
+    "vertices": 3,
+    "largest": 3
+  },
+  "lineageComponents": {
+    "count": 1,
+    "vertices": 2,
+    "largest": 2
+  },
+  "internalNativePoints": 1,
+  "policy": "Full ordered source geometry and every source-way/reference range remain in offline provenance. Explicit relation nodes, tagged nodes, selected-degree junctions, way ends, original window boundaries and outside-area nodes remain anchors. Way membership alone does not require interior routing anchors.",
+  "carPolicyReviewed": false,
+  "etaQualified": false,
+  "nationalArtifactBuilt": false,
+  "vercelQualified": false,
+  "modelChanged": false
+}

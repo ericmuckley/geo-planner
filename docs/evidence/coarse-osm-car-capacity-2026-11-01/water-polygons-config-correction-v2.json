@@ -1,0 +1,19 @@
+{
+  "id": "water-polygon-config-correction-v2",
+  "date": "2026-11-03",
+  "failedControlsClosed": "water-polygons-controls-closed-v1.json",
+  "failedControlsClosedSha256": "db8e9542684fa97ece695271e74afaa86acbd7329b29b7d8289fad847f0ecbb8",
+  "failure": "Worker import ModuleNotFoundError:coarse_osm_full_monitor_v1 before any test or saved input. Worker/driver2,0 tests; owned worker removed/absent. All failure bytes/code/recipe remain unchanged.",
+  "correction": "New V2 controller changes only exact output namespace and own mounted entrypoint. All geometry/catalog/loader/serializer/tests/resources unchanged. New plan adds three missing existing shared modules (monitor/endpoints/chain reader).",
+  "newBindings": {
+    "scripts/coarse_osm_full_monitor_v1.py": "5f9e2d916998722c808825d8b8fd68d671ebbbd75e4324d008f4918392dd7581",
+    "scripts/coarse_osm_water_endpoints_v1.py": "a0cc53afb0f7b596549f8b1122155e1d0c663dc68241ddae95eb1e295ce28ed7",
+    "scripts/analyze_osm_water_endpoints_v1.py": "ab8eddbf529acf1df996e76d2e086f32c39f2cb18373c8bc77c2263882299375",
+    "scripts/run_osm_water_polygons_v2.py": "0e477187ebd8398b3e9eb714bd8def59e0b0f4f0be85b602cb2b5a83d3812d1d",
+    "scripts/close_osm_water_polygons_v2.py": "296f509319f5ec6529c87912b479f3e2b16ea05041a184ac4130ab7cf95c441e"
+  },
+  "previousClosedRoots": 141,
+  "previousClosedAllocationBytes": 4305289216,
+  "originalDesign": "water-polygons-design-v1.json",
+  "sourceGeometryOrMaskChanged": false
+}

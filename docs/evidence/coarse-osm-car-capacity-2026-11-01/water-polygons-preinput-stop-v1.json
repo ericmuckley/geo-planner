@@ -1,0 +1,15 @@
+{
+  "id": "water-polygons-preinput-stop-v1",
+  "recipe": "water-polygons-controls-plan-v1.json",
+  "recipeSha256": "ed4ab4c1e9cf630afb6b8a312f5bdb8bbb1a26014aab9256622c69fb27932274",
+  "hostExitCode": 1,
+  "reason": "Copied unused legacy proposal fixture destination /docs is outside the saved-data controller readonly mount scope. Rejected before root/worker/data reads.",
+  "outputCreated": false,
+  "workerCreated": false,
+  "sourcePbfRead": false,
+  "countryCoordinateOrWayRead": false,
+  "removedUnusedMounts": {
+    "docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json": "/docs/evidence/coarse-osm-offline-plan-2026-10-26/proposal.json"
+  },
+  "correction": "Separately versioned controls plan-v2 removes the one unused old proposal fixture; code/tests/resources unchanged."
+}

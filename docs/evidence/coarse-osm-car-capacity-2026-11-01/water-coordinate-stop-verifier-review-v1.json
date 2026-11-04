@@ -1,0 +1,9 @@
+{
+  "id": "water-coordinate-stop-verifier-correction-v2",
+  "failedVerifier": "verify_water_coordinates_stop_v1.py",
+  "failedVerifierSha256": "fc7e7e141fd3d6141490fd6af6128efd8469dde33634e8af763b06852ca48208",
+  "reason": "V1 assumed worker/client and host driver all use exit2. The source worker rethrows the cap exception, so actual worker/client are1 while the host failure summary is2. V2 corrects only this audit expectation; producer/code/recipe/output/failure/limits remain unchanged.",
+  "actualWorkerAndClientExit": 1,
+  "actualDriverExit": 2,
+  "sourceOrCoordinateCompletionEstablished": false
+}

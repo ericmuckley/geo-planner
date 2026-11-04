@@ -1,0 +1,64 @@
+{
+  "status": "completed_native_selected_relation_diagnosis",
+  "selfTests": {
+    "checks": 3,
+    "successful": true,
+    "controls": [
+      "type and ID filtering",
+      "all selected metadata including Unicode",
+      "empty/duplicate/invalid target rejection"
+    ]
+  },
+  "targets": [
+    8457114,
+    15651245
+  ],
+  "records": [
+    {
+      "type": "relation",
+      "id": 8457114,
+      "version": 1,
+      "timestamp": "2018-07-18T16:27:29Z",
+      "visible": true,
+      "tags": {
+        "restriction": "no_left_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "relation",
+          "ref": 207792,
+          "role": ""
+        }
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 15651245,
+      "version": 1,
+      "timestamp": "2023-03-27T10:38:27Z",
+      "visible": true,
+      "tags": {
+        "restriction": "only_straight_on",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "relation",
+          "ref": 15651244,
+          "role": "from"
+        }
+      ]
+    }
+  ],
+  "pythonObjectsProjectedFromCountry": 2,
+  "method": "Cached pyosmium relation-only reader and native IdFilter. No location store or national Python OSM projection. Parent complete source seals reused; source stats unchanged before/after. This is a selected-record diagnosis, not a new whole-source hash/semantic qualification.",
+  "parentReceiptSha256": "14bd648b112e6d0eed95a5ee4d82e1cb2ef3fec7b9479f3534208130bec8c0fe",
+  "secondsIncludingTinyControlsAndSelectedSourceRead": 87.16072787309531,
+  "sourcePbfReads": 1,
+  "newSourceDownloads": 0,
+  "networkRequests": 0,
+  "applicationDbReads": 0,
+  "modelChanged": false,
+  "policyChanged": false
+}

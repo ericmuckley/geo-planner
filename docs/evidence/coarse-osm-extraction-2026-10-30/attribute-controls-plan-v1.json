@@ -1,0 +1,39 @@
+{
+  "phase": "attribute_facts_controls_v1",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-attribute-controls-v1",
+  "caps": {
+    "memoryBytes": 536870912,
+    "tmpBytes": 33554432,
+    "fileBytes": 33554432,
+    "ownedBytes": 2097152,
+    "workerSeconds": 60,
+    "hostSeconds": 120
+  },
+  "mounts": {
+    "scripts/run_osm_attribute_controls_v1.py": "/code/run_osm_attribute_controls_v1.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_attributes_v1_test.py": "/code/coarse_osm_attributes_v1_test.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1",
+    "docs/evidence/coarse-osm-extraction-2026-10-30/qualification-raw/v15/controls/disk-extract/elements.jsonl": "/inputs/tiny.jsonl"
+  },
+  "inputs": {
+    "scripts/run_osm_attribute_controls_v1.py": "8faa948ce5299a483ea9636310fa86561e188390e3d337bb645420635acf72b2",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_attributes_v1_test.py": "e13cd768064a022c27b06fbb68d5ff5cc34232c548ce5c7dc5854bcfe414438b",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be",
+    "docs/evidence/coarse-osm-extraction-2026-10-30/qualification-raw/v15/controls/disk-extract/elements.jsonl": "dd2315bf022fa0ebe4ac7db1fee38329d40fb5c87f2e236577627d73730d875c"
+  },
+  "tests": 11,
+  "hostControllerTests": {
+    "path": "scripts/coarse_osm_attribute_controls_v1_test.py",
+    "sha256": "fa29a130b86ba687035b917630ff4147df1300bac46b41489efc87b8f822558d",
+    "tests": 4
+  },
+  "hostControlsReceiptSha256": "7b0ff5d3b52e9374aefed6c9d14fd4ab814a10ae4486fb1b0405d6dfda39fe95",
+  "scope": "Linux facts-only parser controls and tiny qualified fixture, no native/national/PBF data, permissions or timing costs. Execute only after the active national capture worker is closed."
+}

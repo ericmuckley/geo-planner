@@ -1,0 +1,4194 @@
+{
+  "Id": "bc34364c67f92eecedb41918a9c65a63b31662f2e519476c0ac15372ab810975",
+  "Created": "2026-11-03T18:29:06.307123049Z",
+  "Path": "python3",
+  "Args": [
+    "-B",
+    "/code/run_osm_water_union_source_v1.py",
+    "/inputs/recipe.json",
+    "bf773712aada3a2660fe7e09e88c0e75e458f1fc55310cd455837f22804ee0d8",
+    "--worker"
+  ],
+  "State": {
+    "Status": "created",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "0001-01-01T00:00:00Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "ResolvConfPath": "",
+  "HostnamePath": "",
+  "HostsPath": "",
+  "LogPath": "",
+  "Name": "/geo-planner-water-union-source-756b195ad683",
+  "RestartCount": 0,
+  "Driver": "overlayfs",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "",
+  "ExecIDs": null,
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {}
+    },
+    "NetworkMode": "none",
+    "PortBindings": {},
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": [
+      "ALL"
+    ],
+    "CgroupnsMode": "private",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": true,
+    "SecurityOpt": [
+      "no-new-privileges"
+    ],
+    "Tmpfs": {
+      "/tmp": "rw,size=256m"
+    },
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 4294967296,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 4294967296,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": 64,
+    "Ulimits": [
+      {
+        "Name": "core",
+        "Hard": 0,
+        "Soft": 0
+      },
+      {
+        "Name": "fsize",
+        "Hard": 67108864,
+        "Soft": 67108864
+      }
+    ],
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_car_paid_host_v1.py",
+        "Target": "/code/close_osm_car_paid_host_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_water_source_v1.py",
+        "Target": "/code/close_osm_water_source_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_codec.py",
+        "Target": "/code/coarse_backbone_codec.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_paths.py",
+        "Target": "/code/coarse_backbone_paths.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_audit.py",
+        "Target": "/code/coarse_osm_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_build_v1.py",
+        "Target": "/code/coarse_osm_build_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+        "Target": "/code/coarse_osm_bulk.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_audit.py",
+        "Target": "/code/coarse_osm_bulk_audit.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+        "Target": "/code/coarse_osm_bulk_pbf.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_transport.py",
+        "Target": "/code/coarse_osm_bulk_transport.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_compact_v1.py",
+        "Target": "/code/coarse_osm_compact_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1.py",
+        "Target": "/code/coarse_osm_country_screen_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1_test.py",
+        "Target": "/code/coarse_osm_country_screen_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v6.py",
+        "Target": "/code/coarse_osm_country_screen_v6.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v7.py",
+        "Target": "/code/coarse_osm_country_screen_v7.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_wire_v4.py",
+        "Target": "/code/coarse_osm_country_wire_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data.py",
+        "Target": "/code/coarse_osm_data.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data_v3.py",
+        "Target": "/code/coarse_osm_data_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v1.py",
+        "Target": "/code/coarse_osm_delta_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v2.py",
+        "Target": "/code/coarse_osm_delta_extract_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1.py",
+        "Target": "/code/coarse_osm_delta_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1_test.py",
+        "Target": "/code/coarse_osm_delta_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2.py",
+        "Target": "/code/coarse_osm_delta_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2_test.py",
+        "Target": "/code/coarse_osm_delta_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v3.py",
+        "Target": "/code/coarse_osm_filtered_extract_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_summary_v1.py",
+        "Target": "/code/coarse_osm_footprint_summary_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_v1.py",
+        "Target": "/code/coarse_osm_footprint_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_v1_test.py",
+        "Target": "/code/coarse_osm_footprint_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_monitor_v1.py",
+        "Target": "/code/coarse_osm_full_monitor_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_input.py",
+        "Target": "/code/coarse_osm_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lookup_v3.py",
+        "Target": "/code/coarse_osm_lookup_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v1.py",
+        "Target": "/code/coarse_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v2.py",
+        "Target": "/code/coarse_osm_native_lock_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_smoke.py",
+        "Target": "/code/coarse_osm_native_smoke.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile.py",
+        "Target": "/code/coarse_osm_profile.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_extract_v1.py",
+        "Target": "/code/coarse_osm_projector_extract_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1.py",
+        "Target": "/code/coarse_osm_projector_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1_test.py",
+        "Target": "/code/coarse_osm_projector_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+        "Target": "/code/coarse_osm_records.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_revalidated_index_v1.py",
+        "Target": "/code/coarse_osm_revalidated_index_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1.py",
+        "Target": "/code/coarse_osm_sample_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1_test.py",
+        "Target": "/code/coarse_osm_sample_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_audit_v1.py",
+        "Target": "/code/coarse_osm_selected_audit_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_qualification_v2.py",
+        "Target": "/code/coarse_osm_selected_qualification_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_store_v1.py",
+        "Target": "/code/coarse_osm_selected_store_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_v1.py",
+        "Target": "/code/coarse_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_kernel_v1.py",
+        "Target": "/code/coarse_osm_topology_kernel_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_kernel_v1_test.py",
+        "Target": "/code/coarse_osm_topology_kernel_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_source_v1.py",
+        "Target": "/code/coarse_osm_topology_source_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_source_v1_test.py",
+        "Target": "/code/coarse_osm_topology_source_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_stream_v1.py",
+        "Target": "/code/coarse_osm_topology_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_stream_v1_test.py",
+        "Target": "/code/coarse_osm_topology_stream_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_validation_v4.py",
+        "Target": "/code/coarse_osm_validation_v4.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v1.py",
+        "Target": "/code/coarse_osm_water_census_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v2.py",
+        "Target": "/code/coarse_osm_water_census_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v2_test.py",
+        "Target": "/code/coarse_osm_water_census_v2_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_scan_v1.py",
+        "Target": "/code/coarse_osm_water_scan_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v2.py",
+        "Target": "/code/coarse_osm_window_bank_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v1.py",
+        "Target": "/code/coarse_osm_window_cells_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v1.py",
+        "Target": "/code/coarse_osm_window_codec_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v2.py",
+        "Target": "/code/coarse_osm_window_codec_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_masks_v1.py",
+        "Target": "/code/coarse_osm_window_masks_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_path_features.py",
+        "Target": "/code/coarse_path_features.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+        "Target": "/code/coarse_timing_input.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_parquet.py",
+        "Target": "/code/coarse_timing_parquet.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_input_v3.py",
+        "Target": "/code/prepare_osm_input_v3.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_native_lock_v1.py",
+        "Target": "/code/prepare_osm_native_lock_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_stream_v1.py",
+        "Target": "/code/profile_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_build_v1.py",
+        "Target": "/code/run_osm_build_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_capture.py",
+        "Target": "/code/run_osm_capture.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v1.py",
+        "Target": "/code/run_osm_country_screen_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v15.py",
+        "Target": "/code/run_osm_country_screen_v15.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v1.py",
+        "Target": "/code/run_osm_delta_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v2.py",
+        "Target": "/code/run_osm_delta_v2.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_footprint_v1.py",
+        "Target": "/code/run_osm_footprint_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_sample_v1.py",
+        "Target": "/code/run_osm_sample_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_stream_v1.py",
+        "Target": "/code/run_osm_stream_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_topology_v1.py",
+        "Target": "/code/run_osm_topology_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_water_source_v1.py",
+        "Target": "/code/run_osm_water_source_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/forward_reference_writer.py",
+        "Target": "/tools/site/osmium/forward_reference_writer.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/filter.pyi",
+        "Target": "/tools/site/osmium/filter.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/index.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/index.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/version.pyi",
+        "Target": "/tools/site/osmium/version.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/area.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/area.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/io.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/io.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/version.py",
+        "Target": "/tools/site/osmium/version.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/filter.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/filter.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/__init__.py",
+        "Target": "/tools/site/osmium/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/back_reference_writer.py",
+        "Target": "/tools/site/osmium/back_reference_writer.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/file_processor.py",
+        "Target": "/tools/site/osmium/file_processor.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/index.pyi",
+        "Target": "/tools/site/osmium/index.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/geom.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/geom.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/_osmium.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/_osmium.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/geom.pyi",
+        "Target": "/tools/site/osmium/geom.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/helper.py",
+        "Target": "/tools/site/osmium/helper.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/py.typed",
+        "Target": "/tools/site/osmium/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/area.pyi",
+        "Target": "/tools/site/osmium/area.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/_osmium.pyi",
+        "Target": "/tools/site/osmium/_osmium.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/simple_handler.py",
+        "Target": "/tools/site/osmium/simple_handler.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/io.pyi",
+        "Target": "/tools/site/osmium/io.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/RECORD",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/direct_url.json",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/WHEEL",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/entry_points.txt",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/entry_points.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/REQUESTED",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/INSTALLER",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/METADATA",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/RECORD",
+        "Target": "/tools/site/requests-2.34.2.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/direct_url.json",
+        "Target": "/tools/site/requests-2.34.2.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/WHEEL",
+        "Target": "/tools/site/requests-2.34.2.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/top_level.txt",
+        "Target": "/tools/site/requests-2.34.2.dist-info/top_level.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/REQUESTED",
+        "Target": "/tools/site/requests-2.34.2.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/INSTALLER",
+        "Target": "/tools/site/requests-2.34.2.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/METADATA",
+        "Target": "/tools/site/requests-2.34.2.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/pyosmium-get-changes",
+        "Target": "/tools/site/bin/pyosmium-get-changes",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/pyosmium-up-to-date",
+        "Target": "/tools/site/bin/pyosmium-up-to-date",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/idna",
+        "Target": "/tools/site/bin/idna",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/normalizer",
+        "Target": "/tools/site/bin/normalizer",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/RECORD",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/direct_url.json",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/WHEEL",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/top_level.txt",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/top_level.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/REQUESTED",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/INSTALLER",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/METADATA",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium.libs/libbz2-549b318a.so.1.0.6",
+        "Target": "/tools/site/osmium.libs/libbz2-549b318a.so.1.0.6",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium.libs/liblz4-b2322fcc.so.1.8.3",
+        "Target": "/tools/site/osmium.libs/liblz4-b2322fcc.so.1.8.3",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/intranges.py",
+        "Target": "/tools/site/idna/intranges.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/package_data.py",
+        "Target": "/tools/site/idna/package_data.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/compat.py",
+        "Target": "/tools/site/idna/compat.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/idnadata.py",
+        "Target": "/tools/site/idna/idnadata.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/__init__.py",
+        "Target": "/tools/site/idna/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/core.py",
+        "Target": "/tools/site/idna/core.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/cli.py",
+        "Target": "/tools/site/idna/cli.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/py.typed",
+        "Target": "/tools/site/idna/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/codec.py",
+        "Target": "/tools/site/idna/codec.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/__main__.py",
+        "Target": "/tools/site/idna/__main__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/uts46data.py",
+        "Target": "/tools/site/idna/uts46data.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/md.py",
+        "Target": "/tools/site/charset_normalizer/md.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/version.py",
+        "Target": "/tools/site/charset_normalizer/version.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/legacy.py",
+        "Target": "/tools/site/charset_normalizer/legacy.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/models.py",
+        "Target": "/tools/site/charset_normalizer/models.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/__init__.py",
+        "Target": "/tools/site/charset_normalizer/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/api.py",
+        "Target": "/tools/site/charset_normalizer/api.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/utils.py",
+        "Target": "/tools/site/charset_normalizer/utils.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/py.typed",
+        "Target": "/tools/site/charset_normalizer/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/md.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/charset_normalizer/md.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/constant.py",
+        "Target": "/tools/site/charset_normalizer/constant.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cd.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/charset_normalizer/cd.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/__main__.py",
+        "Target": "/tools/site/charset_normalizer/__main__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cd.py",
+        "Target": "/tools/site/charset_normalizer/cd.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/cookies.py",
+        "Target": "/tools/site/requests/cookies.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/auth.py",
+        "Target": "/tools/site/requests/auth.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/sessions.py",
+        "Target": "/tools/site/requests/sessions.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/_types.py",
+        "Target": "/tools/site/requests/_types.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/hooks.py",
+        "Target": "/tools/site/requests/hooks.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/compat.py",
+        "Target": "/tools/site/requests/compat.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/models.py",
+        "Target": "/tools/site/requests/models.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/certs.py",
+        "Target": "/tools/site/requests/certs.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/__init__.py",
+        "Target": "/tools/site/requests/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/status_codes.py",
+        "Target": "/tools/site/requests/status_codes.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/packages.py",
+        "Target": "/tools/site/requests/packages.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/__version__.py",
+        "Target": "/tools/site/requests/__version__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/api.py",
+        "Target": "/tools/site/requests/api.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/_internal_utils.py",
+        "Target": "/tools/site/requests/_internal_utils.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/utils.py",
+        "Target": "/tools/site/requests/utils.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/py.typed",
+        "Target": "/tools/site/requests/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/exceptions.py",
+        "Target": "/tools/site/requests/exceptions.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/structures.py",
+        "Target": "/tools/site/requests/structures.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/help.py",
+        "Target": "/tools/site/requests/help.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/adapters.py",
+        "Target": "/tools/site/requests/adapters.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/RECORD",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/direct_url.json",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/WHEEL",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/REQUESTED",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/INSTALLER",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/METADATA",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/__init__.py",
+        "Target": "/tools/site/certifi/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/core.py",
+        "Target": "/tools/site/certifi/core.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/py.typed",
+        "Target": "/tools/site/certifi/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/cacert.pem",
+        "Target": "/tools/site/certifi/cacert.pem",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/__main__.py",
+        "Target": "/tools/site/certifi/__main__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/filepost.py",
+        "Target": "/tools/site/urllib3/filepost.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/fields.py",
+        "Target": "/tools/site/urllib3/fields.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_version.py",
+        "Target": "/tools/site/urllib3/_version.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_base_connection.py",
+        "Target": "/tools/site/urllib3/_base_connection.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/__init__.py",
+        "Target": "/tools/site/urllib3/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/poolmanager.py",
+        "Target": "/tools/site/urllib3/poolmanager.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/response.py",
+        "Target": "/tools/site/urllib3/response.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/connection.py",
+        "Target": "/tools/site/urllib3/connection.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_collections.py",
+        "Target": "/tools/site/urllib3/_collections.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/py.typed",
+        "Target": "/tools/site/urllib3/py.typed",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/exceptions.py",
+        "Target": "/tools/site/urllib3/exceptions.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_request_methods.py",
+        "Target": "/tools/site/urllib3/_request_methods.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/connectionpool.py",
+        "Target": "/tools/site/urllib3/connectionpool.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/RECORD",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/direct_url.json",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/WHEEL",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/entry_points.txt",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/entry_points.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/top_level.txt",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/top_level.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/REQUESTED",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/INSTALLER",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/METADATA",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/RECORD",
+        "Target": "/tools/site/idna-3.20.dist-info/RECORD",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/direct_url.json",
+        "Target": "/tools/site/idna-3.20.dist-info/direct_url.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/WHEEL",
+        "Target": "/tools/site/idna-3.20.dist-info/WHEEL",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/entry_points.txt",
+        "Target": "/tools/site/idna-3.20.dist-info/entry_points.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/REQUESTED",
+        "Target": "/tools/site/idna-3.20.dist-info/REQUESTED",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/INSTALLER",
+        "Target": "/tools/site/idna-3.20.dist-info/INSTALLER",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/METADATA",
+        "Target": "/tools/site/idna-3.20.dist-info/METADATA",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/licenses/LICENSE.md",
+        "Target": "/tools/site/idna-3.20.dist-info/licenses/LICENSE.md",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+        "Target": "/tools/site/charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssltransport.py",
+        "Target": "/tools/site/urllib3/util/ssltransport.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/util.py",
+        "Target": "/tools/site/urllib3/util/util.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/proxy.py",
+        "Target": "/tools/site/urllib3/util/proxy.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/wait.py",
+        "Target": "/tools/site/urllib3/util/wait.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/request.py",
+        "Target": "/tools/site/urllib3/util/request.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/timeout.py",
+        "Target": "/tools/site/urllib3/util/timeout.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/__init__.py",
+        "Target": "/tools/site/urllib3/util/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/response.py",
+        "Target": "/tools/site/urllib3/util/response.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssl_.py",
+        "Target": "/tools/site/urllib3/util/ssl_.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/retry.py",
+        "Target": "/tools/site/urllib3/util/retry.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/url.py",
+        "Target": "/tools/site/urllib3/util/url.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/connection.py",
+        "Target": "/tools/site/urllib3/util/connection.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssl_match_hostname.py",
+        "Target": "/tools/site/urllib3/util/ssl_match_hostname.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/__init__.py",
+        "Target": "/tools/site/urllib3/contrib/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/socks.py",
+        "Target": "/tools/site/urllib3/contrib/socks.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/pyopenssl.py",
+        "Target": "/tools/site/urllib3/contrib/pyopenssl.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/__init__.py",
+        "Target": "/tools/site/urllib3/http2/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/connection.py",
+        "Target": "/tools/site/urllib3/http2/connection.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/probe.py",
+        "Target": "/tools/site/urllib3/http2/probe.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/fetch.py",
+        "Target": "/tools/site/urllib3/contrib/emscripten/fetch.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/request.py",
+        "Target": "/tools/site/urllib3/contrib/emscripten/request.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/__init__.py",
+        "Target": "/tools/site/urllib3/contrib/emscripten/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/response.py",
+        "Target": "/tools/site/urllib3/contrib/emscripten/response.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/connection.py",
+        "Target": "/tools/site/urllib3/contrib/emscripten/connection.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/emscripten_fetch_worker.js",
+        "Target": "/tools/site/urllib3/contrib/emscripten/emscripten_fetch_worker.js",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/tests/__init__.py",
+        "Target": "/tools/site/certifi/tests/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/tests/test_certify.py",
+        "Target": "/tools/site/certifi/tests/test_certify.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+        "Target": "/tools/site/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cli/__init__.py",
+        "Target": "/tools/site/charset_normalizer/cli/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cli/__main__.py",
+        "Target": "/tools/site/charset_normalizer/cli/__main__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/licenses/LICENSE",
+        "Target": "/tools/site/certifi-2026.10.23.dist-info/licenses/LICENSE",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/licenses/LICENSE",
+        "Target": "/tools/site/requests-2.34.2.dist-info/licenses/LICENSE",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/licenses/NOTICE",
+        "Target": "/tools/site/requests-2.34.2.dist-info/licenses/NOTICE",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/licenses/LICENSE.TXT",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/licenses/LICENSE.TXT",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/sboms/auditwheel.cdx.json",
+        "Target": "/tools/site/osmium-4.3.2.dist-info/sboms/auditwheel.cdx.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/pyosmium_get_changes.py",
+        "Target": "/tools/site/osmium/tools/pyosmium_get_changes.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/__init__.py",
+        "Target": "/tools/site/osmium/tools/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/common.py",
+        "Target": "/tools/site/osmium/tools/common.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/pyosmium_up_to_date.py",
+        "Target": "/tools/site/osmium/tools/pyosmium_up_to_date.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/_osm.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/osm/_osm.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/__init__.py",
+        "Target": "/tools/site/osmium/osm/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/types.py",
+        "Target": "/tools/site/osmium/osm/types.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/_osm.pyi",
+        "Target": "/tools/site/osmium/osm/_osm.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/mutable.py",
+        "Target": "/tools/site/osmium/osm/mutable.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/server.py",
+        "Target": "/tools/site/osmium/replication/server.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/__init__.py",
+        "Target": "/tools/site/osmium/replication/__init__.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/utils.py",
+        "Target": "/tools/site/osmium/replication/utils.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/_replication.pyi",
+        "Target": "/tools/site/osmium/replication/_replication.pyi",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/_replication.cpython-313-aarch64-linux-gnu.so",
+        "Target": "/tools/site/osmium/replication/_replication.cpython-313-aarch64-linux-gnu.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1",
+        "Target": "/tools/runtime/libexpat.so.1",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/copyright",
+        "Target": "/tools/runtime/copyright",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-census-v2-build-v1/water-census.so",
+        "Target": "/artifacts/water-census.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-build-v2.json",
+        "Target": "/inputs/water-census-closed-build-v2.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-controls-v2.json",
+        "Target": "/inputs/water-census-closed-controls-v2.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-controls-v3.json",
+        "Target": "/inputs/water-census-closed-controls-v3.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-raw/controls-v3/controls.json",
+        "Target": "/inputs/water-census-raw--controls-v3--controls.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1.cpp",
+        "Target": "/code/coarse_osm_water_union_v1.cpp",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1.py",
+        "Target": "/code/coarse_osm_water_union_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1_test.py",
+        "Target": "/code/coarse_osm_water_union_v1_test.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_water_union_source_v1.py",
+        "Target": "/code/run_osm_water_union_source_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_water_union_source_v1.py",
+        "Target": "/code/close_osm_water_union_source_v1.py",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-union-build-v1/water-union.so",
+        "Target": "/artifacts/water-union.so",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-design-v1.json",
+        "Target": "/inputs/water-union-design.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-source-run-raw-v1/report.json",
+        "Target": "/inputs/water-census-report.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-build-v1.json",
+        "Target": "/inputs/water-union-closed-build-v1.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-controls-v1.json",
+        "Target": "/inputs/water-union-closed-controls-v1.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-controls-v2.json",
+        "Target": "/inputs/water-union-closed-controls-v2.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-raw/controls-v2/controls.json",
+        "Target": "/inputs/water-union-controls.json",
+        "ReadOnly": true
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-union-source-controls-v1",
+        "Target": "/work"
+      },
+      {
+        "Type": "bind",
+        "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-source-controls-plan-v1.json",
+        "Target": "/inputs/recipe.json",
+        "ReadOnly": true
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/asound",
+      "/proc/acpi",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/sys/firmware",
+      "/sys/devices/virtual/powercap"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ],
+    "Init": true
+  },
+  "GraphDriver": {
+    "Data": null,
+    "Name": "overlayfs"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_audit.py",
+      "Destination": "/code/coarse_osm_audit.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/RECORD",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/RECORD",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/direct_url.json",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/WHEEL",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/wait.py",
+      "Destination": "/tools/site/urllib3/util/wait.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-controls-v2.json",
+      "Destination": "/inputs/water-census-closed-controls-v2.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2_test.py",
+      "Destination": "/code/coarse_osm_delta_v2_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/INSTALLER",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/emscripten_fetch_worker.js",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/emscripten_fetch_worker.js",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-controls-v3.json",
+      "Destination": "/inputs/water-census-closed-controls-v3.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_cells_v1.py",
+      "Destination": "/code/coarse_osm_window_cells_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/auth.py",
+      "Destination": "/tools/site/requests/auth.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/cacert.pem",
+      "Destination": "/tools/site/certifi/cacert.pem",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1",
+      "Destination": "/tools/runtime/libexpat.so.1",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-build-v1.json",
+      "Destination": "/inputs/water-union-closed-build-v1.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/WHEEL",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/WHEEL",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_qualification_v2.py",
+      "Destination": "/code/coarse_osm_selected_qualification_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/WHEEL",
+      "Destination": "/tools/site/idna-3.20.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/connection.py",
+      "Destination": "/tools/site/urllib3/util/connection.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v2.py",
+      "Destination": "/code/coarse_osm_delta_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/_osmium.pyi",
+      "Destination": "/tools/site/osmium/_osmium.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/api.py",
+      "Destination": "/tools/site/charset_normalizer/api.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/direct_url.json",
+      "Destination": "/tools/site/idna-3.20.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/_osm.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/osm/_osm.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v6.py",
+      "Destination": "/code/coarse_osm_country_screen_v6.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v1.py",
+      "Destination": "/code/coarse_osm_delta_extract_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/cli.py",
+      "Destination": "/tools/site/idna/cli.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/pyosmium_up_to_date.py",
+      "Destination": "/tools/site/osmium/tools/pyosmium_up_to_date.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/_replication.pyi",
+      "Destination": "/tools/site/osmium/replication/_replication.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_stream_v1.py",
+      "Destination": "/code/profile_osm_stream_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_capture.py",
+      "Destination": "/code/run_osm_capture.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v2.py",
+      "Destination": "/code/run_osm_delta_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_wire_v4.py",
+      "Destination": "/code/coarse_osm_country_wire_v4.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/py.typed",
+      "Destination": "/tools/site/charset_normalizer/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/pyosmium_get_changes.py",
+      "Destination": "/tools/site/osmium/tools/pyosmium_get_changes.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1.py",
+      "Destination": "/code/coarse_osm_delta_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v2.py",
+      "Destination": "/code/coarse_osm_native_lock_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_audit_v1.py",
+      "Destination": "/code/coarse_osm_selected_audit_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_stream_v1_test.py",
+      "Destination": "/code/coarse_osm_topology_stream_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/certs.py",
+      "Destination": "/tools/site/requests/certs.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/packages.py",
+      "Destination": "/tools/site/requests/packages.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_water_source_v1.py",
+      "Destination": "/code/close_osm_water_source_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_v1.py",
+      "Destination": "/code/coarse_osm_footprint_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_kernel_v1_test.py",
+      "Destination": "/code/coarse_osm_topology_kernel_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_input_v3.py",
+      "Destination": "/code/prepare_osm_input_v3.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/md.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/charset_normalizer/md.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssltransport.py",
+      "Destination": "/tools/site/urllib3/util/ssltransport.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/util.py",
+      "Destination": "/tools/site/urllib3/util/util.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cli/__init__.py",
+      "Destination": "/tools/site/charset_normalizer/cli/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/forward_reference_writer.py",
+      "Destination": "/tools/site/osmium/forward_reference_writer.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/core.py",
+      "Destination": "/tools/site/idna/core.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/__init__.py",
+      "Destination": "/tools/site/urllib3/util/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/top_level.txt",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/top_level.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/entry_points.txt",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/entry_points.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/RECORD",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/types.py",
+      "Destination": "/tools/site/osmium/osm/types.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_audit.py",
+      "Destination": "/code/coarse_osm_bulk_audit.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/exceptions.py",
+      "Destination": "/tools/site/requests/exceptions.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_car_paid_host_v1.py",
+      "Destination": "/code/close_osm_car_paid_host_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_records.py",
+      "Destination": "/code/coarse_osm_records.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1.py",
+      "Destination": "/code/coarse_osm_water_union_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_path_features.py",
+      "Destination": "/code/coarse_path_features.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/back_reference_writer.py",
+      "Destination": "/tools/site/osmium/back_reference_writer.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/INSTALLER",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/intranges.py",
+      "Destination": "/tools/site/idna/intranges.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/connectionpool.py",
+      "Destination": "/tools/site/urllib3/connectionpool.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/METADATA",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/licenses/NOTICE",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/licenses/NOTICE",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1_test.py",
+      "Destination": "/code/coarse_osm_country_screen_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_source_v1.py",
+      "Destination": "/code/coarse_osm_topology_source_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_stream_v1.py",
+      "Destination": "/code/run_osm_stream_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/codec.py",
+      "Destination": "/tools/site/idna/codec.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/__init__.py",
+      "Destination": "/tools/site/urllib3/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v7.py",
+      "Destination": "/code/coarse_osm_country_screen_v7.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v2.py",
+      "Destination": "/code/coarse_osm_window_codec_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/version.py",
+      "Destination": "/tools/site/osmium/version.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_pbf.py",
+      "Destination": "/code/coarse_osm_bulk_pbf.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_filtered_extract_v3.py",
+      "Destination": "/code/coarse_osm_filtered_extract_v3.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/helper.py",
+      "Destination": "/tools/site/osmium/helper.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/compat.py",
+      "Destination": "/tools/site/idna/compat.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1_test.py",
+      "Destination": "/code/coarse_osm_water_union_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk_transport.py",
+      "Destination": "/code/coarse_osm_bulk_transport.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_stream_v1.py",
+      "Destination": "/code/coarse_osm_topology_stream_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v2.py",
+      "Destination": "/code/coarse_osm_water_census_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/filter.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/filter.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/WHEEL",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/_types.py",
+      "Destination": "/tools/site/requests/_types.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/RECORD",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_version.py",
+      "Destination": "/tools/site/urllib3/_version.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_selected_store_v1.py",
+      "Destination": "/code/coarse_osm_selected_store_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_input.py",
+      "Destination": "/code/coarse_timing_input.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/REQUESTED",
+      "Destination": "/tools/site/idna-3.20.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/request.py",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/request.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/_osm.pyi",
+      "Destination": "/tools/site/osmium/osm/_osm.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_profile.py",
+      "Destination": "/code/coarse_osm_profile.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/hooks.py",
+      "Destination": "/tools/site/requests/hooks.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/utils.py",
+      "Destination": "/tools/site/requests/utils.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/py.typed",
+      "Destination": "/tools/site/certifi/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/INSTALLER",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1_test.py",
+      "Destination": "/code/coarse_osm_projector_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_compact_v1.py",
+      "Destination": "/code/coarse_osm_compact_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_country_screen_v1.py",
+      "Destination": "/code/coarse_osm_country_screen_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_extract_v2.py",
+      "Destination": "/code/coarse_osm_delta_extract_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/index.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/index.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/licenses/LICENSE",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/licenses/LICENSE",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data.py",
+      "Destination": "/code/coarse_osm_data.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_delta_v1_test.py",
+      "Destination": "/code/coarse_osm_delta_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/md.py",
+      "Destination": "/tools/site/charset_normalizer/md.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/api.py",
+      "Destination": "/tools/site/requests/api.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssl_.py",
+      "Destination": "/tools/site/urllib3/util/ssl_.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_union_v1.cpp",
+      "Destination": "/code/coarse_osm_water_union_v1.cpp",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v1.py",
+      "Destination": "/code/coarse_osm_water_census_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_delta_v1.py",
+      "Destination": "/code/run_osm_delta_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/area.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/area.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/package_data.py",
+      "Destination": "/tools/site/idna/package_data.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/adapters.py",
+      "Destination": "/tools/site/requests/adapters.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/INSTALLER",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/pyopenssl.py",
+      "Destination": "/tools/site/urllib3/contrib/pyopenssl.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/connection.py",
+      "Destination": "/tools/site/urllib3/http2/connection.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_lock_v1.py",
+      "Destination": "/code/coarse_osm_native_lock_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_kernel_v1.py",
+      "Destination": "/code/coarse_osm_topology_kernel_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/area.pyi",
+      "Destination": "/tools/site/osmium/area.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/licenses/LICENSE.TXT",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/licenses/LICENSE.TXT",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_input.py",
+      "Destination": "/code/coarse_osm_input.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1.py",
+      "Destination": "/code/coarse_osm_sample_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v1.py",
+      "Destination": "/code/run_osm_country_screen_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/compat.py",
+      "Destination": "/tools/site/requests/compat.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/structures.py",
+      "Destination": "/tools/site/requests/structures.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_masks_v1.py",
+      "Destination": "/code/coarse_osm_window_masks_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/INSTALLER",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/normalizer",
+      "Destination": "/tools/site/bin/normalizer",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/sessions.py",
+      "Destination": "/tools/site/requests/sessions.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/filepost.py",
+      "Destination": "/tools/site/urllib3/filepost.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/__init__.py",
+      "Destination": "/tools/site/urllib3/contrib/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-union-build-v1/water-union.so",
+      "Destination": "/artifacts/water-union.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/REQUESTED",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/models.py",
+      "Destination": "/tools/site/charset_normalizer/models.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/_internal_utils.py",
+      "Destination": "/tools/site/requests/_internal_utils.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/response.py",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/response.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/mutable.py",
+      "Destination": "/tools/site/osmium/osm/mutable.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-closed-build-v2.json",
+      "Destination": "/inputs/water-census-closed-build-v2.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/geom.pyi",
+      "Destination": "/tools/site/osmium/geom.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/top_level.txt",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/top_level.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_bulk.py",
+      "Destination": "/code/coarse_osm_bulk.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/pyosmium-get-changes",
+      "Destination": "/tools/site/bin/pyosmium-get-changes",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/__main__.py",
+      "Destination": "/tools/site/idna/__main__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/connection.py",
+      "Destination": "/tools/site/urllib3/connection.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/sboms/auditwheel.cdx.json",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/sboms/auditwheel.cdx.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_codec_v1.py",
+      "Destination": "/code/coarse_osm_window_codec_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_sample_v1.py",
+      "Destination": "/code/run_osm_sample_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_collections.py",
+      "Destination": "/tools/site/urllib3/_collections.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/direct_url.json",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/METADATA",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/server.py",
+      "Destination": "/tools/site/osmium/replication/server.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_codec.py",
+      "Destination": "/code/coarse_backbone_codec.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_revalidated_index_v1.py",
+      "Destination": "/code/coarse_osm_revalidated_index_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/geom.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/geom.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/__main__.py",
+      "Destination": "/tools/site/charset_normalizer/__main__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_timing_parquet.py",
+      "Destination": "/code/coarse_timing_parquet.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/url.py",
+      "Destination": "/tools/site/urllib3/util/url.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/fetch.py",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/fetch.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/connection.py",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/connection.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-controls-v1.json",
+      "Destination": "/inputs/water-union-closed-controls-v1.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_extract_v1.py",
+      "Destination": "/code/coarse_osm_projector_extract_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_validation_v4.py",
+      "Destination": "/code/coarse_osm_validation_v4.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/proxy.py",
+      "Destination": "/tools/site/urllib3/util/proxy.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/tests/test_certify.py",
+      "Destination": "/tools/site/certifi/tests/test_certify.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-union-source-controls-v1",
+      "Destination": "/work",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/status_codes.py",
+      "Destination": "/tools/site/requests/status_codes.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_request_methods.py",
+      "Destination": "/tools/site/urllib3/_request_methods.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/timeout.py",
+      "Destination": "/tools/site/urllib3/util/timeout.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-water-census-v2-build-v1/water-census.so",
+      "Destination": "/artifacts/water-census.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-closed-controls-v2.json",
+      "Destination": "/inputs/water-union-closed-controls-v2.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/_base_connection.py",
+      "Destination": "/tools/site/urllib3/_base_connection.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_census_v2_test.py",
+      "Destination": "/code/coarse_osm_water_census_v2_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/filter.pyi",
+      "Destination": "/tools/site/osmium/filter.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/METADATA",
+      "Destination": "/tools/site/idna-3.20.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/ssl_match_hostname.py",
+      "Destination": "/tools/site/urllib3/util/ssl_match_hostname.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_projector_v1.py",
+      "Destination": "/code/coarse_osm_projector_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_topology_source_v1_test.py",
+      "Destination": "/code/coarse_osm_topology_source_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/idna",
+      "Destination": "/tools/site/bin/idna",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/RECORD",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/entry_points.txt",
+      "Destination": "/tools/site/idna-3.20.dist-info/entry_points.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-raw/controls-v2/controls.json",
+      "Destination": "/inputs/water-union-controls.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_build_v1.py",
+      "Destination": "/code/run_osm_build_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_footprint_v1.py",
+      "Destination": "/code/run_osm_footprint_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/METADATA",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/help.py",
+      "Destination": "/tools/site/requests/help.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/REQUESTED",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/__init__.py",
+      "Destination": "/tools/site/osmium/replication/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-design-v1.json",
+      "Destination": "/inputs/water-union-design.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/direct_url.json",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/direct_url.json",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/fields.py",
+      "Destination": "/tools/site/urllib3/fields.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/common.py",
+      "Destination": "/tools/site/osmium/tools/common.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/close_osm_water_union_source_v1.py",
+      "Destination": "/code/close_osm_water_union_source_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-source-run-raw-v1/report.json",
+      "Destination": "/inputs/water-census-report.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_sample_v1_test.py",
+      "Destination": "/code/coarse_osm_sample_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/uts46data.py",
+      "Destination": "/tools/site/idna/uts46data.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/legacy.py",
+      "Destination": "/tools/site/charset_normalizer/legacy.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/utils.py",
+      "Destination": "/tools/site/charset_normalizer/utils.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/response.py",
+      "Destination": "/tools/site/urllib3/util/response.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_data_v3.py",
+      "Destination": "/code/coarse_osm_data_v3.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/_osmium.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/_osmium.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/METADATA",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cd.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/charset_normalizer/cd.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/cookies.py",
+      "Destination": "/tools/site/requests/cookies.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_full_monitor_v1.py",
+      "Destination": "/code/coarse_osm_full_monitor_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/__init__.py",
+      "Destination": "/tools/site/charset_normalizer/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/__init__.py",
+      "Destination": "/tools/site/urllib3/http2/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/licenses/LICENSE",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/licenses/LICENSE",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/osm/__init__.py",
+      "Destination": "/tools/site/osmium/osm/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_lookup_v3.py",
+      "Destination": "/code/coarse_osm_lookup_v3.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_country_screen_v15.py",
+      "Destination": "/code/run_osm_country_screen_v15.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium.libs/libbz2-549b318a.so.1.0.6",
+      "Destination": "/tools/site/osmium.libs/libbz2-549b318a.so.1.0.6",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/py.typed",
+      "Destination": "/tools/site/urllib3/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/io.pyi",
+      "Destination": "/tools/site/osmium/io.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/REQUESTED",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/py.typed",
+      "Destination": "/tools/site/idna/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/version.py",
+      "Destination": "/tools/site/charset_normalizer/version.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/constant.py",
+      "Destination": "/tools/site/charset_normalizer/constant.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/utils.py",
+      "Destination": "/tools/site/osmium/replication/utils.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-census-raw/controls-v3/controls.json",
+      "Destination": "/inputs/water-census-raw--controls-v3--controls.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_water_union_source_v1.py",
+      "Destination": "/code/run_osm_water_union_source_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/__main__.py",
+      "Destination": "/tools/site/certifi/__main__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/tests/__init__.py",
+      "Destination": "/tools/site/certifi/tests/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_topology_v1.py",
+      "Destination": "/code/run_osm_topology_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/RECORD",
+      "Destination": "/tools/site/idna-3.20.dist-info/RECORD",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/prepare/runtime/copyright",
+      "Destination": "/tools/runtime/copyright",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/docs/evidence/coarse-osm-car-capacity-2026-11-01/water-union-source-controls-plan-v1.json",
+      "Destination": "/inputs/recipe.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_native_smoke.py",
+      "Destination": "/code/coarse_osm_native_smoke.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/prepare_osm_native_lock_v1.py",
+      "Destination": "/code/prepare_osm_native_lock_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/__init__.py",
+      "Destination": "/tools/site/idna/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/retry.py",
+      "Destination": "/tools/site/urllib3/util/retry.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_build_v1.py",
+      "Destination": "/code/coarse_osm_build_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium-4.3.2.dist-info/direct_url.json",
+      "Destination": "/tools/site/osmium-4.3.2.dist-info/direct_url.json",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/entry_points.txt",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/entry_points.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/file_processor.py",
+      "Destination": "/tools/site/osmium/file_processor.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/index.pyi",
+      "Destination": "/tools/site/osmium/index.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/util/request.py",
+      "Destination": "/tools/site/urllib3/util/request.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium.libs/liblz4-b2322fcc.so.1.8.3",
+      "Destination": "/tools/site/osmium.libs/liblz4-b2322fcc.so.1.8.3",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna/idnadata.py",
+      "Destination": "/tools/site/idna/idnadata.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/response.py",
+      "Destination": "/tools/site/urllib3/response.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/tools/__init__.py",
+      "Destination": "/tools/site/osmium/tools/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_water_scan_v1.py",
+      "Destination": "/code/coarse_osm_water_scan_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_stream_v1.py",
+      "Destination": "/code/coarse_osm_stream_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_backbone_paths.py",
+      "Destination": "/code/coarse_backbone_paths.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_summary_v1.py",
+      "Destination": "/code/coarse_osm_footprint_summary_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/simple_handler.py",
+      "Destination": "/tools/site/osmium/simple_handler.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3-2.8.0.dist-info/WHEEL",
+      "Destination": "/tools/site/urllib3-2.8.0.dist-info/WHEEL",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/poolmanager.py",
+      "Destination": "/tools/site/urllib3/poolmanager.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/REQUESTED",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/replication/_replication.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/replication/_replication.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/run_osm_water_source_v1.py",
+      "Destination": "/code/run_osm_water_source_v1.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi-2026.10.23.dist-info/REQUESTED",
+      "Destination": "/tools/site/certifi-2026.10.23.dist-info/REQUESTED",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/models.py",
+      "Destination": "/tools/site/requests/models.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/__version__.py",
+      "Destination": "/tools/site/requests/__version__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/http2/probe.py",
+      "Destination": "/tools/site/urllib3/http2/probe.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/emscripten/__init__.py",
+      "Destination": "/tools/site/urllib3/contrib/emscripten/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/io.cpython-313-aarch64-linux-gnu.so",
+      "Destination": "/tools/site/osmium/io.cpython-313-aarch64-linux-gnu.so",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cd.py",
+      "Destination": "/tools/site/charset_normalizer/cd.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/__init__.py",
+      "Destination": "/tools/site/requests/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/exceptions.py",
+      "Destination": "/tools/site/urllib3/exceptions.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer-3.5.2.dist-info/top_level.txt",
+      "Destination": "/tools/site/charset_normalizer-3.5.2.dist-info/top_level.txt",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/py.typed",
+      "Destination": "/tools/site/osmium/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/bin/pyosmium-up-to-date",
+      "Destination": "/tools/site/bin/pyosmium-up-to-date",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/core.py",
+      "Destination": "/tools/site/certifi/core.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_window_bank_v2.py",
+      "Destination": "/code/coarse_osm_window_bank_v2.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests/py.typed",
+      "Destination": "/tools/site/requests/py.typed",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/certifi/__init__.py",
+      "Destination": "/tools/site/certifi/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/INSTALLER",
+      "Destination": "/tools/site/idna-3.20.dist-info/INSTALLER",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/urllib3/contrib/socks.py",
+      "Destination": "/tools/site/urllib3/contrib/socks.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/charset_normalizer/cli/__main__.py",
+      "Destination": "/tools/site/charset_normalizer/cli/__main__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_footprint_v1_test.py",
+      "Destination": "/code/coarse_osm_footprint_v1_test.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/version.pyi",
+      "Destination": "/tools/site/osmium/version.pyi",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/osmium/__init__.py",
+      "Destination": "/tools/site/osmium/__init__.py",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/requests-2.34.2.dist-info/METADATA",
+      "Destination": "/tools/site/requests-2.34.2.dist-info/METADATA",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/eric/Documents/GitHub/geo-planner/data/coarse-quality/us-osm-tools-v3/offline/site/idna-3.20.dist-info/licenses/LICENSE.md",
+      "Destination": "/tools/site/idna-3.20.dist-info/licenses/LICENSE.md",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ],
+  "Config": {
+    "Hostname": "bc34364c67f9",
+    "Domainname": "",
+    "User": "",
+    "AttachStdin": false,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "PYTHONPATH=/code:/tools/site:/reference",
+      "LD_LIBRARY_PATH=/tools/runtime",
+      "OSMIUM_MAX_INPUT_QUEUE_SIZE=2",
+      "OSMIUM_MAX_OSMDATA_QUEUE_SIZE=2",
+      "LANG=en_US.UTF-8",
+      "TZ=:/etc/localtime",
+      "PATH=/var/lang/bin:/usr/local/bin:/usr/bin/:/bin:/opt/bin",
+      "LAMBDA_TASK_ROOT=/var/task",
+      "LAMBDA_RUNTIME_DIR=/var/runtime"
+    ],
+    "Cmd": [
+      "-B",
+      "/code/run_osm_water_union_source_v1.py",
+      "/inputs/recipe.json",
+      "bf773712aada3a2660fe7e09e88c0e75e458f1fc55310cd455837f22804ee0d8",
+      "--worker"
+    ],
+    "Image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+    "Volumes": null,
+    "WorkingDir": "/var/task",
+    "Entrypoint": [
+      "python3"
+    ],
+    "OnBuild": null,
+    "Labels": {
+      "com.amazonaws.lambda.platform.kernel": "k510ga",
+      "com.amazonaws.lambda.platform.version": "sbxv2brave",
+      "geo-planner.stream-owner": "756b195ad6834ae496fbe3b52559bda7"
+    }
+  },
+  "NetworkSettings": {
+    "Bridge": "",
+    "SandboxID": "",
+    "SandboxKey": "",
+    "Ports": {},
+    "HairpinMode": false,
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "EndpointID": "",
+    "Gateway": "",
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "IPAddress": "",
+    "IPPrefixLen": 0,
+    "IPv6Gateway": "",
+    "MacAddress": "",
+    "Networks": {
+      "none": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "MacAddress": "",
+        "DriverOpts": null,
+        "GwPriority": 0,
+        "NetworkID": "",
+        "EndpointID": "",
+        "Gateway": "",
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "DNSNames": null
+      }
+    }
+  },
+  "ImageManifestDescriptor": {
+    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+    "digest": "sha256:bbd247c69e481793c499216ab389ad108b974d2cfc6b1764fd2d831297c1920b",
+    "size": 1578,
+    "platform": {
+      "architecture": "arm64",
+      "os": "linux",
+      "variant": "v8"
+    }
+  }
+}

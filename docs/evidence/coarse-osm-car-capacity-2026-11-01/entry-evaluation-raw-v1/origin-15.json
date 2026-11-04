@@ -1,0 +1,149 @@
+{
+  "origin": [
+    -116.602,
+    33.0787
+  ],
+  "initialChoices": 29,
+  "accessInput": {
+    "filename": "endpoint-68.json.gz",
+    "rawBytes": 8617,
+    "rawSha256": "a0b493b188dfe40ee406e963aa5db31321114fbbc4323d1a63537a54f7aa6d6f",
+    "compressedBytes": 1218,
+    "sha256": "1a46e1cedb4e4e0b95616c1cadfd51d2db2e128250f5d1644cbc2d233193f998"
+  },
+  "diagnostic": {
+    "timings": {
+      "julian--borrego-springs": {
+        "ticks": 22924,
+        "kind": "road-foot",
+        "roadTicks": 22924,
+        "localGridTicks": 24291,
+        "localWitness": {
+          "terminalTicks": 819,
+          "edgeSeconds": 0,
+          "seedSeconds": 2934,
+          "seedCell": 658772,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "julian--el-centro": {
+        "ticks": 46742,
+        "kind": "road-foot",
+        "roadTicks": 46742,
+        "localGridTicks": 48020,
+        "localWitness": {
+          "terminalTicks": 884,
+          "edgeSeconds": 0,
+          "seedSeconds": 5892,
+          "seedCell": 579323,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1594816,
+      "maximumHeapEntries": 2549,
+      "maximumBackingBufferBytes": 50281062,
+      "returnedBackingBufferBytes": 50281062,
+      "seedBackingBufferBytes": 1856,
+      "starts": 29
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -125003736,
+      "south": 29420820,
+      "step": 11583,
+      "width": 1988,
+      "height": 1257
+    },
+    "stats": {
+      "envelopeMs": 581.2697919999773,
+      "maskMs": 600.844333999994,
+      "seedMs": 1639.2345830000122,
+      "fillMs": 204.10712500000955,
+      "contourMs": 20.883874999999534,
+      "displayMs": 3046.507583999977,
+      "maximumBackingBufferBytes": 58829131,
+      "borrowedVertexWorkspace": true,
+      "samples": 2687893,
+      "activeSpans": 1105260,
+      "settles": 1112615,
+      "maximumHeapEntries": 135896,
+      "selectedCells": 1113523,
+      "localCells": 1112615,
+      "roadOnlyCells": 908,
+      "edges": 16884,
+      "rings": 88,
+      "vertices": 10128,
+      "jsonBytes": 241107,
+      "retries": []
+    },
+    "phaseMs": 3322.6173750000016,
+    "output": {
+      "filename": "origin-15-900.geojson",
+      "bytes": 241107,
+      "sha256": "779f6998cb14adf9604b036ccbdfaccb02b15c5f641465ba7bab3dc9091c0856"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 720,
+      "classified": {
+        "julian--borrego-springs": true,
+        "julian--el-centro": true
+      },
+      "fieldStats": {
+        "settles": 1396927,
+        "maximumHeapEntries": 2549,
+        "maximumBackingBufferBytes": 50281062,
+        "returnedBackingBufferBytes": 50281062,
+        "seedBackingBufferBytes": 1856,
+        "starts": 29
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -124118070,
+        "south": 30095968,
+        "step": 9266,
+        "width": 1982,
+        "height": 1261
+      },
+      "stats": {
+        "envelopeMs": 546.8459590000275,
+        "maskMs": 584.9284170000174,
+        "seedMs": 1437.028707999998,
+        "fillMs": 193.67929199998616,
+        "contourMs": 19.8804999999993,
+        "displayMs": 2782.4655000000203,
+        "maximumBackingBufferBytes": 58829131,
+        "borrowedVertexWorkspace": true,
+        "samples": 2373009,
+        "activeSpans": 975987,
+        "settles": 1077430,
+        "maximumHeapEntries": 124110,
+        "selectedCells": 1078134,
+        "localCells": 1077430,
+        "roadOnlyCells": 704,
+        "edges": 15722,
+        "rings": 66,
+        "vertices": 9342,
+        "jsonBytes": 220286,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-15-720.geojson",
+        "bytes": 220286,
+        "sha256": "dc580d993c5533f31f612ca64f1e9e2945ef388aff2b401fe323ca0f2846343e"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 366411776,
+    "heapTotal": 151617536,
+    "heapUsed": 13854584,
+    "external": 144191283,
+    "arrayBuffers": 141652517
+  }
+}

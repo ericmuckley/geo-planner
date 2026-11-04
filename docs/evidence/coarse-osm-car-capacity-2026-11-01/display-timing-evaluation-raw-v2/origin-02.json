@@ -1,0 +1,166 @@
+{
+  "origin": [
+    -113.994,
+    46.8721
+  ],
+  "diagnostic": {
+    "timings": {
+      "missoula-mt-360-inside": {
+        "ticks": 159099,
+        "kind": "road-foot",
+        "roadTicks": 159099,
+        "localGridTicks": 159889,
+        "localWitness": {
+          "terminalTicks": 473,
+          "edgeSeconds": 0,
+          "seedSeconds": 19927,
+          "seedCell": 1996331,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-360-outside": {
+        "ticks": 252238,
+        "kind": "road-foot",
+        "roadTicks": 252238,
+        "localGridTicks": 252657,
+        "localWitness": {
+          "terminalTicks": 321,
+          "edgeSeconds": 0,
+          "seedSeconds": 31542,
+          "seedCell": 2254876,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-600-inside": {
+        "ticks": 256832,
+        "kind": "road-foot",
+        "roadTicks": 256832,
+        "localGridTicks": 257292,
+        "localWitness": {
+          "terminalTicks": 220,
+          "edgeSeconds": 0,
+          "seedSeconds": 32134,
+          "seedCell": 673649,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-600-outside": {
+        "ticks": 304895,
+        "kind": "road-foot",
+        "roadTicks": 304895,
+        "localGridTicks": 305637,
+        "localWitness": {
+          "terminalTicks": 421,
+          "edgeSeconds": 0,
+          "seedSeconds": 38152,
+          "seedCell": 721780,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-720-inside": {
+        "ticks": 330527,
+        "kind": "local-grid",
+        "roadTicks": 334625,
+        "localGridTicks": 330527,
+        "localWitness": {
+          "terminalTicks": 119,
+          "edgeSeconds": 0,
+          "seedSeconds": 41301,
+          "seedCell": 1263103,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-720-outside": {
+        "ticks": 338915,
+        "kind": "road-foot",
+        "roadTicks": 338915,
+        "localGridTicks": 339834,
+        "localWitness": {
+          "terminalTicks": 450,
+          "edgeSeconds": 0,
+          "seedSeconds": 42423,
+          "seedCell": 1382010,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "frame": {
+      "west": -125003340,
+      "south": 35370720,
+      "step": 13398,
+      "width": 2288,
+      "height": 1092
+    },
+    "stats": {
+      "envelopeMs": 418.0699999999997,
+      "maskMs": 656.2365410000002,
+      "seedMs": 1256.0798749999994,
+      "fillMs": 264.11233399999946,
+      "contourMs": 35.80554099999972,
+      "displayMs": 2630.642749999999,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 2336166,
+      "activeSpans": 777241,
+      "settles": 1584835,
+      "maximumHeapEntries": 235429,
+      "selectedCells": 1586943,
+      "localCells": 1584835,
+      "roadOnlyCells": 2108,
+      "edges": 23472,
+      "rings": 251,
+      "vertices": 13485,
+      "jsonBytes": 314623,
+      "retries": []
+    },
+    "phaseMs": 2797.9066249999996,
+    "output": {
+      "filename": "origin-02-900.geojson",
+      "bytes": 314623,
+      "sha256": "6aa5947853d435884109b0bbbb8a32278d48964b3fa7fc975043484cebe9af74"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "missoula-mt-360.geojson",
+        "bytes": 243760,
+        "sha256": "41395e5d48526c5a5c3a7aaa8e2d2214c5b3671d35aa16221e52bee18b2e5885"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "missoula-mt-600.geojson",
+        "bytes": 303437,
+        "sha256": "40c37888cd5682dd7cf347fad0869ec931e82d3a0b95dbaeb79f462c7423508e"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "missoula-mt-720.geojson",
+        "bytes": 295852,
+        "sha256": "312c7e426ebf88aa491c295dcfd58a35d3d9e2e5c14d2a726bcfb7becf6dcb5e"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 414351360,
+    "heapTotal": 48857088,
+    "heapUsed": 13473464,
+    "external": 143793759,
+    "arrayBuffers": 141254993
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-02.json"
+}

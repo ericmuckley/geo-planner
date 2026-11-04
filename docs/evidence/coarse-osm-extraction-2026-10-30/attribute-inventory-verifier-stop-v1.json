@@ -1,0 +1,8 @@
+{
+  "verifierSha256": "c6f97f4948919ea93701aeb07c30f1b2c6753d29377391796f5612e4b81f60a2",
+  "defaultProofPassed": true,
+  "localProofPassed": false,
+  "failure": "nodeCanonicalBytes: stored161208946 versus verifier161208936",
+  "cause": "Verifier used UTF-8 characters rather than the sealed canonical JSON ASCII escaping. Difference10bytes; original data/producer unchanged.",
+  "correction": "V2 uses the sealed ASCII escaping convention for byte accounting."
+}

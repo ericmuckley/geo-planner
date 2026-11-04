@@ -1,0 +1,43 @@
+{
+  "status": "count_based_interpretation_no_graph_admission",
+  "profiles": {
+    "all-highways": {
+      "ways": 52053199,
+      "deliveredReferences": 509547029,
+      "primitiveEdges": 457493830,
+      "routingArrayLowerBytes": 1249276792,
+      "fullGeometryArrayLowerBytes": 2246400924,
+      "combinedArrayLowerBytes": 3495677716,
+      "combinedArrayUpperBytes": 26660718468,
+      "wholeAcquiredFileFullGeometryFormatExceedsDecodedBudgetByLowerBound": true,
+      "scope": "Current isolated full-geometry prototype arrays for the entire acquired publisher file. Other formats and continental-only subsets are not rejected by this bound."
+    },
+    "major-roads": {
+      "ways": 4227238,
+      "deliveredReferences": 48163649,
+      "primitiveEdges": 43936411,
+      "routingArrayLowerBytes": 101453728,
+      "fullGeometryArrayLowerBytes": 209563560,
+      "combinedArrayLowerBytes": 311017288,
+      "combinedArrayUpperBytes": 2544983784,
+      "wholeAcquiredFileFullGeometryFormatExceedsDecodedBudgetByLowerBound": true,
+      "scope": "Current isolated full-geometry prototype arrays for the entire acquired publisher file. Other formats and continental-only subsets are not rejected by this bound."
+    }
+  },
+  "decodedAppBudgetBytes": 162238546,
+  "exactTopologyCensusDesignBudget": {
+    "selectedProfile": "major-roads",
+    "referenceOccurrenceRecordBytes": 24,
+    "sortedOccurrenceBytes": 1155927576,
+    "taggedNodeIdBytes": 385140144,
+    "relationNodeAndWayStreamsIncludingSortedCopyBytes": 234509200,
+    "totalConservativeSpoolBytes": 1775576920,
+    "sourceNodePresenceBitsetBytes": 1789963563,
+    "scope": "Design arithmetic only, not actual allocation/performance. Source-node presence can use a native one-bit-per-ID arena, with a fixed measured source max-ID resource bound; tagged/relation context streams remain separate."
+  },
+  "allHighwayLongWays": 1148,
+  "wholeFileNotExactContinentalSubset": true,
+  "compressedFunctionSizeMeasured": false,
+  "etaQualified": false,
+  "modelChanged": false
+}

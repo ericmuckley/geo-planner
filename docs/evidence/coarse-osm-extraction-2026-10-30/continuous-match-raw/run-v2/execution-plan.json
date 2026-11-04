@@ -1,0 +1,354 @@
+{
+  "phase": "native_continuous_geometry_v2",
+  "stage": "run",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-continuous-match-run-v2",
+  "caps": {
+    "memoryBytes": 2147483648,
+    "tmpBytes": 67108864,
+    "fileBytes": 134217728,
+    "ownedBytes": 536870912,
+    "workerSeconds": 1800,
+    "hostSeconds": 1860
+  },
+  "dataCaps": {
+    "nodeCanonicalBytes": 268435456,
+    "geometryReferences": 4000000,
+    "inputBytes": 1073741824,
+    "rowBytes": 8388608,
+    "records": 2000000,
+    "windowWays": 100000,
+    "windowReferences": 1000000,
+    "parts": 300000,
+    "indexSegments": 1000000,
+    "binEntries": 8000000,
+    "comparisons": 50000000,
+    "arcSamples": 20000,
+    "sampleMemberships": 2000000,
+    "projectionComparisons": 4000000,
+    "searchRows": 64,
+    "searchStates": 4096,
+    "nearbyParts": 20000,
+    "curveSamples": 20000
+  },
+  "mounts": {
+    "scripts/coarse_osm_continuous_controller_v2_test.py": "/code/coarse_osm_continuous_controller_v2_test.py",
+    "scripts/coarse_osm_continuous_match_v1.py": "/code/coarse_osm_continuous_match_v1.py",
+    "scripts/coarse_osm_continuous_match_v1_test.py": "/code/coarse_osm_continuous_match_v1_test.py",
+    "scripts/run_osm_continuous_match_v2.py": "/code/run_osm_continuous_match_v2.py",
+    "scripts/coarse_osm_match_v1.py": "/code/coarse_osm_match_v1.py",
+    "scripts/coarse_osm_match_v1_test.py": "/code/coarse_osm_match_v1_test.py",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "/code/coarse_osm_attribute_inventory_v1.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_path_features.py": "/code/coarse_path_features.py",
+    "scripts/coarse_timing_chains.py": "/code/coarse_timing_chains.py",
+    "scripts/coarse_timing_fragments.py": "/code/coarse_timing_fragments.py",
+    "scripts/coarse_timing_fragments_audit.py": "/code/coarse_timing_fragments_audit.py",
+    "scripts/coarse_timing_compatibility_audit.py": "/code/coarse_timing_compatibility_audit.py",
+    "scripts/analyze_timing_cache.py": "/code/analyze_timing_cache.py",
+    "scripts/analyze_timing_compatibility.py": "/code/analyze_timing_compatibility.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "scripts/coarse_timing_parquet.py": "/code/coarse_timing_parquet.py",
+    "scripts/coarse_backbone_paths.py": "/code/coarse_backbone_paths.py",
+    "scripts/coarse_backbone_codec.py": "/code/coarse_backbone_codec.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1",
+    "data/coarse-quality/us-osm-disk-capture-run-v1/extract/elements.jsonl": "/inputs/captured.jsonl",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/matches.jsonl": "/inputs/census.jsonl"
+  },
+  "inputs": {
+    "scripts/coarse_osm_continuous_controller_v2_test.py": "f5a69531349b395ada6c6ec911efdc01b40c1cc17feeb621acb114ba322d13d1",
+    "scripts/coarse_osm_continuous_match_v1.py": "37700dc97f5af86d22456a9e95a6d1c866160e07ce69c9badaa2b583ba092c30",
+    "scripts/coarse_osm_continuous_match_v1_test.py": "4e0e2359d3481c9ccf72e71966214df4054cf92fb0b745b856156d0aa257c5d3",
+    "scripts/run_osm_continuous_match_v2.py": "b777c75b7330c1a82123dc64f3d36920456ff812ea4717f25f82f062c182df8b",
+    "scripts/coarse_osm_match_v1.py": "8142d31f33ca556fc6af137aa3b71600f675d41965b4aa8880e5d500478ebb4a",
+    "scripts/coarse_osm_match_v1_test.py": "0060557cd02a4f124888780f35a1f8a8fdb6e2115e2f6be52f5fc0e2eb1ebc4a",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "scripts/coarse_timing_chains.py": "e2b3651c1ee402232a2502941d43430175fca674066b87e7a82253048fbf754f",
+    "scripts/coarse_timing_fragments.py": "98a0fa4bef9a694e507d9f114691811ad03a2050578bae6664083ca555c9d8ec",
+    "scripts/coarse_timing_fragments_audit.py": "6b9b87d6b5cfeeef8925119bad9842a30e82074fa65d1e0456d7b07c195198bf",
+    "scripts/coarse_timing_compatibility_audit.py": "b089d4777aa556490e4c41b4136f577d5bc846b8e54dc076749fb2586a023112",
+    "scripts/analyze_timing_cache.py": "912014f4b530821d80b43d3e38d10e6969d00decd28a7ebaade1c633598fefa8",
+    "scripts/analyze_timing_compatibility.py": "227bca34f3640c74f131ddb934b9be23e02c3aa3c7c6a4526fce906cc82919e7",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be",
+    "data/coarse-quality/us-osm-disk-capture-run-v1/extract/elements.jsonl": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4",
+    "data/coarse-quality/overture-timing-cache-analysis-v2/matches.jsonl": "bc52cb3fc16d70f4e0ae0f2d0fb7bfe01e48087fe92dc59a24a9be2d4208842d"
+  },
+  "sourceSnapshotUtc": "2026-10-25T21:21:21Z",
+  "windows": [
+    {
+      "bbox": [
+        -123.8813,
+        46.1379,
+        -123.7813,
+        46.237899999999996
+      ],
+      "id": "origin-00"
+    },
+    {
+      "bbox": [
+        -119.7482,
+        34.3708,
+        -119.6482,
+        34.4708
+      ],
+      "id": "origin-01"
+    },
+    {
+      "bbox": [
+        -119.279,
+        34.2246,
+        -119.179,
+        34.3246
+      ],
+      "id": "origin-02"
+    },
+    {
+      "bbox": [
+        -119.06869999999999,
+        35.3233,
+        -118.9687,
+        35.4233
+      ],
+      "id": "origin-03"
+    },
+    {
+      "bbox": [
+        -118.2937,
+        34.0022,
+        -118.1937,
+        34.102199999999996
+      ],
+      "id": "origin-04"
+    },
+    {
+      "bbox": [
+        -117.66199999999999,
+        33.376900000000006,
+        -117.562,
+        33.4769
+      ],
+      "id": "origin-05"
+    },
+    {
+      "bbox": [
+        -117.2111,
+        32.6657,
+        -117.11110000000001,
+        32.765699999999995
+      ],
+      "id": "origin-06"
+    },
+    {
+      "bbox": [
+        -116.7689,
+        33.690000000000005,
+        -116.66890000000001,
+        33.79
+      ],
+      "id": "origin-07"
+    },
+    {
+      "bbox": [
+        -116.652,
+        33.0287,
+        -116.552,
+        33.128699999999995
+      ],
+      "id": "origin-08"
+    },
+    {
+      "bbox": [
+        -116.5953,
+        33.780300000000004,
+        -116.4953,
+        33.8803
+      ],
+      "id": "origin-09"
+    },
+    {
+      "bbox": [
+        -116.425,
+        33.2059,
+        -116.325,
+        33.305899999999994
+      ],
+      "id": "origin-10"
+    },
+    {
+      "bbox": [
+        -116.3631,
+        34.084700000000005,
+        -116.26310000000001,
+        34.1847
+      ],
+      "id": "origin-11"
+    },
+    {
+      "bbox": [
+        -116.0061,
+        33.2486,
+        -115.90610000000001,
+        33.3486
+      ],
+      "id": "origin-12"
+    },
+    {
+      "bbox": [
+        -115.77969999999999,
+        33.3003,
+        -115.6797,
+        33.400299999999994
+      ],
+      "id": "origin-13"
+    },
+    {
+      "bbox": [
+        -114.044,
+        46.822100000000006,
+        -113.944,
+        46.9221
+      ],
+      "id": "origin-14"
+    },
+    {
+      "bbox": [
+        -99.3768,
+        38.8292,
+        -99.27680000000001,
+        38.929199999999994
+      ],
+      "id": "origin-15"
+    },
+    {
+      "bbox": [
+        -92.1505,
+        46.736700000000006,
+        -92.0505,
+        46.8367
+      ],
+      "id": "origin-16"
+    },
+    {
+      "bbox": [
+        -83.0488,
+        39.9112,
+        -82.9488,
+        40.011199999999995
+      ],
+      "id": "origin-17"
+    },
+    {
+      "bbox": [
+        -82.6015,
+        35.545100000000005,
+        -82.50150000000001,
+        35.6451
+      ],
+      "id": "origin-18"
+    },
+    {
+      "bbox": [
+        -81.1412,
+        32.0309,
+        -81.0412,
+        32.1309
+      ],
+      "id": "origin-19"
+    },
+    {
+      "bbox": [
+        -70.3068,
+        43.609100000000005,
+        -70.2068,
+        43.7091
+      ],
+      "id": "origin-20"
+    }
+  ],
+  "expectedSourceKm": 2078.2379598682132,
+  "controllerAdmission": {
+    "qualified": true,
+    "tests": 19,
+    "recipeSha256": "26c8ae76d10a70a41efdb0f00bda054340bc8686baa7f6b7c41647273d5f458f",
+    "proofSha256": "30b6362f7b3626d7ee8a244d9694b2fefbd6aef3f97a9d17ab8113e445ff3efb",
+    "closedSha256": "c0cee1b74df1ce6e008c4b7b910f506065334d024397e67ae545229257d61a80"
+  },
+  "captureAdmission": {
+    "qualified": true,
+    "recipeSha256": "2942796a1920a862a2e524160247a0506dd143a2aff8111cdcaf754f2869d1be",
+    "proofSha256": "47ee3638350737ccc67e17d037bec9bcb22daff49e65a528ca24751f4c30d4a3",
+    "geometryOpportunityProofSha256": "9db3fda370614093f2a5c8e06ef92bef3212f3311a7cc025902245994c28af6c"
+  },
+  "originalCensusReport": {
+    "path": "docs/evidence/coarse-timing-cache-2026-10-25/report.json",
+    "sha256": "f60b2d817bfaf22a7b42a191e6153503158f00468216786e584cd1afcfb4d35b",
+    "arcWindowRecords": 2469,
+    "classes": [
+      85,
+      105
+    ],
+    "windows": 21
+  },
+  "retainedReservationBytes": 61800000000,
+  "overallEnvelopeBytes": 68719476736,
+  "baseline": {
+    "recipeSha256": "251fda35d24c5de9433584fe4132170ba9e06f5fd218250201d084e451259ca9",
+    "reportSha256": "fac07762233a9c99ad6a8646c9636d0320af93cbd3326fad6dc99143b4db182f",
+    "singlePathUnscopedNumericSupportedKm": 56.92970357405961,
+    "singlePathUnscopedNumericFraction": 0.027393255571979684,
+    "auditSha256": "c165dbed1b644ab1cf85c722b2a81e0b0bfdef464c1abb9d8803dda66bd8ed7f"
+  },
+  "hypothesis": "Short native junction parts can lack usable discrete midpoint progress. Continuous source-geometric progress and zero-original-sample connectors should increase conditional single-path numeric opportunity while preserving every original weighted sample and all original geometry thresholds. This is a new geometric-admissibility policy; changed candidate counts do not imply a source/physical/usable-limit/model improvement.",
+  "algorithm": "Reuse qualified original native node/metadata/geometry-seal/part adapter and25m/15degree original midpoint support. Nearby candidate parts come from complete source-span bin envelopes, including zero-sample parts. For full/start/end/both terminal intervals, project native endpoints and additional <=25mspaced native-curve probes onto continuous cumulative geometric Census span progress. Nearest positions farther than25m, non-adjacent progress ties, tangent>15degrees, nonmonotone curves, outside-original-window or closed native parts are rejected/retained. Incident source-vertex tangents at identical progress may use either matching incident tangent. Extra probes have no Census weight. True native endpoint IDs only; original-mask weighted80%search with64parts/4096states. All roles are geometry competitors; path role eligibility is retained separately from unreviewed car permission.",
+  "alternativeScope": "Every rejected/aligned native alternative and reason stays visible. Single-path status is conditional on the frozen continuous corridor/window/progress/terminal rules; it is not independent physical uniqueness or original source/usable-limit admission. Unknown speed/access/direction/grade/barriers/restrictions and source adequacy remain unqualified. No geographic exceptions.",
+  "capsAccounting": "All inherited input/node/raw/index/comparison/search caps plus<=20knearby parts and<=20knative curve probes pervariant,<=4Mprojection operation charges perarc. Capped results preserve every source record/weight; projectionComparisonsBound on a composite cap result is a conservative cap+1sentinel, not an observed operation count. Keep all capped/unknown outcomes; no retuning in this version.",
+  "acceptance": "16actual Linux controls/independent straight-source graph oracle and persisted zero-midpoint connector pass before this freeze. Require complete identical captured/source ledgers, all2469original records/85629positive weighted samples/21areas/classes, exact source weights, generic ID connectivity and independent saved-output/lineage/candidate-weight verification. Compare unqualified geometric opportunity to fixed V1; deterministic50review packet still needs physical/source/semantic review before any feasibility gate. Controller V2must also reproduce every saved complete-window output and the exact incomplete-window byte prefix from V1; independently confirm identical aggregate semantics and all original source/case ledgers. Partial V1is not a full coverage result.",
+  "resourceAccounting": "Prior reservation61,800,000,000 includes all earlier61.7GBreservation+80,056,320failed continuous V1 allocation+19,943,680buffer. New max512MiBowned+64MiBtmp remains below64GiBoverall.2GiBzero swap/oneCPU/1800sworker/1860shost/128MiBfile/networknone/ROinputs, withinexisting4GiBoverall perjob envelope. Source/case/algorithm thresholds unchanged. No PBF/fine/native/provider/appDB.",
+  "review": "First50single acquired-file geometric records by ascendingSHA256(snapshot/nativePathIdentity/window),arc tiebreak; every if fewer. Generate review packet only, no automatic physical/usable-match admission.",
+  "modelChanged": false,
+  "controllerCorrection": {
+    "ramBytes": 2147483648,
+    "swapBytes": 0,
+    "overallMemoryEnvelopeBytes": 4294967296,
+    "retention": "After writing a detailed result, retain only aggregate scalars; preserve exact output/candidate/weight semantics.19Linux checks include bounded-retention/summary-equivalence and byte-identical persisted geometry fixtures. No helper,matching,threshold,query,source or probe changes.",
+    "priorFailureRecipeSha256": "91538f9f64af5766d734c2ddf393497f045119b467a767bcecec319b20401d42",
+    "priorFailureClosedSha256": "371ee34b4d645055224c444453f5f78fd100440fee8d1decb36332a6dcc7fbab",
+    "priorFailureProofSha256": "d81ba315d7e0af29b391a6babaaa22c938c0f5dbd7ca56b5b2c6571b90e74d18",
+    "priorOutputEquality": {
+      "windows/origin-00/matches.jsonl": {
+        "bytes": 6099760,
+        "sha256": "2499120181d2ad22c479e97f65eb33794b1c54566209ca53b98a140f15167ba0",
+        "ignoredLargeAsset": true
+      },
+      "windows/origin-01/matches.jsonl": {
+        "bytes": 12990472,
+        "sha256": "1badd979829de808881ddd91c2ea08f1ca5b6f31be2afa33e431208832d6e654",
+        "ignoredLargeAsset": true
+      },
+      "windows/origin-02/matches.jsonl": {
+        "bytes": 9010555,
+        "sha256": "f14f02e57ca4401342a4090c0361040154ab6d783598d0b7cb5c0ac9f3bccb41",
+        "ignoredLargeAsset": true
+      },
+      "windows/origin-03/matches.jsonl": {
+        "bytes": 11285003,
+        "sha256": "ff3db5f6f3564d4207efe5563e898b7bf3e9cc9c1b3ccbbdf8c21e0dac0ef6ab",
+        "ignoredLargeAsset": true
+      },
+      "windows/origin-04/matches.jsonl": {
+        "bytes": 32467314,
+        "sha256": "9ff20d3e393283181f125cb1f1f98b543174b1f5655d5508c68fb8645869a9df",
+        "ignoredLargeAsset": true
+      }
+    },
+    "equalityCriterion": "First4completed window matches must be byte-identical; fifth-window file must begin with the exact prior closed119record byte prefix. Verify separately after closure, no failed-root replay."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "Fixed geometry feasibility hypothesis before country measurement",
+  "nativeSourceSha256": "f4d85f7fb0032451156caf3f5ebfe4c571c6fe238d61b4a6b3fce06cdb8858c4",
+  "testsSha256": "cbbd27496d732567241e65f8663eab6ab82e1b38e713557e149b279950e4f7d7",
+  "hostControls": 8,
+  "independent3dProjectionCases": 2000,
+  "sourceVertexToleranceMeters": 100,
+  "shortSpanFullGeometryLengthMeters": 1000,
+  "maxPointSegmentComparisons": 500000000,
+  "source": "Closed cost facts only; no PBF/native source constructor replay.",
+  "retainedCoreAndSpatialBytesMeasured": 129399391,
+  "forecastLayout": "Exact E7 signed modular coordinate varints in the larger of forward/reverse orientations, four bytes for two u16 prefix fractions per interior point, seven bytes per curved-span u24 arc key/u32 packet-end plus final u32, nineteen bytes per long-span u24 key/four i32 bounds. No measured packet, prefix or bounds data yet.",
+  "geographyReserveBytes": 8388608,
+  "javascriptReserveBytes": 4194304,
+  "retainedGateBytes": 162238546,
+  "qualificationScope": "Independent synthetic 3D geometry math and source-refusal controls, then native actual-country counts/self-checked discarded-point errors. Country byte sizes remain forecasts; no independent actual-country geometry audit, continuous-curve bound, shore/source-transfer, paid prefix, snap or app/ETA qualification.",
+  "modelChanged": false
+}

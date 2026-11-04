@@ -1,0 +1,43 @@
+{
+  "status": "Frozen independent output audit before national encoding",
+  "auditor": "scripts/coarse_osm_car_packed_audit_v1.py",
+  "auditorSha256": "8bc1b94e5dbbb0a3cecb0e080f8e6119b5aac372b4a96ca24f34017e341a6930",
+  "controlsSha256": "ff90065a294c2ab6530410798c1434a7655272d233ee069d8250d5e6251ae24d",
+  "driverSha256": "1c05a6bbb9ae173491b9a38d2cca0c6e2afcf5d2f611f12e7d31eeb81f81e7ad",
+  "sourceFacts": "data/coarse-quality/us-osm-car-cost-country-run-v1",
+  "outputToAudit": "data/coarse-quality/us-osm-car-packed-country-run-v1",
+  "expectedDimensions": [
+    42993567,
+    5731903,
+    4227238,
+    9837326,
+    9620680,
+    409178
+  ],
+  "checks": "Every selected anchor coordinate/flag, CSR degree, directed cost, exact physical reverse identity and complete forbidden turn table, using independent dense typed arrays and two raw-fact passes. No native formatter/producer/PBF/policy helper/query import. No ordinary Python national node map.",
+  "runCaps": {
+    "memoryBytes": 4294967296,
+    "tmpBytes": 268435456,
+    "fileBytes": 67108864,
+    "ownedBytes": {
+      "controls": 67108864,
+      "run": 268435456,
+      "audit": 67108864
+    },
+    "workerSeconds": {
+      "controls": 180,
+      "run": 1800,
+      "audit": 1800
+    },
+    "hostSeconds": {
+      "controls": 240,
+      "run": 1860,
+      "audit": 1860
+    }
+  },
+  "retainedBaseForecast": 126506919,
+  "costOverflowBudget": 2097152,
+  "reverseOverflowBudget": 524288,
+  "forbiddenPairsBudget": 6291456,
+  "snappingGeographyRuntimeAndAppFitRemainUnqualified": true
+}

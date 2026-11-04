@@ -1,0 +1,108 @@
+{
+  "phase": "native_continuous_geometry_v2",
+  "stage": "controls",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-continuous-match-controls-v2",
+  "caps": {
+    "memoryBytes": 2147483648,
+    "tmpBytes": 67108864,
+    "fileBytes": 134217728,
+    "ownedBytes": 536870912,
+    "workerSeconds": 1800,
+    "hostSeconds": 1860
+  },
+  "dataCaps": {
+    "nodeCanonicalBytes": 1048576,
+    "geometryReferences": 4000000,
+    "inputBytes": 1073741824,
+    "rowBytes": 8388608,
+    "records": 2000000,
+    "windowWays": 100000,
+    "windowReferences": 1000000,
+    "parts": 300000,
+    "indexSegments": 1000000,
+    "binEntries": 8000000,
+    "comparisons": 50000000,
+    "arcSamples": 20000,
+    "sampleMemberships": 2000000,
+    "projectionComparisons": 4000000,
+    "searchRows": 64,
+    "searchStates": 4096,
+    "nearbyParts": 20000,
+    "curveSamples": 20000
+  },
+  "mounts": {
+    "scripts/coarse_osm_continuous_controller_v2_test.py": "/code/coarse_osm_continuous_controller_v2_test.py",
+    "scripts/coarse_osm_continuous_match_v1.py": "/code/coarse_osm_continuous_match_v1.py",
+    "scripts/coarse_osm_continuous_match_v1_test.py": "/code/coarse_osm_continuous_match_v1_test.py",
+    "scripts/run_osm_continuous_match_v2.py": "/code/run_osm_continuous_match_v2.py",
+    "scripts/coarse_osm_match_v1.py": "/code/coarse_osm_match_v1.py",
+    "scripts/coarse_osm_match_v1_test.py": "/code/coarse_osm_match_v1_test.py",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "/code/coarse_osm_attribute_inventory_v1.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_path_features.py": "/code/coarse_path_features.py",
+    "scripts/coarse_timing_chains.py": "/code/coarse_timing_chains.py",
+    "scripts/coarse_timing_fragments.py": "/code/coarse_timing_fragments.py",
+    "scripts/coarse_timing_fragments_audit.py": "/code/coarse_timing_fragments_audit.py",
+    "scripts/coarse_timing_compatibility_audit.py": "/code/coarse_timing_compatibility_audit.py",
+    "scripts/analyze_timing_cache.py": "/code/analyze_timing_cache.py",
+    "scripts/analyze_timing_compatibility.py": "/code/analyze_timing_compatibility.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "scripts/coarse_timing_parquet.py": "/code/coarse_timing_parquet.py",
+    "scripts/coarse_backbone_paths.py": "/code/coarse_backbone_paths.py",
+    "scripts/coarse_backbone_codec.py": "/code/coarse_backbone_codec.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1"
+  },
+  "inputs": {
+    "scripts/coarse_osm_continuous_controller_v2_test.py": "f5a69531349b395ada6c6ec911efdc01b40c1cc17feeb621acb114ba322d13d1",
+    "scripts/coarse_osm_continuous_match_v1.py": "37700dc97f5af86d22456a9e95a6d1c866160e07ce69c9badaa2b583ba092c30",
+    "scripts/coarse_osm_continuous_match_v1_test.py": "4e0e2359d3481c9ccf72e71966214df4054cf92fb0b745b856156d0aa257c5d3",
+    "scripts/run_osm_continuous_match_v2.py": "b777c75b7330c1a82123dc64f3d36920456ff812ea4717f25f82f062c182df8b",
+    "scripts/coarse_osm_match_v1.py": "8142d31f33ca556fc6af137aa3b71600f675d41965b4aa8880e5d500478ebb4a",
+    "scripts/coarse_osm_match_v1_test.py": "0060557cd02a4f124888780f35a1f8a8fdb6e2115e2f6be52f5fc0e2eb1ebc4a",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "scripts/coarse_timing_chains.py": "e2b3651c1ee402232a2502941d43430175fca674066b87e7a82253048fbf754f",
+    "scripts/coarse_timing_fragments.py": "98a0fa4bef9a694e507d9f114691811ad03a2050578bae6664083ca555c9d8ec",
+    "scripts/coarse_timing_fragments_audit.py": "6b9b87d6b5cfeeef8925119bad9842a30e82074fa65d1e0456d7b07c195198bf",
+    "scripts/coarse_timing_compatibility_audit.py": "b089d4777aa556490e4c41b4136f577d5bc846b8e54dc076749fb2586a023112",
+    "scripts/analyze_timing_cache.py": "912014f4b530821d80b43d3e38d10e6969d00decd28a7ebaade1c633598fefa8",
+    "scripts/analyze_timing_compatibility.py": "227bca34f3640c74f131ddb934b9be23e02c3aa3c7c6a4526fce906cc82919e7",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be"
+  },
+  "sourceSnapshotUtc": "2026-10-25T21:21:21Z",
+  "windows": [
+    {
+      "id": "a",
+      "bbox": [
+        0,
+        -0.001,
+        0.01,
+        0.001
+      ]
+    }
+  ],
+  "retainedReservationBytes": 61800000000,
+  "overallEnvelopeBytes": 68719476736,
+  "correction": "Controller-only V2:2GiB hard RAM/zero swap within existing4GiBoverall envelope; release already-written detailed results by retaining only aggregate scalars. Same used V1matching helper/adapter/thresholds/sampling/probes/caps/cases.16matching controls+3summary equivalence/bounded-retention/capped-outcome controls. Persisted main and zero-midpoint fixtures must match V1bytes exactly.",
+  "sourceHelperPins": {
+    "coarse_osm_continuous_match_v1": "37700dc97f5af86d22456a9e95a6d1c866160e07ce69c9badaa2b583ba092c30",
+    "coarse_osm_match_v1": "8142d31f33ca556fc6af137aa3b71600f675d41965b4aa8880e5d500478ebb4a",
+    "coarse_osm_attribute_inventory_v1": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2"
+  },
+  "priorFailure": {
+    "recipeSha256": "91538f9f64af5766d734c2ddf393497f045119b467a767bcecec319b20401d42",
+    "closedSha256": "371ee34b4d645055224c444453f5f78fd100440fee8d1decb36332a6dcc7fbab",
+    "proofSha256": "d81ba315d7e0af29b391a6babaaa22c938c0f5dbd7ca56b5b2c6571b90e74d18",
+    "status": "1GiB OOM;complete4windows/partialfifth, no full-run coverage claim"
+  },
+  "expectedControlReportSha256": "3d1b41c57c74fa1bea57d1377d62bc92ab25f77962bd9e233ee889faef1ee1fe",
+  "modelChanged": false
+}

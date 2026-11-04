@@ -1,0 +1,65 @@
+{
+  "root": "data/coarse-quality/us-osm-car-paid-geometry-codec-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 2671,
+      "sha256": "949a47758807d7ae4ef8fc834d1e6aa87fcd221ac2f36f250ba9da006d8fcaa1",
+      "ignoredLargeAsset": false
+    },
+    "fields/curve-keys.u24.gz": {
+      "bytes": 220342,
+      "sha256": "5fe72610fb80d8dcc65e92ce8d9ab8b1cc4357739316be4873169d81af58cbe0",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-offsets.u32.gz": {
+      "bytes": 149301,
+      "sha256": "f863a8610bb1f5eacd6baa4155be0c5be2406d3a9a22aff7e695886e66d47641",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-packets.u8.gz": {
+      "bytes": 6490749,
+      "sha256": "4c5ab01fe69e4c0059a62a2cb99552fafcc683278f84ef60e5949ba605ac672f",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-keys.u24.gz": {
+      "bytes": 332087,
+      "sha256": "16453c2cabdb855046d109cf5838d88c2541cb42a598e7ef1e1951e004e6db1e",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-lengths.u16.gz": {
+      "bytes": 703338,
+      "sha256": "63a986361b5b3a172c34c31761dce15d2105d46f162861044fc5327c99dd5be3",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-keys.u24.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-units.u32.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "manifest.json": {
+      "bytes": 2636,
+      "sha256": "7ff38ea50c6d8c758015ab04caae691ca97bd8710a4ff79d3b3b40e571023e29",
+      "ignoredLargeAsset": false
+    },
+    "report.json": {
+      "bytes": 617,
+      "sha256": "f97e5278af690600631ba96819cd771159c1e21ac82a36597249df201a6b7ad7",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 7901781,
+    "allocatedBytes": 7925760,
+    "entries": 12,
+    "conservativeAllocatedBytes": 9072640
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "host_packed_codec_all_bytes_roundtripped_independent_audit_pending",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

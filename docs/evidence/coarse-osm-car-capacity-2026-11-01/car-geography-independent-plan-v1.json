@@ -1,0 +1,15 @@
+{
+  "source": "src/server/data/coarse-grid-v9.json",
+  "asset": "data/coarse-quality/us-osm-car-geography-v1",
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/car-geography-independent-v1.json",
+  "manifestSha256": "d9f6b9b6f899761254c2a47097ec3d2d16653c5b293001780a09f3d9e0d1161f",
+  "bindings": {
+    "scripts/audit_osm_car_geography_v1.ts": "9ece1b8ba2d8685c0d9f6ab2f943e4ae55a88ffd1bd9d9dce6fa7885f768b696",
+    "scripts/coarse_osm_origin_geography_v1.ts": "0080956fb3ee8089d66718361aadc9b3ca4d7b387b98ff67a1f363beb08d8987",
+    "scripts/coarse_osm_origin_connections_v1.ts": "f11dfa16b3d04c178b8e2bc81489d363922722e0ceb6088a03bdc85dcc93e7dd",
+    "src/server/coarse-geography.ts": "29aa636f79fdb158203217feec31ef5a387b0f0b268650c0c7c68c3b6e0b286d",
+    "src/server/coarse-contours.ts": "1bc037eb86966320f480558cf223ce3b72fb7808d11978761345fe5006d57a39",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/car-geography-closed-v1.json": "9f881d5b7e551e2a4b70932d7ee7260ba1cf0d5a99704c19b36f1d7188b1b1a7"
+  },
+  "scope": "Independent Node JSON/gzip parser checks every original Python-extracted geography coordinate from pinned app data; no producer, road query/PBF or app/model change."
+}

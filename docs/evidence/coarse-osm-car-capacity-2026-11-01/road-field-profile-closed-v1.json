@@ -1,0 +1,25 @@
+{
+  "root": "data/coarse-quality/us-osm-car-road-field-profile-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 42932,
+      "sha256": "1aab0838555d20808aa571113a3396dec7703f5ba7f2b5f33a3744e4dc472658",
+      "ignoredLargeAsset": false
+    },
+    "failure.json": {
+      "bytes": 114,
+      "sha256": "3ae3aa79d9b6568f7a9a5241a4c1303c70306c6f40841c9b41a7eef4976946e8",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 43046,
+    "allocatedBytes": 49152,
+    "entries": 3,
+    "conservativeAllocatedBytes": 1122304
+  },
+  "terminalRecord": "failure.json",
+  "terminalStatus": "AssertionError [ERR_ASSERTION]: No retained field backing buffers between phases",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

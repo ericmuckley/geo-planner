@@ -1,0 +1,29 @@
+{
+  "id": "all-excluded-source-water-bounds-v1",
+  "date": "2026-11-03",
+  "scope": "Qualify2 synthetic excluded-source/descendant/missing-geometry controls alongside43 prior controls, then separately freeze full saved-data exclusion/245-point diagnostic. No source PBF/mask/model/provider/DB/app operation.",
+  "code": {
+    "scripts/analyze_osm_water_excluded_bounds_v1.py": "c8bc1282c9eb9e30b70de52b029b368b91c3504a7abc41905161e75eeb1c44c8",
+    "scripts/analyze_osm_water_excluded_bounds_v1_test.py": "0e0de37cdfbb4281f643048782c827610c225bdf09ab37c1f9d39374e10db95b",
+    "scripts/run_osm_water_excluded_bounds_v1.py": "68b91a89b89539deaeaaf6a5e5e1c9427046ad46fb26c2eb76dfc5c72054a9e5",
+    "scripts/close_osm_water_excluded_bounds_v1.py": "1c503b20f12bd606129e6162e1b97f02228d89e874acd1bc6e27c6b89d0ee8c2"
+  },
+  "priorProof": "verify_water_points_run_v1.py",
+  "priorProofSha256": "6c0571f528a03ff05dd62cbf540460f7d8bb3ed1315f638febdc09a2d42c3cf4",
+  "policy": "Every invalid standalone way and excluded root includes all available member-way vertices recursively, without roles/geometry repair. Every source-missing member stays explicit/spatially unknown. All245 saved points checked against conservative known-source bounds. Bounds are not true polygons or proof of land/coverage; no location exceptions.",
+  "previousClosedRoots": 145,
+  "previousClosedAllocationBytes": 5293420544,
+  "retainedBytes": 77309411328,
+  "metadataReserveBytes": 104857600,
+  "limits": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "tmpBytes": 268435456,
+    "ownedBytes": 67108864,
+    "fileBytes": 67108864,
+    "workerSeconds": 900,
+    "hostSeconds": 960
+  },
+  "geometryOrMaskChanged": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "host_launch_stopped_before_output_or_worker",
+  "errorType": "ModuleNotFoundError",
+  "missingModule": "import_roads",
+  "cause": "Host preflight now imports the typed country helper, whose frozen pure-policy reference also needs routing/ on PYTHONPATH. Existing generic driver historically inserted scripts/ only.",
+  "ownedOutputRootExists": false,
+  "dockerWorkerCreated": false,
+  "countrySourceReads": 0,
+  "codeOrRecipeChanged": false,
+  "correction": "Use the existing documented PYTHONPATH=scripts:routing launcher environment; do not edit any sealed source/helper/recipe."
+}

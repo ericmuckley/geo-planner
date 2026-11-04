@@ -1,0 +1,36 @@
+{
+  "id": "osm-water-lossless-way-reference-capture-v1",
+  "date": "2026-11-03",
+  "objective": "Capture every available water-union way with exact original normalized GPF metadata/refs, deduplicate native node IDs, and independently audit every saved field/ref/index value before coordinates.",
+  "source": "Exact original cached source/full guard/count/semantic identity; all40 water and20 union counters reproduce. Prior source union2829193 ways/104806243refs/1197794328 GPF body bytes. All458255 source-derived member IDs,17 missing ways/one missing nested relation explicit. No geographic/query filtering.",
+  "retained": "16MiB raw deterministic gzip shards for exact way GPF bytes and sorted unique little-endian u64 native node IDs. No coordinates/rings/mask.",
+  "caps": {
+    "memoryBytes": 4294967296,
+    "swapBytes": 0,
+    "cpus": 2,
+    "referenceOccurrenceCapacity": 150000000,
+    "frozenActualReferences": 104806243,
+    "producerReferenceArrayBytes": 838449944,
+    "rawWayBytesCap": 2147483648,
+    "rawShardBytes": 16777216,
+    "fileBytes": 67108864,
+    "plannedOwnedBytes": 872415232,
+    "plannedCompressedSoftBytes": 838860800,
+    "tmpBytes": 268435456,
+    "workerSeconds": 2700,
+    "hostSeconds": 3000,
+    "overallRetainedBytes": 68719476736
+  },
+  "acceptance": [
+    "62 actual Linux controls/no skips:42 unchanged source/water/union plus12 new native reference/audit tests and8 shard-store tests, including100 generated exact streams/unique sets and actual tiny PBF.",
+    "Exact complete source/semantic/full pre-post hashes/stat/counts/EOF plus all prior40 water/20 union counters, exact1209111100 selected rawGPF bytes.",
+    "Release all source/producer node arrays before independent audit; independently decode all selected GPF fields/reference IDs, rebuild/sort all references via integer-only helper and compare every saved unique node ID and all byte seals.",
+    "Bounded byte/shard/closed-memory/deadline/field/callback/source/lifecycle/corruption failures stop with evidence, never replay old producers or overwrite data.",
+    "Prior64500000000 +every closed allocation +104857600 metadata scratch +active owned/tmp below64GiB; both worker/client0/noOOM/zero swap and exact cleanup/absence/close."
+  ],
+  "next": "Use actual unique node count/compressed sizes and gaps to freeze separately qualified complete source coordinate closure; only then native-ID ring/role/hole/source checks and geographic candidate policy.",
+  "deferred": [
+    "No coordinates/polygons/shoreline repair/ETA/app/model activation.",
+    "No acquisition/provider/DB/env/dependency/deployment or timing sweep."
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "phase": "raw_attribute_inventory_v1",
+  "stage": "run",
+  "image": "sha256:1618ba836b700c8bf3daa2637e0949a323724bfca49b751a4ff4614295da9402",
+  "output": "data/coarse-quality/us-osm-attribute-inventory-run-v1",
+  "caps": {
+    "memoryBytes": 536870912,
+    "tmpBytes": 33554432,
+    "fileBytes": 33554432,
+    "ownedBytes": 4194304,
+    "workerSeconds": 300,
+    "hostSeconds": 360
+  },
+  "mounts": {
+    "scripts/run_osm_attribute_inventory_v1.py": "/code/run_osm_attribute_inventory_v1.py",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "/code/coarse_osm_attribute_inventory_v1.py",
+    "scripts/coarse_osm_attribute_inventory_v1_test.py": "/code/coarse_osm_attribute_inventory_v1_test.py",
+    "scripts/coarse_osm_attributes_v1.py": "/code/coarse_osm_attributes_v1.py",
+    "scripts/coarse_osm_records.py": "/code/coarse_osm_records.py",
+    "scripts/coarse_timing_input.py": "/code/coarse_timing_input.py",
+    "scripts/coarse_timing_parquet.py": "/code/coarse_timing_parquet.py",
+    "scripts/coarse_backbone_paths.py": "/code/coarse_backbone_paths.py",
+    "scripts/coarse_backbone_codec.py": "/code/coarse_backbone_codec.py",
+    "scripts/coarse_path_features.py": "/code/coarse_path_features.py",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "/runtime/libexpat.so.1",
+    "data/coarse-quality/us-osm-disk-capture-run-v1/extract/elements.jsonl": "/inputs/captured.jsonl"
+  },
+  "inputs": {
+    "scripts/run_osm_attribute_inventory_v1.py": "3c6941a40dd2d6f20c94bafa9396b5b9e03e5e1fc37d1a5395d26bd380b364da",
+    "scripts/coarse_osm_attribute_inventory_v1.py": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2",
+    "scripts/coarse_osm_attribute_inventory_v1_test.py": "6ce149d55f67f3f965d7568592070b8be0a6c787b82e8f6f4e572b348ca3e036",
+    "scripts/coarse_osm_attributes_v1.py": "a8a4de7b07104aff8f148b530f9b77e69a9db57c4d37db398de0865d03aaab7f",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "data/coarse-quality/us-osm-tools-v3/prepare/runtime/libexpat.so.1": "96c872449f41ac16cf6c974ea93e053713b41ea103165cb2c99bb0ebdc2e94be",
+    "data/coarse-quality/us-osm-disk-capture-run-v1/extract/elements.jsonl": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4"
+  },
+  "inventoryCaps": {
+    "records": 2000000,
+    "occurrences": 4000000,
+    "inputBytes": 1073741824,
+    "recordBytes": 8388608,
+    "wayReferences": 4000000,
+    "nodeCanonicalBytes": 268435456
+  },
+  "sourceSnapshotUtc": "2026-10-25T21:21:21Z",
+  "windows": [
+    {
+      "id": "origin-00",
+      "bbox": [
+        -123.8813,
+        46.1379,
+        -123.7813,
+        46.237899999999996
+      ]
+    },
+    {
+      "id": "origin-01",
+      "bbox": [
+        -119.7482,
+        34.3708,
+        -119.6482,
+        34.4708
+      ]
+    },
+    {
+      "id": "origin-02",
+      "bbox": [
+        -119.279,
+        34.2246,
+        -119.179,
+        34.3246
+      ]
+    },
+    {
+      "id": "origin-03",
+      "bbox": [
+        -119.06869999999999,
+        35.3233,
+        -118.9687,
+        35.4233
+      ]
+    },
+    {
+      "id": "origin-04",
+      "bbox": [
+        -118.2937,
+        34.0022,
+        -118.1937,
+        34.102199999999996
+      ]
+    },
+    {
+      "id": "origin-05",
+      "bbox": [
+        -117.66199999999999,
+        33.376900000000006,
+        -117.562,
+        33.4769
+      ]
+    },
+    {
+      "id": "origin-06",
+      "bbox": [
+        -117.2111,
+        32.6657,
+        -117.11110000000001,
+        32.765699999999995
+      ]
+    },
+    {
+      "id": "origin-07",
+      "bbox": [
+        -116.7689,
+        33.690000000000005,
+        -116.66890000000001,
+        33.79
+      ]
+    },
+    {
+      "id": "origin-08",
+      "bbox": [
+        -116.652,
+        33.0287,
+        -116.552,
+        33.128699999999995
+      ]
+    },
+    {
+      "id": "origin-09",
+      "bbox": [
+        -116.5953,
+        33.780300000000004,
+        -116.4953,
+        33.8803
+      ]
+    },
+    {
+      "id": "origin-10",
+      "bbox": [
+        -116.425,
+        33.2059,
+        -116.325,
+        33.305899999999994
+      ]
+    },
+    {
+      "id": "origin-11",
+      "bbox": [
+        -116.3631,
+        34.084700000000005,
+        -116.26310000000001,
+        34.1847
+      ]
+    },
+    {
+      "id": "origin-12",
+      "bbox": [
+        -116.0061,
+        33.2486,
+        -115.90610000000001,
+        33.3486
+      ]
+    },
+    {
+      "id": "origin-13",
+      "bbox": [
+        -115.77969999999999,
+        33.3003,
+        -115.6797,
+        33.400299999999994
+      ]
+    },
+    {
+      "id": "origin-14",
+      "bbox": [
+        -114.044,
+        46.822100000000006,
+        -113.944,
+        46.9221
+      ]
+    },
+    {
+      "id": "origin-15",
+      "bbox": [
+        -99.3768,
+        38.8292,
+        -99.27680000000001,
+        38.929199999999994
+      ]
+    },
+    {
+      "id": "origin-16",
+      "bbox": [
+        -92.1505,
+        46.736700000000006,
+        -92.0505,
+        46.8367
+      ]
+    },
+    {
+      "id": "origin-17",
+      "bbox": [
+        -83.0488,
+        39.9112,
+        -82.9488,
+        40.011199999999995
+      ]
+    },
+    {
+      "id": "origin-18",
+      "bbox": [
+        -82.6015,
+        35.545100000000005,
+        -82.50150000000001,
+        35.6451
+      ]
+    },
+    {
+      "id": "origin-19",
+      "bbox": [
+        -81.1412,
+        32.0309,
+        -81.0412,
+        32.1309
+      ]
+    },
+    {
+      "id": "origin-20",
+      "bbox": [
+        -70.3068,
+        43.609100000000005,
+        -70.2068,
+        43.7091
+      ]
+    }
+  ],
+  "expectedTypes": {
+    "node": 1123919,
+    "relation": 4900,
+    "way": 239253
+  },
+  "expectedOccurrences": 1368072,
+  "metadataOnly": true,
+  "scope": "All records/ways/windows from the qualified capture. Raw base-speed/unit/scope/access/direction presence; spherical clipped-polyline length with unioned overlaps. No reviewed car permission, usable limit, matching, source completeness or timing-model admission.",
+  "controllerAdmission": {
+    "qualified": true,
+    "tests": 8,
+    "recipeSha256": "4892fd1fe53b154b2727431421d5accd1e99b84aeaa53f05bf333f20d0aaf0cf",
+    "producers": {
+      "scripts/coarse_osm_attribute_inventory_v1.py": "c70d9eb5c87b47f73f9d13c85269e3da4e19d8d51d4f42f8ab9edee4dd4614f2",
+      "scripts/coarse_osm_attribute_inventory_v1_test.py": "6ce149d55f67f3f965d7568592070b8be0a6c787b82e8f6f4e572b348ca3e036",
+      "scripts/run_osm_attribute_inventory_v1.py": "3c6941a40dd2d6f20c94bafa9396b5b9e03e5e1fc37d1a5395d26bd380b364da"
+    }
+  },
+  "captureAdmission": {
+    "qualified": true,
+    "closedSha256": "43f54f1728d42b8dea6dfae99b8ca3892df66b39018cad3f8a362893bc2b940d",
+    "outputSha256": "efc36dc058b198711cc2666a751c9fd60b52d37902efbb22e1cba8b5f30f91f4"
+  },
+  "priorProofs": {
+    "docs/evidence/coarse-osm-extraction-2026-10-30/verify_disk_capture_run_v1.py": "47ee3638350737ccc67e17d037bec9bcb22daff49e65a528ca24751f4c30d4a3",
+    "docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_controls_v2.py": "2183b73bd003a6eba04f73a6dc67fbc8ae9ae9b3ab4d00fcb08a38e2a48cdb41",
+    "docs/evidence/coarse-osm-extraction-2026-10-30/verify_attribute_inventory_controls_v1.py": "0fa365f7b2ad193828fc74babc53ec123651ddb395d2ec5acdcd27744502dee1"
+  }
+}

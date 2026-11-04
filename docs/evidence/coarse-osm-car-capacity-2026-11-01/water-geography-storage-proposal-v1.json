@@ -1,0 +1,47 @@
+{
+  "id": "compact-water-geography-storage-proposal-v1",
+  "date": "2026-11-03",
+  "state": "Proposed synthetic offline storage prototype; no implementation, country producer, geography/model policy or app admission.",
+  "basisProof": "verify_water_excluded_bounds_run_v1.py",
+  "basisProofSha256": "ea284641e99e31d790ec8c4b32adba89d0d9a20d6a1773a799703fcc008a3dce",
+  "sourceGeometryCompressedBytes": 908221057,
+  "reason": "Complete raw water geometry cannot fit the existing70MB app function budget. Preserve source and excluded-feature evidence offline; qualify compact derived storage before proposing one generic mask policy.",
+  "proposedFormat": {
+    "sourceBoundsDegrees": [
+      -125,
+      24,
+      -66,
+      50
+    ],
+    "stepDegrees": 0.005,
+    "columns": 11800,
+    "rows": 5200,
+    "cells": 61360000,
+    "bytesPerBitPlane": 7670000,
+    "planes": [
+      "Per-cell center inside the union of accepted source water, with holes/islands/overlaps retained",
+      "Conservative source-boundary/excluded-geometry cell uncertainty, without claiming an incomplete feature is spatially bounded"
+    ],
+    "totalRawBitPlaneBytes": 15340000,
+    "policy": "Data prototype only. Runtime interpretation of boundaries/excluded/incomplete source geometry and unchanged country/coast fallback must be separately specified and physically audited before any route query. Do not infer land from no accepted water or silently discard uncertainty."
+  },
+  "resourceForecast": {
+    "existingMeasuredSettledCandidateArraysBytes": 141652517,
+    "additionalRawBitPlaneBytes": 15340000,
+    "forecastSumBytes": 156992517,
+    "retainedGateBytes": 162238546,
+    "forecastRetainedMarginBytes": 5246029,
+    "existingCompressedRoutingAndGeometryBytes": 53947148,
+    "plusRawPlanesBeforeGeographyJavaScriptOrPackagingBytes": 69287148,
+    "functionGateBytes": 70000000,
+    "interpretation": "Backing arithmetic only, not app-retained memory/function-size/load/runtime proof. Compressed mask bytes/other geography/JavaScript/working buffers and full packaged first estimate remain unmeasured."
+  },
+  "syntheticAcceptance": [
+    "Independent exact small-grid oracle for polygons/holes/islands/disjoint/overlapping feature unions; no hole subtracts another feature water",
+    "Thin geometry, grid-line/corner contact, negatives/clipping, empty/full cells and explicit boundary/uncertainty flags",
+    "Truncation/invalid source counts/caps/chunk boundaries, no place/query exceptions or empirical tolerance sweep",
+    "Exactly declared typed bit buffers, bounded staging/release, binary/gzip roundtrip and independent all-byte comparison"
+  ],
+  "countryAdmission": "Only after synthetic qualification, freeze a new separately versioned recipe bound to complete saved geometry/exclusion reports and every shard. No PBF replay/source acquisition/provider/DB operation. Preserve every failure. Recompute every closed allocation/prior64.5GB/100MiB scratch/active owned+tmp under72GiB.",
+  "followingGate": "One generic geography policy/source/physical/connector test freeze, then all83/35 routing cases/166 witnesses/shading/accuracy/package/retained/load/software/API/shared-camera gates unchanged. No app switch before all pass."
+}

@@ -1,0 +1,165 @@
+{
+  "origin": [
+    -81.0912,
+    32.0809
+  ],
+  "diagnostic": {
+    "timings": {
+      "savannah-ga-360-inside": {
+        "ticks": 176130,
+        "kind": "road-foot",
+        "roadTicks": 176130,
+        "localGridTicks": 176609,
+        "localWitness": {
+          "terminalTicks": 513,
+          "edgeSeconds": 0,
+          "seedSeconds": 22012,
+          "seedCell": 723306,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "savannah-ga-360-outside": {
+        "ticks": 175713,
+        "kind": "road-foot",
+        "roadTicks": 175713,
+        "localGridTicks": 176609,
+        "localWitness": {
+          "terminalTicks": 457,
+          "edgeSeconds": 0,
+          "seedSeconds": 22019,
+          "seedCell": 752034,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "savannah-ga-600-inside": {
+        "ticks": 281448,
+        "kind": "road-foot",
+        "roadTicks": 281448,
+        "localGridTicks": 282633,
+        "localWitness": {
+          "terminalTicks": 857,
+          "edgeSeconds": 168,
+          "seedSeconds": 35054,
+          "seedCell": 1907528,
+          "seedKind": 8,
+          "steps": 1
+        }
+      },
+      "savannah-ga-600-outside": {
+        "ticks": 307818,
+        "kind": "road-foot",
+        "roadTicks": 307818,
+        "localGridTicks": 308313,
+        "localWitness": {
+          "terminalTicks": 329,
+          "edgeSeconds": 0,
+          "seedSeconds": 38498,
+          "seedCell": 2069509,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "savannah-ga-720-inside": {
+        "ticks": 364126,
+        "kind": "road-foot",
+        "roadTicks": 364126,
+        "localGridTicks": 364438,
+        "localWitness": {
+          "terminalTicks": 566,
+          "edgeSeconds": 0,
+          "seedSeconds": 45484,
+          "seedCell": 2008921,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "savannah-ga-720-outside": {
+        "ticks": 374032,
+        "kind": "local-grid",
+        "roadTicks": 375904,
+        "localGridTicks": 374032,
+        "localWitness": {
+          "terminalTicks": 608,
+          "edgeSeconds": 163,
+          "seedSeconds": 46515,
+          "seedCell": 2145511,
+          "seedKind": 8,
+          "steps": 1
+        }
+      }
+    },
+    "frame": {
+      "west": -96859524,
+      "south": 24468930,
+      "step": 13371,
+      "width": 1797,
+      "height": 1391
+    },
+    "stats": {
+      "envelopeMs": 967.6367919999975,
+      "maskMs": 851.3480840000047,
+      "seedMs": 3578.6222909999997,
+      "fillMs": 234.5092089999962,
+      "contourMs": 53.9377500000046,
+      "displayMs": 5686.260332999998,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 7633585,
+      "activeSpans": 2795900,
+      "settles": 1178745,
+      "maximumHeapEntries": 532149,
+      "selectedCells": 1182493,
+      "localCells": 1178745,
+      "roadOnlyCells": 3748,
+      "edges": 27322,
+      "rings": 382,
+      "vertices": 17610,
+      "jsonBytes": 402131,
+      "retries": []
+    },
+    "phaseMs": 6458.330416999997,
+    "output": {
+      "filename": "origin-08-900.geojson",
+      "bytes": 402131,
+      "sha256": "fd1a868f8e99302764bc4b62eb6e1dc39bf12938d03b83677e25765e54b671ab"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "savannah-ga-360.geojson",
+        "bytes": 300632,
+        "sha256": "82ff8a1e81553ddad2de20b61e765adebca2235b91bac428f7f95f06fbeccf05"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "savannah-ga-600.geojson",
+        "bytes": 405691,
+        "sha256": "d040065ddc393a026612481a90cc91f1ad360a24b8bc443ea5400c32828b8b30"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "savannah-ga-720.geojson",
+        "bytes": 401844,
+        "sha256": "af1a67e14b53f1e38839a8f2ac595d5f317ef56c73a62be1a6288806d9582d58"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 339640320,
+    "heapTotal": 82673664,
+    "heapUsed": 14293568,
+    "external": 143770183,
+    "arrayBuffers": 141231417
+  }
+}

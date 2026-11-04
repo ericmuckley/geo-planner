@@ -1,0 +1,18 @@
+{
+  "attempts": [
+    {
+      "kind": "wrong CLI recipe SHA rejected before inputs",
+      "sourceOrGraphReads": 0,
+      "outputCreated": false
+    },
+    {
+      "kind": "all 82 cost assertions passed before auxiliary internal-endpoint count assertion failed",
+      "expectedOldWindowAnchorEndpoints": 16,
+      "actualSourceDefinedAnchorEndpoints": 20,
+      "outputCreated": false
+    }
+  ],
+  "interpretation": "The generic constructor removes 6,791 validation-window/outside-area anchors. Four additional query endpoints become paid internal points; no endpoint/query/cost/permission is replaced. V2 changes only this captured validation count and output filename; the reader, search, formatter, graph and original expected costs stay frozen.",
+  "checkerV1Sha256": "92fccba46dd01ca05616aa26f75f73f97278273da26d23ed7a15029d522c3d85",
+  "replacementChecker": "scripts/check_osm_packed_search_v2.ts"
+}

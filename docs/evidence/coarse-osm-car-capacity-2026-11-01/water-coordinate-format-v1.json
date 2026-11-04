@@ -1,0 +1,45 @@
+{
+  "id": "water-exact-e7-coordinate-format-v1",
+  "date": "2026-11-03",
+  "scope": "Synthetic streaming format/oracle only. No national coordinates, source scan, node-index read, native coordinate worker, geometry, mask, ETA or application change.",
+  "format": {
+    "magicHex": "57585931",
+    "rowFields": [
+      "positive unsigned-varint native-ID delta",
+      "unsigned-varint zigzag E7-X delta",
+      "unsigned-varint zigzag E7-Y delta"
+    ],
+    "nativeIds": "Strictly increasing positive signed63-bit native IDs.",
+    "coordinates": "Existing normalized source GPF integer E7 X/Y, no additional rounding/precision change; X in[-1800000000,1800000000], Y in[-900000000,900000000].",
+    "canonicalTypedRow": "little-endian <Qii native ID/X/Y,16 bytes, suitable for complete source-byte shadow SHA comparison.",
+    "missingIds": "Separate explicit sorted native-ID stream; merge with present rows must partition the complete requested-ID sequence. Real(0,0) coordinates are not missing sentinels.",
+    "streamGuards": "Canonical bounded u64 varints, exact magic/field/EOF state, positive ID deltas, coordinate bounds; chunk boundaries may split any field."
+  },
+  "bindings": {
+    "scripts/coarse_osm_water_coordinate_codec_v1.py": "1d224a446feba10eea2f649b7dcc47ad6d9201eda5bbe2951e316e7fc81c2cee",
+    "scripts/coarse_osm_water_coordinate_codec_v1_test.py": "3d663d68110bdbc6c3a177d02d6f1fcd8c85b82c26b614923718a6a5468c82c8",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182"
+  },
+  "qualification": {
+    "environment": "Host Python only",
+    "tests": 7,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "generatedStreams": 100,
+    "chunkWidthsTested": [
+      1,
+      2,
+      3,
+      7,
+      17,
+      31
+    ],
+    "knownWireAndTypedBytes": true,
+    "extremeIdsAndCoordinates": true,
+    "corruptionTruncationOverflowCanonicalAndPartitionGuards": true
+  },
+  "next": "After complete reference capture/audit, use measured unique-node/compressed dimensions to qualify a bounded native source-coordinate encoder and independent decoder/partition/source-shadow audit; freeze separately before any national coordinate allocation.",
+  "nativePerformanceNationalCoverageOrAppAdmission": false
+}

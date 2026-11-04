@@ -1,0 +1,166 @@
+{
+  "origin": [
+    -99.3268,
+    38.8792
+  ],
+  "diagnostic": {
+    "timings": {
+      "hays-ks-360-inside": {
+        "ticks": 165115,
+        "kind": "road-foot",
+        "roadTicks": 165115,
+        "localGridTicks": 166329,
+        "localWitness": {
+          "terminalTicks": 617,
+          "edgeSeconds": 0,
+          "seedSeconds": 20714,
+          "seedCell": 1517724,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "hays-ks-360-outside": {
+        "ticks": 155982,
+        "kind": "road-foot",
+        "roadTicks": 155982,
+        "localGridTicks": 156954,
+        "localWitness": {
+          "terminalTicks": 458,
+          "edgeSeconds": 0,
+          "seedSeconds": 19562,
+          "seedCell": 1453787,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "hays-ks-600-inside": {
+        "ticks": 268394,
+        "kind": "road-foot",
+        "roadTicks": 268394,
+        "localGridTicks": 268840,
+        "localWitness": {
+          "terminalTicks": 504,
+          "edgeSeconds": 0,
+          "seedSeconds": 33542,
+          "seedCell": 724394,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "hays-ks-600-outside": {
+        "ticks": 258869,
+        "kind": "road-foot",
+        "roadTicks": 258869,
+        "localGridTicks": 259488,
+        "localWitness": {
+          "terminalTicks": 584,
+          "edgeSeconds": 0,
+          "seedSeconds": 32363,
+          "seedCell": 752798,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "hays-ks-720-inside": {
+        "ticks": 320111,
+        "kind": "local-grid",
+        "roadTicks": 343703,
+        "localGridTicks": 320111,
+        "localWitness": {
+          "terminalTicks": 687,
+          "edgeSeconds": 0,
+          "seedSeconds": 39928,
+          "seedCell": 2005908,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "hays-ks-720-outside": {
+        "ticks": 351138,
+        "kind": "local-grid",
+        "roadTicks": 367653,
+        "localGridTicks": 351138,
+        "localWitness": {
+          "terminalTicks": 618,
+          "edgeSeconds": 2232,
+          "seedSeconds": 41583,
+          "seedCell": 1870720,
+          "seedKind": 8,
+          "steps": 8
+        }
+      }
+    },
+    "frame": {
+      "west": -112604232,
+      "south": 26089596,
+      "step": 16692,
+      "width": 1778,
+      "height": 1406
+    },
+    "stats": {
+      "envelopeMs": 844.1827499999999,
+      "maskMs": 787.6985000000004,
+      "seedMs": 3143.0305420000004,
+      "fillMs": 291.5615829999988,
+      "contourMs": 37.00579199999993,
+      "displayMs": 5103.788542,
+      "maximumBackingBufferBytes": 66494595,
+      "borrowedVertexWorkspace": true,
+      "samples": 6830168,
+      "activeSpans": 2489605,
+      "settles": 1577349,
+      "maximumHeapEntries": 520216,
+      "selectedCells": 1579513,
+      "localCells": 1577349,
+      "roadOnlyCells": 2164,
+      "edges": 21530,
+      "rings": 230,
+      "vertices": 13518,
+      "jsonBytes": 310255,
+      "retries": []
+    },
+    "phaseMs": 5624.069083999999,
+    "output": {
+      "filename": "origin-03-900.geojson",
+      "bytes": 310255,
+      "sha256": "05c485cc364faf17b60490a14d1cea914bb532084b949fda5f7ef8328b8edea4"
+    }
+  },
+  "productions": [
+    {
+      "budget": 360,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "hays-ks-360.geojson",
+        "bytes": 256991,
+        "sha256": "90efeb08db6449ee7c2c9650f45f105c41e39cd820f93114c9fd32fb6082c7b9"
+      }
+    },
+    {
+      "budget": 600,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "hays-ks-600.geojson",
+        "bytes": 319529,
+        "sha256": "181af762bdfd6306f05dcc5348966f83ee6a04148146c623a0155851c52780e2"
+      }
+    },
+    {
+      "budget": 720,
+      "reusedQualifiedOutput": true,
+      "output": {
+        "filename": "hays-ks-720.geojson",
+        "bytes": 327969,
+        "sha256": "ad97dc0bfa76b0305bb73ca95b5079c52f75ef667eb2c3c50246a7353960a740"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 417234944,
+    "heapTotal": 49119232,
+    "heapUsed": 13578128,
+    "external": 143822321,
+    "arrayBuffers": 141283555
+  },
+  "reusedV1Record": "docs/evidence/coarse-osm-car-capacity-2026-11-01/display-timing-evaluation-raw-v1/origin-03.json"
+}
