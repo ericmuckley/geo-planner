@@ -1,0 +1,30 @@
+{
+  "id": "static-conditional-speed-envelope-v1",
+  "status": "frozen_before_captured_source_use",
+  "sourceReview": {
+    "urls": [
+      "https://wiki.openstreetmap.org/wiki/Conditional_restrictions",
+      "https://wiki.openstreetmap.org/wiki/Key:maxspeed",
+      "https://wiki.openstreetmap.org/wiki/Key:access"
+    ],
+    "interpretation": "OSM conditional maxspeed keys describe speed changes when conditions hold. Our static no-departure interpretation chooses the minimum of the existing base modeled speed and every supported numeric stated conditional speed for that direction. This conservative model envelope is our inference, not a mandated OSM algorithm or proof of legal speed for every situation."
+  },
+  "hypothesis": "Blanket closure of any conditional tag unnecessarily excludes roads whose only applicable conditional rule changes a parseable positive numeric speed. Keep availability at a static lower speed envelope instead of closing those ways. This is an availability policy experiment, not a global factor calibration.",
+  "supportedKeys": [
+    "maxspeed:conditional",
+    "maxspeed:forward:conditional",
+    "maxspeed:backward:conditional"
+  ],
+  "parser": "Bounded UTF-8 source strings; 65536-character limit, 64 clauses, parenthesis depth8; split semicolons only outside parentheses, one @ per clause and nonempty opaque conditions. Use unchanged numeric km/h/mph parser and >0 <=160km/h limits. Conditions are not evaluated or classified; all stated values contribute to the minimum. Unknown keys, values, quotes, malformed splitting/empty conditions retain the original closure.",
+  "preserved": "Canonical foot/bicycle/hgv-only scope correction; all other access/oneway/lane/unknown/relation/node constraints; exact old positive speeds/directions/defaults/signals/tagged anchors/source tags. No place, coordinate or route-specific rule.",
+  "acceptance": "All17 controls pass; complete captured source counts/old-positive retention; source fullSHA/stat before/after unchanged; preserve every candidate including unsupported/still-excluded records. No national, native, graph connectivity, ETA, physical, accuracy, app or deployment acceptance implied.",
+  "resources": {
+    "hostSeconds": 120,
+    "hostPeakRssBytes": 4294967296,
+    "maxOwnedBytes": 67108864,
+    "outputRecords": 10000,
+    "outputBytes": 16777216,
+    "scope": "Host deadline/RSS checks only; no cgroup/CPU/swap admission."
+  },
+  "next": "If captured evidence supports it, qualify native parity and a separate bounded captured graph/source experiment before any national stage."
+}

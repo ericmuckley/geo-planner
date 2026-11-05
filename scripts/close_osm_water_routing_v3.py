@@ -1,0 +1,7 @@
+"""Close terminal latitude-index water candidate without producer replay."""
+import close_osm_car_paid_host_v1 as closer
+
+if __name__=='__main__':
+    key='water-latitude-evaluation'
+    closer.STAGES[key]=('us-osm-water-evaluation-v3',key)
+    closer.close(key)

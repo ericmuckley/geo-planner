@@ -1,0 +1,70 @@
+{
+  "status": "captured_source_conditional_scope_census_complete",
+  "recipeSha256": "a48a4a8db38ea73001749e67aba544bac2f0350f84b79f5d35b9007b01f5fd01",
+  "counts": {
+    "nodeNewPositive": 0,
+    "wayNewPositive": 1,
+    "nodeWithIgnoredConditionalKeys": 0,
+    "wayWithIgnoredConditionalKeys": 1,
+    "nodeOldPositiveRetained": 143479,
+    "wayOldPositiveRetained": 28610,
+    "selectedNodeTagged": 24323,
+    "selectedNodeSignals": 5319,
+    "selectedNodeBlockedBefore": 81,
+    "selectedNodeBlockedAfter": 81,
+    "nodeMetadataClassified": 143560,
+    "capturedNodeRowsVisited": 1123919,
+    "capturedWayRows": 239253,
+    "wayReasonBefore/None": 28610,
+    "wayReasonAfter/None": 28611,
+    "wayMetadataClassified": 28995,
+    "wayReasonBefore/conditional-or-way-restriction": 155,
+    "wayReasonAfter/conditional-or-way-restriction": 154,
+    "wayReasonBefore/access": 198,
+    "wayReasonAfter/access": 198,
+    "wayReasonBefore/lane-access": 32,
+    "wayReasonAfter/lane-access": 32
+  },
+  "conditionalKeyCounts": {
+    "node/restriction:conditional": 2,
+    "way/cycleway:right:conditional": 7,
+    "way/hgv:conditional": 1,
+    "way/hgv_articulated:conditional": 7,
+    "way/hov:minimum:conditional": 19,
+    "way/maxspeed:conditional": 108,
+    "way/motor_vehicle:conditional": 3,
+    "way/parking:lane:right:conditional": 7,
+    "way/turn:lanes:forward:conditional": 3
+  },
+  "ignoredKeyCounts": {
+    "way/hgv:conditional": 1
+  },
+  "records": 1,
+  "recordBytes": 545,
+  "recordsSha256": "2ba17b6905140d2591179f5dad821b1f27304b07d2e7defec34772cc6a85c69b",
+  "sourceStatBefore": [
+    16777231,
+    26119178,
+    336826368,
+    1793434341339185273
+  ],
+  "sourceStatAfter": [
+    16777231,
+    26119178,
+    336826368,
+    1793434341339185273
+  ],
+  "sourceSha256": "00788f4b0176fe4cea3708160e41740af5ec3b71411e683f0df21897b296a922",
+  "hostSecondsIncludingSourceHashes": 1.8833277919329703,
+  "capturedSourceSqliteReads": 1,
+  "nodeCoordinatesProjected": 0,
+  "nationalSourcePbfReads": 0,
+  "routingQueries": 0,
+  "applicationDbReads": 0,
+  "providerRequests": 0,
+  "graphConstructors": 0,
+  "engineOrProductionChanged": false,
+  "nativePrototypeParityQualified": false,
+  "nationalImpactMeasured": false,
+  "scope": "All143560 selected native-node tag records/all28995 major-way tags in the complete saved21-area source capture. Python receives IDs/tags only, no node coordinates; source SQLite opened immutable/read-only and exact full SHA/stat unchanged. All old positive classifications retained; record every ignored key even when another exclusion remains. Narrow foot/bicycle/hgv key grammar only; car/general/unknown/lane/relation policy remains. No road graph/native constructor/PBF/provider/app DB, cost fit, routing or deployment. Captured eligibility changes are not national connectivity/ETA/permission or native parity acceptance. Host-only deadline/RSS checks do not establish cgroup/CPU/swap admission."
+}

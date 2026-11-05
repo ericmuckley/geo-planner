@@ -1,0 +1,27 @@
+{
+  "id": "conditional-national-metadata-v1",
+  "status": "qualification_design_frozen_before_build",
+  "purpose": "Measure generic static conditional-speed/noncar-mode policy changes across unchanged cached source before any national graph rebuild. Captured77/82 finite vs74 supports this data stage, not nationwide ETA acceptance.",
+  "sourcePolicy": "Unchanged full source validator, old car policy V1 way/node rules versus sealed conditional policy V3 header/Python V1. Relations unchanged. Every old eligible way retains exact direction/default/speed and every old unblocked node exact flags; signal/tagged bits identical.",
+  "retainedFormat": "CST1 uint32LE frame length; body magic4, kindU8(0node/1way), reserved3zero, positiveID U64, tagCountU32, sorted unique key/value UTF8 strings each withU32 byte length. No coordinates/references/native dictionary. Retain only changed node flags or newly eligible major ways, ALL changed records.",
+  "hardBounds": {
+    "changedOutputBytes": 50331648,
+    "changedRecords": 250000,
+    "singleFrameBytes": 8388608,
+    "nativePendingBytes": 9437188,
+    "qualificationMemoryBytes": 4294967296,
+    "zeroSwap": true,
+    "cpus": 2,
+    "tmpBytes": 268435456,
+    "stageOwnedBytes": 67108864,
+    "fileBytes": 67108864,
+    "wholeLocalBytes": 77309411328,
+    "priorReserveBytes": 64500000000,
+    "newClosedRoots": 173,
+    "newClosedAllocationBytes": 5395804160,
+    "metadataScratchReserveBytes": 104857600
+  },
+  "qualification": "38 actual Linux controls/no skips:23 immutable source guards +12 independent policy/count/emitted-tag controls +3 malformed/bounded decoder controls. Source summary/proof consistency, generated mixed sets,1.2MB crossing, old positive retention, lifecycle/source failure/byte and record cap stops. A separately qualified tiny PBF/controller/full independent changed-record audit precedes national source use.",
+  "nationalFreezeRequired": "Exact source size/SHA/stat/semantic seal/type counts/header/EOF, all original major ways/references/eligible counts, new policy counters/complete changed record partition/reclassification, lifecycle/owned/disk/RSS/cgroup/swap/CPU/deadline and independently absent workers. No fixed source/native producer replay; new wrappers/recipes/outputs.",
+  "deferred": "National graph/cost generation and all83ORS/35Valhalla/166sum/shading/physical/function/retained/query/packaged5s/API gates. No place exception/global speed fit/provider quota/source acquisition/application DB/app/src/env/dependencies/deploy."
+}

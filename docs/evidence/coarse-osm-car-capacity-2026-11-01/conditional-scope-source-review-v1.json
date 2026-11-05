@@ -1,0 +1,17 @@
+{
+  "status": "narrow_mode_scope_prototype_not_routing_change",
+  "reviewDate": "2026-11-04",
+  "sources": [
+    "https://wiki.openstreetmap.org/wiki/Conditional_restrictions",
+    "https://wiki.openstreetmap.org/wiki/Key:hgv",
+    "https://wiki.openstreetmap.org/wiki/Key:access"
+  ],
+  "sourceSummary": "OSM conditional keys identify the affected transport mode, with forward/backward directions supported. Mode-specific access keys omit the access prefix; HGV keys concern heavy goods vehicles. General motor-vehicle and car keys still affect passenger cars.",
+  "implementationInference": "Test ignoring only canonical foot/bicycle/hgv access-mode and maxspeed/oneway mode conditionals for the static passenger-car profile. Leave all other forms/values, car/general/unknown/lane/relation rules unchanged, preserve original tagged-node protection and source data. This is a narrow interpretation from tagging documentation, not national impact or legal/ETA validation.",
+  "legacyCombinedConditionalOrWayRestrictionRejectedMajorWays": 25849,
+  "legacyCountScope": "Combined reason also includes reversible/restriction keys; the non-car conditional fraction is unknown.",
+  "quoteWords": 0,
+  "nativeParityQualified": false,
+  "nationalImpactMeasured": false,
+  "engineOrProductionChanged": false
+}

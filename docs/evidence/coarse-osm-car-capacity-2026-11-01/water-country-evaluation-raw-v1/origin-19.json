@@ -1,0 +1,149 @@
+{
+  "origin": [
+    -115.7297,
+    33.3503
+  ],
+  "initialChoices": 3,
+  "accessInput": {
+    "filename": "endpoint-76.json.gz",
+    "rawBytes": 1007,
+    "rawSha256": "246b5ad35a60c1c4a4505852ff4cdadc519f8d48fcb4d4f3b3684c6cbbb5686a",
+    "compressedBytes": 349,
+    "sha256": "2698261590aa9168ccec2adf5a371abbefc5e2da4e51ee2d2722d119efd7f80c"
+  },
+  "diagnostic": {
+    "timings": {
+      "bombay-beach--salton-city": {
+        "ticks": 35816,
+        "kind": "road-foot",
+        "roadTicks": 35816,
+        "localGridTicks": 36275,
+        "localWitness": {
+          "terminalTicks": 731,
+          "edgeSeconds": 0,
+          "seedSeconds": 4443,
+          "seedCell": 669035,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "bombay-beach--indio": {
+        "ticks": 31400,
+        "kind": "local-grid",
+        "roadTicks": 31984,
+        "localGridTicks": 31400,
+        "localWitness": {
+          "terminalTicks": 584,
+          "edgeSeconds": 0,
+          "seedSeconds": 3852,
+          "seedCell": 741913,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1601780,
+      "maximumHeapEntries": 4168,
+      "maximumBackingBufferBytes": 50279398,
+      "returnedBackingBufferBytes": 50279398,
+      "seedBackingBufferBytes": 192,
+      "starts": 3
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -124998600,
+      "south": 29500130,
+      "step": 11510,
+      "width": 2025,
+      "height": 1234
+    },
+    "stats": {
+      "envelopeMs": 545.2640829999,
+      "maskMs": 10247.001291000051,
+      "seedMs": 3331.7784589999355,
+      "fillMs": 205.96287499996834,
+      "contourMs": 39.183208000147715,
+      "displayMs": 14369.345666999929,
+      "maximumBackingBufferBytes": 59139967,
+      "borrowedVertexWorkspace": true,
+      "samples": 2710512,
+      "activeSpans": 1110050,
+      "settles": 1157066,
+      "maximumHeapEntries": 140305,
+      "selectedCells": 1157976,
+      "localCells": 1157066,
+      "roadOnlyCells": 910,
+      "edges": 20922,
+      "rings": 448,
+      "vertices": 13350,
+      "jsonBytes": 291749,
+      "retries": []
+    },
+    "phaseMs": 14633.386416999856,
+    "output": {
+      "filename": "origin-19-900.geojson",
+      "bytes": 291749,
+      "sha256": "13085a66e6241a92a1fe7251aead053ee3fbb5f7d2fd534815f35cf4487aa2aa"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 720,
+      "classified": {
+        "bombay-beach--salton-city": true,
+        "bombay-beach--indio": true
+      },
+      "fieldStats": {
+        "settles": 1420982,
+        "maximumHeapEntries": 4168,
+        "maximumBackingBufferBytes": 50279398,
+        "returnedBackingBufferBytes": 50279398,
+        "seedBackingBufferBytes": 192,
+        "starts": 3
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -124018485,
+        "south": 30249987,
+        "step": 9231,
+        "width": 2024,
+        "height": 1234
+      },
+      "stats": {
+        "envelopeMs": 512.062665999867,
+        "maskMs": 9835.860541000031,
+        "seedMs": 2969.52329199994,
+        "fillMs": 193.20270800008439,
+        "contourMs": 32.04249999998137,
+        "displayMs": 13542.794999999925,
+        "maximumBackingBufferBytes": 59139967,
+        "borrowedVertexWorkspace": true,
+        "samples": 2417913,
+        "activeSpans": 993832,
+        "settles": 1098465,
+        "maximumHeapEntries": 127371,
+        "selectedCells": 1099126,
+        "localCells": 1098465,
+        "roadOnlyCells": 661,
+        "edges": 17988,
+        "rings": 318,
+        "vertices": 11170,
+        "jsonBytes": 266235,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-19-720.geojson",
+        "bytes": 266235,
+        "sha256": "362537a9b9b953877e667596daffd3cc0465afeb865bdd3b92e16dc9aa7ea87c"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 389513216,
+    "heapTotal": 162103296,
+    "heapUsed": 25603592,
+    "external": 159746134,
+    "arrayBuffers": 157206283
+  }
+}

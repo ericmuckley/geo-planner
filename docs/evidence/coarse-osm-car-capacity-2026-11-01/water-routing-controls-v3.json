@@ -1,0 +1,17 @@
+{
+  "status": "eighteen_latitude_index_water_routing_controls_passed",
+  "tests": 18,
+  "failures": 0,
+  "strictTypesPassed": true,
+  "log": "water-routing-controls-v3.txt",
+  "logSha256": "2eec892ed3c5e1db554a7ffdd5b2f72cc0c1ae13d72add28bf547f0a05a8a1fc",
+  "bindings": {
+    "scripts/coarse_osm_water_geography_v2.ts": "679adc7f14b8be80153a4514d3f148c22dc94ef3b6d2c75012d8069088a6b2c5",
+    "scripts/coarse_osm_water_geography_v2_test.ts": "00b0cee8cba1c8580a18ce66f5443b8d1cbfc618d708723f8f648dc157555c22",
+    "scripts/coarse_osm_routing_geography_v3.ts": "30c109684a3b1e2c6a2004eb4c633ee36fa087e5c0484568e593fc6f2c0f19ce",
+    "scripts/coarse_osm_water_routing_v3_test.ts": "23f8cf685a73ba0b937562e54da9f268fd1193482e4b4b704ec28e1093ecdfb8",
+    "scripts/evaluate_osm_water_candidate_v3.ts": "570b0499f08da728ed92c74535d295f5fa35cd28e57b7be85901f73a1bcce468",
+    "scripts/close_osm_water_routing_v3.py": "985321c9f43890acdb7f8cdacc432f171556029d6fd9aef9e2a3de0a1d5d9bf8"
+  },
+  "scope": "Same exact grid/contains/intersection/partition/prefix arithmetic; conservative closed0.01-degree latitude bands and once-only edge selection replace exhaustive coarse-edge iteration. Seven mask controls, ten adapter/index controls and8192 curved-ring source segment controls (three prefix policies each). No factor/cost/allowance/mask-data/gate change. Country output identity/accuracy/runtime still unmeasured."
+}

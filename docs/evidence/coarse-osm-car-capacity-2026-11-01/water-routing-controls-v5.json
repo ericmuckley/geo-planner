@@ -1,0 +1,17 @@
+{
+  "status": "twenty_ring_index_water_routing_controls_passed",
+  "tests": 20,
+  "failures": 0,
+  "strictTypesPassed": true,
+  "log": "water-routing-controls-v5.txt",
+  "logSha256": "a17099135e345e7969659d523b5605a9d81a5eb3dfeb040418856d11af97705c",
+  "bindings": {
+    "scripts/coarse_osm_water_geography_v4.ts": "59e438a6057b94bc958beef0890186747e95260f747cf8d454838dcee9808a62",
+    "scripts/coarse_osm_water_geography_v4_test.ts": "db4445e4e2117838f8cb29e93003515451cb6a1e4f1abab921346d42395da50f",
+    "scripts/coarse_osm_routing_geography_v5.ts": "9e55e39fca4426d042ed3dbb2fe2912a81e26f27488935a43e064a7156509d83",
+    "scripts/coarse_osm_water_routing_v5_test.ts": "fecf3a845904b2b4bae666b2d0bf9f4328c10d5e805d4c77c4748541487e53b3",
+    "scripts/profile_osm_water_mask_index_v1.ts": "5a45d09c172a1fca148014d556e3a217677d7186e080f864721238139586d8b2",
+    "scripts/close_osm_water_mask_index_v1.py": "7c6b6aae8cb97fcca5c5d7d127355a3f6351fdaf8a5c948937528555193c3080"
+  },
+  "scope": "Same fine/coarse/continuous/prefix policy and exact-guarded lookup. Add conservative closed1-degree ring-bounds candidate index before existing exact ring bbox and0.01-degree edge candidates; once-only crossing rules and all arithmetic retained. Previous19 controls plus empty-source/no-allocation control. This mask-only profile makes no road/accuracy/app claim."
+}

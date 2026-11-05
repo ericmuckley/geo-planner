@@ -1,0 +1,30 @@
+{
+  "id": "independent-raw-water-cell-audit-v1",
+  "date": "2026-11-04",
+  "scope": "Four host exact cell controls pass, then12 actual Linux controls before a separately frozen raw geometry/compact cell comparison. No raster/native/model/source-PBF/provider/DB/app execution.",
+  "code": {
+    "scripts/compare_osm_water_raster_cells_v1.py": "7589c54757853544c87e86364973b6af3adf00e7f2150b2f1f890a0eb8aebffe",
+    "scripts/compare_osm_water_raster_cells_v1_test.py": "bb94633ef9afed8e75c9161b06addd113f3883ddd3b5159849b1348ab9f5d6f6",
+    "scripts/run_osm_water_raster_cell_audit_v1.py": "d91ed20fac738d17959d91c66891561480c89f3052c1803ebc98de55ab321998",
+    "scripts/close_osm_water_raster_cell_audit_v1.py": "650bd5637401c020232315e14dc8d69738ecf009d3080fcfb03bb2a7a6cf196d"
+  },
+  "parentProof": "verify_water_raster_reader_v1.py",
+  "parentProofSha256": "2951209f2ef8c21d838df1483f8a9cff7fc431e86cf13bb6464e0bfd2373efec",
+  "fixedPopulation": "All245 saved cell centers plus the first267 of the already frozen512 generated centers, before raw-source results;512 total, no value-based selection.",
+  "independence": "Existing exact rational raw polygon winding for center coverage; separate closed segment/rectangle parametric slab clipping for every source boundary and direct bbox intersection for all excluded bounds. Two complete raw source scans/count/SHA/EOF, no use of native row-span raster math.",
+  "limits": {
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "cpus": 1,
+    "tmpBytes": 67108864,
+    "ownedBytes": 67108864,
+    "fileBytes": 67108864,
+    "workerSeconds": 900,
+    "hostSeconds": 960,
+    "retainedBytes": 77309411328
+  },
+  "previousClosedRoots": 152,
+  "previousClosedAllocationBytes": 5322055680,
+  "metadataReserveBytes": 104857600,
+  "interpretation": "Observed development-cell software/source checks, not all-cell/nationwide accuracy or land/coverage/mask-policy/connector/routing/app admission. Global incomplete source remains explicit."
+}

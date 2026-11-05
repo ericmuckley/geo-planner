@@ -1,0 +1,39 @@
+{
+  "output": "data/coarse-quality/us-osm-water-raster-reader-profile-v1",
+  "source": "data/coarse-quality/us-osm-water-raster-source-run-v1",
+  "manifestSha256": "048b2ce763a80e75c9fbe651acf5ef43dfe91515f99276357ea7357bbd2c809e",
+  "pointReport": "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-points-run-raw-v1/report.json",
+  "randomCellQueries": 512,
+  "bindings": {
+    "scripts/coarse_osm_water_raster_loader_v1.ts": "097937c163c8f5d341fae05b3f2aabb49a73c382dd9f50519a2f210253cc59f5",
+    "scripts/coarse_osm_water_raster_loader_v1_test.ts": "050e129b18f7f972b163e830b4ba7890458978a6b5e727034b2a9f9a6954c89b",
+    "scripts/profile_osm_water_raster_reader_v1.ts": "41ea9ef26981f100a906abe9c8ceebaa1864716afff3f3dce32e1d096f48a2c5",
+    "scripts/close_osm_water_raster_reader_v1.py": "b7d708df1157854d2195fdb1d42e35b4e97c7d8e4ee01a6bb458c71ef1f5f692",
+    "data/coarse-quality/us-osm-water-raster-source-run-v1/manifest.json": "048b2ce763a80e75c9fbe651acf5ef43dfe91515f99276357ea7357bbd2c809e",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-raster-source-run-closed-v1.json": "b2a16324c23f80aa8df29ef3ded0c844045a5e2a30f67964730c094a8d1ab21f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-raster-source-run-raw-v1/report.json": "a4760ec4509f07f108b4ce6c4c547afef1be54ced79ac1fba71ad823d1436ad3",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/water-points-run-raw-v1/report.json": "31bcce67b9bd3081e96e2da31dceaa067544bc9df5bfd779ecd8a19afb54a624",
+    "package-lock.json": "344621884a6d42d99525db2be9bcd961ea2ddae06211b11a60be931cb7af6abc",
+    "data/coarse-quality/us-osm-water-raster-source-run-v1/water-center.bits.gz": "82e5a8139b963bf0df450206c51843f7dbe26d048f26ea3e82bebf4e413de3d2",
+    "data/coarse-quality/us-osm-water-raster-source-run-v1/water-center.bits": "111cec674ec0165e81812637c6072c826f97433fba3445a205b4ac60c2197b7e",
+    "data/coarse-quality/us-osm-water-raster-source-run-v1/source-uncertainty.bits.gz": "ea2e3b98a9fddc211a439d0db5db7d9ee43f17578c9b4975f35ec7c7a9c10c52",
+    "data/coarse-quality/us-osm-water-raster-source-run-v1/source-uncertainty.bits": "04d04a3be26668749ace05f7342840fc9243c4255b417925f3d013f54ee529c8"
+  },
+  "admission": {
+    "nodeSyntheticTests": 6,
+    "successful": true,
+    "strictTypesPassed": true,
+    "nativeCountryPacketComplete": true
+  },
+  "scope": "Single fresh host TS data-packet load/first observation,all245 saved points/their245 centers/512 seeded arbitrary centers,exact backing and buffer release. No raw polygon query/model/PBF/provider/DB/mask-policy/app operation. No complete-app/cloud timing claim.",
+  "limits": {
+    "nodeOldSpaceMiB": 256,
+    "hostProfileSecondsAfterBindings": 120,
+    "outputRecordBytes": 1048576,
+    "ownedReserveBytes": 67108864,
+    "retainedBytes": 77309411328,
+    "previousClosedAllocationBytes": 5320548352,
+    "previousClosedRoots": 151,
+    "metadataReserveBytes": 104857600
+  }
+}

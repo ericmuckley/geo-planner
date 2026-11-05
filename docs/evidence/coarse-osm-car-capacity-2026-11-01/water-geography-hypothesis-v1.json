@@ -1,0 +1,32 @@
+{
+  "id": "generic-coarse-fallback-water-geography-hypothesis-v1",
+  "date": "2026-11-04",
+  "scope": "Seven synthetic Node controls/strict types pass; freeze one host all-point/provider-snap comparison before any road origin/access/query integration.",
+  "code": {
+    "scripts/coarse_osm_water_geography_v1.ts": "10de5fc5238c196edf58ea0d081d407554f0f4a6d41c16e3070cebd1e79c1355",
+    "scripts/coarse_osm_water_geography_v1_test.ts": "0a19e849a83bdeedabae9bdbac84027eeaf2e40b8ee9e5ffa69585abc975a12e",
+    "scripts/profile_osm_water_geography_v1.ts": "ae99f090ff3dfd959984137bca62d9f1eccb73b328a368af1e3a5b98200220f2",
+    "scripts/close_osm_water_geography_v1.py": "6c72beac7cc04d0a9580d47011ef66d3d1cfa02266cfeb87a02d7268bc9cab6e"
+  },
+  "basisProof": "verify_water_raster_cell_audit_v1.py",
+  "basisProofSha256": "1d6f3cbd7c85ce9487d684998b98355a31c553d20511788241d26a25cb534030",
+  "hypothesis": [
+    "Keep original country/coast geometry and disconnected-country-polygon barriers everywhere",
+    "Within packet cells without source uncertainty,use accepted source-water center coverage; no accepted source water is an approximate model assumption,not proven real land",
+    "In uncertain or uncovered cells retain the full original coarse lake/country predicate,without silently clearing rejected water features",
+    "Partition connectors at every raster grid crossing AND original coarse polygon crossings; test all intervals,strict land endpoint and original pre-land-only tolerated water prefix semantics",
+    "Original coarse numerical crossing/short-interval tolerances unchanged; no road permissions,costs,transfers,off-mask allowances or search changes",
+    "Retain global missing-source metadata and geographic incompleteness; no source-gap place/coordinate exception or claim that missing geometry has been bounded"
+  ],
+  "controls": "Unflagged refinement/coarse fallback,whole-segment/diagonal/reversal/grid crossings,pre-land water prefix only,narrow legacy-water cuts,country holes/disconnected polygons,zero/invalid domains.",
+  "prospectiveObservedGates": [
+    "Keep all245 point/all166 raw requested-to-returned reference snap observations",
+    "Every old positive point and old positive snap-mask segment must stay positive; save every regression/failure without retuning",
+    "Exact packet backing plus measured policy index/query/owner release;no complete graph/app/function/cloud latency claim"
+  ],
+  "routingAdmission": "None. All original83/35 accuracy/166 path/shading/physical/retained/function/first-estimate/software/API/shared-camera gates remain mandatory. Snapshot origin/local-field/display adapters need separate versioned integration after geometry/source proof.",
+  "previousClosedRoots": 154,
+  "previousClosedAllocationBytes": 5325303808,
+  "retainedBytes": 77309411328,
+  "metadataReserveBytes": 104857600
+}

@@ -1,0 +1,79 @@
+{
+  "status": "captured_source_conditional_speed_census_complete",
+  "recipeSha256": "20c2bcc409a9f9f8af8453c6de32122be218d0dc6612760cab6b7f5c7d7754a0",
+  "counts": {
+    "nodeNewPositive": 0,
+    "wayNewPositive": 108,
+    "nodeWithIgnoredConditionalKeys": 0,
+    "wayWithIgnoredConditionalKeys": 1,
+    "wayWithConditionalCandidates": 109,
+    "wayStaticSpeedPriced": 107,
+    "waySpeedUnsupported": 1,
+    "nodeOldPositiveRetained": 143479,
+    "wayOldPositiveRetained": 28610,
+    "selectedNodeTagged": 24323,
+    "selectedNodeSignals": 5319,
+    "selectedNodeBlockedBefore": 81,
+    "selectedNodeBlockedAfter": 81,
+    "nodeMetadataClassified": 143560,
+    "capturedNodeRowsVisited": 1123919,
+    "capturedWayRows": 239253,
+    "waySpeedStatus/absent": 28887,
+    "wayReasonBefore/None": 28610,
+    "wayReasonAfter/None": 28718,
+    "wayMetadataClassified": 28995,
+    "waySpeedStatus/static-minimum": 107,
+    "wayReasonBefore/conditional-or-way-restriction": 155,
+    "wayReasonBefore/access": 198,
+    "wayReasonAfter/access": 198,
+    "wayReasonAfter/conditional-or-way-restriction": 47,
+    "wayReasonBefore/lane-access": 32,
+    "wayReasonAfter/lane-access": 32,
+    "waySpeedStatus/unsupported": 1
+  },
+  "conditionalKeyCounts": {
+    "node/restriction:conditional": 2,
+    "way/cycleway:right:conditional": 7,
+    "way/hgv:conditional": 1,
+    "way/hgv_articulated:conditional": 7,
+    "way/hov:minimum:conditional": 19,
+    "way/maxspeed:conditional": 108,
+    "way/motor_vehicle:conditional": 3,
+    "way/parking:lane:right:conditional": 7,
+    "way/turn:lanes:forward:conditional": 3
+  },
+  "ignoredKeyCounts": {
+    "way/hgv:conditional": 1
+  },
+  "staticSpeedKeyCounts": {
+    "maxspeed:conditional": 107
+  },
+  "records": 109,
+  "recordBytes": 111178,
+  "recordsSha256": "0c322436b4d7cc3ca617b26a1ecc527ed8eb0bc4d831068e591e56feee8d4e13",
+  "sourceStatBefore": [
+    16777231,
+    26119178,
+    336826368,
+    1793434341339185273
+  ],
+  "sourceStatAfter": [
+    16777231,
+    26119178,
+    336826368,
+    1793434341339185273
+  ],
+  "sourceSha256": "00788f4b0176fe4cea3708160e41740af5ec3b71411e683f0df21897b296a922",
+  "hostSecondsIncludingSourceHashes": 1.8610589997842908,
+  "capturedSourceSqliteReads": 1,
+  "nodeCoordinatesProjected": 0,
+  "nationalSourcePbfReads": 0,
+  "routingQueries": 0,
+  "applicationDbReads": 0,
+  "providerRequests": 0,
+  "graphConstructors": 0,
+  "engineOrProductionChanged": false,
+  "nativePrototypeParityQualified": false,
+  "nationalImpactMeasured": false,
+  "scope": "All143560 selected native-node tag records/all28995 major-way tags in the complete saved21-area source capture. Python receives IDs/tags only, no node coordinates; source SQLite opened immutable/read-only and exact full SHA/stat unchanged. All old positive classifications retained; record every ignored key even when another exclusion remains. Narrow non-car scope plus canonical positive numeric maxspeed conditional lower envelope; opaque conditions are not evaluated. Car access, oneway, unknown key/value syntax, lane/relation and node behavior remain; old positive costs/directions unchanged. No road graph/native constructor/PBF/provider/app DB, cost fit, routing or deployment. Captured eligibility changes are not national connectivity/ETA/permission or native parity acceptance. Host-only deadline/RSS checks do not establish cgroup/CPU/swap admission."
+}

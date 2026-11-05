@@ -1,0 +1,39 @@
+{
+  "id": "exact-source-water-raster-data-v1",
+  "date": "2026-11-04",
+  "scope": "Synthetic build/19 actual Linux controls before any separately frozen country derivative. No PBF/native road producer/provider/DB/model/app change.",
+  "proposal": "water-geography-storage-proposal-v1.json",
+  "proposalSha256": "68b0cdf7637ca893cc02dd9757d2f620ea3d20a106984c55226427864a473599",
+  "parentProof": "verify_water_excluded_bounds_run_v1.py",
+  "parentProofSha256": "ea284641e99e31d790ec8c4b32adba89d0d9a20d6a1773a799703fcc008a3dce",
+  "code": {
+    "scripts/coarse_osm_water_raster_v1.cpp": "519e9fcf2ce3eda68fda4f7b9e0a49143e30c073cc5dc79c91199b3af2325535",
+    "scripts/coarse_osm_water_raster_v1.py": "9df1c6571492b4a6ab306a0fb5193222c293e135fa9404cd1d0efa6d80ee4991",
+    "scripts/coarse_osm_water_raster_v1_test.py": "0c1b9e4949951d527554932f6af0550ee3fc81bb418ecaba1e9586fce712bd28",
+    "scripts/run_osm_water_raster_v1.py": "ae3d38886f980330fba1b0691ea84a4e4bb35660c847c9028da3cf936abfe65d",
+    "scripts/close_osm_water_raster_v1.py": "5466a6aad9af5bbeb47f35fb631df3c6eb951a2f67a0b26842c3d268de7f73ce"
+  },
+  "planes": [
+    "Union of source polygon coverage at cell centers, preserving holes/islands/overlapping feature unions; exact center-on-boundary is covered and separately uncertain",
+    "Every closed grid cell touched by source boundary segments or conservative excluded-source bounds; grid lines/corners include every adjacent cell"
+  ],
+  "precision": "All raster decisions exact integer/rational E7, no float clipping/intersections. Bit index row*width+column, LSB first, unused padding zero. Closed-center convention clarifies proposal boundary cells; those always carry uncertainty. No runtime interpretation/land inference authorized.",
+  "incompleteSource": "Mark known partial bounds, retain source-incomplete flags globally; never claim missing geometry has been bounded.",
+  "limits": {
+    "cells": 61360000,
+    "featureRings": 100000,
+    "featurePoints": 2000000,
+    "featureScanlineCrossings": 4000000,
+    "pointChunkBytes": 1048576,
+    "perPlaneBytes": 7670000,
+    "finalPlaneBytes": 15340000,
+    "scratchReleaseBeforeExport": true
+  },
+  "oracle": "Independent exhaustive small-cell center winding and segment/rectangle intersection;250 seeded triangle/rectangle/multi-feature cases plus hole/island/overlap/thin/negative/odd-step/grid-line/corner/bbox/clipping/corruption/chunk/cap/release/gzip checks.",
+  "newClosedAllocationBytes": 5296963584,
+  "closedRoots": 147,
+  "retainedBytes": 77309411328,
+  "metadataReserveBytes": 104857600,
+  "countryDerivativeAdmitted": false,
+  "maskOrModelChanged": false
+}

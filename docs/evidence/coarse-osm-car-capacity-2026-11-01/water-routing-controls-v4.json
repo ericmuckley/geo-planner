@@ -1,0 +1,21 @@
+{
+  "status": "nineteen_guarded_lookup_water_routing_controls_passed",
+  "tests": 19,
+  "failures": 0,
+  "strictTypesPassed": true,
+  "log": "water-routing-controls-v4.txt",
+  "logSha256": "119eaef123a5bf6167d6ebeb0d895473af15ef6f77c6737c89f3041d84619286",
+  "bindings": {
+    "scripts/coarse_osm_water_lookup_v1.ts": "7da797da2001e9b2c9073bf2a7d2833942b0e621db3719ac80be331dbe01084e",
+    "scripts/coarse_osm_water_geography_v3.ts": "ce10fe3cab41f40bf82e40398721d593aa8cb477f211d094d56cc686e466675e",
+    "scripts/coarse_osm_water_geography_v3_test.ts": "569d47e82d2125682c49638c87c6c493378db47c47622375eac51c6fca1f308a",
+    "scripts/coarse_osm_routing_geography_v4.ts": "7a651d452bc336472c2bff6721dc573756f7ff744aa594d5f188450edb3845bc",
+    "scripts/coarse_osm_water_routing_v4_test.ts": "689618262e82d78dbe8b5c613a3682423029add2c2e8cba8cf0a77933ab7c960",
+    "scripts/evaluate_osm_water_candidate_v4.ts": "3cb3806e34fa04f0fe37e7c691827abcc9ac3df2569904c8178433cd6cd6e934",
+    "scripts/close_osm_water_routing_v4.py": "931de0a45dde8f540dd90e74c0b52146ccda560cd8a3574afcb2f61f6c47a1ca"
+  },
+  "exactCellComparisons": 49409,
+  "explicitFastAndExactBranchControls": 2,
+  "guard": "64*Number.EPSILON*(abs(value*1e7)+abs(originE7)+stepE7). Use Number cell flags only if the residual is farther than this guard from either gridline on both axes; otherwise delegate to unchanged canonical-decimal BigInt reader. Bound covers decimal rounding interval plus floating multiplication/subtraction/division/residual. No result cache or new buffer.",
+  "scope": "Same mask/prefix/intersection semantics and coarse candidate indices. Seven geography plus twelve routing/precision controls, including grid ties and adjacent representable Numbers on a negative US E7 grid. Country old1002 observations/all10256 initial choices and complete V3 origin output/timing parity must pass before full numerical acceptance. No accuracy/gate/cost/allowance change."
+}

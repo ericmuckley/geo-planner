@@ -1,0 +1,44 @@
+{
+  "id": "complete-saved-water-raster-pipeline-v1",
+  "date": "2026-11-04",
+  "scope": "21 synthetic actual Linux controls before a separately frozen country derivative. Same qualified exact native raster, no PBF/road model/provider/DB/app operation.",
+  "code": {
+    "scripts/prepare_osm_water_raster_v1.py": "d2a3e442dcffec35fa1b20234139b949dfc7c540db1d1e2e370c65105de36d75",
+    "scripts/prepare_osm_water_raster_v1_test.py": "6063ec3a6d475444be74ca3b5617589e48daacf6c35f926251b6566da54d5376",
+    "scripts/run_osm_water_raster_source_v1.py": "a0ab2a41fc7190ec1dddc1c14149dafb18d8494b2e86760debd362dcbc224d47",
+    "scripts/close_osm_water_raster_source_v1.py": "f4d8acd3762efdfc28bfb1b519def8d137224a9ca1794311b51b5a628b4354b6"
+  },
+  "rasterDesign": "water-raster-design-v1.json",
+  "rasterDesignSha256": "a443a27505e3f5f96a15f4d248692308acd639d63741b7af94c9fb82e0b725e1",
+  "parentProof": "verify_water_raster_controls_v1.py",
+  "parentProofSha256": "98d6f6b0c930b95c5c2ea8edc9d3150a3184a28a8b3ab1a4cbab3658df7fcda4",
+  "countryGridE7": [
+    -1250000000,
+    240000000,
+    50000,
+    11800,
+    5200
+  ],
+  "acceptance": [
+    "Every accepted feature/ring/native/E7 record read under original saved SHA/EOF and exact population counts",
+    "Every known excluded bound flagged; incomplete source list retained globally, never bounded by assumption",
+    "Working buffers released before copying exact two bit planes",
+    "Every raw file and standard gzip decode independently reopened byte for byte, zero unused padding, manifest source metadata exact"
+  ],
+  "controls": "19 existing native/shard controls plus2 tiny complete source/holes/uncertainty/output/corruption/count controls",
+  "resources": {
+    "memoryBytes": 1073741824,
+    "swapBytes": 0,
+    "cpus": 1,
+    "tmpBytes": 67108864,
+    "ownedBytes": 67108864,
+    "fileBytes": 67108864,
+    "workerSeconds": 1800,
+    "hostSeconds": 1860,
+    "retainedBytes": 77309411328
+  },
+  "previousClosedRoots": 149,
+  "previousClosedAllocationBytes": 5300371456,
+  "metadataReserveBytes": 104857600,
+  "maskOrModelPolicyAdmitted": false
+}

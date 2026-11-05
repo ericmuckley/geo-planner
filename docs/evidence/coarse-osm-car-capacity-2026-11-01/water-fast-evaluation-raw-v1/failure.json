@@ -1,0 +1,20 @@
+{
+  "error": "controlled_stop_redundant_country_checks",
+  "status": "stopped_after_partial_displays",
+  "recipeSha256": "1d8f446cdd65b32a2e9b397edbe9f3fb1a54cc366727bbf78eae745f06b6d56c",
+  "hostMsUntilTerminationRequest": 1694160.087108612,
+  "ownerExitCode": 143,
+  "signal": "SIGTERM",
+  "ownedWorker": {
+    "pid": 51466,
+    "command": "node --expose-gc --max-old-space-size=512 --import tsx scripts/evaluate_osm_water_candidate_v4.ts docs/evidence/coarse-osm-car-capacity-2026-11-01/water-candidate-plan-v4.json 1d8f446cdd65b32a2e9b397edbe9f3fb1a54cc366727bbf78eae745f06b6d56c"
+  },
+  "completedOriginGroups": 6,
+  "completedOriginPointTimings": 36,
+  "savedDisplayFiles": 24,
+  "completedDiagnosticDisplays": 6,
+  "fullAccuracyMeasured": false,
+  "providerRequests": 0,
+  "modelOrProductionChanged": false,
+  "scope": "Preserve all partials. CPU profile identifies repeated country membership; separately qualified country-cell certificate has exact complete land/boundary/link SHAs on two national frames, explicit extra312500B maximum query plane under64MiB and owner release. Stop owned slow worker before separately freezing faster all83-case evaluation, requiring every completed V4 origin timing/map SHA. No partial output reused, no accuracy/gate/cost/mask data/allowance change. No full aggregate/timeout/OOM conclusion."
+}

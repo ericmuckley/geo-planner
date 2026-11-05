@@ -1,0 +1,70 @@
+{
+  "format": "exact-water-centers-and-source-uncertainty-v1",
+  "grid": {
+    "xE7": -1250000000,
+    "yE7": 240000000,
+    "stepE7": 50000,
+    "columns": 11800,
+    "rows": 5200,
+    "cells": 61360000,
+    "bitOrder": "row-major-lsb-first"
+  },
+  "planes": {
+    "water": {
+      "file": "water-center.bits.gz",
+      "rawFile": "water-center.bits",
+      "rawBytes": 7670000,
+      "rawSha256": "111cec674ec0165e81812637c6072c826f97433fba3445a205b4ac60c2197b7e",
+      "compressedBytes": 445308,
+      "compressedSha256": "82e5a8139b963bf0df450206c51843f7dbe26d048f26ea3e82bebf4e413de3d2",
+      "setCells": 995924
+    },
+    "uncertainty": {
+      "file": "source-uncertainty.bits.gz",
+      "rawFile": "source-uncertainty.bits",
+      "rawBytes": 7670000,
+      "rawSha256": "04d04a3be26668749ace05f7342840fc9243c4255b417925f3d013f54ee529c8",
+      "compressedBytes": 1336191,
+      "compressedSha256": "ea2e3b98a9fddc211a439d0db5db7d9ee43f17578c9b4975f35ec7c7a9c10c52",
+      "setCells": 8316641
+    }
+  },
+  "sourceCounts": {
+    "features": 2439095,
+    "rings": 2648285,
+    "points": 102511022,
+    "excludedFeatures": 594,
+    "knownExcludedBounds": 594
+  },
+  "sourceIncompleteFeatures": [
+    {
+      "kind": 2,
+      "id": 111577,
+      "rawRelationType": "multipolygon",
+      "missingSourceWayIds": [
+        56217101,
+        56217353,
+        56217389,
+        56218029,
+        56218064,
+        56218389,
+        56219144,
+        56219236,
+        56221017,
+        56221074,
+        56221270,
+        67972125,
+        67972893,
+        67973075,
+        509694737,
+        1143705261,
+        1143705262
+      ],
+      "missingSourceRelationIds": [
+        21607544
+      ]
+    }
+  ],
+  "sourceGeometryCompletelyBounded": false,
+  "semantics": "Closed accepted planar source water at centers; uncertainty includes every closed cell touched by a source edge/known excluded bound. Source missing geometry remains globally unqualified. No mask/land/connector/routing interpretation."
+}

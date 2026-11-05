@@ -1,0 +1,17 @@
+{
+  "error": "controlled_stop_unindexed_display_fallback",
+  "status": "stopped_before_first_display_completed",
+  "recipeSha256": "7c7306a1a10e3efe1a0fea0ce6df4d13e725d3efd10236f2344e015a3a2e5dfb",
+  "hostMsUntilTerminationRequest": 222925.2908229828,
+  "ownerExitCode": 143,
+  "signal": "SIGTERM",
+  "ownedWorker": {
+    "pid": 45265,
+    "command": "node --expose-gc --max-old-space-size=512 --import tsx scripts/evaluate_osm_water_candidate_v1.ts docs/evidence/coarse-osm-car-capacity-2026-11-01/water-candidate-plan-v1.json 7c7306a1a10e3efe1a0fea0ce6df4d13e725d3efd10236f2344e015a3a2e5dfb"
+  },
+  "completeDiagnosticDisplays": 0,
+  "accuracyMeasured": false,
+  "providerRequests": 0,
+  "modelOrProductionChanged": false,
+  "scope": "External controlled stop after source inspection found legacyConnection called on the frozen wrapper without prepareGeography; source indexes are keyed by object identity in a WeakMap. No numerical result/timeout/OOM/accuracy conclusion. Preserve recipe/code/root and version correction separately."
+}

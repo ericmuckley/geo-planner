@@ -1,0 +1,20 @@
+{
+  "status": "twenty_country_certificate_water_controls_passed",
+  "tests": 20,
+  "failures": 0,
+  "strictTypesPassed": true,
+  "log": "water-routing-controls-v6.txt",
+  "logSha256": "49ec4f6602c4d4ecafb1a38e7bfef06b2cd4b773df67a0d79a1dc5b0b858c119",
+  "bindings": {
+    "scripts/coarse_osm_routing_geography_v6.ts": "7607545acfb046b71b29266e5b12925932d5672e9f840505780982e748a818ed",
+    "scripts/coarse_osm_display_grid_v3.ts": "f6dc30cee522126f42cc79103e49be1276536d471aba6cc93024c4e555f58f41",
+    "scripts/coarse_osm_access_display_v3.ts": "1c4e1b21c50e558932285ee63e56a8f5946759b0653e9cf35740c92a62a79389",
+    "scripts/coarse_osm_trace_display_v3.ts": "66b642db5ac1ef56c2f6bc4249474f7982b58a4714c6c1b1dafe7912c4154c36",
+    "scripts/coarse_osm_water_routing_v6_test.ts": "da8f9ba9a54eb2843eac5908c23d6cc81aa7cf5ee2042d367671f7849416d16d",
+    "scripts/profile_osm_water_mask_country_v1.ts": "a5201160a9c5049cc013adf34bf44cfebd0a14265d1dcaae4091f15389e79683",
+    "scripts/close_osm_water_mask_country_v1.py": "635d48ce6821ff0ac675b1b3a4320175dec83aef305d4a8c3682f22903c7561e"
+  },
+  "extraQueryBitplaneBytesAtMaximum": 312500,
+  "queryCapBytes": 67108864,
+  "scope": "Unchanged original full geography predicate for origins, timing and all noncertified links. Raster saves original country-only boundary bits before adding water uncertainty; only adjacent land cells with neither original-country boundary bit use strict inland lake/fine/fallback checks. Derived padded domain envelope has no role in normal geography and falls back outside its interior. Same country/barrier/holes/shore policy, source water/uncertainty, prices/allowances/costs/prefixes/grid. Certificate test compares every link to full original predicate on shores/country holes/disconnected islands/coarse lakes/fine water/uncertainty at three resolutions; explicit backing guard and extra one-bit-per-cell lifetime/cap accounting. No full national equality or runtime/accuracy admission yet."
+}

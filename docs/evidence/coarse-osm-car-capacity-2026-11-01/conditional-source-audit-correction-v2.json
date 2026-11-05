@@ -1,0 +1,10 @@
+{
+  "status": "versioned_final_tag_audit_correction_before_retry",
+  "failureClosed": "conditional-source-run-closed-v1.json",
+  "failureClosedSha256": "54862f217a594c2f49454137e6c5bcc02771789f08b0fc8c0548350f7a5bf30d",
+  "cause": "V1 compared entire stat_result before/after reading the changed-tag file, including access time. Reading can update access time despite identical data, causing final audit failure. A new regression reproduces the boundary.",
+  "retainedLimitation": "V1 saved its complete source receipt/counters only after tag audit returned. They are not portable retained records after this failure, so the failed run is not admitted as a complete national census. Raw output/failure/metrics/source code/recipe remain immutable.",
+  "correction": "V2 compares dev/inode/size/mtime_ns plus full SHA before/after audit; access-time-only changes are allowed, byte changes with restored mtime are rejected. Save source receipt/full counters checkpoint before independent changed-tag audit. Same native parser/policy/helper/artifact/source/limits; new scripts/recipe/output.",
+  "controls": "Seven scan/audit/lifecycle tests including access-time V1 failure/V2 pass, byte mutation with original mtime rejected, and source receipt checkpoint retained before deliberate audit failure. New tiny full PBF/controller pipeline before a new national scan.",
+  "scope": "No source data overwritten/repaired, policy retuning, quota/provider/app change or relaxed source/accuracy/resource gate."
+}
