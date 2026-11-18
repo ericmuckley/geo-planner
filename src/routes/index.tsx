@@ -17,6 +17,8 @@ import {
 	Save,
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { DestinationCheck } from "../components/destination-check";
+import { FuelLayerControl } from "../components/fuel-layer-control";
 import { ResearchMap } from "../components/research-map";
 import {
 	defaultQuery,
@@ -38,6 +40,7 @@ import {
 	writeSavedRuns,
 } from "../lib/saved-runs";
 import { useCloudHistory } from "../lib/use-cloud-history";
+import { useFuelLayer } from "../lib/use-fuel-layer";
 import { cn } from "../lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -76,6 +79,7 @@ function Home() {
 	const [config, setConfig] = useState<EngineConfig | null>(null);
 	const [configError, setConfigError] = useState<string | null>(null);
 	const [result, setResult] = useState<ReachabilityResult | null>(null);
+	const fuelLayer = useFuelLayer(result?.contours);
 	const [activeRun, setActiveRun] = useState<SavedRun | null>(null);
 	const [savedRuns, setSavedRuns] = useState<SavedRun[]>([]);
 	const [historyDirty, setHistoryDirty] = useState(false);
@@ -83,6 +87,12 @@ function Home() {
 	const [error, setError] = useState<string | null>(null);
 	const [running, setRunning] = useState(false);
 	const [showContour, setShowContour] = useState(true);
+	const [destination, setDestination] = useState<Origin | null>(null);
+	const [pickingDestination, setPickingDestination] = useState(false);
+	const changeDestination = useCallback((point: Origin | null) => {
+		setDestination(point);
+		setPickingDestination(false);
+	}, []);
 	const loadCloudRuns = useCallback((runs: SavedRun[]) => {
 		setSavedRuns((current) => mergeSavedRuns(current, runs));
 		setHistoryDirty(true);
@@ -166,6 +176,7 @@ function Home() {
 			sequence.current += 1;
 			controller.current?.abort();
 			setRunning(false);
+			setPickingDestination(false);
 			setResult(null);
 			setActiveRun(null);
 			setError(null);
@@ -216,6 +227,7 @@ function Home() {
 	}
 
 	async function runQuery(query: ReachabilityQuery, selectedModel = model) {
+		setPickingDestination(false);
 		if (selectedModel !== model) {
 			setConfig(null);
 			setModel(selectedModel);
@@ -303,6 +315,9 @@ function Home() {
 				<ResearchMap
 					origin={origin}
 					result={result}
+					destination={destination}
+					fuelLocations={fuelLayer.locations}
+					onDestinationPick={pickingDestination ? changeDestination : undefined}
 					showContour={showContour}
 					onOriginChange={selectOrigin}
 					onMapIdle={onMapIdle}
@@ -551,6 +566,21 @@ function Home() {
 									: "Choose a starting point and driving time."}
 						</output>
 					</section>
+					{(result || fuelLayer.enabled) && (
+						<FuelLayerControl layer={fuelLayer} />
+					)}
+					{(result || destination) && (
+						<DestinationCheck
+							result={result}
+							destination={destination}
+							picking={pickingDestination}
+							running={running}
+							fieldClass={fieldClass}
+							buttonClass={buttonClass}
+							onTogglePick={() => setPickingDestination((picking) => !picking)}
+							onChange={changeDestination}
+						/>
+					)}
 					<details className="group border-t border-[var(--line)]">
 						<summary className="flex cursor-pointer list-none items-center gap-2 p-4 text-sm font-semibold [&::-webkit-details-marker]:hidden">
 							<History size={16} /> Saved queries & runs{" "}

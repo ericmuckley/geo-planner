@@ -12,6 +12,7 @@ import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { Protocol } from "pmtiles";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { Origin } from "../lib/reachability";
+import { createFuelMapLayer } from "./fuel-map-layer";
 
 setWorkerUrl(workerUrl);
 addProtocol("pmtiles", new Protocol().tile);
@@ -52,5 +53,5 @@ export function createResearchMap(container: HTMLDivElement, origin: Origin) {
 	const marker = new Marker({ color: "#328f97" })
 		.setLngLat([origin.lon, origin.lat])
 		.addTo(map);
-	return { map, marker };
+	return { map, marker, fuel: createFuelMapLayer(map) };
 }

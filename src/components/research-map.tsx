@@ -1,17 +1,22 @@
 import type { GeoJSONSource, Map as MapLibreMap, Marker } from "maplibre-gl";
 import { type RefObject, useEffect, useRef, useState } from "react";
 import type { ExperimentResult } from "../lib/experiment";
+import type { FuelLocations } from "../lib/fuel-locations";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
 import { cn } from "../lib/utils";
+import type { createFuelMapLayer } from "./fuel-map-layer";
 
 type Props = {
 	origin: Origin;
 	result: ReachabilityResult | null;
+	destination?: Origin | null;
+	fuelLocations?: FuelLocations | null;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
 	fullscreen?: boolean;
 	overlayRef?: RefObject<HTMLElement | null>;
 	onOriginChange: (origin: Origin) => void;
+	onDestinationPick?: (point: Origin) => void;
 	onMapIdle: (id: string, milliseconds: number) => void;
 };
 
@@ -60,6 +65,7 @@ export function ResearchMap(props: Props) {
 	const container = useRef<HTMLDivElement>(null);
 	const mapRef = useRef<MapLibreMap | null>(null);
 	const markerRef = useRef<Marker | null>(null);
+	const fuelRef = useRef<ReturnType<typeof createFuelMapLayer> | null>(null);
 	const current = useRef(props);
 	const [ready, setReady] = useState(false);
 	const [error, setError] = useState<string | null>(null);
@@ -74,21 +80,27 @@ export function ResearchMap(props: Props) {
 		import("./map-client")
 			.then(({ createResearchMap }) => {
 				if (disposed || !container.current) return;
-				const { map, marker } = createResearchMap(
+				const { map, marker, fuel } = createResearchMap(
 					container.current,
 					current.current.origin,
 				);
 				mapRef.current = map;
 				markerRef.current = marker;
+				fuelRef.current = fuel;
 				map
 					.getCanvas()
 					.setAttribute(
 						"aria-label",
 						"Reachability map. Click to select an origin, or use the coordinate fields.",
 					);
-				map.on("click", ({ lngLat }) => {
+				map.on("click", (event) => {
+					if (!current.current.onDestinationPick && fuel.select(event)) return;
+					const { lngLat } = event;
 					if (Math.abs(lngLat.lat) <= 85)
-						current.current.onOriginChange({
+						(
+							current.current.onDestinationPick ??
+							current.current.onOriginChange
+						)({
 							lat: lngLat.lat,
 							lon: lngLat.wrap().lng,
 						});
@@ -182,6 +194,22 @@ export function ResearchMap(props: Props) {
 							"circle-stroke-color": "#fff",
 						},
 					});
+					map.addSource("destination", {
+						type: "geojson",
+						data: { type: "FeatureCollection", features: [] },
+					});
+					map.addLayer({
+						id: "destination-point",
+						type: "circle",
+						source: "destination",
+						paint: {
+							"circle-color": "#713cb7",
+							"circle-radius": 7,
+							"circle-stroke-width": 2,
+							"circle-stroke-color": "#fff",
+						},
+					});
+					fuel.add();
 					setReady(true);
 				});
 				resize = new ResizeObserver(() => {
@@ -221,6 +249,7 @@ export function ResearchMap(props: Props) {
 			mapRef.current?.remove();
 			mapRef.current = null;
 			markerRef.current = null;
+			fuelRef.current = null;
 		};
 	}, []);
 
@@ -232,6 +261,40 @@ export function ResearchMap(props: Props) {
 			map.easeTo({ center: [props.origin.lon, props.origin.lat] });
 		}
 	}, [props.origin, ready]);
+
+	useEffect(() => {
+		if (ready) fuelRef.current?.setLocations(props.fuelLocations);
+	}, [props.fuelLocations, ready]);
+
+	useEffect(() => {
+		if (!ready) return;
+		const point = props.destination;
+		mapRef.current?.getSource<GeoJSONSource>("destination")?.setData({
+			type: "FeatureCollection",
+			features: point
+				? [
+						{
+							type: "Feature",
+							geometry: { type: "Point", coordinates: [point.lon, point.lat] },
+							properties: {},
+						},
+					]
+				: [],
+		});
+	}, [props.destination, ready]);
+
+	useEffect(() => {
+		if (!ready) return;
+		const canvas = mapRef.current?.getCanvas();
+		if (!canvas) return;
+		canvas.style.cursor = props.onDestinationPick ? "crosshair" : "";
+		canvas.setAttribute(
+			"aria-label",
+			props.onDestinationPick
+				? "Reachability map. Click to pick a destination, or enter its coordinates."
+				: "Reachability map. Click to select an origin, or use the coordinate fields.",
+		);
+	}, [props.onDestinationPick, ready]);
 
 	useEffect(() => {
 		const map = mapRef.current;
