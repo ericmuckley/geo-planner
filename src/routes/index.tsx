@@ -17,6 +17,7 @@ import {
 	Save,
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { AreaLayerControls } from "../components/area-layer-controls";
 import { DestinationCheck } from "../components/destination-check";
 import { PlaceLayerControls } from "../components/place-layer-controls";
 import { ResearchMap } from "../components/research-map";
@@ -39,6 +40,7 @@ import {
 	readSavedRuns,
 	writeSavedRuns,
 } from "../lib/saved-runs";
+import { useAreaLayer } from "../lib/use-area-layer";
 import { useCloudHistory } from "../lib/use-cloud-history";
 import { usePlaceLayer } from "../lib/use-place-layer";
 import { cn } from "../lib/utils";
@@ -82,6 +84,14 @@ function Home() {
 	const fuelLayer = usePlaceLayer("fuel", result?.contours);
 	const trailheadLayer = usePlaceLayer("trailheads", result?.contours);
 	const campgroundLayer = usePlaceLayer("campgrounds", result?.contours);
+	const landLayer = useAreaLayer("land");
+	const elevationLayer = useAreaLayer("elevation");
+	const [elevationDraft, setElevationDraft] = useState("5000");
+	const minimumElevationFeet = Number(elevationDraft);
+	const validElevation =
+		elevationDraft !== "" &&
+		minimumElevationFeet >= 0 &&
+		minimumElevationFeet <= 15000;
 	const [activeRun, setActiveRun] = useState<SavedRun | null>(null);
 	const [savedRuns, setSavedRuns] = useState<SavedRun[]>([]);
 	const [historyDirty, setHistoryDirty] = useState(false);
@@ -318,6 +328,11 @@ function Home() {
 					origin={origin}
 					result={result}
 					destination={destination}
+					landGrid={landLayer.grid}
+					elevationGrid={elevationLayer.grid}
+					minimumElevationFeet={
+						validElevation ? minimumElevationFeet : undefined
+					}
 					places={{
 						fuel: fuelLayer.locations,
 						trailheads: trailheadLayer.locations,
@@ -582,6 +597,15 @@ function Home() {
 								trailheads: trailheadLayer,
 								campgrounds: campgroundLayer,
 							}}
+						/>
+					)}
+					{(result || landLayer.enabled || elevationLayer.enabled) && (
+						<AreaLayerControls
+							land={landLayer}
+							elevation={elevationLayer}
+							elevationDraft={elevationDraft}
+							validElevation={validElevation}
+							onElevationChange={setElevationDraft}
 						/>
 					)}
 					{(result || destination) && (

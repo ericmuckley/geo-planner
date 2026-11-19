@@ -3,7 +3,7 @@ import type { Origin, ReachabilityResult } from "./reachability";
 
 type Contours = ReachabilityResult["contours"];
 
-function polygons(contours: Contours) {
+export function contourPolygons(contours: Contours) {
 	return contours.features.flatMap(({ geometry }) => {
 		if (geometry.type === "Polygon") return [geometry.coordinates];
 		if (geometry.type === "MultiPolygon") return geometry.coordinates;
@@ -15,7 +15,7 @@ export function isInEstimatedArea(
 	{ lon, lat }: Origin,
 	contours: Contours,
 ): boolean {
-	return polygons(contours).some((polygon) =>
+	return contourPolygons(contours).some((polygon) =>
 		containsPolygon([lon, lat], polygon),
 	);
 }
@@ -71,7 +71,7 @@ function prepareRing(ring: number[][]) {
 }
 
 export function areaMembership(contours: Contours) {
-	const areas = polygons(contours).map(([outer, ...holes]) => ({
+	const areas = contourPolygons(contours).map(([outer, ...holes]) => ({
 		outer: prepareRing(outer),
 		holes: holes.map(prepareRing),
 	}));

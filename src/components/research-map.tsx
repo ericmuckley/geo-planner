@@ -4,6 +4,7 @@ import type { ExperimentResult } from "../lib/experiment";
 import type { MapPlaces } from "../lib/place-locations";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
 import { cn } from "../lib/utils";
+import { setAreaMapLayer } from "./area-map-layers";
 import type { createPlaceMapLayers } from "./place-map-layers";
 
 type Props = {
@@ -11,6 +12,9 @@ type Props = {
 	result: ReachabilityResult | null;
 	destination?: Origin | null;
 	places?: MapPlaces;
+	landGrid?: Uint16Array | null;
+	elevationGrid?: Uint16Array | null;
+	minimumElevationFeet?: number;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
 	fullscreen?: boolean;
@@ -269,6 +273,24 @@ export function ResearchMap(props: Props) {
 	useEffect(() => {
 		if (ready) placesRef.current?.setLocations(props.places);
 	}, [props.places, ready]);
+
+	const contours = props.result?.contours;
+
+	useEffect(() => {
+		if (ready && mapRef.current)
+			setAreaMapLayer(mapRef.current, "land", contours, props.landGrid);
+	}, [ready, contours, props.landGrid]);
+
+	useEffect(() => {
+		if (ready && mapRef.current)
+			setAreaMapLayer(
+				mapRef.current,
+				"elevation",
+				contours,
+				props.minimumElevationFeet === undefined ? null : props.elevationGrid,
+				props.minimumElevationFeet,
+			);
+	}, [ready, contours, props.elevationGrid, props.minimumElevationFeet]);
 
 	useEffect(() => {
 		if (!ready) return;
