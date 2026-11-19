@@ -14,6 +14,7 @@ import { Route as ExperimentRouteImport } from './routes/experiment'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as ApiEstimateRouteImport } from './routes/api.estimate'
 import { Route as ApiExperimentRouteImport } from './routes/api.experiment'
+import { Route as ApiPlaceSearchRouteImport } from './routes/api.place-search'
 import { Route as ApiReachabilityRouteImport } from './routes/api.reachability'
 import { Route as ApiSavedRunsRouteImport } from './routes/api.saved-runs'
 
@@ -42,6 +43,11 @@ const ApiExperimentRoute = ApiExperimentRouteImport.update({
   path: '/api/experiment',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPlaceSearchRoute = ApiPlaceSearchRouteImport.update({
+  id: '/api/place-search',
+  path: '/api/place-search',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiReachabilityRoute = ApiReachabilityRouteImport.update({
   id: '/api/reachability',
   path: '/api/reachability',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/mcp': typeof McpRoute
   '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
+  '/api/place-search': typeof ApiPlaceSearchRoute
   '/api/reachability': typeof ApiReachabilityRoute
   '/api/saved-runs': typeof ApiSavedRunsRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/mcp': typeof McpRoute
   '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
+  '/api/place-search': typeof ApiPlaceSearchRoute
   '/api/reachability': typeof ApiReachabilityRoute
   '/api/saved-runs': typeof ApiSavedRunsRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/mcp': typeof McpRoute
   '/api/estimate': typeof ApiEstimateRoute
   '/api/experiment': typeof ApiExperimentRoute
+  '/api/place-search': typeof ApiPlaceSearchRoute
   '/api/reachability': typeof ApiReachabilityRoute
   '/api/saved-runs': typeof ApiSavedRunsRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/api/estimate'
     | '/api/experiment'
+    | '/api/place-search'
     | '/api/reachability'
     | '/api/saved-runs'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/api/estimate'
     | '/api/experiment'
+    | '/api/place-search'
     | '/api/reachability'
     | '/api/saved-runs'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/mcp'
     | '/api/estimate'
     | '/api/experiment'
+    | '/api/place-search'
     | '/api/reachability'
     | '/api/saved-runs'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRoute
   ApiEstimateRoute: typeof ApiEstimateRoute
   ApiExperimentRoute: typeof ApiExperimentRoute
+  ApiPlaceSearchRoute: typeof ApiPlaceSearchRoute
   ApiReachabilityRoute: typeof ApiReachabilityRoute
   ApiSavedRunsRoute: typeof ApiSavedRunsRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiExperimentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/place-search': {
+      id: '/api/place-search'
+      path: '/api/place-search'
+      fullPath: '/api/place-search'
+      preLoaderRoute: typeof ApiPlaceSearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/reachability': {
       id: '/api/reachability'
       path: '/api/reachability'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   McpRoute: McpRoute,
   ApiEstimateRoute: ApiEstimateRoute,
   ApiExperimentRoute: ApiExperimentRoute,
+  ApiPlaceSearchRoute: ApiPlaceSearchRoute,
   ApiReachabilityRoute: ApiReachabilityRoute,
   ApiSavedRunsRoute: ApiSavedRunsRoute,
 }

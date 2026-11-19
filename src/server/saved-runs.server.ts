@@ -1,6 +1,7 @@
 import { createHash, randomBytes } from "node:crypto";
 import type { SavedRun } from "../lib/reachability";
 import { savedRunsSchema } from "../lib/saved-runs";
+import { readRequestJson } from "./read-request-json.server";
 import {
 	historyStore,
 	type SavedHistoryStore,
@@ -8,29 +9,6 @@ import {
 
 const cookieName = "geo-planner-history";
 const maxBodyBytes = 262_144;
-
-async function readBody(request: Request) {
-	const reader = request.body?.getReader();
-	if (!reader) throw new Error("Missing body");
-	const decoder = new TextDecoder();
-	let bytes = 0;
-	let body = "";
-	try {
-		while (true) {
-			const chunk = await reader.read();
-			if (chunk.done) break;
-			bytes += chunk.value.byteLength;
-			if (bytes > maxBodyBytes) {
-				await reader.cancel();
-				throw new Error("Body too large");
-			}
-			body += decoder.decode(chunk.value, { stream: true });
-		}
-		return JSON.parse(body + decoder.decode());
-	} finally {
-		reader.releaseLock();
-	}
-}
 
 export async function handleSavedRuns(
 	request: Request,
@@ -72,7 +50,7 @@ export async function handleSavedRuns(
 			return json({ error: "Expected application/json." }, 415);
 		let body: unknown;
 		try {
-			body = await readBody(request);
+			body = await readRequestJson(request, maxBodyBytes);
 		} catch {
 			return json(
 				{ error: "Expected a JSON history batch smaller than 256 KiB." },

@@ -7,6 +7,7 @@ import {
 	type ReachabilityResult,
 } from "../lib/reachability";
 import { cn } from "../lib/utils";
+import { PlaceSearch } from "./place-search";
 
 type Props = {
 	result: ReachabilityResult | null;
@@ -52,6 +53,16 @@ export function DestinationCheck({
 			>
 				<Crosshair size={16} aria-hidden="true" /> Check a destination
 			</h2>
+			<PlaceSearch
+				target="destination"
+				fieldClass={fieldClass}
+				buttonClass={buttonClass}
+				onSelect={(point) => {
+					setLat(point.lat.toFixed(6));
+					setLon(point.lon.toFixed(6));
+					onChange(point);
+				}}
+			/>
 			<button
 				type="button"
 				onClick={onTogglePick}

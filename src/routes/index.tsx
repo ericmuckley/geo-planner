@@ -20,6 +20,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AreaLayerControls } from "../components/area-layer-controls";
 import { DestinationCheck } from "../components/destination-check";
 import { PlaceLayerControls } from "../components/place-layer-controls";
+import { PlaceSearch } from "../components/place-search";
 import { ResearchMap } from "../components/research-map";
 import {
 	defaultQuery,
@@ -407,8 +408,16 @@ function Home() {
 						>
 							<MapPin size={16} /> Starting point
 						</h2>
-						<p className="mb-4 mt-1 text-xs text-[var(--sea-ink-soft)]">
-							Click the map or enter coordinates below.
+						<div className="my-3">
+							<PlaceSearch
+								target="starting point"
+								fieldClass={fieldClass}
+								buttonClass={buttonClass}
+								onSelect={selectOrigin}
+							/>
+						</div>
+						<p className="mb-3 text-xs text-[var(--sea-ink-soft)]">
+							You can also click the map or enter coordinates.
 						</p>
 						<form
 							onSubmit={(event) => {
