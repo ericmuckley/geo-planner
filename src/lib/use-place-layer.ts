@@ -1,27 +1,29 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-	type FuelCatalog,
-	fuelCatalogSchema,
-	fuelCatalogUrl,
-	fuelLocationsInArea,
-} from "./fuel-locations";
+	type PlaceCatalog,
+	type PlaceKind,
+	parsePlaceCatalog,
+	placeLayers,
+	placeLocationsInArea,
+} from "./place-locations";
 import type { ReachabilityResult } from "./reachability";
 
-export function useFuelLayer(
+export function usePlaceLayer(
+	kind: PlaceKind,
 	contours: ReachabilityResult["contours"] | undefined,
 ) {
 	const [enabled, setEnabled] = useState(false);
-	const [catalog, setCatalog] = useState<FuelCatalog | null>(null);
+	const [catalog, setCatalog] = useState<PlaceCatalog | null>(null);
 	const [loadError, setLoadError] = useState(false);
 
 	useEffect(() => {
 		if (!enabled || catalog) return;
 		const abort = new AbortController();
 		setLoadError(false);
-		fetch(fuelCatalogUrl, { signal: abort.signal })
+		fetch(placeLayers[kind].url, { signal: abort.signal })
 			.then(async (response) => {
-				if (!response.ok) throw new Error("Could not load fuel locations");
-				return fuelCatalogSchema.parse(await response.json());
+				if (!response.ok) throw new Error("Could not load mapped places");
+				return parsePlaceCatalog(kind, await response.json());
 			})
 			.then((data) => {
 				if (!abort.signal.aborted) setCatalog(data);
@@ -30,14 +32,14 @@ export function useFuelLayer(
 				if (!abort.signal.aborted) setLoadError(true);
 			});
 		return () => abort.abort();
-	}, [enabled, catalog]);
+	}, [enabled, catalog, kind]);
 
 	const locations = useMemo(
 		() =>
 			enabled && catalog && contours
-				? fuelLocationsInArea(catalog, contours)
+				? placeLocationsInArea(kind, catalog, contours)
 				: null,
-		[enabled, catalog, contours],
+		[enabled, catalog, contours, kind],
 	);
 	return {
 		enabled,

@@ -1,16 +1,16 @@
 import type { GeoJSONSource, Map as MapLibreMap, Marker } from "maplibre-gl";
 import { type RefObject, useEffect, useRef, useState } from "react";
 import type { ExperimentResult } from "../lib/experiment";
-import type { FuelLocations } from "../lib/fuel-locations";
+import type { MapPlaces } from "../lib/place-locations";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
 import { cn } from "../lib/utils";
-import type { createFuelMapLayer } from "./fuel-map-layer";
+import type { createPlaceMapLayers } from "./place-map-layers";
 
 type Props = {
 	origin: Origin;
 	result: ReachabilityResult | null;
 	destination?: Origin | null;
-	fuelLocations?: FuelLocations | null;
+	places?: MapPlaces;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
 	fullscreen?: boolean;
@@ -65,7 +65,9 @@ export function ResearchMap(props: Props) {
 	const container = useRef<HTMLDivElement>(null);
 	const mapRef = useRef<MapLibreMap | null>(null);
 	const markerRef = useRef<Marker | null>(null);
-	const fuelRef = useRef<ReturnType<typeof createFuelMapLayer> | null>(null);
+	const placesRef = useRef<ReturnType<typeof createPlaceMapLayers> | null>(
+		null,
+	);
 	const current = useRef(props);
 	const [ready, setReady] = useState(false);
 	const [error, setError] = useState<string | null>(null);
@@ -80,13 +82,13 @@ export function ResearchMap(props: Props) {
 		import("./map-client")
 			.then(({ createResearchMap }) => {
 				if (disposed || !container.current) return;
-				const { map, marker, fuel } = createResearchMap(
+				const { map, marker, places } = createResearchMap(
 					container.current,
 					current.current.origin,
 				);
 				mapRef.current = map;
 				markerRef.current = marker;
-				fuelRef.current = fuel;
+				placesRef.current = places;
 				map
 					.getCanvas()
 					.setAttribute(
@@ -94,7 +96,9 @@ export function ResearchMap(props: Props) {
 						"Reachability map. Click to select an origin, or use the coordinate fields.",
 					);
 				map.on("click", (event) => {
-					if (!current.current.onDestinationPick && fuel.select(event)) return;
+					places.closePopup();
+					if (!current.current.onDestinationPick && places.select(event))
+						return;
 					const { lngLat } = event;
 					if (Math.abs(lngLat.lat) <= 85)
 						(
@@ -209,7 +213,7 @@ export function ResearchMap(props: Props) {
 							"circle-stroke-color": "#fff",
 						},
 					});
-					fuel.add();
+					if (current.current.places) places.add();
 					setReady(true);
 				});
 				resize = new ResizeObserver(() => {
@@ -249,7 +253,7 @@ export function ResearchMap(props: Props) {
 			mapRef.current?.remove();
 			mapRef.current = null;
 			markerRef.current = null;
-			fuelRef.current = null;
+			placesRef.current = null;
 		};
 	}, []);
 
@@ -263,8 +267,8 @@ export function ResearchMap(props: Props) {
 	}, [props.origin, ready]);
 
 	useEffect(() => {
-		if (ready) fuelRef.current?.setLocations(props.fuelLocations);
-	}, [props.fuelLocations, ready]);
+		if (ready) placesRef.current?.setLocations(props.places);
+	}, [props.places, ready]);
 
 	useEffect(() => {
 		if (!ready) return;

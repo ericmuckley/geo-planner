@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DestinationCheck } from "../components/destination-check";
-import { FuelLayerControl } from "../components/fuel-layer-control";
+import { PlaceLayerControls } from "../components/place-layer-controls";
 import { ResearchMap } from "../components/research-map";
 import {
 	defaultQuery,
@@ -40,7 +40,7 @@ import {
 	writeSavedRuns,
 } from "../lib/saved-runs";
 import { useCloudHistory } from "../lib/use-cloud-history";
-import { useFuelLayer } from "../lib/use-fuel-layer";
+import { usePlaceLayer } from "../lib/use-place-layer";
 import { cn } from "../lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -79,7 +79,9 @@ function Home() {
 	const [config, setConfig] = useState<EngineConfig | null>(null);
 	const [configError, setConfigError] = useState<string | null>(null);
 	const [result, setResult] = useState<ReachabilityResult | null>(null);
-	const fuelLayer = useFuelLayer(result?.contours);
+	const fuelLayer = usePlaceLayer("fuel", result?.contours);
+	const trailheadLayer = usePlaceLayer("trailheads", result?.contours);
+	const campgroundLayer = usePlaceLayer("campgrounds", result?.contours);
 	const [activeRun, setActiveRun] = useState<SavedRun | null>(null);
 	const [savedRuns, setSavedRuns] = useState<SavedRun[]>([]);
 	const [historyDirty, setHistoryDirty] = useState(false);
@@ -316,7 +318,11 @@ function Home() {
 					origin={origin}
 					result={result}
 					destination={destination}
-					fuelLocations={fuelLayer.locations}
+					places={{
+						fuel: fuelLayer.locations,
+						trailheads: trailheadLayer.locations,
+						campgrounds: campgroundLayer.locations,
+					}}
 					onDestinationPick={pickingDestination ? changeDestination : undefined}
 					showContour={showContour}
 					onOriginChange={selectOrigin}
@@ -566,8 +572,17 @@ function Home() {
 									: "Choose a starting point and driving time."}
 						</output>
 					</section>
-					{(result || fuelLayer.enabled) && (
-						<FuelLayerControl layer={fuelLayer} />
+					{(result ||
+						fuelLayer.enabled ||
+						trailheadLayer.enabled ||
+						campgroundLayer.enabled) && (
+						<PlaceLayerControls
+							layers={{
+								fuel: fuelLayer,
+								trailheads: trailheadLayer,
+								campgrounds: campgroundLayer,
+							}}
+						/>
 					)}
 					{(result || destination) && (
 						<DestinationCheck
