@@ -1,7 +1,7 @@
 import type { GeoJSONSource, Map as MapLibreMap, Marker } from "maplibre-gl";
 import { type RefObject, useEffect, useRef, useState } from "react";
 import type { ExperimentResult } from "../lib/experiment";
-import type { MapPlaces } from "../lib/place-locations";
+import type { MapPlaces, OutdoorPlaceSelection } from "../lib/place-locations";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
 import { cn } from "../lib/utils";
 import { setAreaMapLayer } from "./area-map-layers";
@@ -12,6 +12,7 @@ type Props = {
 	result: ReachabilityResult | null;
 	destination?: Origin | null;
 	places?: MapPlaces;
+	selectedOutdoorPlace?: OutdoorPlaceSelection | null;
 	landGrid?: Uint16Array | null;
 	elevationGrid?: Uint16Array | null;
 	minimumElevationFeet?: number;
@@ -273,6 +274,12 @@ export function ResearchMap(props: Props) {
 	useEffect(() => {
 		if (ready) placesRef.current?.setLocations(props.places);
 	}, [props.places, ready]);
+
+	useEffect(() => {
+		if (ready && props.selectedOutdoorPlace) {
+			placesRef.current?.focusPlace(props.selectedOutdoorPlace);
+		}
+	}, [props.selectedOutdoorPlace, ready]);
 
 	const contours = props.result?.contours;
 

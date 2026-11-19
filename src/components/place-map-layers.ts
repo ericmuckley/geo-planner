@@ -2,10 +2,12 @@ import {
 	type GeoJSONSource,
 	type Map as MapLibreMap,
 	type MapMouseEvent,
+	Marker,
 	Popup,
 } from "maplibre-gl";
 import {
 	type MapPlaces,
+	type OutdoorPlaceSelection,
 	type PlaceLocations,
 	placeAttribution,
 	placeAttributionUrl,
@@ -22,6 +24,11 @@ const pointLayers = placeKinds.flatMap((kind) => [
 export function createPlaceMapLayers(map: MapLibreMap) {
 	const popup = new Popup({ closeOnClick: false, maxWidth: "220px" });
 	let displayed: MapPlaces | undefined;
+	let focusMarker: Marker | undefined;
+	popup.on("close", () => {
+		focusMarker?.remove();
+		focusMarker = undefined;
+	});
 
 	function add() {
 		for (const kind of placeKinds) {
@@ -79,6 +86,35 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 		displayed = locations;
 	}
 
+	function focusPlace({ kind, location }: OutdoorPlaceSelection) {
+		if (!displayed?.[kind]?.features.includes(location)) return;
+		const [lon, lat] = location.geometry.coordinates;
+		const coordinates: [number, number] = [lon, lat];
+		popup.remove();
+
+		const details = document.createElement("div");
+		const name = document.createElement("strong");
+		name.textContent = location.properties.name;
+		const position = document.createElement("div");
+		position.textContent = `${placeLayers[kind].singular} · ${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+		details.append(name, position);
+
+		map.easeTo({ center: coordinates, zoom: Math.max(14, map.getZoom()) });
+		popup
+			.setOffset(28)
+			.setLngLat(coordinates)
+			.setDOMContent(details)
+			.addTo(map);
+		// A list selection needs a visible pin even when the source is clustered.
+		focusMarker = new Marker({
+			color: placeLayers[kind].color,
+			className: "outdoor-place-focus",
+		})
+			.setLngLat(coordinates)
+			.addTo(map);
+		focusMarker.getElement().style.pointerEvents = "none";
+	}
+
 	function select(event: MapMouseEvent) {
 		if (!map.getLayer(pointLayers[0])) return false;
 		const [feature] = map.queryRenderedFeatures(event.point, {
@@ -97,10 +133,16 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 				})
 				.catch(() => {});
 		} else if (typeof name === "string") {
-			popup.setLngLat([lon, lat]).setText(name).addTo(map);
+			popup.setOffset(0).setLngLat([lon, lat]).setText(name).addTo(map);
 		}
 		return true;
 	}
 
-	return { add, setLocations, select, closePopup: () => popup.remove() };
+	return {
+		add,
+		setLocations,
+		select,
+		focusPlace,
+		closePopup: () => popup.remove(),
+	};
 }

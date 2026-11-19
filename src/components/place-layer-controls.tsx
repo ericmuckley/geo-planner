@@ -1,6 +1,7 @@
 import { Fuel, Signpost, Tent } from "lucide-react";
 import type { ReactNode } from "react";
 import {
+	type OutdoorPlaceSelection,
 	type PlaceKind,
 	placeAttribution,
 	placeAttributionUrl,
@@ -8,6 +9,7 @@ import {
 	placeLayers,
 } from "../lib/place-locations";
 import type { usePlaceLayer } from "../lib/use-place-layer";
+import { OutdoorPlaceResults } from "./outdoor-place-results";
 
 const icons = { fuel: Fuel, trailheads: Signpost, campgrounds: Tent };
 
@@ -16,11 +18,13 @@ export function PlaceLayerControls({
 	outdoorFilters,
 	filtersActive,
 	filtersPending,
+	onOutdoorPlaceSelect,
 }: {
 	layers: Record<PlaceKind, ReturnType<typeof usePlaceLayer>>;
 	outdoorFilters?: ReactNode;
 	filtersActive: boolean;
 	filtersPending: boolean;
+	onOutdoorPlaceSelect: (selection: OutdoorPlaceSelection) => void;
 }) {
 	return (
 		<section
@@ -83,6 +87,13 @@ export function PlaceLayerControls({
 											Download data
 										</a>
 									</p>
+								)}
+								{kind !== "fuel" && layer.locations && (count ?? 0) > 0 && (
+									<OutdoorPlaceResults
+										kind={kind}
+										locations={layer.locations}
+										onSelect={onOutdoorPlaceSelect}
+									/>
 								)}
 							</>
 						)}

@@ -61,6 +61,12 @@ export function parsePlaceCatalog(kind: PlaceKind, data: unknown) {
 
 export type PlaceCatalog = z.infer<typeof outdoorCatalogSchema>;
 export type PlaceLocations = FeatureCollection<Point, { name: string }>;
+export type OutdoorPlaceKind = Exclude<PlaceKind, "fuel">;
+export type OutdoorPlaceSelection = {
+	kind: OutdoorPlaceKind;
+	location: PlaceLocations["features"][number];
+};
+
 export type MapPlaces = Record<PlaceKind, PlaceLocations | null>;
 export type PlaceTerrainFilter = (locations: PlaceLocations) => PlaceLocations;
 

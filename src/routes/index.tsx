@@ -23,7 +23,10 @@ import { OutdoorPlaceFilters } from "../components/outdoor-place-filters";
 import { PlaceLayerControls } from "../components/place-layer-controls";
 import { PlaceSearch } from "../components/place-search";
 import { ResearchMap } from "../components/research-map";
-import { placeTerrainFilter } from "../lib/place-locations";
+import {
+	type OutdoorPlaceSelection,
+	placeTerrainFilter,
+} from "../lib/place-locations";
 import {
 	defaultQuery,
 	type EngineConfig,
@@ -126,6 +129,8 @@ function Home() {
 	const outdoorFiltersActive = publicLandOnly || elevationOnly;
 	const showOutdoorFilters =
 		trailheadLayer.enabled || campgroundLayer.enabled || outdoorFiltersActive;
+	const [selectedOutdoorPlace, setSelectedOutdoorPlace] =
+		useState<OutdoorPlaceSelection | null>(null);
 	const [activeRun, setActiveRun] = useState<SavedRun | null>(null);
 	const [savedRuns, setSavedRuns] = useState<SavedRun[]>([]);
 	const [historyDirty, setHistoryDirty] = useState(false);
@@ -362,6 +367,7 @@ function Home() {
 					origin={origin}
 					result={result}
 					destination={destination}
+					selectedOutdoorPlace={selectedOutdoorPlace}
 					landGrid={landLayer.enabled ? landLayer.grid : null}
 					elevationGrid={elevationLayer.enabled ? elevationLayer.grid : null}
 					minimumElevationFeet={
@@ -638,6 +644,10 @@ function Home() {
 							}}
 							filtersActive={outdoorFiltersActive}
 							filtersPending={Boolean(result) && outdoorFilter === null}
+							onOutdoorPlaceSelect={(selection) => {
+								setPickingDestination(false);
+								setSelectedOutdoorPlace(selection);
+							}}
 							outdoorFilters={
 								showOutdoorFilters && (
 									<OutdoorPlaceFilters
