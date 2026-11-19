@@ -16,12 +16,14 @@ import {
 	RotateCcw,
 	Save,
 } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AreaLayerControls } from "../components/area-layer-controls";
 import { DestinationCheck } from "../components/destination-check";
+import { OutdoorPlaceFilters } from "../components/outdoor-place-filters";
 import { PlaceLayerControls } from "../components/place-layer-controls";
 import { PlaceSearch } from "../components/place-search";
 import { ResearchMap } from "../components/research-map";
+import { placeTerrainFilter } from "../lib/place-locations";
 import {
 	defaultQuery,
 	type EngineConfig,
@@ -82,17 +84,48 @@ function Home() {
 	const [config, setConfig] = useState<EngineConfig | null>(null);
 	const [configError, setConfigError] = useState<string | null>(null);
 	const [result, setResult] = useState<ReachabilityResult | null>(null);
-	const fuelLayer = usePlaceLayer("fuel", result?.contours);
-	const trailheadLayer = usePlaceLayer("trailheads", result?.contours);
-	const campgroundLayer = usePlaceLayer("campgrounds", result?.contours);
-	const landLayer = useAreaLayer("land");
-	const elevationLayer = useAreaLayer("elevation");
+	const [publicLandOnly, setPublicLandOnly] = useState(false);
+	const [elevationOnly, setElevationOnly] = useState(false);
+	const landLayer = useAreaLayer("land", publicLandOnly);
+	const elevationLayer = useAreaLayer("elevation", elevationOnly);
 	const [elevationDraft, setElevationDraft] = useState("5000");
 	const minimumElevationFeet = Number(elevationDraft);
 	const validElevation =
 		elevationDraft !== "" &&
 		minimumElevationFeet >= 0 &&
 		minimumElevationFeet <= 15000;
+	const minimumElevation = {
+		value: elevationDraft,
+		valid: validElevation,
+		onChange: setElevationDraft,
+	};
+	const filterLand = publicLandOnly ? landLayer.grid : undefined;
+	const filterElevation = elevationOnly ? elevationLayer.grid : undefined;
+	const filterElevationFeet = validElevation ? minimumElevationFeet : null;
+	const outdoorFilter = useMemo(
+		() =>
+			placeTerrainFilter(
+				filterLand,
+				filterElevation === undefined
+					? undefined
+					: { grid: filterElevation, minimumFeet: filterElevationFeet },
+			),
+		[filterLand, filterElevation, filterElevationFeet],
+	);
+	const fuelLayer = usePlaceLayer("fuel", result?.contours);
+	const trailheadLayer = usePlaceLayer(
+		"trailheads",
+		result?.contours,
+		outdoorFilter,
+	);
+	const campgroundLayer = usePlaceLayer(
+		"campgrounds",
+		result?.contours,
+		outdoorFilter,
+	);
+	const outdoorFiltersActive = publicLandOnly || elevationOnly;
+	const showOutdoorFilters =
+		trailheadLayer.enabled || campgroundLayer.enabled || outdoorFiltersActive;
 	const [activeRun, setActiveRun] = useState<SavedRun | null>(null);
 	const [savedRuns, setSavedRuns] = useState<SavedRun[]>([]);
 	const [historyDirty, setHistoryDirty] = useState(false);
@@ -329,8 +362,8 @@ function Home() {
 					origin={origin}
 					result={result}
 					destination={destination}
-					landGrid={landLayer.grid}
-					elevationGrid={elevationLayer.grid}
+					landGrid={landLayer.enabled ? landLayer.grid : null}
+					elevationGrid={elevationLayer.enabled ? elevationLayer.grid : null}
 					minimumElevationFeet={
 						validElevation ? minimumElevationFeet : undefined
 					}
@@ -596,25 +629,35 @@ function Home() {
 									: "Choose a starting point and driving time."}
 						</output>
 					</section>
-					{(result ||
-						fuelLayer.enabled ||
-						trailheadLayer.enabled ||
-						campgroundLayer.enabled) && (
+					{(result || fuelLayer.enabled || showOutdoorFilters) && (
 						<PlaceLayerControls
 							layers={{
 								fuel: fuelLayer,
 								trailheads: trailheadLayer,
 								campgrounds: campgroundLayer,
 							}}
+							filtersActive={outdoorFiltersActive}
+							filtersPending={Boolean(result) && outdoorFilter === null}
+							outdoorFilters={
+								showOutdoorFilters && (
+									<OutdoorPlaceFilters
+										publicLandOnly={publicLandOnly}
+										onPublicLandOnlyChange={setPublicLandOnly}
+										elevationOnly={elevationOnly}
+										onElevationOnlyChange={setElevationOnly}
+										minimumElevation={minimumElevation}
+										land={landLayer}
+										elevation={elevationLayer}
+									/>
+								)
+							}
 						/>
 					)}
 					{(result || landLayer.enabled || elevationLayer.enabled) && (
 						<AreaLayerControls
 							land={landLayer}
 							elevation={elevationLayer}
-							elevationDraft={elevationDraft}
-							validElevation={validElevation}
-							onElevationChange={setElevationDraft}
+							minimumElevation={elevationOnly ? undefined : minimumElevation}
 						/>
 					)}
 					{(result || destination) && (

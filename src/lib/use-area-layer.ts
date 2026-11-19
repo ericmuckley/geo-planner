@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { type AreaLayerKind, loadAreaGrid } from "./area-layers";
 
-export function useAreaLayer(kind: AreaLayerKind) {
+export function useAreaLayer(kind: AreaLayerKind, usedByFilter = false) {
 	const [enabled, setEnabled] = useState(false);
 	const [grid, setGrid] = useState<Uint16Array | null>(null);
 	const [loadError, setLoadError] = useState(false);
+	const [attempt, setAttempt] = useState(0);
+	const needsGrid = enabled || usedByFilter;
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: Retrying starts a fresh request.
 	useEffect(() => {
-		if (!enabled || grid) return;
+		if (!needsGrid || grid) return;
 		const controller = new AbortController();
 		setLoadError(false);
 		loadAreaGrid(kind, controller.signal)
@@ -18,7 +21,13 @@ export function useAreaLayer(kind: AreaLayerKind) {
 				if (!controller.signal.aborted) setLoadError(true);
 			});
 		return () => controller.abort();
-	}, [enabled, grid, kind]);
+	}, [needsGrid, grid, kind, attempt]);
 
-	return { enabled, setEnabled, grid: enabled ? grid : null, loadError };
+	return {
+		enabled,
+		setEnabled,
+		grid,
+		loadError,
+		retry: () => setAttempt((current) => current + 1),
+	};
 }

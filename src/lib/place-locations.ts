@@ -1,5 +1,6 @@
 import type { FeatureCollection, Point } from "geojson";
 import { z } from "zod";
+import { elevationMatches, gridCellIndex } from "./area-layers";
 import { areaMembership } from "./contour-membership";
 import type { ReachabilityResult } from "./reachability";
 
@@ -61,6 +62,34 @@ export function parsePlaceCatalog(kind: PlaceKind, data: unknown) {
 export type PlaceCatalog = z.infer<typeof outdoorCatalogSchema>;
 export type PlaceLocations = FeatureCollection<Point, { name: string }>;
 export type MapPlaces = Record<PlaceKind, PlaceLocations | null>;
+export type PlaceTerrainFilter = (locations: PlaceLocations) => PlaceLocations;
+
+export function placeTerrainFilter(
+	land: Uint16Array | null | undefined,
+	elevation?: { grid: Uint16Array | null; minimumFeet: number | null },
+): PlaceTerrainFilter | null | undefined {
+	const elevationGrid = elevation?.grid;
+	const minimumFeet = elevation?.minimumFeet;
+	if (land === null || elevationGrid === null || minimumFeet === null) {
+		return null;
+	}
+	if (!land && !elevationGrid) return undefined;
+
+	return (locations) => ({
+		...locations,
+		features: locations.features.filter(({ geometry }) => {
+			const [lon, lat] = geometry.coordinates;
+			const index = gridCellIndex(lon, lat);
+			return (
+				index !== undefined &&
+				(!land || land[index] > 0) &&
+				(!elevationGrid ||
+					minimumFeet === undefined ||
+					elevationMatches(elevationGrid[index], minimumFeet))
+			);
+		}),
+	});
+}
 
 export function placeLocationsInArea(
 	kind: PlaceKind,

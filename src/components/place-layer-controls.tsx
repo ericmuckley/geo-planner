@@ -1,4 +1,5 @@
 import { Fuel, Signpost, Tent } from "lucide-react";
+import type { ReactNode } from "react";
 import {
 	type PlaceKind,
 	placeAttribution,
@@ -12,8 +13,14 @@ const icons = { fuel: Fuel, trailheads: Signpost, campgrounds: Tent };
 
 export function PlaceLayerControls({
 	layers,
+	outdoorFilters,
+	filtersActive,
+	filtersPending,
 }: {
 	layers: Record<PlaceKind, ReturnType<typeof usePlaceLayer>>;
+	outdoorFilters?: ReactNode;
+	filtersActive: boolean;
+	filtersPending: boolean;
 }) {
 	return (
 		<section
@@ -26,6 +33,12 @@ export function PlaceLayerControls({
 				const plural = label.toLowerCase();
 				const Icon = icons[kind];
 				const count = layer.locations?.features.length;
+				const filtered = kind !== "fuel" && filtersActive;
+				const countSuffix = !filtered
+					? "in this area"
+					: count === 1
+						? "matches the filters"
+						: "match the filters";
 				return (
 					<div className="space-y-2" key={kind}>
 						<label className="flex cursor-pointer items-center gap-2 text-sm font-semibold">
@@ -46,10 +59,12 @@ export function PlaceLayerControls({
 										: !layer.sourceDate
 											? `Loading ${plural}…`
 											: count === undefined
-												? "Waiting for an estimated area."
+												? filtered && filtersPending
+													? "Waiting for place filters."
+													: "Waiting for an estimated area."
 												: count === 0
-													? `No mapped ${plural} in this area.`
-													: `${count.toLocaleString()} mapped ${count === 1 ? singular : plural} in this area.`}
+													? `No mapped ${plural} ${filtered ? "match the filters" : "in this area"}.`
+													: `${count.toLocaleString()} mapped ${count === 1 ? singular : plural} ${countSuffix}.`}
 								</output>
 								{layer.sourceDate && (
 									<p className="text-xs text-[var(--sea-ink-soft)]">
@@ -74,6 +89,7 @@ export function PlaceLayerControls({
 					</div>
 				);
 			})}
+			{outdoorFilters}
 		</section>
 	);
 }

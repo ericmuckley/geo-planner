@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
 	type PlaceCatalog,
 	type PlaceKind,
+	type PlaceTerrainFilter,
 	parsePlaceCatalog,
 	placeLayers,
 	placeLocationsInArea,
@@ -11,6 +12,7 @@ import type { ReachabilityResult } from "./reachability";
 export function usePlaceLayer(
 	kind: PlaceKind,
 	contours: ReachabilityResult["contours"] | undefined,
+	filter?: PlaceTerrainFilter | null,
 ) {
 	const [enabled, setEnabled] = useState(false);
 	const [catalog, setCatalog] = useState<PlaceCatalog | null>(null);
@@ -34,13 +36,17 @@ export function usePlaceLayer(
 		return () => abort.abort();
 	}, [enabled, catalog, kind]);
 
-	const locations = useMemo(
+	const placesInArea = useMemo(
 		() =>
 			enabled && catalog && contours
 				? placeLocationsInArea(kind, catalog, contours)
 				: null,
 		[enabled, catalog, contours, kind],
 	);
+	const locations = useMemo(() => {
+		if (!placesInArea || filter === null) return null;
+		return filter ? filter(placesInArea) : placesInArea;
+	}, [placesInArea, filter]);
 	return {
 		enabled,
 		setEnabled,

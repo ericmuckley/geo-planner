@@ -1,8 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { gridWidth, pixelLocation } from "../lib/area-layers";
 import {
+	type PlaceLocations,
 	parsePlaceCatalog,
 	placeLocationsInArea,
+	placeTerrainFilter,
 } from "../lib/place-locations";
 import { contoursSchema } from "../lib/reachability";
 
@@ -90,4 +93,40 @@ test("place catalogs reject malformed source metadata and coordinates", () => {
 			places: stations,
 		}),
 	);
+});
+
+test("outdoor filters combine the same grid cell, preserve exact cutoff, and exclude missing data", () => {
+	const land = Uint16Array.of(1, 1, 0, 1);
+	const elevation = Uint16Array.of(32768 + 1524, 32768 + 1523, 32768 + 1820, 0);
+	const locations: PlaceLocations = {
+		type: "FeatureCollection",
+		features: [0, 1, 2, 3, gridWidth].map((column) => ({
+			type: "Feature",
+			id: column,
+			geometry: {
+				type: "Point",
+				coordinates: pixelLocation(column + 0.5, 0.5),
+			},
+			properties: { name: `Test point ${column}` },
+		})),
+	};
+	const matches = (
+		filter: NonNullable<ReturnType<typeof placeTerrainFilter>>,
+	) => filter(locations).features.map(({ id }) => id);
+	const cutoff = { grid: elevation, minimumFeet: 5000 };
+	const landOnly = placeTerrainFilter(land);
+	const elevationOnly = placeTerrainFilter(undefined, cutoff);
+	const combined = placeTerrainFilter(land, cutoff);
+	assert.ok(landOnly && elevationOnly && combined);
+	assert.deepEqual(matches(landOnly), [0, 1, 3]);
+	assert.deepEqual(matches(elevationOnly), [0, 2]);
+	assert.deepEqual(matches(combined), [0]);
+	assert.equal(placeTerrainFilter(undefined), undefined);
+	assert.equal(placeTerrainFilter(null, cutoff), null);
+	assert.equal(placeTerrainFilter(land, { ...cutoff, grid: null }), null);
+	assert.equal(
+		placeTerrainFilter(land, { ...cutoff, minimumFeet: null }),
+		null,
+	);
+	assert.equal(locations.features.length, 5);
 });

@@ -6,6 +6,79 @@ import type { useAreaLayer } from "../lib/use-area-layer";
 const icons = { land: MapIcon, elevation: Mountain };
 type Layer = ReturnType<typeof useAreaLayer>;
 
+export function AreaLayerDataStatus({
+	kind,
+	layer,
+}: {
+	kind: AreaLayerKind;
+	layer: Layer;
+}) {
+	const { label, attribution, attributionUrl } = areaLayers[kind];
+	if (layer.grid) {
+		return (
+			<p className="text-xs text-[var(--sea-ink-soft)]">
+				<a href={attributionUrl} className="underline">
+					{attribution}
+				</a>
+				{" · Coarse grid (~2 km)"}
+			</p>
+		);
+	}
+	return (
+		<div className="flex items-baseline gap-2 text-xs" aria-live="polite">
+			<span>
+				{layer.loadError
+					? `${label} data could not load.`
+					: `Loading ${label.toLowerCase()} data…`}
+			</span>
+			{layer.loadError && (
+				<button
+					type="button"
+					className="underline"
+					aria-label={`Retry ${label.toLowerCase()} data`}
+					onClick={layer.retry}
+				>
+					Retry
+				</button>
+			)}
+		</div>
+	);
+}
+
+export type ElevationInputProps = {
+	value: string;
+	valid: boolean;
+	onChange: (value: string) => void;
+};
+
+export function MinimumElevationInput({
+	value,
+	valid,
+	onChange,
+}: ElevationInputProps) {
+	return (
+		<>
+			<label className="flex items-center gap-2 text-xs text-[var(--sea-ink-soft)]">
+				Minimum elevation (ft)
+				<input
+					type="number"
+					min={0}
+					max={15000}
+					aria-invalid={!valid}
+					value={value}
+					onChange={(event) => onChange(event.target.value)}
+					className="ml-auto w-24 rounded-lg border border-[var(--line)] bg-white px-2 py-1.5 outline-none focus:ring-2 focus:ring-[var(--lagoon-deep)]"
+				/>
+			</label>
+			{!valid && (
+				<p className="text-xs text-[var(--sea-ink-soft)]">
+					Enter an elevation from 0 to 15,000 ft.
+				</p>
+			)}
+		</>
+	);
+}
+
 function AreaLayerControl({
 	kind,
 	layer,
@@ -15,7 +88,7 @@ function AreaLayerControl({
 	layer: Layer;
 	children?: ReactNode;
 }) {
-	const { label, color, attribution, attributionUrl } = areaLayers[kind];
+	const { label, color } = areaLayers[kind];
 	const Icon = icons[kind];
 	return (
 		<div className="space-y-2">
@@ -32,20 +105,7 @@ function AreaLayerControl({
 			{layer.enabled && (
 				<>
 					{children}
-					{layer.grid ? (
-						<p className="text-xs text-[var(--sea-ink-soft)]">
-							<a href={attributionUrl} className="underline">
-								{attribution}
-							</a>
-							{" · Coarse grid (~2 km)"}
-						</p>
-					) : (
-						<output className="block text-xs" aria-live="polite">
-							{layer.loadError
-								? "Layer could not load. Turn it off and back on to retry."
-								: "Loading layer…"}
-						</output>
-					)}
+					<AreaLayerDataStatus kind={kind} layer={layer} />
 				</>
 			)}
 		</div>
@@ -55,15 +115,11 @@ function AreaLayerControl({
 export function AreaLayerControls({
 	land,
 	elevation,
-	elevationDraft,
-	validElevation,
-	onElevationChange,
+	minimumElevation,
 }: {
 	land: Layer;
 	elevation: Layer;
-	elevationDraft: string;
-	validElevation: boolean;
-	onElevationChange: (value: string) => void;
+	minimumElevation?: ElevationInputProps;
 }) {
 	return (
 		<section
@@ -76,23 +132,7 @@ export function AreaLayerControls({
 				</p>
 			</AreaLayerControl>
 			<AreaLayerControl kind="elevation" layer={elevation}>
-				<label className="flex items-center gap-2 text-xs text-[var(--sea-ink-soft)]">
-					Minimum elevation (ft)
-					<input
-						type="number"
-						min={0}
-						max={15000}
-						aria-invalid={!validElevation}
-						value={elevationDraft}
-						onChange={(event) => onElevationChange(event.target.value)}
-						className="ml-auto w-24 rounded-lg border border-[var(--line)] bg-white px-2 py-1.5 outline-none focus:ring-2 focus:ring-[var(--lagoon-deep)]"
-					/>
-				</label>
-				{!validElevation && (
-					<p className="text-xs text-[var(--sea-ink-soft)]">
-						Enter an elevation from 0 to 15,000 ft.
-					</p>
-				)}
+				{minimumElevation && <MinimumElevationInput {...minimumElevation} />}
 			</AreaLayerControl>
 		</section>
 	);

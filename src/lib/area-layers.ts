@@ -41,6 +41,16 @@ export function pixelLocation(column: number, row: number): [number, number] {
 	];
 }
 
+export function gridCellIndex(lon: number, lat: number) {
+	const [x, y] = gridPixel(lon, lat);
+	const column = Math.floor(x);
+	const row = Math.floor(y);
+	if (column < 0 || column >= gridWidth || row < 0 || row >= gridHeight) {
+		return undefined;
+	}
+	return row * gridWidth + column;
+}
+
 export function elevationMatches(encoded: number, minimumFeet: number) {
 	return encoded !== 0 && encoded - 32768 >= minimumFeet * 0.3048;
 }
