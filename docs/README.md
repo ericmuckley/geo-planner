@@ -1,12 +1,12 @@
 # Geo Planner documentation
 
-For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). Updated November 19, 2026. The repository baseline is `b765050`, the browse-list release on top of `6feea27`. Directions links are local. The newer water, road-source and restriction corrections in this continuation remain local/uncommitted. Large source/index/bank/archive/runtime assets and secrets remain ignored and absent from a fresh clone.
+For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [where to resume](agent-handoff.md#where-to-resume). Updated November 19, 2026. The repository baseline is `ac33e7b`, which includes the directions links. The simplified map and its handoff are uncommitted. Resume in the same checkout. Large research inputs and generated data remain ignored and absent from a fresh clone.
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**In the working tree.** The [local preview](http://127.0.0.1:4203/) adds **Directions in Google Maps** to trailhead and campground popups. The link uses the estimate’s starting point and the place’s mapped coordinates. [Behavior and checks](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+**In the working tree.** The [local preview](http://127.0.0.1:4204/) removes **Check a destination** and its map pin. Choose a starting point, estimate an area and use the outdoor place popups for **Directions in Google Maps**. [Local review](local-development.md#try-the-simplified-map).
 
 
 ## Current documents

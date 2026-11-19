@@ -8,7 +8,7 @@ Gains are uneven: 59 routes improve/24 regress, frontier median worsens 37.254â†
 
 ## Current OSM input experiment
 
-**Current work:** The destination check and optional fuel-stop layer are live in release `25af389`. The hosted app uses v9 and serves the verified catalog of 108,634 mapped fuel locations. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/fuel-points-2026-11-18/hosted-release-v1.json).
+**Current work:** The hosted app uses v9 and serves the verified catalog of 108,634 mapped fuel locations. The local map keeps starting-point selection and the place layers. The replacement engine remains held after seven failed release checks. [Hosted fuel checks](evidence/fuel-points-2026-11-18/hosted-release-v1.json), [local map review](local-development.md#try-the-simplified-map).
 
 The following dated notes describe earlier stages; their old active/next statements are historical.
 

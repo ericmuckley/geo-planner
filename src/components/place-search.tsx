@@ -16,12 +16,10 @@ type SearchState =
 	| { status: "finished"; matches: PlaceMatch[] };
 
 export function PlaceSearch({
-	target,
 	fieldClass,
 	buttonClass,
 	onSelect,
 }: {
-	target: "starting point" | "destination";
 	fieldClass: string;
 	buttonClass: string;
 	onSelect: (point: Origin) => void;
@@ -65,7 +63,7 @@ export function PlaceSearch({
 			}}
 		>
 			<label htmlFor={inputId} className="block text-xs font-semibold">
-				Search for a {target}
+				Search for a starting point
 			</label>
 			<div className="flex gap-2">
 				<input
@@ -84,7 +82,7 @@ export function PlaceSearch({
 				/>
 				<button
 					type="submit"
-					aria-label={`Search for a ${target}`}
+					aria-label="Search for a starting point"
 					disabled={
 						text.length < placeSearchMinLength || state.status === "loading"
 					}
@@ -121,7 +119,7 @@ export function PlaceSearch({
 			</div>
 			{state.status === "finished" && state.matches.length > 0 && (
 				<ul
-					aria-label={`Search results for the ${target}`}
+					aria-label="Search results for the starting point"
 					className="max-h-48 divide-y divide-[var(--line)] overflow-y-auto rounded-lg border border-[var(--line)] bg-white"
 				>
 					{state.matches.map((match) => (

@@ -18,7 +18,7 @@ npm run build
 HOST=127.0.0.1 PORT=4197 DATABASE_URL= node .output/server/index.mjs
 ```
 
-Open [the local preview](http://127.0.0.1:4197/) and search for **Flagstaff, AZ**. Select the community and estimate an area. Under **Check a destination**, search for **Grand Canyon, AZ** or the public street address **4600 Silver Hill Rd, Suitland, MD**. Only submitted street addresses need the Census service. Cloud history is disabled in the preview.
+In **Starting point**, search for **Flagstaff, AZ** and select the community to set the origin. Select **Estimate area**. The same search accepts **Grand Canyon, AZ** and street addresses such as **4600 Silver Hill Rd, Suitland, MD**. Only submitted street addresses need the Census service. Cloud history is disabled in the preview.
 
 ```sh
 npm run build:vercel
@@ -40,9 +40,9 @@ python3 -B scripts/rank_place_search_v2.py
 
 ## Try the places layers
 
-Destination checks, fuel stops, trailheads and campgrounds are live at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/outdoor-places-2026-11-18/hosted-release-v1.json).
+Fuel stops, trailheads and campgrounds are live at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/outdoor-places-2026-11-18/hosted-release-v1.json).
 
-Estimate an area, enable any of the three layers, then click a cluster to zoom in or a point to see its name. Change the driving time and check that the counts update. Turn one layer off to verify the others stay visible. **Check a destination** still accepts map clicks and keyboard coordinates. The preview uses the bundled estimator with cloud history disabled.
+Estimate an area, enable any of the three layers, then click a cluster to zoom in or a point to see its name. Change the driving time and check that the counts update. Turn one layer off to verify the others stay visible. The preview uses the bundled estimator with cloud history disabled.
 
 The catalogs in `public/places/` are static app assets. Serving them needs no data preparation, Docker, new environment variables or database setup. Validate the generated Vercel package:
 
@@ -66,17 +66,39 @@ Estimate a driving area and enable **Trailheads**, **Campgrounds** and **Fuel st
 
 The browse lists are live in [Geo Planner](https://geo-planner-orcin.vercel.app/). Estimate an area and enable **Trailheads** or **Campgrounds**. Open its browse list and select a name. The map zooms to its pin and opens a popup. **Show more** displays 20 additional names from the same set. Around Flagstaff with both outdoor filters enabled, changing the elevation cutoff from 5,000 to 15,000 feet clears the results and selection. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#browsing-matching-places).
 
-## Try directions links
+<a id="try-directions-links"></a>
 
-The [local preview](http://127.0.0.1:4203/) runs v9 with cloud history disabled. Check the port owner before restarting it.
+## Try the simplified map
+
+The [local preview](http://127.0.0.1:4204/) runs v9 with cloud history disabled. Check the port owner before restarting it.
 
 ```sh
-lsof -nP -iTCP:4203 -sTCP:LISTEN
+lsof -nP -iTCP:4204 -sTCP:LISTEN
 npm run build
-HOST=127.0.0.1 PORT=4203 DATABASE_URL= node .output/server/index.mjs
+HOST=127.0.0.1 PORT=4204 DATABASE_URL= node .output/server/index.mjs
 ```
 
-Choose a starting point and estimate an area. Enable **Trailheads** or **Campgrounds**, open a browse list and select a place. Choose **Directions in Google Maps** in the popup to open driving directions in a new tab. For a direct map check, zoom in until an individual pin is visible and click it. Both entry points should use the estimate’s start and the exact catalog coordinates of the selected place. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+Search for a starting point and estimate an area. Try the slider and click the blank map to select another starting point. The map has one search box and uses empty-map clicks for the start. Estimate again and enable **Trailheads** or **Campgrounds**, open a browse list and select a place. Choose **Directions in Google Maps** in the popup to open driving directions in a new tab. For a direct map check, zoom in until an individual pin is visible and click it. Both entry points should use the estimate’s start and the exact catalog coordinates of the selected place. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+
+Isolated Chrome verified one search box before and after an estimate at desktop and mobile viewport sizes. The desktop check selected Flagstaff by name, opened directions from both outdoor browse lists, clicked an individual campground pin in the 30-minute San Diego area and selected a new start on the blank map. The Google Maps navigation was intercepted to verify the URL. The browser made three local estimates.
+
+### Verify the simplified map build
+
+Run from the repository root:
+
+```sh
+npm run check
+npm run typecheck
+node --import tsx --test src/server/*.test.ts
+npm run build
+npm run build:vercel
+for asset in public/places/*-us-v*.json public/overlays/*-us-v1.png; do
+  cmp "$asset" ".vercel/output/static/${asset#public/}" || exit 1
+done
+npm run check:coarse:vercel
+```
+
+Pass when all tests and builds succeed, all six assets match and the local generated handler reports v9 with zero outbound requests. The packaged handler check uses the local output.
 
 ## Try public lands and elevation
 

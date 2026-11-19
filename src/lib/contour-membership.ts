@@ -1,5 +1,5 @@
-import { containsPolygon, containsRing } from "../server/coarse-contours";
-import type { Origin, ReachabilityResult } from "./reachability";
+import { containsRing } from "../server/coarse-contours";
+import type { ReachabilityResult } from "./reachability";
 
 type Contours = ReachabilityResult["contours"];
 
@@ -9,15 +9,6 @@ export function contourPolygons(contours: Contours) {
 		if (geometry.type === "MultiPolygon") return geometry.coordinates;
 		return [];
 	});
-}
-
-export function isInEstimatedArea(
-	{ lon, lat }: Origin,
-	contours: Contours,
-): boolean {
-	return contourPolygons(contours).some((polygon) =>
-		containsPolygon([lon, lat], polygon),
-	);
 }
 
 function prepareRing(ring: number[][]) {

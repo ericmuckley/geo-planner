@@ -1,24 +1,40 @@
 # Resume Geo Planner
 
-Updated November 19, 2026 after shipping browse lists and adding local directions links. Completed detailed-engine measurements below remain preserved. This guide is sufficient to recover the task without the chat. Read [AGENTS.md](../AGENTS.md), then this page, [current status](implementation-status.md), [local setup](local-development.md) and [next steps](next-steps.md). The [two-hour report](two-hour-region.md) contains the detailed proof; older reports live in [the archive](archive/README.md) and describe their named historical runs.
+Updated November 19, 2026 before pausing the session. Start with [AGENTS.md](../AGENTS.md) and this section, then use [next steps](next-steps.md#1-review-and-release-the-simplified-map) for the active queue. [Implementation status](implementation-status.md) records the checks, and [local development](local-development.md#try-the-simplified-map) has the preview commands.
 
 ## Where to resume
 
+Resume in the same `geo-planner` checkout. The simplified map and its handoff are **uncommitted**. A fresh clone at `ac33e7b` includes Google Maps directions and still includes the old destination check. Run these from the repository root to confirm the state before editing:
+
+```sh
+git status --short
+git log -1 --oneline
+git diff --stat
+```
+
+**Next action.** Review the local simplified map. When a release is approved, build the exact release commit, confirm it is live on Vercel, and try a short and a six-hour trip. [Release criteria](next-steps.md#1-review-and-release-the-simplified-map).
+
 Browse lists are live in `b765050`. The six-hour Flagstaff estimate returned 911 campgrounds and 323 trailheads with both filters and a 5,000-foot cutoff. Isolated Chrome verified both lists, Show more, selected pins and details, and clearing both lists and the popup at 15,000 feet. It made one estimate request and verified all six static assets byte for byte. [Hosted result](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-The working tree adds **Directions in Google Maps** to campground and trailhead popups. The three local source edits pass the displayed estimate’s starting point and the exact mapped outdoor destination. The local preview on port 4203 uses the committed assets with cloud history disabled. Check `lsof -nP -iTCP:4203 -sTCP:LISTEN` to identify the owner before restarting. Both browse lists, a direct campground pin and the new-tab URL passed isolated Chrome checks. All 95 tests, both builds and the packaged handler checks passed. [Preview commands](local-development.md#try-directions-links), [behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#directions-links), [next release](next-steps.md#1-review-and-release-directions-links).
+The directions links are committed in `ac33e7b` on `origin/main`. The working tree removes **Check a destination**, its coordinate fields, its pin and its map-picking mode. The local preview on port 4204 uses the committed assets with cloud history disabled. Check `lsof -nP -iTCP:4204 -sTCP:LISTEN` to identify the owner before restarting. All 95 tests, both builds, the Vercel handler and the isolated desktop and mobile browser checks passed. [Preview and checks](local-development.md#try-the-simplified-map), [next release](next-steps.md#1-review-and-release-the-simplified-map).
 
-The preceding search release `06fb19a` added search to **Starting point** and **Check a destination**. Chrome verified a named starting point, a natural landmark and a real street address. Production passed the exact name catalog, one Census address lookup and the 30-minute and 12-hour Flagstaff estimates. The committed catalog at `public/places/search-us-v2.json` is enough to search names. The source files remain ignored in `data/map-layers/place-search-v1/`. Street-address submission uses the Census Geocoder without API keys. [Hosted checks](evidence/place-search-2026-11-18/hosted-release-v1.json), [local commands](local-development.md#try-place-search), [next app work](next-steps.md#1-use-place-search-in-trip-planning).
+The preceding search release `06fb19a` added the search now used in **Starting point**. Chrome verified a named starting point, a natural landmark and a real street address. Production passed the exact name catalog, one Census address lookup and the 30-minute and 12-hour Flagstaff estimates. The committed catalog at `public/places/search-us-v2.json` is enough to search names. The source files remain ignored in `data/map-layers/place-search-v1/`. Street-address submission uses the Census Geocoder without API keys. [Hosted checks](evidence/place-search-2026-11-18/hosted-release-v1.json), [local commands](local-development.md#try-place-search), [next app work](next-steps.md#1-use-place-search-in-trip-planning).
 
 The preceding app release `83e6566` added Public lands and an Elevation switch with a 5,000-foot starting cutoff. Both render inside the driving area from coarse USGS grids. The exact app commit passed all 91 tests, normal and Vercel builds, both overlay hashes, all three places catalog hashes and two live v9 estimates. The Chrome overlay review used the local build on port 4195. [Production checks](evidence/usgs-area-layers-2026-11-18/hosted-release-v1.json), [local review](local-development.md#try-public-lands-and-elevation).
 
-The committed PNGs under `public/overlays/` are sufficient at runtime. The source exports and metadata remain ignored at `data/map-layers/usgs-area-v1/` and take about 20 MB. The preparation script, source receipts and new research documents remain in the working tree. The outdoor data root `data/coarse-quality/us-osm-outdoor-places-us-v1/` is closed. There are 439 closed engine and places roots with 11,444,031,488 bytes of newer allocation. [Overlay sources and checks](evidence/usgs-area-layers-2026-11-18/README.md), [next app work](next-steps.md#1-use-the-released-planning-layers).
+The committed catalogs under `public/places/` and images under `public/overlays/` are sufficient at runtime. The source exports and research runtime data under `data/` are ignored. The outdoor data root `data/coarse-quality/us-osm-outdoor-places-us-v1/` is closed. There are 439 closed engine and places roots with 11,444,031,488 bytes of newer allocation. [Overlay sources and checks](evidence/usgs-area-layers-2026-11-18/README.md).
 
-The latest user direction is to revisit routing accuracy with a clear stopping point. The saved long-range maps show fewer wrong trip decisions in the prototype, but the shoreline omission and timing regressions keep it on hold. Pause tuning until there is evidence for a general fix to an error that changes the trip decision. Test one correction at a time and retain every existing release check. The read-only benchmark verifier passed again. [Accuracy review](implementation-status.md#routing-accuracy-for-trip-planning), [stop rule](next-steps.md#2-decide-when-routing-is-good-enough), [completed benchmark recovery](#roadmap-focus-and-runtime-build--november-18).
+For routing accuracy, the user asked for a clear stopping point. The saved long-range maps show fewer wrong trip decisions in the prototype, but the shoreline omission and timing regressions keep it on hold. Pause tuning until there is evidence for a general fix to an error that changes the trip decision. Test one correction at a time and retain every existing release check. The read-only benchmark verifier passed again. [Accuracy review](implementation-status.md#routing-accuracy-for-trip-planning), [stop rule](next-steps.md#2-decide-when-routing-is-good-enough), [completed benchmark recovery](#roadmap-focus-and-runtime-build--november-18).
 
-Production uses **v9** in app release `b765050` on top of `6feea27`. All newer engine work is local and uncommitted. Large source/binary assets remain ignored and absent from a fresh clone. The two overlay images and the matching app code are in the release commit. Do not commit, deploy, acquire references or rerun old producers as recovery steps.
+The latest recorded production check is for `b765050` and **v9**. Directions in `ac33e7b` and the local removal have browser and package checks. Hosted verification of the combined changes is pending. Use the local preview during recovery. The existing cloud database and Vercel configuration can be reused for the release.
 
-The user chose to **keep every accuracy gate and improve the engine before integration**. Ferries are deferred. Rules apply generically; validation places never select policy. The 9/10 tagged-speed/defaults-unchanged rule is frozen and its first full candidate is complete; the new source-node correction below changes no price. Provider budgets 48/6/29 are consumed.
+The user chose to **keep every accuracy gate and improve the engine before integration**. Ferries are deferred. Routing rules must apply generically. The provider budgets are consumed, and new engine runs are paused. To check the saved benchmark without running the engine:
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_only_evaluation_v2.py
+```
+
+The checkpoints below document the state of each named run at the time. For present work, use the active queue above.
 
 ### Latest inactive-turn prototype and current recovery
 
@@ -594,7 +610,7 @@ The completed owner-profile and source-outgoing build producers are also frozen.
 
 ## Suggested resume message
 
-> Continue HEAD d286009/livev9 unchanged. Safe verify_conditional_only_overlay_v1.py:420closed/10,930,786,304newerB/no active producer; optionalcachedsource/flag/binaryproof already passes.45actualLinuxportcontrols/captured+national ports qualify30/158rules (128fallback,38bans,4withoutto).53hostoverlaycontrols/all70376raw/all7480oldconversions/current16968closed match; new16919closures (49unclosedsourceIDs),25398old+38new=25436entrypairs, every independentcontributor/oldallowedtransition retained. Latest nodeflags MUSTremain incomplete-qualified886ba… (1488priorcorrections), typedturns317955…, costs/physicalprofile unchanged. Next NEWnativefact/compiler adapter+controls/captured OWN819raw/sourceprofile baseline209oldlocalconversions/154closures/78757prearcs, capturedonly1supported/0newpairs; neverapplynationaldelta to capturedprofile. Freshsource/nativeaudits thennationalfacts exactpostcount before graph/IDdependentassets/all83/35/58/19gates/166/app. Fullfine12.752751/same7fails/56finer/37comparison127.0.0.1:4718; wholecellpaintparked.72GiB64.5GBprior+allclosed+100MiBscratch+activeowned/tmp; usedfilessealed/localuncommitted/largeassetsignored; no PBF/provider/DB/env/deps/deploy, ferries deferred.
+> Resume Geo Planner in this checkout. Read AGENTS.md and the “Where to resume” section of docs/agent-handoff.md, then follow docs/next-steps.md. The map cleanup is locally verified and uncommitted. Review it before release and keep routing experiments paused.
 
 November 2 core/storage verification: `npm run check` (217 files), `npm run typecheck`, `npm run build`, strict standalone script types and 23 Node reader/search/storage/loader tests pass. Four latest portable country/captured/packed/codec proofs pass without large graph/source or worker execution. Relative links/anchors: 62 pages/1,536 links, zero errors; `git diff --check` passes. App/config diff (`src`, package/lock, `.env.example`) stays empty. Logs `/tmp/geo-planner-wire-{check,typecheck,build,tests,script-types}.log`. Geometry native build/eight controls also pass; actual country geometry measurement is separate above.
 
@@ -687,7 +703,7 @@ python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_o
 There are 436 closed roots with 11,433,152,512 bytes of newer allocation. No benchmark worker remains. Host wall time for resumed execution was 1,247.20 seconds including loading, verification, fresh map computation and output. It excludes time spent computing the 12 restored maps. Loaded component backing was 159,872,667 bytes. These measurements cover the local benchmark. Safe portable verification:
 
 ```sh
-python3 -B evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_only_evaluation_v2.py
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_only_evaluation_v2.py
 ```
 
 The fuel and destination features move forward independently of the held engine. See the latest completed fuel checkpoint below.

@@ -10,7 +10,6 @@ import type { createPlaceMapLayers } from "./place-map-layers";
 type Props = {
 	origin: Origin;
 	result: ReachabilityResult | null;
-	destination?: Origin | null;
 	places?: MapPlaces;
 	selectedOutdoorPlace?: OutdoorPlaceSelection | null;
 	landGrid?: Uint16Array | null;
@@ -21,7 +20,6 @@ type Props = {
 	fullscreen?: boolean;
 	overlayRef?: RefObject<HTMLElement | null>;
 	onOriginChange: (origin: Origin) => void;
-	onDestinationPick?: (point: Origin) => void;
 	onMapIdle: (id: string, milliseconds: number) => void;
 };
 
@@ -102,17 +100,11 @@ export function ResearchMap(props: Props) {
 					);
 				map.on("click", (event) => {
 					places.closePopup();
-					if (
-						!current.current.onDestinationPick &&
-						places.select(event, current.current.result?.query.origin)
-					)
+					if (places.select(event, current.current.result?.query.origin))
 						return;
 					const { lngLat } = event;
 					if (Math.abs(lngLat.lat) <= 85)
-						(
-							current.current.onDestinationPick ??
-							current.current.onOriginChange
-						)({
+						current.current.onOriginChange({
 							lat: lngLat.lat,
 							lon: lngLat.wrap().lng,
 						});
@@ -206,21 +198,6 @@ export function ResearchMap(props: Props) {
 							"circle-stroke-color": "#fff",
 						},
 					});
-					map.addSource("destination", {
-						type: "geojson",
-						data: { type: "FeatureCollection", features: [] },
-					});
-					map.addLayer({
-						id: "destination-point",
-						type: "circle",
-						source: "destination",
-						paint: {
-							"circle-color": "#713cb7",
-							"circle-radius": 7,
-							"circle-stroke-width": 2,
-							"circle-stroke-color": "#fff",
-						},
-					});
 					if (current.current.places) places.add();
 					setReady(true);
 				});
@@ -302,36 +279,6 @@ export function ResearchMap(props: Props) {
 				props.minimumElevationFeet,
 			);
 	}, [ready, contours, props.elevationGrid, props.minimumElevationFeet]);
-
-	useEffect(() => {
-		if (!ready) return;
-		const point = props.destination;
-		mapRef.current?.getSource<GeoJSONSource>("destination")?.setData({
-			type: "FeatureCollection",
-			features: point
-				? [
-						{
-							type: "Feature",
-							geometry: { type: "Point", coordinates: [point.lon, point.lat] },
-							properties: {},
-						},
-					]
-				: [],
-		});
-	}, [props.destination, ready]);
-
-	useEffect(() => {
-		if (!ready) return;
-		const canvas = mapRef.current?.getCanvas();
-		if (!canvas) return;
-		canvas.style.cursor = props.onDestinationPick ? "crosshair" : "";
-		canvas.setAttribute(
-			"aria-label",
-			props.onDestinationPick
-				? "Reachability map. Click to pick a destination, or enter its coordinates."
-				: "Reachability map. Click to select an origin, or use the coordinate fields.",
-		);
-	}, [props.onDestinationPick, ready]);
 
 	useEffect(() => {
 		const map = mapRef.current;

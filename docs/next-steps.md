@@ -6,8 +6,9 @@ Updated November 19, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-hando
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**In the working tree.** The [local preview](http://127.0.0.1:4203/) adds **Directions in Google Maps** to trailhead and campground popups. The link uses the estimate’s starting point and the place’s mapped coordinates. [Behavior and checks](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+**In the working tree.** The [local preview](http://127.0.0.1:4204/) removes **Check a destination** and its map pin. Choose a starting point, estimate an area and use the outdoor place popups for **Directions in Google Maps**. [Local review](local-development.md#try-the-simplified-map).
 
+Start with the [simplified map release and trip-planning check](#1-review-and-release-the-simplified-map). The [routing stop rule](#2-decide-when-routing-is-good-enough) records when to revisit the engine.
 
 <a id="1-publish-and-verify-latest-v8"></a>
 <a id="1-publish-and-verify-the-time-slider"></a>
@@ -192,12 +193,15 @@ Updated November 19, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-hando
 
 <a id="1-review-and-release-the-browse-lists"></a>
 
-## 1. Review and release directions links
+<a id="1-review-and-release-directions-links"></a>
+
+## 1. Review and release the simplified map
 
 **Released.** Browse lists are live in `b765050`. The production browser check opened both lists and their map details, expanded campgrounds from 20 to 40 entries, and cleared the results and popup by raising the elevation filter. [Hosted results](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-1. **Review the local directions links.** Estimate from a chosen starting point, then select a trailhead or campground from its browse list or click an individual outdoor pin. The popup should offer **Directions in Google Maps**. Check that the link opens a new tab with that starting point and the selected place’s mapped coordinates. [Local review](local-development.md#try-directions-links).
-2. **Publish after approval.** Include the place map and coordinate changes, check the exact Vercel package and static assets, then verify the link on the live app. The link hands off driving directions to Google Maps. Additional place metadata, business availability and in-app driving directions are deferred.
+1. **Review the simplified map.** The uncommitted removal passed 95 tests, both builds, the local Vercel handler and isolated browser checks. Confirm the destination controls and pin are gone. Search for a starting point, estimate the area, change the slider and click the blank map to select a new start. Check **Directions in Google Maps** on a campground or trailhead popup. [Local review](local-development.md#try-the-simplified-map).
+2. **Publish after approval.** Run the checks, server tests and both builds on the exact release commit. Verify the static assets and confirm the matching Vercel deployment is live. [Release commands](local-development.md#verify-the-simplified-map-build).
+3. **Finish the trip-planning check.** On the deployed app, try a short trip and a six-hour trip across desktop and phone layouts. Search for a start, estimate the area, filter the outdoor places, select one and open directions. Pass when the list and pin agree and Maps gets the selected start and mapped location. Fix blockers in that flow. Additional place metadata, business availability and in-app driving directions are deferred.
 
 **Engine decision:** Seven release checks still fail in the completed comparison. None of the 83 saved estimates changed from the preceding prototype. Keep the replacement held. [Full result](evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-evaluation-v2-raw-v1/report.json). There are 439 closed roots with 11,444,031,488 bytes of newer allocation and no active producer.
 

@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AreaLayerControls } from "../components/area-layer-controls";
-import { DestinationCheck } from "../components/destination-check";
 import { OutdoorPlaceFilters } from "../components/outdoor-place-filters";
 import { PlaceLayerControls } from "../components/place-layer-controls";
 import { PlaceSearch } from "../components/place-search";
@@ -138,12 +137,6 @@ function Home() {
 	const [error, setError] = useState<string | null>(null);
 	const [running, setRunning] = useState(false);
 	const [showContour, setShowContour] = useState(true);
-	const [destination, setDestination] = useState<Origin | null>(null);
-	const [pickingDestination, setPickingDestination] = useState(false);
-	const changeDestination = useCallback((point: Origin | null) => {
-		setDestination(point);
-		setPickingDestination(false);
-	}, []);
 	const loadCloudRuns = useCallback((runs: SavedRun[]) => {
 		setSavedRuns((current) => mergeSavedRuns(current, runs));
 		setHistoryDirty(true);
@@ -227,7 +220,6 @@ function Home() {
 			sequence.current += 1;
 			controller.current?.abort();
 			setRunning(false);
-			setPickingDestination(false);
 			setResult(null);
 			setActiveRun(null);
 			setError(null);
@@ -278,7 +270,6 @@ function Home() {
 	}
 
 	async function runQuery(query: ReachabilityQuery, selectedModel = model) {
-		setPickingDestination(false);
 		if (selectedModel !== model) {
 			setConfig(null);
 			setModel(selectedModel);
@@ -366,7 +357,6 @@ function Home() {
 				<ResearchMap
 					origin={origin}
 					result={result}
-					destination={destination}
 					selectedOutdoorPlace={selectedOutdoorPlace}
 					landGrid={landLayer.enabled ? landLayer.grid : null}
 					elevationGrid={elevationLayer.enabled ? elevationLayer.grid : null}
@@ -378,7 +368,6 @@ function Home() {
 						trailheads: trailheadLayer.locations,
 						campgrounds: campgroundLayer.locations,
 					}}
-					onDestinationPick={pickingDestination ? changeDestination : undefined}
 					showContour={showContour}
 					onOriginChange={selectOrigin}
 					onMapIdle={onMapIdle}
@@ -449,7 +438,6 @@ function Home() {
 						</h2>
 						<div className="my-3">
 							<PlaceSearch
-								target="starting point"
 								fieldClass={fieldClass}
 								buttonClass={buttonClass}
 								onSelect={selectOrigin}
@@ -644,10 +632,7 @@ function Home() {
 							}}
 							filtersActive={outdoorFiltersActive}
 							filtersPending={Boolean(result) && outdoorFilter === null}
-							onOutdoorPlaceSelect={(selection) => {
-								setPickingDestination(false);
-								setSelectedOutdoorPlace(selection);
-							}}
+							onOutdoorPlaceSelect={setSelectedOutdoorPlace}
 							outdoorFilters={
 								showOutdoorFilters && (
 									<OutdoorPlaceFilters
@@ -668,18 +653,6 @@ function Home() {
 							land={landLayer}
 							elevation={elevationLayer}
 							minimumElevation={elevationOnly ? undefined : minimumElevation}
-						/>
-					)}
-					{(result || destination) && (
-						<DestinationCheck
-							result={result}
-							destination={destination}
-							picking={pickingDestination}
-							running={running}
-							fieldClass={fieldClass}
-							buttonClass={buttonClass}
-							onTogglePick={() => setPickingDestination((picking) => !picking)}
-							onChange={changeDestination}
 						/>
 					)}
 					<details className="group border-t border-[var(--line)]">

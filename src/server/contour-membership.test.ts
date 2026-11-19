@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { areaMembership, isInEstimatedArea } from "../lib/contour-membership";
+import { areaMembership, contourPolygons } from "../lib/contour-membership";
 import { contoursSchema } from "../lib/reachability";
+import { containsPolygon } from "./coarse-contours";
 
 const contours = contoursSchema.parse({
 	type: "FeatureCollection",
@@ -64,12 +65,13 @@ const contours = contoursSchema.parse({
 	],
 });
 
-test("the destination check respects polygon holes and disconnected areas", () => {
-	assert.equal(isInEstimatedArea({ lon: -119.5, lat: 32.5 }, contours), true);
-	assert.equal(isInEstimatedArea({ lon: -118.5, lat: 31.5 }, contours), false);
-	assert.equal(isInEstimatedArea({ lon: -114.5, lat: 34.5 }, contours), true);
-	assert.equal(isInEstimatedArea({ lon: -112.5, lat: 33.5 }, contours), true);
-	assert.equal(isInEstimatedArea({ lon: -111, lat: 33 }, contours), false);
+test("area membership respects polygon holes and disconnected areas", () => {
+	const contains = areaMembership(contours);
+	assert.equal(contains(-119.5, 32.5), true);
+	assert.equal(contains(-118.5, 31.5), false);
+	assert.equal(contains(-114.5, 34.5), true);
+	assert.equal(contains(-112.5, 33.5), true);
+	assert.equal(contains(-111, 33), false);
 });
 
 test("indexed membership agrees with the direct test near vertices and holes", () => {
@@ -112,11 +114,12 @@ test("indexed membership agrees with the direct test near vertices and holes", (
 		],
 	});
 	const contains = areaMembership(complex);
+	const polygons = contourPolygons(complex);
 	for (let lon = -0.25; lon <= 4.25; lon += 0.125) {
 		for (let lat = -0.25; lat <= 4.25; lat += 0.125) {
 			assert.equal(
 				contains(lon, lat),
-				isInEstimatedArea({ lon, lat }, complex),
+				polygons.some((polygon) => containsPolygon([lon, lat], polygon)),
 			);
 		}
 	}
