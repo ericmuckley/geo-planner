@@ -1,0 +1,54 @@
+{
+  "status": "all_cached_conditional_only_metadata_feasibility_audited",
+  "recipeSha256": "f8a6391f9d293e377625eef9217389155411cb901edd5cf228d730453381dfe3",
+  "policy": {
+    "id": "static-car-conditional-only-via-node-envelope-v1",
+    "values": [
+      "only_left_turn",
+      "only_right_turn",
+      "only_straight_on"
+    ],
+    "shape": "Unchanged exact known car/general type, one from way, one distinct to way, one via node; original car fallback only.",
+    "scope": "Every stated car/general base and conditional value must be the same supported mandatory kind. Opaque bounded conditions; constrain exits in every state. No time/condition evaluation.",
+    "projection": "After independently verified complete native source ports: each incoming from-way arc forbids every outgoing arc except exact to-way outgoing ports. Union bans with every prior independent constraint. Missing to ports forbids all other outgoing exits, never inactive inference.",
+    "fallback": "Unknown/mixed/no-turn/only-U-turn/same-way/via-way/key/type/exemption/syntax forms retain original whole-way fallback. Metadata alone removes no closure.",
+    "limits": "65536 original Unicode characters/64 clauses/eight parenthesis levels/exactly one @/nonempty condition/no quotes; <=64 unique source ports per vector, IDs below2^24.",
+    "unchanged": "No source price/access/node/physical graph change, native permission claim, local-surrogate inference, place/coordinate exception, fit or accuracy/app activation."
+  },
+  "allRawUnsupportedRelations": 70376,
+  "classificationCounts": {
+    "unsupported-conditional-syntax": 9035,
+    "unsupported-or-mixed-kind": 58963,
+    "single-mandatory-via-node-all-condition-envelope": 158,
+    "no-car-condition": 2218,
+    "shape-guard:unsupported-member-shape": 2
+  },
+  "metadataCandidates": 158,
+  "candidateKinds": {
+    "only_straight_on": 35,
+    "only_right_turn": 117,
+    "only_left_turn": 6
+  },
+  "allCurrentProhibitoryRelationsSourceReplayed": 7480,
+  "allOriginalWayClosuresIndependentlyReconstructed": 29657,
+  "allCurrentWayClosuresExact": 16968,
+  "potentialUnclosedWaysBeforeSourcePortValidation": 288,
+  "potentialRemainingClosedWaysBeforeSourcePortValidation": 16680,
+  "everyIndependentUnconvertedContributorRetained": true,
+  "physicalSourcePortsValidated": false,
+  "artifact": {
+    "file": "candidate-metadata.json",
+    "bytes": 143741,
+    "sha256": "4d5f91ff58dd3273b0af443eda6eea7186538ccbc760595ba1c0546b25a4cc0c"
+  },
+  "hostSecondsIncludingBindingsClassificationsClosureUnionsAndReplay": 0.4089271668344736,
+  "hostMaximumRssBytes": 127926272,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false,
+  "scope": "ONE complete metadata-only inventory of all70376saved raw unsupported source relations under fixed conservative same-kind conditional-only single-via-node policy. Every originalID/tag/member/uint64 source and derived record retains/reopens/replays. Reproduce every7480current prohibitory source rule, original29657closureunion and exact current16968native closure IDs; union every independent unconverted contributor. Potential unclosedways are UPPERBOUNDS before complete pre-closure incoming/ALLoutgoing/to nativeports/source qualification, never graph or permission/ETA results. Missingto ports mustban every other represented exit, no inactive-no-turn reuse. <=64ports pureprojection under31controls, no actualsourceports in this stage.512MiBRSS/300s/64MiBowned with64.5GBprior+all415closed+100MiBscratch+active<72GiB. No native/PBF/sourceconstructor/newacquisition/query/provider/appDB/env/dependency/deploy; original19accuracy/83/35/58/166/source/shore/transfer/fullapp/package/firstestimate/API/camera gates/v9 unchanged. Opaqueconditions/no clock selection/no fit/place/regionexception. Whole-cell coverage/ferries deferred. Hosttime includesbindings/allclassifications/allclosureunions/IO/reopenreplay, not latency/cgroup/CPU/cloud evidence."
+}

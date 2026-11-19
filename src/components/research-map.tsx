@@ -102,7 +102,10 @@ export function ResearchMap(props: Props) {
 					);
 				map.on("click", (event) => {
 					places.closePopup();
-					if (!current.current.onDestinationPick && places.select(event))
+					if (
+						!current.current.onDestinationPick &&
+						places.select(event, current.current.result?.query.origin)
+					)
 						return;
 					const { lngLat } = event;
 					if (Math.abs(lngLat.lat) <= 85)
@@ -240,7 +243,7 @@ export function ResearchMap(props: Props) {
 						right: 48,
 						bottom: 48,
 					});
-					fitResult(map, current.current);
+					if (!places.hasFocusedPlace()) fitResult(map, current.current);
 				});
 				resize.observe(container.current);
 				if (current.current.overlayRef?.current)
@@ -275,11 +278,12 @@ export function ResearchMap(props: Props) {
 		if (ready) placesRef.current?.setLocations(props.places);
 	}, [props.places, ready]);
 
+	const resultOrigin = props.result?.query.origin;
 	useEffect(() => {
-		if (ready && props.selectedOutdoorPlace) {
-			placesRef.current?.focusPlace(props.selectedOutdoorPlace);
+		if (ready && props.selectedOutdoorPlace && resultOrigin) {
+			placesRef.current?.focusPlace(props.selectedOutdoorPlace, resultOrigin);
 		}
-	}, [props.selectedOutdoorPlace, ready]);
+	}, [props.selectedOutdoorPlace, ready, resultOrigin]);
 
 	const contours = props.result?.contours;
 

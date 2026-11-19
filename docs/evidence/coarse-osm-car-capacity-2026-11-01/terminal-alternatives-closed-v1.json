@@ -1,0 +1,25 @@
+{
+  "root": "data/coarse-quality/us-osm-terminal-alternatives-profile-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 49328,
+      "sha256": "4eae0e45fa666d2e3813f2135bd3363a7fb05a2c608c3f8b940ed10d27848ce8",
+      "ignoredLargeAsset": false
+    },
+    "failure.json": {
+      "bytes": 675,
+      "sha256": "1489b64a4ad7eb559c78a2fd189b0f22da6d93d71aff8634b885fed4514f68bb",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 50003,
+    "allocatedBytes": 57344,
+    "entries": 3,
+    "conservativeAllocatedBytes": 1130496
+  },
+  "terminalRecord": "failure.json",
+  "terminalStatus": "AssertionError [ERR_ASSERTION]: after terminal alternatives field: retained backing buffers; baseline=141922229, observed=192364843",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

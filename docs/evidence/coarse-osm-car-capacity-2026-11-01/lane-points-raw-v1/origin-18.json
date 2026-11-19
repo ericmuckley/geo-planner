@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -115.9561,
+    33.2986
+  ],
+  "rows": [
+    {
+      "id": "salton-city--bombay-beach",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 72.28833333333334,
+      "baselinePointMinutes": 83.29301179159387,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 61.267950000000006,
+      "baseline": {
+        "pointMinutes": 80.87801179159386,
+        "cellMinutes": 78.56967845826053,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 44.788333333333334,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 2.308333333333333
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 74,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 11.004678458260528,
+      "candidateErrorMinutes": 8.589678458260522,
+      "absoluteErrorChangeMinutes": -6.878011791593863,
+      "estimateFailure": null
+    },
+    {
+      "id": "salton-city--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 46.33833333333334,
+      "baselinePointMinutes": 50.43833333333333,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 39.2368,
+      "baseline": {
+        "pointMinutes": 48.30833333333332,
+        "cellMinutes": 45.371666666666655,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 40.88666666666666,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 53.8,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 4.099999999999994,
+      "candidateErrorMinutes": 1.9699999999999847,
+      "absoluteErrorChangeMinutes": 5.491666666666674,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "salton-city--bombay-beach",
+      "previousPointTicks": 35520,
+      "pointTicks": 35520,
+      "previousRoadTicks": 35520,
+      "bestRoadTicks": 35520,
+      "frozenLocalGridTicks": null,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "salton-city--brawley",
+      "previousPointTicks": 25824,
+      "pointTicks": 25824,
+      "previousRoadTicks": 26152,
+      "bestRoadTicks": 26152,
+      "frozenLocalGridTicks": 25824,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1833804,
+    "maximumHeapEntries": 3903,
+    "maximumBackingBufferBytes": 50908002,
+    "returnedBackingBufferBytes": 50771286,
+    "seedBackingBufferBytes": 960,
+    "starts": 15
+  },
+  "hostFieldAndFinishesMs": 326.3684169999997,
+  "afterReleaseArrayBuffers": 144171169
+}

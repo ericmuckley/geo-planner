@@ -1,0 +1,40 @@
+{
+  "status": "source_schema_review_and_host_policy_controls_only",
+  "date": "2026-11-07",
+  "policyId": "incomplete-static-single-via-node-maneuver-v1",
+  "sources": [
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Relation:restriction&oldid=3077464",
+      "section": "Members",
+      "finding": "A turn relation requires from and to ways plus a connecting via node or via ways. A singleton via node cannot define the restricted maneuver."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Project-OSRM/osrm-backend/master/src/extractor/restriction_parser.cpp",
+      "observedDate": "2026-11-07",
+      "section": "TryParse, observed lines 190-230",
+      "finding": "The reviewed parser creates restriction containers only with nonempty from ways, a via, and nonempty to ways. Missing road members yield no turn container.",
+      "scope": "Supporting implementation comparison, not a pinned dependency or evidence of ORS/Valhalla configuration; mutable branch source."
+    }
+  ],
+  "proposal": "Omit only the closure contribution of an exact documented static car/general restriction containing one positive via-node member and no roads or other members. All stated known static kinds must agree; unknown/conditional/mixed/complex forms retain fallback. Direct node access/barrier/dimension/lock/hour rules and every other relation contribution remain.",
+  "inference": "The source schema does not justify converting a maneuver with no from/to roads into an all-direction junction barrier. This does not prove absent road signs or external legal permission; source incompleteness remains a model limitation.",
+  "controls": {
+    "hostTests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actualLinuxQualified": false
+  },
+  "codeBindings": {
+    "scripts/coarse_osm_incomplete_node_restrictions_v1.py": "9f09a968b9db7adce13e3f6b5f5f12a925e6436197f3ebf7fcd6973ffbb5fe88",
+    "scripts/coarse_osm_incomplete_node_restrictions_v1_test.py": "86d6aed96106fb226b26159adfc735640e1ae738cd2984fb793d7dfb36a82084",
+    "scripts/coarse_osm_car_policy_v1.py": "4e34d831bd06d3940db7b17c586356d1d3a211115ff24b8143e0ddc9b79d4965",
+    "scripts/coarse_osm_car_passable_barriers_v1.py": "7e2d4956466beedd80197e3828a2ffcf1197c46e515841a5e52abe6a191a8de5"
+  },
+  "geographicOrRouteExceptions": false,
+  "sourceInventoryRun": false,
+  "nodeFlagsChanged": false,
+  "routingQueries": 0,
+  "appActivated": false,
+  "currentConditionalNodeCandidateUnchanged": true
+}

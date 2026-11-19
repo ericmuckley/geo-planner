@@ -1,0 +1,110 @@
+{
+  "root": "data/coarse-quality/us-osm-context-records-run-v1",
+  "roster": {
+    "artifacts.json": {
+      "bytes": 1274,
+      "sha256": "6f278762abf02a2cbba47131e180990a29c4e4d2c5165f58361549201fa2a356",
+      "ignoredLargeAsset": false
+    },
+    "cleanup.json": {
+      "bytes": 146,
+      "sha256": "99cb76cb0431cbd549419bc0ebc59b4aa94b81691af5382ecba168065caa3c43",
+      "ignoredLargeAsset": false
+    },
+    "container-before-removal.json": {
+      "bytes": 308,
+      "sha256": "c6a81853437dd55324bd5ddb19fd8149f6b37f652c0e0784afb2f9af32e46063",
+      "ignoredLargeAsset": false
+    },
+    "container-initial.json": {
+      "bytes": 71318,
+      "sha256": "60045f88ca72185d90f6eab46e4c7e1b3bf1afe6ff1089fc40b74cbe1a876827",
+      "ignoredLargeAsset": false
+    },
+    "container-result.json": {
+      "bytes": 331,
+      "sha256": "833c227ef5fd7b7741453b686a3ec7f63ce6c598da846eb456d64fe29260d26e",
+      "ignoredLargeAsset": false
+    },
+    "context/exit-arcs.u24": {
+      "bytes": 60468,
+      "sha256": "ef016ecc2098b46f935e5dad0f5fc7d43190fc40c49e13ca48b71d2761506682",
+      "ignoredLargeAsset": true
+    },
+    "context/exit-offsets.u32": {
+      "bytes": 91788,
+      "sha256": "54b21b9482c67b907783afc75bd4841417c157427ff2e4da41b0ff184e03b709",
+      "ignoredLargeAsset": true
+    },
+    "context/state-arcs.u24": {
+      "bytes": 95076,
+      "sha256": "3a22cd2ed9ef79111d1d6f3a3861742b84f51435aff06e06b3cc626969f75273",
+      "ignoredLargeAsset": true
+    },
+    "context/state-offsets.u32": {
+      "bytes": 91788,
+      "sha256": "fbfb3681ee8d430bb26eadade6b6e43ff5fb4547a82e43fba5c512c13aad3f09",
+      "ignoredLargeAsset": true
+    },
+    "context/trigger-incoming.bit": {
+      "bytes": 1225920,
+      "sha256": "85ba8ac5375627ca114a53aa407072d0e289880fe9c1c58aa68b70fe106cd0fe",
+      "ignoredLargeAsset": true
+    },
+    "context/triggers.u24": {
+      "bytes": 181665,
+      "sha256": "f720eb29b41569625a919430a35253bce6836db27ccbe9fa8a1003a9ef0302e2",
+      "ignoredLargeAsset": true
+    },
+    "execution-plan.json": {
+      "bytes": 29848,
+      "sha256": "72e537f719492cd53c17c529872bff03f5c0c6c103757b8fcaab32fdc5ff26c8",
+      "ignoredLargeAsset": false
+    },
+    "metrics.json": {
+      "bytes": 498,
+      "sha256": "b09c052cd30d21bc06391520374ff7f0fbbbc03a72c8bd1e52d65993d4bb69b5",
+      "ignoredLargeAsset": false
+    },
+    "owner.json": {
+      "bytes": 190,
+      "sha256": "09fcee08aa998fd2325be92e5adf0803271af78b3067d737f49113287e94b20f",
+      "ignoredLargeAsset": false
+    },
+    "prefix-counts.bin": {
+      "bytes": 734272,
+      "sha256": "39044587da34890aa3d4046758799abaa8183a573eb4645b27bacad9e5f6871e",
+      "ignoredLargeAsset": true
+    },
+    "report.json": {
+      "bytes": 4147,
+      "sha256": "cccd2360f1c891df3fbdc7b4a2cc4e4c3ce75a7731073f6b139f7cde449bc363",
+      "ignoredLargeAsset": false
+    },
+    "routing/forbidden-turns.u24": {
+      "bytes": 1404078,
+      "sha256": "8e2348e2373cbf639998cceb4e53841f95cdf2977fb9682b3f8b07ab1a0dd376",
+      "ignoredLargeAsset": true
+    },
+    "run-summary.json": {
+      "bytes": 95,
+      "sha256": "0e1dc911c71d0ee8a8b5bb3882840ff233f9f63c90b64d00a3be1bdb69619185",
+      "ignoredLargeAsset": false
+    },
+    "worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ignoredLargeAsset": true
+    }
+  },
+  "usage": {
+    "logicalBytes": 3993210,
+    "allocatedBytes": 4046848,
+    "entries": 22,
+    "conservativeAllocatedBytes": 5275648
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "complete_context_records_and_independent_source_audit_passed",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

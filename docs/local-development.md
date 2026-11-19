@@ -2,17 +2,134 @@
 
 Recovering a disconnected session: read [the agent handoff](agent-handoff.md) before starting processes or changing environment values. It explains local-only data, the dirty working tree, safe health checks and the current graph. The main page defaults to the bundled coarse estimator; the hosted provider and local experiment use separate APIs.
 
-## Latest offline diagnosis recovery
-
-Water candidate, all83 path witnesses, all37 public-map shading checks and the narrow conditional-key captured census are complete/closed; no active worker. The water candidate remains rejected:all83 finite, MAE32.6144min versus v9’s29.2574; same80 MAE33.7708 versus33.7262 before water. Query backing59,257,215B<64MiB and retained backing157,130,033B stay bounded; these are buffers, not whole-app/5s/cloud admission. All83 primitive sums/21 diagnostic SHAs match. One coarse-cell shoreline omission remains despite a valid74min point time. Never replay used producers.
+The mandatory-turn runtime and all 79 test endpoints are ready. The resumed comparison is complete. It verified 83 estimates and 58 maps and failed seven release checks. See [current recovery](agent-handoff.md#roadmap-focus-and-runtime-build--november-18) before starting another producer. To check the closed runtime without rerunning it:
 
 ```sh
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_overlay_controls_v1.py
-node --expose-gc --import tsx --test scripts/coarse_osm_water_geography_v3_test.ts scripts/coarse_osm_water_routing_v6_test.ts
-PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_car_conditional_speed_v1_test coarse_osm_car_conditional_scope_v1_test inventory_osm_car_conditional_speed_v1_test analyze_osm_water_paths_v1_test review_osm_water_candidate_v1_test
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_only_evaluation_v2.py
 ```
 
-Safe proof reads small mirrors/code, not graph/PBF/native/model/provider/application DB.179 closed roots5,416,026,112B plus prior64.5GB/100MiB reserve under72GiB before new owned/tmp; one active metadata-only source census at `us-osm-conditional-source-run-v2/` (SHA in handoff); never relaunch. Water evaluation/path/shading, both conditional metadata censuses and nativeV4 build/controls/equivalence are complete/closed; V3 pre-worker Docker sandbox denial is preserved. The new speed policy restores107 captured ways plus1 noncar-scoped way, zero nodes; old positives exact/source SHA/stat unchanged.17 Python and25 actual Linux controls/no skips pass; native/Python agrees on143560 nodes/28995 major ways/4900 relations. No graph connectivity/national/ETA acceptance. Captured graph complete:77/82 finite vs74,3 failures restored/1 finite improved, all77 source path replays and82 TypeScript costs exact.20 graph controls/strict types pass. Native census38 controls/four independent audit controls/tiny full PBF pipeline pass; V1 stopped at final access-time-only audit/no portable source receipt and is preserved. Corrected seven audit tests/tiny PBF pipeline pass; V2 saves pre-audit source checkpoint and is running.18 isolated native-cost/overlay/storage controls pass; no actual graph overlay yet. Finish/close it before a separate graph augmentation. Never replay sealed producers. Offline witness128MiB research limit is separate from production64MiB scratch. All original gates remain; app/src/env/DB/dependencies/Vercel unchanged. New code/evidence local/uncommitted; ignored assets absent from fresh clone. [Exact next task](next-steps.md), [recovery](agent-handoff.md).
+## Try place search
+
+Place search is live in `06fb19a`. The local preview uses the same catalog and Census service. Check the port owner before starting it. [Hosted verification](evidence/place-search-2026-11-18/hosted-release-v1.json).
+
+```sh
+lsof -nP -iTCP:4197 -sTCP:LISTEN
+npm run build
+HOST=127.0.0.1 PORT=4197 DATABASE_URL= node .output/server/index.mjs
+```
+
+Open [the local preview](http://127.0.0.1:4197/) and search for **Flagstaff, AZ**. Select the community and estimate an area. Under **Check a destination**, search for **Grand Canyon, AZ** or the public street address **4600 Silver Hill Rd, Suitland, MD**. Only submitted street addresses need the Census service. Cloud history is disabled in the preview.
+
+```sh
+npm run build:vercel
+cmp public/places/search-us-v2.json .vercel/output/static/places/search-us-v2.json
+npm run check:coarse:vercel
+```
+
+The catalog requires no source downloads at runtime. To reproduce it, copy the pinned archives into `data/map-layers/place-search-v1/` in a separate clean checkout without the generated output files and run:
+
+```sh
+python3 -B scripts/build_place_search_v1.py
+mv public/places/search-us-v1.json data/map-layers/place-search-v1/search-us-v1.json
+python3 -B scripts/rank_place_search_v2.py
+```
+
+[Data provenance, hashes and limits](evidence/place-search-2026-11-18/README.md).
+
+<a id="try-the-fuel-layer"></a>
+
+## Try the places layers
+
+Destination checks, fuel stops, trailheads and campgrounds are live at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/outdoor-places-2026-11-18/hosted-release-v1.json).
+
+Estimate an area, enable any of the three layers, then click a cluster to zoom in or a point to see its name. Change the driving time and check that the counts update. Turn one layer off to verify the others stay visible. **Check a destination** still accepts map clicks and keyboard coordinates. The preview uses the bundled estimator with cloud history disabled.
+
+The catalogs in `public/places/` are static app assets. Serving them needs no data preparation, Docker, new environment variables or database setup. Validate the generated Vercel package:
+
+```sh
+npm run build:vercel
+for asset in fuel-us-v1.json trailheads-us-v1.json campgrounds-us-v1.json; do
+  cmp "public/places/$asset" ".vercel/output/static/places/$asset" || exit 1
+done
+npm run check:coarse:vercel
+```
+
+The completed fuel output can restage the exact fuel file with `python3 -B scripts/stage_osm_fuel_catalog_v1.py`. The finished outdoor output files can be copied byte for byte from `data/coarse-quality/us-osm-outdoor-places-us-v1/`. See [fuel data](evidence/fuel-points-2026-11-18/README.md) and [outdoor data](evidence/outdoor-places-2026-11-18/README.md) for source, checksums and limits.
+
+## Try outdoor place filters
+
+The filters are live in `6feea27` at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/usgs-area-layers-2026-11-18/outdoor-filter-release-v1.json).
+
+Estimate a driving area and enable **Trailheads**, **Campgrounds** and **Fuel stops**. Under **Filter trailheads and campgrounds**, try **On mapped public land** and **At or above minimum elevation** separately and together. The outdoor pins and counts should narrow with each applicable filter. Fuel and the estimate should remain in place. Try 15,000 feet to see the empty results, then return to 5,000 feet. Turn on **Elevation** in the area layers to verify shading and filtering use the same cutoff. Both filters use the existing USGS images. [Measured counts and behavior](evidence/usgs-area-layers-2026-11-18/README.md#outdoor-place-filters).
+
+## Try browsing matching places
+
+The browse lists are live in [Geo Planner](https://geo-planner-orcin.vercel.app/). Estimate an area and enable **Trailheads** or **Campgrounds**. Open its browse list and select a name. The map zooms to its pin and opens a popup. **Show more** displays 20 additional names from the same set. Around Flagstaff with both outdoor filters enabled, changing the elevation cutoff from 5,000 to 15,000 feet clears the results and selection. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#browsing-matching-places).
+
+## Try directions links
+
+The [local preview](http://127.0.0.1:4203/) runs v9 with cloud history disabled. Check the port owner before restarting it.
+
+```sh
+lsof -nP -iTCP:4203 -sTCP:LISTEN
+npm run build
+HOST=127.0.0.1 PORT=4203 DATABASE_URL= node .output/server/index.mjs
+```
+
+Choose a starting point and estimate an area. Enable **Trailheads** or **Campgrounds**, open a browse list and select a place. Choose **Directions in Google Maps** in the popup to open driving directions in a new tab. For a direct map check, zoom in until an individual pin is visible and click it. Both entry points should use the estimate’s start and the exact catalog coordinates of the selected place. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+
+## Try public lands and elevation
+
+The two optional USGS layers are live in `83e6566`. Use the [local preview](http://127.0.0.1:4195/) while the preview is running. [Hosted verification](evidence/usgs-area-layers-2026-11-18/hosted-release-v1.json). Check the port owner before restarting.
+
+```sh
+lsof -nP -iTCP:4195 -sTCP:LISTEN
+npm run build
+HOST=127.0.0.1 PORT=4195 DATABASE_URL= node .output/server/index.mjs
+```
+
+From the default San Diego start, select **Estimate area** and switch on **Public lands** and **Elevation**. Green shades mapped public land and purple shows terrain at or above the cutoff. Change the elevation cutoff to 15,000 feet and check that the purple shading disappears while the green shading and the driving area stay visible. Set it back to 5,000 and change driving time to 12 hours to check both overlays update. Cloud history is disabled in the preview.
+
+Check the static assets against Vercel output and verify the bundled handler:
+
+```sh
+npm run build:vercel
+for asset in public/places/*-us-v1.json public/overlays/*-us-v1.png; do
+  cmp "$asset" ".vercel/output/static/${asset#public/}" || exit 1
+done
+npm run check:coarse:vercel
+```
+
+The app uses the two prepared PNGs directly. Offline rebuilding requires Python with Pillow and the pinned completed exports in `data/map-layers/usgs-area-v1/`. The preparation script writes fresh output files to `public/overlays/`. Use a separate clean checkout with the input files copied to reproduce the output. [Source exports, checksums and coverage](evidence/usgs-area-layers-2026-11-18/README.md).
+
+The closed offline comparison is at [127.0.0.1:4718](http://127.0.0.1:4718/), with all saved production map pairs and 83-case metrics. Both panes use the same offline road engine, neither is deployed v9. Check `lsof -nP -iTCP:4718 -sTCP:LISTEN` before starting another server. If absent, serve only the artifact root:
+
+```sh
+python3 -B -m http.server 4718 --bind 127.0.0.1 --directory data/coarse-quality/us-osm-display-refinement-preview-v1
+```
+
+The ignored 34 MB HTML is local-only. Native Chrome case/zoom/detail/reset review is complete at one desktop viewport; full-app/API/camera admission remains pending. No environment variables, DB or routing service are needed to serve it.
+
+## Latest offline diagnosis recovery
+
+Production remains v9; newer research is local/uncommitted and large assets stay ignored. The latest corrected national-road candidate completes all83routes/58fresh maps, reducing mean error from v9 29.25742 to12.61435minutes; seven original gates still fail. The preceding timing-only candidate scored13.91037. Every winning path/source arc audits; the separate shoreline omission remains. Earlier lane-only point proxies reused old grids and do not describe this full candidate.
+
+Earlier source/flag/conditional milestones remain preserved in the handoff and detailed report. The latest complete incomplete-node V2 comparison scored12.755537minutes MAE with seven failed gates. Its all83winner/source diagnosis and all52743original-way-tag/current-exclusion analysis are complete. The new inactive-turn prototype passes78nativecontrols, complete captured/source/graph/spatial/geometry/context/nodeflag/every-byte audits and79freshendpoint checks; its first full comparison is complete at12.766180minutes, with seven gates still failing; current winning-path/source/shading diagnosis is complete; the subsequent complete raw-tag collection and finer-display work are recorded above. Use the top recovery state rather than historical operation descriptions below. Never replay used producers.
+
+Current metadata-only proof (small mirrored receipts/code and allocation ledger; no ignored assets, Docker/native producer/PBF/query/provider/DB). Older composed proofs through `verify_tagged_timing_candidate_v1.py` require three legacy cached files totalling about 19 MB; do not describe those as fresh-clone-only proofs:
+
+```sh
+python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_split_display_projection_v1.py
+```
+
+Safe synthetic controls:
+
+```sh
+PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_tagged_timing_v1_test -q
+node --expose-gc --import tsx --test scripts/coarse_osm_turn_contexts_v1_test.ts scripts/coarse_osm_context_road_field_v1_test.ts scripts/coarse_osm_context_loader_v1_test.ts
+```
+
+Expect eight host reference-kernel and 14 Node tests. Plain host pricing tests do not load the compiled Linux artifact; the actual 24 native controls already passed in their isolated root. Never replay used source/captured/national/analysis/qualification producers as recovery checks. All earlier failures remain sealed. No runtime/env/DB/dependency/Vercel setup changes are needed. Older named component notes below retain their historical scope; [next steps](next-steps.md) governs active work.
 
 ## Start the workspace
 
@@ -1989,3 +2106,13 @@ python3 -B -m http.server 4717 --bind 127.0.0.1 --directory data/coarse-quality/
 Serve only that directory; no app server or database change is needed. Reuse the marked Chrome deliverable tab if available; otherwise open the URL. Rediscover process owners; do not use old PIDs or tool-session IDs. The Superset browser CLI and in-app browser were unavailable, so verification used the existing Chrome/Cua controls without installs or setting changes. `access-workers-absence-v2.json` corrects the earlier server-detection false negative; both inventory records remain.
 
 Latest unique closed allocation2,347,032,576 B/83roots plus prior64.5GB and100MiB metadata/host scratch. New witness experiments need separately reserved owned/tmp capacity under64GiB. Their offline parent/trace arrays are distinct from production64MiB query scratch and must never be bundled into Vercel. Production/src/env/DB/npm dependencies stay unchanged; no reference quota or source download was used.
+
+November17 latest: separately versioned inactive-FROM projection passes64hostcontrols and allsource/contributor/binary audits.158rules=30represented/128noeligibleincoming;288own closure entries removed/16,680remain/25,436entrypairs, every independent constraint/currentflag/turn/price retained. No new graph or accuracy result.421roots/10,933,006,336newerallocatedBclosed/no active producer. New native116-control/source/capturedcompiler qualification next; preserve earlier49-entry result. [Recovery and exact safe proof](agent-handoff.md#mandatory-turn-inactive-from-projection-complete--november17).
+
+Latest native checkpoint:116actualLinuxcontrols/no skips and captured nativecompiler/independentcomplete-source oracle pass. Fourlocalmandatory rules remove8ownclosureIDs,146remain/78,771postarcs/308entrypairs; allcurrentflags/turns/prices/independentconstraints retain.423roots/10,943,447,040newerallocatedBclosed; ONE nationalfacts/sourceaudit active, no graph/query/accuracy/app admission. [Recovery and exact safe proof](agent-handoff.md#mandatory-turn-native-qualification--november17).
+
+Current checkpoint:V1national safely stopped on spatial/native flagorder guard, preserved/closed. New helper requires full bijection/everyoldflag/exact1488source-qualified openedIDs/blockedbitonly/independentroundtrip.122actualLinuxcontrols and V2captured nativeoracle pass; same emitted facts as V1capture.426roots/10,955,550,720newerBclosed; ONE V2national audit active. Earlier420/421per-via rawflag interpretation withdrawn as spatial/native diagnostic mismatch; closure/pair outputs unaffected. No new nodepolicy/accuracy/app admission. [Recovery](agent-handoff.md#mandatory-turn-flag-order-correction--november17).
+
+Latest nationalfacts PASS/closed:427roots/10,979,622,912newerB/noactiveproducer.9,853,924retainedarcs(+559),16,680closures/25,436pairs; prices/turns/currentflagmeanings exact. Fullnativeflagrebase preserves5,731,903rows/all1488approvedsourceIDs; correct nativeflagsSHAfbc418…. Corrected viaflags4:19/6:11. No newgraph/accuracyresult; generic incoming-only entryban source→CSR projection/independentaudit next. [Recovery](agent-handoff.md#mandatory-turn-national-facts-qualified--november17).
+
+November18 current checkpoint:429roots/11,115,003,904newerBclosed/noactiveproducer. Newnationalgraph compiles and independentcompleteaudit passes all9,853,924arcs/5,731,903vertices/410,509typedturns/260,017bans.18newLinuxentrycontrols+122priornativefactcontrols; currentprices/nodepolicy/oldallowedtransitions retained. Newspatial/paidgeometry/history/storage/endpoints then fresh83/35/58/19gatecandidate next. No newaccuracyresult/appactivation; livev9unchanged. [Recovery and safe proof](agent-handoff.md#mandatory-turn-national-graph-complete--november18).

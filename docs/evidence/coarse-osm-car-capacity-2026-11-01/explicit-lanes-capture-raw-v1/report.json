@@ -1,0 +1,30 @@
+{
+  "status": "captured_explicit_ordinary_lane_policy_comparison_complete",
+  "recipeSha256": "80795c73992ff471b14600b4d5e40ca50681db3c06bf26a8044c66d25fab994a",
+  "majorWaysCompared": 28995,
+  "capturedSourceWayRows": 239253,
+  "counts": {
+    "before/None": 28718,
+    "after/None": 28746,
+    "oldEligibleRetainedExactly": 28718,
+    "before/access": 198,
+    "after/access": 198,
+    "before/conditional-or-way-restriction": 47,
+    "after/conditional-or-way-restriction": 47,
+    "before/lane-access": 32,
+    "after/lane-access": 4,
+    "newEligible": 28
+  },
+  "laneRejectedRecords": 32,
+  "recordsSha256": "4004a0808b870f754b0a8a253ae2751640dd57c501bb0cf5083e8128c22155fb",
+  "immutableSourcePreserved": true,
+  "sourcePbfReads": 0,
+  "coordinateReads": 0,
+  "graphConstructors": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbOperations": 0,
+  "engineOrProductionChanged": false,
+  "hostSecondsIncludingBindingsSqliteComparisonAndSourceHashes": 1.0995354591868818,
+  "scope": "Captured saved-source tags only. All old eligible decisions/prices/directions exact;changes only from lane-access rejection to a common explicit yes column on a static one-way road,with unchanged scoped base policy. Every32former lane rejection retained,including fallbacks. Readonly immutable research SQLite,not application DB. No lane-change/turn-lane/connectivity proof,graph/native parity,national coverage,causal detour,ETA,accuracy or app admission. Host RSS/deadline checks do not establish cgroup/CPU/swap admission."
+}

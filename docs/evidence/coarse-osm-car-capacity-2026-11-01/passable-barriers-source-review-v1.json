@@ -1,0 +1,63 @@
+{
+  "reviewDate": "2026-11-07",
+  "scope": "Primary tag documentation and one predeclared generic offline node-policy hypothesis; no benchmark fit, policy sweep, graph query or app change.",
+  "policy": {
+    "id": "static-car-passable-barrier-defaults-v1",
+    "passableBarrierDefaults": [
+      "cattle_grid",
+      "entrance",
+      "toll_booth"
+    ],
+    "access": "Use source-documented feature defaults only when no explicit car/general access key is present. Preserve existing mode precedence and every denial/unknown value.",
+    "guards": "Retain existing car/general/unknown conditionals, access qualifiers, dimensions, locks and opening hours. Gate/lift_gate/border_control/unknown features keep previous policy.",
+    "independentRestrictions": "A base-node change never clears any independent node-only restriction contributor.",
+    "costs": "No speed, price, signal, turn, reversal or barrier-delay change.",
+    "scope": "Generic source-tag interpretation prototype only; not current availability, lawful-trip, nationwide accuracy or app admission."
+  },
+  "sources": [
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Tag:barrier%3Dcattle_grid&oldid=2870984",
+      "observation": "The mapped structure is designed to let wheeled vehicles cross while stopping animals; additional access tags can specify restrictions."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Tag:barrier%3Dentrance&oldid=2764730",
+      "observation": "This tag describes a gap in a barrier and documents an access=yes default. Explicit access tags restrict it; a secured gate has a different tag."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Tag:barrier%3Dtoll_booth&oldid=3084172",
+      "observation": "This tag marks collection of a road-use charge. It is distinct from parking/admission fee barriers; toll avoidance is a separate routing choice."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Key:access",
+      "observation": "More specific mode access overrides broader access. Feature defaults do not override explicit restrictions."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Tag:barrier%3Dgate&oldid=3067500",
+      "observation": "A gate may allow or restrict access. Access, locks, dimensions and other source tags supply additional constraints; no blanket open-gate assumption is made."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Tag:barrier%3Dlift_gate",
+      "observation": "The documented default without access tags is generally motor_vehicle=private. This prototype preserves the previous explicit-permission policy for lift gates."
+    }
+  ],
+  "inferencesAndAssumptions": [
+    "For these three vehicle-passable features only, a missing node access tag inherits the already eligible road rather than creating a new closure. This is a static engine interpretation, not an observation of legal or current road availability.",
+    "Toll roads remain usable under the existing app query semantics, with no new avoid-tolls option, payment eligibility or queue-delay model.",
+    "Retaining the previous node guards keeps all explicit/conditional/dimensional/lock/hour uncertainty closed. Independent source relation contributors remain separate and still block traversal."
+  ],
+  "codeBindings": {
+    "scripts/coarse_osm_car_passable_barriers_v1.py": "7e2d4956466beedd80197e3828a2ffcf1197c46e515841a5e52abe6a191a8de5",
+    "scripts/coarse_osm_car_passable_barriers_v1_test.py": "0b759e1d235e501f967f1f47b658c899c51c4ebf0e310977df66c987ac487ef0"
+  },
+  "syntheticControls": {
+    "tests": 7,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "generatedTagCombinations": 2000
+  },
+  "newSourceGraphQueries": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false
+}

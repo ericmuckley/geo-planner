@@ -60,7 +60,10 @@ export function parsePlaceCatalog(kind: PlaceKind, data: unknown) {
 }
 
 export type PlaceCatalog = z.infer<typeof outdoorCatalogSchema>;
-export type PlaceLocations = FeatureCollection<Point, { name: string }>;
+export type PlaceLocations = FeatureCollection<
+	Point,
+	{ name: string; lon?: number; lat?: number }
+>;
 export type OutdoorPlaceKind = Exclude<PlaceKind, "fuel">;
 export type OutdoorPlaceSelection = {
 	kind: OutdoorPlaceKind;
@@ -109,7 +112,11 @@ export function placeLocationsInArea(
 			features.push({
 				type: "Feature",
 				id,
-				properties: { name: name || `Unnamed ${placeLayers[kind].singular}` },
+				properties: {
+					name: name || `Unnamed ${placeLayers[kind].singular}`,
+					// Map tiles round point geometry. Keep the catalog point for directions.
+					...(kind !== "fuel" && { lon, lat }),
+				},
 				geometry: { type: "Point", coordinates: [lon, lat] },
 			});
 		}

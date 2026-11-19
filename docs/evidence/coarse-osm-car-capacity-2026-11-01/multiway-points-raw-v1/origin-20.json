@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -117.612,
+    33.4269
+  ],
+  "rows": [
+    {
+      "id": "san-clemente--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 71.05,
+      "baselinePointMinutes": 59.318333333333335,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 50.75438333333333,
+      "baseline": {
+        "pointMinutes": 58.885000000000005,
+        "cellMinutes": 57.89000000000001,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.545,
+          "road": 53.87,
+          "local": 0,
+          "transfer": 2.4749999999999996,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 54.09791666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -11.731666666666662,
+      "candidateErrorMinutes": -12.164999999999992,
+      "absoluteErrorChangeMinutes": 4.787083333333335,
+      "estimateFailure": null
+    },
+    {
+      "id": "san-clemente--escondido",
+      "set": "regional",
+      "origin": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "destination": {
+        "lon": -117.0864,
+        "lat": 33.1192
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 45.931666666666665,
+      "baselinePointMinutes": 40.60833333333334,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 40.026066666666665,
+      "baseline": {
+        "pointMinutes": 41.698333333333345,
+        "cellMinutes": 40.338333333333345,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.545,
+          "road": 39.11499999999999,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.0383333333333333
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 44.83958333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -5.3233333333333235,
+      "candidateErrorMinutes": -4.23333333333332,
+      "absoluteErrorChangeMinutes": -3.141249999999985,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "san-clemente--temecula",
+      "previousPointTicks": 29086,
+      "pointTicks": 25967,
+      "previousRoadTicks": 29086,
+      "bestRoadTicks": 25967,
+      "frozenLocalGridTicks": 29474,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "san-clemente--escondido",
+      "previousPointTicks": 21523,
+      "pointTicks": 21523,
+      "previousRoadTicks": 21523,
+      "bestRoadTicks": 21523,
+      "frozenLocalGridTicks": 22039,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1835863,
+    "maximumHeapEntries": 3830,
+    "maximumBackingBufferBytes": 50903654,
+    "returnedBackingBufferBytes": 50767250,
+    "seedBackingBufferBytes": 15040,
+    "starts": 235
+  },
+  "hostFieldAndFinishesMs": 557.0700419999994,
+  "afterReleaseArrayBuffers": 144138687
+}

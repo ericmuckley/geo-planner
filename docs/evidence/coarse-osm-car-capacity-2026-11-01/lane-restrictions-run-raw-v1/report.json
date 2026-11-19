@@ -1,0 +1,182 @@
+{
+  "status": "fresh_source_epoch_single_and_multi_restrictions_independently_audited",
+  "dimensions": [
+    4227238,
+    5731903,
+    9882872,
+    46533,
+    39869
+  ],
+  "relationInputAudit": {
+    "unsupportedRelations": 70376,
+    "singleViaRules": 46533,
+    "constantFallbackWayIds": 39869,
+    "originalClosureIds": 149699,
+    "rawRelationRuleFallbackAndOriginalUnionExact": true
+  },
+  "originalConservativePostArcs": 9665133,
+  "freshNativeCounts": [
+    46533,
+    23199,
+    23196,
+    138,
+    149699,
+    99093,
+    23025,
+    9882872,
+    9748979
+  ],
+  "singleVia": {
+    "status": "complete_typed_absent_member_no_turn_resolution",
+    "baselineAudit": {
+      "status": "independent_complete_entry_resolution_audit_passed",
+      "waysChecked": 4227238,
+      "preArcsChecked": 9882872,
+      "candidateRulesChecked": 46533,
+      "decisionsChecked": 46533,
+      "entryPairsChecked": 23025,
+      "originalClosureIdsChecked": 149699,
+      "overrideClosureIdsChecked": 99093,
+      "originalPostArcs": 9665133,
+      "candidatePostArcs": 9748979,
+      "allPairsUseActualSourceNodeIdentity": true,
+      "fallbackUnionExact": true,
+      "nativeLibraryExecutions": 0,
+      "sourcePbfReads": 0,
+      "scope": "Every metadata decision/pair/closure and pre-arc field checked with dense typed source arrays and bounded per-rule maps. Costs are range checked; original geometry/cost semantic seals remain inherited. No graph/package/ETA admission."
+    },
+    "baselineAuditSeconds": 26.248742513009347,
+    "waysChecked": 4227238,
+    "completePreArcsChecked": 9882872,
+    "rulesChecked": 46533,
+    "retainedEntryRules": 23199,
+    "inactiveMissingMemberRules": 23196,
+    "remainingNoJoinFallbackRules": 138,
+    "constantFallbackWayIdsRetained": 39869,
+    "previousClosureIds": 99093,
+    "newClosureIds": 40259,
+    "previousFinalArcs": 9748979,
+    "newFinalArcs": 9811860,
+    "entryPairsByteIdentical": true,
+    "closureSubset": true,
+    "allOldAllowedTransitionsRetainedWithUnchangedSourceFacts": true,
+    "missingRoleMasks": {
+      "1": 260,
+      "2": 19517,
+      "3": 314,
+      "4": 606,
+      "5": 716,
+      "6": 692,
+      "7": 1091
+    },
+    "missingMemberOccurrencesOutsideSelectedWays": 26587,
+    "missingMemberOccurrencesWithNoPreArcs": 513,
+    "decisionStatusSemantics": {
+      "0": "existing entry ban retained",
+      "2": "no join: old whole-member fallback retained",
+      "3": "essential preclosure leg absent: this closure contribution omitted"
+    },
+    "secondsIncludingBaselineAndResolution": 52.8182409000583,
+    "sourcePbfReads": 0,
+    "sourceConstructorExecutions": 0,
+    "nativeKernelExecutions": 0,
+    "routingQueries": 0,
+    "sourceCostsOrNodeFlagsChanged": false,
+    "appActivated": false,
+    "scope": "New closure metadata only. Complete PRE-relation-closure facts and every frozen native baseline decision/pair/closure audited first. All other union contributors/conditional/only/unknown constraints retained. No post-closure presence inference, national node dictionary, graph construction/query/ETA/app or geographic rule."
+  },
+  "multiVia": {
+    "status": "complete_multi_via_country_metadata_and_independent_join_audit_passed",
+    "waysChecked": 4227238,
+    "preArcsCheckedTwice": 9882872,
+    "sourceUnsupportedRelationsChecked": 70376,
+    "oldSingleViaDecisionsRetained": 46533,
+    "oldClosureUnionReproduced": true,
+    "oldEntryPairsRetained": 23025,
+    "newMultiEntryPairs": 2614,
+    "combinedEntryPairs": 25398,
+    "multiViaRules": 3569,
+    "resolvedMultiViaRules": 2638,
+    "inactiveMissingMemberMultiRules": 917,
+    "noJoinMultiFallbackRules": 14,
+    "oldClosureIds": 40259,
+    "newClosureIds": 29657,
+    "oldPostArcs": 9811860,
+    "proposedPostArcs": 9826630,
+    "sourceCostsFlagsOrPreArcsChanged": false,
+    "oldAllowedPathsPreservedByClosureSubsetAndNewEntryWaysPreviouslyClosed": true,
+    "selectedPreArcRecordsPerAudit": 12549,
+    "denseWayIdentityAndCountBytes": 50726856,
+    "independentSourceJoinDecisionCounts": {
+      "0": 2638,
+      "3": 917,
+      "2": 14
+    },
+    "secondsIncludingBaselineConstructionAndIndependentRereadAudit": 56.36201269295998,
+    "sourcePbfReads": 0,
+    "coordinatesRead": 0,
+    "routingQueries": 0,
+    "appActivated": false,
+    "scope": "Complete PRE-closure typed facts and saved raw restrictions. Exact old union/single decisions/entry pairs retained;new multi-way no-turns banfrom->ANYvia,missing essential PRE leg inactive,no-join keeps whole-member fallback. All other contributors preserved. Independent second source pass/sort-merge joins verify every decision/pair/closure. No CSR/spatial/runtime/geometry/ETA/app admission."
+  },
+  "nativeSeconds": 0.25865958305075765,
+  "singleResolutionAndCompleteNativeAuditSeconds": 52.823834649985656,
+  "multiResolutionAndIndependentJoinSeconds": 56.367534651071765,
+  "secondsIncludingInputChecksAllResolutionsAndAudits": 124.55021093192045,
+  "oldNumericArcIdsReused": false,
+  "previousLaneGraphMonotonicityAssumed": false,
+  "sourceCostsFlagsOrPreArcsChanged": false,
+  "sourcePbfReads": 0,
+  "coordinatesRead": 0,
+  "routingQueries": 0,
+  "runtimeGraphBuilt": false,
+  "appActivated": false,
+  "scope": "Raw metadata/rules/constant fallback/original closure union checked first. Fresh native single-entry baseline and conservative post-count derive only from this complete preclosure epoch;qualified absent-member helper exhaustively audits native output before inactive-leg conversion. Qualified multi-entry helper independently rereads source and sort-merges every join/decision/closure. Its parent-preservation statements refer only to this fresh single-via parent,not the previous graph epoch. Every other source constraint stays. No source constructor,coordinates,graph,query,ETA or app admission.",
+  "assets": {
+    "resolved/final/closures-0000.bin": {
+      "bytes": 237256,
+      "sha256": "0319236f7b554ed17da393d8125e22fdd0bddd68f46b9b5b47a91cb802328feb"
+    },
+    "resolved/final/entry-pairs-pre.u32": {
+      "bytes": 203184,
+      "sha256": "16a86a15a1795cd2d1b697c9d1d19f10b18a4f37904ef4fbd402b2ac07a48036"
+    },
+    "resolved/final/multi-decisions.bin": {
+      "bytes": 57104,
+      "sha256": "d15700dcbe7050260b8651dbbd0303e4267eefb286e8f24dd6361aa109d7cbeb"
+    },
+    "resolved/final/multi-entry-pairs-pre.u32": {
+      "bytes": 20912,
+      "sha256": "f9948c3979e0e3fd93109df982022a33f023ec8cec52535391c74899ed5f0611"
+    },
+    "resolved/native/closures-0000.bin": {
+      "bytes": 792744,
+      "sha256": "8ee8bde7c2ab5683ceb4ac5cb00c4e2cb0651a3e6257f050ee2b95507f42a73e"
+    },
+    "resolved/native/decisions.bin": {
+      "bytes": 744528,
+      "sha256": "72a7698e6d846fdb72f5ac4f11f7fd955d143d44a704e26f43e708aab444bc0c"
+    },
+    "resolved/native/entry-pairs-pre.u32": {
+      "bytes": 184200,
+      "sha256": "23809c1d9dc4510400d1cdfe8350eceab22baac5f4c34163aa6ccc1206c305de"
+    },
+    "resolved/single/closures-0000.bin": {
+      "bytes": 322072,
+      "sha256": "26042b72e198ec2413d04c6cff647cc8c55a29fc8471c27d15f0837932577f24"
+    },
+    "resolved/single/decisions.bin": {
+      "bytes": 744528,
+      "sha256": "be5485a5540f81c0a84d553ba06e4aa0fb7c66431c06d3e61cec89817cfc4c8c"
+    },
+    "resolved/single/entry-pairs-pre.u32": {
+      "bytes": 184200,
+      "sha256": "23809c1d9dc4510400d1cdfe8350eceab22baac5f4c34163aa6ccc1206c305de"
+    },
+    "resolved/single/inactive-members.bin": {
+      "bytes": 371136,
+      "sha256": "3ad0ded2a768f2f427777d6cc1a6cd88f3bb94e0b23bc1ae97494c11dac468e3"
+    }
+  },
+  "workerSecondsIncludingBindingsConstructionAndAudit": 125.00483534904197
+}

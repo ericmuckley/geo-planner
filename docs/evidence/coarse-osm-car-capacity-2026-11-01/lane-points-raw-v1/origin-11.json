@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -119.0187,
+    35.3733
+  ],
+  "rows": [
+    {
+      "id": "bakersfield--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 213.23166666666665,
+      "baselinePointMinutes": 215.16824122620815,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 186.82356666666666,
+      "baseline": {
+        "pointMinutes": 218.01657455954154,
+        "cellMinutes": 217.74490789287486,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 6.038241226208234,
+          "road": 210.68666666666672,
+          "local": 0,
+          "transfer": 1.02,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 192.7125,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 1.9365745595414978,
+      "candidateErrorMinutes": 4.784907892874884,
+      "absoluteErrorChangeMinutes": 15.734258773791765,
+      "estimateFailure": null
+    },
+    {
+      "id": "bakersfield--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.0187,
+        "lat": 35.3733
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 225.225,
+      "baselinePointMinutes": 205.4232412262082,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 205.76595,
+      "baseline": {
+        "pointMinutes": 210.64324122620818,
+        "cellMinutes": 209.9599078928748,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 6.038241226208234,
+          "road": 202.9116666666667,
+          "local": 0,
+          "transfer": 1.0783333333333334,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 204.80833333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -19.80175877379179,
+      "candidateErrorMinutes": -14.581758773791819,
+      "absoluteErrorChangeMinutes": 5.834907892874838,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "bakersfield--big-bear-lake",
+      "previousPointTicks": 92502,
+      "pointTicks": 92502,
+      "previousRoadTicks": 92502,
+      "bestRoadTicks": 92502,
+      "frozenLocalGridTicks": 92647,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "bakersfield--palm-springs",
+      "previousPointTicks": 98308,
+      "pointTicks": 98308,
+      "previousRoadTicks": 98308,
+      "bestRoadTicks": 98308,
+      "frozenLocalGridTicks": 98733,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 2084041,
+    "maximumHeapEntries": 2802,
+    "maximumBackingBufferBytes": 50927330,
+    "returnedBackingBufferBytes": 50790614,
+    "seedBackingBufferBytes": 20288,
+    "starts": 317
+  },
+  "hostFieldAndFinishesMs": 347.12170799999967,
+  "afterReleaseArrayBuffers": 144171169
+}

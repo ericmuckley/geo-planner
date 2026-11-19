@@ -1,0 +1,35 @@
+{
+  "status": "complete_blocked_graph_vertex_to_native_node_id_mapping_audited",
+  "operation": "run",
+  "blockedVertices": 13776,
+  "allVertexPermutationEntriesChecked": 5731903,
+  "allGraphToSourceFlagsCompared": 5731903,
+  "allNativeIdTuplesIndependentlyReplayed": 13776,
+  "nativeIdsRemainUint64": true,
+  "artifacts": {
+    "blocked-nodes.json.gz": {
+      "bytes": 242367,
+      "sha256": "42c65b3039510c1f1ff62f6cdf850453058ad991e312d37de203e2846d96fcb5",
+      "rawBytes": 1465124,
+      "rawSha256": "8df373891c3e78654f9fc660f9a7072abdf3b2ad6244991ea433ddaeb6389deb"
+    },
+    "blocked-node-ids.u64": {
+      "bytes": 110208,
+      "sha256": "4eee1ef5e29fb2a518b03d3c851cbfd7bd5310ff295c22098475d6bb78e52324"
+    }
+  },
+  "permutationScope": "Complete current spatial vertex permutation and every graph/source flag compared.",
+  "sourceCounts": {
+    "ids": 42993567,
+    "anchors": 5731903,
+    "flags": 5731903
+  },
+  "workerSecondsIncludingBindingsMappingIndependentOutputAudit": 3.9475672519765794,
+  "sourcePbfReads": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false,
+  "scope": "Exact blocked-vertex/native-node identity inventory; original uint64 IDs preserved as decimal strings plus sorted uint64 bytes. Every vertex permutation/graph-to-source flag compared and every output tuple independently replayed. No raw node tag or restriction-contributor classification or clearance of any block. Node access/barrier/conditional AND unsupported-relation node-closure contributions require independent reconciliation before a correction. No source PBF/graph query/provider/DB/app/price/permission change."
+}

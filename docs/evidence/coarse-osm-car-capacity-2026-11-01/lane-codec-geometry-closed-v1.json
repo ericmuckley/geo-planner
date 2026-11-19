@@ -1,0 +1,65 @@
+{
+  "root": "data/coarse-quality/us-osm-lane-codec-geometry-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 2891,
+      "sha256": "4b131cfde01d11d21dc360692be9a948ac2b02362bf28409c1830aba290fe593",
+      "ignoredLargeAsset": false
+    },
+    "fields/curve-keys.u24.gz": {
+      "bytes": 222265,
+      "sha256": "de1f29fbdfdfb72629002a0864d99232975a4180306ee5f8c2fccd8e71dbb749",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-offsets.u32.gz": {
+      "bytes": 150506,
+      "sha256": "d35a216deeb3e902df204b9865d823befc1c18253a9e33b98c5ec77272722334",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-packets.u8.gz": {
+      "bytes": 6539718,
+      "sha256": "078535ebfe5ac132f9bf87d4917c078d31accb178a6c22ffb572afb485e1b9a9",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-keys.u24.gz": {
+      "bytes": 334742,
+      "sha256": "7485139addd9aed97aaa6524ed7fb450e477ad4c6da4bd12cf19d08e83253355",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-lengths.u16.gz": {
+      "bytes": 708721,
+      "sha256": "f1c843ff9cb1d3cb6c8fb3ce3ba881521c728d6414fada06da440631e62105fd",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-keys.u24.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-units.u32.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "manifest.json": {
+      "bytes": 2636,
+      "sha256": "bdb944edfdebdef0239c465061db195ee91e31c09cd4f0b0701bdcc192092359",
+      "ignoredLargeAsset": false
+    },
+    "report.json": {
+      "bytes": 639,
+      "sha256": "8fa0c1cfafc184347e3a1f391489cd1d7e02d34e2d16edac49443d91bcd6ce17",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 7962158,
+    "allocatedBytes": 7987200,
+    "entries": 12,
+    "conservativeAllocatedBytes": 9134080
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "lane_candidate_storage_roundtripped_independent_audit_pending",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

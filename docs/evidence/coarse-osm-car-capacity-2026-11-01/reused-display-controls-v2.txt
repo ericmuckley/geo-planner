@@ -1,0 +1,25 @@
+{"name":"original","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✔ original: queue receiver retention while the actual capacity exception stays alive (44.637333ms)
+{"name":"guarded","remaining":[],"message":"local heap capacity"}
+✔ guarded: queue receiver retention while the actual capacity exception stays alive (40.315208ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ original: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (690.788334ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ seed-guard: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (615.123583ms)
+✔ initial seed pressure coarsens before consumption while reusing one raster (45.91925ms)
+✔ exhausted seed retries refuse and release the unconsumed field (13.186417ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=false (4.134708ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=true (2.892209ms)
+✔ label and vertex buffers are actually reused on a larger synthetic chain (23.028166ms)
+{"probeExceptionBackingDelta":0,"remaining":[]}
+✔ an exception after buffer consumption releases all query storage (12.878166ms)
+✔ source-water and uncertainty semantics match at the same resolution: false (9.813958ms)
+✔ source-water and uncertainty semantics match at the same resolution: true (8.150667ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1456.583792

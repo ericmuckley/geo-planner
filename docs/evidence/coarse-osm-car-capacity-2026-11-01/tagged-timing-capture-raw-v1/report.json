@@ -1,0 +1,65 @@
+{
+  "status": "complete_captured_tagged_timing_native_and_independent_python_prices_passed",
+  "policy": {
+    "id": "explicit-speed-static-estimate-90-v1",
+    "taggedSpeedRatio": [
+      9,
+      10
+    ],
+    "defaultSpeedRatio": [
+      1,
+      1
+    ],
+    "scope": "Estimated driving speeds only;no access/direction/closure/node/turn/geometry change. Original legal-speed facts retained separately. No hosted settings or observed speed claim."
+  },
+  "sourceCounts": {
+    "ids": 143560,
+    "xy": 287120,
+    "anchors": 46881,
+    "flags": 46881,
+    "geometry": 177956,
+    "ways": 28995,
+    "arcs": 79148
+  },
+  "changedEstimatedWayRows": 14504,
+  "pricing": {
+    "arcsChecked": 79148,
+    "costsChanged": 38709,
+    "defaultArcsChecked": 40439,
+    "primitiveOccurrences": 225775,
+    "nativeBatches": 2
+  },
+  "allPhysicalArcDescriptorsAndOrderExact": true,
+  "allDirectionsDefaultsRolesAndFlagsExact": true,
+  "nodeFlagsChanged": 0,
+  "everyOldAndNewMacroPricePythonAudited": 79148,
+  "maximumProposedMacroMs": 1424955,
+  "proposedCostOverflowArcs": 0,
+  "derivedFactBytes": 3507457,
+  "factRoster": {
+    "cost-facts/ways-0000.bin": {
+      "bytes": 927840,
+      "sha256": "47296b34b120ad0b052c74a7d252c8c4095d2fa60810d943066dd6a2954d1af4"
+    },
+    "cost-facts/flags-0000.bin": {
+      "bytes": 46881,
+      "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+    },
+    "cost-facts/arcs-0000.bin": {
+      "bytes": 2532736,
+      "sha256": "8490a54af50db2999e018f650e237caf0e6c74d1b0013477149535ded33ed4bb"
+    }
+  },
+  "originalLegalSpeedSourceFactsModified": false,
+  "costFactsMeaning": "Derived estimated driving speeds and costs;original legal/default source speeds retained separately in bound read-only inputs.",
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "countryCostFactsBuilt": false,
+  "runtimeGraphBuilt": false,
+  "accuracyOrAppAccepted": false,
+  "scope": "Complete captured source only. Fixed9/10 explicit-speed model/defaults unchanged;all source directions/default markers/IDs/geometry/node/closure/turn inputs remain. Native batched old+new primitive arithmetic and every arc independently Python-rebuilt. Original legal speeds stay read-only;output way speeds are derived estimates,never relabeled source tags. No shortest-path/map/ETA/national/runtime/app admission.",
+  "workerSecondsIncludingBindingsMergeAndAudit": 1.2910884169396013
+}

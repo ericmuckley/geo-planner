@@ -1,0 +1,69 @@
+{
+  "status": "all_cached_conditional_via_node_metadata_feasibility_audited",
+  "recipeSha256": "cae6b5edd72a0971d0d60b4d5876de64f15255a61cc29c9430c6f784050f4388",
+  "policy": {
+    "id": "static-car-conditional-via-node-prohibitory-envelope-v2",
+    "shape": "Exactly one from way, one via node and one distinct to way; positive native IDs; original car policy must classify closed-unsupported.",
+    "values": [
+      "no_left_turn",
+      "no_right_turn",
+      "no_straight_on",
+      "no_u_turn"
+    ],
+    "scope": "At least one known car/general conditional key. All stated car/general base and conditional values must be the same supported prohibitory kind. Conditions remain opaque; the maneuver stays banned in every state.",
+    "syntax": "At most 65536 Unicode characters per conditional value, 64 top-level clauses and eight parenthesis levels; exactly one @ per clause, nonempty condition, no quotes. Unknown/malformed syntax or keys retain fallback.",
+    "fallback": "Only-turns, via ways, same-way turns, unknown restriction/conditional keys and unknown/car exemptions keep the complete original fallback. Every independent contributor remains.",
+    "unchanged": "No condition/departure-time evaluation, speed/cost/direction/access/node-barrier change, selected-place exception or routing/app admission.",
+    "relationTypes": [
+      "restriction",
+      "restriction:motorcar",
+      "restriction:motor_vehicle",
+      "restriction:vehicle"
+    ],
+    "typeGuard": "Only exact documented general/car relation types. Unknown restriction-prefixed types retain original fallback; the sealed baseline oracle intentionally treats them conservatively."
+  },
+  "allRawUnsupportedRelations": 70376,
+  "classificationCounts": {
+    "single-prohibitory-via-node-all-condition-envelope": 7480,
+    "unsupported-member-shape": 61602,
+    "no-car-condition": 449,
+    "unsupported-conditional-syntax": 390,
+    "same-way-fallback": 223,
+    "unsupported-or-mixed-kind": 6,
+    "unknown-conditional-key": 32,
+    "unknown-or-car-exemption": 188,
+    "unknown-restriction-key": 5,
+    "unsupported-relation-type": 1
+  },
+  "metadataCandidates": 7480,
+  "candidateKinds": {
+    "no_left_turn": 5211,
+    "no_right_turn": 1988,
+    "no_straight_on": 258,
+    "no_u_turn": 23
+  },
+  "allOriginalWayClosuresIndependentlyReconstructed": 29657,
+  "potentialUnclosedWaysBeforeSourcePortValidation": 12689,
+  "potentialBaseEligibleMajorWaysBeforeSourcePortValidation": 6411,
+  "potentialBaseIneligibleMajorWaysBeforeSourcePortValidation": 203,
+  "potentialOutsideMajorTableBeforeSourcePortValidation": 6075,
+  "everyIndependentUnconvertedContributorRetained": true,
+  "physicalSourcePortsValidated": false,
+  "artifact": {
+    "file": "candidate-metadata.json.gz",
+    "bytes": 431660,
+    "sha256": "b89ce73b8a043d0094863e06f905895ddc20b10658f09a3d748aaf40f2c3eccc",
+    "rawBytes": 3705883,
+    "rawSha256": "2bd9788248a52620dd263d9bb228c3d57725777422e5e188bedf7b47548055ab"
+  },
+  "hostSecondsIncludingBindingsAllClassificationsClosureUnionsAndIndependentReplay": 0.7134202499873936,
+  "hostMaximumRssBytes": 150274048,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false,
+  "scope": "All70376cached raw unsupported relations classified under one predeclared conservative single-kind via-node envelope. All29657original way closures independently rebuild and all unconverted contributors stay. Potential unclosed counts are metadata-only upper bounds; complete pre-closure directed incidences and via-node source support must validate before any closure removal, derived turn fact or graph operation. Every retained original tag/member/uint64 identity replays after output reopen. No condition evaluation, time selection, fit, query, model or app admission. Host512MiBRSS/300s/64MiBowned under72GiBaggregate, not cgroup/cloud evidence."
+}

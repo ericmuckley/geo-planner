@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-19T04:12:39.235Z",
+  "commit": "06fb19a9d809ad87903f33eb8bb5e9179788c31e",
+  "baseUrl": "https://geo-planner-orcin.vercel.app",
+  "vercelDeployment": "https://vercel.com/erics-projects-d68d5ce3/geo-planner/4KrGHSkTDwqYosiagoSWF7FLRZ5c",
+  "engine": "coarse-road-grid-v9",
+  "scripts": [
+    "/assets/routes-BQoKnzZ6.js"
+  ],
+  "catalog": {
+    "path": "/places/search-us-v2.json",
+    "bytes": 9097912,
+    "records": 205362,
+    "sha256": "7475682a2ce6e06cee7d357ff4d9d03a470099dec967431f29ebed8d83560aa4"
+  },
+  "origin": {
+    "label": "Flagstaff, AZ",
+    "kind": "Community",
+    "point": {
+      "lat": 35.18637,
+      "lon": -111.62037
+    }
+  },
+  "landmark": {
+    "label": "Grand Canyon, AZ",
+    "kind": "Landmark",
+    "point": {
+      "lat": 36.11276,
+      "lon": -113.99607
+    }
+  },
+  "addressMatch": {
+    "label": "4600 SILVER HILL RD, SUITLAND, MD, 20746",
+    "kind": "Street address",
+    "point": {
+      "lat": 38.84505589808,
+      "lon": -76.92836638093
+    }
+  },
+  "samples": [
+    {
+      "minutes": 30,
+      "reachedCells": 278
+    },
+    {
+      "minutes": 720,
+      "reachedCells": 257034
+    }
+  ],
+  "requests": 7,
+  "providerRequests": 1,
+  "historyWrites": 0,
+  "cleanReleasePreflight": {
+    "testsPassed": 94,
+    "typecheck": "passed",
+    "biome": "passed with existing warnings",
+    "normalBuild": "passed",
+    "vercelFunctionBytes": 65117887,
+    "firstLocalEstimateAfterConfigMs": 3726.58975
+  },
+  "scope": "Production homepage and search bundle, byte-exact static catalog, shared name matcher, one real Census address, v9 config and both Flagstaff slider limits. Browser interaction tested independently in the local build."
+}

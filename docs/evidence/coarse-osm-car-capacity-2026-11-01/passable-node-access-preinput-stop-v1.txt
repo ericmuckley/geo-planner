@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'eba53a6d56261e5ce0d2726f29fc430519b41e47a8b99a88ad3b0fabae9dfbe4'
+- 'eba53a6d56261e5ce0d2726f29fc430519b41e47a8b99ad3b0fabae9dfbe4'
+
+    at main (/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_passable_node_access_v1.ts:31:9)
+    at async <anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_passable_node_access_v1.ts:229:1) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'eba53a6d56261e5ce0d2726f29fc430519b41e47a8b99a88ad3b0fabae9dfbe4',
+  expected: 'eba53a6d56261e5ce0d2726f29fc430519b41e47a8b99ad3b0fabae9dfbe4',
+  operator: 'strictEqual'
+}
+
+Node.js v24.5.0

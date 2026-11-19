@@ -1,0 +1,36 @@
+{
+  "status": "preserved_full_comparison_wall_deadline_stop",
+  "date": "2026-11-08",
+  "completedOrigins": 9,
+  "writtenMapFiles": 35,
+  "requiredMapFiles": 58,
+  "hostMsAtStop": 3819403.9548330004,
+  "deadlineSeconds": 3600,
+  "longRecordedPhases": [
+    {
+      "origin": 6,
+      "diagnosticSeconds": 957.04
+    },
+    {
+      "origin": 7,
+      "firstProductionDisplaySeconds": 915.9
+    }
+  ],
+  "ordinaryAdjacentPhaseSeconds": [
+    30.07,
+    41.35,
+    49.31,
+    23.08,
+    26.04
+  ],
+  "causeScope": "The owned records show two approximately15minute phase gaps, plus the final deadline stop; no CPU/sleep telemetry establishes whether the process or host was suspended. No complete score or all58map/accuracy claim.",
+  "failedProducerPreserved": true,
+  "partialMapsReusableAsCandidateInputs": false,
+  "correction": "Separate V2 execution/output with identical model/artifacts/originalgates/3600second4GiBRSS256MiBowned caps; wrap only this producer with macOS caffeinate -i to prevent idle system sleep while it runs. It does not alter persistent settings and cannot prevent manual sleep/process suspension.",
+  "sourcePolicyOrAccuracyGatesChanged": false,
+  "nextProducer": "scripts/evaluate_osm_incomplete_node_candidate_v2.ts",
+  "sourcePbfReads": 0,
+  "providerRequests": 0,
+  "appActivated": false,
+  "failureSha256": "5ab013f138c804af024a6d8659c1cda34bba98a1fedb7b3b368c03a6843d432c"
+}

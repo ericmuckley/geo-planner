@@ -1,0 +1,40 @@
+{"name":"original","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✔ original: queue receiver retention while the actual capacity exception stays alive (42.066834ms)
+{"name":"guarded","remaining":[],"message":"local heap capacity"}
+✔ guarded: queue receiver retention while the actual capacity exception stays alive (39.479167ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ original: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (680.482167ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ seed-guard: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (623.53ms)
+✔ initial seed pressure coarsens before consumption while reusing one raster (47.193292ms)
+✔ exhausted seed retries refuse and release the unconsumed field (14.6985ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=false (4.388916ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=true (3.002583ms)
+✔ label and vertex buffers are actually reused on a larger synthetic chain (20.1825ms)
+{"probeExceptionBackingDelta":1312,"remaining":[{"i":6,"bytes":1312}]}
+✖ an exception after buffer consumption releases all query storage (15.602959ms)
+✔ source-water and uncertainty semantics match at the same resolution: false (9.008334ms)
+✔ source-water and uncertainty semantics match at the same resolution: true (8.654917ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1458.664458
+
+✖ failing tests:
+
+test at scripts/coarse_osm_reused_display_v2_test.ts:1:6609
+✖ an exception after buffer consumption releases all query storage (15.602959ms)
+  AssertionError [ERR_ASSERTION]: false == true
+      at TestContext.<anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_reused_display_v2_test.ts:349:9)
+      at async Test.run (node:internal/test_runner/test:1088:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:763:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  }

@@ -1,0 +1,41 @@
+{"name":"original","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✔ original: queue receiver retention while the actual capacity exception stays alive (30.932125ms)
+{"name":"guarded","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✖ guarded: queue receiver retention while the actual capacity exception stays alive (32.295833ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 221.252208
+
+✖ failing tests:
+
+test at scripts/coarse_osm_display_queue_cleanup_v1_test.ts:1:685
+✖ guarded: queue receiver retention while the actual capacity exception stays alive (32.295833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     bytes: 10002,
+  +     i: 1
+  +   },
+  +   {
+  +     bytes: 10002,
+  +     i: 7
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_display_queue_cleanup_v1_test.ts:58:15)
+      at async Test.run (node:internal/test_runner/test:1088:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:763:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { i: 1, bytes: 10002 }, { i: 7, bytes: 10002 } ],
+    expected: [],
+    operator: 'deepStrictEqual'
+  }

@@ -1,0 +1,26 @@
+{
+  "output": "data/coarse-quality/us-osm-context-wire-v1",
+  "sourceCore": "data/coarse-quality/us-osm-absent-entry-codec-core-v1",
+  "sourceCoreClosed": "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-codec-core-closed-v1.json",
+  "sourceRecords": "data/coarse-quality/us-osm-context-records-run-v1",
+  "sourceRecordsClosed": "docs/evidence/coarse-osm-car-capacity-2026-11-01/context-records-run-closed-v1.json",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 6835003392,
+  "metadataScratchReserveBytes": 104857600,
+  "maxOwnedBytes": 67108864,
+  "previousClosedRoots": 233,
+  "bindings": {
+    "scripts/pack_osm_context_wire_v1.ts": "80c35723ec3b914e18c26b73687a0318ce794ccb2871c6348b40be4cde858a6a",
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_turn_contexts_v1.ts": "d69356d67eb61178dd47a3cbabf9abec31b0efd49048f1dedf74ac74d679f66b",
+    "scripts/close_osm_context_wire_v1.py": "175c4deff225432a3c745dfc2b1e64cc4076aa1f6994655333c11f7c9f1a33dc",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-codec-core-closed-v1.json": "3892b95394bb655c153d2b80070809cf617e1c580614671be27e058e832aeb86",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/context-records-run-closed-v1.json": "0ec6d700843d9f9279eb0b9040fd2a009d789d2ccabb3d0b78aa8f132b1cc6ac",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_context_records_v1.py": "c517a9c01e416954208acd3bc665cf2dce4dcdfb161f359cad40cb2b3f3b4da2",
+    "data/coarse-quality/us-osm-absent-entry-codec-core-v1/manifest.json": "a7ba8a680d81926c552e709f94737c3d1387cb7e38aa7eda364d89afe5fa9627",
+    "data/coarse-quality/us-osm-context-records-run-v1/report.json": "cccd2360f1c891df3fbdc7b4a2cc4e4c3ce75a7731073f6b139f7cde449bc363",
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7"
+  },
+  "scope": "One host wire packaging stage:copy12 sealed core compressed fields byte-for-byte,replace only old turn union with independently source-audited supported-only turns,pack6 required context fields. New core explicitly requires matching context search and bound record-report hash;auxmanifest binds new core SHA. No graph/geometry/cost/flag/ID/access change,source/PBF/constructor/query/provider/DB/app. Original accuracy/full-runtime/app gates remain.4GiBhostRSS/120s/64MiBowned;no cgroup/CPU/swap/cloud admission;64.5GB+all233closed6835003392B+100MiB scratch+owned under72GiB."
+}

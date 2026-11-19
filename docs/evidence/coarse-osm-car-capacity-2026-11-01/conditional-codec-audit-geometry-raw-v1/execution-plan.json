@@ -1,0 +1,31 @@
+{
+  "kind": "geometry",
+  "source": "data/coarse-quality/us-osm-conditional-derived-geometry-v1",
+  "codec": "data/coarse-quality/us-osm-conditional-codec-geometry-v1",
+  "output": "data/coarse-quality/us-osm-conditional-codec-audit-geometry-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-derived-geometry-closed-v1.json",
+  "codecClosedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-codec-geometry-closed-v1.json",
+  "manifestSha256": "37b29036fd8680956ba023656a82bc6f80cd39d6a54f2134728c672c7d11bd66",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 6314995712,
+  "metadataScratchReserveBytes": 104857600,
+  "additionalActiveReservationBytes": 0,
+  "bindings": {
+    "scripts/audit_osm_conditional_storage_v1.py": "6ce8f4a23bdd81ccde87a82dda6d46401e30974ec91e87fd00fefb22db06e908",
+    "scripts/audit_osm_paid_geometry_codec_v1.py": "545fedc92e6cf3e13a59d4c8a2f87b80d8e02991c2535d22c8414eff2cc73779",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "scripts/close_osm_conditional_storage_v1.py": "c0f77ec81c783fbda11a9bac0a04d98f53ec7e43828f5e629b2b5593af6eba0d",
+    "scripts/coarse_backbone_codec.py": "06203e4403d8728e5adfb19609682e66c001cad2c715006475cc1d34c9b68ecd",
+    "scripts/coarse_backbone_paths.py": "e8231dea40baba4b8434b4a6dd8d0c2daefb66359a71d30a5bb4779012c59234",
+    "scripts/coarse_osm_bulk_pbf.py": "0dc049193275859e161a90d4da13582438d787a4056b8ddae8bc43d8d062c207",
+    "scripts/coarse_osm_full_monitor_v1.py": "5f9e2d916998722c808825d8b8fd68d671ebbbd75e4324d008f4918392dd7581",
+    "scripts/coarse_osm_packed_codec_audit_v1.py": "e3b8218486311898bc9b14aa18f23c912638e1bff3c49ada5035e7fad0536f4b",
+    "scripts/coarse_osm_records.py": "b32f6ec834bf5504e143d636c00b65c679ae62618a00ee6acfdec45e0c43de19",
+    "scripts/coarse_path_features.py": "d8d69ccce7b54acced5bec457edd99f9b39c7c90495e766f4d86d83ba88ba079",
+    "scripts/coarse_timing_input.py": "8313c051c5c41b6b8af58d3c0cc3042aa2082e41a7dfe5556c83a88c92c5f182",
+    "scripts/coarse_timing_parquet.py": "76a798c55a760dac249424ff97a37cf0d01fedb557583f6f6bde5239a0ddb388",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-derived-geometry-closed-v1.json": "d835c61e941e61c72451ee1f55cc76cf6fa09a0e242411cb55c5dea02fe796f0",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-codec-geometry-closed-v1.json": "947d8bb97a2781e323ecd8ea6544e51e88ae7c29fc6ab08494d45922b7a4f6e3"
+  },
+  "scope": "Independent host seven-field full byte comparison; no concurrent producer.195 closed roots plus64.5GB prior/100MiB scratch/8MiB audit output under72GiB;120s deadline, no cgroup/CPU/swap/app/ETA admission."
+}

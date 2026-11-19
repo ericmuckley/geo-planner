@@ -1,0 +1,96 @@
+{
+  "status": "complete_context_records_and_independent_source_audit_passed",
+  "waysChecked": 4227238,
+  "completePreArcsMapped": 9878318,
+  "retainedArcsMapped": 9807359,
+  "contextPrefixGroups": 22946,
+  "contextStates": 31692,
+  "prohibitedExitArcRecords": 20156,
+  "activeTriggerPairs": 20185,
+  "supportedTurnPairsRetained": 234013,
+  "oldFinalForbiddenUnionPairsChecked": 252230,
+  "oldAllowedPathsRemainOrdinary": true,
+  "contextRuntimeBackingBytes": 1746705,
+  "sourceOnlyForbiddenBytes": 1404078,
+  "offlinePrefixCountBytes": 734272,
+  "selectedRetainedWayArcRecords": 55752,
+  "additionalQueryLabelBytes": 126768,
+  "constructionSeconds": 11.508294005994685,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "coordinatesRead": 0,
+  "routingQueries": 0,
+  "sourceCostsFlagsClosureUnionOrPhysicalArcIdsChanged": false,
+  "appActivated": false,
+  "scope": "Compact context/source-only-turn records only. Every physical source arc/cost/flag/closure unchanged; all states/exits use source way/native shared-anchor identity, never coordinates. Source-only forbidden union context-trigger pairs is exactly the old final turn set, so every old allowed path keeps ordinary history. Independent full source audit/reader/search/paid-progress/lifetime/ETA/app gates remain.",
+  "independentAudit": {
+    "status": "independent_complete_context_state_exit_trigger_source_audit_passed",
+    "allContextPrefixesChecked": 22946,
+    "allContextStatesSourceMapped": 31692,
+    "allProhibitedExitArcRecordsChecked": 20156,
+    "allActiveEntryTriggerPairsChecked": 20185,
+    "completePreArcsChecked": 9878318,
+    "selectedSourceArcAttributesChecked": 59803,
+    "allSupportedTurnPairsRetained": 234013,
+    "oldFinalTurnUnionExact": true,
+    "allOldAllowedPathsRemainOrdinary": true,
+    "sourcePbfReads": 0,
+    "sourceConstructorExecutions": 0,
+    "coordinatesRead": 0,
+    "routingQueries": 0,
+    "appActivated": false,
+    "secondsIndependentSourceAudit": 13.657112505985424,
+    "scope": "Every via-state subset has complete retained-way cardinality and exact source-way identity. Every exit is independently enumerated from complete to-way source arcs/shared native anchors; every trigger maps to its proper context and source pre-entry pair. Source-only forbidden union triggers equals old final turn set. No runtime query/paid-progress/lifetime/ETA/full-app admission."
+  },
+  "artifacts": {
+    "context/state-offsets.u32": {
+      "bytes": 91788,
+      "sha256": "fbfb3681ee8d430bb26eadade6b6e43ff5fb4547a82e43fba5c512c13aad3f09",
+      "runtime": true
+    },
+    "context/state-arcs.u24": {
+      "bytes": 95076,
+      "sha256": "3a22cd2ed9ef79111d1d6f3a3861742b84f51435aff06e06b3cc626969f75273",
+      "runtime": true
+    },
+    "context/exit-offsets.u32": {
+      "bytes": 91788,
+      "sha256": "54b21b9482c67b907783afc75bd4841417c157427ff2e4da41b0ff184e03b709",
+      "runtime": true
+    },
+    "context/exit-arcs.u24": {
+      "bytes": 60468,
+      "sha256": "ef016ecc2098b46f935e5dad0f5fc7d43190fc40c49e13ca48b71d2761506682",
+      "runtime": true
+    },
+    "context/triggers.u24": {
+      "bytes": 181665,
+      "sha256": "f720eb29b41569625a919430a35253bce6836db27ccbe9fa8a1003a9ef0302e2",
+      "runtime": true
+    },
+    "context/trigger-incoming.bit": {
+      "bytes": 1225920,
+      "sha256": "85ba8ac5375627ca114a53aa407072d0e289880fe9c1c58aa68b70fe106cd0fe",
+      "runtime": true
+    },
+    "routing/forbidden-turns.u24": {
+      "bytes": 1404078,
+      "sha256": "8e2348e2373cbf639998cceb4e53841f95cdf2977fb9682b3f8b07ab1a0dd376",
+      "runtime": true
+    },
+    "prefix-counts.bin": {
+      "bytes": 734272,
+      "sha256": "39044587da34890aa3d4046758799abaa8183a573eb4645b27bacad9e5f6871e",
+      "runtime": false
+    }
+  },
+  "componentLayoutProjection": {
+    "proposedTypedHeldBytes": 159505534,
+    "proposedQueryOnSameParentWorkspaceBytes": 59798211,
+    "actualLoaderSearchOrFullAppQualified": false
+  },
+  "requiresTurnContextSearch": true,
+  "runtimeQueryImplemented": false,
+  "accuracyOrAppQualified": false,
+  "workerSecondsIncludingBindingsConstructionAndIndependentAudit": 25.730611803010106
+}

@@ -1,0 +1,21 @@
+{
+  "status": "primary_lane_documentation_review_before_captured_policy_comparison",
+  "date": "2026-11-05",
+  "sources": [
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Key:hov",
+      "supports": "Documented one-way mixed HOV and ordinary lanes use motor_vehicle:lanes=no|yes|yes|yes and hov:lanes=designated|yes|yes|yes. Ordinary traffic is allowed in the yes columns;this does not make a designated HOV lane available to an ordinary car."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Key:*:lanes",
+      "supports": "Lane vectors can include lanes for all vehicle types;the lanes count may count only motor traffic. Conditional syntax and directional variants need separate interpretation."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/wiki/Lanes",
+      "supports": "Mode lane permissions and turn/change attributes describe different properties. This prototype does not infer lane-to-lane maneuver feasibility."
+    }
+  ],
+  "inference": "For a narrow coarse road-level model,a static one-way road with an explicit ordinary-car yes column need not be rejected in its entirety. This is an eligibility hypothesis,not proof of lane connectivity or causal detour repair. Existing road-level source turn rules stay. No timing ratio is derived from lane metadata.",
+  "prototypeScope": "Only existing lane-access exclusions;canonical1..32 count,known nonempty nondirectional relevant access vectors with a common literal yes column,HOV yes at the same column when present. Every other base/conditional/access/oneway constraint remains. All old eligible policies are exact. Decline blank inheritance,two-way/directional/unknown/count-mismatch/conditional lane forms and restricted whole-way HOV. The common-column intersection is intentionally narrower than mode-precedence interpretation.",
+  "prohibitedUse": "No way identity,name,city,coordinate,region,query or benchmark residual selects policy. Source identifiers appear only in output validation. No app/national/accuracy admission."
+}

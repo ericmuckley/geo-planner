@@ -1,0 +1,10 @@
+{
+  "failedRun": "conditional-attributes-run-plan-v1.json",
+  "failedRoot": "data/coarse-quality/us-osm-conditional-attributes-run-v1",
+  "cause": "The unchanged annotator globs files directly under its supplied /facts directory, but V1 recipe mounted new catalog facts under /facts/cost-facts. Binding hashes completed; zero way rows matched the glob; exact way-count assertion stopped before annotation.",
+  "preserved": "V1 code/recipe/output/error/metrics/cleanup/closed record untouched. Graph, all83 paths, frozen timing and maps unchanged; no PBF/provider/DB operation.",
+  "correction": "V2 separate driver/outputs and nine controls; flat /facts destinations preserve same file bytes/SHA. Generic layout guard before input hashing/root creation rejects nested, missing or gapped ways/arcs/closures. No annotation/source-cost math change.",
+  "bindings": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-attributes-run-closed-v1.json": "1a2e40359bae6374cced495e2d567cc2361a7942a334ae7841bfd4268068ef8b"
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "status": "highest_saved_finer_queue_pressure_paid_boundary_pilot_complete",
+  "recipeSha256": "3e12a839c36e95a59b29d6c548e2cfec7c8e3dd05292a452dabff26d7dbf243e",
+  "origins": 1,
+  "originIndex": 2,
+  "selection": "Highest maximumHeapEntries across every saved finer display; first index breaks ties",
+  "displays": 4,
+  "diagnosticPointCases": 6,
+  "results": [
+    {
+      "minutes": 900,
+      "diagnostic": true,
+      "fieldStats": {
+        "settles": 3613056,
+        "maximumHeapEntries": 8385,
+        "maximumBackingBufferBytes": 51021138,
+        "returnedBackingBufferBytes": 50884114,
+        "seedBackingBufferBytes": 6848,
+        "starts": 107
+      },
+      "stats": {
+        "envelopeMs": 1017.0329579999998,
+        "seedMs": 32520.008124999997,
+        "maskMs": 66230.506542,
+        "fillMs": 904.1419999999925,
+        "contourMs": 989.6492080000025,
+        "displayMs": 101677.205375,
+        "maximumBackingBufferBytes": 67103022,
+        "seedPhaseDeclaredBytes": 67103022,
+        "fillPhaseDeclaredBytes": 67103022,
+        "reusedLabelBytes": 39413460,
+        "reusedVertexBytes": 11463806,
+        "samples": 8011270,
+        "activeSpans": 2441730,
+        "settles": 4807344,
+        "maximumHeapEntries": 985976,
+        "localCells": 4807344,
+        "roadOnlyCells": 2854,
+        "selectedCells": 4818071,
+        "edges": 47372,
+        "rings": 1280,
+        "vertices": 31370,
+        "jsonBytes": 728942,
+        "initialSeedCells": 985660,
+        "retries": [],
+        "paidBoundaryCells": 7873
+      },
+      "boundary": {
+        "closedUncoveredCells": 1470130,
+        "adjacentToFiniteCenter": 18875,
+        "samplesTested": 59272,
+        "landSamples": 8281,
+        "paidConnectionsTested": 15728,
+        "addedCells": 7873
+      },
+      "witnessAudit": {
+        "witnessed": 7873,
+        "certificateSha256": "a20727a5737bbcc8c0cb068917495a73621fac71a21c3ed9df3a0a02d63f72c7",
+        "waterCenterCells": 5856,
+        "uncertainCenterCells": 1632,
+        "outsideWaterRasterCells": 0,
+        "allNoncoverageGridHashesExact": true
+      },
+      "timings": {
+        "hays-ks-360-inside": {
+          "ticks": 178943,
+          "kind": "road-foot",
+          "roadTicks": 178943,
+          "localGridTicks": 179014,
+          "localWitness": {
+            "terminalTicks": 46,
+            "edgeSeconds": 0,
+            "seedSeconds": 22371,
+            "seedCell": 4759737,
+            "seedKind": 8,
+            "steps": 0
+          }
+        },
+        "hays-ks-360-outside": {
+          "ticks": 172632,
+          "kind": "road-foot",
+          "roadTicks": 172632,
+          "localGridTicks": 172877,
+          "localWitness": {
+            "terminalTicks": 501,
+            "edgeSeconds": 0,
+            "seedSeconds": 21547,
+            "seedCell": 4544378,
+            "seedKind": 8,
+            "steps": 0
+          }
+        },
+        "hays-ks-600-inside": {
+          "ticks": 282863,
+          "kind": "road-foot",
+          "roadTicks": 282863,
+          "localGridTicks": 283178,
+          "localWitness": {
+            "terminalTicks": 378,
+            "edgeSeconds": 125,
+            "seedSeconds": 35225,
+            "seedCell": 2055419,
+            "seedKind": 8,
+            "steps": 1
+          }
+        },
+        "hays-ks-600-outside": {
+          "ticks": 280475,
+          "kind": "road-foot",
+          "roadTicks": 280475,
+          "localGridTicks": 281483,
+          "localWitness": {
+            "terminalTicks": 571,
+            "edgeSeconds": 0,
+            "seedSeconds": 35114,
+            "seedCell": 2152985,
+            "seedKind": 8,
+            "steps": 0
+          }
+        },
+        "hays-ks-720-inside": {
+          "ticks": 342257,
+          "kind": "local-grid",
+          "roadTicks": 353260,
+          "localGridTicks": 342257,
+          "localWitness": {
+            "terminalTicks": 153,
+            "edgeSeconds": 0,
+            "seedSeconds": 42763,
+            "seedCell": 6428390,
+            "seedKind": 8,
+            "steps": 0
+          }
+        },
+        "hays-ks-720-outside": {
+          "ticks": 369945,
+          "kind": "local-grid",
+          "roadTicks": 390141,
+          "localGridTicks": 369945,
+          "localWitness": {
+            "terminalTicks": 641,
+            "edgeSeconds": 2304,
+            "seedSeconds": 43859,
+            "seedCell": 5967002,
+            "seedKind": 8,
+            "steps": 15
+          }
+        }
+      },
+      "frame": {
+        "west": -114484518,
+        "south": 27235713,
+        "step": 9267,
+        "width": 3367,
+        "height": 2380
+      },
+      "maxObservedQueryArrayBuffers": 66965934,
+      "afterReleaseArrayBuffers": 160012495,
+      "output": {
+        "filename": "origin-03-900.geojson",
+        "bytes": 728942,
+        "sha256": "4d51923e87e9fbadc2c8c710a51dded5958a32ff55afce75a8e0d73e63a6a099"
+      },
+      "hostPhaseMsIncludingQueryChecks": 102360.361625
+    },
+    {
+      "minutes": 360,
+      "diagnostic": false,
+      "fieldStats": {
+        "settles": 570946,
+        "maximumHeapEntries": 4202,
+        "maximumBackingBufferBytes": 51021138,
+        "returnedBackingBufferBytes": 50884114,
+        "seedBackingBufferBytes": 6848,
+        "starts": 107
+      },
+      "stats": {
+        "envelopeMs": 485.7815000000119,
+        "seedMs": 8095.2749579999945,
+        "maskMs": 22301.585125000012,
+        "fillMs": 448.2568329999922,
+        "contourMs": 137.12737500001094,
+        "displayMs": 31483.348542000007,
+        "maximumBackingBufferBytes": 60284124,
+        "seedPhaseDeclaredBytes": 60284124,
+        "fillPhaseDeclaredBytes": 60284124,
+        "reusedLabelBytes": 39413460,
+        "reusedVertexBytes": 11463806,
+        "samples": 1595696,
+        "activeSpans": 384362,
+        "settles": 2507775,
+        "maximumHeapEntries": 282964,
+        "localCells": 2507775,
+        "roadOnlyCells": 761,
+        "selectedCells": 2508541,
+        "edges": 29136,
+        "rings": 386,
+        "vertices": 18258,
+        "jsonBytes": 297974,
+        "initialSeedCells": 282401,
+        "retries": [],
+        "paidBoundaryCells": 5
+      },
+      "boundary": {
+        "closedUncoveredCells": 8184,
+        "adjacentToFiniteCenter": 2671,
+        "samplesTested": 10675,
+        "landSamples": 7,
+        "paidConnectionsTested": 12,
+        "addedCells": 5
+      },
+      "witnessAudit": {
+        "witnessed": 5,
+        "certificateSha256": "e314f746bdacf1d085f9a60c679e6d88afb777fe5a8a7979f134080374d64815",
+        "waterCenterCells": 0,
+        "uncertainCenterCells": 5,
+        "outsideWaterRasterCells": 0,
+        "allNoncoverageGridHashesExact": true
+      },
+      "timings": {},
+      "frame": {
+        "west": -105660000,
+        "south": 34785000,
+        "step": 5000,
+        "width": 2654,
+        "height": 1735
+      },
+      "maxObservedQueryArrayBuffers": 60147036,
+      "afterReleaseArrayBuffers": 160012495,
+      "output": {
+        "filename": "origin-03-360.geojson",
+        "bytes": 297974,
+        "sha256": "80601167bc0afeaf7dcf7941e936b6058e3628fd5af6f84fc001864594bca1a8"
+      },
+      "hostPhaseMsIncludingQueryChecks": 31635.943
+    },
+    {
+      "minutes": 600,
+      "diagnostic": false,
+      "fieldStats": {
+        "settles": 1490227,
+        "maximumHeapEntries": 5464,
+        "maximumBackingBufferBytes": 51021138,
+        "returnedBackingBufferBytes": 50884114,
+        "seedBackingBufferBytes": 6848,
+        "starts": 107
+      },
+      "stats": {
+        "envelopeMs": 719.7030410000007,
+        "seedMs": 19130.402292000013,
+        "maskMs": 55745.61475000001,
+        "fillMs": 830.3731249999837,
+        "contourMs": 543.6585410000116,
+        "displayMs": 76985.11879100002,
+        "maximumBackingBufferBytes": 67107347,
+        "seedPhaseDeclaredBytes": 67107347,
+        "fillPhaseDeclaredBytes": 67107347,
+        "reusedLabelBytes": 39413460,
+        "reusedVertexBytes": 11463806,
+        "samples": 4032167,
+        "activeSpans": 1016400,
+        "settles": 4639583,
+        "maximumHeapEntries": 660035,
+        "localCells": 4639583,
+        "roadOnlyCells": 1591,
+        "selectedCells": 4645289,
+        "edges": 46216,
+        "rings": 898,
+        "vertices": 30008,
+        "jsonBytes": 689009,
+        "initialSeedCells": 659562,
+        "retries": [],
+        "paidBoundaryCells": 4115
+      },
+      "boundary": {
+        "closedUncoveredCells": 60585,
+        "adjacentToFiniteCenter": 9987,
+        "samplesTested": 30981,
+        "landSamples": 4265,
+        "paidConnectionsTested": 7803,
+        "addedCells": 4115
+      },
+      "witnessAudit": {
+        "witnessed": 4115,
+        "certificateSha256": "db667254129d6cd584c514f4bfe59371cae18cd347c9138c17b46269095c3854",
+        "waterCenterCells": 3706,
+        "uncertainCenterCells": 409,
+        "outsideWaterRasterCells": 0,
+        "allNoncoverageGridHashesExact": true
+      },
+      "timings": {},
+      "frame": {
+        "west": -109316816,
+        "south": 31208744,
+        "step": 6158,
+        "width": 3408,
+        "height": 2352
+      },
+      "maxObservedQueryArrayBuffers": 66970259,
+      "afterReleaseArrayBuffers": 160012495,
+      "output": {
+        "filename": "origin-03-600.geojson",
+        "bytes": 689009,
+        "sha256": "593ae7fb76689d3895fc4101e9eeef0aa233112cce6630fc16ccc36d5c34b0eb"
+      },
+      "hostPhaseMsIncludingQueryChecks": 77314.515334
+    },
+    {
+      "minutes": 720,
+      "diagnostic": false,
+      "fieldStats": {
+        "settles": 2146590,
+        "maximumHeapEntries": 5581,
+        "maximumBackingBufferBytes": 51021138,
+        "returnedBackingBufferBytes": 50884114,
+        "seedBackingBufferBytes": 6848,
+        "starts": 107
+      },
+      "stats": {
+        "envelopeMs": 894.444542000012,
+        "seedMs": 24600.301999999996,
+        "maskMs": 66098.878875,
+        "fillMs": 1122.8520830000052,
+        "contourMs": 714.9010419999831,
+        "displayMs": 93447.073417,
+        "maximumBackingBufferBytes": 67108071,
+        "seedPhaseDeclaredBytes": 67108071,
+        "fillPhaseDeclaredBytes": 67108071,
+        "reusedLabelBytes": 39413460,
+        "reusedVertexBytes": 11463806,
+        "samples": 5384561,
+        "activeSpans": 1455779,
+        "settles": 4711032,
+        "maximumHeapEntries": 800714,
+        "localCells": 4711032,
+        "roadOnlyCells": 2041,
+        "selectedCells": 4718493,
+        "edges": 49326,
+        "rings": 1138,
+        "vertices": 32470,
+        "jsonBytes": 747129,
+        "initialSeedCells": 800309,
+        "retries": [],
+        "paidBoundaryCells": 5420
+      },
+      "boundary": {
+        "closedUncoveredCells": 468023,
+        "adjacentToFiniteCenter": 12385,
+        "samplesTested": 37943,
+        "landSamples": 5648,
+        "paidConnectionsTested": 10575,
+        "addedCells": 5420
+      },
+      "witnessAudit": {
+        "witnessed": 5420,
+        "certificateSha256": "cfed583b819d5356a1d2f931b591e08ea66dd933e2059ee426a2c39ce4a4d74e",
+        "waterCenterCells": 4617,
+        "uncertainCenterCells": 803,
+        "outsideWaterRasterCells": 0,
+        "allNoncoverageGridHashesExact": true
+      },
+      "timings": {},
+      "frame": {
+        "west": -111369822,
+        "south": 29501052,
+        "step": 7446,
+        "width": 3361,
+        "height": 2385
+      },
+      "maxObservedQueryArrayBuffers": 67108007,
+      "afterReleaseArrayBuffers": 160012495,
+      "output": {
+        "filename": "origin-03-720.geojson",
+        "bytes": 747129,
+        "sha256": "a8161c4ff0a6974dfddfe68c465211547f2a4bc256cc408430cd668c6bc0e209"
+      },
+      "hostPhaseMsIncludingQueryChecks": 93904.986083
+    }
+  ],
+  "heldBackingBytes": 159868853,
+  "baseline": {
+    "rss": 126124032,
+    "heapTotal": 17924096,
+    "heapUsed": 8619552,
+    "external": 2688612,
+    "arrayBuffers": 143642
+  },
+  "afterLoad": {
+    "rss": 483442688,
+    "heapTotal": 92897280,
+    "heapUsed": 24328480,
+    "external": 162552546,
+    "arrayBuffers": 160012495
+  },
+  "afterQueries": {
+    "rss": 418119680,
+    "heapTotal": 164102144,
+    "heapUsed": 28539576,
+    "external": 162552346,
+    "arrayBuffers": 160012495
+  },
+  "providerRequests": 0,
+  "hostTotalMsIncludingBindingsFieldsChecksMapsIOAndGC": 306368.304375,
+  "isAccuracyCandidate": false,
+  "higherResolutionEvaluated": true,
+  "allFramesAndPointComponentsExactVsFinerCandidate": true,
+  "wholeCellWaterPaintUnresolved": true,
+  "hostBufferPoolSize": 0,
+  "hostOutputUsesUnpooledUtf8": true,
+  "scope": "ONE paid partial-cell coverage pilot on the origin selected by highest saved finer-grid queue pressure across ALL58maps. Frozen four quarter-cell samples and8adjacent finite OPEN centers; existing source landConnection for sample+entire ray, upward whole-second connectorPrice added to unchanged local arrival within same horizon. Onlycoverage changes; no finite time/parent/link/land/source change, no chaining through covered closed centers. Every added witness independently repriced/rechecked against actual borrowed grid before write; strictly increasing unique cells, sampled position/adjacency/source arrival/open-bit/targetclosed/timeinf/uncovered checks. Every noncoverage grid backing hash must stayexact; addedcoveragecount==witnesscount, every source/seed hash/allnested point components/frame/fieldStats/oldroadcoverage exact against current fine candidate. Count new cells whose centers are source water/uncertain/outside raster: whole-cell water/border paint remains an explicit unresolved approximation, no exact area/shore/app acceptance. No new typed backing; observed seeding/mask/pre-post-boundary checkpoints<=64MiB, fixed1Mheap/contour/JSONcaps/exactpermaprelease. Same physical epoch and79endpoint collection identity; no new source/point endpoint qualification. Alloriginal19accuracy/all83/35/58/166/source/shore/transfer/fullapp/package/firstestimate/API/camera admission remain unchanged; no partial accuracy score or live switch. Host1800s/4GiBRSS/64MiBowned/all413closed+64.5GBprior+100MiBscratch+everyactiveowned/tmp<72GiB, temporarycaffeinate-i only. Offline wall includesbindings/load/query/hash/witnessaudits/maps/IO/GC/lightchecks, not cgroup/CPU/cloud/isolated-query/first-app speed. No source/PBF/provider/newreferences/DB/env/dependency/app/deploy. Separately versionedV2standalone-host correction after preservedV1+8192B restoration stop/all16querybuffersweakreleased. SpecificV1allocationunproven; small controls reject direct-progress blame and reproduce an8192BexplicitBuffer-slab rollover. V2setsBuffer.poolSize=0 BEFOREbindings/runtimebaseline, unpooledUTF8progress/mapoutput, exact original release and every query/owned cap retained. No model/mask/coverage/sample/rate/point/source/cap change, no old failure repair, no app-side buffer policy change. All414closed+same64MiBowned under72GiB."
+}

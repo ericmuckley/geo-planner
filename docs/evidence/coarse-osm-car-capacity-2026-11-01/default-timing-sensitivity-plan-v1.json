@@ -1,0 +1,56 @@
+{
+  "candidate": "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-evaluation-v2-raw-v1/report.json",
+  "diagnosis": "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-path-findings-v1.json",
+  "attributes": "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-attributes-v2-run-raw-v1/report.json",
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/default-timing-sensitivity-v1.json",
+  "policy": {
+    "id": "published-base-road-defaults-static-estimate-v1",
+    "currentDefaultsKph": {
+      "motorway": 100,
+      "motorway_link": 40,
+      "trunk": 80,
+      "trunk_link": 40,
+      "primary": 55,
+      "primary_link": 35,
+      "secondary": 45,
+      "secondary_link": 30,
+      "tertiary": 40,
+      "tertiary_link": 30
+    },
+    "proposedDefaultsKph": {
+      "motorway": 100,
+      "motorway_link": 60,
+      "trunk": 85,
+      "trunk_link": 60,
+      "primary": 65,
+      "primary_link": 50,
+      "secondary": 60,
+      "secondary_link": 50,
+      "tertiary": 50,
+      "tertiary_link": 40
+    },
+    "explicitEstimatedSpeedRatio": [
+      1,
+      1
+    ],
+    "scope": "ORS v9.10.0 VehicleFlagEncoder base road-class defaults only. Not complete provider/configuration reproduction or legal/observed speeds. Original legal facts, explicit9/10estimates, physical topology, access, direction, restrictions and all other costs unchanged."
+  },
+  "bindings": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-evaluation-v2-raw-v1/report.json": "ed82ffd6331064d1acba66cf9d78a7bc2b29b6bf3c4fa719ba508a3d95852276",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-path-findings-v1.json": "ed84f1068d3ef67d7670d8261f9e938f98c30d559a0b78d1c1e1683c6479e4b4",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-attributes-v2-run-raw-v1/report.json": "0b367e6b016e28bd0cd9ecd8357f1ae70098a1c7c6a8be05c75d4a47cbbaff60",
+    "scripts/coarse_osm_default_timing_v1.py": "1302316aace56a21ef1c8e1139d0bf00147240bc3061a2560cb0e5c534907073",
+    "scripts/coarse_osm_default_timing_v1_test.py": "23a5dd02e7b9f9153fea8d84c6e20ff01feb610defaae1be75d9d671492eb229",
+    "scripts/screen_osm_default_timing_v1.py": "150094a6315c68a407e38bc7cd0d1389ac1dcd06ee256aa41aeecc8d3f297b6c",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/default-timing-source-review-v1.json": "c91ab202a3241c4772e129baf13c748eec26e2c81870bdf464fd26bd1a3aeb53",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/default-timing-host-controls-v1.txt": "1a1bfd26e33024b027314614d999772c0e31fb2bebee1cb5bd1f2bcdb280e0be",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-path-findings-plan-v1.json": "3508f7e1355c229e1246309fa533f92ca1c8314b9e16e113a7e0a974f369e7f5",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/incomplete-node-attributes-v2-run-closed-v1.json": "c9037b2207737e478511569bb11dffba7ef0fc2f095b8a25a3f4f4b8cce44d28",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_incomplete_node_diagnosis_v1.py": "98ebdeaa10df460b5dfba35088f3dab280717c6aae297990772e5cc5245f04c2"
+  },
+  "priorReserveBytes": 64500000000,
+  "metadataScratchReserveBytes": 104857600,
+  "previousClosedRoots": 377,
+  "newClosedAllocationBytes": 10140217344,
+  "scope": "Single predeclared published base-default table on ALL83current point-winning frozen witnesses; each default source group must equal its currentrole speed. Explicit9/10estimated speeds/signals/nonroad/root/local/rounding stay. Continuous elapsed tick sensitivity only: NOT exact primitive/macro requantization, changed paid positions/endpoint attachment, new optima/localgrids/maps,166paths or numerical/app acceptance/rejection. Samepaths are not guaranteed winners under newcosts. All original gates remain; no fitting/sweep/place rule/sourcePBF/newreference/provider/DB/app. Host60s metadata functional work in100MiB scratchreserve plusallclosed/prior under72GiB; not cgroup/cloud/performance qualification. Further resource/handler/surface/roundabout/encoding differences mean no hosted-provider reproductionclaim."
+}

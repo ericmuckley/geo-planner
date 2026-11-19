@@ -1,0 +1,155 @@
+{
+  "status": "conditional_only_national_graph_and_independent_complete_audit_passed",
+  "basePackedResult": {
+    "selectedNodes": 42993567,
+    "vertices": 5731903,
+    "majorWays": 4227238,
+    "preClosureArcs": 9882872,
+    "postClosureArcs": 9853924,
+    "sourceTurnRecords": 410509,
+    "costOverflowEntries": 2,
+    "reverseOverflowEntries": 0,
+    "forbiddenTurnPairs": 237158,
+    "payloadBytes": 129329345,
+    "maximumOutDegree": 21,
+    "relevantSourceTurnRecords": 292744
+  },
+  "previousFinalPostArcs": 9853365,
+  "mandatoryIncomingProjection": {
+    "allSourcePreArcsReplayed": 9882872,
+    "newIncomingOnlySourcePairs": 38,
+    "newActivePairs": 35,
+    "newDroppedPairs": 3,
+    "allOriginalNativeFinalPairsRetained": true,
+    "allNewIncomingArcsOriginallyClosed": true,
+    "noOldAllowedTransitionRemoved": true
+  },
+  "originalNativeAugmentation": [
+    25398,
+    237158,
+    24998,
+    400,
+    259987,
+    9853924
+  ],
+  "mandatoryRepresentedRules": 30,
+  "mandatoryInactiveFromRules": 128,
+  "comparisonParentPostArcs": 9853365,
+  "augmentationCounts": [
+    25436,
+    237158,
+    25033,
+    403,
+    260017,
+    9853924
+  ],
+  "independentAudit": {
+    "status": "independent_complete_entry_graph_audit_passed",
+    "baseFields": {
+      "status": "independent_complete_packed_routing_audit_passed",
+      "verticesChecked": 5731903,
+      "directedCostsAndPhysicalReversesChecked": 9853924,
+      "sourceTurnRecordsChecked": 410509,
+      "relevantSourceTurnRecords": 292744,
+      "forbiddenTurnPairsChecked": 237158,
+      "costOverflowEntries": 2,
+      "reverseOverflowEntries": 0,
+      "secondsIndependentDerivedAudit": 26.8858908029506,
+      "sourcePbfReads": 0,
+      "nativeLibraryExecutions": 0,
+      "sourceConstructorExecutions": 0,
+      "etaQualified": false,
+      "vercelQualified": false
+    },
+    "allPreArcMappingsChecked": 9882872,
+    "oldDirectedArcsRetained": 9665133,
+    "reopenedDirectedArcs": 188791,
+    "augmentationCounts": [
+      25436,
+      237158,
+      25033,
+      403,
+      260017,
+      9853924
+    ],
+    "finalForbiddenPairsChecked": 260017,
+    "closureSubsetExact": true,
+    "newEntryPairsIncomingArcOriginallyClosed": true,
+    "oldAllowedTransitionsPreserved": true,
+    "supersetReason": "Every original open source arc retains cost/flags/reverse and supported-turn semantics; every added entry prohibition enters an originally closed incoming arc; its outgoing arc may already exist. The final turn set is exactly the supported set union mapped entries.",
+    "secondsIndependentAuditIncludingAllBaseFields": 33.52685422298964,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "routingQueries": 0,
+    "accuracyOrAppQualified": false
+  },
+  "assets": {
+    "routing/xy.i32": {
+      "path": "base-routing/xy.i32",
+      "bytes": 45855224,
+      "sha256": "266423bb8f5bbc1cfe58109ad941acf4abc863cc9c188b5df500ff3137c05862"
+    },
+    "routing/targets.u24": {
+      "path": "base-routing/targets.u24",
+      "bytes": 29561772,
+      "sha256": "d960fd9640c9849d15e4e9d05ab08847a279887f5c4a8838d345111d6ecdc259"
+    },
+    "routing/cost-overflow-ticks.u32": {
+      "path": "base-routing/cost-overflow-ticks.u32",
+      "bytes": 8,
+      "sha256": "f9aa34aaad16065aef67a27b06db541aa572a7d8b8157fb0fbc6e85395c6afa8"
+    },
+    "routing/reverse.u8": {
+      "path": "base-routing/reverse.u8",
+      "bytes": 9853924,
+      "sha256": "3da92e3e8aed210a4d3460125bc8acf92b6c1e851adc93cf7395d9e684789f15"
+    },
+    "routing/forbidden-turns.u24": {
+      "path": "entry-forbidden.u24",
+      "bytes": 1560102,
+      "sha256": "057ea09fa99a3549f7cb6c7b8515a905c37d048912d6747aa36272b42f408eb8"
+    },
+    "routing/node-flags.u8": {
+      "path": "base-routing/node-flags.u8",
+      "bytes": 5731903,
+      "sha256": "fbc418484601cc6deadd631b88adfc1aa47ed098de21f126f771e013afc6a579"
+    },
+    "routing/reverse-overflow-arcs.u24": {
+      "path": "base-routing/reverse-overflow-arcs.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/offsets.u24": {
+      "path": "base-routing/offsets.u24",
+      "bytes": 17195712,
+      "sha256": "3fd2744eacbdd55b59e5c7067fc32bdf25e4cc2e9c212a5f9e7a71f36d66d738"
+    },
+    "routing/cost-overflow-arcs.u24": {
+      "path": "base-routing/cost-overflow-arcs.u24",
+      "bytes": 6,
+      "sha256": "d643c93fc8a0e0b065603e77676421e2950654cdd950ed03e120484c4fcda55a"
+    },
+    "routing/reverse-overflow-targets.u24": {
+      "path": "base-routing/reverse-overflow-targets.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/costs.u16": {
+      "path": "base-routing/costs.u16",
+      "bytes": 19707848,
+      "sha256": "2fe6b675ee19aa396f751973b85324f310f74fcc0f13f65a593c9c42eaccc0a5"
+    }
+  },
+  "finalPayloadBytes": 129466499,
+  "nativeEncodingSeconds": 4.673864668002352,
+  "nativeAugmentationSeconds": 7.630795295001008,
+  "independentAuditSeconds": 33.53996893099975,
+  "workerSecondsIncludingBindingsAndAllOperations": 47.91707922902424,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "spatialOrPaidGeometryOrCodecBuilt": false,
+  "appActivated": false,
+  "scope": "All old25398entrypairs pass unchanged nativeaugment, new38mandatory bans use separately audited source-to-CSR mapping; incoming oldclosed is sufficient to preserve every oldallowedtransition, outgoing may be anysourceway. Full independent native-identity/currentflag-order/price/reverse/turn/allpair audit. Fresh CSR IDs from qualified fixed-profile inactive conditional-no-turn source facts; every represented ban remains and all absent eligible directed incidences independently replay, including the already qualified native-order passable-node correction. All source costs/directions/geometry/native IDs/PRE descriptors and order retain exactly. Every old typed turn/unrelated contributor remains; converted junction bans concern formerly whole-way-closed members. Complete independent cost/flag/physical-reverse/source-turn audit plus exact mapped single/multi entry union. Auditor preservation statement compares the conservative ORIGINAL closure baseline on this same physical/cost epoch, not a transplanted preceding CSR. All numeric POST IDs, spatial geometry/history/storage/endpoints/maps remain new pending stages. No PBF/source constructor/query/provider/DB/accuracy/app admission."
+}

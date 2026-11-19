@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -115.7297,
+    33.3503
+  ],
+  "rows": [
+    {
+      "id": "bombay-beach--salton-city",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "destination": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 72.46666666666667,
+      "baselinePointMinutes": 83.29301179159387,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 61.58226666666667,
+      "baseline": {
+        "pointMinutes": 80.8780117915939,
+        "cellMinutes": 76.3930117915939,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.308333333333333,
+          "road": 44.78833333333335,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 4.485
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 74.0375,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 10.826345124927201,
+      "candidateErrorMinutes": 8.411345124927237,
+      "absoluteErrorChangeMinutes": -6.8405117915939115,
+      "estimateFailure": null
+    },
+    {
+      "id": "bombay-beach--indio",
+      "set": "regional",
+      "origin": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "destination": {
+        "lon": -116.2156,
+        "lat": 33.7206
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.955000000000005,
+      "baselinePointMinutes": 76.68785351485236,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 52.188583333333334,
+      "baseline": {
+        "pointMinutes": 75.22618684818572,
+        "cellMinutes": 72.3730117915939,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.308333333333333,
+          "road": 40.768333333333345,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 2.8531750565918252
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 65.64791666666666,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 12.732853514852359,
+      "candidateErrorMinutes": 11.271186848185714,
+      "absoluteErrorChangeMinutes": -9.57827018151906,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "bombay-beach--salton-city",
+      "previousPointTicks": 35538,
+      "pointTicks": 35538,
+      "previousRoadTicks": 35816,
+      "bestRoadTicks": 35816,
+      "frozenLocalGridTicks": 35538,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "bombay-beach--indio",
+      "previousPointTicks": 31511,
+      "pointTicks": 31511,
+      "previousRoadTicks": 31984,
+      "bestRoadTicks": 31984,
+      "frozenLocalGridTicks": 31511,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1788254,
+    "maximumHeapEntries": 4088,
+    "maximumBackingBufferBytes": 50907234,
+    "returnedBackingBufferBytes": 50770518,
+    "seedBackingBufferBytes": 192,
+    "starts": 3
+  },
+  "hostFieldAndFinishesMs": 294.6999159999996,
+  "afterReleaseArrayBuffers": 144171169
+}

@@ -7,6 +7,7 @@ import {
 } from "maplibre-gl";
 import {
 	type MapPlaces,
+	type OutdoorPlaceKind,
 	type OutdoorPlaceSelection,
 	type PlaceLocations,
 	placeAttribution,
@@ -14,6 +15,7 @@ import {
 	placeKinds,
 	placeLayers,
 } from "../lib/place-locations";
+import type { Origin } from "../lib/reachability";
 
 const empty: PlaceLocations = { type: "FeatureCollection", features: [] };
 const pointLayers = placeKinds.flatMap((kind) => [
@@ -86,25 +88,50 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 		displayed = locations;
 	}
 
-	function focusPlace({ kind, location }: OutdoorPlaceSelection) {
+	function showOutdoorPlace(
+		kind: OutdoorPlaceKind,
+		placeName: string,
+		coordinates: [number, number],
+		origin: Origin,
+		offset = 0,
+	) {
+		const [lon, lat] = coordinates;
+		const details = document.createElement("div");
+		const name = document.createElement("strong");
+		name.textContent = placeName;
+		const position = document.createElement("div");
+		position.textContent = `${placeLayers[kind].singular} · ${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+		const params = new URLSearchParams({
+			api: "1",
+			origin: `${origin.lat},${origin.lon}`,
+			destination: `${lat},${lon}`,
+			travelmode: "driving",
+		});
+		const directions = document.createElement("a");
+		directions.href = `https://www.google.com/maps/dir/?${params}`;
+		directions.target = "_blank";
+		directions.rel = "noopener noreferrer";
+		directions.className =
+			"mt-2 inline-block font-semibold text-[var(--lagoon-deep)] underline";
+		directions.textContent = "Directions in Google Maps";
+		details.append(name, position, directions);
+		popup
+			.setOffset(offset)
+			.setLngLat(coordinates)
+			.setDOMContent(details)
+			.addTo(map);
+	}
+
+	function focusPlace(
+		{ kind, location }: OutdoorPlaceSelection,
+		origin: Origin,
+	) {
 		if (!displayed?.[kind]?.features.includes(location)) return;
 		const [lon, lat] = location.geometry.coordinates;
 		const coordinates: [number, number] = [lon, lat];
 		popup.remove();
-
-		const details = document.createElement("div");
-		const name = document.createElement("strong");
-		name.textContent = location.properties.name;
-		const position = document.createElement("div");
-		position.textContent = `${placeLayers[kind].singular} · ${lat.toFixed(5)}, ${lon.toFixed(5)}`;
-		details.append(name, position);
-
-		map.easeTo({ center: coordinates, zoom: Math.max(14, map.getZoom()) });
-		popup
-			.setOffset(28)
-			.setLngLat(coordinates)
-			.setDOMContent(details)
-			.addTo(map);
+		map.jumpTo({ center: coordinates, zoom: Math.max(14, map.getZoom()) });
+		showOutdoorPlace(kind, location.properties.name, coordinates, origin, 28);
 		// A list selection needs a visible pin even when the source is clustered.
 		focusMarker = new Marker({
 			color: placeLayers[kind].color,
@@ -115,14 +142,19 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 		focusMarker.getElement().style.pointerEvents = "none";
 	}
 
-	function select(event: MapMouseEvent) {
+	function select(event: MapMouseEvent, origin?: Origin) {
 		if (!map.getLayer(pointLayers[0])) return false;
 		const [feature] = map.queryRenderedFeatures(event.point, {
 			layers: pointLayers,
 		});
 		if (feature?.geometry.type !== "Point") return false;
 		const [lon, lat] = feature.geometry.coordinates;
-		const { cluster_id: cluster, name } = feature.properties;
+		const {
+			cluster_id: cluster,
+			name,
+			lon: placeLon,
+			lat: placeLat,
+		} = feature.properties;
 		if (typeof cluster === "number") {
 			const source = map.getSource<GeoJSONSource>(feature.source);
 			void source
@@ -133,7 +165,19 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 				})
 				.catch(() => {});
 		} else if (typeof name === "string") {
-			popup.setOffset(0).setLngLat([lon, lat]).setText(name).addTo(map);
+			const kind = placeKinds.find(
+				(kind) => feature.source === `places-${kind}`,
+			);
+			if (
+				origin &&
+				(kind === "trailheads" || kind === "campgrounds") &&
+				typeof placeLon === "number" &&
+				typeof placeLat === "number"
+			) {
+				showOutdoorPlace(kind, name, [placeLon, placeLat], origin);
+			} else {
+				popup.setOffset(0).setLngLat([lon, lat]).setText(name).addTo(map);
+			}
 		}
 		return true;
 	}
@@ -143,6 +187,7 @@ export function createPlaceMapLayers(map: MapLibreMap) {
 		setLocations,
 		select,
 		focusPlace,
+		hasFocusedPlace: () => focusMarker !== undefined,
 		closePopup: () => popup.remove(),
 	};
 }

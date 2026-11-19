@@ -1,0 +1,20 @@
+{
+  "error": "Error: local heap capacity",
+  "activeMinutes": 900,
+  "lastObservedQueryArrayBuffers": 67107311,
+  "immutableSeedingChecked": true,
+  "providerRequests": 0,
+  "heldArrayBuffers": 160228752,
+  "afterFailure": {
+    "rss": 258670592,
+    "heapTotal": 161316864,
+    "heapUsed": 25177904,
+    "external": 174232409,
+    "arrayBuffers": 171692558
+  },
+  "observedQueryBuffers": 8,
+  "queryBuffersReleased": false,
+  "afterFailureMayAlsoCollectRuntimeInputs": true,
+  "stack": "Error: local heap capacity\n    at DisplayQueue.push (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_display_grid_v1.ts:234:10)\n    at fillLocal (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_display_grid_v1.ts:283:33)\n    at consumeField (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_reused_display_v1.ts:398:19)\n    at withField.maxTicks (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_reused_display_v1.ts:518:4)\n    at compute (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_context_road_field_v1.ts:169:10)\n    at withDiagnosticContextRoadField (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_context_road_field_v1.ts:196:9)\n    at reusedContextDisplay (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_reused_display_v1.ts:512:9)\n    at <anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/profile_osm_finer_display_capacity_pilot_v1.ts:186:18)",
+  "hostTotalMs": 137296.59329199998
+}

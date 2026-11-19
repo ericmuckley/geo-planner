@@ -1,0 +1,29 @@
+{
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-views-v1.json",
+  "controls": 13,
+  "sourcePairs": {
+    "captured": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-controls-closed-v1.json"
+    },
+    "country": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-run-closed-v1.json"
+    }
+  },
+  "newClosedAllocationBytes": 7884292096,
+  "previousClosedRoots": 277,
+  "bindings": {
+    "scripts/prepare_osm_explicit_lane_fact_view_v1.py": "3bbddeec37d73b83a7136c18244756523456b38e270c1cf9754fcf8e4f68e661",
+    "scripts/coarse_osm_fact_view_v1.py": "cd03d01279a79a42b2b5c0236cd66b261651819a0fcf11114c74ad6dd3660049",
+    "scripts/coarse_osm_fact_view_v1_test.py": "fb287fc9aeb10481fd7a1a316eaaa42c63cd2053f9daeaa65be67eee6e6164cf",
+    "scripts/coarse_osm_conditional_fact_io_v1.py": "1a22e66d79c5863c33055627aa673d440fec78023f42ae53e4eb576275bd7b62",
+    "scripts/coarse_osm_conditional_fact_io_v1_test.py": "37fd366f393b4f58ec96bc2fb4ee2be98bbc98150b9fcb09719f2c3f8fd8007f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-view-controls-v1.txt": "a79d2fbc109f8cd1ba4442fbccffee39d51a4c2cccdf04aaae56514b8995b2f2",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json": "63f39060d2ac12de3ec9e169d18c79b05b37c182e432d0190bc56249ea9af59a",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-controls-closed-v1.json": "083dd8d08602f7a3f8683afce3cc234763ef74dce1caa413705d06d805588904",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json": "8fb6b84482433cc4bc45a8f17d2e7b99ef7fd89dd1b232ad495e86a7b1900bb2",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-run-closed-v1.json": "f579432bfa1ce242c749f9c94c7c302ae429a7cd3188456fd33f4f775a7a4f59"
+  },
+  "scope": "Closed-metadata-only complete field-group catalogs for capturedV2 andcountryV2lane source overlays,after17native/source-row/price controls and fullcountryaudit. Unchanged qualifiedcompose selectscompleteways/flags/arcs groups fromnewoverlay,allotheroriginalsourcegroups retained.13hostview/storage controls pass. No actualfactfiles read/copied/linked,nativeprogram/source/graph/query/provider/DB/app or accuracy admission. Alloldstops/data preserved.277closed7,884,292,096B+64.5GBprior+100MiBmetadatareserve<72GiB."
+}

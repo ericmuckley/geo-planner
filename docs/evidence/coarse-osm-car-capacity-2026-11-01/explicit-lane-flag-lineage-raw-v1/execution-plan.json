@@ -1,0 +1,29 @@
+{
+  "output": "data/coarse-quality/us-osm-explicit-lane-flag-lineage-v1",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 7417032704,
+  "previousClosedRoots": 273,
+  "metadataScratchReserveBytes": 104857600,
+  "hostSeconds": 120,
+  "maxOwnedBytes": 8388608,
+  "catalog": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-fact-views-v1.json",
+  "records": "data/coarse-quality/us-osm-explicit-lane-source-run-v1/changed-lane-tags.bin",
+  "bindings": {
+    "scripts/review_osm_explicit_lane_flag_lineage_v1.py": "015940ae2ac601823fe5bb8c3968afb589b5f1b9d879644fdbc2da6ea6695e3d",
+    "scripts/close_osm_explicit_lane_flag_lineage_v1.py": "e8d940981b2967d4a3b1fc9564687a949172efc4dfe1b2fdda7baa3b6877a5d0",
+    "scripts/coarse_osm_conditional_fact_io_v1.py": "1a22e66d79c5863c33055627aa673d440fec78023f42ae53e4eb576275bd7b62",
+    "scripts/coarse_osm_conditional_records_v1.py": "2f9a0d5242d3edf8784948a63d4b4e2f50c8cc44514746914b348b676b3fd704",
+    "scripts/inventory_osm_lane_metadata_v1.py": "25b01e357e738010b5afa2659c88c90e4152e84991862c5cfa464fc1cf85076a",
+    "scripts/coarse_osm_car_policy_v1.py": "4e34d831bd06d3940db7b17c586356d1d3a211115ff24b8143e0ddc9b79d4965",
+    "scripts/coarse_osm_car_policy_v2.py": "0e268627b2d1434cf198197eefe6344c3d08603c4555d582fb233a463ab5ac16",
+    "scripts/coarse_osm_car_conditional_speed_v1.py": "183629edb6dd99b31fc1a86cc142acf5a957b7288afcac2c2b7a34addf7950df",
+    "scripts/coarse_osm_car_conditional_scope_v1.py": "6e5fffa866a5b2585cdfe18f520eef0cb67dd9ba677a4bcf36858baf6c4128c8",
+    "scripts/coarse_osm_car_explicit_lanes_v1.py": "fe0dc9a9992567d965e3c7719dc1ff7d92d42d19cc7f28ffdd7f0d745493f3f5",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-fact-views-v1.json": "ab538d62b4e475653b9ffa8c81f309bb3407d20f2cbfea2dc74a01e8e9052840",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-source-run-v1-closed-v1.json": "1a9c8cb3f2562be04ca4bdb822c1a333fffa29cddc04697ee153c45ba6a2ddd0",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-country-run-closed-v1.json": "9c0d03fed9eaa629621bc230e2f9d43913d567f0857b315c2ff3afe3627b09d9",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-country-run-raw-v1/failure.json": "085397facc1db4ed7029d69bb87c0ffd6a6aafaac9c3710c3713ea561b822da6",
+    "data/coarse-quality/us-osm-explicit-lane-source-run-v1/changed-lane-tags.bin": "4bf02b067e59aa7ed992b42fadc7178620aa2cf048975a31a91d26fb91d45536"
+  },
+  "scope": "Read-only full4,227,238current way-row/sourceflag review for3292audited newlane metadata records. Compare stored flags against both ORIGINAL source car policy and CURRENT rejected policy using actualrawtags;zero prior prices/role/direction/default fields exact. No coordinates/PBF/sourceconstructor/graph/query/provider/appDB/app. PreservefailedV1sourceoverlayallbytes. Host4GiBRSS/120s/8MiBowned;64.5GBprior+273closed7,417,032,704B+100MiBscratch+owned<72GiB. Source data/policy unchanged."
+}

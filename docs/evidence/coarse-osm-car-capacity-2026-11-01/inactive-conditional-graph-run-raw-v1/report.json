@@ -1,0 +1,138 @@
+{
+  "status": "inactive_conditional_national_graph_and_independent_complete_audit_passed",
+  "basePackedResult": {
+    "selectedNodes": 42993567,
+    "vertices": 5731903,
+    "majorWays": 4227238,
+    "preClosureArcs": 9882872,
+    "postClosureArcs": 9853365,
+    "sourceTurnRecords": 410509,
+    "costOverflowEntries": 2,
+    "reverseOverflowEntries": 0,
+    "forbiddenTurnPairs": 237138,
+    "payloadBytes": 129325871,
+    "maximumOutDegree": 21,
+    "relevantSourceTurnRecords": 292744
+  },
+  "previousFinalPostArcs": 9826630,
+  "conditionalJunctionBansAdded": 1331,
+  "inactiveSourceRulesOmitted": 6149,
+  "comparisonParentPostArcs": 9837848,
+  "augmentationCounts": [
+    25398,
+    237138,
+    24998,
+    400,
+    259967,
+    9853365
+  ],
+  "independentAudit": {
+    "status": "independent_complete_entry_graph_audit_passed",
+    "baseFields": {
+      "status": "independent_complete_packed_routing_audit_passed",
+      "verticesChecked": 5731903,
+      "directedCostsAndPhysicalReversesChecked": 9853365,
+      "sourceTurnRecordsChecked": 410509,
+      "relevantSourceTurnRecords": 292744,
+      "forbiddenTurnPairsChecked": 237138,
+      "costOverflowEntries": 2,
+      "reverseOverflowEntries": 0,
+      "secondsIndependentDerivedAudit": 21.116503718076274,
+      "sourcePbfReads": 0,
+      "nativeLibraryExecutions": 0,
+      "sourceConstructorExecutions": 0,
+      "etaQualified": false,
+      "vercelQualified": false
+    },
+    "allPreArcMappingsChecked": 9882872,
+    "oldDirectedArcsRetained": 9665133,
+    "reopenedDirectedArcs": 188232,
+    "augmentationCounts": [
+      25398,
+      237138,
+      24998,
+      400,
+      259967,
+      9853365
+    ],
+    "finalForbiddenPairsChecked": 259967,
+    "closureSubsetExact": true,
+    "newEntryPairsOnlyTouchOriginallyClosedArcs": true,
+    "oldAllowedTransitionsPreserved": true,
+    "supersetReason": "Every original open source arc retains cost/flags/reverse and supported-turn semantics; every added entry prohibition touches two originally closed arcs. The final turn set is exactly the supported set union mapped entries.",
+    "secondsIndependentAuditIncludingAllBaseFields": 27.476951470947824,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "routingQueries": 0,
+    "accuracyOrAppQualified": false
+  },
+  "assets": {
+    "routing/xy.i32": {
+      "path": "base-routing/xy.i32",
+      "bytes": 45855224,
+      "sha256": "266423bb8f5bbc1cfe58109ad941acf4abc863cc9c188b5df500ff3137c05862"
+    },
+    "routing/targets.u24": {
+      "path": "base-routing/targets.u24",
+      "bytes": 29560095,
+      "sha256": "134fc280cd641c31a67b93d9941b42ed57db6efc188786730352b3f848844155"
+    },
+    "routing/cost-overflow-ticks.u32": {
+      "path": "base-routing/cost-overflow-ticks.u32",
+      "bytes": 8,
+      "sha256": "f9aa34aaad16065aef67a27b06db541aa572a7d8b8157fb0fbc6e85395c6afa8"
+    },
+    "routing/reverse.u8": {
+      "path": "base-routing/reverse.u8",
+      "bytes": 9853365,
+      "sha256": "429d8d3b3771e2471076b5fec970d5de348e8d9c8e732264bc369707628a76de"
+    },
+    "routing/forbidden-turns.u24": {
+      "path": "entry-forbidden.u24",
+      "bytes": 1559802,
+      "sha256": "8374b37a373ed8a445f365f9877b89e38900ee1d1a700af5e650a3f85ad5900e"
+    },
+    "routing/node-flags.u8": {
+      "path": "base-routing/node-flags.u8",
+      "bytes": 5731903,
+      "sha256": "21a6c1ce46018eb96df0e4cfc998d3329ea424c08925fdea3bc747c95134860a"
+    },
+    "routing/reverse-overflow-arcs.u24": {
+      "path": "base-routing/reverse-overflow-arcs.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/offsets.u24": {
+      "path": "base-routing/offsets.u24",
+      "bytes": 17195712,
+      "sha256": "38d409654139ef10d66763b190c155e152d2635e6d184ded985500f5edecf4e5"
+    },
+    "routing/cost-overflow-arcs.u24": {
+      "path": "base-routing/cost-overflow-arcs.u24",
+      "bytes": 6,
+      "sha256": "dc66e29764357922f3e5759b9c790794e408570e608fadb0c43c07c03f036303"
+    },
+    "routing/reverse-overflow-targets.u24": {
+      "path": "base-routing/reverse-overflow-targets.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/costs.u16": {
+      "path": "base-routing/costs.u16",
+      "bytes": 19706730,
+      "sha256": "5f171e6f5914fb47cd68d6749493ce770e8ee8031561598c10c9fbe1242f94ff"
+    }
+  },
+  "finalPayloadBytes": 129462845,
+  "nativeEncodingSeconds": 4.186980460071936,
+  "nativeAugmentationSeconds": 0.963317250018008,
+  "independentAuditSeconds": 27.489743053913116,
+  "workerSecondsIncludingBindingsAndAllOperations": 35.08625684899744,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "spatialOrPaidGeometryOrCodecBuilt": false,
+  "appActivated": false,
+  "scope": "Fresh CSR IDs from qualified fixed-profile inactive conditional-no-turn source facts; every represented ban remains and all absent eligible directed incidences independently replay, including the already qualified native-order passable-node correction. All source costs/directions/geometry/native IDs/PRE descriptors and order retain exactly. Every old typed turn/unrelated contributor remains; converted junction bans concern formerly whole-way-closed members. Complete independent cost/flag/physical-reverse/source-turn audit plus exact mapped single/multi entry union. Auditor preservation statement compares the conservative ORIGINAL closure baseline on this same physical/cost epoch, not a transplanted preceding CSR. All numeric POST IDs, spatial geometry/history/storage/endpoints/maps remain new pending stages. No PBF/source constructor/query/provider/DB/accuracy/app admission."
+}

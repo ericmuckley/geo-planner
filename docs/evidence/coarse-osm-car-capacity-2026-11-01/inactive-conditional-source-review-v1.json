@@ -1,0 +1,24 @@
+{
+  "status": "fixed_profile_inactive_conditional_no_turn_hypothesis_before_projection_or_queries",
+  "reviewDate": "2026-11-08",
+  "sourceUrl": "https://wiki.openstreetmap.org/wiki/Relation:restriction#Tags",
+  "policy": {
+    "id": "fixed-profile-inactive-conditional-node-ban-v1",
+    "shape": "Unchanged qualified four-kind single-via-node prohibitory all-state envelope, distinct from/to ways.",
+    "inactiveStatuses": [
+      "from-way-base-ineligible",
+      "from-way-outside-major-facts",
+      "no-directed-incoming-source-port",
+      "no-directed-outgoing-source-port",
+      "to-way-base-ineligible",
+      "to-way-outside-major-facts"
+    ],
+    "scope": "No eligible directed from-via-to transition in the COMPLETE fixed source pre-arc profile. Keep represented bans and every independent closure/access/node constraint. Missing-via/unknown/complexity/only-turn forms keep fallback. Profile/source/pre-arcs changes invalidate the certificate. No permission, local-surrogate turn, timing-price or app admission claim."
+  },
+  "sourceFacts": "A prohibitory relation forbids proceeding along its specified from/via/to geometry. Existing exact-shape all-state classifier stays; conditions remain opaque and ban stays permanent where representable.",
+  "inference": "If the COMPLETE fixed major-road pre-arc profile has no eligible directed from-via-to transition, this particular no-turn has no represented maneuver to prohibit. Its whole-way fallback need not close unrelated road travel. This is graph-scope reasoning from exact physical port absence, not source permission, provider behavior or a new general claim about absent signs.",
+  "requirements": "Fresh independent source ID/way eligibility/complete pre-arc port audit and captured native oracle parity before graph/model use. Every represented static ban and independent source closure/direct access/node constraint stays. Profile/input changes invalidate and require recomputation.",
+  "exclusions": "Only-turns, unknown/mixed/complex conditions, missing-via/nonanchor/complexity fallbacks stay. Local surrogate links remain unverified driving/turn behavior; this rule cannot grant access on them. No speed/cost/flags/place exception or gate change.",
+  "sourceCodeCopied": false,
+  "sourcePolicyActivated": false
+}

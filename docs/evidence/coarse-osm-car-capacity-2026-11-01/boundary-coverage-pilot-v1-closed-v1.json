@@ -1,0 +1,30 @@
+{
+  "root": "data/coarse-quality/us-osm-boundary-coverage-pilot-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 78765,
+      "sha256": "25dfb2707634a476613aba06a8cbf63ae3caadca21a50bf7d03f1b244e64e2de",
+      "ignoredLargeAsset": false
+    },
+    "failure.json": {
+      "bytes": 853,
+      "sha256": "d16bda3adbc73fae83a8ce596a8b27a3a5f8f772b3b9bb5f54512771e50adac3",
+      "ignoredLargeAsset": false
+    },
+    "origin-03-900.geojson": {
+      "bytes": 728942,
+      "sha256": "4d51923e87e9fbadc2c8c710a51dded5958a32ff55afce75a8e0d73e63a6a099",
+      "ignoredLargeAsset": true
+    }
+  },
+  "usage": {
+    "logicalBytes": 808560,
+    "allocatedBytes": 815104,
+    "entries": 4,
+    "conservativeAllocatedBytes": 1896448
+  },
+  "terminalRecord": "failure.json",
+  "terminalStatus": "AssertionError [ERR_ASSERTION]: Query owner backing restored\n+ actual - expected\n\n+ 160014313\n- 160006121\n      ^\n",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

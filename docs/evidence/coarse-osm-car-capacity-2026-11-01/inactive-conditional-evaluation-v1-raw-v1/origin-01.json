@@ -1,0 +1,305 @@
+{
+  "origin": [
+    -123.8313,
+    46.1879
+  ],
+  "initialChoices": 286,
+  "accessInput": {
+    "filename": "endpoint-01.json.gz",
+    "rawBytes": 83995,
+    "rawSha256": "6f6d50053f612913bf36608eefc0e4c833f4502bdc3da4e95d4b9cefc00910f4",
+    "compressedBytes": 9304,
+    "sha256": "0c98be1103fe2232a2eac70bdc69850e22eae1caadbfbeb6d9e1a6fb502c70ed"
+  },
+  "diagnostic": {
+    "timings": {
+      "astoria-or-360-inside": {
+        "ticks": 182239,
+        "kind": "road-foot",
+        "roadTicks": 182239,
+        "localGridTicks": 182953,
+        "localWitness": {
+          "terminalTicks": 369,
+          "edgeSeconds": 0,
+          "seedSeconds": 22823,
+          "seedCell": 2108925,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-360-outside": {
+        "ticks": 190305,
+        "kind": "road-foot",
+        "roadTicks": 190305,
+        "localGridTicks": 191452,
+        "localWitness": {
+          "terminalTicks": 604,
+          "edgeSeconds": 0,
+          "seedSeconds": 23856,
+          "seedCell": 2127384,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-600-inside": {
+        "ticks": 289592,
+        "kind": "road-foot",
+        "roadTicks": 289592,
+        "localGridTicks": 290516,
+        "localWitness": {
+          "terminalTicks": 620,
+          "edgeSeconds": 0,
+          "seedSeconds": 36237,
+          "seedCell": 996073,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-600-outside": {
+        "ticks": 299516,
+        "kind": "road-foot",
+        "roadTicks": 299516,
+        "localGridTicks": 300021,
+        "localWitness": {
+          "terminalTicks": 325,
+          "edgeSeconds": 0,
+          "seedSeconds": 37462,
+          "seedCell": 1126940,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "astoria-or-720-inside": {
+        "ticks": 394914,
+        "kind": "local-grid",
+        "roadTicks": 395315,
+        "localGridTicks": 394914,
+        "localWitness": {
+          "terminalTicks": 434,
+          "edgeSeconds": 453,
+          "seedSeconds": 48857,
+          "seedCell": 238331,
+          "seedKind": 8,
+          "steps": 3
+        }
+      },
+      "astoria-or-720-outside": {
+        "ticks": 392555,
+        "kind": "local-grid",
+        "roadTicks": 393048,
+        "localGridTicks": 392555,
+        "localWitness": {
+          "terminalTicks": 411,
+          "edgeSeconds": 0,
+          "seedSeconds": 49018,
+          "seedCell": 240144,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1097489,
+      "maximumHeapEntries": 2229,
+      "maximumBackingBufferBytes": 51032594,
+      "returnedBackingBufferBytes": 50895570,
+      "seedBackingBufferBytes": 18304,
+      "starts": 286
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -125003400,
+      "south": 35956140,
+      "step": 9420,
+      "width": 1676,
+      "height": 1491
+    },
+    "stats": {
+      "envelopeMs": 460.93679199999997,
+      "maskMs": 9581.825125,
+      "seedMs": 3275.5855840000004,
+      "fillMs": 241.7301660000012,
+      "contourMs": 71.34345899999971,
+      "displayMs": 13631.92975,
+      "maximumBackingBufferBytes": 59893163,
+      "borrowedVertexWorkspace": true,
+      "samples": 2042312,
+      "activeSpans": 714658,
+      "settles": 1462280,
+      "maximumHeapEntries": 186106,
+      "selectedCells": 1464079,
+      "localCells": 1462280,
+      "roadOnlyCells": 1799,
+      "edges": 28092,
+      "rings": 802,
+      "vertices": 18264,
+      "jsonBytes": 395550,
+      "retries": []
+    },
+    "phaseMs": 13895.719,
+    "output": {
+      "filename": "origin-01-900.geojson",
+      "bytes": 395550,
+      "sha256": "c60dcdd7d5cfbbcdab6bc3a5017815f060447905f7e5e2ccdce5308490421eb6"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 360,
+      "classified": {
+        "astoria-or-360-inside": false,
+        "astoria-or-360-outside": false
+      },
+      "fieldStats": {
+        "settles": 378882,
+        "maximumHeapEntries": 1455,
+        "maximumBackingBufferBytes": 51032594,
+        "returnedBackingBufferBytes": 50895570,
+        "seedBackingBufferBytes": 18304,
+        "starts": 286
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -125000000,
+        "south": 42505000,
+        "step": 5000,
+        "width": 1397,
+        "height": 1273
+      },
+      "stats": {
+        "envelopeMs": 337.33741700000064,
+        "maskMs": 5978.455958999999,
+        "seedMs": 1691.1079160000008,
+        "fillMs": 134.4944170000017,
+        "contourMs": 31.61712499999703,
+        "displayMs": 8173.016083,
+        "maximumBackingBufferBytes": 59893163,
+        "borrowedVertexWorkspace": true,
+        "samples": 758273,
+        "activeSpans": 229133,
+        "settles": 802903,
+        "maximumHeapEntries": 106740,
+        "selectedCells": 804184,
+        "localCells": 802903,
+        "roadOnlyCells": 1281,
+        "edges": 18800,
+        "rings": 280,
+        "vertices": 11574,
+        "jsonBytes": 196002,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-01-360.geojson",
+        "bytes": 196002,
+        "sha256": "1c4bb9dedd365c8d4a3c11c1476b456911594c776f9719495568b65249135f38"
+      }
+    },
+    {
+      "minutes": 600,
+      "classified": {
+        "astoria-or-600-inside": false,
+        "astoria-or-600-outside": false
+      },
+      "fieldStats": {
+        "settles": 501830,
+        "maximumHeapEntries": 1455,
+        "maximumBackingBufferBytes": 51032594,
+        "returnedBackingBufferBytes": 50895570,
+        "seedBackingBufferBytes": 18304,
+        "starts": 286
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -125000568,
+        "south": 39792234,
+        "step": 6442,
+        "width": 1597,
+        "height": 1565
+      },
+      "stats": {
+        "envelopeMs": 368.32258400000137,
+        "maskMs": 7409.350792000001,
+        "seedMs": 2081.7457079999986,
+        "fillMs": 222.90533300000243,
+        "contourMs": 58.57037499999569,
+        "displayMs": 10140.979875,
+        "maximumBackingBufferBytes": 59893163,
+        "borrowedVertexWorkspace": true,
+        "samples": 1079245,
+        "activeSpans": 302704,
+        "settles": 1372754,
+        "maximumHeapEntries": 159585,
+        "selectedCells": 1374424,
+        "localCells": 1372754,
+        "roadOnlyCells": 1670,
+        "edges": 25246,
+        "rings": 531,
+        "vertices": 15871,
+        "jsonBytes": 374936,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-01-600.geojson",
+        "bytes": 374936,
+        "sha256": "95aeb70c2aed48365d7a19420b50589f76d8e056d341aaf065fbba3acd82a097"
+      }
+    },
+    {
+      "minutes": 720,
+      "classified": {
+        "astoria-or-720-inside": false,
+        "astoria-or-720-outside": false
+      },
+      "fieldStats": {
+        "settles": 600940,
+        "maximumHeapEntries": 1455,
+        "maximumBackingBufferBytes": 51032594,
+        "returnedBackingBufferBytes": 50895570,
+        "seedBackingBufferBytes": 18304,
+        "starts": 286
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -125000728,
+        "south": 38211818,
+        "step": 7718,
+        "width": 1636,
+        "height": 1528
+      },
+      "stats": {
+        "envelopeMs": 395.0528750000012,
+        "maskMs": 8502.190542000004,
+        "seedMs": 2245.1512079999957,
+        "fillMs": 273.35225000000355,
+        "contourMs": 57.94933299999684,
+        "displayMs": 11473.768875000002,
+        "maximumBackingBufferBytes": 59893163,
+        "borrowedVertexWorkspace": true,
+        "samples": 1234992,
+        "activeSpans": 371643,
+        "settles": 1316651,
+        "maximumHeapEntries": 158064,
+        "selectedCells": 1318220,
+        "localCells": 1316651,
+        "roadOnlyCells": 1569,
+        "edges": 24156,
+        "rings": 586,
+        "vertices": 15224,
+        "jsonBytes": 359836,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-01-720.geojson",
+        "bytes": 359836,
+        "sha256": "1c2fc3a007ecde0af33e19be86c1b690f4cef15ef0ccf8b0b0a00f899e11115c"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 576978944,
+    "heapTotal": 94470144,
+    "heapUsed": 25407328,
+    "external": 162505401,
+    "arrayBuffers": 159965550
+  }
+}

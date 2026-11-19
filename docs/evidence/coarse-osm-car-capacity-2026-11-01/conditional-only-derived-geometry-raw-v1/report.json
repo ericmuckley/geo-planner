@@ -1,0 +1,93 @@
+{
+  "status": "conditional_node_geometry_and_complete_independent_audit_passed",
+  "nativeResult": {
+    "selectedCoordinates": 42993567,
+    "sourceAnchors": 5731903,
+    "majorWays": 4227238,
+    "geometryReferences": 48163649,
+    "preClosureArcs": 9882872,
+    "postClosureArcs": 9853924,
+    "physicalSpans": 6601900,
+    "curvedSpans": 299326,
+    "interiorPoints": 695917,
+    "longSpans": 533516,
+    "runtimeBytes": 11563179,
+    "offlineProvenanceBytes": 16109140,
+    "lengthOverflows": 0,
+    "packetBytes": 6800313,
+    "totalOutputBytes": 27672319,
+    "comparisons": 110506289,
+    "maximumDiscardedGeometryErrorMeters": 99.99984509483465,
+    "maximumDiscardedTimeErrorMs": 9997.0,
+    "maximumFullSpanMeters": 93726.62350793267
+  },
+  "independentAudit": {
+    "status": "independent_complete_paid_geometry_source_packet_prefix_length_audit_passed",
+    "physicalSpansChecked": 6601900,
+    "directedSourceCostsChecked": 9853924,
+    "curvedSpansChecked": 299326,
+    "interiorPositionsChecked": 695917,
+    "longSpansChecked": 533516,
+    "lengthOverflowsChecked": 0,
+    "runtimeBytes": 11563179,
+    "maximumDiscardedSourcePointErrorMeters": 99.99984509483471,
+    "maximumDiscardedSourceTimeErrorMs": 9997.0,
+    "maximumFullSpanMeters": 93726.62350793267,
+    "secondsIndependentSourceAudit": 109.9094740919536,
+    "sourcePbfReads": 0,
+    "nativeProducerExecutions": 0,
+    "originSnapOrEtaOrAppQualified": false
+  },
+  "nativeOperationSeconds": 20.775201342999935,
+  "independentAuditSeconds": 109.92146117496304,
+  "workerSecondsIncludingBindingsAndBothOperations": 132.3088594779838,
+  "assets": {
+    "geometry/long-keys.u24": {
+      "bytes": 1600548,
+      "sha256": "9ecf31537ebac0840f01e251e623018bc66c082d5f783a7b1220202bf8725adb"
+    },
+    "geometry/curve-keys.u24": {
+      "bytes": 897978,
+      "sha256": "3b291846972029add64a4c25252f982f23ce7aa8f53ba3cd9bc2f37f7812d65b"
+    },
+    "geometry/curve-source-positions.u32": {
+      "bytes": 2783668,
+      "sha256": "7008febacf262a3fa3e8ba944fc1c6fc3d806afd89cec2c5e2c3a1e8f6c94218"
+    },
+    "geometry/long-source.bin": {
+      "bytes": 8536256,
+      "sha256": "3c5afafc7a53331112f5527c02ae8f5cce68ab548135b79960750a33e13cb694"
+    },
+    "geometry/long-overflow-units.u32": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "geometry/long-overflow-keys.u24": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "geometry/curve-source.bin": {
+      "bytes": 4789216,
+      "sha256": "7d8d46e1ca1ac3b451d3f3e1a54c61c2c10799fe106fac571d23f5a53dbd75b4"
+    },
+    "geometry/long-lengths.u16": {
+      "bytes": 1067032,
+      "sha256": "45f7ce8869962f07e9e3f5ffcebfd298347e907020039b15d6ef1b7587617298"
+    },
+    "geometry/curve-packets.u8": {
+      "bytes": 6800313,
+      "sha256": "7f2ff56478948de0992d029a54139ec4ec647ba7aec451a13cf5ff0a0e5e2574"
+    },
+    "geometry/curve-offsets.u32": {
+      "bytes": 1197308,
+      "sha256": "db92bfad60ea89dbbecdfa72247362118ee3f3c8c19d5c0043c90e4cf64cd022"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "appActivated": false,
+  "accuracyQualified": false,
+  "scope": "New candidate inputs through sealed generic helpers, with complete independent output audit. Source PBF not mounted. Codec/query/ETA/app qualification are separate."
+}

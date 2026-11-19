@@ -1,0 +1,30 @@
+{
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 9404407808,
+  "previousClosedRoots": 337,
+  "metadataScratchReserveBytes": 104857600,
+  "bindings": {
+    "scripts/pack_osm_passable_node_wire_v1.ts": "bdd4bbbb45d9d1b9fbda77c0a77abe9ee388c82c994b4c439754765b71656ec1",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/close_osm_passable_node_wire_v1.py": "910960c74509469e1c7de4a2f6f4e7c3da641e953b2f3d4619cd9587cac2b521",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-context-wire-closed-v1.json": "c0385ef92847e246c100a5d734b22bb21fe79fdd171e2671425e8a32fadf1e49",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-overlay-raw-v1/report.json": "1746fc4050ff579370ce36cad90ba0873f9efe54e577676bb5a273e11b2594bb",
+    "data/coarse-quality/us-osm-passable-node-overlay-v1/proposed-node-flags.u8": "dd30854424a8cc751ff243541aa3cdfdb4704f222ed4b290453327487c31f375",
+    "data/coarse-quality/us-osm-tagged-timing-context-wire-v1/core/manifest.json": "fd3461ceebabe90305074b02c51694e93ae9858759ba02efe3ca6ad4f2fe33f8",
+    "data/coarse-quality/us-osm-tagged-timing-context-wire-v1/context/manifest.json": "889505188c0a0723669e4964f8ac8aa6300b41027966aa93381a2b1d4adbc682",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-overlay-closed-v1.json": "ac7476b5688ecd20c96c028282597276653a261ea6e4981bb6a931c4e2f9d1e3",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-routes-closed-v1.json": "24f859229a325b20d46bddee72bc99041898663176436abaf0aa4cbe5f89915b",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-routes-raw-v1/report.json": "96834a8753b3f5420692a4e19ef1eb5c435f4d9c694342aa203f2bd816869805",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-route-controls-v1.txt": "6274da66c588b764fe34049c13a055d2cef447ef20950adef2d375272e054870",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-route-types-v1.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-barriers-source-review-v1.json": "6d37c13d1a7034d559cf54c8a33d9665578e73f2309ebe86809e4d8771a708b4"
+  },
+  "output": "data/coarse-quality/us-osm-passable-node-wire-v1",
+  "maxOwnedBytes": 67108864,
+  "source": "data/coarse-quality/us-osm-tagged-timing-context-wire-v1",
+  "sourceClosed": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-context-wire-closed-v1.json",
+  "overlayReport": "docs/evidence/coarse-osm-car-capacity-2026-11-01/passable-node-overlay-raw-v1/report.json",
+  "nodeFlags": "data/coarse-quality/us-osm-passable-node-overlay-v1/proposed-node-flags.u8",
+  "scope": "Replace only source-audited nodeflags packet; all12otherphysical+6context compressedpackets exactcopies, source costs/IDs/turns/reversals/signals unchanged. Rebindcontextmanifest to newlyqualified core. Existingcodec20/native/source audits retain; producerroundtrip mandatory; independentPythoncompletechangedandcopybytes/actualconsumer/access/freshmap/accuracygatesremain. Host4GiBRSS/120s/output64MiB/72GiBaggregate; noPBF,modelqueries,provider,DB,app."
+}

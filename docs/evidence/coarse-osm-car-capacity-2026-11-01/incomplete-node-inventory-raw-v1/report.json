@@ -1,0 +1,57 @@
+{
+  "status": "complete_incomplete_node_maneuver_metadata_inventory",
+  "policy": {
+    "id": "incomplete-static-single-via-node-maneuver-v1",
+    "shape": "Exactly one positive native node member with role via; no from/to way or other members.",
+    "tags": "Exact documented general/car relation type; at least one known static car/general restriction key, every stated value identical and supported; no unknown restriction keys or conditional keys.",
+    "meaning": "Without from/to road members this relation cannot define a maneuver. Omit only this incomplete relation contribution; never infer an all-direction node barrier from it.",
+    "fallback": "Unknown/mixed/conditional tags, unknown/car exemptions, other member shapes and every way-containing restriction retain their current handling.",
+    "unchanged": "Direct node access/barrier/dimension/lock/hour guards, all other node and way contributors, valid turn rules, costs, directions and timing gates remain."
+  },
+  "allRawUnsupportedRelations": 70376,
+  "originalNodeOnlyRelations": 2551,
+  "originalNodeOnlyClosureIds": 1833,
+  "selectedIncompleteRelations": 2525,
+  "classificationCounts": {
+    "not-single-via-node": 67834,
+    "missing-both-essential-road-members": 2525,
+    "unknown-or-mixed-static-kind": 2,
+    "conditional-fallback": 14,
+    "unsupported-relation-type": 1
+  },
+  "selectedKinds": {
+    "no_u_turn": 1435,
+    "only_straight_on": 191,
+    "no_left_turn": 624,
+    "only_right_turn": 52,
+    "no_right_turn": 152,
+    "only_left_turn": 27,
+    "no_straight_on": 33,
+    "only_u_turn": 11
+  },
+  "allOriginalBlockedNodeTagsReplayed": 13776,
+  "originalRestrictionBlockedGraphNodes": 1501,
+  "currentPassablePolicyBlockedNodes": 8062,
+  "proposedPolicyBlockedNodes": 6574,
+  "potentialNewOpenGraphNodes": 1488,
+  "nodesRetainingIndependentContributors": 13,
+  "everyDirectNodeGuardRetained": true,
+  "everyOtherContributorRetained": true,
+  "artifact": {
+    "file": "incomplete-node-metadata.json.gz",
+    "bytes": 81540,
+    "sha256": "7dce82fc4dcae0da135a45b03b5c4d50df631c31b30c7d158308465a22751453",
+    "rawBytes": 929312,
+    "rawSha256": "de0c74e5a43d1b7a10d49df72a75136deb773b09c2e05c878be278fa9ca8646f"
+  },
+  "hostSecondsIncludingBindingsAllRelationsTagsAndIndependentContributorReplay": 0.5471357500646263,
+  "hostMaximumRssBytes": 85114880,
+  "sourcePbfReads": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "actualNodeFlagsChanged": false,
+  "nativeOrRuntimeQualified": false,
+  "appActivated": false,
+  "scope": "Complete cached raw-relation and original node-tag metadata only. Exact source-schema rule is predeclared and six host controls pass. Reconstruct all original node-only contributors before logically applying only the singleton-via static-incomplete rule; retain all direct guards/independent contributors and qualified passable-barrier policy. Proposed counts are not changed flags, roads, legal-permission/route/accuracy or app admission. Current conditional-junction full candidate is unchanged and its entire256MiBoutput is reserved. Host512MiBRSS/120s/64MiBoutput/72GiBaggregate; not cgroup/CPU/cloud timing. No PBF/provider/applicationDB/graph/model query."
+}

@@ -1,0 +1,51 @@
+{
+  "status": "complete_typed_conditional_node_source_ports_independently_audited",
+  "operation": "run",
+  "sourceCounts": {
+    "ids": 42993567,
+    "anchors": 5731903,
+    "ways": 4227238,
+    "arcs": 9882872
+  },
+  "metadataCandidates": 7480,
+  "statusCounts": {
+    "to-way-outside-major-facts": 3765,
+    "source-ports-supported": 1331,
+    "from-way-outside-major-facts": 2229,
+    "from-way-base-ineligible": 88,
+    "no-directed-incoming-source-port": 5,
+    "to-way-base-ineligible": 62
+  },
+  "sourceSupportedRules": 1331,
+  "retainedFallbackRules": 6149,
+  "allSourceNodeIdsChecked": 42993567,
+  "allSourceAnchorsChecked": 5731903,
+  "allSourceWayRowsChecked": 4227238,
+  "allSourcePreArcsChecked": 9882872,
+  "sourceGeometryReferenceCount": 48163649,
+  "selectedSourcePortRows": 2583,
+  "independentAudit": {
+    "allCandidateSourceDescriptorsIndependentlyReplayed": 7480,
+    "secondSourcePreArcsChecked": 9882872,
+    "independentSelectedSourcePortRows": 2583,
+    "supportedRules": 1331,
+    "sourceOrGraphChanged": false
+  },
+  "artifact": {
+    "file": "source-port-descriptors.json.gz",
+    "bytes": 275819,
+    "sha256": "07add3244586fa8ba9895a3bb3cd4f44569fc8cfea7f48425e30cf0b74203f3f",
+    "rawBytes": 2200503,
+    "rawSha256": "6b1d021750b14006940d3c56477eda4f9293175481cb35a95f7ef94392588e3e"
+  },
+  "sourcePortConstructionAndIndependentLookupJoinSeconds": 28.522407679934986,
+  "workerSecondsIncludingBindingsAllSourceScansAuditsAndPreservation": 31.051802222966217,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false,
+  "scope": "Complete bound typed-source nodes/anchors/ways and two full PRE-closure arc scans; streaming native-ID maps independently replay through binary source lookup and sort-merge directed-incidence joins. All7480national metadata candidates retained, including missing/ineligible/unknown fallback. Captured stage is complete captured typed-source port qualification, not captured relation-overlay/compiler or national coverage admission. Source-supported ports alone do not change closure/turn facts, graph, costs, access/barrier flags, queries or app. Candidate no-turn remains banned in all condition states. Future closure changes must retain every independent contributor. 4GiB/zero swap/two CPU/network-none/read-only/64PIDs/file64MiB/owned64MiB/tmp256MiB/900s worker1020s host; timings include bindings/full reads/audits/output/cleanup, not query/cloud latency."
+}

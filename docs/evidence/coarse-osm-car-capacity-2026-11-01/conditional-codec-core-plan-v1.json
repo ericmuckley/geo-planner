@@ -1,0 +1,21 @@
+{
+  "kind": "core",
+  "source": "data/coarse-quality/us-osm-conditional-derived-spatial-v1",
+  "output": "data/coarse-quality/us-osm-conditional-codec-core-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-derived-spatial-closed-v1.json",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 6257414144,
+  "metadataScratchReserveBytes": 104857600,
+  "scope": "Single host lossless storage encoding only; no concurrent producer. Prior64.5GB plus all192 closed allocations,100MiB metadata scratch and128MiB output reserve under72GiB. Deadline120s; no cgroup/CPU/swap admission. Source costs/geometry already independently audited; no routing/ETA/app admission.",
+  "additionalActiveReservationBytes": 0,
+  "bindings": {
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_paid_geometry_v1.ts": "cde912277d5ef70233fe9e4cb9b8d7843bf601a9267a233efc7847b8a57ab940",
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7",
+    "scripts/pack_osm_conditional_storage_v1.ts": "ed53a2b02a3f191be64fe745ceeef4f9bf2cea4536813023557df0172dbd9f46",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-derived-spatial-closed-v1.json": "31a63bcf19827dde92540bcd510cfcfd28667ab7200b255791a65a1b14ee1126",
+    "scripts/close_osm_conditional_storage_v1.py": "c0f77ec81c783fbda11a9bac0a04d98f53ec7e43828f5e629b2b5593af6eba0d",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+  }
+}

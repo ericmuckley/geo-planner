@@ -1,10 +1,12 @@
 # Next steps for coding agents
 
-Updated November 4, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
+Updated November 19, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handoff.md), [status](implementation-status.md) and [local development](local-development.md).
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-**Current work:** the rebuilt national entry candidate is rejected: same80 mean error33.7261875min versus prior31.371151/v9 30.001169;3 nulls. Graph/spatial/geometry/storage/all79 access/all80 path and source-speed diagnosis are complete/closed. The full national water metadata census passed/closed; lossless relation/member-ID extraction passed/closed and nested closure finished with one source-absent relation explicit; national way/reference union census passed/closed for the independent shoreline-source problem. Production v9 and every original gate remain. [Recovery/results](evidence/coarse-osm-car-capacity-2026-11-01/README.md).
+**Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
+
+**In the working tree.** The [local preview](http://127.0.0.1:4203/) adds **Directions in Google Maps** to trailhead and campground popups. The link uses the estimate’s starting point and the place’s mapped coordinates. [Behavior and checks](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
 
 
 <a id="1-publish-and-verify-latest-v8"></a>
@@ -156,44 +158,59 @@ Updated November 4, 2026. Read [AGENTS.md](../AGENTS.md), [handoff](agent-handof
 
 <a id="1-qualify-static-car-costs-and-compact-encoding-on-the-captured-native-graph"></a>
 
-## 1. Qualify the finer road candidate against the original app gates
+<a id="1-diagnose-the-new-primary-road-paths-before-another-model-change"></a>
 
-**National cost construction, compact routing, spatial permutation and lossless storage encoding are complete, closed and independently audited. Never replay those producers.** Routing/index storage alone is 45,859,429 B compressed; paid geometry is also complete as described below. All 82 original captured queries/14 unreachable cases and four original national profile cases are preserved. [Measurements and limits](evidence/coarse-osm-car-capacity-2026-11-01/README.md). V9 stays deployed.
+<a id="1-qualify-a-national-explicit-lane-metadata-census"></a>
 
-```sh
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_country_cost_v1.py
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_search_v2.py
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_packed_country_v1.py
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_road_field_v3.py
-```
+<a id="1-finish-the-national-lane-census-then-qualify-source-cost-overlays"></a>
 
-**Display milestone complete/closed:** [portable proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_filled_display_v1.py) verifies eight control groups, all 32 source/horizon fields/displays, unchanged road labels/restored summaries and24,544,809 exact positive local parent links. Every2h grid is0.005°; 12h grids are0.007910–0.013953°. Max query scratch66,494,595 B; first host load/connection/field/display plus validation/write/release/GC1,962.715625ms. Neither timing is a packaged/full-app or cloud admission. All used producers/results are sealed; never replay them.
+<a id="1-recompute-restrictions-and-rebuild-the-lane-corrected-graph"></a>
 
-**User direction (November 2): keep every accuracy gate and improve the engine before app integration.** The latest paid-initial-alternatives candidate is rejected:80/83 finite, same 80-route ORS MAE31.371151min versus v9’s 30.001169min, with three nulls involving one coarse-mask shoreline endpoint. Full20 diagnostic/36 supported original-budget displays,71 road-superset comparisons and12 field/display controls pass; these do not replace numerical acceptance or complete road witnesses. [Safe completed proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_access_preview_v1.py). All used producers, including static preview generation, are closed; never replay them for documentation.
+<a id="1-finish-exact-timing-cost-routing-qualification"></a>
 
-**Path/shore diagnosis completed:** all 80 finite road/local witnesses reconcile; all 20 output SHAs match. V1 release stop/14 saved paths are preserved; V2 releases work arrays and completes with 14 reused/66 new searches. Three nulls remain. Raw and simplified geography both reject the unavailable input/provider endpoint; simplification alone cannot fix it. See [findings](evidence/coarse-osm-car-capacity-2026-11-01/path-findings-v1.json), [saved inputs](evidence/coarse-osm-car-capacity-2026-11-01/saved-input-diagnostic-v2.json). No speed sweep or allowance change follows.
+<a id="1-finish-the-timing-runtime-and-evaluate-fresh-grids"></a>
 
-**Captured prototype complete:** all 82 old optima and every old allowed transition reproduce. The conservative entry graph resolves 295 source relations, retains 524 fallbacks, restores six of 14 failures, shortens seven old finite routes and independently source-replays all 74 finite paths. TypeScript agrees on all 82 costs. This is captured source/permission feasibility, not national ETA acceptance. [Safe full proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_entry_capture_v1.py), [closed result](evidence/coarse-osm-car-capacity-2026-11-01/restriction-entry-capture-raw-v1/report.json). Never replay this producer.
+<a id="1-prepare-the-compiled-mandatory-turn-graph-for-a-fresh-accuracy-benchmark"></a>
 
-**National relation metadata complete/closed:** exact 1,624,265 relation count and original 409,178 turn/70,376 unsupported/149,699 closure-ID/two invalid-record parity pass. The original whole-source hashes/stat are unchanged; earlier node/way semantic seals are reused. The 21.12 MB selected metadata is local-only. Source run/failed control/corrected control are closed and must never be replayed. [Safe proof](evidence/coarse-osm-car-capacity-2026-11-01/verify_relation_metadata_v1.py).
+<a id="1-finish-the-road-engine-benchmark-and-decide-what-ships"></a>
 
-1. Finish/independently close the running national conditional-metadata V2 census, never relaunch. Exact root/recipe/SHA/recovery in handoff. New helper38 actual Linux controls/no skips,7 corrected audit controls and tiny PBF positive/wrong-source pipeline passed/closed before this run. Require complete original sourceSHA/stat/semantic/header/counts/EOF, all old major profile/reference/reason/node counts and every old positive exact. Independently decode/reclassify every emitted changed ID/raw-tag record (48MiB/250k records, no coordinates/refs). V1 final access-time audit stop/raw output/no saved source receipt are preserved/unadmitted. V2 saves full source receipt/counters before auditing and checks SHA/dev/inode/size/mtime, permitting access-time-only changes. Recover exact owner/terminal state and close/account allocation first.
-2. Only after national metadata/source/capacity evidence, freeze a complete captured graph/source-cost overlay comparison, then qualify a national augmentation using retained geometry/audited changes.18 isolated native-cost/overlay/storage controls pass but no real overlay is admitted. Preserve all relation-imposed node closures and correct normalized way flags, preserving all prior costs/allowed transitions. All source/semantic seals,4GiB zero swap/2CPU/4h/72GiB remain.179 roots5,416,026,112B plus prior64.5GB/100MiB reserve before owned/tmp. Native/captured improvements do not establish national ETA accuracy; no global factor fit/location exception/provider/app integration. Every used producer/recipe/evidence stays immutable.
-3. Keep the independent map-representation defect explicit:all83 actual endpoints are on the mask, but one coarser public-cell centre falls in fallback water, omitting a74min destination from a720min map. A future generic refinement must preserve paid/source/coast/uncertainty/cap rules and arbitrary queries; no location patch. The completed83/35 numerical candidate still fails (32.6144 versus v9’s29.2574min); every new timing candidate must pass all original accuracy/166-sum/shading/physical gates before retained<=162,238,546B/function<=70MB/packaged first estimate<=5s/API/shared-camera integration.
+<a id="1-add-the-first-useful-places-layer"></a>
 
-Safe completed checks (no real graph/provider/source replay):
+<a id="1-review-and-release-the-destination-and-fuel-features"></a>
 
-```sh
-python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_overlay_controls_v1.py
-PYTHONPATH=scripts:routing python3 -B -m unittest coarse_osm_restriction_entry_v1_test coarse_osm_entry_graph_v1_test
-node --expose-gc --import tsx --test scripts/coarse_osm_road_witness_v2_test.ts scripts/coarse_osm_trace_display_v1_test.ts scripts/coarse_osm_local_witness_v1_test.ts scripts/coarse_osm_witness_geometry_v1_test.ts
-```
+<a id="1-review-and-release-the-outdoor-places-layers"></a>
 
-Keep 4 GiB zero swap/2 CPU/four-hour and the separately versioned72 GiB local working/retained limit, 64.5 GB prior reserve plus every newer unique closed allocation and the 100 MiB metadata/host-scratch reserve. No Python national-node dictionary/projection, per-way random fine lookup, detailed-engine restart, old source PBF/constructor replay outside the separately qualified new metadata task, paid/provider/application DB operation or deployment. Vehicle ferries remain deferred. All 48/6/29 reference budgets are consumed. Preserve every failed attempt and used code/recipe/evidence; version corrections separately.
+<a id="1-review-the-public-lands-and-elevation-layers"></a>
 
-## 2. Produce a new timing candidate only after data feasibility and a policy freeze
+<a id="1-use-the-released-planning-layers"></a>
+
+<a id="1-review-and-release-place-search"></a>
+
+<a id="1-use-place-search-in-trip-planning"></a>
+
+<a id="1-review-and-release-outdoor-place-filters"></a>
+
+<a id="1-review-and-release-the-browse-lists"></a>
+
+## 1. Review and release directions links
+
+**Released.** Browse lists are live in `b765050`. The production browser check opened both lists and their map details, expanded campgrounds from 20 to 40 entries, and cleared the results and popup by raising the elevation filter. [Hosted results](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
+
+1. **Review the local directions links.** Estimate from a chosen starting point, then select a trailhead or campground from its browse list or click an individual outdoor pin. The popup should offer **Directions in Google Maps**. Check that the link opens a new tab with that starting point and the selected place’s mapped coordinates. [Local review](local-development.md#try-directions-links).
+2. **Publish after approval.** Include the place map and coordinate changes, check the exact Vercel package and static assets, then verify the link on the live app. The link hands off driving directions to Google Maps. Additional place metadata, business availability and in-app driving directions are deferred.
+
+**Engine decision:** Seven release checks still fail in the completed comparison. None of the 83 saved estimates changed from the preceding prototype. Keep the replacement held. [Full result](evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-evaluation-v2-raw-v1/report.json). There are 439 closed roots with 11,444,031,488 bytes of newer allocation and no active producer.
+
+## 2. Decide when routing is good enough
 
 <a id="2-propose-a-new-correction-only-after-the-controlled-diagnosis"></a>
+<a id="2-produce-a-new-timing-candidate-only-after-data-feasibility-and-a-policy-freeze"></a>
+
+**Pause routing experiments.** The saved comparison shows a substantial improvement from the road prototype, with a new shoreline omission and several large timing regressions that still block release. Previous speed and display experiments have no qualified fix for both problems. Keep v9 for rough trip planning. [Product accuracy review](implementation-status.md#routing-accuracy-for-trip-planning).
+
+1. **Prioritize errors that change the trip decision.** For six- to twelve-hour estimates, start with a place shown on the wrong side of the limit when its reference is more than 30 minutes from it. Use 30 minutes to rank investigation priorities and keep the original release checks. The saved maps cover six, ten and twelve hours. Include the 30-minute and default two-hour views in the next product spot-check.
+2. **Test one correction only when there is a clear cause and a credible general fix.** Reuse saved cases to demonstrate the failure and include a control that should stay correct. For the shoreline case, a new approach would need to retain the proven land access without painting the surrounding water. Stop after the focused check if the fix adds a serious error or the evidence gives no clear next correction.
+3. **Stop tuning when a candidate passes the existing release checks and the app spot-check.** Ship that candidate and return to app work. Keep a record of smaller discrepancies for future reports.
 
 The 1.10 allowance and unbuffered backbone remain rejected under their original decisions. Any later generic policy needs a separately specified evidence-backed hypothesis and exact artifact/implementation/evaluation freeze before search, without parameter sweeps or post-result retuning.
 
@@ -203,4 +220,4 @@ Saved 83/35 are observed development data, not a fresh holdout/national/area/tra
 
 ## Deferred scope
 
-The runtime stays v9. Display resolution beyond the fixed prototype, traffic/turns/terrain/access, precise borders/coasts, caching, accounts/sharing/import, PostGIS and advanced regional research remain deferred. Detailed six-hour expansion stays held at 9.290 GiB versus 4 GiB. [Six-hour report](six-hour-preflight.md), [two-hour baseline](two-hour-region.md).
+The runtime stays v9. Finer-grid app activation, traffic/turns/terrain/access, precise borders/coasts, caching, accounts/sharing/import, PostGIS and advanced regional research remain deferred. Detailed six-hour expansion stays held at 9.290 GiB versus 4 GiB. [Six-hour report](six-hour-preflight.md), [two-hour baseline](two-hour-region.md).

@@ -1,0 +1,74 @@
+{
+  "status": "conditional_national_entry_resolution_and_independent_audit_passed",
+  "nativeCounts": [
+    46533,
+    23138,
+    23257,
+    138,
+    149699,
+    99208,
+    22964,
+    9878318,
+    9744462
+  ],
+  "independentAudit": {
+    "status": "independent_complete_entry_resolution_audit_passed",
+    "waysChecked": 4227238,
+    "preArcsChecked": 9878318,
+    "candidateRulesChecked": 46533,
+    "decisionsChecked": 46533,
+    "entryPairsChecked": 22964,
+    "originalClosureIdsChecked": 149699,
+    "overrideClosureIdsChecked": 99208,
+    "originalPostArcs": 9660787,
+    "candidatePostArcs": 9744462,
+    "allPairsUseActualSourceNodeIdentity": true,
+    "fallbackUnionExact": true,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "scope": "Every metadata decision/pair/closure and pre-arc field checked with dense typed source arrays and bounded per-rule maps. Costs are range checked; original geometry/cost semantic seals remain inherited. No graph/package/ETA admission."
+  },
+  "originalClosureBaselineDelta": {
+    "originalPostArcs": 9620680,
+    "addedPreClosureArcs": 40992,
+    "addedArcsOutsideOriginalClosures": 40107,
+    "addedArcsInsideOriginalClosures": 885,
+    "newPostUnderOriginalClosures": 9660787,
+    "insertionGroups": 16286
+  },
+  "previousEntryPreservation": {
+    "oldClosureIds": 99508,
+    "newClosureIds": 99208,
+    "allNewClosuresAreOldClosures": true,
+    "oldEntryPairsRetained": 22835,
+    "newEntryPairs": 22964,
+    "pairsOnOldActiveArcs": 19496,
+    "pairsTouchingNewArcs": 123,
+    "pairsTouchingOldClosedWays": 3345,
+    "allOldAllowedSourceTransitionsRetained": true
+  },
+  "nativeSecondsIncludingInputReadsAndOutput": 0.3817738749785349,
+  "independentAuditSeconds": 20.16748775995802,
+  "workerSecondsIncludingBindingsAndBothOperations": 22.59484030189924,
+  "assets": {
+    "resolved/entry-pairs-pre.u32": {
+      "bytes": 183712,
+      "sha256": "bd73e993e535b63cd5b148c7715ae8b1e7fa1ed463f6017ac03c270e9027b6b2"
+    },
+    "resolved/closures-0000.bin": {
+      "bytes": 793664,
+      "sha256": "8ee2f7723fef247841e611e972dfb504629c3f113e2ec28ff3f2224d60b2a371"
+    },
+    "resolved/decisions.bin": {
+      "bytes": 744528,
+      "sha256": "6dff634d8b727a222ab64d20562a7e74b4b4b9a9222a20c0a348686427659410"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "runtimeGraphBuilt": false,
+  "appActivated": false,
+  "scope": "Resolved only restriction metadata against all pre-closure facts, with exhaustive independent typed source/pair/decision/closure proof. Routing/spatial/paid geometry/codec/ETA/app qualification are separate."
+}

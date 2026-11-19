@@ -1,0 +1,48 @@
+{
+  "reviewDate": "2026-11-07",
+  "scope": "One generic conservative metadata prototype, predeclared before actual source inventory. No time evaluation, parameter sweep, road query or app change.",
+  "policy": {
+    "id": "static-car-conditional-via-node-prohibitory-envelope-v1",
+    "shape": "Exactly one from way, one via node and one distinct to way; positive native IDs; original car policy must classify closed-unsupported.",
+    "values": [
+      "no_left_turn",
+      "no_right_turn",
+      "no_straight_on",
+      "no_u_turn"
+    ],
+    "scope": "At least one known car/general conditional key. All stated car/general base and conditional values must be the same supported prohibitory kind. Conditions remain opaque; the maneuver stays banned in every state.",
+    "syntax": "At most 65536 Unicode characters per conditional value, 64 top-level clauses and eight parenthesis levels; exactly one @ per clause, nonempty condition, no quotes. Unknown/malformed syntax or keys retain fallback.",
+    "fallback": "Only-turns, via ways, same-way turns, unknown restriction/conditional keys and unknown/car exemptions keep the complete original fallback. Every independent contributor remains.",
+    "unchanged": "No condition/departure-time evaluation, speed/cost/direction/access/node-barrier change, selected-place exception or routing/app admission."
+  },
+  "primarySources": [
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Relation:restriction&oldid=3077464",
+      "observation": "A prohibitory restriction describes movement from one way through its via member to another way. Other movements are not prohibited by that relation; separate restrictions can still apply."
+    },
+    {
+      "url": "https://wiki.openstreetmap.org/w/index.php?title=Conditional_restrictions&oldid=3107369",
+      "observation": "Conditional values use value @ condition, optionally multiple clauses. Conditional rules can override normal defaults; mode specificity and clause order matter when evaluating an actual state."
+    }
+  ],
+  "inference": "For the narrow accepted shape and single identical prohibitory value, forbidding that maneuver in every state is a conservative subset of each possible condition state. It can preserve through travel without ignoring a condition or declaring the complete member roads closed. This is a static envelope, not departure-time-aware routing.",
+  "qualificationBoundary": "Metadata representability alone does not authorize removing any closure. Complete source pre-closure incidence/direction/via-node support and independent compiler parity must be checked first; missing/unknown/ambiguous physical support retains original fallback. Reconstruct every independent way and node closure contributor; never subtract a converted ID from a shared contributor.",
+  "controls": {
+    "tests": 8,
+    "successful": true,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "generatedMemberPermutations": 1000,
+    "conditionTruthStatesChecked": [
+      false,
+      true
+    ]
+  },
+  "codeBindings": {
+    "scripts/coarse_osm_conditional_node_turns_v1.py": "427d4d88ceb9e3dafc7aa7b0d06f5c450d8e7b502affea97ba9129db3d8e1dfd",
+    "scripts/coarse_osm_conditional_node_turns_v1_test.py": "180c3443993daa1283aaeef7b1f8b0a2cb97bde449b0e952d65e496c9e3c3842"
+  },
+  "graphOrSourceChanged": false,
+  "appActivated": false
+}

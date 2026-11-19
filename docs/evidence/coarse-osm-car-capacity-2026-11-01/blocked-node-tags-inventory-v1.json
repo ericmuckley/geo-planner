@@ -1,0 +1,1382 @@
+{
+  "status": "all_13776_original_blocker_tags_and_83_trials_inventoried",
+  "recipeSha256": "c6716af42541678417267c24cf23a08884c9d49e3a7f8824804c56b1ff8e473d",
+  "blockedGraphNodes": 13776,
+  "uniqueTrialBlockedNodes": 32,
+  "unknownRawNodes": 0,
+  "allNodeCauseCounts": {
+    "base-node": 12275,
+    "restriction-only": 1501
+  },
+  "tagExposureCounts": {
+    "cause": {
+      "base-node": 12275,
+      "restriction-only": 1501
+    },
+    "barrier": {
+      "None": 2331,
+      "barrel": 4,
+      "barricade": 9,
+      "barrier_board": 10,
+      "block": 220,
+      "bollard": 136,
+      "border_control": 711,
+      "bump_gate": 3,
+      "bus_trap": 1,
+      "cattle_grid": 4765,
+      "chain": 8,
+      "checkpoint": 13,
+      "coupure": 52,
+      "cycle_barrier": 1,
+      "debris": 3,
+      "delineators": 2,
+      "entrance": 19,
+      "fence": 14,
+      "gate": 2667,
+      "guard_rail": 4,
+      "guardrail": 1,
+      "hampshire_gate": 3,
+      "height_restrictor": 50,
+      "jersey_barrier": 117,
+      "kerb": 166,
+      "lift_gate": 897,
+      "log": 2,
+      "no": 1,
+      "one-way_traffic_treadle": 1,
+      "sign": 1,
+      "sliding_gate": 5,
+      "spikes": 17,
+      "stile": 1,
+      "swing_gate": 229,
+      "temporary": 2,
+      "toll_booth": 991,
+      "vehicle_arresting": 8,
+      "wedge": 11,
+      "yes": 300
+    },
+    "barrierReason": {
+      "None": 2331,
+      "car-access-not-permitted": 633,
+      "conditional": 128,
+      "locked-or-unknown": 106,
+      "missing-explicit-car-access": 3957,
+      "unmodeled-dimensions": 17,
+      "unmodeled-opening-hours": 160,
+      "unsupported-access-qualifier": 265,
+      "unsupported-barrier": 6179
+    },
+    "effectiveAccess": {
+      "None=None": 10175,
+      "access=bus": 1,
+      "access=customers": 19,
+      "access=designated": 1,
+      "access=destination": 22,
+      "access=employees": 1,
+      "access=forestry": 1,
+      "access=half": 1,
+      "access=hov": 1,
+      "access=military": 18,
+      "access=motor_vehicle": 5,
+      "access=no": 270,
+      "access=permissive": 47,
+      "access=permit": 72,
+      "access=private": 561,
+      "access=seasonal": 1,
+      "access=unknown": 1,
+      "access=yes": 210,
+      "motor_vehicle=customers": 24,
+      "motor_vehicle=designated": 10,
+      "motor_vehicle=destination": 1,
+      "motor_vehicle=forestry": 1,
+      "motor_vehicle=no": 142,
+      "motor_vehicle=official": 1,
+      "motor_vehicle=permissive": 12,
+      "motor_vehicle=permit": 24,
+      "motor_vehicle=private": 57,
+      "motor_vehicle=seasonal": 1,
+      "motor_vehicle=yes": 2039,
+      "motorcar=no": 5,
+      "motorcar=permissive": 1,
+      "motorcar=yes": 38,
+      "vehicle=destination": 1,
+      "vehicle=no": 1,
+      "vehicle=private": 3,
+      "vehicle=yes": 8
+    },
+    "retainedConditionalKey": {
+      "access:conditional": 72,
+      "charge:conditional": 548,
+      "charge:epass:conditional": 4,
+      "charge:forward:conditional": 1,
+      "charge:license_plate:conditional": 7,
+      "charge:ntta:conditional": 13,
+      "charge:sunpass:conditional": 423,
+      "charge:txtag:conditional": 9,
+      "charge:txtag:forward:conditional": 1,
+      "charge:zipcash:conditional": 2,
+      "crossing:whistle:conditional": 16,
+      "goods:conditional": 2,
+      "highway:conditional": 4,
+      "locked:conditional": 11,
+      "maxlength:conditional": 1,
+      "maxspeed:backward:conditional": 1,
+      "maxspeed:conditional": 49,
+      "maxweight:conditional": 1,
+      "motor_vehicle:conditional": 36,
+      "motorcar:conditional": 2,
+      "open:conditional": 5,
+      "payment:cash:conditional": 7,
+      "payment:cash:lanes:conditional": 2,
+      "red_turn:right:conditional": 1,
+      "restriction:conditional": 76,
+      "stop:conditional": 1
+    }
+  },
+  "barrierCauseCounts": {
+    "None": {
+      "base-node": 830,
+      "restriction-only": 1501
+    },
+    "barrel": {
+      "base-node": 4
+    },
+    "barricade": {
+      "base-node": 9
+    },
+    "barrier_board": {
+      "base-node": 10
+    },
+    "block": {
+      "base-node": 220
+    },
+    "bollard": {
+      "base-node": 136
+    },
+    "border_control": {
+      "base-node": 711
+    },
+    "bump_gate": {
+      "base-node": 3
+    },
+    "bus_trap": {
+      "base-node": 1
+    },
+    "cattle_grid": {
+      "base-node": 4765
+    },
+    "chain": {
+      "base-node": 8
+    },
+    "checkpoint": {
+      "base-node": 13
+    },
+    "coupure": {
+      "base-node": 52
+    },
+    "cycle_barrier": {
+      "base-node": 1
+    },
+    "debris": {
+      "base-node": 3
+    },
+    "delineators": {
+      "base-node": 2
+    },
+    "entrance": {
+      "base-node": 19
+    },
+    "fence": {
+      "base-node": 14
+    },
+    "gate": {
+      "base-node": 2667
+    },
+    "guard_rail": {
+      "base-node": 4
+    },
+    "guardrail": {
+      "base-node": 1
+    },
+    "hampshire_gate": {
+      "base-node": 3
+    },
+    "height_restrictor": {
+      "base-node": 50
+    },
+    "jersey_barrier": {
+      "base-node": 117
+    },
+    "kerb": {
+      "base-node": 166
+    },
+    "lift_gate": {
+      "base-node": 897
+    },
+    "log": {
+      "base-node": 2
+    },
+    "no": {
+      "base-node": 1
+    },
+    "one-way_traffic_treadle": {
+      "base-node": 1
+    },
+    "sign": {
+      "base-node": 1
+    },
+    "sliding_gate": {
+      "base-node": 5
+    },
+    "spikes": {
+      "base-node": 17
+    },
+    "stile": {
+      "base-node": 1
+    },
+    "swing_gate": {
+      "base-node": 229
+    },
+    "temporary": {
+      "base-node": 2
+    },
+    "toll_booth": {
+      "base-node": 991
+    },
+    "vehicle_arresting": {
+      "base-node": 8
+    },
+    "wedge": {
+      "base-node": 11
+    },
+    "yes": {
+      "base-node": 300
+    }
+  },
+  "all83TrialCases": [
+    {
+      "id": "astoria-or-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "astoria-or-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "astoria-or-600-inside",
+      "optimisticRoadLegSavingsTicks": 45331,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "58894454",
+          "rawTags": {
+            "barrier": "cattle_grid"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "astoria-or-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "astoria-or-720-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "astoria-or-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "missoula-mt-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "missoula-mt-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "missoula-mt-600-inside",
+      "optimisticRoadLegSavingsTicks": 1613,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "6295152925",
+          "rawTags": {
+            "barrier": "cattle_grid"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "missoula-mt-600-outside",
+      "optimisticRoadLegSavingsTicks": 24059,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "83072932",
+          "rawTags": {
+            "barrier": "cattle_grid",
+            "motor_vehicle": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": "motor_vehicle",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "7233920910",
+          "rawTags": {
+            "access": "yes",
+            "barrier": "cattle_grid",
+            "motor_vehicle": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": "motor_vehicle",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "2143686310",
+          "rawTags": {
+            "barrier": "cattle_grid",
+            "motor_vehicle": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": "motor_vehicle",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "9995666452",
+          "rawTags": {
+            "barrier": "cattle_grid",
+            "motor_vehicle": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "cattle_grid",
+          "barrierReason": "unsupported-barrier",
+          "effectiveAccessKey": "motor_vehicle",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "missoula-mt-720-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "missoula-mt-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "hays-ks-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "hays-ks-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "hays-ks-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "hays-ks-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "hays-ks-720-inside",
+      "optimisticRoadLegSavingsTicks": 6402,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "11454803086",
+          "rawTags": {
+            "access": "yes",
+            "barrier": "gate",
+            "locked:conditional": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "gate",
+          "barrierReason": "conditional",
+          "effectiveAccessKey": "access",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [
+            "locked:conditional"
+          ],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "hays-ks-720-outside",
+      "optimisticRoadLegSavingsTicks": 6402,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "11454803086",
+          "rawTags": {
+            "access": "yes",
+            "barrier": "gate",
+            "locked:conditional": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "gate",
+          "barrierReason": "conditional",
+          "effectiveAccessKey": "access",
+          "effectiveAccessValue": "yes",
+          "accessAllowed": true,
+          "retainedConditionalKeys": [
+            "locked:conditional"
+          ],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "duluth-mn-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "columbus-oh-360-inside",
+      "optimisticRoadLegSavingsTicks": 12487,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "477072799",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"C\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "946332648",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"B\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "155948405",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"A\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "columbus-oh-360-outside",
+      "optimisticRoadLegSavingsTicks": 14959,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "477072799",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"C\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "946332648",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"B\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "155948405",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"A\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "columbus-oh-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "columbus-oh-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "columbus-oh-720-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "columbus-oh-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-720-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "asheville-nc-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "portland-me-360-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "portland-me-360-outside",
+      "optimisticRoadLegSavingsTicks": 1583,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "104646175",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16473131,
+            16473133,
+            16473134
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 3,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "104702476",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16473229
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "3344898830",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16473236,
+            16473237,
+            16478551
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 3,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11259008842",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478663,
+            16478664
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 2,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "822316275",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16473239,
+            16478548
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 2,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "822316272",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16473248,
+            16473252
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 2,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258866775",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478458
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258770747",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478563
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258836278",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478415,
+            16478416,
+            16478566,
+            16478567
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 4,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258836276",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478411,
+            16478412
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 2,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258836268",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478405,
+            16478408
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 2,
+          "cause": "restriction-only"
+        },
+        {
+          "sourceNodeId": "11258836267",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            16478401
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        }
+      ]
+    },
+    {
+      "id": "portland-me-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "portland-me-600-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "portland-me-720-inside",
+      "optimisticRoadLegSavingsTicks": 14566,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "768649169",
+          "rawTags": {
+            "barrier": "toll_booth"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "2049188696",
+          "rawTags": {
+            "barrier": "toll_booth"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "portland-me-720-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "savannah-ga-360-inside",
+      "optimisticRoadLegSavingsTicks": 3074,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "101042645",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            19906233
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        }
+      ]
+    },
+    {
+      "id": "savannah-ga-360-outside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "savannah-ga-600-inside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "savannah-ga-600-outside",
+      "optimisticRoadLegSavingsTicks": 14232,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "475424698",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"A\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "946332493",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"B\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "155323116",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "name": "Toll Plaza \"C\""
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "savannah-ga-720-inside",
+      "optimisticRoadLegSavingsTicks": 320,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "4633063712",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "payment:cash": "no",
+            "payment:e_zpass": "yes",
+            "payment:license_plate": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "savannah-ga-720-outside",
+      "optimisticRoadLegSavingsTicks": 7532,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "4633063712",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "payment:cash": "no",
+            "payment:e_zpass": "yes",
+            "payment:license_plate": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "9758745348",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "currency:USD": "yes",
+            "name": "Toll Gate",
+            "payment:cash": "yes",
+            "payment:e_zpass": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        },
+        {
+          "sourceNodeId": "596518079",
+          "rawTags": {
+            "barrier": "toll_booth",
+            "building": "roof",
+            "charge": "2.00",
+            "currency:USD": "yes",
+            "highway": "toll_gantry",
+            "layer": "1",
+            "name": "Raritan High-Speed E-ZPass Toll Gantry",
+            "operator": "New Jersey Turnpike Authority",
+            "payment:e_zpass": "yes"
+          },
+          "restrictionContributorIds": [],
+          "barrier": "toll_booth",
+          "barrierReason": "missing-explicit-car-access",
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": true,
+          "restrictionContributorCount": 0,
+          "cause": "base-node"
+        }
+      ]
+    },
+    {
+      "id": "Los Angeles",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Riverside",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Palm Springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Santa Barbara",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Bakersfield",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Big Bear Lake",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Idyllwild",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Borrego Springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Temecula",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Calexico",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "Julian",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "los-angeles--bakersfield",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "los-angeles--ventura",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "bakersfield--big-bear-lake",
+      "optimisticRoadLegSavingsTicks": 968,
+      "crossedBlockedNodes": [
+        {
+          "sourceNodeId": "9946846697",
+          "rawTags": {},
+          "restrictionContributorIds": [
+            14415659
+          ],
+          "barrier": null,
+          "barrierReason": null,
+          "effectiveAccessKey": null,
+          "effectiveAccessValue": null,
+          "accessAllowed": true,
+          "retainedConditionalKeys": [],
+          "ignoredConditionalKeys": [],
+          "baseBlocked": false,
+          "restrictionContributorCount": 1,
+          "cause": "restriction-only"
+        }
+      ]
+    },
+    {
+      "id": "bakersfield--palm-springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "santa-barbara--san-diego",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "santa-barbara--brawley",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "palm-springs--idyllwild",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "idyllwild--palm-springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "idyllwild--temecula",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "julian--borrego-springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "julian--el-centro",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "borrego-springs--anza",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "borrego-springs--julian",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "joshua-tree--brawley",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "salton-city--bombay-beach",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "salton-city--brawley",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "bombay-beach--salton-city",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "bombay-beach--indio",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "san-clemente--temecula",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "san-clemente--escondido",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "ventura--palm-springs",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    },
+    {
+      "id": "ventura--san-clemente",
+      "optimisticRoadLegSavingsTicks": 0,
+      "crossedBlockedNodes": []
+    }
+  ],
+  "trialNodeExposureCounts": {
+    "None": 14,
+    "toll_booth": 11,
+    "cattle_grid": 6,
+    "gate": 1
+  },
+  "routingQueries": 0,
+  "sourcePbfReads": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "sourcePermissionsOrPricesChanged": false,
+  "appActivated": false,
+  "hostSecondsIncludingBindingsAllTagsAndTrialJoin": 0.09178049978800118,
+  "hostMaximumRssBytes": 78757888,
+  "scope": "ALL13776 original graph blocker tags, all independent source causes, all83 saved optimistic fixed-attachment trials. Tag/reason histograms are observations, not a new access policy. Omitting blocks never establishes lawful passage or new point/map/model scores. Every independent node-only restriction contributor stays explicit; no route/place exceptions, tuning, queries or source changes."
+}

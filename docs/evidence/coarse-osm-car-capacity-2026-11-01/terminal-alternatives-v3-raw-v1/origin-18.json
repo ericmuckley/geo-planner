@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -115.9561,
+    33.2986
+  ],
+  "rows": [
+    {
+      "id": "salton-city--bombay-beach",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.7297,
+        "lat": 33.3503
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 72.28833333333334,
+      "baselinePointMinutes": 83.29301179159387,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 61.267950000000006,
+      "baseline": {
+        "pointMinutes": 80.87801179159386,
+        "cellMinutes": 78.56967845826053,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 44.788333333333334,
+          "local": 26.214678458260543,
+          "transfer": 3.081666666666667,
+          "destination": 2.308333333333333
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 73.97916666666667,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "missedReachable"
+      },
+      "baselineErrorMinutes": 11.004678458260528,
+      "candidateErrorMinutes": 8.589678458260522,
+      "absoluteErrorChangeMinutes": -6.898845124927192,
+      "estimateFailure": null
+    },
+    {
+      "id": "salton-city--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -115.9561,
+        "lat": 33.2986
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 46.33833333333334,
+      "baselinePointMinutes": 50.43833333333333,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 39.2368,
+      "baseline": {
+        "pointMinutes": 48.30833333333332,
+        "cellMinutes": 45.371666666666655,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 4.485,
+          "road": 40.88666666666666,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 52.0625,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 4.099999999999994,
+      "candidateErrorMinutes": 1.9699999999999847,
+      "absoluteErrorChangeMinutes": 3.754166666666677,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "salton-city--bombay-beach",
+      "previousPointTicks": 35520,
+      "pointTicks": 35510,
+      "previousRoadTicks": 35520,
+      "bestRoadTicks": 35510,
+      "terminalChoices": 3,
+      "winningTerminal": {
+        "origin": [
+          -115.7297,
+          33.3503
+        ],
+        "snap": {
+          "canonicalArc": 746614,
+          "segment": 6,
+          "segmentFraction": 1,
+          "coordinate": [
+            -115.7359816,
+            33.3569307
+          ],
+          "distanceMeters": 940.2197351697199,
+          "forwardProgress": 0.5645227740901808,
+          "backwardProgress": 0.5645227740901808
+        },
+        "connectorMeters": 940.2197351697199,
+        "connectorTicks": 1084,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "salton-city--brawley",
+      "previousPointTicks": 24990,
+      "pointTicks": 24990,
+      "previousRoadTicks": 26152,
+      "bestRoadTicks": 26063,
+      "terminalChoices": 113,
+      "winningTerminal": {
+        "origin": [
+          -115.5303,
+          32.9787
+        ],
+        "snap": {
+          "canonicalArc": 741805,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -115.5304882,
+            32.9787721
+          ],
+          "distanceMeters": 19.2990547577014,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 19.2990547577014,
+        "connectorTicks": 23,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1649652,
+    "maximumHeapEntries": 3572,
+    "maximumBackingBufferBytes": 50442614,
+    "returnedBackingBufferBytes": 50442614,
+    "seedBackingBufferBytes": 960,
+    "starts": 15
+  },
+  "hostFieldAndFinishesMs": 250.67266699999982,
+  "afterReleaseArrayBuffers": 141923601
+}

@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -116.3131,
+    34.1347
+  ],
+  "rows": [
+    {
+      "id": "joshua-tree--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 150.11333333333332,
+      "baselinePointMinutes": 146.05499999999992,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 122.83763333333333,
+      "baseline": {
+        "pointMinutes": 142.40833333333345,
+        "cellMinutes": 139.47166666666678,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.17166666666666666,
+          "road": 139.27499999999995,
+          "local": 0,
+          "transfer": 0.025,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 141.30625,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -4.058333333333394,
+      "candidateErrorMinutes": -7.70499999999987,
+      "absoluteErrorChangeMinutes": 1.1020833333334394,
+      "estimateFailure": null
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -116.0542,
+        "lat": 34.1356
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 19.708333333333332,
+      "baselinePointMinutes": 18.048333333333336,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 15.1931,
+      "baseline": {
+        "pointMinutes": 16.99166666666667,
+        "cellMinutes": 16.354999999999997,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.13833333333333334,
+          "road": 16.261666666666667,
+          "local": 0,
+          "transfer": 0.04666666666666667,
+          "destination": 0.545
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 15.960416666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -1.6599999999999966,
+      "candidateErrorMinutes": -2.7166666666666615,
+      "absoluteErrorChangeMinutes": 1.0312500000000036,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "joshua-tree--brawley",
+      "previousPointTicks": 67827,
+      "pointTicks": 67827,
+      "previousRoadTicks": 68470,
+      "bestRoadTicks": 68383,
+      "terminalChoices": 113,
+      "winningTerminal": {
+        "origin": [
+          -115.5303,
+          32.9787
+        ],
+        "snap": {
+          "canonicalArc": 741805,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -115.5304882,
+            32.9787721
+          ],
+          "distanceMeters": 19.2990547577014,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 19.2990547577014,
+        "connectorTicks": 23,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "previousPointTicks": 8019,
+      "pointTicks": 7661,
+      "previousRoadTicks": 9462,
+      "bestRoadTicks": 7661,
+      "terminalChoices": 34,
+      "winningTerminal": {
+        "origin": [
+          -116.0542,
+          34.1356
+        ],
+        "snap": {
+          "canonicalArc": 750686,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -116.0553832,
+            34.1356107
+          ],
+          "distanceMeters": 108.90524265578418,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 108.90524265578418,
+        "connectorTicks": 126,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1707221,
+    "maximumHeapEntries": 2998,
+    "maximumBackingBufferBytes": 50444662,
+    "returnedBackingBufferBytes": 50444662,
+    "seedBackingBufferBytes": 3008,
+    "starts": 47
+  },
+  "hostFieldAndFinishesMs": 251.9739580000005,
+  "afterReleaseArrayBuffers": 141923537
+}

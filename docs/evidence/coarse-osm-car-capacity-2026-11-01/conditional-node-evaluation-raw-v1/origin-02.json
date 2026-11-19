@@ -1,0 +1,305 @@
+{
+  "origin": [
+    -113.994,
+    46.8721
+  ],
+  "initialChoices": 368,
+  "accessInput": {
+    "filename": "endpoint-08.json.gz",
+    "rawBytes": 107868,
+    "rawSha256": "65629b9d817f9f263eb2316ccb87ad8e56c2c587c1fd3b304b703dd0b5793af4",
+    "compressedBytes": 12243,
+    "sha256": "76ad644ceb47fb4b4994a26aea899c2e5a02a65275ddd7dfe91b26c2b36457d2"
+  },
+  "diagnostic": {
+    "timings": {
+      "missoula-mt-360-inside": {
+        "ticks": 150056,
+        "kind": "road-foot",
+        "roadTicks": 150056,
+        "localGridTicks": 150571,
+        "localWitness": {
+          "terminalTicks": 315,
+          "edgeSeconds": 0,
+          "seedSeconds": 18782,
+          "seedCell": 1990026,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-360-outside": {
+        "ticks": 165233,
+        "kind": "road-foot",
+        "roadTicks": 165233,
+        "localGridTicks": 165937,
+        "localWitness": {
+          "terminalTicks": 377,
+          "edgeSeconds": 0,
+          "seedSeconds": 20695,
+          "seedCell": 2252187,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-600-inside": {
+        "ticks": 274824,
+        "kind": "road-foot",
+        "roadTicks": 274824,
+        "localGridTicks": 275967,
+        "localWitness": {
+          "terminalTicks": 575,
+          "edgeSeconds": 0,
+          "seedSeconds": 34424,
+          "seedCell": 649622,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-600-outside": {
+        "ticks": 307142,
+        "kind": "road-foot",
+        "roadTicks": 307142,
+        "localGridTicks": 308734,
+        "localWitness": {
+          "terminalTicks": 830,
+          "edgeSeconds": 0,
+          "seedSeconds": 38488,
+          "seedCell": 699428,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-720-inside": {
+        "ticks": 365572,
+        "kind": "local-grid",
+        "roadTicks": 369964,
+        "localGridTicks": 365572,
+        "localWitness": {
+          "terminalTicks": 228,
+          "edgeSeconds": 0,
+          "seedSeconds": 45668,
+          "seedCell": 1247650,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "missoula-mt-720-outside": {
+        "ticks": 374623,
+        "kind": "road-foot",
+        "roadTicks": 374623,
+        "localGridTicks": 375408,
+        "localWitness": {
+          "terminalTicks": 520,
+          "edgeSeconds": 0,
+          "seedSeconds": 46861,
+          "seedCell": 1367359,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1106497,
+      "maximumHeapEntries": 2528,
+      "maximumBackingBufferBytes": 50975762,
+      "returnedBackingBufferBytes": 50838750,
+      "seedBackingBufferBytes": 23552,
+      "starts": 368
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -125000748,
+      "south": 35559657,
+      "step": 13059,
+      "width": 2260,
+      "height": 1106
+    },
+    "stats": {
+      "envelopeMs": 517.2037920000002,
+      "maskMs": 16156.287833000002,
+      "seedMs": 3652.9133749999964,
+      "fillMs": 343.929375000007,
+      "contourMs": 76.8145419999928,
+      "displayMs": 20747.341957999997,
+      "maximumBackingBufferBytes": 59836331,
+      "borrowedVertexWorkspace": true,
+      "samples": 2121346,
+      "activeSpans": 710660,
+      "settles": 1509412,
+      "maximumHeapEntries": 208905,
+      "selectedCells": 1511379,
+      "localCells": 1509412,
+      "roadOnlyCells": 1967,
+      "edges": 28902,
+      "rings": 889,
+      "vertices": 18695,
+      "jsonBytes": 442935,
+      "retries": []
+    },
+    "phaseMs": 21004.710249999996,
+    "output": {
+      "filename": "origin-02-900.geojson",
+      "bytes": 442935,
+      "sha256": "adf53c2f1076b682db14d09e3314e54b585a42f364a7de755b9629b8c63b3a9f"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 360,
+      "classified": {
+        "missoula-mt-360-inside": true,
+        "missoula-mt-360-outside": true
+      },
+      "fieldStats": {
+        "settles": 107192,
+        "maximumHeapEntries": 776,
+        "maximumBackingBufferBytes": 50975762,
+        "returnedBackingBufferBytes": 50838750,
+        "seedBackingBufferBytes": 23552,
+        "starts": 368
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -120832240,
+        "south": 42022696,
+        "step": 6472,
+        "width": 2147,
+        "height": 1164
+      },
+      "stats": {
+        "envelopeMs": 329.4554579999967,
+        "maskMs": 6746.577208000002,
+        "seedMs": 841.3044170000067,
+        "fillMs": 236.3550419999956,
+        "contourMs": 40.73620800000208,
+        "displayMs": 8194.466042,
+        "maximumBackingBufferBytes": 59836331,
+        "borrowedVertexWorkspace": true,
+        "samples": 352271,
+        "activeSpans": 66217,
+        "settles": 1103404,
+        "maximumHeapEntries": 73652,
+        "selectedCells": 1103854,
+        "localCells": 1103404,
+        "roadOnlyCells": 450,
+        "edges": 19362,
+        "rings": 358,
+        "vertices": 11702,
+        "jsonBytes": 275921,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-02-360.geojson",
+        "bytes": 275921,
+        "sha256": "90c9bd50e9840dee41282a1b1e6ec34f50b5633835c8ede044259f1d248bb100"
+      }
+    },
+    {
+      "minutes": 600,
+      "classified": {
+        "missoula-mt-600-inside": true,
+        "missoula-mt-600-outside": false
+      },
+      "fieldStats": {
+        "settles": 591403,
+        "maximumHeapEntries": 2311,
+        "maximumBackingBufferBytes": 50975762,
+        "returnedBackingBufferBytes": 50838750,
+        "seedBackingBufferBytes": 23552,
+        "starts": 368
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -124218103,
+        "south": 38635197,
+        "step": 9991,
+        "width": 2196,
+        "height": 1138
+      },
+      "stats": {
+        "envelopeMs": 437.172332999995,
+        "maskMs": 10863.234459,
+        "seedMs": 2097.6868329999998,
+        "fillMs": 221.88308299999335,
+        "contourMs": 55.6318750000064,
+        "displayMs": 13675.733332999996,
+        "maximumBackingBufferBytes": 59836331,
+        "borrowedVertexWorkspace": true,
+        "samples": 1140284,
+        "activeSpans": 361794,
+        "settles": 1239123,
+        "maximumHeapEntries": 129288,
+        "selectedCells": 1240255,
+        "localCells": 1239123,
+        "roadOnlyCells": 1132,
+        "edges": 24030,
+        "rings": 568,
+        "vertices": 15134,
+        "jsonBytes": 361108,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-02-600.geojson",
+        "bytes": 361108,
+        "sha256": "5f773c6b0f9845d0d19a6ff13574f77ecd0967141009a781e078b517e1380c6a"
+      }
+    },
+    {
+      "minutes": 720,
+      "classified": {
+        "missoula-mt-720-inside": false,
+        "missoula-mt-720-outside": false
+      },
+      "fieldStats": {
+        "settles": 685383,
+        "maximumHeapEntries": 2311,
+        "maximumBackingBufferBytes": 50975762,
+        "returnedBackingBufferBytes": 50838750,
+        "seedBackingBufferBytes": 23552,
+        "starts": 368
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -124883713,
+        "south": 37295537,
+        "step": 11381,
+        "width": 2238,
+        "height": 1117
+      },
+      "stats": {
+        "envelopeMs": 432.1939170000114,
+        "maskMs": 11486.282500000001,
+        "seedMs": 2387.9265000000014,
+        "fillMs": 247.07766699999047,
+        "contourMs": 63.23820800000976,
+        "displayMs": 14616.878458000007,
+        "maximumBackingBufferBytes": 59836331,
+        "borrowedVertexWorkspace": true,
+        "samples": 1345125,
+        "activeSpans": 417260,
+        "settles": 1349022,
+        "maximumHeapEntries": 155372,
+        "selectedCells": 1350511,
+        "localCells": 1349022,
+        "roadOnlyCells": 1489,
+        "edges": 25972,
+        "rings": 649,
+        "vertices": 16173,
+        "jsonBytes": 385743,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-02-720.geojson",
+        "bytes": 385743,
+        "sha256": "78e6d3853c4545783bc28f6a383c1e628c39f3069f3919123af64967bef86000"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 559333376,
+    "heapTotal": 161579008,
+    "heapUsed": 25566480,
+    "external": 162396882,
+    "arrayBuffers": 159857031
+  }
+}

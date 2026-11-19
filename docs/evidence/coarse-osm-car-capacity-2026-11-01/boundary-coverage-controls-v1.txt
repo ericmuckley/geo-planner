@@ -1,0 +1,34 @@
+✔ partial dry cell requires its full paid connector at the exact horizon (1.546417ms)
+✔ a dry island across a water barrier cannot receive coverage (0.21275ms)
+✔ water and fallback-closed samples remain closed under the source policy (21.73875ms)
+✔ new or preexisting coverage never becomes a finite propagation source (0.158667ms)
+✔ neighbors do not wrap across raster rows (0.06975ms)
+✔ open unreachable cells and existing road coverage are preserved (0.050958ms)
+✔ invalid horizon or finite closed center fails closed (0.252291ms)
+✔ sealed renderer wrapper preserves point components and all noncoverage fields (8.043833ms)
+✔ success and held witness exceptions release all borrowed query backing (49.139292ms)
+{"name":"original","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✔ original: queue receiver retention while the actual capacity exception stays alive (60.324958ms)
+{"name":"guarded","remaining":[],"message":"local heap capacity"}
+✔ guarded: queue receiver retention while the actual capacity exception stays alive (56.847333ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ original: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (759.052ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ seed-guard: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (770.232875ms)
+✔ initial seed pressure coarsens before consumption while reusing one raster (63.319542ms)
+✔ exhausted seed retries refuse and release the unconsumed field (26.243375ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=false (4.463708ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=true (3.988959ms)
+✔ label and vertex buffers are actually reused on a larger synthetic chain (23.699042ms)
+{"probeExceptionBackingDelta":0,"remaining":[]}
+✔ an exception after buffer consumption releases all query storage (15.386583ms)
+✔ source-water and uncertainty semantics match at the same resolution: false (9.943ms)
+✔ source-water and uncertainty semantics match at the same resolution: true (10.074042ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1764.380625

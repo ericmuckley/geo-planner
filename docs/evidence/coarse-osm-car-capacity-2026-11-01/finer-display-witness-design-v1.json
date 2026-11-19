@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-16",
+  "status": "design_only_not_implemented_or_qualified",
+  "purpose": "Preserve diagnostic/source/path admission work without allocating14 extra bytes per finer display cell.",
+  "unchangedCaps": {
+    "displayQueryBackingBytes": 67108864,
+    "offlineTraceBackingBytes": 134217728,
+    "roadWitnessParentBackingBytes": 100663296,
+    "heapEntries": 1000000,
+    "curvePoints": 4096
+  },
+  "routingChanges": false,
+  "selectionScope": "Instrumentation may retain only local roots needed by the validation outputs. It must not alter graph eligibility, source starts, road sampling, permissions, costs, propagation or display masks. The routing engine still treats every supported coordinate generically.",
+  "phases": [
+    {
+      "name": "extract bounded suffixes during existing finer-grid probe",
+      "method": "Prepare only scalar road timings before private query consumption. Finish point timing at probe, walk exact parent/link/cost chain for each required local winner. Record copied frame, root cell/kind/seed seconds, paid local steps/rounding and terminal link. No full-grid seed trace or source buffer escapes. Road-foot winners retain their original paid target descriptor.",
+      "additionalTypedCoordinateBytesMaximum": 16000000,
+      "coordinateOccurrencesMaximum": 1000000,
+      "onCapacity": "Refuse with preserved failure; do not truncate or omit a case."
+    },
+    {
+      "name": "release display scope",
+      "method": "Explicitly clear every display alias and check actual backing restoration before allocating another source-query or native road-parent workspace. All coordinates/roots are copied summaries only."
+    },
+    {
+      "name": "recover required source seeds through a separate scoped road-field replay",
+      "method": "Recompute the identical source field/starts under the frozen epoch and horizon. Replay the exact renderer source ordering, geometry points/progress, spacing and strict-less seed offers on the copied frame. A map from required cell indices to scalar best offers replaces all per-cell seed arrays. Apply the same paid connectors/center policy/coverage and first-origin tie. Sampling counts/active spans and recovered seed values must match frozen render output. No grid or road field from the prior phase is retained.",
+      "seedRecordsMaximum": 83,
+      "curveBackingBytes": 49152,
+      "onMismatch": "Refuse; never substitute an arbitrary nearby or equal-time seed."
+    },
+    {
+      "name": "recover source road witness after releasing seed replay",
+      "method": "Use unchanged history-aware native-road witness with distances/parents/queue total<=96MiB, one target at a time. Check source identity, paid interior fractions, every step/cost/turn, prefix/seed/terminal links and exact component sums. Do not overlap its storage with display or source-query replay."
+    }
+  ],
+  "beforeExecutionControls": [
+    "Exhaustive small histories, interior entries, closed/late coverage, origin and road tie order, multiple targets sharing a root and water/uncertainty fixtures",
+    "Every recovered root/component equals an independent full seed trace at the old resolution",
+    "Success/exception cleanup and measured arrayBuffer maxima for every phase; capacity/omission/forged-root refusals",
+    "Frozen input source manifests/map SHA and exact nested PointTiming equality on all intended outputs"
+  ],
+  "admission": "This design neither implements nor passes the all166 source/shore/transfer/path gate. A separately versioned qualified producer and complete independent audit remain required. Numerical finer-grid screening may precede those producers; it cannot activate the app.",
+  "deferred": [
+    "vehicle ferries",
+    "source acquisition",
+    "new provider requests",
+    "cost fitting",
+    "app/env/DB/dependency/deployment changes"
+  ]
+}

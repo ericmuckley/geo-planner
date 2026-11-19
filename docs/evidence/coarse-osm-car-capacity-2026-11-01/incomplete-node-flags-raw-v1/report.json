@@ -1,0 +1,48 @@
+{
+  "status": "complete_source_qualified_incomplete_node_flags_independently_audited",
+  "recipeSha256": "e16cef671c5a99d50c87e8c4dec195d13176aec64a951e174930e088f9323196",
+  "policy": {
+    "id": "incomplete-static-single-via-node-maneuver-v1",
+    "shape": "Exactly one positive native node member with role via; no from/to way or other members.",
+    "tags": "Exact documented general/car relation type; at least one known static car/general restriction key, every stated value identical and supported; no unknown restriction keys or conditional keys.",
+    "meaning": "Without from/to road members this relation cannot define a maneuver. Omit only this incomplete relation contribution; never infer an all-direction node barrier from it.",
+    "fallback": "Unknown/mixed/conditional tags, unknown/car exemptions, other member shapes and every way-containing restriction retain their current handling.",
+    "unchanged": "Direct node access/barrier/dimension/lock/hour guards, all other node and way contributors, valid turn rules, costs, directions and timing gates remain."
+  },
+  "originalGraphVertices": 5731903,
+  "allOriginalBlockersAndRawTagsReplayed": 13776,
+  "openedVertices": 1488,
+  "sourceIncompleteRelations": 2525,
+  "allVertexFlagsIndependentlyCompared": 5731903,
+  "remainingBlockedVertices": 6574,
+  "signalsAndReversalBitsExact": true,
+  "everyOldUnblockedVertexExact": true,
+  "everyIndependentUnconvertedRestrictionContributorRetained": true,
+  "artifacts": {
+    "proposed-node-flags.u8": {
+      "bytes": 5731903,
+      "sha256": "886ba51efb9ab787ea0a82192ed7231a6f59d3df1a6113a67d6698cd83d034c2"
+    },
+    "changed-nodes.json.gz": {
+      "bytes": 25311,
+      "sha256": "59edff294d88bd763b90cf6927490d1e018c9447c8fa6ade84288b50b2c7e455"
+    },
+    "opened-vertices.u32": {
+      "bytes": 5952,
+      "sha256": "c1a51395abf4ce45dabf7fa7593941f708612d0f6f6d53478bd9d82212b37132"
+    },
+    "opened-node-ids.u64": {
+      "bytes": 11904,
+      "sha256": "78ca33b59136a11b981b9f882edb1229ee9e584a18adde394232e987e93b99e1"
+    }
+  },
+  "sourcePbfReads": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "appActivated": false,
+  "routingOrAccuracyAccepted": false,
+  "hostSecondsIncludingBindingsConstructionAllFlagAndTagAudits": 3.9713577500078827,
+  "hostMaximumRssBytes": 146653184,
+  "scope": "Full5731903current spatial flags and complete native-to-spatial permutation checked, all13776originalsourceblockers/tags and2525incomplete static singleton-via relations independently replay. Only1488blocker bits clear where no direct guard or other contributor remains; qualifiedpassable openings/signal/reversal bits/everyoldopenvertexretain. Complete captured nativecompiler/source audit and75actualLinuxcontrols pass. All cost/arc/turn/geometry/history/water facts and numericIDs remain original; this is a separate nodeflag artifact only, not legal-route/accuracy/app admission. Host512MiBRSS/120s/owned64MiB/aggregate72GiB, no cgroup/CPU/cloud claim. No PBF/provider/modelquery/applicationDB/deployment."
+}

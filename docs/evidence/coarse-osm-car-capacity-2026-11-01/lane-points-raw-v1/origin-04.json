@@ -1,0 +1,314 @@
+{
+  "origin": [
+    -92.1005,
+    46.7867
+  ],
+  "rows": [
+    {
+      "id": "duluth-mn-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.10095,
+        "lat": 45.70282
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 376.0383333333333,
+      "baselinePointMinutes": 353.4567879977135,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 338.9684546643801,
+        "cellMinutes": 335.60596071746403,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 323.9716666666666,
+          "local": 8.62048780314947,
+          "transfer": 0,
+          "destination": 3.362493946916084
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 322.21458333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -22.581545335619808,
+      "candidateErrorMinutes": -37.06987866895321,
+      "absoluteErrorChangeMinutes": 16.753871331046753,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.66185,
+        "lat": 45.0997
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 397.34666666666664,
+      "baselinePointMinutes": 372.302139580981,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 356.5471395809812,
+        "cellMinutes": 354.2838062476479,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 351.27,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.263333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 346.54375,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -25.044527085685615,
+      "candidateErrorMinutes": -40.79952708568544,
+      "absoluteErrorChangeMinutes": 10.003389580981207,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -97.10138,
+        "lat": 41.01295
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 604.855,
+      "baselinePointMinutes": 590.0104729143146,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 601.6971395809813,
+        "cellMinutes": 601.6954729143147,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 595.8333333333329,
+          "local": 0,
+          "transfer": 2.848333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "ambiguous"
+      },
+      "candidate": {
+        "pointMinutes": 542.4854166666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "ambiguous"
+      },
+      "baselineErrorMinutes": -14.8445270856854,
+      "candidateErrorMinutes": -3.157860419018675,
+      "absoluteErrorChangeMinutes": 59.21172291431469,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -99.32231,
+        "lat": 42.94749
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 613.525,
+      "baselinePointMinutes": 610.0688062476462,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 610.0388062476467,
+        "cellMinutes": 610.0388062476467,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 606.9766666666649,
+          "local": 0,
+          "transfer": 0.04833333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 565.9229166666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -3.4561937523537836,
+      "candidateErrorMinutes": -3.4861937523533015,
+      "absoluteErrorChangeMinutes": 44.115889580980024,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -105.47339,
+        "lat": 46.67349
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 683.2316666666667,
+      "baselinePointMinutes": 711.9788062476479,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 704.3821395809803,
+        "cellMinutes": 702.3088062476469,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 699.2899999999994,
+          "local": 0,
+          "transfer": 2.0766666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 617.925,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 28.747139580981184,
+      "candidateErrorMinutes": 21.150472914313582,
+      "absoluteErrorChangeMinutes": 44.15619375235315,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -104.37019,
+        "lat": 46.19137
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 700.0216666666668,
+      "baselinePointMinutes": 729.8898396652215,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 718.0348396652206,
+        "cellMinutes": 718.0348396652206,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 704.3149999999991,
+          "local": 8.112700084240497,
+          "transfer": 2.5933333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 659.7958333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 29.86817299855477,
+      "candidateErrorMinutes": 18.01317299855384,
+      "absoluteErrorChangeMinutes": 22.21266033477957,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "duluth-mn-360-inside",
+      "previousPointTicks": 154663,
+      "pointTicks": 154663,
+      "previousRoadTicks": 154663,
+      "bestRoadTicks": 154663,
+      "frozenLocalGridTicks": 155916,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "previousPointTicks": 166341,
+      "pointTicks": 166341,
+      "previousRoadTicks": 166341,
+      "bestRoadTicks": 166341,
+      "frozenLocalGridTicks": 167447,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "previousPointTicks": 260393,
+      "pointTicks": 260393,
+      "previousRoadTicks": 260393,
+      "bestRoadTicks": 260393,
+      "frozenLocalGridTicks": 260991,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "previousPointTicks": 271643,
+      "pointTicks": 271643,
+      "previousRoadTicks": 271643,
+      "bestRoadTicks": 271643,
+      "frozenLocalGridTicks": 272655,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "previousPointTicks": 296604,
+      "pointTicks": 296604,
+      "previousRoadTicks": 300320,
+      "bestRoadTicks": 300320,
+      "frozenLocalGridTicks": 296604,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "previousPointTicks": 316702,
+      "pointTicks": 316702,
+      "previousRoadTicks": 316702,
+      "bestRoadTicks": 316702,
+      "frozenLocalGridTicks": 317236,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 2823461,
+    "maximumHeapEntries": 6109,
+    "maximumBackingBufferBytes": 50929954,
+    "returnedBackingBufferBytes": 50793238,
+    "seedBackingBufferBytes": 22912,
+    "starts": 358
+  },
+  "hostFieldAndFinishesMs": 486.21000000000004,
+  "afterReleaseArrayBuffers": 144171169
+}

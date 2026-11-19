@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -116.602,
+    33.0787
+  ],
+  "rows": [
+    {
+      "id": "julian--borrego-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "destination": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 46.17666666666666,
+      "baselinePointMinutes": 60.21856494962275,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 40.170683333333336,
+      "baseline": {
+        "pointMinutes": 58.870231616289416,
+        "cellMinutes": 55.571263206577,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.1016666666666666,
+          "road": 20.906666666666666,
+          "local": 33.56292987324366,
+          "transfer": 0,
+          "destination": 3.2989684097124137
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 47.75833333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 14.04189828295609,
+      "candidateErrorMinutes": 12.693564949622754,
+      "absoluteErrorChangeMinutes": -11.111898282956084,
+      "estimateFailure": null
+    },
+    {
+      "id": "julian--el-centro",
+      "set": "regional",
+      "origin": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "destination": {
+        "lon": -115.5631,
+        "lat": 32.792
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 107.08999999999999,
+      "baselinePointMinutes": 107.19679171311152,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 95.56603333333334,
+      "baseline": {
+        "pointMinutes": 102.00012504644499,
+        "cellMinutes": 100.49000000000008,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.1016666666666666,
+          "road": 99.38833333333332,
+          "local": 0,
+          "transfer": 0,
+          "destination": 1.510125046444914
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 97.37916666666666,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 0.10679171311153368,
+      "candidateErrorMinutes": -5.089874953554997,
+      "absoluteErrorChangeMinutes": 4.62095837977833,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "julian--borrego-springs",
+      "previousPointTicks": 22924,
+      "pointTicks": 22924,
+      "previousRoadTicks": 22924,
+      "bestRoadTicks": 22924,
+      "frozenLocalGridTicks": 23605,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "julian--el-centro",
+      "previousPointTicks": 46742,
+      "pointTicks": 46742,
+      "previousRoadTicks": 46742,
+      "bestRoadTicks": 46742,
+      "frozenLocalGridTicks": 46944,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1782490,
+    "maximumHeapEntries": 2620,
+    "maximumBackingBufferBytes": 50890470,
+    "returnedBackingBufferBytes": 50754066,
+    "seedBackingBufferBytes": 1856,
+    "starts": 29
+  },
+  "hostFieldAndFinishesMs": 328.10499999999956,
+  "afterReleaseArrayBuffers": 144138687
+}

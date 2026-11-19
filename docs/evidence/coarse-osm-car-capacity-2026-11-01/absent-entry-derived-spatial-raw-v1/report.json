@@ -1,0 +1,97 @@
+{
+  "status": "absent_entry_spatial_and_complete_independent_audit_passed",
+  "nativeResult": {
+    "vertices": 5731903,
+    "arcs": 9807359,
+    "routingPayloadBytes": 129140387,
+    "spatialCells": 56970,
+    "spatialIndexBytes": 341823,
+    "totalBytesIncludingOfflinePermutations": 191639258,
+    "forbiddenTurnPairs": 252230
+  },
+  "independentAudit": {
+    "status": "independent_complete_lossless_spatial_permutation_audit_passed",
+    "verticesChecked": 5731903,
+    "directedArcsCostsPhysicalReversesChecked": 9807359,
+    "forbiddenTurnPairsChecked": 252230,
+    "spatialCellsChecked": 56970,
+    "spatialIndexBytes": 341823,
+    "secondsIndependentAudit": 27.14630021993071,
+    "sourcePbfReads": 0,
+    "sourceConstructorExecutions": 0,
+    "nativeLibraryExecutions": 0,
+    "snappingOrEtaOrAppQualified": false
+  },
+  "nativeOperationSeconds": 2.391276833950542,
+  "independentAuditSeconds": 27.149318053969182,
+  "workerSecondsIncludingBindingsAndBothOperations": 29.883216638001613,
+  "assets": {
+    "routing/xy.i32": {
+      "bytes": 45855224,
+      "sha256": "faed4da0ec68143a2d5f5467195a2905fbbb443baef95d77f62662521493a82d"
+    },
+    "routing/targets.u24": {
+      "bytes": 29422077,
+      "sha256": "f62c4c347dbda2efe4df8d44dd3c4e53c676e242d0c6f78221d8ecf91e3e5963"
+    },
+    "routing/cost-overflow-ticks.u32": {
+      "bytes": 8,
+      "sha256": "f9aa34aaad16065aef67a27b06db541aa572a7d8b8157fb0fbc6e85395c6afa8"
+    },
+    "routing/old-arc-to-new.u32": {
+      "bytes": 39229436,
+      "sha256": "b841220694c492b978687a925cf370d0639e4860e7f1125c13d6f78fbf5d47de"
+    },
+    "routing/reverse.u8": {
+      "bytes": 9807359,
+      "sha256": "e0425bf945f6c5f4a4d7c66989a163b54057d6ac1802bc27a11acaa0c191ecb5"
+    },
+    "routing/cell-offsets.u24": {
+      "bytes": 170913,
+      "sha256": "0414ecb814530fecaca5660c144cf88767c2f9bacd89e13fe384e3b68a0512e2"
+    },
+    "routing/forbidden-turns.u24": {
+      "bytes": 1513380,
+      "sha256": "5321dd763ba6d00fdde34fa930dea6eee65dac1cd3c6bdc0fbdafdcb0744c764"
+    },
+    "routing/new-vertex-to-old.u32": {
+      "bytes": 22927612,
+      "sha256": "7ae09f1bfd6fa133ea88ffe775550723db715a198726bc97a4b7219643a0b923"
+    },
+    "routing/node-flags.u8": {
+      "bytes": 5731903,
+      "sha256": "a0eb45bca75fdf738166e6de8de9ae0cc9a73577356351d74ffaf63bed184761"
+    },
+    "routing/reverse-overflow-arcs.u24": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/offsets.u24": {
+      "bytes": 17195712,
+      "sha256": "e66dc9522a3c04929d4dc9a729f287055df4209804b94711307d767621331705"
+    },
+    "routing/cell-keys.u24": {
+      "bytes": 170910,
+      "sha256": "1f42176914171baee8ee79d0884f733fcb08987fe73549c9314144fd8ed68571"
+    },
+    "routing/cost-overflow-arcs.u24": {
+      "bytes": 6,
+      "sha256": "6990d72413e2ea52fc3753b54f45e0916e0980811f2ac5c0a541b69812f32f6d"
+    },
+    "routing/reverse-overflow-targets.u24": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "routing/costs.u16": {
+      "bytes": 19614718,
+      "sha256": "215e874efca48c81128b01b0482af1fc9e666f199ddaae478fa541c949d945f8"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "appActivated": false,
+  "accuracyQualified": false,
+  "scope": "New candidate inputs through sealed generic helpers, with complete independent output audit. Source PBF not mounted. Codec/query/ETA/app qualification are separate."
+}

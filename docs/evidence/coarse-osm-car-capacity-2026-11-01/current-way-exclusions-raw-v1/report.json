@@ -1,0 +1,87 @@
+{
+  "status": "all_original_way_exclusions_current_closure_membership_audited",
+  "recipeSha256": "0c84f50ae63e3a34ae344095557fc877fa4966b518fdfa4e8d672e6e472b7d5f",
+  "sourceSelectedWays": 52743,
+  "knownOriginalWayTags": 52743,
+  "unknownOriginalWayTags": 0,
+  "oldGlobalClosureIds": 29657,
+  "currentGlobalClosureIds": 27421,
+  "convertedRelationContributors": 1331,
+  "allCurrentClosureContributorUnionsExact": true,
+  "categories": {
+    "base-eligible-fallback-closed": 16824,
+    "base-ineligible": 33683,
+    "retained-now": 2236
+  },
+  "baseReasons": {
+    "conditional-or-way-restriction": 9555,
+    "lane-access": 8087,
+    "access": 14582,
+    "area-ford-driveway-parking": 582,
+    "unsupported-oneway": 576,
+    "unsupported-speed": 298,
+    "directional-access": 3
+  },
+  "laneShapes": {
+    "access-or-mixed-vectors": 8084,
+    "only-oneway-vectors": 3
+  },
+  "laneStatuses": {
+    "unchanged": 8087
+  },
+  "currentSelectedClosureKinds": {
+    "constant-conditional": 7251,
+    "constant-other-static": 5872,
+    "constant-static-only": 3769,
+    "single-no-join": 408,
+    "multi-no-join": 57
+  },
+  "commonAccessTagObservations": {
+    "access=private": 7206,
+    "access=no": 2408,
+    "motor_vehicle=no": 1942,
+    "access=permit": 1060,
+    "access=destination": 789,
+    "access=customers": 342,
+    "motor_vehicle=destination": 313,
+    "motorcar=no": 208,
+    "motor_vehicle=private": 138,
+    "motorcar=private": 115,
+    "access=hov": 101,
+    "motor_vehicle=customers": 77,
+    "motor_vehicle=permit": 59,
+    "access=military": 56,
+    "vehicle=permit": 47,
+    "access=emergency": 25,
+    "access=yes": 14,
+    "vehicle=no": 12,
+    "access=unknown": 10,
+    "access=restricted": 8,
+    "access=permissive": 6,
+    "access=residents": 6,
+    "access=all": 3,
+    "motor_vehicle=agricultural": 3,
+    "access=delivery": 3,
+    "motorcar=official": 2,
+    "motor_vehicle=emergency": 2,
+    "motor_vehicle=yes": 1,
+    "access=yes|yes|no|yes": 1,
+    "access=hgv": 1
+  },
+  "artifact": {
+    "file": "current-exclusions.json.gz",
+    "bytes": 783179,
+    "sha256": "e39a737b8eae64b9b5e43371f77cf25f227278912f099e9e20cd29413b9df730",
+    "rawBytes": 16345652,
+    "rawSha256": "dfb96cd0c7bd2b55f40f89eb4100bd3e9b94659c348ae202e1becf1e77850d91"
+  },
+  "hostSecondsIncludingBindingsAllTagAndCurrentClosureJoins": 0.6453449998516589,
+  "hostMaximumRssBytes": 313114624,
+  "sourcePbfReads": 0,
+  "modelQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "policyChanged": false,
+  "appActivated": false,
+  "scope": "All52743original excluded-major selection IDs with complete original tags, independent base eligibility and all27421current global closure contributor unions. Removes only1331already source-qualified conditional-node contributors, preserving independent shared closures. Old selection flags remain historical;2236now-retained roads are explicit, not miscalled current exclusions. Categories/tag-shape/access distributions are observations, never permission/causal corridor or new routing/accuracy proof. Original source/legal/currentestimated prices/gates andv9stay. Host512MiBRSS/300s/64MiBowned metadata work under unchanged72GiBaggregate, not cgroup/cloud/query latency."
+}

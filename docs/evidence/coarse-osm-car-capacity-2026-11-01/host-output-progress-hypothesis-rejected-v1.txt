@@ -1,0 +1,32 @@
+✔ host output preserves UTF-8 bytes without a shared slab (0.2885ms)
+✖ pooled progress retains another 8KiB slab; unpooled progress restores backing exactly (102.096041ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.031084
+
+✖ failing tests:
+
+test at scripts/coarse_osm_host_output_v1_test.ts:1:469
+✖ pooled progress retains another 8KiB slab; unpooled progress restores backing exactly (102.096041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 8192
+  
+      at TestContext.<anonymous> (/Users/eric/Documents/GitHub/geo-planner/scripts/coarse_osm_host_output_v1_test.ts:46:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1081:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:763:18)
+      at Test.postRun (node:internal/test_runner/test:1210:19)
+      at Test.run (node:internal/test_runner/test:1138:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:332:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 8192,
+    operator: 'strictEqual'
+  }

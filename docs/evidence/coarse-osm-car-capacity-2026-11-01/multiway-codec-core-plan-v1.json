@@ -1,0 +1,26 @@
+{
+  "kind": "core",
+  "source": "data/coarse-quality/us-osm-multiway-derived-spatial-v1",
+  "output": "data/coarse-quality/us-osm-multiway-codec-core-v1",
+  "closedRecord": "docs/evidence/coarse-osm-car-capacity-2026-11-01/multiway-derived-spatial-closed-v1.json",
+  "priorReserveBytes": 64500000000,
+  "newClosedAllocationBytes": 7250468864,
+  "metadataScratchReserveBytes": 104857600,
+  "scope": "Host lossless storage only,qualified unchanged integer delta/byteplane/gzip codecs and immediate inverse roundtrip to all13closed spatialcorefields. RSS4GiB/120s/output128MiB;not cgroup/CPU/swap/app timing.64.5GBprior+all246closed+100MiBscratch+output<72GiB. No source/PBF/nativeconstructor/provider/DB/query/model/app. Independent Python decode/geometry/context/access/ETA gates remain.",
+  "additionalActiveReservationBytes": 0,
+  "bindings": {
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_paid_geometry_v1.ts": "cde912277d5ef70233fe9e4cb9b8d7843bf601a9267a233efc7847b8a57ab940",
+    "scripts/coarse_osm_u24_v1.ts": "10b6380316ab15a3396409051221062dcba823da67f3fcca9ca1a48c80a626b7",
+    "scripts/pack_osm_absent_entry_storage_v1.ts": "0fa9f0055061508f6a1453d2c9b85c74590e34c9ec1d81ec7fd83689aa2c0d29",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-derived-spatial-closed-v1.json": "cce3f52a2bbc78cba4b2ee564c45d7d075580aaa3274ddd7fdb04d8d378297ff",
+    "scripts/close_osm_absent_entry_storage_v1.py": "d113112a0b9284e16a6e706847e36de463b985adf48b07af1642e2819db2edc7",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "scripts/close_osm_multiway_storage_v1.py": "c53ba4608838531a71bbe56449ea5108e6883df288d71077d0fdc9870f55f698",
+    "scripts/pack_osm_multiway_storage_v1.ts": "8205dacc0f36399411e236a8fa68236d83534c63decec7ff5c5d9318550447c6",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/multiway-derived-spatial-closed-v1.json": "5c9bc3db258045138b0f9a500756b6d170d7e1380ed328b1478c9c24a51f7064",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/multiway-derived-geometry-closed-v1.json": "34ee0b14d1fafc3ac60375ac79ca17d11510ee5523afe36c11f73cad67cfebcd"
+  },
+  "previousClosedRoots": 246
+}

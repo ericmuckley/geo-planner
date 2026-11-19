@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -116.5453,
+    33.8303
+  ],
+  "rows": [
+    {
+      "id": "palm-springs--idyllwild",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.75833333333333,
+      "baselinePointMinutes": 50.77385510082236,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 53.24466666666667,
+      "baseline": {
+        "pointMinutes": 50.58385510082236,
+        "cellMinutes": 49.014663528640405,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197375,
+          "transfer": 0,
+          "destination": 1.5691915721819576
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 50.520833333333336,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -12.984478232510973,
+      "candidateErrorMinutes": -13.174478232510971,
+      "absoluteErrorChangeMinutes": 0.0630217674890261,
+      "estimateFailure": null
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 107.95,
+      "baselinePointMinutes": 96.7933763707696,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 91.56958333333334,
+      "baseline": {
+        "pointMinutes": 96.4350867960194,
+        "cellMinutes": 95.43175346268606,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 72.80833333333332,
+          "local": 20.015086796019432,
+          "transfer": 2.725,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 86.27083333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -11.15662362923041,
+      "candidateErrorMinutes": -11.514913203980598,
+      "absoluteErrorChangeMinutes": 10.164253462686077,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "palm-springs--idyllwild",
+      "previousPointTicks": 24250,
+      "pointTicks": 24250,
+      "previousRoadTicks": 32630,
+      "bestRoadTicks": 32378,
+      "frozenLocalGridTicks": 24250,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "previousPointTicks": 41410,
+      "pointTicks": 41410,
+      "previousRoadTicks": 41410,
+      "bestRoadTicks": 41410,
+      "frozenLocalGridTicks": 42333,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1981192,
+    "maximumHeapEntries": 2928,
+    "maximumBackingBufferBytes": 50829226,
+    "returnedBackingBufferBytes": 50702458,
+    "seedBackingBufferBytes": 9216,
+    "starts": 144
+  },
+  "hostFieldAndFinishesMs": 342.032792,
+  "afterReleaseArrayBuffers": 143986231
+}

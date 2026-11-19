@@ -1,0 +1,45 @@
+{
+  "status": "release_held_by_observed_single_route_regressions",
+  "interpretation": "A completed route exceeding the 20-minute frontier regression limit cannot be repaired by remaining measurements in this run. The complete candidate aggregate is still pending.",
+  "recipeSha256": "d438daf59ce1ee01a05461bb4fcd6908e7d18d75f00bc07c2d5b1e6883392ed7",
+  "referenceSha256": "6325cb4f38bee19879a90547ffe6cedec4b083272b39ebf51801488819cc554a",
+  "completedOriginsExamined": 7,
+  "pairedCasesExamined": 42,
+  "completedPhaseHashes": {
+    "origin-01.json": "4077bf9695c2b79b9c25ee563faf2b02e53ab3888d3067657d136cba94fb0973",
+    "origin-02.json": "9f2c101a600e169ff33002d21c4404a24edeead083a79fc806efd48d9b1811d0",
+    "origin-03.json": "7ce689013e56381799e6797669e78516ac08620be2e3cb47d4229b6c2b4ba844",
+    "origin-04.json": "d3c9ddfc2c7e02e758400e7541a30b5f02acdca638af2cefea6de91adda6edc2",
+    "origin-05.json": "bd510deb3dad9443f60afa032aaa663adc67d04146fd2ffa784ba53a863a1303",
+    "origin-06.json": "9d7b8cf525dfb58054414fdb94bdfa7984ef846b58e0f2886b5aadc74420cb4c",
+    "origin-07.json": "d7a4fc011c399468962a49a0067e0c1d4eec6615a1c57166d44f8334bcc245a6"
+  },
+  "thresholdMinutes": 20,
+  "gate": "frontierWorstRegression",
+  "failures": [
+    {
+      "case": "missoula-mt-600-outside",
+      "phase": "origin-02.json",
+      "referenceMinutes": 579.4066666666666,
+      "liveEstimateMinutes": 619.7283333333331,
+      "candidateEstimateMinutes": 639.8791666666667,
+      "errorIncreaseMinutes": 20.150833333333594
+    },
+    {
+      "case": "hays-ks-600-inside",
+      "phase": "origin-03.json",
+      "referenceMinutes": 559.2033333333333,
+      "liveEstimateMinutes": 566.5095913002793,
+      "candidateEstimateMinutes": 589.2979166666667,
+      "errorIncreaseMinutes": 22.788325366387312
+    },
+    {
+      "case": "hays-ks-720-outside",
+      "phase": "origin-03.json",
+      "referenceMinutes": 707.8083333333333,
+      "liveEstimateMinutes": 727.2436101698995,
+      "candidateEstimateMinutes": 770.8270833333333,
+      "errorIncreaseMinutes": 43.58347316343384
+    }
+  ]
+}

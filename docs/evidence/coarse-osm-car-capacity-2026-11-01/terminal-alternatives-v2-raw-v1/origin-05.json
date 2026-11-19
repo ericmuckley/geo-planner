@@ -1,0 +1,434 @@
+{
+  "origin": [
+    -82.9988,
+    39.9612
+  ],
+  "rows": [
+    {
+      "id": "columbus-oh-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -80.10748,
+        "lat": 37.46188
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 366.27166666666665,
+      "baselinePointMinutes": 350.04307038179905,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 350.62640371513237,
+        "cellMinutes": 350.62640371513237,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 342.98499999999973,
+          "local": 0,
+          "transfer": 4.56,
+          "destination": 0
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 360.12708333333336,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -16.228596284867592,
+      "candidateErrorMinutes": -15.645262951534278,
+      "absoluteErrorChangeMinutes": -9.50067961820099,
+      "estimateFailure": null
+    },
+    {
+      "id": "columbus-oh-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -80.25191,
+        "lat": 36.25135
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 400.1716666666667,
+      "baselinePointMinutes": 370.00807038179914,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 377.0647370484657,
+        "cellMinutes": 377.0647370484657,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 369.4066666666663,
+          "local": 0,
+          "transfer": 4.576666666666666,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 393.81666666666666,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -30.163596284867538,
+      "candidateErrorMinutes": -23.10692961820098,
+      "absoluteErrorChangeMinutes": -16.75192961820096,
+      "estimateFailure": null
+    },
+    {
+      "id": "columbus-oh-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -92.36316,
+        "lat": 37.38909
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 616.3066666666667,
+      "baselinePointMinutes": 589.999637511979,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 600.2129708453126,
+        "cellMinutes": 600.2129708453126,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 572.3583333333327,
+          "local": 17.024900463513305,
+          "transfer": 7.748333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 721.475,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -26.30702915468771,
+      "candidateErrorMinutes": -16.093695821354117,
+      "absoluteErrorChangeMinutes": 89.07463751197918,
+      "estimateFailure": null
+    },
+    {
+      "id": "columbus-oh-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -92.91856,
+        "lat": 38.28645
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 633.2083333333334,
+      "baselinePointMinutes": 609.9864037151327,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 617.2230703817992,
+        "cellMinutes": 617.2230703817992,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 608.7583333333333,
+          "local": 0,
+          "transfer": 5.383333333333334,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 676.1520833333333,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -23.221929618200647,
+      "candidateErrorMinutes": -15.985262951534196,
+      "absoluteErrorChangeMinutes": 26.958487048465713,
+      "estimateFailure": null
+    },
+    {
+      "id": "columbus-oh-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -73.09165,
+        "lat": 44.03629
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 771.1033333333332,
+      "baselinePointMinutes": 710.026403715133,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 721.1064037151325,
+        "cellMinutes": 721.1064037151325,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 714.8866666666664,
+          "local": 0,
+          "transfer": 3.1383333333333336,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 831.8,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -61.07692961820021,
+      "candidateErrorMinutes": -49.99692961820074,
+      "absoluteErrorChangeMinutes": 10.699737048465977,
+      "estimateFailure": null
+    },
+    {
+      "id": "columbus-oh-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -82.9988,
+        "lat": 39.9612
+      },
+      "destination": {
+        "lon": -73.06746,
+        "lat": 44.88702
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 782.5,
+      "baselinePointMinutes": 730.9490640906922,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 736.764064090691,
+        "cellMinutes": 735.8175441468794,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.081403715132563,
+          "road": 725.9566666666666,
+          "local": 6.567807098413489,
+          "transfer": 0.21166666666666667,
+          "destination": 0.9465199438115981
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 895.8770833333333,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -51.55093590930778,
+      "candidateErrorMinutes": -45.73593590930898,
+      "absoluteErrorChangeMinutes": 67.64114742402433,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "columbus-oh-360-inside",
+      "previousPointTicks": 172861,
+      "pointTicks": 172861,
+      "previousRoadTicks": 172861,
+      "bestRoadTicks": 172861,
+      "terminalChoices": 4,
+      "winningTerminal": {
+        "origin": [
+          -80.10748,
+          37.46188
+        ],
+        "snap": {
+          "canonicalArc": 6167848,
+          "segment": 1,
+          "segmentFraction": 0.6531495261271092,
+          "coordinate": [
+            -80.10773631203942,
+            37.461920926295846
+          ],
+          "distanceMeters": 23.075792814744194,
+          "forwardProgress": 0.7553496123479916,
+          "backwardProgress": 0.7553496123479916
+        },
+        "connectorMeters": 23.075792815549086,
+        "connectorTicks": 27,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "columbus-oh-360-outside",
+      "previousPointTicks": 189032,
+      "pointTicks": 189032,
+      "previousRoadTicks": 189032,
+      "bestRoadTicks": 189032,
+      "terminalChoices": 4,
+      "winningTerminal": {
+        "origin": [
+          -80.25191,
+          36.25135
+        ],
+        "snap": {
+          "canonicalArc": 6114151,
+          "segment": 1,
+          "segmentFraction": 0.6316070875873336,
+          "coordinate": [
+            -80.25215286666845,
+            36.251568044845236
+          ],
+          "distanceMeters": 32.59034277606149,
+          "forwardProgress": 0.4729572121505494,
+          "backwardProgress": 0.4729572121505494
+        },
+        "connectorMeters": 32.59034277661173,
+        "connectorTicks": 38,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "columbus-oh-600-inside",
+      "previousPointTicks": 346308,
+      "pointTicks": 346308,
+      "previousRoadTicks": 346308,
+      "bestRoadTicks": 346308,
+      "terminalChoices": 5,
+      "winningTerminal": {
+        "origin": [
+          -92.36316,
+          37.38909
+        ],
+        "snap": {
+          "canonicalArc": 4123776,
+          "segment": 1,
+          "segmentFraction": 0.2986105025153283,
+          "coordinate": [
+            -92.36260692328293,
+            37.38918027260652
+          ],
+          "distanceMeters": 49.88349040177464,
+          "forwardProgress": 0.2394431082314269,
+          "backwardProgress": 0.2394431082314269
+        },
+        "connectorMeters": 49.88349040151571,
+        "connectorTicks": 58,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "columbus-oh-600-outside",
+      "previousPointTicks": 324553,
+      "pointTicks": 324553,
+      "previousRoadTicks": 324553,
+      "bestRoadTicks": 324553,
+      "terminalChoices": 3,
+      "winningTerminal": {
+        "origin": [
+          -92.91856,
+          38.28645
+        ],
+        "snap": {
+          "canonicalArc": 4403495,
+          "segment": 1,
+          "segmentFraction": 0.4039651096028802,
+          "coordinate": [
+            -92.91835440774867,
+            38.28657763591338
+          ],
+          "distanceMeters": 22.878227987555906,
+          "forwardProgress": 0.23905841372580217,
+          "backwardProgress": 0.23905841372580217
+        },
+        "connectorMeters": 22.8782279864223,
+        "connectorTicks": 27,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "columbus-oh-720-inside",
+      "previousPointTicks": 399264,
+      "pointTicks": 399264,
+      "previousRoadTicks": 399264,
+      "bestRoadTicks": 399264,
+      "terminalChoices": 3,
+      "winningTerminal": {
+        "origin": [
+          -73.09165,
+          44.03629
+        ],
+        "snap": {
+          "canonicalArc": 8545012,
+          "segment": 2,
+          "segmentFraction": 0.7059921719025107,
+          "coordinate": [
+            -73.09156187647004,
+            44.03627068352471
+          ],
+          "distanceMeters": 7.364607648798583,
+          "forwardProgress": 0.4774237745597545,
+          "backwardProgress": 0.4774237745597545
+        },
+        "connectorMeters": 7.364607648429342,
+        "connectorTicks": 9,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "columbus-oh-720-outside",
+      "previousPointTicks": 430021,
+      "pointTicks": 430021,
+      "previousRoadTicks": 430021,
+      "bestRoadTicks": 430021,
+      "terminalChoices": 2,
+      "winningTerminal": {
+        "origin": [
+          -73.06746,
+          44.88702
+        ],
+        "snap": {
+          "canonicalArc": 9404466,
+          "segment": 3,
+          "segmentFraction": 0.12192271014193115,
+          "coordinate": [
+            -73.06722544394708,
+            44.88701524863933
+          ],
+          "distanceMeters": 18.486272898614832,
+          "forwardProgress": 0.7777440133643756,
+          "backwardProgress": 0.7777440133643756
+        },
+        "connectorMeters": 18.48627289770995,
+        "connectorTicks": 22,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 5247423,
+    "maximumHeapEntries": 6929,
+    "maximumBackingBufferBytes": 50489398,
+    "returnedBackingBufferBytes": 50489398,
+    "seedBackingBufferBytes": 47744,
+    "starts": 746
+  },
+  "hostFieldAndFinishesMs": 811.0478750000002,
+  "afterReleaseArrayBuffers": 141923195
+}

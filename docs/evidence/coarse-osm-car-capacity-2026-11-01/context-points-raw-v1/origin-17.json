@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -116.3131,
+    34.1347
+  ],
+  "rows": [
+    {
+      "id": "joshua-tree--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 150.11333333333332,
+      "baselinePointMinutes": 146.05499999999992,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 122.83763333333333,
+      "baseline": {
+        "pointMinutes": 142.40833333333345,
+        "cellMinutes": 139.47166666666678,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.17166666666666666,
+          "road": 139.27499999999995,
+          "local": 0,
+          "transfer": 0.025,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 136.35625,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -4.058333333333394,
+      "candidateErrorMinutes": -7.70499999999987,
+      "absoluteErrorChangeMinutes": 6.0520833333334565,
+      "estimateFailure": null
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "set": "regional",
+      "origin": {
+        "lon": -116.3131,
+        "lat": 34.1347
+      },
+      "destination": {
+        "lon": -116.0542,
+        "lat": 34.1356
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 19.708333333333332,
+      "baselinePointMinutes": 18.048333333333336,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 15.1931,
+      "baseline": {
+        "pointMinutes": 16.99166666666667,
+        "cellMinutes": 16.354999999999997,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.13833333333333334,
+          "road": 16.261666666666667,
+          "local": 0,
+          "transfer": 0.04666666666666667,
+          "destination": 0.545
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 16.558333333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -1.6599999999999966,
+      "candidateErrorMinutes": -2.7166666666666615,
+      "absoluteErrorChangeMinutes": 0.4333333333333371,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "joshua-tree--brawley",
+      "previousPointTicks": 65451,
+      "pointTicks": 65451,
+      "previousRoadTicks": 67191,
+      "bestRoadTicks": 67191,
+      "frozenLocalGridTicks": 65451,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "joshua-tree--twentynine-palms",
+      "previousPointTicks": 7948,
+      "pointTicks": 7948,
+      "previousRoadTicks": 9462,
+      "bestRoadTicks": 9462,
+      "frozenLocalGridTicks": 7948,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 2031282,
+    "maximumHeapEntries": 2885,
+    "maximumBackingBufferBytes": 50823018,
+    "returnedBackingBufferBytes": 50696250,
+    "seedBackingBufferBytes": 3008,
+    "starts": 47
+  },
+  "hostFieldAndFinishesMs": 317.3859170000014,
+  "afterReleaseArrayBuffers": 143986231
+}

@@ -1,0 +1,124 @@
+{
+  "format": "packed-integer-delta-byteplanes-gzip-v1",
+  "fields": {
+    "routing/xy.i32": {
+      "wordBytes": 4,
+      "lanes": 2,
+      "file": "fields/xy.i32.gz",
+      "rawBytes": 45855224,
+      "rawSha256": "faed4da0ec68143a2d5f5467195a2905fbbb443baef95d77f62662521493a82d",
+      "compressedBytes": 22711223,
+      "compressedSha256": "94684d497bde9abe406a52ac69a1290ee3d8edebcabf857e013babb9e57ca001"
+    },
+    "routing/offsets.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/offsets.u24.gz",
+      "rawBytes": 17195712,
+      "rawSha256": "ec382029fa7c8d0ae67233a815ac92a578795fce1c08e369ad58ea8a69839e9a",
+      "compressedBytes": 1112629,
+      "compressedSha256": "da553748004f0cf88b7cd5c9bc11471c3c6814cdced4ca87267a060fcede6d14"
+    },
+    "routing/targets.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/targets.u24.gz",
+      "rawBytes": 29560095,
+      "rawSha256": "0004ac922e5bb55f2ebf847858d13b9e84903f22ea2da6a21649a77f7696ec9a",
+      "compressedBytes": 7794941,
+      "compressedSha256": "a38bae4b666dc89a058b59d025d9487793d1e72b9eace1b1975a8f74feceb161"
+    },
+    "routing/costs.u16": {
+      "wordBytes": 2,
+      "lanes": 1,
+      "file": "fields/costs.u16.gz",
+      "rawBytes": 19706730,
+      "rawSha256": "8365fc4207b46208eb4ea6e97d75c3842cbc785c9b4b9a17638605094efeb206",
+      "compressedBytes": 11752928,
+      "compressedSha256": "85601302528f6e50a330614cdb5d389bdbae7785ff8187c452740bb6f60a8eb5"
+    },
+    "routing/cost-overflow-arcs.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/cost-overflow-arcs.u24.gz",
+      "rawBytes": 6,
+      "rawSha256": "991ca3cbf24f5fcc2b56ed34c309e83807373a13af9dbf0080e1bb5e17c19cb9",
+      "compressedBytes": 26,
+      "compressedSha256": "ce0c2429f2e835a8b13ecaca5233a80d736d2051465d20af9a6d41276c819b16"
+    },
+    "routing/cost-overflow-ticks.u32": {
+      "wordBytes": 4,
+      "lanes": 1,
+      "file": "fields/cost-overflow-ticks.u32.gz",
+      "rawBytes": 8,
+      "rawSha256": "f9aa34aaad16065aef67a27b06db541aa572a7d8b8157fb0fbc6e85395c6afa8",
+      "compressedBytes": 28,
+      "compressedSha256": "78dc1541e32e075b7485968d402058d23d57b242a1b1eb9429e73f0bcab4a4d0"
+    },
+    "routing/reverse.u8": {
+      "wordBytes": 1,
+      "lanes": 1,
+      "file": "fields/reverse.u8.gz",
+      "rawBytes": 9853365,
+      "rawSha256": "6df54f6180b9cc7000ef29ffd535541228c9728eac811d5e4dd65d2d08df26d1",
+      "compressedBytes": 2126638,
+      "compressedSha256": "b36771bd676707b4c131c1668edb3aceea18f347f835a513daeec1a2a1dde90f"
+    },
+    "routing/reverse-overflow-arcs.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/reverse-overflow-arcs.u24.gz",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compressedBytes": 20,
+      "compressedSha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837"
+    },
+    "routing/reverse-overflow-targets.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/reverse-overflow-targets.u24.gz",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compressedBytes": 20,
+      "compressedSha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837"
+    },
+    "routing/node-flags.u8": {
+      "wordBytes": 1,
+      "lanes": 1,
+      "file": "fields/node-flags.u8.gz",
+      "rawBytes": 5731903,
+      "rawSha256": "dd30854424a8cc751ff243541aa3cdfdb4704f222ed4b290453327487c31f375",
+      "compressedBytes": 411792,
+      "compressedSha256": "d4b190d2e05feae098ed1ddc44bfbdeba34912331707ee54650246a0e0ab2cdb"
+    },
+    "routing/forbidden-turns.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/forbidden-turns.u24.gz",
+      "rawBytes": 1437732,
+      "rawSha256": "e03360eb40f748dfa21bb1c036dd5e94331eaca09f4eb4f06d9ba3be87b3393d",
+      "compressedBytes": 391420,
+      "compressedSha256": "1cd8de2b76a79df442837c2c293b18919962732c4f98158bb4998780cd5531e6"
+    },
+    "routing/cell-keys.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/cell-keys.u24.gz",
+      "rawBytes": 170910,
+      "rawSha256": "1f42176914171baee8ee79d0884f733fcb08987fe73549c9314144fd8ed68571",
+      "compressedBytes": 9454,
+      "compressedSha256": "0ac479c4b0f8eef1b0effe8906d40ec84f37d9e9121a54bee658f5630feb7395"
+    },
+    "routing/cell-offsets.u24": {
+      "wordBytes": 3,
+      "lanes": 1,
+      "file": "fields/cell-offsets.u24.gz",
+      "rawBytes": 170913,
+      "rawSha256": "0414ecb814530fecaca5660c144cf88767c2f9bacd89e13fe384e3b68a0512e2",
+      "compressedBytes": 50383,
+      "compressedSha256": "ccc0ae02f5be6ef61a8bfb6f2e3e6ab9d82d254c7e02919c06dafa4aac8b89a6"
+    }
+  },
+  "requiresTurnContextSearch": true,
+  "contextRecordsReportSha256": "fb2f5d3282643c70faa099118db5355cd768534b5a5f853f609beddb838d1859"
+}

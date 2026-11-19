@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -116.7189,
+    33.74
+  ],
+  "rows": [
+    {
+      "id": "idyllwild--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 61.443333333333335,
+      "baselinePointMinutes": 50.77385510082237,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 51.98633333333333,
+      "baseline": {
+        "pointMinutes": 50.58385510082237,
+        "cellMinutes": 49.96885510082237,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.5691915721819576,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197374,
+          "transfer": 0,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 49.13125,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -10.669478232510968,
+      "candidateErrorMinutes": -10.859478232510966,
+      "absoluteErrorChangeMinutes": 1.4526051008223675,
+      "estimateFailure": null
+    },
+    {
+      "id": "idyllwild--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 74.32833333333333,
+      "baselinePointMinutes": 60.14166666666666,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 60.2767,
+      "baseline": {
+        "pointMinutes": 58.811666666666675,
+        "cellMinutes": 57.731666666666676,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.4216666666666667,
+          "road": 57.02166666666668,
+          "local": 0,
+          "transfer": 0.3733333333333334,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 63.385416666666664,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -14.186666666666675,
+      "candidateErrorMinutes": -15.516666666666659,
+      "absoluteErrorChangeMinutes": -4.57374999999999,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "idyllwild--palm-springs",
+      "previousPointTicks": 23583,
+      "pointTicks": 23583,
+      "previousRoadTicks": 33995,
+      "bestRoadTicks": 33961,
+      "terminalChoices": 144,
+      "winningTerminal": {
+        "origin": [
+          -116.5453,
+          33.8303
+        ],
+        "snap": {
+          "canonicalArc": 731084,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -116.5455907,
+            33.8302241
+          ],
+          "distanceMeters": 28.146688301336063,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 28.146688301336063,
+        "connectorTicks": 33,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "idyllwild--temecula",
+      "previousPointTicks": 30764,
+      "pointTicks": 30425,
+      "previousRoadTicks": 30969,
+      "bestRoadTicks": 30425,
+      "terminalChoices": 244,
+      "winningTerminal": {
+        "origin": [
+          -117.1484,
+          33.4936
+        ],
+        "snap": {
+          "canonicalArc": 590257,
+          "segment": 0,
+          "segmentFraction": 0.6436755594331673,
+          "coordinate": [
+            -117.14682637479947,
+            33.49453337453536
+          ],
+          "distanceMeters": 179.06741986420957,
+          "forwardProgress": 0.2717904948597636,
+          "backwardProgress": 0
+        },
+        "connectorMeters": 179.06741986420494,
+        "connectorTicks": 207,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1664336,
+    "maximumHeapEntries": 4189,
+    "maximumBackingBufferBytes": 50444150,
+    "returnedBackingBufferBytes": 50444150,
+    "seedBackingBufferBytes": 2496,
+    "starts": 39
+  },
+  "hostFieldAndFinishesMs": 247.31524999999965,
+  "afterReleaseArrayBuffers": 141923195
+}

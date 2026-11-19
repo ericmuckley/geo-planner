@@ -1,0 +1,110 @@
+{
+  "root": "data/coarse-quality/us-osm-inactive-conditional-context-run-v1",
+  "roster": {
+    "cleanup.json": {
+      "bytes": 146,
+      "sha256": "97c709c87ba3faac11e62ba83a5195ff0b4c8f4cb5292aa699d4371c058b82c2",
+      "ignoredLargeAsset": false
+    },
+    "container-before-removal.json": {
+      "bytes": 308,
+      "sha256": "e67943076cede95bf094794cd9abec443dfa792b9bd24c2e74a92fd9cba9f40f",
+      "ignoredLargeAsset": false
+    },
+    "container-initial.json": {
+      "bytes": 82976,
+      "sha256": "b9e18916e0fd121569e0910155fd827f819c258350db60072ffc708e2f38ad6f",
+      "ignoredLargeAsset": false
+    },
+    "container-result.json": {
+      "bytes": 331,
+      "sha256": "77671b9c430f1a1f157214b1cbb3a1d27539d1667778fd2262d17a9c1a889ec5",
+      "ignoredLargeAsset": false
+    },
+    "execution-plan.json": {
+      "bytes": 35304,
+      "sha256": "8733feafafda37640c23b80d6236a4166831dc59f29d6fe44764bfef813f0d03",
+      "ignoredLargeAsset": false
+    },
+    "metrics.json": {
+      "bytes": 499,
+      "sha256": "616511795ac6942298d731da6f7272bd178cf7806e38d9f96fd38437d08d0dbb",
+      "ignoredLargeAsset": false
+    },
+    "owner.json": {
+      "bytes": 203,
+      "sha256": "72326b7286dbb6b3c86c799dbddb7ae5626755c6af0140e3b73650e81d99ce23",
+      "ignoredLargeAsset": false
+    },
+    "records/context/exit-arcs.u24": {
+      "bytes": 68109,
+      "sha256": "c747b4892ca2d0c437c61d9b309a206e3a43958d85ce05f891a5485dc1203233",
+      "ignoredLargeAsset": true
+    },
+    "records/context/exit-offsets.u32": {
+      "bytes": 92032,
+      "sha256": "228a956b322a6f99a0a9b0454e2b5a38a1a5487378c428e4a62bff77284b9a16",
+      "ignoredLargeAsset": true
+    },
+    "records/context/state-arcs.u24": {
+      "bytes": 102768,
+      "sha256": "79dae53d647c6b5cd702475d7e0ad9d03bab2f1a5c1bc6348bf467d974e373e1",
+      "ignoredLargeAsset": true
+    },
+    "records/context/state-offsets.u32": {
+      "bytes": 92032,
+      "sha256": "11669ada3ad23d5e0b989dd1f5dc866e54ef3e0bd2b5477f68bc7e4ecbd28266",
+      "ignoredLargeAsset": true
+    },
+    "records/context/trigger-incoming.bit": {
+      "bytes": 1231671,
+      "sha256": "b5ff27d2db042a5642b8f7bcf699f2a28f9052dc484cc405f1d735875d98b71a",
+      "ignoredLargeAsset": true
+    },
+    "records/context/triggers.u24": {
+      "bytes": 204102,
+      "sha256": "dd5f8bed82a54061d8f4431c14beab4183c1d385083112234cc416f7c7a24335",
+      "ignoredLargeAsset": true
+    },
+    "records/prefix-counts.bin": {
+      "bytes": 736224,
+      "sha256": "39c5337c4f6cf085d93e0e3686a866d513d6c3b1d93d7de953a7f2b07dd53087",
+      "ignoredLargeAsset": true
+    },
+    "records/retained-static-csr.u24": {
+      "bytes": 1437732,
+      "sha256": "f0def1d5f35625e2533f8afb23959d49cf4a25ebea16416ebd9b43b760697be5",
+      "ignoredLargeAsset": true
+    },
+    "records/routing/forbidden-turns.u24": {
+      "bytes": 1437732,
+      "sha256": "e03360eb40f748dfa21bb1c036dd5e94331eaca09f4eb4f06d9ba3be87b3393d",
+      "ignoredLargeAsset": true
+    },
+    "report.json": {
+      "bytes": 3820,
+      "sha256": "fb2f5d3282643c70faa099118db5355cd768534b5a5f853f609beddb838d1859",
+      "ignoredLargeAsset": false
+    },
+    "run-summary.json": {
+      "bytes": 95,
+      "sha256": "41ba0e3cc0a918e45e1afb9d7b487de8fff23f0aa30b24b8e257268848bc9d50",
+      "ignoredLargeAsset": false
+    },
+    "worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ignoredLargeAsset": true
+    }
+  },
+  "usage": {
+    "logicalBytes": 5526084,
+    "allocatedBytes": 5574656,
+    "entries": 23,
+    "conservativeAllocatedBytes": 6811648
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "multiway_static_bans_and_single_via_context_records_source_audited",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

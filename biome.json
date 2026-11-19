@@ -49,12 +49,18 @@
 	},
 	"overrides": [
 		{
+			"includes": ["scripts/pack_osm_tagged_timing_storage_v1.ts"],
+			"formatter": { "enabled": false }
+		},
+		{
 			"includes": [
 				"scripts/coarse_osm_geometric_snap_v1.ts",
 				"scripts/coarse_osm_geometric_snap_v1_test.ts",
 				"scripts/coarse_osm_paid_geometry_loader_v1_test.ts",
+				"scripts/pack_osm_conditional_only_runtime_v1.ts",
 				"scripts/pack_osm_paid_geometry_v1.ts",
-				"scripts/profile_osm_paid_geometry_v1.ts"
+				"scripts/profile_osm_paid_geometry_v1.ts",
+				"scripts/coarse_osm_terminal_access_v1_test.ts"
 			],
 			"assist": { "actions": { "source": { "organizeImports": "off" } } }
 		}

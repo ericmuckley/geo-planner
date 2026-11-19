@@ -1,0 +1,29 @@
+{
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-fact-views-v1.json",
+  "controls": 11,
+  "sourcePairs": {
+    "captured": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-overlay-capture-closed-v1.json"
+    },
+    "country": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-overlay-country-run-closed-v1.json"
+    }
+  },
+  "bindings": {
+    "scripts/coarse_osm_fact_view_v1.py": "cd03d01279a79a42b2b5c0236cd66b261651819a0fcf11114c74ad6dd3660049",
+    "scripts/coarse_osm_fact_view_v1_test.py": "fb287fc9aeb10481fd7a1a316eaaa42c63cd2053f9daeaa65be67eee6e6164cf",
+    "scripts/coarse_osm_conditional_entry_baseline_v1.py": "bc2f29dd8161179ece328cf7b6704d7a93249b8a1c1e6c97c13b06e5633995ed",
+    "scripts/coarse_osm_conditional_entry_baseline_v1_test.py": "3270c65807624f14a314fd2151fd950ccecc6ed9a36e95b227f9cc062f08ae4f",
+    "scripts/prepare_osm_conditional_fact_view_v1.py": "0550d03a94605b788b3f54413b41f14b4f1d6c010fa2b4d45bd853c58c4d3a70",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json": "8fb6b84482433cc4bc45a8f17d2e7b99ef7fd89dd1b232ad495e86a7b1900bb2",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json": "63f39060d2ac12de3ec9e169d18c79b05b37c182e432d0190bc56249ea9af59a",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-overlay-capture-closed-v1.json": "b643f922988c7eb17e513b86c71cd6eebf6662a7b7b90fd9ca0f2b732a68a94d",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-overlay-country-run-closed-v1.json": "984619e6407c1d4017e19aa555c9cd97382903ee959bc302ac3b00bbf247ec5e",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_country_overlay_v1.py": "4140bda6e6d1d3e5f603aada967d2c1c15ea79f3daeffc7296b32944e13d3201",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-overlay-country-scope-review-v1.json": "248f735ba59360559c121e075af136d21d63fb32418743d984c05e4bbbbdbcf1",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-fact-view-controls-v1.txt": "34a82a30511a2175a5286cff0751874e9220ce5fb08cab87b09cc04e220f6b31"
+  },
+  "scope": "Small metadata catalogs only under existing100MiB scratch reserve; no actual national/captured graph/source file read, copied or linked. Eleven metadata/delta controls passed; exact host code/source-closed bindings. All183 roots remain closed5894873088B plus64.5GB+100MiB under72GiB; no route/ETA/app operation."
+}

@@ -1,10 +1,12 @@
 # Geo Planner documentation
 
-For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). Updated November 4, 2026. The current repository baseline is user commit `3f4d4f9` (`new`); it includes the preceding offline engine and raw-water code/evidence. The newer compact-raster/reader/geography-hypothesis work in this continuation remains local/uncommitted. Large source/index/bank/archive/runtime assets and secrets remain ignored and absent from a fresh clone.
+For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [the resume guide](agent-handoff.md). Updated November 19, 2026. The repository baseline is `b765050`, the browse-list release on top of `6feea27`. Directions links are local. The newer water, road-source and restriction corrections in this continuation remain local/uncommitted. Large source/index/bank/archive/runtime assets and secrets remain ignored and absent from a fresh clone.
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
-**Current work:** the refined-water engine reaches all 83 saved routes but remains rejected: 32.6 minutes average error versus deployed v9’s 29.3. All path sums reconcile; one coastal display-cell omission remains. A new static conditional-speed prototype restores 107 captured roads, plus one non-car tag correction, while preserving every old positive decision. All 25 native controls and all 177,455 captured node/way/relation comparisons pass. The captured graph now restores3 of8 previous failures (77/82 finite) and shortens1 old route; all77 paths independently source-replay and TypeScript matches all82 costs. The bounded national conditional metadata census is now running after38 native/source tests and a tiny full pipeline passed; nationwide ETA improvement is unproven. Every accuracy gate remains; production v9/app/src/env/DB/dependencies/deployment unchanged. New work local/uncommitted. [Results and recovery](evidence/coarse-osm-car-capacity-2026-11-01/README.md).
+**Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
+
+**In the working tree.** The [local preview](http://127.0.0.1:4203/) adds **Directions in Google Maps** to trailhead and campground popups. The link uses the estimate’s starting point and the place’s mapped coordinates. [Behavior and checks](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
 
 
 ## Current documents
@@ -14,7 +16,7 @@ For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [t
 | [Agent handoff](agent-handoff.md) | Recovery checks, graph/data locations, restart commands and resume prompt |
 | [Implementation status](implementation-status.md) | Current capabilities, limits, code map and validation |
 | [Local development](local-development.md) | App setup and the separate experimental/provider APIs |
-| [Next steps](next-steps.md) | Fit the national road graph into a deployable app |
+| [Next steps](next-steps.md) | Review the latest app features and track engine admission |
 | [Native car construction](evidence/coarse-osm-car-capacity-2026-11-01/README.md) | National costs/storage, rejected finer candidate, path diagnosis and conservative turn proposal |
 | [Road-only car prototype](evidence/coarse-osm-car-prototype-2026-11-01/README.md) | Frozen costs/direction/access/turns, compact binary and independent source audit |
 | [Way-lineage geometry prototype](evidence/coarse-osm-way-lineage-prototype-2026-11-01/README.md) | Complete metadata/geometry/internal-point proof preceding car-cost qualification |
@@ -31,6 +33,9 @@ For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [t
 | [Six-hour preflight](six-hour-preflight.md) | Unclipped planning, source gaps and the current resource screen |
 | [Two-hour regional baseline](two-hour-region.md) | Current graph's exact recipes, provenance, measurements and evidence |
 | [Progress](progress.md) | Plain-language summary |
+| [Outdoor places](evidence/outdoor-places-2026-11-18/README.md) | Trailhead and campground catalogs, source limits and app verification |
+| [Public lands and elevation](evidence/usgs-area-layers-2026-11-18/README.md) | USGS source grids, overlay behavior and verification |
+| [Place search](evidence/place-search-2026-11-18/README.md) | Name catalog, Census address lookup and end-to-end checks |
 | [Initial project plan](initial-project-plan.md) | Long-term vision and semantics; current decisions above take precedence |
 | [US service setup](us-routing-service.md) | Selected hosted main-page provider and recorded limits |
 | [Retained Valhalla recipe](regional-routing.md) | Separate local Valhalla build/service reference |
@@ -105,3 +110,11 @@ The preserved local experiment defaults to 120 minutes; five reference sources r
 - [Evidence](evidence/): measured outputs, logs, source excerpts and screenshots at their original paths.
 
 There are twelve current top-level documents including this index. Four small forwarding pages preserve links from checksum-bound historical evidence; their reports live in the archive. Start new agents with the current documents, and consult archived reports only for the relevant model/proof history. Update these current pages when state changes; preserve dated measurements and sealed evidence.
+
+Latest native checkpoint:116actualLinuxcontrols/no skips and captured nativecompiler/independentcomplete-source oracle pass. Fourlocalmandatory rules remove8ownclosureIDs,146remain/78,771postarcs/308entrypairs; allcurrentflags/turns/prices/independentconstraints retain.423roots/10,943,447,040newerallocatedBclosed; ONE nationalfacts/sourceaudit active, no graph/query/accuracy/app admission. [Recovery and exact safe proof](agent-handoff.md#mandatory-turn-native-qualification--november17).
+
+Current checkpoint:V1national safely stopped on spatial/native flagorder guard, preserved/closed. New helper requires full bijection/everyoldflag/exact1488source-qualified openedIDs/blockedbitonly/independentroundtrip.122actualLinuxcontrols and V2captured nativeoracle pass; same emitted facts as V1capture.426roots/10,955,550,720newerBclosed; ONE V2national audit active. Earlier420/421per-via rawflag interpretation withdrawn as spatial/native diagnostic mismatch; closure/pair outputs unaffected. No new nodepolicy/accuracy/app admission. [Recovery](agent-handoff.md#mandatory-turn-flag-order-correction--november17).
+
+Latest nationalfacts PASS/closed:427roots/10,979,622,912newerB/noactiveproducer.9,853,924retainedarcs(+559),16,680closures/25,436pairs; prices/turns/currentflagmeanings exact. Fullnativeflagrebase preserves5,731,903rows/all1488approvedsourceIDs; correct nativeflagsSHAfbc418…. Corrected viaflags4:19/6:11. No newgraph/accuracyresult; generic incoming-only entryban source→CSR projection/independentaudit next. [Recovery](agent-handoff.md#mandatory-turn-national-facts-qualified--november17).
+
+November18 current checkpoint:429roots/11,115,003,904newerBclosed/noactiveproducer. Newnationalgraph compiles and independentcompleteaudit passes all9,853,924arcs/5,731,903vertices/410,509typedturns/260,017bans.18newLinuxentrycontrols+122priornativefactcontrols; currentprices/nodepolicy/oldallowedtransitions retained. Newspatial/paidgeometry/history/storage/endpoints then fresh83/35/58/19gatecandidate next. No newaccuracyresult/appactivation; livev9unchanged. [Recovery and safe proof](agent-handoff.md#mandatory-turn-national-graph-complete--november18).

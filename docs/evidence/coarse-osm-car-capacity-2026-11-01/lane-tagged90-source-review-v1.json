@@ -1,0 +1,21 @@
+{
+  "status": "matching_published_source_rechecked_not_hosted_config_proof",
+  "reviewDate": "2026-11-06",
+  "sourceVersion": "v9.10.0",
+  "sourceUrl": "https://github.com/GIScience/openrouteservice/blob/v9.10.0/ors-engine/src/main/java/org/heigit/ors/routing/graphhopper/extensions/flagencoders/VehicleFlagEncoder.java#L338-L341",
+  "explicitTaggedSpeedRatio": [
+    9,
+    10
+  ],
+  "defaultSpeedRatio": [
+    1,
+    1
+  ],
+  "behavior": "A valid explicit maxspeed becomes90% in applyMaxSpeed;otherwise the assumed speed stays. Other default/surface/acceleration/roundabout/encoding behavior is separate.",
+  "previousReview": "provider-speed-policy-review-v1.json",
+  "previousReviewSha256": "b3974218d02e2963a0cbe15487d2f7f17e9dc46ce92736f2c9561e4357221a05",
+  "hostedConfigProved": false,
+  "sourceCodeCopied": false,
+  "policyActivated": false,
+  "scope": "Rechecked primary tagged source,not a coefficient chosen from development residuals. One diagnostic current-graph continuous fixed-road/point sensitivity only;not observed driving speeds or full ORS reproduction."
+}

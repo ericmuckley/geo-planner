@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-19T03:36:16.723Z",
+  "commit": "83e6566214654de8da8fcb2f91deaf2008c12276",
+  "baseUrl": "https://geo-planner-orcin.vercel.app",
+  "vercelDeployment": "https://vercel.com/erics-projects-d68d5ce3/geo-planner/CuVTyuHfVyjM9BYhUWJDv1n46f7L",
+  "engine": "coarse-road-grid-v9",
+  "controllerScripts": [
+    "/assets/index-EsvTZNDv.js",
+    "/assets/reachability-fSAh7-dx.js"
+  ],
+  "overlays": {
+    "land": {
+      "path": "/overlays/public-lands-us-v1.png",
+      "bytes": 166580,
+      "sha256": "0ae74ec6d8291fd090d7c73f932082b37e59cd270b1a29e33f79d0903d405318"
+    },
+    "elevation": {
+      "path": "/overlays/elevation-us-v1.png",
+      "bytes": 5152975,
+      "sha256": "3286a9d12dd21661914d5861097481dad94bd37e1f842d8c5fa22ad55dea080a"
+    }
+  },
+  "places": {
+    "fuel": {
+      "path": "/places/fuel-us-v1.json",
+      "bytes": 4997468,
+      "sha256": "67316f816137691ef867b8e309904732800460bdb075346472d9a755daac1319",
+      "locations": 108634
+    },
+    "trailheads": {
+      "path": "/places/trailheads-us-v1.json",
+      "bytes": 639870,
+      "sha256": "7568ebb8a09ff764681034100af9246a7cf5cf63c61692db30e186c88821e480",
+      "locations": 10928
+    },
+    "campgrounds": {
+      "path": "/places/campgrounds-us-v1.json",
+      "bytes": 1877905,
+      "sha256": "5e1e82247cbfa8585307dec64a60ac0bcd04db1b626c7618259153034ecd727b",
+      "locations": 34941
+    }
+  },
+  "samples": [
+    {
+      "minutes": 30,
+      "matches": {
+        "fuel": 382,
+        "trailheads": 37,
+        "campgrounds": 6
+      }
+    },
+    {
+      "minutes": 720,
+      "matches": {
+        "fuel": 12184,
+        "trailheads": 1832,
+        "campgrounds": 5243
+      }
+    }
+  ],
+  "requests": 11,
+  "historyWrites": 0,
+  "scope": "Production homepage, client assets, v9 config, five exact static assets and two v9 estimates. Overlay interactions and appearance checked separately in the local Chrome preview."
+}

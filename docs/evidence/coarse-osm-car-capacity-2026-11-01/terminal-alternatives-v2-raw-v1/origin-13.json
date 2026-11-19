@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -116.5453,
+    33.8303
+  ],
+  "rows": [
+    {
+      "id": "palm-springs--idyllwild",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 63.75833333333333,
+      "baselinePointMinutes": 50.77385510082236,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 53.24466666666667,
+      "baseline": {
+        "pointMinutes": 50.58385510082236,
+        "cellMinutes": 49.014663528640405,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197375,
+          "transfer": 0,
+          "destination": 1.5691915721819576
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 51.55416666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -12.984478232510973,
+      "candidateErrorMinutes": -13.174478232510971,
+      "absoluteErrorChangeMinutes": -0.9703115658443053,
+      "estimateFailure": null
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "set": "regional",
+      "origin": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "destination": {
+        "lon": -116.9114,
+        "lat": 34.2439
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 107.95,
+      "baselinePointMinutes": 96.7933763707696,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 91.56958333333334,
+      "baseline": {
+        "pointMinutes": 96.4350867960194,
+        "cellMinutes": 95.43175346268606,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.615,
+          "road": 72.80833333333332,
+          "local": 20.015086796019432,
+          "transfer": 2.725,
+          "destination": 0.27166666666666667
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 93.02083333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -11.15662362923041,
+      "candidateErrorMinutes": -11.514913203980598,
+      "absoluteErrorChangeMinutes": 3.4142534626860765,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "palm-springs--idyllwild",
+      "previousPointTicks": 24746,
+      "pointTicks": 24746,
+      "previousRoadTicks": 34052,
+      "bestRoadTicks": 34052,
+      "terminalChoices": 39,
+      "winningTerminal": {
+        "origin": [
+          -116.7189,
+          33.74
+        ],
+        "snap": {
+          "canonicalArc": 728252,
+          "segment": 0,
+          "segmentFraction": 0.8722682884781006,
+          "coordinate": [
+            -116.71897705647964,
+            33.74011124756329
+          ],
+          "distanceMeters": 14.275453240929217,
+          "forwardProgress": 0.8722682884781006,
+          "backwardProgress": 0
+        },
+        "connectorMeters": 14.27545324133772,
+        "connectorTicks": 17,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "palm-springs--big-bear-lake",
+      "previousPointTicks": 44695,
+      "pointTicks": 44650,
+      "previousRoadTicks": 44695,
+      "bestRoadTicks": 44650,
+      "terminalChoices": 54,
+      "winningTerminal": {
+        "origin": [
+          -116.9114,
+          34.2439
+        ],
+        "snap": {
+          "canonicalArc": 866033,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -116.9115935,
+            34.2436837
+          ],
+          "distanceMeters": 29.913730324715786,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 29.913730324715786,
+        "connectorTicks": 35,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1684261,
+    "maximumHeapEntries": 3075,
+    "maximumBackingBufferBytes": 50450870,
+    "returnedBackingBufferBytes": 50450870,
+    "seedBackingBufferBytes": 9216,
+    "starts": 144
+  },
+  "hostFieldAndFinishesMs": 256.0597090000001,
+  "afterReleaseArrayBuffers": 141923195
+}

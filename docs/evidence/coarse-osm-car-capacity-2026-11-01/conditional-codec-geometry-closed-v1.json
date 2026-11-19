@@ -1,0 +1,65 @@
+{
+  "root": "data/coarse-quality/us-osm-conditional-codec-geometry-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 1645,
+      "sha256": "561bf4786d841fe76f03ff3855d4d99fd18af81a6048a2764a828df4249d617b",
+      "ignoredLargeAsset": false
+    },
+    "fields/curve-keys.u24.gz": {
+      "bytes": 221637,
+      "sha256": "5e46d57c76bec56673fdac7f1a45a986dd78a687179c5b1cc7d92ec4459e0223",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-offsets.u32.gz": {
+      "bytes": 150258,
+      "sha256": "42d9c433c0a6cb5bf10de98c234dce70d4c65afb3292dbee6bc49ef443b684d0",
+      "ignoredLargeAsset": true
+    },
+    "fields/curve-packets.u8.gz": {
+      "bytes": 6530534,
+      "sha256": "356bb2229ba9a120c97b1d24ea98b1fb5cab907471b80a6a1230ec052e4d400f",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-keys.u24.gz": {
+      "bytes": 333621,
+      "sha256": "1a76026790d4e62f0b00af5ab7117c2db453231bd696bd1986685e7862a03c56",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-lengths.u16.gz": {
+      "bytes": 706373,
+      "sha256": "b8cc0c6cc5994f0dcdfb6815a15c80795c7dd3642edbc9d3150acc9e68a6eb3c",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-keys.u24.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "fields/long-overflow-units.u32.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "manifest.json": {
+      "bytes": 2636,
+      "sha256": "37b29036fd8680956ba023656a82bc6f80cd39d6a54f2134728c672c7d11bd66",
+      "ignoredLargeAsset": false
+    },
+    "report.json": {
+      "bytes": 648,
+      "sha256": "eb1d76301ab90a3e436d60872d29ad221dfb81a46dbd897c0f89a53f1de9e68e",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 7947392,
+    "allocatedBytes": 7974912,
+    "entries": 12,
+    "conservativeAllocatedBytes": 9121792
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "conditional_candidate_storage_roundtripped_independent_audit_pending",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-19T03:23:14.268Z",
+  "commit": "8a8424f",
+  "baseUrl": "https://geo-planner-orcin.vercel.app",
+  "vercelDeployment": "https://vercel.com/erics-projects-d68d5ce3/geo-planner/DaUAJZKrv3cQYKiShHtw6LEnzVFh",
+  "engine": "coarse-road-grid-v9",
+  "hostedAssets": {
+    "fuel": {
+      "path": "/places/fuel-us-v1.json",
+      "bytes": 4997468,
+      "places": 108634,
+      "sha256": "67316f816137691ef867b8e309904732800460bdb075346472d9a755daac1319"
+    },
+    "trailheads": {
+      "path": "/places/trailheads-us-v1.json",
+      "bytes": 639870,
+      "places": 10928,
+      "sha256": "7568ebb8a09ff764681034100af9246a7cf5cf63c61692db30e186c88821e480"
+    },
+    "campgrounds": {
+      "path": "/places/campgrounds-us-v1.json",
+      "bytes": 1877905,
+      "places": 34941,
+      "sha256": "5e1e82247cbfa8585307dec64a60ac0bcd04db1b626c7618259153034ecd727b"
+    }
+  },
+  "samples": [
+    {
+      "minutes": 30,
+      "matches": {
+        "fuel": 382,
+        "trailheads": 37,
+        "campgrounds": 6
+      }
+    },
+    {
+      "minutes": 720,
+      "matches": {
+        "fuel": 12184,
+        "trailheads": 1832,
+        "campgrounds": 5243
+      }
+    }
+  ],
+  "requests": 7,
+  "historyWrites": 0,
+  "scope": "Production homepage, config, three exact static catalogs and two estimates. Browser switches and marker clicks previously checked locally."
+}

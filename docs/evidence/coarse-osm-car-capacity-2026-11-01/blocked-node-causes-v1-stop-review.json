@@ -1,0 +1,17 @@
+{
+  "status": "v1_stopped_before_sqlite_on_wrong_relation_node_count_scope",
+  "recipeSha256": "af4cf82fd4d03e92f2f4159c2c9a3da7d6fbf6d0c0fcecd6a098a51d474954ea",
+  "analysisOutputCreated": false,
+  "sourceMappingAndRelationMetadataRead": true,
+  "cachedSourceSqliteOpened": false,
+  "sourcePbfReads": 0,
+  "routingOrProviderQueries": 0,
+  "review": {
+    "rawUnsupportedRelations": 70376,
+    "allMentionedMemberNodeIds": 11084,
+    "nodeOnlyClosingRelationIds": 2551,
+    "actualNodeOnlyClosureIds": 1833,
+    "sourceSha256": "2929a9c5febd79bec88da4b2f8bbe4b6fc9bab1bc9229047e60ed4a7fabda332"
+  },
+  "correction": "The sealed source flag producer closed_relation_nodes adds memberNodes only when memberWays is empty. Mentioned nodes in relations containing ways are not independent node-block contributors. V1 conflated these scopes and stopped; retain V1 code/recipe/failure, use separately versioned V2 caller and explicit selection controls. No source flags, permissions, prices or gates change."
+}

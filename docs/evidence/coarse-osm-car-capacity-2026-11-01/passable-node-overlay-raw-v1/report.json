@@ -1,0 +1,57 @@
+{
+  "status": "complete_source_qualified_passable_node_flags_independently_audited",
+  "recipeSha256": "cabbe585235255a921bd0b8e12cb6043d82e80bf335986fc890cb6824e9027cf",
+  "policy": {
+    "id": "static-car-passable-barrier-defaults-v1",
+    "passableBarrierDefaults": [
+      "cattle_grid",
+      "entrance",
+      "toll_booth"
+    ],
+    "access": "Use source-documented feature defaults only when no explicit car/general access key is present. Preserve existing mode precedence and every denial/unknown value.",
+    "guards": "Retain existing car/general/unknown conditionals, access qualifiers, dimensions, locks and opening hours. Gate/lift_gate/border_control/unknown features keep previous policy.",
+    "independentRestrictions": "A base-node change never clears any independent node-only restriction contributor.",
+    "costs": "No speed, price, signal, turn, reversal or barrier-delay change.",
+    "scope": "Generic source-tag interpretation prototype only; not current availability, lawful-trip, nationwide accuracy or app admission."
+  },
+  "originalGraphVertices": 5731903,
+  "allOriginalBlockersAndRawTagsReplayed": 13776,
+  "openedVertices": 5714,
+  "openedBarrierCounts": {
+    "cattle_grid": 4760,
+    "toll_booth": 938,
+    "entrance": 16
+  },
+  "allVertexFlagsIndependentlyCompared": 5731903,
+  "remainingBlockedVertices": 8062,
+  "signalsAndReversalBitsExact": true,
+  "everyOldUnblockedVertexExact": true,
+  "everyIndependentRestrictionContributorRetained": true,
+  "artifacts": {
+    "proposed-node-flags.u8": {
+      "bytes": 5731903,
+      "sha256": "dd30854424a8cc751ff243541aa3cdfdb4704f222ed4b290453327487c31f375"
+    },
+    "changed-nodes.json.gz": {
+      "bytes": 68363,
+      "sha256": "b51d5f205c4541bda8230e4bb8664c3db97d1bd1f9f9b523f8647496a3d306fa"
+    },
+    "opened-vertices.u32": {
+      "bytes": 22856,
+      "sha256": "dcdd9d0cc6da62092721b9233870e265d777fff2ccd06f093ffc91661f996c50"
+    },
+    "opened-node-ids.u64": {
+      "bytes": 45712,
+      "sha256": "24a36a8e0bd32bc512a511acb994f35f8cdf7d3d5bfb025b70ddc87da31de805"
+    }
+  },
+  "sourcePbfReads": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "appActivated": false,
+  "routingOrAccuracyAccepted": false,
+  "hostSecondsIncludingBindingsConstructionAllFlagAndTagAudits": 1.1518117918167263,
+  "hostMaximumRssBytes": 94126080,
+  "scope": "All 13,776 current graph blockers independently classified under the single frozen generic source-tag policy. Every 5,731,903 vertex flag independently compared; old positive vertices, signals, reversal bits and independent restriction contributors retained. Only qualified blocker bits change in a separate prototype artifact; original source/graph/costs/turns stay read-only. Host 512 MiB RSS/120s/64 MiB owned bounds, not cgroup/CPU/cloud evidence. No new routing, map, point, accuracy or app admission."
+}

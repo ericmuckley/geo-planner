@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-17",
+  "preservedFailure": "boundary-coverage-pilot-v1-raw-v1/failure.json",
+  "observed": "The first900min map completed and released exactly. The360min map failed total-backing restoration by8192B. Every16tracked query buffer was subsequently weak-released, source/seed hashes passed and provider requests stayed0. The stopped run is not a successful capacity/accuracy result.",
+  "closedRoots": 414,
+  "newUniqueClosedAllocationBytes": 10919596032,
+  "hostWholeMsIncludingBindingsQueriesWitnessesIOAndGC": 134358.90125,
+  "diagnosis": "An additional retained Node Buffer slab is plausible from the exact8192B delta, but the specific allocation site in the stopped real run has not been proven. Do not attribute it to progress output or the coverage helper as a measured fact.",
+  "rejectedHypothesis": "A fresh-child reproduction found direct stdout string progress, large text/buffer file output and text/buffer/witness hashing each caused0persistent extraB after collection. The initial test expecting pooled progress itself to retain8192B failed and is preserved in host-output-progress-hypothesis-rejected-v1.txt; all seven small probes and their source are retained separately.",
+  "newControls": "Explicit small Buffer.from encoding when the old slab remains live retains a new8192B global slab. Disabling pooling for the standalone host before its measured runtime loads gives0extraB under the same forced rollover. Explicit unpooled UTF8 progress gives0extraB and exact UTF8 bytes. Two controls pass; no real corrected pilot result yet.",
+  "separatelyVersionedCorrection": "V2 standalone host sets Buffer.poolSize=0 before loading/baseline, emits unpooled UTF8 progress/map bytes and retains every exact restoration/query-cap assertion. No app/process-global user setting outside this new standalone process, source/mask/coverage/point/pricing policy or queue/memory-cap change. New code/recipe/root, preserved V1 failure; V2 must still demonstrate all four frames/point components/paid witnesses/observed cap/exact release before acceptance.",
+  "scope": "Offline host lifetime investigation and controls, not full-app/RSS/cgroup/CPU/cloud/first-estimate/shore/accuracy admission. Original19gates and productionv9 remain unchanged."
+}

@@ -1,0 +1,142 @@
+{
+  "origin": [
+    -115.9561,
+    33.2986
+  ],
+  "initialChoices": 15,
+  "accessInput": {
+    "filename": "endpoint-75.json.gz",
+    "rawBytes": 4861,
+    "rawSha256": "48068ae31a0eb68ae7074a686618918afeabdbcf8c89118efb8ca5e6cd96c141",
+    "compressedBytes": 916,
+    "sha256": "5efa120ca92d4118efe4d957de0fe93bccce3b6088347bf3d48e2d13bd5e6317"
+  },
+  "diagnostic": {
+    "timings": {
+      "salton-city--bombay-beach": {
+        "ticks": 36588,
+        "kind": "road-foot",
+        "roadTicks": 36588,
+        "localGridTicks": null,
+        "localWitness": null
+      },
+      "salton-city--brawley": {
+        "ticks": 26164,
+        "kind": "local-grid",
+        "roadTicks": 27607,
+        "localGridTicks": 26164,
+        "localWitness": {
+          "terminalTicks": 292,
+          "edgeSeconds": 945,
+          "seedSeconds": 2289,
+          "seedCell": 624517,
+          "seedKind": 8,
+          "steps": 5
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1773377,
+      "maximumHeapEntries": 3120,
+      "maximumBackingBufferBytes": 51015250,
+      "returnedBackingBufferBytes": 50878226,
+      "seedBackingBufferBytes": 960,
+      "starts": 15
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -124736844,
+      "south": 29440923,
+      "step": 11469,
+      "width": 2012,
+      "height": 1242
+    },
+    "stats": {
+      "envelopeMs": 629.5440829999279,
+      "maskMs": 11203.611749999924,
+      "seedMs": 3795.4925000001676,
+      "fillMs": 225.76862500002608,
+      "contourMs": 40.016374999890104,
+      "displayMs": 15894.592041000025,
+      "maximumBackingBufferBytes": 59875819,
+      "borrowedVertexWorkspace": true,
+      "samples": 3013277,
+      "activeSpans": 1228959,
+      "settles": 1231099,
+      "maximumHeapEntries": 160074,
+      "selectedCells": 1232127,
+      "localCells": 1231099,
+      "roadOnlyCells": 1028,
+      "edges": 21322,
+      "rings": 453,
+      "vertices": 13603,
+      "jsonBytes": 324486,
+      "retries": []
+    },
+    "phaseMs": 16273.793916999828,
+    "output": {
+      "filename": "origin-18-900.geojson",
+      "bytes": 324486,
+      "sha256": "4a69da205010304d00a3cc0df000adbde08122a70c5b6f1b469812b8f50572be"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 720,
+      "classified": {
+        "salton-city--bombay-beach": false,
+        "salton-city--brawley": true
+      },
+      "fieldStats": {
+        "settles": 1623984,
+        "maximumHeapEntries": 3120,
+        "maximumBackingBufferBytes": 51015250,
+        "returnedBackingBufferBytes": 50878226,
+        "seedBackingBufferBytes": 960,
+        "starts": 15
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -123846720,
+        "south": 30134945,
+        "step": 9085,
+        "width": 2079,
+        "height": 1202
+      },
+      "stats": {
+        "envelopeMs": 597.4420419998933,
+        "maskMs": 10042.08620800008,
+        "seedMs": 3382.600124999881,
+        "fillMs": 220.38191700004973,
+        "contourMs": 34.10416699992493,
+        "displayMs": 14276.713374999817,
+        "maximumBackingBufferBytes": 59875819,
+        "borrowedVertexWorkspace": true,
+        "samples": 2761272,
+        "activeSpans": 1136219,
+        "settles": 1212026,
+        "maximumHeapEntries": 146400,
+        "selectedCells": 1212806,
+        "localCells": 1212026,
+        "roadOnlyCells": 780,
+        "edges": 19440,
+        "rings": 335,
+        "vertices": 12159,
+        "jsonBytes": 279151,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-18-720.geojson",
+        "bytes": 279151,
+        "sha256": "ddc9499d875f33886ac5de1378382ed211df3a197a2567eacb8ca5072f742948"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 451297280,
+    "heapTotal": 162103296,
+    "heapUsed": 25672144,
+    "external": 162505401,
+    "arrayBuffers": 159965550
+  }
+}

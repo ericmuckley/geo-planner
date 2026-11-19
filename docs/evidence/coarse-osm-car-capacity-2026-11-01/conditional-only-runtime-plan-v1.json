@@ -1,0 +1,28 @@
+{
+  "bindings": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-context-run-closed-v1.json": "94bc0f15ba45b2d86561fcd71635ca350122bef1d5876d612bc32d824a570929",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-derived-geometry-closed-v1.json": "fe5aa30e26646cc41bd6049b0784f6512143961265552c0f1a11b7d138f9fea1",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-derived-spatial-closed-v1.json": "2b07720ea94afd1802aa55cab0746919ce591c7a644c4ebb6ec4f9c2099f3fb5",
+    "scripts/close_osm_car_paid_host_v1.py": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344",
+    "scripts/close_osm_conditional_only_runtime_v1.py": "4a3a192ed521a73627e2ea088a36a2099845f89917a0c1f401e125f8df05c823",
+    "scripts/coarse_osm_context_loader_v1.ts": "5897f8c5cb4c09e328f52486d96794aa0b4c38f44799ecd2516fdc9b2ea558f7",
+    "scripts/coarse_osm_packed_car_v1.ts": "663cb0ae23af1259f5b279c818694fa64aca786187ff95a106f0d16cafc154a9",
+    "scripts/coarse_osm_packed_codec_v1.ts": "ff08b5e44565f9713941fc5e5e006f29f5eb94d4e5d042c7c8cf7e0c21f18750",
+    "scripts/coarse_osm_packed_loader_v1.ts": "40a4b677b8be74b603e0a560e105fb4cbd052bb3e227f8cc0253f471f2ebd6f8",
+    "scripts/coarse_osm_paid_geometry_loader_v1.ts": "0d49de75da9e2e101dbc3ec8cf7f229f62fdb5a6d2be960fbb62abf37fe22319",
+    "scripts/coarse_osm_paid_geometry_v1.ts": "cde912277d5ef70233fe9e4cb9b8d7843bf601a9267a233efc7847b8a57ab940",
+    "scripts/coarse_osm_turn_contexts_v1.ts": "d69356d67eb61178dd47a3cbabf9abec31b0efd49048f1dedf74ac74d679f66b",
+    "scripts/pack_osm_conditional_only_runtime_v1.ts": "bfca108ee97a47dc9eac61959a5a7e40948a9f3ada0ec1221ce1a8ab8049cef2"
+  },
+  "closed": {
+    "context": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-context-run-closed-v1.json",
+    "geometry": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-derived-geometry-closed-v1.json",
+    "spatial": "docs/evidence/coarse-osm-car-capacity-2026-11-01/conditional-only-derived-spatial-closed-v1.json"
+  },
+  "metadataScratchReserveBytes": 104857600,
+  "newClosedAllocationBytes": 11344572416,
+  "output": "data/coarse-quality/us-osm-conditional-only-runtime-v1",
+  "previousClosedRoots": 432,
+  "priorReserveBytes": 64500000000,
+  "scope": "Pack the three audited data inputs directly with the established codecs. Verify every decoded source byte with the existing runtime loaders and bind the turn history to this graph. One 64 MiB output allowance, 4 GiB host RSS and 180-second deadline. No new optimization or app change."
+}

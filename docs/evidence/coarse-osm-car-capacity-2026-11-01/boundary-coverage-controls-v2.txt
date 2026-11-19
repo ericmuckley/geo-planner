@@ -1,0 +1,36 @@
+✔ partial dry cell requires its full paid connector at the exact horizon (2.338792ms)
+✔ a dry island across a water barrier cannot receive coverage (0.30025ms)
+✔ water and fallback-closed samples remain closed under the source policy (28.291541ms)
+✔ new or preexisting coverage never becomes a finite propagation source (0.294916ms)
+✔ neighbors do not wrap across raster rows (0.126375ms)
+✔ open unreachable cells and existing road coverage are preserved (0.164208ms)
+✔ invalid horizon or finite closed center fails closed (0.402208ms)
+✔ sealed renderer wrapper preserves point components and all noncoverage fields (9.35925ms)
+✔ success and held witness exceptions release all borrowed query backing (50.497042ms)
+{"name":"original","remaining":[{"i":1,"bytes":10002},{"i":7,"bytes":10002}],"message":"local heap capacity"}
+✔ original: queue receiver retention while the actual capacity exception stays alive (86.5105ms)
+{"name":"guarded","remaining":[],"message":"local heap capacity"}
+✔ guarded: queue receiver retention while the actual capacity exception stays alive (60.6745ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ original: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (787.562541ms)
+{"oldCells":2499561,"finerCells":4064256,"oldStep":6377,"finerStep":5000,"maxObservedQueryBacking":30290255}
+✔ seed-guard: finer cells exceed the old cell cap within actual backing limits and release prepared-point storage (686.408125ms)
+✔ host output preserves UTF-8 bytes without a shared slab (0.341209ms)
+✔ a fresh Buffer slab adds 8KiB; disabling host pooling and unpooled output restore exactly (437.617291ms)
+✔ initial seed pressure coarsens before consumption while reusing one raster (62.240334ms)
+✔ exhausted seed retries refuse and release the unconsumed field (19.103917ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=false (4.624417ms)
+✔ same-resolution times/parents/coverage/masks/maps match with lake=true (4.684792ms)
+✔ label and vertex buffers are actually reused on a larger synthetic chain (29.155625ms)
+{"probeExceptionBackingDelta":0,"remaining":[]}
+✔ an exception after buffer consumption releases all query storage (20.430875ms)
+✔ source-water and uncertainty semantics match at the same resolution: false (17.623459ms)
+✔ source-water and uncertainty semantics match at the same resolution: true (14.435084ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1695.416792

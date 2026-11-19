@@ -1,0 +1,149 @@
+{
+  "origin": [
+    -119.0187,
+    35.3733
+  ],
+  "initialChoices": 317,
+  "accessInput": {
+    "filename": "endpoint-62.json.gz",
+    "rawBytes": 92777,
+    "rawSha256": "23348d365b5e0d81297f079504f44ce803f262491c424b7d398858b35fb8253e",
+    "compressedBytes": 10304,
+    "sha256": "34b662e251852266b42acf19cc971533a6d5299d5496cf0727c65ffd061457a9"
+  },
+  "diagnostic": {
+    "timings": {
+      "bakersfield--big-bear-lake": {
+        "ticks": 101877,
+        "kind": "road-foot",
+        "roadTicks": 101877,
+        "localGridTicks": 102315,
+        "localWitness": {
+          "terminalTicks": 595,
+          "edgeSeconds": 0,
+          "seedSeconds": 12715,
+          "seedCell": 647851,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "bakersfield--palm-springs": {
+        "ticks": 108534,
+        "kind": "road-foot",
+        "roadTicks": 108534,
+        "localGridTicks": 108841,
+        "localWitness": {
+          "terminalTicks": 313,
+          "edgeSeconds": 0,
+          "seedSeconds": 13566,
+          "seedCell": 581318,
+          "seedKind": 8,
+          "steps": 0
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1906477,
+      "maximumHeapEntries": 2734,
+      "maximumBackingBufferBytes": 50927330,
+      "returnedBackingBufferBytes": 50790614,
+      "seedBackingBufferBytes": 20288,
+      "starts": 317
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -125007100,
+      "south": 30198020,
+      "step": 11548,
+      "width": 1849,
+      "height": 1351
+    },
+    "stats": {
+      "envelopeMs": 658.544166999869,
+      "maskMs": 11304.011666999897,
+      "seedMs": 4311.011750000063,
+      "fillMs": 235.5411670000758,
+      "contourMs": 42.41958300000988,
+      "displayMs": 16551.685083999997,
+      "maximumBackingBufferBytes": 59787899,
+      "borrowedVertexWorkspace": true,
+      "samples": 3224273,
+      "activeSpans": 1309271,
+      "settles": 1287323,
+      "maximumHeapEntries": 174584,
+      "selectedCells": 1288426,
+      "localCells": 1287323,
+      "roadOnlyCells": 1103,
+      "edges": 21202,
+      "rings": 515,
+      "vertices": 13681,
+      "jsonBytes": 322847,
+      "retries": []
+    },
+    "phaseMs": 16937.569291999796,
+    "output": {
+      "filename": "origin-11-900.geojson",
+      "bytes": 322847,
+      "sha256": "7f674e50cd4c8532d67627a2f1e093125bbd04d5d6a4784485cbd854c086bf66"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 720,
+      "classified": {
+        "bakersfield--big-bear-lake": true,
+        "bakersfield--palm-springs": true
+      },
+      "fieldStats": {
+        "settles": 1614058,
+        "maximumHeapEntries": 2734,
+        "maximumBackingBufferBytes": 50927330,
+        "returnedBackingBufferBytes": 50790614,
+        "seedBackingBufferBytes": 20288,
+        "starts": 317
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -125003285,
+        "south": 30867035,
+        "step": 9655,
+        "width": 1854,
+        "height": 1348
+      },
+      "stats": {
+        "envelopeMs": 858.2469999999739,
+        "maskMs": 9956.956665999955,
+        "seedMs": 3534.945624999935,
+        "fillMs": 222.031042000046,
+        "contourMs": 36.67574999993667,
+        "displayMs": 14608.973665999947,
+        "maximumBackingBufferBytes": 59787899,
+        "borrowedVertexWorkspace": true,
+        "samples": 2749303,
+        "activeSpans": 1122357,
+        "settles": 1220826,
+        "maximumHeapEntries": 148255,
+        "selectedCells": 1221625,
+        "localCells": 1220826,
+        "roadOnlyCells": 799,
+        "edges": 19704,
+        "rings": 436,
+        "vertices": 12712,
+        "jsonBytes": 292135,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-11-720.geojson",
+        "bytes": 292135,
+        "sha256": "39ec3b5850be54d76c56833bf19fee8fa681f3792ba1554c363724c9b5f795a5"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 486768640,
+    "heapTotal": 161841152,
+    "heapUsed": 25762576,
+    "external": 162311496,
+    "arrayBuffers": 159771645
+  }
+}

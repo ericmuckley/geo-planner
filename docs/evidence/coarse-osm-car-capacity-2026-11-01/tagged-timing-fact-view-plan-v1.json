@@ -1,0 +1,49 @@
+{
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-fact-views-v1.json",
+  "controls": 13,
+  "sourcePairs": {
+    "captured": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-controls-closed-v1.json"
+    },
+    "country": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-run-closed-v1.json"
+    }
+  },
+  "newClosedAllocationBytes": 8857067520,
+  "previousClosedRoots": 304,
+  "bindings": {
+    "scripts/coarse_osm_fact_view_v1.py": "cd03d01279a79a42b2b5c0236cd66b261651819a0fcf11114c74ad6dd3660049",
+    "scripts/coarse_osm_fact_view_v1_test.py": "fb287fc9aeb10481fd7a1a316eaaa42c63cd2053f9daeaa65be67eee6e6164cf",
+    "scripts/coarse_osm_conditional_fact_io_v1.py": "1a22e66d79c5863c33055627aa673d440fec78023f42ae53e4eb576275bd7b62",
+    "scripts/coarse_osm_conditional_fact_io_v1_test.py": "37fd366f393b4f58ec96bc2fb4ee2be98bbc98150b9fcb09719f2c3f8fd8007f",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-view-controls-v1.txt": "a79d2fbc109f8cd1ba4442fbccffee39d51a4c2cccdf04aaae56514b8995b2f2",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json": "63f39060d2ac12de3ec9e169d18c79b05b37c182e432d0190bc56249ea9af59a",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-controls-closed-v1.json": "083dd8d08602f7a3f8683afce3cc234763ef74dce1caa413705d06d805588904",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json": "8fb6b84482433cc4bc45a8f17d2e7b99ef7fd89dd1b232ad495e86a7b1900bb2",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-overlay-v2-country-run-closed-v1.json": "f579432bfa1ce242c749f9c94c7c302ae429a7cd3188456fd33f4f775a7a4f59",
+    "scripts/prepare_osm_tagged_timing_fact_view_v1.py": "b2647c0a3307474a8bd32160cacfbdad87a19650329cad2b202c2222ab4e27e8",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-controls-closed-v1.json": "cd3fed2b33bfefa2b4156963446fdca39246200ec7821aef030ec0023306c0a7",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-run-closed-v1.json": "30e0e2cce59776b75dde67ccfced7e48ec48c6cbe42d291d2ecbd738b614d7f6",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-run-raw-v1/report.json": "a9209bc01538301731b989cf82519a76a6d30ace2fc953be20300300802d4112",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-views-v1.json": "2150b7d1e96c2a0ef774b2bc78a285a29c471c04d31f0a70145284b5113fa268",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_tagged_timing_routing_v1.py": "03349bf715765da6519b18789483fc3d33b0e20840946afaa0323b47ffffd2d9"
+  },
+  "scope": "Closed-metadata-only composed complete nativefactviews for DERIVEDestimatedspeed/cost fields. Sourcelegalcatalog independentlypinned/preserved;ways/arcs/flagswholegroupsfromnewcost overlay,otheroriginalsourcefieldsunchanged. No actualfactread/copy/link/native/PBF/query/provider/DB/app.13qualifiedhostview/storagecontrols unchanged. Countryall9882872old/new price/descriptor/flag proofs complete beforethis factory.64500000000prior+all304closed+104857600metadatareserve<72GiB. Usedfactoryrunonce,no replay.",
+  "originalLegalSpeedCatalog": "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-views-v1.json",
+  "policy": {
+    "id": "explicit-speed-static-estimate-90-v1",
+    "taggedSpeedRatio": [
+      9,
+      10
+    ],
+    "defaultSpeedRatio": [
+      1,
+      1
+    ],
+    "scope": "Estimated driving speeds only;no access/direction/closure/node/turn/geometry change. Original legal-speed facts retained separately. No hosted settings or observed speed claim."
+  },
+  "priorReserveBytes": 64500000000,
+  "metadataScratchReserveBytes": 104857600
+}

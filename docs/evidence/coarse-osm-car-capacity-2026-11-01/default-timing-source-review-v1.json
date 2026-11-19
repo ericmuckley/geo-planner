@@ -1,0 +1,47 @@
+{
+  "status": "published_base_table_reviewed_before_fixed_path_sensitivity",
+  "reviewDate": "2026-11-08",
+  "version": "v9.10.0",
+  "sourceUrl": "https://github.com/GIScience/openrouteservice/blob/v9.10.0/ors-engine/src/main/java/org/heigit/ors/routing/graphhopper/extensions/flagencoders/VehicleFlagEncoder.java#L144-L160",
+  "carEncoderUrl": "https://github.com/GIScience/openrouteservice/blob/v9.10.0/ors-engine/src/main/java/org/heigit/ors/routing/graphhopper/extensions/flagencoders/CarFlagEncoder.java#L48-L59",
+  "policy": {
+    "id": "published-base-road-defaults-static-estimate-v1",
+    "currentDefaultsKph": {
+      "motorway": 100,
+      "motorway_link": 40,
+      "trunk": 80,
+      "trunk_link": 40,
+      "primary": 55,
+      "primary_link": 35,
+      "secondary": 45,
+      "secondary_link": 30,
+      "tertiary": 40,
+      "tertiary_link": 30
+    },
+    "proposedDefaultsKph": {
+      "motorway": 100,
+      "motorway_link": 60,
+      "trunk": 85,
+      "trunk_link": 60,
+      "primary": 65,
+      "primary_link": 50,
+      "secondary": 60,
+      "secondary_link": 50,
+      "tertiary": 50,
+      "tertiary_link": 40
+    },
+    "explicitEstimatedSpeedRatio": [
+      1,
+      1
+    ],
+    "scope": "ORS v9.10.0 VehicleFlagEncoder base road-class defaults only. Not complete provider/configuration reproduction or legal/observed speeds. Original legal facts, explicit9/10estimates, physical topology, access, direction, restrictions and all other costs unchanged."
+  },
+  "observedSource": "VehicleFlagEncoder constructor declares this base table; CarFlagEncoder initializes a SpeedLimitHandler from it. Explicit maxspeed9/10 handling is separate. Handler/resources/configuration, motorroad, surface, roundabout, acceleration and encoding can further change behavior.",
+  "hostedSettingsProved": false,
+  "speedLimitHandlerResourceReviewComplete": false,
+  "unavailablePrimaryPages": [
+    "v9.10.0 SpeedLimitHandler.java raw/GitHub: web cache miss",
+    "guessed car_ors.json resource path: cache miss, existence not established"
+  ],
+  "scope": "One base-default hypothesis only, not copying/reproducing complete provider. Table values fixed externally, no development-fit ratios or class subset. Current83observations inform need for default diagnosis, not coefficient selection. Legal maxspeed/source facts unchanged; no region/coordinate/city exceptions, traffic truth or permission claim."
+}

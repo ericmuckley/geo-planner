@@ -1,0 +1,149 @@
+{
+  "origin": [
+    -119.6982,
+    34.4208
+  ],
+  "initialChoices": 503,
+  "accessInput": {
+    "filename": "endpoint-61.json.gz",
+    "rawBytes": 146566,
+    "rawSha256": "24b74e27caa28071ae993be446148f29a2bf98ed8edcde2588fd38cbd906026a",
+    "compressedBytes": 16339,
+    "sha256": "ce40250a17528a21fcd13b8ce1ed84e36a1a04b7b5598663edaff060c24b9ee0"
+  },
+  "diagnostic": {
+    "timings": {
+      "santa-barbara--san-diego": {
+        "ticks": 118456,
+        "kind": "road-foot",
+        "roadTicks": 118456,
+        "localGridTicks": 119517,
+        "localWitness": {
+          "terminalTicks": 653,
+          "edgeSeconds": 0,
+          "seedSeconds": 14858,
+          "seedCell": 448812,
+          "seedKind": 8,
+          "steps": 0
+        }
+      },
+      "santa-barbara--brawley": {
+        "ticks": 150621,
+        "kind": "local-grid",
+        "roadTicks": 152377,
+        "localGridTicks": 150621,
+        "localWitness": {
+          "terminalTicks": 405,
+          "edgeSeconds": 880,
+          "seedSeconds": 17897,
+          "seedCell": 499368,
+          "seedKind": 8,
+          "steps": 5
+        }
+      }
+    },
+    "fieldStats": {
+      "settles": 1756663,
+      "maximumHeapEntries": 2189,
+      "maximumBackingBufferBytes": 51046482,
+      "returnedBackingBufferBytes": 50909458,
+      "seedBackingBufferBytes": 32192,
+      "starts": 503
+    },
+    "restorationChecked": true,
+    "frame": {
+      "west": -125006157,
+      "south": 30135126,
+      "step": 10709,
+      "width": 1867,
+      "height": 1339
+    },
+    "stats": {
+      "envelopeMs": 659.9011249998584,
+      "maskMs": 10727.229541999986,
+      "seedMs": 3851.524165999843,
+      "fillMs": 229.95241699996404,
+      "contourMs": 40.594708000076935,
+      "displayMs": 15509.337208000012,
+      "maximumBackingBufferBytes": 59907051,
+      "borrowedVertexWorkspace": true,
+      "samples": 2999576,
+      "activeSpans": 1218607,
+      "settles": 1253361,
+      "maximumHeapEntries": 160859,
+      "selectedCells": 1254417,
+      "localCells": 1253361,
+      "roadOnlyCells": 1056,
+      "edges": 21466,
+      "rings": 481,
+      "vertices": 13771,
+      "jsonBytes": 328510,
+      "retries": []
+    },
+    "phaseMs": 15877.092915999936,
+    "output": {
+      "filename": "origin-12-900.geojson",
+      "bytes": 328510,
+      "sha256": "bd063716a39a2f2605b7b0937df7b3348305c3c4d845d527fd98723b1b23ee53"
+    }
+  },
+  "productions": [
+    {
+      "minutes": 720,
+      "classified": {
+        "santa-barbara--san-diego": true,
+        "santa-barbara--brawley": true
+      },
+      "fieldStats": {
+        "settles": 1533773,
+        "maximumHeapEntries": 2189,
+        "maximumBackingBufferBytes": 51046482,
+        "returnedBackingBufferBytes": 50909458,
+        "seedBackingBufferBytes": 32192,
+        "starts": 503
+      },
+      "restorationChecked": true,
+      "frame": {
+        "west": -124680192,
+        "south": 30811872,
+        "step": 8736,
+        "width": 1877,
+        "height": 1331
+      },
+      "stats": {
+        "envelopeMs": 604.4029589998536,
+        "maskMs": 9457.294374999823,
+        "seedMs": 3287.9143340000883,
+        "fillMs": 219.61791600007564,
+        "contourMs": 35.67350000003353,
+        "displayMs": 13604.99191699992,
+        "maximumBackingBufferBytes": 59907051,
+        "borrowedVertexWorkspace": true,
+        "samples": 2615245,
+        "activeSpans": 1071567,
+        "settles": 1204374,
+        "maximumHeapEntries": 141350,
+        "selectedCells": 1205194,
+        "localCells": 1204374,
+        "roadOnlyCells": 820,
+        "edges": 19518,
+        "rings": 366,
+        "vertices": 12644,
+        "jsonBytes": 297872,
+        "retries": []
+      },
+      "output": {
+        "filename": "origin-12-720.geojson",
+        "bytes": 297872,
+        "sha256": "51661062b6a1201ac66f2be7e9538b87b5fd4dd5db26e19844b7c3b97ab2f02c"
+      }
+    }
+  ],
+  "afterDiagnosticRelease": {
+    "rss": 474808320,
+    "heapTotal": 161841152,
+    "heapUsed": 25864608,
+    "external": 162505401,
+    "arrayBuffers": 159965550
+  }
+}

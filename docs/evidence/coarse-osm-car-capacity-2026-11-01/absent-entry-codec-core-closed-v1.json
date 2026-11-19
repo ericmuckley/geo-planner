@@ -1,0 +1,95 @@
+{
+  "root": "data/coarse-quality/us-osm-absent-entry-codec-core-v1",
+  "roster": {
+    "execution-plan.json": {
+      "bytes": 2048,
+      "sha256": "5a3037d516b87ecc5328b806bcbdad107651fc0ec991fddbe7da21c3dd0a3cfb",
+      "ignoredLargeAsset": false
+    },
+    "fields/cell-keys.u24.gz": {
+      "bytes": 9454,
+      "sha256": "0ac479c4b0f8eef1b0effe8906d40ec84f37d9e9121a54bee658f5630feb7395",
+      "ignoredLargeAsset": true
+    },
+    "fields/cell-offsets.u24.gz": {
+      "bytes": 50383,
+      "sha256": "ccc0ae02f5be6ef61a8bfb6f2e3e6ab9d82d254c7e02919c06dafa4aac8b89a6",
+      "ignoredLargeAsset": true
+    },
+    "fields/cost-overflow-arcs.u24.gz": {
+      "bytes": 26,
+      "sha256": "b44cb43f019403734694bd05e999851da593299f2271f3e11da405169e21adb6",
+      "ignoredLargeAsset": true
+    },
+    "fields/cost-overflow-ticks.u32.gz": {
+      "bytes": 28,
+      "sha256": "78dc1541e32e075b7485968d402058d23d57b242a1b1eb9429e73f0bcab4a4d0",
+      "ignoredLargeAsset": true
+    },
+    "fields/costs.u16.gz": {
+      "bytes": 11628504,
+      "sha256": "fdb7ab980c8acb00db727c4cdf36783dbf0509608b530e296417e16f7cb6bef4",
+      "ignoredLargeAsset": true
+    },
+    "fields/forbidden-turns.u24.gz": {
+      "bytes": 411840,
+      "sha256": "10d9d3b9878991c78ab40645e81d3827822532c2b3638e6761d5b6175199e2ad",
+      "ignoredLargeAsset": true
+    },
+    "fields/node-flags.u8.gz": {
+      "bytes": 417538,
+      "sha256": "b90693ee60dfd267b384039828909c4d4c011db9c74833a0675afa2694108059",
+      "ignoredLargeAsset": true
+    },
+    "fields/offsets.u24.gz": {
+      "bytes": 1123533,
+      "sha256": "b6b128327cf7292ace2d09e50d974c01295e5480ecf5b487603aacb4a455406b",
+      "ignoredLargeAsset": true
+    },
+    "fields/reverse-overflow-arcs.u24.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "fields/reverse-overflow-targets.u24.gz": {
+      "bytes": 20,
+      "sha256": "f1b651238a58fe290baec6c5e32f3bdb1943dd2bd582f02569231f7a757c7837",
+      "ignoredLargeAsset": true
+    },
+    "fields/reverse.u8.gz": {
+      "bytes": 2118868,
+      "sha256": "c385fe3768eccdf9cadec3dddff3901334fb8d5e00af8ed4299c505b91d8347c",
+      "ignoredLargeAsset": true
+    },
+    "fields/targets.u24.gz": {
+      "bytes": 7763335,
+      "sha256": "6b1cf8b89144ffdbffc20815e15d73ed220f9668e461b5b2780a68e047b87bba",
+      "ignoredLargeAsset": true
+    },
+    "fields/xy.i32.gz": {
+      "bytes": 22711223,
+      "sha256": "94684d497bde9abe406a52ac69a1290ee3d8edebcabf857e013babb9e57ca001",
+      "ignoredLargeAsset": true
+    },
+    "manifest.json": {
+      "bytes": 4783,
+      "sha256": "a7ba8a680d81926c552e709f94737c3d1387cb7e38aa7eda364d89afe5fa9627",
+      "ignoredLargeAsset": false
+    },
+    "report.json": {
+      "bytes": 661,
+      "sha256": "a7bf9f4ff083ddd74a63d861199104812360986d10111e72b0aff1d2c3af08e7",
+      "ignoredLargeAsset": false
+    }
+  },
+  "usage": {
+    "logicalBytes": 46242264,
+    "allocatedBytes": 46284800,
+    "entries": 18,
+    "conservativeAllocatedBytes": 47480832
+  },
+  "terminalRecord": "report.json",
+  "terminalStatus": "absent_entry_candidate_storage_roundtripped_independent_audit_pending",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "multiway_static_bans_and_single_via_context_records_source_audited",
+  "waysChecked": 4227238,
+  "completePreArcsMapped": 9882872,
+  "retainedArcsMapped": 9837848,
+  "contextPrefixGroups": 23007,
+  "contextStates": 34253,
+  "prohibitedExitArcRecords": 22689,
+  "activeTriggerPairs": 22673,
+  "oldAllowedPathsRemainOrdinary": true,
+  "contextRuntimeBackingBytes": 1788678,
+  "offlinePrefixCountBytes": 736224,
+  "selectedRetainedWayArcRecords": 59597,
+  "additionalQueryLabelBytes": 137012,
+  "constructionSeconds": 11.003091047052294,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "coordinatesRead": 0,
+  "routingQueries": 0,
+  "sourceCostsFlagsClosureUnionOrPhysicalArcIdsChanged": false,
+  "appActivated": false,
+  "scope": "Single-via histories on NEW physical IDs. All source-supported and conservative multi-via entry bans remain static;only single-via entry bans become history triggers. Complete independent source audits and a separate sparse CSR-rank mapping verify both. No speed/geometry/flags/closure change,query/ETA/app admission.",
+  "retainedStaticForbiddenPairs": 239315,
+  "staticForbiddenBytes": 1435890,
+  "finalForbiddenUnionPairsChecked": 259656,
+  "supportedSourceTurnPairs": 236831,
+  "multiPreEntryPairs": 2614,
+  "activeMultiEntryPairs": 2557,
+  "multiEntryPairsDroppedByOtherClosures": 57,
+  "independentMultiEntryCsrMappingsChecked": 5026,
+  "independentAudit": {
+    "status": "independent_complete_context_state_exit_trigger_source_audit_passed",
+    "allContextPrefixesChecked": 23007,
+    "allContextStatesSourceMapped": 34253,
+    "allProhibitedExitArcRecordsChecked": 22689,
+    "allActiveEntryTriggerPairsChecked": 22673,
+    "completePreArcsChecked": 9882872,
+    "selectedSourceArcAttributesChecked": 64421,
+    "oldFinalTurnUnionExact": true,
+    "allOldAllowedPathsRemainOrdinary": true,
+    "sourcePbfReads": 0,
+    "sourceConstructorExecutions": 0,
+    "coordinatesRead": 0,
+    "routingQueries": 0,
+    "appActivated": false,
+    "secondsIndependentSourceAudit": 13.790741922915913,
+    "scope": "Complete independent history state/exit/trigger source audit;static forbidden means all source-supported bans plus multi-via entry bans. Static union single-via triggers equals final conservative turn set. No runtime/query/app admission.",
+    "allRetainedStaticForbiddenPairsChecked": 239315
+  },
+  "requiresTurnContextSearch": true,
+  "workerOperationSecondsIncludingAllSourceAudits": 34.548671307973564,
+  "artifacts": {
+    "context/state-offsets.u32": {
+      "bytes": 92032,
+      "sha256": "cafc339ae6450d740e9a1fb8aa487bad88378f33db569a9fd0a669a19c3f1f44"
+    },
+    "context/state-arcs.u24": {
+      "bytes": 102759,
+      "sha256": "bf898f786f6f2a0eb04d857efd7d3b8f9081e45c4e251deed9d1b8ed429520d3"
+    },
+    "context/exit-offsets.u32": {
+      "bytes": 92032,
+      "sha256": "0a66687a2d0964e7d0522a868f4bc531927310d809f1fc27f0d70096077f830e"
+    },
+    "context/exit-arcs.u24": {
+      "bytes": 68067,
+      "sha256": "2d04356f35b8cdbcf3212ddc6448167fb645e3ae785effd41ee07746327ea0f1"
+    },
+    "context/triggers.u24": {
+      "bytes": 204057,
+      "sha256": "d034bf6b3cc25d7bcea43a0a7d480342b466199f84a8fc322ecd6958385d95ff"
+    },
+    "context/trigger-incoming.bit": {
+      "bytes": 1229731,
+      "sha256": "5c608523f92f84d007b53543e28a1d7d838a8a2ad4d359c13622c4ea22645f19"
+    },
+    "routing/forbidden-turns.u24": {
+      "bytes": 1435890,
+      "sha256": "eb6d6dbc79aa594a66915b98fa70f1620a063534dd4ede647759d29ac7ae0bfc"
+    },
+    "prefix-counts.bin": {
+      "bytes": 736224,
+      "sha256": "2f6cfa746ad75bcd3b6a21e6581be1854f7cb91e4cb647d87656ac8e1d6b3bb5"
+    }
+  },
+  "runtimeQueryImplemented": false,
+  "accuracyOrAppQualified": false,
+  "workerSecondsIncludingBindingsConstructionAndIndependentAudit": 35.12020801601466
+}

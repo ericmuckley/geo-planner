@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -119.6982,
+    34.4208
+  ],
+  "rows": [
+    {
+      "id": "santa-barbara--san-diego",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "destination": {
+        "lon": -117.1611,
+        "lat": 32.7157
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 230.065,
+      "baselinePointMinutes": 216.45999999999987,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 204.33083333333335,
+      "baseline": {
+        "pointMinutes": 228.04333333333324,
+        "cellMinutes": 226.08666666666656,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.005,
+          "road": 222.02000000000007,
+          "local": 0,
+          "transfer": 2.061666666666667,
+          "destination": 1.9566666666666668
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 229.97083333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -13.605000000000132,
+      "candidateErrorMinutes": -2.0216666666667606,
+      "absoluteErrorChangeMinutes": -1.9275000000000944,
+      "estimateFailure": null
+    },
+    {
+      "id": "santa-barbara--brawley",
+      "set": "regional",
+      "origin": {
+        "lon": -119.6982,
+        "lat": 34.4208
+      },
+      "destination": {
+        "lon": -115.5303,
+        "lat": 32.9787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 304.52333333333337,
+      "baselinePointMinutes": 303.2750000000001,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 272.2386,
+      "baseline": {
+        "pointMinutes": 308.21166666666653,
+        "cellMinutes": 305.27499999999986,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.005,
+          "road": 301.39000000000016,
+          "local": 0,
+          "transfer": 1.88,
+          "destination": 2.9366666666666665
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 288.54791666666665,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -1.248333333333278,
+      "candidateErrorMinutes": 3.688333333333162,
+      "absoluteErrorChangeMinutes": 12.287083333333555,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "santa-barbara--san-diego",
+      "previousPointTicks": 110538,
+      "pointTicks": 110386,
+      "previousRoadTicks": 110538,
+      "bestRoadTicks": 110386,
+      "terminalChoices": 1835,
+      "winningTerminal": {
+        "origin": [
+          -117.1611,
+          32.7157
+        ],
+        "snap": {
+          "canonicalArc": 438889,
+          "segment": 0,
+          "segmentFraction": 0,
+          "coordinate": [
+            -117.1556297,
+            32.7192822
+          ],
+          "distanceMeters": 648.5101828739807,
+          "forwardProgress": 0,
+          "backwardProgress": 0
+        },
+        "connectorMeters": 648.5101828739807,
+        "connectorTicks": 748,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "santa-barbara--brawley",
+      "previousPointTicks": 138594,
+      "pointTicks": 138503,
+      "previousRoadTicks": 138594,
+      "bestRoadTicks": 138503,
+      "terminalChoices": 113,
+      "winningTerminal": {
+        "origin": [
+          -115.5303,
+          32.9787
+        ],
+        "snap": {
+          "canonicalArc": 741805,
+          "segment": 0,
+          "segmentFraction": 1,
+          "coordinate": [
+            -115.5304882,
+            32.9787721
+          ],
+          "distanceMeters": 19.2990547577014,
+          "forwardProgress": 1,
+          "backwardProgress": 1
+        },
+        "connectorMeters": 19.2990547577014,
+        "connectorTicks": 23,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1639541,
+    "maximumHeapEntries": 2192,
+    "maximumBackingBufferBytes": 50473846,
+    "returnedBackingBufferBytes": 50473846,
+    "seedBackingBufferBytes": 32192,
+    "starts": 503
+  },
+  "hostFieldAndFinishesMs": 264.22712500000034,
+  "afterReleaseArrayBuffers": 141923537
+}

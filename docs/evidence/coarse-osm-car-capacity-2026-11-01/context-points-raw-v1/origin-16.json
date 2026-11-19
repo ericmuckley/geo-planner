@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -116.375,
+    33.2559
+  ],
+  "rows": [
+    {
+      "id": "borrego-springs--anza",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.674,
+        "lat": 33.555
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 92.78999999999999,
+      "baselinePointMinutes": 109.30781199727338,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 89.98631666666667,
+      "baseline": {
+        "pointMinutes": 109.15114533060672,
+        "cellMinutes": 107.58565186981103,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 1.8283333333333334,
+          "local": 102.26217692089432,
+          "transfer": 1.0633333333333332,
+          "destination": 0.6983333333333334
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 96.26875,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 16.517811997273384,
+      "candidateErrorMinutes": 16.361145330606732,
+      "absoluteErrorChangeMinutes": -12.882395330606727,
+      "estimateFailure": null
+    },
+    {
+      "id": "borrego-springs--julian",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 45.17333333333333,
+      "baselinePointMinutes": 60.21856494962273,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 39.66288333333333,
+      "baseline": {
+        "pointMinutes": 58.87023161628939,
+        "cellMinutes": 57.76856494962272,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 20.906666666666666,
+          "local": 33.56292987324366,
+          "transfer": 0,
+          "destination": 1.1016666666666666
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 47.40416666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 15.0452316162894,
+      "candidateErrorMinutes": 13.696898282956056,
+      "absoluteErrorChangeMinutes": -11.46606494962272,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "borrego-springs--anza",
+      "previousPointTicks": 46209,
+      "pointTicks": 46209,
+      "previousRoadTicks": 46209,
+      "bestRoadTicks": 46209,
+      "frozenLocalGridTicks": 47050,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "borrego-springs--julian",
+      "previousPointTicks": 22754,
+      "pointTicks": 22754,
+      "previousRoadTicks": 22754,
+      "bestRoadTicks": 22754,
+      "frozenLocalGridTicks": 24228,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1761962,
+    "maximumHeapEntries": 2411,
+    "maximumBackingBufferBytes": 50822762,
+    "returnedBackingBufferBytes": 50695994,
+    "seedBackingBufferBytes": 2752,
+    "starts": 43
+  },
+  "hostFieldAndFinishesMs": 340.02862500000083,
+  "afterReleaseArrayBuffers": 143986231
+}

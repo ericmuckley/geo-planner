@@ -1,0 +1,158 @@
+{
+  "origin": [
+    -116.375,
+    33.2559
+  ],
+  "rows": [
+    {
+      "id": "borrego-springs--anza",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.674,
+        "lat": 33.555
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 92.78999999999999,
+      "baselinePointMinutes": 109.30781199727338,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 89.98631666666667,
+      "baseline": {
+        "pointMinutes": 109.15114533060672,
+        "cellMinutes": 107.58565186981103,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 1.8283333333333334,
+          "local": 102.26217692089432,
+          "transfer": 1.0633333333333332,
+          "destination": 0.6983333333333334
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 96.26875,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 16.517811997273384,
+      "candidateErrorMinutes": 16.361145330606732,
+      "absoluteErrorChangeMinutes": -12.882395330606727,
+      "estimateFailure": null
+    },
+    {
+      "id": "borrego-springs--julian",
+      "set": "regional",
+      "origin": {
+        "lon": -116.375,
+        "lat": 33.2559
+      },
+      "destination": {
+        "lon": -116.602,
+        "lat": 33.0787
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 45.17333333333333,
+      "baselinePointMinutes": 60.21856494962273,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 39.66288333333333,
+      "baseline": {
+        "pointMinutes": 58.87023161628939,
+        "cellMinutes": 57.76856494962272,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.2989684097124137,
+          "road": 20.906666666666666,
+          "local": 33.56292987324366,
+          "transfer": 0,
+          "destination": 1.1016666666666666
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 47.34375,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 15.0452316162894,
+      "candidateErrorMinutes": 13.696898282956056,
+      "absoluteErrorChangeMinutes": -11.526481616289388,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "borrego-springs--anza",
+      "previousPointTicks": 46209,
+      "pointTicks": 46209,
+      "previousRoadTicks": 46209,
+      "bestRoadTicks": 46209,
+      "terminalChoices": 7,
+      "winningTerminal": {
+        "origin": [
+          -116.674,
+          33.555
+        ],
+        "snap": {
+          "canonicalArc": 720948,
+          "segment": 0,
+          "segmentFraction": 0.3146669835364243,
+          "coordinate": [
+            -116.67399964408561,
+            33.555119788108435
+          ],
+          "distanceMeters": 13.319889159163735,
+          "forwardProgress": 0.3146669835364243,
+          "backwardProgress": 0.3146669835364243
+        },
+        "connectorMeters": 13.319889159698715,
+        "connectorTicks": 16,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "borrego-springs--julian",
+      "previousPointTicks": 22754,
+      "pointTicks": 22725,
+      "previousRoadTicks": 22754,
+      "bestRoadTicks": 22725,
+      "terminalChoices": 29,
+      "winningTerminal": {
+        "origin": [
+          -116.602,
+          33.0787
+        ],
+        "snap": {
+          "canonicalArc": 543454,
+          "segment": 0,
+          "segmentFraction": 0.9655851891972324,
+          "coordinate": [
+            -116.60221517528927,
+            33.07843124957658
+          ],
+          "distanceMeters": 35.98582613611775,
+          "forwardProgress": 0.9655851891972324,
+          "backwardProgress": 0.9655851891972324
+        },
+        "connectorMeters": 35.98582613790163,
+        "connectorTicks": 42,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1597141,
+    "maximumHeapEntries": 2470,
+    "maximumBackingBufferBytes": 50444406,
+    "returnedBackingBufferBytes": 50444406,
+    "seedBackingBufferBytes": 2752,
+    "starts": 43
+  },
+  "hostFieldAndFinishesMs": 241.19341600000007,
+  "afterReleaseArrayBuffers": 141923195
+}

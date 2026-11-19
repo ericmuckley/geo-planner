@@ -1,0 +1,434 @@
+{
+  "origin": [
+    -92.1005,
+    46.7867
+  ],
+  "rows": [
+    {
+      "id": "duluth-mn-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.10095,
+        "lat": 45.70282
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 376.0383333333333,
+      "baselinePointMinutes": 353.4567879977135,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 338.9684546643801,
+        "cellMinutes": 335.60596071746403,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 323.9716666666666,
+          "local": 8.62048780314947,
+          "transfer": 0,
+          "destination": 3.362493946916084
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 322.21458333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -22.581545335619808,
+      "candidateErrorMinutes": -37.06987866895321,
+      "absoluteErrorChangeMinutes": 16.753871331046753,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -87.66185,
+        "lat": 45.0997
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 397.34666666666664,
+      "baselinePointMinutes": 372.302139580981,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 356.5471395809812,
+        "cellMinutes": 354.2838062476479,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 351.27,
+          "local": 0,
+          "transfer": 0,
+          "destination": 2.263333333333333
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 346.54375,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -25.044527085685615,
+      "candidateErrorMinutes": -40.79952708568544,
+      "absoluteErrorChangeMinutes": 10.003389580981207,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -97.10138,
+        "lat": 41.01295
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 604.855,
+      "baselinePointMinutes": 590.0104729143146,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 601.6971395809813,
+        "cellMinutes": 601.6954729143147,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 595.8333333333329,
+          "local": 0,
+          "transfer": 2.848333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "ambiguous"
+      },
+      "candidate": {
+        "pointMinutes": 556.16875,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "ambiguous"
+      },
+      "baselineErrorMinutes": -14.8445270856854,
+      "candidateErrorMinutes": -3.157860419018675,
+      "absoluteErrorChangeMinutes": 45.5283895809813,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -99.32231,
+        "lat": 42.94749
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 613.525,
+      "baselinePointMinutes": 610.0688062476462,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 610.0388062476467,
+        "cellMinutes": 610.0388062476467,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 606.9766666666649,
+          "local": 0,
+          "transfer": 0.04833333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 571.6354166666666,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -3.4561937523537836,
+      "candidateErrorMinutes": -3.4861937523533015,
+      "absoluteErrorChangeMinutes": 38.40338958098005,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -105.47339,
+        "lat": 46.67349
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 683.2316666666667,
+      "baselinePointMinutes": 711.9788062476479,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 704.3821395809803,
+        "cellMinutes": 702.3088062476469,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 699.2899999999994,
+          "local": 0,
+          "transfer": 2.0766666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 616.6791666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 28.747139580981184,
+      "candidateErrorMinutes": 21.150472914313582,
+      "absoluteErrorChangeMinutes": 45.40202708568643,
+      "estimateFailure": null
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -92.1005,
+        "lat": 46.7867
+      },
+      "destination": {
+        "lon": -104.37019,
+        "lat": 46.19137
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 700.0216666666668,
+      "baselinePointMinutes": 729.8898396652215,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 718.0348396652206,
+        "cellMinutes": 718.0348396652206,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 3.013806247648034,
+          "road": 704.3149999999991,
+          "local": 8.112700084240497,
+          "transfer": 2.5933333333333333,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 659.7958333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 29.86817299855477,
+      "candidateErrorMinutes": 18.01317299855384,
+      "absoluteErrorChangeMinutes": 22.21266033477957,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "duluth-mn-360-inside",
+      "previousPointTicks": 154663,
+      "pointTicks": 154663,
+      "previousRoadTicks": 154663,
+      "bestRoadTicks": 154663,
+      "terminalChoices": 2,
+      "winningTerminal": {
+        "origin": [
+          -87.10095,
+          45.70282
+        ],
+        "snap": {
+          "canonicalArc": 9361905,
+          "segment": 0,
+          "segmentFraction": 0.7475282410812781,
+          "coordinate": [
+            -87.10057492978592,
+            45.70281048413199
+          ],
+          "distanceMeters": 29.145828503188582,
+          "forwardProgress": 0.3941305152068575,
+          "backwardProgress": 0.3941305152068575
+        },
+        "connectorMeters": 29.145828503226642,
+        "connectorTicks": 34,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "duluth-mn-360-outside",
+      "previousPointTicks": 166341,
+      "pointTicks": 166341,
+      "previousRoadTicks": 166341,
+      "bestRoadTicks": 166341,
+      "terminalChoices": 23,
+      "winningTerminal": {
+        "origin": [
+          -87.66185,
+          45.0997
+        ],
+        "snap": {
+          "canonicalArc": 9356177,
+          "segment": 1,
+          "segmentFraction": 0.9974161547373023,
+          "coordinate": [
+            -87.6618502470398,
+            45.09968661422286
+          ],
+          "distanceMeters": 1.4885588574558801,
+          "forwardProgress": 0.9977177314888759,
+          "backwardProgress": 0.9977177314888759
+        },
+        "connectorMeters": 1.4885588569894945,
+        "connectorTicks": 2,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "duluth-mn-600-inside",
+      "previousPointTicks": 266961,
+      "pointTicks": 266961,
+      "previousRoadTicks": 266961,
+      "bestRoadTicks": 266961,
+      "terminalChoices": 1,
+      "winningTerminal": {
+        "origin": [
+          -97.10138,
+          41.01295
+        ],
+        "snap": {
+          "canonicalArc": 4462271,
+          "segment": 0,
+          "segmentFraction": 0.22879379835007876,
+          "coordinate": [
+            -97.10114089480595,
+            41.01294773607057
+          ],
+          "distanceMeters": 20.06334280623747,
+          "forwardProgress": 0.22879379835007876,
+          "backwardProgress": 0.22879379835007876
+        },
+        "connectorMeters": 20.06334280499536,
+        "connectorTicks": 24,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "duluth-mn-600-outside",
+      "previousPointTicks": 274385,
+      "pointTicks": 274385,
+      "previousRoadTicks": 274385,
+      "bestRoadTicks": 274385,
+      "terminalChoices": 3,
+      "winningTerminal": {
+        "origin": [
+          -99.32231,
+          42.94749
+        ],
+        "snap": {
+          "canonicalArc": 4488289,
+          "segment": 2,
+          "segmentFraction": 0.5035296512072355,
+          "coordinate": [
+            -99.32189781798573,
+            42.94719458023203
+          ],
+          "distanceMeters": 46.95293075735141,
+          "forwardProgress": 0.3926388398854749,
+          "backwardProgress": 0.3926388398854749
+        },
+        "connectorMeters": 46.95293075654162,
+        "connectorTicks": 55,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "duluth-mn-720-inside",
+      "previousPointTicks": 297493,
+      "pointTicks": 296006,
+      "previousRoadTicks": 300320,
+      "bestRoadTicks": 296006,
+      "terminalChoices": 9,
+      "winningTerminal": {
+        "origin": [
+          -105.47339,
+          46.67349
+        ],
+        "snap": {
+          "canonicalArc": 9012013,
+          "segment": 0,
+          "segmentFraction": 0.4175077388714664,
+          "coordinate": [
+            -105.47362665581528,
+            46.673669659669365
+          ],
+          "distanceMeters": 26.927951959012802,
+          "forwardProgress": 0.13845572120078706,
+          "backwardProgress": 0
+        },
+        "connectorMeters": 26.927951959807924,
+        "connectorTicks": 32,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "duluth-mn-720-outside",
+      "previousPointTicks": 316702,
+      "pointTicks": 316702,
+      "previousRoadTicks": 316702,
+      "bestRoadTicks": 316702,
+      "terminalChoices": 3,
+      "winningTerminal": {
+        "origin": [
+          -104.37019,
+          46.19137
+        ],
+        "snap": {
+          "canonicalArc": 9012796,
+          "segment": 0,
+          "segmentFraction": 0.9092581171186475,
+          "coordinate": [
+            -104.37021832973294,
+            46.191378763031985
+          ],
+          "distanceMeters": 2.3884801118395975,
+          "forwardProgress": 0.9092581171186475,
+          "backwardProgress": 0.9092581171186475
+        },
+        "connectorMeters": 2.3884801120846415,
+        "connectorTicks": 3,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 2518912,
+    "maximumHeapEntries": 4723,
+    "maximumBackingBufferBytes": 50464566,
+    "returnedBackingBufferBytes": 50464566,
+    "seedBackingBufferBytes": 22912,
+    "starts": 358
+  },
+  "hostFieldAndFinishesMs": 384.8383749999998,
+  "afterReleaseArrayBuffers": 141923195
+}

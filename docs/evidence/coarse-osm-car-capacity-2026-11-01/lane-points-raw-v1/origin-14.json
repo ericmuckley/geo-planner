@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -116.7189,
+    33.74
+  ],
+  "rows": [
+    {
+      "id": "idyllwild--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 61.443333333333335,
+      "baselinePointMinutes": 50.77385510082237,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 51.98633333333333,
+      "baseline": {
+        "pointMinutes": 50.58385510082237,
+        "cellMinutes": 49.96885510082237,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.5691915721819576,
+          "road": 2.5316666666666667,
+          "local": 45.86799686197374,
+          "transfer": 0,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 48.925,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -10.669478232510968,
+      "candidateErrorMinutes": -10.859478232510966,
+      "absoluteErrorChangeMinutes": 1.6588551008223718,
+      "estimateFailure": null
+    },
+    {
+      "id": "idyllwild--temecula",
+      "set": "regional",
+      "origin": {
+        "lon": -116.7189,
+        "lat": 33.74
+      },
+      "destination": {
+        "lon": -117.1484,
+        "lat": 33.4936
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 74.32833333333333,
+      "baselinePointMinutes": 60.14166666666666,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 60.2767,
+      "baseline": {
+        "pointMinutes": 58.811666666666675,
+        "cellMinutes": 57.731666666666676,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 0.4216666666666667,
+          "road": 57.02166666666668,
+          "local": 0,
+          "transfer": 0.3733333333333334,
+          "destination": 0.995
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 63.28541666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -14.186666666666675,
+      "candidateErrorMinutes": -15.516666666666659,
+      "absoluteErrorChangeMinutes": -4.4737499999999955,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "idyllwild--palm-springs",
+      "previousPointTicks": 23484,
+      "pointTicks": 23484,
+      "previousRoadTicks": 32751,
+      "bestRoadTicks": 32751,
+      "frozenLocalGridTicks": 23484,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "idyllwild--temecula",
+      "previousPointTicks": 30377,
+      "pointTicks": 30377,
+      "previousRoadTicks": 30377,
+      "bestRoadTicks": 30377,
+      "frozenLocalGridTicks": 30938,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1932692,
+    "maximumHeapEntries": 3753,
+    "maximumBackingBufferBytes": 50909538,
+    "returnedBackingBufferBytes": 50772822,
+    "seedBackingBufferBytes": 2496,
+    "starts": 39
+  },
+  "hostFieldAndFinishesMs": 320.2684170000002,
+  "afterReleaseArrayBuffers": 144171169
+}

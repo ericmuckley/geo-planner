@@ -1,0 +1,61 @@
+{
+  "status": "complete_conditional_source_fact_overlay_passed",
+  "operation": "controls",
+  "sourceCounts": {
+    "ids": 143560,
+    "xy": 287120,
+    "anchors": 46881,
+    "flags": 46881,
+    "geometry": 177956,
+    "ways": 28995,
+    "arcs": 78811
+  },
+  "resultWays": 28995,
+  "resultFlags": 46881,
+  "resultPreClosureArcs": 79118,
+  "overlayCounts": {
+    "records": 108,
+    "changedGraphWays": 108,
+    "newPreClosureArcs": 307
+  },
+  "relationClosedNodesRetained": 19,
+  "unsupportedRelationsRead": 819,
+  "allOldSourceRowsAndArcCostsExact": true,
+  "newNativePricedArcsIndependentlyRebuilt": 307,
+  "maximumNewPrimitiveMs": 12570,
+  "maximumNewMacroMs": 15586,
+  "newPreClosureCostOverflows": 0,
+  "selectedNodeFlagChanges": [],
+  "insertions": {
+    "file": "arc-insertions.u32",
+    "groups": 108,
+    "bytes": 1728,
+    "sha256": "950650d86beda72598b73574e3144350bd01fe56bae8733b80ee7677f66b4cf4",
+    "format": "U32LE quadruples:way index,old insertion,new first,new count"
+  },
+  "overlayBytes": 3506497,
+  "factRoster": {
+    "cost-facts/ways-0000.bin": {
+      "bytes": 927840,
+      "sha256": "48a235d74d6d092c119d293d8bcc958ac91895bd14c7e294b3cef26256858368"
+    },
+    "cost-facts/flags-0000.bin": {
+      "bytes": 46881,
+      "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+    },
+    "cost-facts/arcs-0000.bin": {
+      "bytes": 2531776,
+      "sha256": "a003d6e448ec2d006e452feabda7b138afc607ae40c8308b7bbdc9d6eb4bd849"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "nationalFactOverlayBuilt": false,
+  "runtimeGraphBuilt": false,
+  "etaOrAppAccepted": false,
+  "scope": "Complete streaming ways/flags/arcs overlay plus independent all-old-row and all-new-per-arc primitive/native-price audit. Source IDs/coordinates/anchors/full geometry remain unchanged authenticated typed inputs. Relation-derived node closures retained even if own tags unblock. Other old facts/turns/closures remain base inputs, not copied or implicitly discarded. Preclosure facts only, no resolved/CSR/spatial/paid-geometry/storage/runtime graph or route/ETA/physical/app/package acceptance. No PBF/constructor/provider/application DB/model/deployment operation.",
+  "workerSecondsIncludingBindingsMergeAndAudit": 0.19925250008236617
+}

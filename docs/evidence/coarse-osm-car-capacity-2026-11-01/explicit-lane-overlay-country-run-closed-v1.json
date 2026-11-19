@@ -1,0 +1,70 @@
+{
+  "root": "data/coarse-quality/us-osm-explicit-lane-overlay-country-run-v1",
+  "roster": {
+    "cleanup.json": {
+      "bytes": 146,
+      "sha256": "0d7775e8d3b72fbcdabd8858564fc1745e0efaeaf8325420d7e14c40a6d59534",
+      "ignoredLargeAsset": false
+    },
+    "container-before-removal.json": {
+      "bytes": 308,
+      "sha256": "a11efbb12d357e0f62e48b21507454a76a5b723336ba5b3745d1d6fa57adebf0",
+      "ignoredLargeAsset": false
+    },
+    "container-initial.json": {
+      "bytes": 377503,
+      "sha256": "d042a5c94f37fdd52ca9b359e1b5a807d5bf2da13b36d65d7052dc7abee62455",
+      "ignoredLargeAsset": false
+    },
+    "container-result.json": {
+      "bytes": 331,
+      "sha256": "86a5aec9e6ffca721ee8f9baf48ee162f79598224e6104598ad90c629b865679",
+      "ignoredLargeAsset": false
+    },
+    "driver-failure.json": {
+      "bytes": 91,
+      "sha256": "77c01b4300d8f3895cbbe6e849019d74bc94869fc802809df108c7f766cc463a",
+      "ignoredLargeAsset": false
+    },
+    "execution-plan.json": {
+      "bytes": 182375,
+      "sha256": "1b012825022d87beba90c1df19435483af6e2c32ff90378a4c365fa645ba89be",
+      "ignoredLargeAsset": false
+    },
+    "failure.json": {
+      "bytes": 115,
+      "sha256": "085397facc1db4ed7029d69bb87c0ffd6a6aafaac9c3710c3713ea561b822da6",
+      "ignoredLargeAsset": false
+    },
+    "metrics.json": {
+      "bytes": 487,
+      "sha256": "1b2fecb44e1239e9aef506dd4a0062c734a9b2368d01f5556ad03d7c4947b7da",
+      "ignoredLargeAsset": false
+    },
+    "owner.json": {
+      "bytes": 196,
+      "sha256": "550a628a472661e074adac6613b0fd89c56f1323e76cfebf10c6dca6f4576651",
+      "ignoredLargeAsset": false
+    },
+    "run-summary.json": {
+      "bytes": 121,
+      "sha256": "f4368957c8ca6685b984a3fd101d50252c31695e93cfb971f48d77aeded3d3e5",
+      "ignoredLargeAsset": false
+    },
+    "worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ignoredLargeAsset": true
+    }
+  },
+  "usage": {
+    "logicalBytes": 561673,
+    "allocatedBytes": 598016,
+    "entries": 12,
+    "conservativeAllocatedBytes": 1744896
+  },
+  "terminalRecord": "failure.json",
+  "terminalStatus": "AssertionError('Only original lane exclusions can reopen')",
+  "scope": "Closed terminal host-only functional stage; no Docker/independent container-absence or app admission claim.",
+  "closerSha256": "0d5c0070e92498872e73c9cc5138063da4bcbb23d6e0fd9471e97bcae8bd2344"
+}

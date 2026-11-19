@@ -1,0 +1,20 @@
+{
+  "format": "advisory-static-estimate-source-review-v1",
+  "reviewDate": "2026-11-13",
+  "primarySource": "https://wiki.openstreetmap.org/w/index.php?title=Key:maxspeed:advisory&oldid=3108319",
+  "observedMeaning": "OSM documents posted advisory speeds separately from legally binding maxspeed, commonly on curves and ramps. Bare values use km/h; explicit mph is supported. Forward/backward suffixes distinguish travel directions.",
+  "prototypeInference": "Cap the existing estimated driving speed at a valid unqualified posted advisory value. This is our static timing hypothesis, not a legal restriction, mandatory driver behavior, observed travel speed, or proof of ORS hosted behavior.",
+  "rule": {
+    "currentBase": "unchanged9/10explicit-source-speed and unchanged class defaults",
+    "newEstimate": "min(currentEstimate,parsedAdvisoryKph)",
+    "missingInvalidOrAnyScopedSibling": "unchanged",
+    "bounds": "existing source numeric parser, positive and at most160km/h",
+    "extraRatioOrFit": false,
+    "sourceLegalFactsPermissionsClosuresAndOtherComponentsUnchanged": true
+  },
+  "selection": "All83current winners/all43910source arcs/all33427original source-way tags; no city/coordinate/region/error filter.",
+  "evaluation": "First run one continuous fixed-winner sensitivity: scale only actual road-travel step ticks by currentSpeed/newEstimate; keep all initial/local/signal/reversal/rounding components. No new optimum, exact native primitive quantization, map rerender, classification or candidate/admission claim. Unknowns and all losses remain; no old local-grid clamp. Any full model would need separate source/native/captured/global/runtime/freshmap/accuracy qualification under every original gate.",
+  "ferries": "deferred",
+  "providerRequests": 0,
+  "appOrPricePolicyActivated": false
+}

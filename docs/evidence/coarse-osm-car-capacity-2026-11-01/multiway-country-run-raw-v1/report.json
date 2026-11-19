@@ -1,0 +1,53 @@
+{
+  "status": "complete_multi_via_country_metadata_and_independent_join_audit_passed",
+  "waysChecked": 4227238,
+  "preArcsCheckedTwice": 9878318,
+  "sourceUnsupportedRelationsChecked": 70376,
+  "oldSingleViaDecisionsRetained": 46533,
+  "oldClosureUnionReproduced": true,
+  "oldEntryPairsRetained": 22964,
+  "newMultiEntryPairs": 2599,
+  "combinedEntryPairs": 25327,
+  "multiViaRules": 3569,
+  "resolvedMultiViaRules": 2623,
+  "inactiveMissingMemberMultiRules": 932,
+  "noJoinMultiFallbackRules": 14,
+  "oldClosureIds": 40259,
+  "newClosureIds": 29657,
+  "oldPostArcs": 9807359,
+  "proposedPostArcs": 9822101,
+  "sourceCostsFlagsOrPreArcsChanged": false,
+  "oldAllowedPathsPreservedByClosureSubsetAndNewEntryWaysPreviouslyClosed": true,
+  "selectedPreArcRecordsPerAudit": 12526,
+  "denseWayIdentityAndCountBytes": 50726856,
+  "independentSourceJoinDecisionCounts": {
+    "0": 2623,
+    "3": 932,
+    "2": 14
+  },
+  "secondsIncludingBaselineConstructionAndIndependentRereadAudit": 18.439839215949178,
+  "sourcePbfReads": 0,
+  "coordinatesRead": 0,
+  "routingQueries": 0,
+  "appActivated": false,
+  "scope": "Complete PRE-closure typed facts and saved raw restrictions. Exact old union/single decisions/entry pairs retained;new multi-way no-turns banfrom->ANYvia,missing essential PRE leg inactive,no-join keeps whole-member fallback. All other contributors preserved. Independent second source pass/sort-merge joins verify every decision/pair/closure. No CSR/spatial/runtime/geometry/ETA/app admission.",
+  "assets": {
+    "resolved/closures-0000.bin": {
+      "bytes": 237256,
+      "sha256": "0319236f7b554ed17da393d8125e22fdd0bddd68f46b9b5b47a91cb802328feb"
+    },
+    "resolved/entry-pairs-pre.u32": {
+      "bytes": 202616,
+      "sha256": "ca52734d64050a8e48113dda3ea5697cd2c5af818232d5dbd9d60a450755566e"
+    },
+    "resolved/multi-decisions.bin": {
+      "bytes": 57104,
+      "sha256": "4f0283113cbce43cd06e25831959682b68e4f352349016e45abc4f38e23e2155"
+    },
+    "resolved/multi-entry-pairs-pre.u32": {
+      "bytes": 20792,
+      "sha256": "4f9092e63bc6a207c14a5cb9bc4015702ff813ad220b7c19010ddf45c7c81fa8"
+    }
+  },
+  "workerSecondsIncludingBindingsConstructionAndAudit": 19.11209784098901
+}

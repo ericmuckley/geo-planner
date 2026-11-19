@@ -1,0 +1,940 @@
+{
+  "status": "conditional_only_captured_facts_and_native_compiler_audited",
+  "sourceCounts": {
+    "ids": 143560,
+    "anchors": 46881,
+    "ways": 28995,
+    "arcs": 79148
+  },
+  "allOriginalUnsupportedRelations": 819,
+  "previousConvertedRelations": 209,
+  "previousSourcePortAudit": {
+    "allCandidateSourceDescriptorsIndependentlyReplayed": 7480,
+    "secondSourcePreArcsChecked": 79148,
+    "independentSelectedSourcePortRows": 186,
+    "supportedRules": 100,
+    "sourceOrGraphChanged": false,
+    "representedRules": 100,
+    "inactiveRules": 7380,
+    "fallbackRules": 0,
+    "scope": "Exact complete fixed pre-arc profile only; not source permission, local surrogate semantics or a different profile."
+  },
+  "mandatoryMetadata": 158,
+  "localMandatoryMetadata": 4,
+  "outsideLocalMetadata": [
+    {
+      "sourceRelationId": "310332",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "310333",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "1306801",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "1306802",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "1306803",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "1306805",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "5389983",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "6250235",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "6522073",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "6894041",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "6894042",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7437748",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7437750",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7437751",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7437752",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7499122",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7504185",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7504764",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7517183",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7517184",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7544915",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7564661",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7564765",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7564766",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7567660",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7573570",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7577889",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "7741509",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8155271",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8169568",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8199937",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8247674",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8247675",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8345399",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "8687169",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "9360278",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "9734876",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "9869582",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "9869609",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "9994629",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103919",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103920",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103923",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103924",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103925",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103926",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10103927",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10191267",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10323088",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10511909",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10511910",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "10696437",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "11216468",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "11697630",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "11736825",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "11806886",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "11821534",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12211457",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12211460",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12211461",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12211462",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12211463",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12633082",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12633083",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "12633084",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13020807",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13098545",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365043",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365044",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365045",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365046",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365047",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365048",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365049",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365050",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365051",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13365052",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13549802",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13741987",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "13913410",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14120183",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14305704",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14328722",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14328723",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14488981",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "14759095",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "15256203",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "15869147",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "16733506",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "16771668",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17431884",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17618726",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17670557",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17674545",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17682659",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17723291",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17817165",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17817170",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17817178",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17817181",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17817686",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "17822479",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18043058",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18585411",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18593040",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18763339",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18788292",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18886697",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "18893844",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19025698",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19025699",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19070591",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19085130",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19175504",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19383260",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19383285",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19384823",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19424662",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19424663",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19558268",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19560717",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19583455",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19592694",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19686508",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19765260",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19787706",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19886309",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19920438",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "19932258",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20019823",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20028721",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20058189",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20129809",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20180884",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20199567",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20200025",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20224637",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20233286",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20282492",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20445380",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20700978",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20728763",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20786490",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20797595",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20964263",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "20997883",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21054370",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21069210",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21083867",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21133512",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21364066",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21438707",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21452945",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    },
+    {
+      "sourceRelationId": "21463062",
+      "portStatus": "from-way-outside-major-facts",
+      "presentInRawSource": false
+    }
+  ],
+  "convertedOnlyRelations": 4,
+  "representedOnlyRelations": 1,
+  "inactiveFromOnlyRelations": 3,
+  "localFallbackRelations": 0,
+  "mandatorySourcePortAudit": {
+    "allCandidateSourceDescriptorsIndependentlyReplayed": 158,
+    "secondSourcePreArcsChecked": 79148,
+    "independentSelectedSourcePortRows": 2,
+    "supportedRules": 1,
+    "supportedRulesWithoutToPorts": 0,
+    "forbiddenPreArcPairsIncludingOverlaps": 0,
+    "sourceOrGraphChanged": false,
+    "representedRules": 1,
+    "inactiveFromRules": 157,
+    "remainingFallbackRules": 0,
+    "scope": "Exact complete fixed pre-arc profile only; not source access, local-surrogate behavior or another profile."
+  },
+  "currentClosedWays": 154,
+  "newClosedWays": 146,
+  "newUnclosedWayIds": [
+    21376821,
+    43388754,
+    159103868,
+    159602153,
+    436285015,
+    836696315,
+    971995042,
+    1134456692
+  ],
+  "newMandatoryPairs": 0,
+  "newEntryPairs": 0,
+  "combinedEntryPairs": 308,
+  "allIndependentContributorsRetained": true,
+  "allOldAllowedTransitionsPreserved": true,
+  "everyCurrentTypedTurnByteExact": true,
+  "everyCurrentFlagRetainedInNativeOrder": true,
+  "currentFlagOrderAudit": null,
+  "certifiedViaNativeNodeFlagCountsPerRule": {
+    "4": 1
+  },
+  "previousPassableNodeAudit": {
+    "allVertexFlagsIndependentlyCompared": 46881,
+    "originalBlockedVertices": 97,
+    "changedVertices": [],
+    "remainingBlockedVertices": 97,
+    "signalsAndReversalBitsExact": true,
+    "everyIndependentRestrictionContributorRetained": true,
+    "everyOldUnblockedVertexExact": true
+  },
+  "priorIncompleteNodeOpeningsPreserved": 0,
+  "originalConservativePostArcs": 75463,
+  "preconditionalPostArcs": 77459,
+  "currentPostArcs": 78757,
+  "newFinalPostArcs": 78771,
+  "allPreArcRetentionMappingsCounted": 79148,
+  "turnAudit": {
+    "oldSourceTurnsByteExact": 4078,
+    "newAllStateJunctionBans": 100,
+    "allSourceTurnsIndependentlyCompared": 4178
+  },
+  "compiler": {
+    "dimensions": [
+      143560,
+      46881,
+      28995,
+      79148,
+      78771,
+      4178
+    ],
+    "nativeResult": {
+      "selectedNodes": 143560,
+      "vertices": 46881,
+      "majorWays": 28995,
+      "preClosureArcs": 79148,
+      "postClosureArcs": 78771,
+      "sourceTurnRecords": 4178,
+      "costOverflowEntries": 0,
+      "reverseOverflowEntries": 0,
+      "forbiddenTurnPairs": 2607,
+      "payloadBytes": 1050843,
+      "maximumOutDegree": 5,
+      "relevantSourceTurnRecords": 3119
+    },
+    "augmentationCounts": [
+      308,
+      2607,
+      308,
+      0,
+      2867,
+      78771
+    ],
+    "independentCompleteSourceAndEntryAudit": {
+      "status": "independent_complete_entry_graph_audit_passed",
+      "baseFields": {
+        "status": "independent_complete_packed_routing_audit_passed",
+        "verticesChecked": 46881,
+        "directedCostsAndPhysicalReversesChecked": 78771,
+        "sourceTurnRecordsChecked": 4178,
+        "relevantSourceTurnRecords": 3119,
+        "forbiddenTurnPairsChecked": 2607,
+        "costOverflowEntries": 0,
+        "reverseOverflowEntries": 0,
+        "secondsIndependentDerivedAudit": 0.12329750007484108,
+        "sourcePbfReads": 0,
+        "nativeLibraryExecutions": 0,
+        "sourceConstructorExecutions": 0,
+        "etaQualified": false,
+        "vercelQualified": false
+      },
+      "allPreArcMappingsChecked": 79148,
+      "oldDirectedArcsRetained": 75463,
+      "reopenedDirectedArcs": 3308,
+      "augmentationCounts": [
+        308,
+        2607,
+        308,
+        0,
+        2867,
+        78771
+      ],
+      "finalForbiddenPairsChecked": 2867,
+      "closureSubsetExact": true,
+      "newEntryPairsOnlyTouchOriginallyClosedArcs": true,
+      "oldAllowedTransitionsPreserved": true,
+      "supersetReason": "Every original open source arc retains cost/flags/reverse and supported-turn semantics; every added entry prohibition touches two originally closed arcs. The final turn set is exactly the supported set union mapped entries.",
+      "secondsIndependentAuditIncludingAllBaseFields": 0.171865375014022,
+      "nativeLibraryExecutions": 0,
+      "sourcePbfReads": 0,
+      "routingQueries": 0,
+      "accuracyOrAppQualified": false
+    },
+    "physicalFieldsCopiedExactly": true
+  },
+  "sourcePreArcIdsRetained": true,
+  "postArcIdsReusable": false,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "newTimingOrAccuracyQualified": false,
+  "appActivated": false,
+  "workerSecondsIncludingBindingsSourceReplaysNativeAndIndependentAudits": 0.9168104999698699,
+  "scope": "Separately versioned V2 of ONE isolated capture mandatory-only native fact/compiler qualification. Synthetic116controls/no skips before data. Complete old prohibitory/current source-local closure baseline and every158mandatory certificate/source identity retained; independently re-audit complete native-ID/way/prearc source profile. New fixed-profile noeligibleincoming FROM effects never missingTO inactivity or source-access/local connector permission. Preserve every independent contributor, current typedturn byte, current final flag byte including1488national incomplete-node openings, every physical source/price/reverse; canonical old+new entrypairs. Capture uses OWN actual local original closing-contributor corpus/local certificates, all outside-local records explicit; native CSR+entry compiler and independent complete source oracle. Country after capture: exact421overlay newclosure/entrypair bytes and allfourprearc retention counts, NO nationalgraph yet. Source preservation/reopen/hash/negative-positive/source/price/flag/turn/pair audits required. All original83/35/58/19accuracy/166/source/shore/transfer/fullapp/package/firstestimate/API/camera gates unchanged, no new ETA/accuracy/app admission or place/coordinate/region exception/fitting.4GiB/zeroSwap2CPU/netnone/readonly64PIDs/file64MiB/256MiBowned+256MiBtmp/900sworker1020shost;64.5GBprior+allnewerclosed+100MiBscratch+active<72GiB, sequentialheavyjobs. No PBF/sourceconstructor/acquisition/provider/DB/env/dependency/deploy; ferries/wholecellcoverage deferred. Driver timing excludeshostpre-inputSHA; worker includesbindings/source replays/native+auds/IO, not query/cloud/firstapp. V1national flag-order guard stop preserved. SAME policy/cost/closure/entrypair/physicalfacts. Prior native sourceflags must reproduce; existing qualified spatial finalflags rebase through full bijection and match every pre-correction spatial flag to native before. Only1488previous source-qualified blockedbit openings, exact native nodeID set, all flags independently roundtrip; signals/reversal/independent guards preserved.122actualLinuxcontrols/no skips includes6ordering/refusal controls. Capture complete native oracle before national. Old420/421raw-via counts were invalid spatial/native diagnostic indexing, WITHDRAW interpretation only; closures/pairs unchanged. Report corrected source-native via flag exposures without opening any further node."
+}

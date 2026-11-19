@@ -1,0 +1,22 @@
+{
+  "taggedSpeedRatio": [
+    9,
+    10
+  ],
+  "defaultSpeedRatio": [
+    1,
+    1
+  ],
+  "candidate": "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-evaluation-raw-v1/report.json",
+  "attributes": "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-attributes-v2-run-raw-v1/report.json",
+  "output": "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-tagged90-fixed-path-screen-v1.json",
+  "bindings": {
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-evaluation-raw-v1/report.json": "5ae0a752c18415becb9fa252f6a52c291b48956059e194a6ecaefa9e845085c0",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-attributes-v2-run-raw-v1/report.json": "bf8d47666a89bacfa28474183a6818ce400fee2bdf2b75cd1d8e05cba5483c78",
+    "scripts/screen_osm_absent_entry_tagged_speed_v1.py": "181c8d3c2cd3c7b19ae3c5b4895d8215a951dec2676740451dabb134e863b3ef",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/provider-speed-policy-review-v1.json": "b3974218d02e2963a0cbe15487d2f7f17e9dc46ce92736f2c9561e4357221a05",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-attributes-v2-run-closed-v1.json": "93221b921a2e3c208d0ba5c2b8d946a556aa2bf43ee027340c12387020b0cda6",
+    "docs/evidence/coarse-osm-car-capacity-2026-11-01/absent-entry-paths-closed-v1.json": "049c039c805d8a05c3a38ef43ca3aff84999cf68543c55be88ef0383a9896931"
+  },
+  "scope": "One fixed90%-of-explicit-tagged-speed sensitivity on all83 new source-audited winner paths;defaults/local/signals unchanged. Ratio from the already reviewed matching-version published ORS source,not inferred from residuals or swept. No source primitive repricing/new optima/maps/model/provider/PBF/DB/app operation or accuracy admission. Current manifests/attributes/new path records only,no old arc-ID reuse. Metadata-only83-row host analysis within reserved100MiB;all228 closed6823071744B+prior64.5GB+scratch below72GiB. Hypothetical times do not establish actual driving speed or hosted provider settings."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "saved_restriction_shapes_inventory_complete",
+  "recipeSha256": "291a4c7ab325bf3f720cb133deb993370839e03e54298642000500c4645d05ea",
+  "sources": [
+    {
+      "source": "data/coarse-quality/us-osm-car-relation-metadata-v2-run-v1/unsupported-relations.jsonl",
+      "rows": 70376,
+      "shapes": {
+        "conditional-fallback": 9467,
+        "static-single-via-way-no": 46533,
+        "other-static-fallback": 13573,
+        "static-single-via-way-only": 803
+      },
+      "staticSingleViaOnlyKinds": {
+        "only_left_turn": 376,
+        "only_straight_on": 354,
+        "only_right_turn": 69,
+        "only_u_turn": 4
+      },
+      "selectedIdentityShapeDigest": "2af0d0678fbf17445fb01135561569adef35484e13e8d040e03374400692f8a8"
+    },
+    {
+      "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/deferred-relations.jsonl",
+      "rows": 4900,
+      "shapes": {
+        "via-node": 4078,
+        "static-single-via-way-no": 461,
+        "conditional-fallback": 229,
+        "other-static-fallback": 125,
+        "non-car": 3,
+        "static-single-via-way-only": 4
+      },
+      "staticSingleViaOnlyKinds": {
+        "only_right_turn": 3,
+        "only_left_turn": 1
+      },
+      "selectedIdentityShapeDigest": "73fd9d7fe62c81e6c75f6b5600b8237c73066adde5f84385987700a3e0650cc5"
+    }
+  ],
+  "hostSecondsIncludingBindingsReadClassifyAndWrite": 0.6038239169865847,
+  "sourcePbfReads": 0,
+  "countryGraphReads": 0,
+  "queries": 0,
+  "policyActivated": false,
+  "scope": "Complete saved national unsupported-relation and captured relation metadata shape counts only. A static single-via-way only shape is a potential prototype,not permission,join resolution,causal detour diagnosis or accuracy improvement. Every current closure remains. No coordinates/source constructor/query/provider/DB/app/parameter fit."
+}

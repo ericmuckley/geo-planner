@@ -1,0 +1,149 @@
+{
+  "status": "all_selected_lane_way_source_flag_lineage_verified",
+  "recipeSha256": "029050b072479cd8eeca23cb705d9e604dc9b9be2cbcd5b22b72d0a26ebbdc8d",
+  "wayRowsVisited": 4227238,
+  "selectedWaysChecked": 3292,
+  "counts": {
+    "original/lane-access": 3289,
+    "current/lane-access": 3292,
+    "original/conditional-or-way-restriction": 3
+  },
+  "storedFlagsMatchOriginalSourcePolicy": true,
+  "storedFlagsDifferFromCurrentRejectedPolicy": 3,
+  "mismatches": [
+    {
+      "id": 62806150,
+      "tags": {
+        "access:lanes": "no|yes|yes",
+        "bridge": "yes",
+        "hgv:conditional": "no @ (width >= 102\" AND (trailer:count = 2 OR trailer:length >= 48'))",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "40 mph",
+        "name": "Newport Road",
+        "oneway": "yes",
+        "ref": "PA 772",
+        "ref:penndot": "SR 0772",
+        "sidewalk": "no",
+        "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+        "surface": "asphalt"
+      },
+      "originalPolicy": {
+        "reason": "conditional-or-way-restriction",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "currentPolicy": {
+        "reason": "lane-access",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "proposedPolicy": {
+        "reason": null,
+        "forward": 64.37376,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "storedFlags": 1376,
+      "expectedOriginalFlags": 1376,
+      "expectedCurrentFlags": 1632
+    },
+    {
+      "id": 585780028,
+      "tags": {
+        "access:lanes": "no|yes|yes",
+        "hgv:conditional": "no @ (width >= 102\" AND (trailer:count = 2 OR trailer:length >= 48'))",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "40 mph",
+        "name": "Newport Road",
+        "oneway": "yes",
+        "ref": "PA 772",
+        "ref:penndot": "SR 0772",
+        "sidewalk": "no",
+        "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+        "surface": "asphalt"
+      },
+      "originalPolicy": {
+        "reason": "conditional-or-way-restriction",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "currentPolicy": {
+        "reason": "lane-access",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "proposedPolicy": {
+        "reason": null,
+        "forward": 64.37376,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "storedFlags": 1376,
+      "expectedOriginalFlags": 1376,
+      "expectedCurrentFlags": 1632
+    },
+    {
+      "id": 585780030,
+      "tags": {
+        "access:lanes": "no|yes|yes",
+        "hgv:conditional": "no @ (width >= 102\" AND (trailer:count = 2 OR trailer:length >= 48'))",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "40 mph",
+        "name": "Newport Road",
+        "oneway": "yes",
+        "ref": "PA 772",
+        "ref:penndot": "SR 0772",
+        "sidewalk": "no",
+        "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+        "surface": "asphalt"
+      },
+      "originalPolicy": {
+        "reason": "conditional-or-way-restriction",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "currentPolicy": {
+        "reason": "lane-access",
+        "forward": null,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "proposedPolicy": {
+        "reason": null,
+        "forward": 64.37376,
+        "backward": null,
+        "forward_default": false,
+        "backward_default": false
+      },
+      "storedFlags": 1376,
+      "expectedOriginalFlags": 1376,
+      "expectedCurrentFlags": 1632
+    }
+  ],
+  "sourceRowsModified": 0,
+  "coordinateReads": 0,
+  "sourcePbfReads": 0,
+  "graphConstructors": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "hostSecondsIncludingBindingsWayReadAndPolicyReview": 1.7002268340438604,
+  "scope": "Read-only captured changed-tag list and complete current country WAY group only. Existing conditional overlay normalized newly eligible ways but kept other original negative-reason flags. Every3292new lane candidate matches its ORIGINAL raw-tag source-policy flags and zero prior direction prices;current classification independently remains lane-access. Differences are historical stored labels,not changed source data or permission overrides. No coordinates/PBF/constructor/graph/query/provider/DB/app or speed fit. This reviews source lineage;it does not change the frozen eligibility policy."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-17",
+  "status": "generic_prototype_policy_before_measured_pilot",
+  "hypothesis": "Center-only display selection can omit reachable dry portions of a partially closed cell. A finite adjacent land center may supply a paid source-approved connector to a fixed quarter-cell sample without making the closed center traversable.",
+  "fixedPolicy": {
+    "candidates": "Only closed-center cells with no existing road coverage and no finite local arrival.",
+    "samples": [[0.25, 0.25], [0.75, 0.25], [0.25, 0.75], [0.75, 0.75]],
+    "sources": "Original finite open centers among the eight immediately adjacent cells, within the unchanged whole-second horizon.",
+    "price": "Existing connectorPrice, rounded upward to whole seconds, plus the original finite source arrival; sum must not exceed the horizon.",
+    "permission": "Existing generic landConnection must accept both the sample itself and the entire source-center-to-sample ray. No water-prefix allowance.",
+    "effect": "Coverage bit only. Times, land, links, parents, source labels, point timing and propagation remain unchanged. Newly covered cells can never serve as connector sources.",
+    "geometry": "Retain the existing union-of-covered-cells display approximation. A witness establishes a reachable sampled dry portion, not that the entire square is dry/reachable. Added whole-cell water paint is an explicit unresolved area/shore accuracy risk; this is not an exact shoreline or app-admission fix.",
+    "limits": "No new typed backing, same 64MiB query/1M heap/contour/JSON caps, periodic host checks, sealed V2 owns and clears all borrowed views on success and held exceptions."
+  },
+  "acceptanceBeforePilot": "Synthetic paid-time/horizon/water/uncertainty/disconnected-island/no-chaining/row-edge/parity/input-integrity/exception-release controls, strict standalone types, npm check/build. Then a separately frozen bounded pressure pilot with every added witness independently repriced and rechecked; no selected-place rule or partial accuracy claim.",
+  "accuracyAdmission": "All original 19 gates and all83/35/58 cases, source/shore/transfer/166 path/full-app/package/first-estimate/API/camera gates remain unchanged; prototype success cannot activate production.",
+  "deferred": "Source/price/access changes, fitted coefficients, parameter sweeps, reference/PBF acquisition, ferries, app/env/DB/dependencies/deployment."
+}

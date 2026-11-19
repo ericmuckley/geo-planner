@@ -1,0 +1,61 @@
+{
+  "status": "complete_explicit_lane_source_fact_overlay_passed",
+  "operation": "controls",
+  "sourceCounts": {
+    "ids": 143560,
+    "xy": 287120,
+    "anchors": 46881,
+    "flags": 46881,
+    "geometry": 177956,
+    "ways": 28995,
+    "arcs": 79118
+  },
+  "resultWays": 28995,
+  "resultFlags": 46881,
+  "resultPreClosureArcs": 79148,
+  "overlayCounts": {
+    "records": 28,
+    "changedGraphWays": 28,
+    "newPreClosureArcs": 30
+  },
+  "nodeFlagsChanged": 0,
+  "sourceRestrictionFactsChanged": false,
+  "allOldSourceRowsAndArcCostsExact": true,
+  "newNativePricedArcsIndependentlyRebuilt": 30,
+  "maximumNewPrimitiveMs": 15126,
+  "maximumNewMacroMs": 31112,
+  "newPreClosureCostOverflows": 0,
+  "selectedNodeFlagChanges": [],
+  "insertions": {
+    "file": "arc-insertions.u32",
+    "groups": 28,
+    "bytes": 448,
+    "sha256": "064d643fa89f531037bacd6319012bad9790fc1fc74401f75eb7f8fcb71fc7fd",
+    "format": "U32LE quadruples:way index,old insertion,new first,new count"
+  },
+  "overlayBytes": 3507457,
+  "factRoster": {
+    "cost-facts/ways-0000.bin": {
+      "bytes": 927840,
+      "sha256": "36ddfd52860876a920d06cfb5df97e819575b91ae47c810a7489691edbec88c9"
+    },
+    "cost-facts/flags-0000.bin": {
+      "bytes": 46881,
+      "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+    },
+    "cost-facts/arcs-0000.bin": {
+      "bytes": 2532736,
+      "sha256": "d1bdc52d61a119b48b1fa2fe3c8ab583d09f910f4251a84e83e63d9e19f5edf6"
+    }
+  },
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "routingQueries": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "nationalFactOverlayBuilt": false,
+  "runtimeGraphBuilt": false,
+  "etaOrAppAccepted": false,
+  "scope": "Complete current-policy typed ways/flags/arcs overlay plus independent all-old-row and all-new-per-arc primitive/native-price audit. Source IDs/coordinates/anchors/full geometry remain unchanged authenticated typed inputs. All existing node/relation flags retained exactly;this way-only overlay never changes them. Other old facts/turns/closures remain base inputs, not copied or implicitly discarded. Preclosure facts only, no resolved/CSR/spatial/paid-geometry/storage/runtime graph or route/ETA/physical/app/package acceptance. No PBF/constructor/provider/application DB/model/deployment operation.",
+  "workerSecondsIncludingBindingsMergeAndAudit": 0.18173958302941173
+}

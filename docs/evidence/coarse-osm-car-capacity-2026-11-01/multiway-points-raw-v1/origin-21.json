@@ -1,0 +1,118 @@
+{
+  "origin": [
+    -119.229,
+    34.2746
+  ],
+  "rows": [
+    {
+      "id": "ventura--palm-springs",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "destination": {
+        "lon": -116.5453,
+        "lat": 33.8303
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 184.175,
+      "baselinePointMinutes": 164.53500000000005,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 162.5282,
+      "baseline": {
+        "pointMinutes": 172.02666666666667,
+        "cellMinutes": 171.3433333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.091666666666667,
+          "road": 168.24166666666662,
+          "local": 0,
+          "transfer": 1.0783333333333334,
+          "destination": 0.615
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 165.12083333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -19.639999999999958,
+      "candidateErrorMinutes": -12.14833333333334,
+      "absoluteErrorChangeMinutes": 6.905833333333334,
+      "estimateFailure": null
+    },
+    {
+      "id": "ventura--san-clemente",
+      "set": "regional",
+      "origin": {
+        "lon": -119.229,
+        "lat": 34.2746
+      },
+      "destination": {
+        "lon": -117.612,
+        "lat": 33.4269
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 140.06,
+      "baselinePointMinutes": 125.75999999999999,
+      "expectedMapReachable": true,
+      "valhallaMinutes": 122.53621666666666,
+      "baseline": {
+        "pointMinutes": 134.3883333333333,
+        "cellMinutes": 132.8433333333333,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 2.091666666666667,
+          "road": 129.49166666666665,
+          "local": 0,
+          "transfer": 1.2600000000000002,
+          "destination": 1.545
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 134.51458333333332,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": -14.300000000000011,
+      "candidateErrorMinutes": -5.6716666666667095,
+      "absoluteErrorChangeMinutes": -0.12625000000002728,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "ventura--palm-springs",
+      "previousPointTicks": 79258,
+      "pointTicks": 79258,
+      "previousRoadTicks": 79258,
+      "bestRoadTicks": 79258,
+      "frozenLocalGridTicks": 79953,
+      "frozenPublicShaded": true
+    },
+    {
+      "id": "ventura--san-clemente",
+      "previousPointTicks": 67610,
+      "pointTicks": 64567,
+      "previousRoadTicks": 67610,
+      "bestRoadTicks": 64567,
+      "frozenLocalGridTicks": 68443,
+      "frozenPublicShaded": true
+    }
+  ],
+  "fieldStats": {
+    "settles": 1907270,
+    "maximumHeapEntries": 2261,
+    "maximumBackingBufferBytes": 50895654,
+    "returnedBackingBufferBytes": 50759250,
+    "seedBackingBufferBytes": 7040,
+    "starts": 110
+  },
+  "hostFieldAndFinishesMs": 571.3259580000013,
+  "afterReleaseArrayBuffers": 144138687
+}

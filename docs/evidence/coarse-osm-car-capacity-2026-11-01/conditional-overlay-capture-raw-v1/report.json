@@ -1,0 +1,752 @@
+{
+  "status": "complete_captured_conditional_overlay_native_merge_audit_passed",
+  "originalWaysChecked": 28995,
+  "originalFlagsChecked": 46881,
+  "originalArcsChecked": 78811,
+  "changedWayRows": 108,
+  "addedNativePricedArcs": 307,
+  "changedNodeFlags": 0,
+  "unsupportedSourceRelationsRead": 819,
+  "relationClosedNodesRetained": 19,
+  "allOldSourceRowsAndArcCostsExact": true,
+  "allNewNativePricedArcsChecked": true,
+  "previousConditionalPackedFieldsByteIdentical": [
+    {
+      "name": "xy.i32",
+      "bytes": 375048,
+      "sha256": "c5b7516c13ca2ffa7ef40e5c821a70062968f67681a2f20608d0ea7b1a96383e"
+    },
+    {
+      "name": "offsets.u24",
+      "bytes": 140646,
+      "sha256": "cd64f5ce588e7c875512c69af20845013517a4760d77d9fdc875dc3cf1f5b2df"
+    },
+    {
+      "name": "targets.u24",
+      "bytes": 230166,
+      "sha256": "d1e4a02d06ca411a089914d1fb22c98b5a755043507d791141c8b8a78d2e40fc"
+    },
+    {
+      "name": "costs.u16",
+      "bytes": 153444,
+      "sha256": "92e99b59afa8043ce28bd4d2b914dab22e675cec0919912e8e88339f9db63c17"
+    },
+    {
+      "name": "cost-overflow-arcs.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "cost-overflow-ticks.u32",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "reverse.u8",
+      "bytes": 76722,
+      "sha256": "ec2c22e0670c472f2f6564382d52aab73f34d7e1d76a6ecf958bb940a73f6485"
+    },
+    {
+      "name": "reverse-overflow-arcs.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "reverse-overflow-targets.u24",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "node-flags.u8",
+      "bytes": 46881,
+      "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+    },
+    {
+      "name": "forbidden-turns.u24",
+      "bytes": 16038,
+      "sha256": "6814aa6fe6b0dd73e8653591bfb403da6f5c372050f9510f763ae6a681ea6198"
+    }
+  ],
+  "previousConditionalPaidFixturesExact": 82,
+  "previousConditionalFinite": 77,
+  "previousConditionalUnavailable": 5,
+  "queriesExecutedHere": 0,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "providerRequests": 0,
+  "applicationDbReads": 0,
+  "nationalGraphMerged": false,
+  "appActivated": false,
+  "overlayBytes": 3506497,
+  "factRoster": {
+    "cost-facts/ways-0000.bin": {
+      "bytes": 927840,
+      "sha256": "48a235d74d6d092c119d293d8bcc958ac91895bd14c7e294b3cef26256858368"
+    },
+    "cost-facts/flags-0000.bin": {
+      "bytes": 46881,
+      "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+    },
+    "cost-facts/arcs-0000.bin": {
+      "bytes": 2531776,
+      "sha256": "a003d6e448ec2d006e452feabda7b138afc607ae40c8308b7bbdc9d6eb4bd849"
+    }
+  },
+  "overlayCounts": {
+    "records": 108,
+    "changedGraphWays": 108,
+    "newPreClosureArcs": 307
+  },
+  "insertions": [
+    {
+      "way": 2,
+      "oldArcInsertion": 12,
+      "newArcFirst": 12,
+      "newArcCount": 2
+    },
+    {
+      "way": 6,
+      "oldArcInsertion": 17,
+      "newArcFirst": 19,
+      "newArcCount": 2
+    },
+    {
+      "way": 1051,
+      "oldArcInsertion": 4457,
+      "newArcFirst": 4461,
+      "newArcCount": 10
+    },
+    {
+      "way": 4328,
+      "oldArcInsertion": 13568,
+      "newArcFirst": 13582,
+      "newArcCount": 2
+    },
+    {
+      "way": 4332,
+      "oldArcInsertion": 13571,
+      "newArcFirst": 13587,
+      "newArcCount": 8
+    },
+    {
+      "way": 4334,
+      "oldArcInsertion": 13577,
+      "newArcFirst": 13601,
+      "newArcCount": 4
+    },
+    {
+      "way": 4342,
+      "oldArcInsertion": 13661,
+      "newArcFirst": 13689,
+      "newArcCount": 4
+    },
+    {
+      "way": 4361,
+      "oldArcInsertion": 13725,
+      "newArcFirst": 13757,
+      "newArcCount": 2
+    },
+    {
+      "way": 4393,
+      "oldArcInsertion": 13804,
+      "newArcFirst": 13838,
+      "newArcCount": 2
+    },
+    {
+      "way": 4394,
+      "oldArcInsertion": 13804,
+      "newArcFirst": 13840,
+      "newArcCount": 2
+    },
+    {
+      "way": 5183,
+      "oldArcInsertion": 15749,
+      "newArcFirst": 15787,
+      "newArcCount": 6
+    },
+    {
+      "way": 5189,
+      "oldArcInsertion": 15765,
+      "newArcFirst": 15809,
+      "newArcCount": 2
+    },
+    {
+      "way": 5627,
+      "oldArcInsertion": 16864,
+      "newArcFirst": 16910,
+      "newArcCount": 2
+    },
+    {
+      "way": 7021,
+      "oldArcInsertion": 20075,
+      "newArcFirst": 20123,
+      "newArcCount": 2
+    },
+    {
+      "way": 7026,
+      "oldArcInsertion": 20087,
+      "newArcFirst": 20137,
+      "newArcCount": 2
+    },
+    {
+      "way": 7237,
+      "oldArcInsertion": 20965,
+      "newArcFirst": 21017,
+      "newArcCount": 6
+    },
+    {
+      "way": 7238,
+      "oldArcInsertion": 20965,
+      "newArcFirst": 21023,
+      "newArcCount": 2
+    },
+    {
+      "way": 7252,
+      "oldArcInsertion": 20999,
+      "newArcFirst": 21059,
+      "newArcCount": 4
+    },
+    {
+      "way": 7385,
+      "oldArcInsertion": 21397,
+      "newArcFirst": 21461,
+      "newArcCount": 8
+    },
+    {
+      "way": 7952,
+      "oldArcInsertion": 22813,
+      "newArcFirst": 22885,
+      "newArcCount": 2
+    },
+    {
+      "way": 7953,
+      "oldArcInsertion": 22813,
+      "newArcFirst": 22887,
+      "newArcCount": 4
+    },
+    {
+      "way": 8021,
+      "oldArcInsertion": 22978,
+      "newArcFirst": 23056,
+      "newArcCount": 2
+    },
+    {
+      "way": 8413,
+      "oldArcInsertion": 24171,
+      "newArcFirst": 24251,
+      "newArcCount": 2
+    },
+    {
+      "way": 9516,
+      "oldArcInsertion": 27216,
+      "newArcFirst": 27298,
+      "newArcCount": 4
+    },
+    {
+      "way": 9729,
+      "oldArcInsertion": 28044,
+      "newArcFirst": 28130,
+      "newArcCount": 2
+    },
+    {
+      "way": 9730,
+      "oldArcInsertion": 28044,
+      "newArcFirst": 28132,
+      "newArcCount": 2
+    },
+    {
+      "way": 9734,
+      "oldArcInsertion": 28050,
+      "newArcFirst": 28140,
+      "newArcCount": 4
+    },
+    {
+      "way": 9853,
+      "oldArcInsertion": 28356,
+      "newArcFirst": 28450,
+      "newArcCount": 2
+    },
+    {
+      "way": 10196,
+      "oldArcInsertion": 29080,
+      "newArcFirst": 29176,
+      "newArcCount": 2
+    },
+    {
+      "way": 10673,
+      "oldArcInsertion": 30412,
+      "newArcFirst": 30510,
+      "newArcCount": 4
+    },
+    {
+      "way": 10675,
+      "oldArcInsertion": 30414,
+      "newArcFirst": 30516,
+      "newArcCount": 2
+    },
+    {
+      "way": 10724,
+      "oldArcInsertion": 30548,
+      "newArcFirst": 30652,
+      "newArcCount": 2
+    },
+    {
+      "way": 10726,
+      "oldArcInsertion": 30550,
+      "newArcFirst": 30656,
+      "newArcCount": 2
+    },
+    {
+      "way": 10730,
+      "oldArcInsertion": 30556,
+      "newArcFirst": 30664,
+      "newArcCount": 2
+    },
+    {
+      "way": 10732,
+      "oldArcInsertion": 30558,
+      "newArcFirst": 30668,
+      "newArcCount": 2
+    },
+    {
+      "way": 10734,
+      "oldArcInsertion": 30560,
+      "newArcFirst": 30672,
+      "newArcCount": 2
+    },
+    {
+      "way": 10735,
+      "oldArcInsertion": 30560,
+      "newArcFirst": 30674,
+      "newArcCount": 2
+    },
+    {
+      "way": 10738,
+      "oldArcInsertion": 30564,
+      "newArcFirst": 30680,
+      "newArcCount": 2
+    },
+    {
+      "way": 10739,
+      "oldArcInsertion": 30564,
+      "newArcFirst": 30682,
+      "newArcCount": 2
+    },
+    {
+      "way": 10785,
+      "oldArcInsertion": 30740,
+      "newArcFirst": 30860,
+      "newArcCount": 2
+    },
+    {
+      "way": 10786,
+      "oldArcInsertion": 30740,
+      "newArcFirst": 30862,
+      "newArcCount": 2
+    },
+    {
+      "way": 10787,
+      "oldArcInsertion": 30740,
+      "newArcFirst": 30864,
+      "newArcCount": 2
+    },
+    {
+      "way": 10795,
+      "oldArcInsertion": 30756,
+      "newArcFirst": 30882,
+      "newArcCount": 2
+    },
+    {
+      "way": 10797,
+      "oldArcInsertion": 30758,
+      "newArcFirst": 30886,
+      "newArcCount": 4
+    },
+    {
+      "way": 11108,
+      "oldArcInsertion": 31750,
+      "newArcFirst": 31882,
+      "newArcCount": 2
+    },
+    {
+      "way": 11109,
+      "oldArcInsertion": 31750,
+      "newArcFirst": 31884,
+      "newArcCount": 4
+    },
+    {
+      "way": 11110,
+      "oldArcInsertion": 31750,
+      "newArcFirst": 31888,
+      "newArcCount": 2
+    },
+    {
+      "way": 11222,
+      "oldArcInsertion": 32111,
+      "newArcFirst": 32251,
+      "newArcCount": 4
+    },
+    {
+      "way": 11223,
+      "oldArcInsertion": 32111,
+      "newArcFirst": 32255,
+      "newArcCount": 2
+    },
+    {
+      "way": 11224,
+      "oldArcInsertion": 32111,
+      "newArcFirst": 32257,
+      "newArcCount": 2
+    },
+    {
+      "way": 11226,
+      "oldArcInsertion": 32115,
+      "newArcFirst": 32263,
+      "newArcCount": 2
+    },
+    {
+      "way": 11227,
+      "oldArcInsertion": 32115,
+      "newArcFirst": 32265,
+      "newArcCount": 2
+    },
+    {
+      "way": 11229,
+      "oldArcInsertion": 32117,
+      "newArcFirst": 32269,
+      "newArcCount": 4
+    },
+    {
+      "way": 11234,
+      "oldArcInsertion": 32129,
+      "newArcFirst": 32285,
+      "newArcCount": 6
+    },
+    {
+      "way": 11236,
+      "oldArcInsertion": 32131,
+      "newArcFirst": 32293,
+      "newArcCount": 4
+    },
+    {
+      "way": 11237,
+      "oldArcInsertion": 32131,
+      "newArcFirst": 32297,
+      "newArcCount": 4
+    },
+    {
+      "way": 11239,
+      "oldArcInsertion": 32133,
+      "newArcFirst": 32303,
+      "newArcCount": 4
+    },
+    {
+      "way": 11241,
+      "oldArcInsertion": 32135,
+      "newArcFirst": 32309,
+      "newArcCount": 2
+    },
+    {
+      "way": 11243,
+      "oldArcInsertion": 32139,
+      "newArcFirst": 32315,
+      "newArcCount": 2
+    },
+    {
+      "way": 11247,
+      "oldArcInsertion": 32149,
+      "newArcFirst": 32327,
+      "newArcCount": 4
+    },
+    {
+      "way": 11249,
+      "oldArcInsertion": 32151,
+      "newArcFirst": 32333,
+      "newArcCount": 2
+    },
+    {
+      "way": 11250,
+      "oldArcInsertion": 32151,
+      "newArcFirst": 32335,
+      "newArcCount": 2
+    },
+    {
+      "way": 11251,
+      "oldArcInsertion": 32151,
+      "newArcFirst": 32337,
+      "newArcCount": 4
+    },
+    {
+      "way": 11254,
+      "oldArcInsertion": 32155,
+      "newArcFirst": 32345,
+      "newArcCount": 4
+    },
+    {
+      "way": 11308,
+      "oldArcInsertion": 32345,
+      "newArcFirst": 32539,
+      "newArcCount": 4
+    },
+    {
+      "way": 11309,
+      "oldArcInsertion": 32345,
+      "newArcFirst": 32543,
+      "newArcCount": 4
+    },
+    {
+      "way": 11313,
+      "oldArcInsertion": 32357,
+      "newArcFirst": 32559,
+      "newArcCount": 1
+    },
+    {
+      "way": 12206,
+      "oldArcInsertion": 35122,
+      "newArcFirst": 35325,
+      "newArcCount": 2
+    },
+    {
+      "way": 12207,
+      "oldArcInsertion": 35122,
+      "newArcFirst": 35327,
+      "newArcCount": 2
+    },
+    {
+      "way": 12208,
+      "oldArcInsertion": 35122,
+      "newArcFirst": 35329,
+      "newArcCount": 4
+    },
+    {
+      "way": 12209,
+      "oldArcInsertion": 35122,
+      "newArcFirst": 35333,
+      "newArcCount": 4
+    },
+    {
+      "way": 12211,
+      "oldArcInsertion": 35126,
+      "newArcFirst": 35341,
+      "newArcCount": 2
+    },
+    {
+      "way": 12213,
+      "oldArcInsertion": 35132,
+      "newArcFirst": 35349,
+      "newArcCount": 4
+    },
+    {
+      "way": 13353,
+      "oldArcInsertion": 37974,
+      "newArcFirst": 38195,
+      "newArcCount": 2
+    },
+    {
+      "way": 13449,
+      "oldArcInsertion": 38227,
+      "newArcFirst": 38450,
+      "newArcCount": 2
+    },
+    {
+      "way": 13615,
+      "oldArcInsertion": 38693,
+      "newArcFirst": 38918,
+      "newArcCount": 2
+    },
+    {
+      "way": 13617,
+      "oldArcInsertion": 38693,
+      "newArcFirst": 38920,
+      "newArcCount": 2
+    },
+    {
+      "way": 13618,
+      "oldArcInsertion": 38693,
+      "newArcFirst": 38922,
+      "newArcCount": 2
+    },
+    {
+      "way": 13619,
+      "oldArcInsertion": 38693,
+      "newArcFirst": 38924,
+      "newArcCount": 4
+    },
+    {
+      "way": 13620,
+      "oldArcInsertion": 38693,
+      "newArcFirst": 38928,
+      "newArcCount": 2
+    },
+    {
+      "way": 15523,
+      "oldArcInsertion": 43288,
+      "newArcFirst": 43525,
+      "newArcCount": 6
+    },
+    {
+      "way": 15626,
+      "oldArcInsertion": 43517,
+      "newArcFirst": 43760,
+      "newArcCount": 2
+    },
+    {
+      "way": 15627,
+      "oldArcInsertion": 43517,
+      "newArcFirst": 43762,
+      "newArcCount": 2
+    },
+    {
+      "way": 15796,
+      "oldArcInsertion": 44037,
+      "newArcFirst": 44284,
+      "newArcCount": 6
+    },
+    {
+      "way": 15903,
+      "oldArcInsertion": 44315,
+      "newArcFirst": 44568,
+      "newArcCount": 4
+    },
+    {
+      "way": 16169,
+      "oldArcInsertion": 45158,
+      "newArcFirst": 45415,
+      "newArcCount": 2
+    },
+    {
+      "way": 16852,
+      "oldArcInsertion": 47570,
+      "newArcFirst": 47829,
+      "newArcCount": 2
+    },
+    {
+      "way": 18085,
+      "oldArcInsertion": 50917,
+      "newArcFirst": 51178,
+      "newArcCount": 4
+    },
+    {
+      "way": 18140,
+      "oldArcInsertion": 51105,
+      "newArcFirst": 51370,
+      "newArcCount": 2
+    },
+    {
+      "way": 19375,
+      "oldArcInsertion": 54412,
+      "newArcFirst": 54679,
+      "newArcCount": 2
+    },
+    {
+      "way": 20631,
+      "oldArcInsertion": 58143,
+      "newArcFirst": 58412,
+      "newArcCount": 2
+    },
+    {
+      "way": 21223,
+      "oldArcInsertion": 59441,
+      "newArcFirst": 59712,
+      "newArcCount": 2
+    },
+    {
+      "way": 21567,
+      "oldArcInsertion": 60304,
+      "newArcFirst": 60577,
+      "newArcCount": 2
+    },
+    {
+      "way": 21790,
+      "oldArcInsertion": 60803,
+      "newArcFirst": 61078,
+      "newArcCount": 1
+    },
+    {
+      "way": 21791,
+      "oldArcInsertion": 60803,
+      "newArcFirst": 61079,
+      "newArcCount": 1
+    },
+    {
+      "way": 22756,
+      "oldArcInsertion": 63015,
+      "newArcFirst": 63292,
+      "newArcCount": 4
+    },
+    {
+      "way": 22757,
+      "oldArcInsertion": 63015,
+      "newArcFirst": 63296,
+      "newArcCount": 1
+    },
+    {
+      "way": 23467,
+      "oldArcInsertion": 64584,
+      "newArcFirst": 64866,
+      "newArcCount": 2
+    },
+    {
+      "way": 24411,
+      "oldArcInsertion": 67061,
+      "newArcFirst": 67345,
+      "newArcCount": 1
+    },
+    {
+      "way": 26382,
+      "oldArcInsertion": 72133,
+      "newArcFirst": 72418,
+      "newArcCount": 4
+    },
+    {
+      "way": 26383,
+      "oldArcInsertion": 72133,
+      "newArcFirst": 72422,
+      "newArcCount": 2
+    },
+    {
+      "way": 26879,
+      "oldArcInsertion": 73251,
+      "newArcFirst": 73542,
+      "newArcCount": 1
+    },
+    {
+      "way": 26882,
+      "oldArcInsertion": 73253,
+      "newArcFirst": 73545,
+      "newArcCount": 1
+    },
+    {
+      "way": 27521,
+      "oldArcInsertion": 74962,
+      "newArcFirst": 75255,
+      "newArcCount": 2
+    },
+    {
+      "way": 27542,
+      "oldArcInsertion": 75029,
+      "newArcFirst": 75324,
+      "newArcCount": 2
+    },
+    {
+      "way": 27786,
+      "oldArcInsertion": 75672,
+      "newArcFirst": 75969,
+      "newArcCount": 2
+    },
+    {
+      "way": 28123,
+      "oldArcInsertion": 76679,
+      "newArcFirst": 76978,
+      "newArcCount": 4
+    },
+    {
+      "way": 28456,
+      "oldArcInsertion": 77369,
+      "newArcFirst": 77672,
+      "newArcCount": 4
+    }
+  ],
+  "scope": "Complete captured native-cost/fixed-width streaming merge audit, all old source rows preserved and all new prices/normalized way flags checked. Every previous conditional packed byte/82 paid fixtures identical; previous77 finite/5 unavailable results reused by byte identity, no new search or witness claim. Selected source IDs/places are validation only. No country graph/source acquisition/provider/ETA/app admission.",
+  "workerSecondsIncludingBindingsMergeAndAudit": 1.9072782510193065
+}

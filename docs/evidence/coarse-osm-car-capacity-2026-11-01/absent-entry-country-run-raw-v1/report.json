@@ -1,0 +1,78 @@
+{
+  "status": "complete_typed_absent_member_no_turn_resolution",
+  "baselineAudit": {
+    "status": "independent_complete_entry_resolution_audit_passed",
+    "waysChecked": 4227238,
+    "preArcsChecked": 9878318,
+    "candidateRulesChecked": 46533,
+    "decisionsChecked": 46533,
+    "entryPairsChecked": 22964,
+    "originalClosureIdsChecked": 149699,
+    "overrideClosureIdsChecked": 99208,
+    "originalPostArcs": 9660787,
+    "candidatePostArcs": 9744462,
+    "allPairsUseActualSourceNodeIdentity": true,
+    "fallbackUnionExact": true,
+    "nativeLibraryExecutions": 0,
+    "sourcePbfReads": 0,
+    "scope": "Every metadata decision/pair/closure and pre-arc field checked with dense typed source arrays and bounded per-rule maps. Costs are range checked; original geometry/cost semantic seals remain inherited. No graph/package/ETA admission."
+  },
+  "baselineAuditSeconds": 11.65369508904405,
+  "waysChecked": 4227238,
+  "completePreArcsChecked": 9878318,
+  "rulesChecked": 46533,
+  "retainedEntryRules": 23138,
+  "inactiveMissingMemberRules": 23257,
+  "remainingNoJoinFallbackRules": 138,
+  "constantFallbackWayIdsRetained": 39869,
+  "previousClosureIds": 99208,
+  "newClosureIds": 40259,
+  "previousFinalArcs": 9744462,
+  "newFinalArcs": 9807359,
+  "entryPairsByteIdentical": true,
+  "closureSubset": true,
+  "allOldAllowedTransitionsRetainedWithUnchangedSourceFacts": true,
+  "missingRoleMasks": {
+    "1": 272,
+    "2": 19507,
+    "3": 320,
+    "4": 623,
+    "5": 732,
+    "6": 696,
+    "7": 1107
+  },
+  "missingMemberOccurrencesOutsideSelectedWays": 26587,
+  "missingMemberOccurrencesWithNoPreArcs": 632,
+  "decisionStatusSemantics": {
+    "0": "existing entry ban retained",
+    "2": "no join: old whole-member fallback retained",
+    "3": "essential preclosure leg absent: this closure contribution omitted"
+  },
+  "secondsIncludingBaselineAndResolution": 21.650306885014288,
+  "sourcePbfReads": 0,
+  "sourceConstructorExecutions": 0,
+  "nativeKernelExecutions": 0,
+  "routingQueries": 0,
+  "sourceCostsOrNodeFlagsChanged": false,
+  "appActivated": false,
+  "scope": "New closure metadata only. Complete PRE-relation-closure facts and every frozen native baseline decision/pair/closure audited first. All other union contributors/conditional/only/unknown constraints retained. No post-closure presence inference, national node dictionary, graph construction/query/ETA/app or geographic rule.",
+  "assets": {
+    "resolved/closures-0000.bin": {
+      "bytes": 322072,
+      "sha256": "26042b72e198ec2413d04c6cff647cc8c55a29fc8471c27d15f0837932577f24"
+    },
+    "resolved/decisions.bin": {
+      "bytes": 744528,
+      "sha256": "81109719d93707090297207fe59e08b3f95f7f88efbbcc680db9d116a4bff532"
+    },
+    "resolved/entry-pairs-pre.u32": {
+      "bytes": 183712,
+      "sha256": "bd73e993e535b63cd5b148c7715ae8b1e7fa1ed463f6017ac03c270e9027b6b2"
+    },
+    "resolved/inactive-members.bin": {
+      "bytes": 372112,
+      "sha256": "58b381f698895b6837f7c52689b82ac17295edfe97f9bd6cae031f00cea4f7fa"
+    }
+  },
+  "workerSecondsIncludingBindingsAuditAndResolution": 22.12725263601169
+}

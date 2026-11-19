@@ -1,0 +1,11 @@
+{
+  "status": "host_import_stopped_before_recipe_or_output",
+  "error": "ModuleNotFoundError: No module named 'import_roads'",
+  "cause": "Host command omitted routing from PYTHONPATH; no script body or recipe verification executed.",
+  "recipeSha256": "ac3ffea75592c6886205ccc93c54ba255f2304c5b1acdcaa7dd4095bb541998c",
+  "workerCreated": false,
+  "outputRootCreated": false,
+  "sourcePbfReads": 0,
+  "recipeChanged": false,
+  "correction": "PYTHONPATH=scripts:routing with same untouched unused recipe/producer"
+}

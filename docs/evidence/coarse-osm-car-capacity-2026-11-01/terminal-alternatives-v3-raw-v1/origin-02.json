@@ -1,0 +1,434 @@
+{
+  "origin": [
+    -113.994,
+    46.8721
+  ],
+  "rows": [
+    {
+      "id": "missoula-mt-360-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -108.98697,
+        "lat": 47.05684
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 311.0183333333333,
+      "baselinePointMinutes": 350.09666666666675,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 336.36500000000035,
+        "cellMinutes": 336.25000000000034,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 334.03333333333313,
+          "local": 0,
+          "transfer": 0.5,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 286.7083333333333,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 39.07833333333343,
+      "candidateErrorMinutes": 25.346666666667033,
+      "absoluteErrorChangeMinutes": -1.0366666666670312,
+      "estimateFailure": null
+    },
+    {
+      "id": "missoula-mt-360-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -108.96939,
+        "lat": 48.57573
+      },
+      "budgetMinutes": 360,
+      "referenceMinutes": 337.455,
+      "baselinePointMinutes": 370.06166666666644,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 354.53000000000014,
+        "cellMinutes": 354.5283333333335,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 351.8916666666665,
+          "local": 0,
+          "transfer": 0.805,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 321.2625,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 32.606666666666456,
+      "candidateErrorMinutes": 17.07500000000016,
+      "absoluteErrorChangeMinutes": -0.8825000000001637,
+      "estimateFailure": null
+    },
+    {
+      "id": "missoula-mt-600-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -111.90475,
+        "lat": 39.31708
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 569.1183333333333,
+      "baselinePointMinutes": 590.413333333334,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 598.0383333333338,
+        "cellMinutes": 597.5833333333337,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 594.3183333333329,
+          "local": 0,
+          "transfer": 1.4333333333333333,
+          "destination": 0.455
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 535.0666666666667,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "correct"
+      },
+      "baselineErrorMinutes": 21.29500000000064,
+      "candidateErrorMinutes": 28.920000000000414,
+      "absoluteErrorChangeMinutes": 5.131666666666206,
+      "estimateFailure": null
+    },
+    {
+      "id": "missoula-mt-600-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -110.79103,
+        "lat": 39.59621
+      },
+      "budgetMinutes": 600,
+      "referenceMinutes": 579.4066666666666,
+      "baselinePointMinutes": 614.1683333333334,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 619.7283333333331,
+        "cellMinutes": 615.5049999999998,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 615.7283333333334,
+          "local": 0,
+          "transfer": 2.166666666666667,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "missedReachable"
+      },
+      "candidate": {
+        "pointMinutes": 635.1979166666666,
+        "predictedReachable": false,
+        "pathComponents": null,
+        "classification": "missedReachable"
+      },
+      "baselineErrorMinutes": 34.76166666666677,
+      "candidateErrorMinutes": 40.32166666666649,
+      "absoluteErrorChangeMinutes": 15.469583333333503,
+      "estimateFailure": null
+    },
+    {
+      "id": "missoula-mt-720-inside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -123.29443,
+        "lat": 42.7739
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 783.0083333333333,
+      "baselinePointMinutes": 710.606666666668,
+      "expectedMapReachable": true,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 716.9950000000018,
+        "cellMinutes": 716.3283333333351,
+        "predictedReachable": true,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 712.3783333333339,
+          "local": 0,
+          "transfer": 2.783333333333333,
+          "destination": 0.0016666666666666668
+        },
+        "classification": "falseReachable"
+      },
+      "candidate": {
+        "pointMinutes": 687.7083333333334,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -72.40166666666528,
+      "candidateErrorMinutes": -66.0133333333315,
+      "absoluteErrorChangeMinutes": 29.286666666668452,
+      "estimateFailure": null
+    },
+    {
+      "id": "missoula-mt-720-outside",
+      "set": "frontier",
+      "origin": {
+        "lon": -113.994,
+        "lat": 46.8721
+      },
+      "destination": {
+        "lon": -124.22414,
+        "lat": 43.47093
+      },
+      "budgetMinutes": 720,
+      "referenceMinutes": 799.62,
+      "baselinePointMinutes": 730.0400000000009,
+      "expectedMapReachable": false,
+      "valhallaMinutes": null,
+      "baseline": {
+        "pointMinutes": 730.6816666666679,
+        "cellMinutes": 730.6816666666679,
+        "predictedReachable": false,
+        "pathComponents": {
+          "origin": 1.8316666666666668,
+          "road": 725.6133333333336,
+          "local": 0,
+          "transfer": 3.236666666666667,
+          "destination": 0
+        },
+        "classification": "correct"
+      },
+      "candidate": {
+        "pointMinutes": 705.79375,
+        "predictedReachable": true,
+        "pathComponents": null,
+        "classification": "falseReachable"
+      },
+      "baselineErrorMinutes": -69.57999999999913,
+      "candidateErrorMinutes": -68.93833333333214,
+      "absoluteErrorChangeMinutes": 24.88791666666782,
+      "estimateFailure": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "missoula-mt-360-inside",
+      "previousPointTicks": 137620,
+      "pointTicks": 137620,
+      "previousRoadTicks": 137620,
+      "bestRoadTicks": 137620,
+      "terminalChoices": 1,
+      "winningTerminal": {
+        "origin": [
+          -108.98697,
+          47.05684
+        ],
+        "snap": {
+          "canonicalArc": 8999570,
+          "segment": 15,
+          "segmentFraction": 0.6235424119160884,
+          "coordinate": [
+            -108.98676072533073,
+            47.05737124028617
+          ],
+          "distanceMeters": 61.16165289992245,
+          "forwardProgress": 0.7565372170866655,
+          "backwardProgress": 0.7565372170866655
+        },
+        "connectorMeters": 61.16165289959765,
+        "connectorTicks": 71,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "missoula-mt-360-outside",
+      "previousPointTicks": 154206,
+      "pointTicks": 154206,
+      "previousRoadTicks": 154206,
+      "bestRoadTicks": 154206,
+      "terminalChoices": 1,
+      "winningTerminal": {
+        "origin": [
+          -108.96939,
+          48.57573
+        ],
+        "snap": {
+          "canonicalArc": 9003945,
+          "segment": 0,
+          "segmentFraction": 0.6873327355943121,
+          "coordinate": [
+            -108.96942170635783,
+            48.57561061533862
+          ],
+          "distanceMeters": 13.478370805899482,
+          "forwardProgress": 0.20794607688454145,
+          "backwardProgress": 0.20794607688454145
+        },
+        "connectorMeters": 13.478370806326724,
+        "connectorTicks": 16,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "missoula-mt-600-inside",
+      "previousPointTicks": 256832,
+      "pointTicks": 256832,
+      "previousRoadTicks": 256832,
+      "bestRoadTicks": 256832,
+      "terminalChoices": 1,
+      "winningTerminal": {
+        "origin": [
+          -111.90475,
+          39.31708
+        ],
+        "snap": {
+          "canonicalArc": 1826821,
+          "segment": 1,
+          "segmentFraction": 0.6843856976047746,
+          "coordinate": [
+            -111.90421946417321,
+            39.317302051271426
+          ],
+          "distanceMeters": 51.890735391992706,
+          "forwardProgress": 0.7049595024393271,
+          "backwardProgress": 0.7049595024393271
+        },
+        "connectorMeters": 51.89073539174045,
+        "connectorTicks": 60,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "missoula-mt-600-outside",
+      "previousPointTicks": 304895,
+      "pointTicks": 304895,
+      "previousRoadTicks": 304895,
+      "bestRoadTicks": 304895,
+      "terminalChoices": 45,
+      "winningTerminal": {
+        "origin": [
+          -110.79103,
+          39.59621
+        ],
+        "snap": {
+          "canonicalArc": 1895330,
+          "segment": 0,
+          "segmentFraction": 0.44322887359743635,
+          "coordinate": [
+            -110.79134552919298,
+            39.596110869567184
+          ],
+          "distanceMeters": 29.19595109416999,
+          "forwardProgress": 0.44322887359743635,
+          "backwardProgress": 0.44322887359743635
+        },
+        "connectorMeters": 29.195951095617666,
+        "connectorTicks": 34,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "missoula-mt-720-inside",
+      "previousPointTicks": 330399,
+      "pointTicks": 330100,
+      "previousRoadTicks": 334491,
+      "bestRoadTicks": 330100,
+      "terminalChoices": 10,
+      "winningTerminal": {
+        "origin": [
+          -123.29443,
+          42.7739
+        ],
+        "snap": {
+          "canonicalArc": 1302306,
+          "segment": 0,
+          "segmentFraction": 0.32578985390233,
+          "coordinate": [
+            -123.29466928684835,
+            42.77432577099725
+          ],
+          "distanceMeters": 51.2140240166857,
+          "forwardProgress": 0.2058936198836164,
+          "backwardProgress": 0
+        },
+        "connectorMeters": 51.21402401630415,
+        "connectorTicks": 59,
+        "kind": "land-connector"
+      }
+    },
+    {
+      "id": "missoula-mt-720-outside",
+      "previousPointTicks": 338781,
+      "pointTicks": 338781,
+      "previousRoadTicks": 338781,
+      "bestRoadTicks": 338781,
+      "terminalChoices": 5,
+      "winningTerminal": {
+        "origin": [
+          -124.22414,
+          43.47093
+        ],
+        "snap": {
+          "canonicalArc": 1306145,
+          "segment": 0,
+          "segmentFraction": 0.6062747648966236,
+          "coordinate": [
+            -124.22437536563011,
+            43.47095214072366
+          ],
+          "distanceMeters": 19.152165592888192,
+          "forwardProgress": 0.6062747648966236,
+          "backwardProgress": 0.6062747648966236
+        },
+        "connectorMeters": 19.152165593026176,
+        "connectorTicks": 23,
+        "kind": "land-connector"
+      }
+    }
+  ],
+  "fieldStats": {
+    "settles": 1244803,
+    "maximumHeapEntries": 3536,
+    "maximumBackingBufferBytes": 50465206,
+    "returnedBackingBufferBytes": 50465206,
+    "seedBackingBufferBytes": 23552,
+    "starts": 368
+  },
+  "hostFieldAndFinishesMs": 205.56754100000012,
+  "afterReleaseArrayBuffers": 141923537
+}

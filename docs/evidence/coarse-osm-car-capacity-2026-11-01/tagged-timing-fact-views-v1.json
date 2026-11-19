@@ -1,0 +1,630 @@
+{
+  "format": "geo-planner-tagged-timing-fact-view-catalog-v1",
+  "recipeSha256": "7f10caefaceb9a6b6e53de13d64f8168414268713978f81e0c69900140afbdc7",
+  "views": {
+    "captured": {
+      "format": "geo-planner-readonly-native-fact-view-v1",
+      "nativeRoot": "/facts/cost-facts",
+      "files": {
+        "/facts/cost-facts/anchors-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/anchors-0000.bin",
+          "bytes": 187524,
+          "sha256": "22f4b17782b64119c5af1157626503bca5201cd44542eb9e154f0b45c747e764"
+        },
+        "/facts/cost-facts/arcs-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-controls-v1/cost-facts/arcs-0000.bin",
+          "bytes": 2532736,
+          "sha256": "8490a54af50db2999e018f650e237caf0e6c74d1b0013477149535ded33ed4bb"
+        },
+        "/facts/cost-facts/closures-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/closures-0000.bin",
+          "bytes": 13688,
+          "sha256": "40f8b883e8b4bd6a4da555a786f7cfea82f1b0594c22b510460bb0ad57f90646"
+        },
+        "/facts/cost-facts/flags-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-controls-v1/cost-facts/flags-0000.bin",
+          "bytes": 46881,
+          "sha256": "cbb011441e1b6fcb9a8c3c3a7eec22065b1cb10b081d8996e32bd788305f3a3a"
+        },
+        "/facts/cost-facts/geometry-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/geometry-0000.bin",
+          "bytes": 711824,
+          "sha256": "f28e2b95a64d98d963587ecb7e23463712c68ec89688dba4ed2fbd9c954eb73b"
+        },
+        "/facts/cost-facts/ids-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/ids-0000.bin",
+          "bytes": 1148480,
+          "sha256": "7a48836dc5d5567543359bd225fcd492cfd13f99e08e6e047c2f8d0524feee88"
+        },
+        "/facts/cost-facts/turns-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/turns-0000.bin",
+          "bytes": 163120,
+          "sha256": "83ce2996f295d12f42b65f4a043fe05f5b653b6aa312093751268754676b116e"
+        },
+        "/facts/cost-facts/ways-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-controls-v1/cost-facts/ways-0000.bin",
+          "bytes": 927840,
+          "sha256": "47296b34b120ad0b052c74a7d252c8c4095d2fa60810d943066dd6a2954d1af4"
+        },
+        "/facts/cost-facts/xy-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-graph-captured-v5/cost-facts/xy-0000.bin",
+          "bytes": 1148480,
+          "sha256": "3a67d8fcef9af5219d3fb52aaec155ab4cd94d67bc211c2c6ad7c18ecb7e3202"
+        }
+      },
+      "fields": {
+        "anchors": {
+          "source": "base",
+          "files": 1,
+          "bytes": 187524
+        },
+        "arcs": {
+          "source": "overlay",
+          "files": 1,
+          "bytes": 2532736
+        },
+        "closures": {
+          "source": "base",
+          "files": 1,
+          "bytes": 13688
+        },
+        "flags": {
+          "source": "overlay",
+          "files": 1,
+          "bytes": 46881
+        },
+        "geometry": {
+          "source": "base",
+          "files": 1,
+          "bytes": 711824
+        },
+        "ids": {
+          "source": "base",
+          "files": 1,
+          "bytes": 1148480
+        },
+        "turns": {
+          "source": "base",
+          "files": 1,
+          "bytes": 163120
+        },
+        "ways": {
+          "source": "overlay",
+          "files": 1,
+          "bytes": 927840
+        },
+        "xy": {
+          "source": "base",
+          "files": 1,
+          "bytes": 1148480
+        }
+      }
+    },
+    "country": {
+      "format": "geo-planner-readonly-native-fact-view-v1",
+      "nativeRoot": "/facts/cost-facts",
+      "files": {
+        "/facts/cost-facts/anchors-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/anchors-0000.bin",
+          "bytes": 16777216,
+          "sha256": "b93e53a9d955b5bad99cdf4ce81f1571bdd9765fc7e76eaf153491716b35cad3"
+        },
+        "/facts/cost-facts/anchors-0001.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/anchors-0001.bin",
+          "bytes": 6150396,
+          "sha256": "3193a606b8f2f1f68da2c7e95e0342b2d5bab5a9d655174e262646af3b302098"
+        },
+        "/facts/cost-facts/arcs-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0000.bin",
+          "bytes": 16777216,
+          "sha256": "e6c42a5685622e19328066fa02d4dba489a88121598a297b253f12125b964253"
+        },
+        "/facts/cost-facts/arcs-0001.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0001.bin",
+          "bytes": 16777216,
+          "sha256": "cd1bffb197cf5ecf8fe607defa95e4749cfc83a61e783d485be6d03c700f838d"
+        },
+        "/facts/cost-facts/arcs-0002.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0002.bin",
+          "bytes": 16777216,
+          "sha256": "a23bb1c59de0abcc2fe9fecbf10e2dbb735e7b7ad5b35cae56a17e4a5aa247df"
+        },
+        "/facts/cost-facts/arcs-0003.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0003.bin",
+          "bytes": 16777216,
+          "sha256": "99de7d4ba7332777c5f08935a04750f0cec3775dde7b55b0a47ef8bb5f87e4c8"
+        },
+        "/facts/cost-facts/arcs-0004.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0004.bin",
+          "bytes": 16777216,
+          "sha256": "52a61afd32fc08a024e0d45f9aefbaa40baceb8eb8300fa487468a9b4a63ef3b"
+        },
+        "/facts/cost-facts/arcs-0005.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0005.bin",
+          "bytes": 16777216,
+          "sha256": "88ff1a90bb59bdcdb4bca7b656ea663d1b72c5a0819591dd9e746715f540f1e0"
+        },
+        "/facts/cost-facts/arcs-0006.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0006.bin",
+          "bytes": 16777216,
+          "sha256": "ae9aadf31958178d54f10e1432324054c2bc8fe31a9e6464617cdd6da68965e4"
+        },
+        "/facts/cost-facts/arcs-0007.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0007.bin",
+          "bytes": 16777216,
+          "sha256": "9b667f866a64323ce35a77c48457fefd378af0ab9bd21f9975dfd47213bba00d"
+        },
+        "/facts/cost-facts/arcs-0008.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0008.bin",
+          "bytes": 16777216,
+          "sha256": "5dfa305451040283a6ad96f4e6db9a7b9bc5f34da6b272c916d9ad93cdd23b36"
+        },
+        "/facts/cost-facts/arcs-0009.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0009.bin",
+          "bytes": 16777216,
+          "sha256": "e0a415331df6b6c7800993e7f8fb0abc338137730918c8e9af89d974c3977e91"
+        },
+        "/facts/cost-facts/arcs-0010.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0010.bin",
+          "bytes": 16777216,
+          "sha256": "ba6c8d6990186e53e47cfe66cd2ca60c1b3c85cb96704f532e48c97f8d111d8f"
+        },
+        "/facts/cost-facts/arcs-0011.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0011.bin",
+          "bytes": 16777216,
+          "sha256": "163c3edaa1ae7643f608c93367b5571e8066a0389ecf0d80092f9a69809e482f"
+        },
+        "/facts/cost-facts/arcs-0012.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0012.bin",
+          "bytes": 16777216,
+          "sha256": "4096ee3f02698d66c3c8b4b504aeb76294c9006571a336c0db087544259a09c5"
+        },
+        "/facts/cost-facts/arcs-0013.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0013.bin",
+          "bytes": 16777216,
+          "sha256": "188c19e9330a446d405c272554b03d0e7272897a84142d1daa8145d890a628a7"
+        },
+        "/facts/cost-facts/arcs-0014.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0014.bin",
+          "bytes": 16777216,
+          "sha256": "ae2353908e91f6f89964936384f5277b633f7bec81f7bd7eac416f0b9e4de02f"
+        },
+        "/facts/cost-facts/arcs-0015.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0015.bin",
+          "bytes": 16777216,
+          "sha256": "ddeb595b3d8ba5fbb72a139c71256f35c4c3e86afb95311c181d6ace5de71a82"
+        },
+        "/facts/cost-facts/arcs-0016.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0016.bin",
+          "bytes": 16777216,
+          "sha256": "6abee6a18ff209fab8e3b5e9e0db84d355960b30e0ca37b35d13e36b2f7ff767"
+        },
+        "/facts/cost-facts/arcs-0017.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0017.bin",
+          "bytes": 16777216,
+          "sha256": "6c8e1ab0abb89a9234519a7d61d3f479a5b23fe182d85d546c205e1c44dad1e2"
+        },
+        "/facts/cost-facts/arcs-0018.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/arcs-0018.bin",
+          "bytes": 14262016,
+          "sha256": "47cd9d154527e77d5a6d1643d65823557fa43f57425977e0ac5e5443c90d3e32"
+        },
+        "/facts/cost-facts/closures-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/closures-0000.bin",
+          "bytes": 1197592,
+          "sha256": "9072c10eebaa3d6b7aa62a0fb357fda2eefbc8bf51f9fa1a0a9dadd7bc1017f9"
+        },
+        "/facts/cost-facts/flags-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/flags-0000.bin",
+          "bytes": 5731903,
+          "sha256": "474e5bdbfa58668ceb0a09f9154634abc097bae6d3dea43d1de389aa4134ad2f"
+        },
+        "/facts/cost-facts/geometry-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0000.bin",
+          "bytes": 16777216,
+          "sha256": "f720a45864dcfa2ff9eae12f494e2a4805a26fa809cdc0fe1a13c8989d223287"
+        },
+        "/facts/cost-facts/geometry-0001.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0001.bin",
+          "bytes": 16777216,
+          "sha256": "fba123e65e417d62b85aa353398bee1c6192a04fa56364d97c20282d3bb9d670"
+        },
+        "/facts/cost-facts/geometry-0002.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0002.bin",
+          "bytes": 16777216,
+          "sha256": "512548e1b43bc83c21954e194aff5d922d2a65f4461fb7fde920b8c8d20b85d3"
+        },
+        "/facts/cost-facts/geometry-0003.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0003.bin",
+          "bytes": 16777216,
+          "sha256": "f001028829a81563ab1de71c484f05807754dca63587c601bafb32c66e131161"
+        },
+        "/facts/cost-facts/geometry-0004.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0004.bin",
+          "bytes": 16777216,
+          "sha256": "a3bda58e25ada977c25c42343385c0b3747b6c7ccbb9860a76160778206ae8b0"
+        },
+        "/facts/cost-facts/geometry-0005.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0005.bin",
+          "bytes": 16777216,
+          "sha256": "e60a02e7a187bfcf41f38d8c9f270b9f2c5724110744bb22583da584571ec373"
+        },
+        "/facts/cost-facts/geometry-0006.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0006.bin",
+          "bytes": 16777216,
+          "sha256": "ff477090c9af1b56253bff755b4ce9a8dfc994ecfdfdcc4c05c2873069e886b5"
+        },
+        "/facts/cost-facts/geometry-0007.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0007.bin",
+          "bytes": 16777216,
+          "sha256": "196412af9e269c5c95c0821225fb86380ad45cb60e6fc8abba7f15f2d2e070c8"
+        },
+        "/facts/cost-facts/geometry-0008.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0008.bin",
+          "bytes": 16777216,
+          "sha256": "e4465656f87f135dcf8bf890c334fbd0ba91349aa29fc491368768ed20a4e592"
+        },
+        "/facts/cost-facts/geometry-0009.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0009.bin",
+          "bytes": 16777216,
+          "sha256": "4ab913eeaf780a2750e23fdb98f06976b5fadc1fc5cdc6eff0f025a446f597fe"
+        },
+        "/facts/cost-facts/geometry-0010.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0010.bin",
+          "bytes": 16777216,
+          "sha256": "73122dbadad1661b7d017b609ae4b7fa64cd82afc4434b27ce5138e1ccd6f207"
+        },
+        "/facts/cost-facts/geometry-0011.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/geometry-0011.bin",
+          "bytes": 8105220,
+          "sha256": "d020e2fb6d12d447567a119f7ad3fe266e781c4146393dc319c142fb00a6b651"
+        },
+        "/facts/cost-facts/ids-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0000.bin",
+          "bytes": 16777216,
+          "sha256": "2a6b88d71da877ef291694d3e8bce8910f578b1b984558f90c9ef07760b1f490"
+        },
+        "/facts/cost-facts/ids-0001.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0001.bin",
+          "bytes": 16777216,
+          "sha256": "44cc0e71c551e3f363b38bb7f8e266ea577cf29d1589c489a0846498d7945af1"
+        },
+        "/facts/cost-facts/ids-0002.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0002.bin",
+          "bytes": 16777216,
+          "sha256": "674b1e745c1cb54a4eeb0d961625ab198d93d0a91e2b6c64369402ab3f402b75"
+        },
+        "/facts/cost-facts/ids-0003.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0003.bin",
+          "bytes": 16777216,
+          "sha256": "dea9a6fd0e7544d467bbd058cd554d7f0e80e8f0b519f042c34a54427ac0e7ad"
+        },
+        "/facts/cost-facts/ids-0004.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0004.bin",
+          "bytes": 16777216,
+          "sha256": "4eca7aec573f4d00473958833957267fab274a549dbe43560be5b63cbf74d990"
+        },
+        "/facts/cost-facts/ids-0005.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0005.bin",
+          "bytes": 16777216,
+          "sha256": "6186643882c6599f397cea2024e7a75a7b23d2592ff585185cb7babb5d971d73"
+        },
+        "/facts/cost-facts/ids-0006.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0006.bin",
+          "bytes": 16777216,
+          "sha256": "19a1d624b3d336695af24ece936add01f2ea1cfcc7c5c71039377d286660da36"
+        },
+        "/facts/cost-facts/ids-0007.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0007.bin",
+          "bytes": 16777216,
+          "sha256": "e7c38c4a105c3bc641ed7d269f0b2fb461cd8954d15011b3d71b4f49f09eda07"
+        },
+        "/facts/cost-facts/ids-0008.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0008.bin",
+          "bytes": 16777216,
+          "sha256": "f70dba97851e2e9d7dbc26faf97ef40b221fc38a5d787fb40834c4816ba14b3f"
+        },
+        "/facts/cost-facts/ids-0009.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0009.bin",
+          "bytes": 16777216,
+          "sha256": "f459cd35199f8ba76a4bc6c8f4b957e282ff83dc3164dfdad0046cdbaa245cf2"
+        },
+        "/facts/cost-facts/ids-0010.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0010.bin",
+          "bytes": 16777216,
+          "sha256": "2cc097fda4fe9abe343722d88f22189083fd0f9a886553d57974f73c80df8942"
+        },
+        "/facts/cost-facts/ids-0011.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0011.bin",
+          "bytes": 16777216,
+          "sha256": "9b35af62a77ebdc8990ae4cc98b198b4c603c7d4ba2881ff947dae0db2d2a891"
+        },
+        "/facts/cost-facts/ids-0012.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0012.bin",
+          "bytes": 16777216,
+          "sha256": "29d0d40d36cc2df80cd021a24b754db53a47657cce5141ad2cb23e1b391b0ccd"
+        },
+        "/facts/cost-facts/ids-0013.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0013.bin",
+          "bytes": 16777216,
+          "sha256": "94f47bfd3af9488107f23945d3d204a6acb1d72cbee41a615d08ce830bf2c199"
+        },
+        "/facts/cost-facts/ids-0014.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0014.bin",
+          "bytes": 16777216,
+          "sha256": "71c8cae449041db81721b792b5235c97eafc5bb4ad7bfbde3c71c148f527327b"
+        },
+        "/facts/cost-facts/ids-0015.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0015.bin",
+          "bytes": 16777216,
+          "sha256": "a50a059341aa7ee5709d7a1883f6fab3d84ac08724ad6f957342537e6a3a830e"
+        },
+        "/facts/cost-facts/ids-0016.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0016.bin",
+          "bytes": 16777216,
+          "sha256": "d8e66d72a42a2e3aec2f212fcdf0f7621e34442ba9d894aa174a93a655d1b054"
+        },
+        "/facts/cost-facts/ids-0017.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0017.bin",
+          "bytes": 16777216,
+          "sha256": "98bb933c9c7698c15b3300e918ffbd28fa41ae4b96b32de11c0a47d541410132"
+        },
+        "/facts/cost-facts/ids-0018.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0018.bin",
+          "bytes": 16777216,
+          "sha256": "18101587f625738afbc41fa7d83c3bb6ce222c9dc4eede36983f458220c745be"
+        },
+        "/facts/cost-facts/ids-0019.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0019.bin",
+          "bytes": 16777216,
+          "sha256": "32ebe95a78cea8f0b0c3956d2a2e82488675643e9c69397e15b457b93bcee08d"
+        },
+        "/facts/cost-facts/ids-0020.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/ids-0020.bin",
+          "bytes": 8404216,
+          "sha256": "ffca6cccf25ec6f33a6c4c76838f059fe6b3c72054ab88c34f4127f86ac28e67"
+        },
+        "/facts/cost-facts/invalid-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/invalid-0000.bin",
+          "bytes": 262,
+          "sha256": "1623e2b9ceb56137dd1ac9cce9eb88034e09eccbfa4094e7cb87c92a4f8021e2"
+        },
+        "/facts/cost-facts/turns-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/turns-0000.bin",
+          "bytes": 16367120,
+          "sha256": "e68b657793e7b84a05ea365e4d87f933929a926d078e8dc125851f2fdce1c483"
+        },
+        "/facts/cost-facts/ways-0000.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0000.bin",
+          "bytes": 16777216,
+          "sha256": "96bbd095b50ef89d2d355076fe708c10645fa242396c377160aba91e86f3e910"
+        },
+        "/facts/cost-facts/ways-0001.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0001.bin",
+          "bytes": 16777216,
+          "sha256": "7fab6d044e2dd52093b5cf8b74de21ebaeba0467f261e3322dd001e39822b693"
+        },
+        "/facts/cost-facts/ways-0002.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0002.bin",
+          "bytes": 16777216,
+          "sha256": "5a836ed4194f999a2698639693c8d060f836d3f6ba64c09ee7bc13a20fcbdbd9"
+        },
+        "/facts/cost-facts/ways-0003.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0003.bin",
+          "bytes": 16777216,
+          "sha256": "5ae9ac3c4327d5095cc17c04025595f87516a2e9291f397f0548a1fd21702c20"
+        },
+        "/facts/cost-facts/ways-0004.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0004.bin",
+          "bytes": 16777216,
+          "sha256": "30f6a2bd3a9765f4a43c3bbdd7c3915bbe9231e54f3e023cdb6991b79ff93e67"
+        },
+        "/facts/cost-facts/ways-0005.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0005.bin",
+          "bytes": 16777216,
+          "sha256": "374cef5a8a0e8e4ea120ed726f81dd87e491082fbce7f26d4c02f2d2d978fd49"
+        },
+        "/facts/cost-facts/ways-0006.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0006.bin",
+          "bytes": 16777216,
+          "sha256": "f720ac79b062a4ff264194cd748656670d69769913eda1ac501413910e607766"
+        },
+        "/facts/cost-facts/ways-0007.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0007.bin",
+          "bytes": 16777216,
+          "sha256": "49097938479b39fc81de00d08ebaa61bd75321062b03d2f136624b2f2dfe00ae"
+        },
+        "/facts/cost-facts/ways-0008.bin": {
+          "source": "data/coarse-quality/us-osm-tagged-timing-country-run-v1/cost-facts/ways-0008.bin",
+          "bytes": 1053888,
+          "sha256": "e329b6db72cda164facd7c39aeee95223c883085f2c73997660514ad3f66b402"
+        },
+        "/facts/cost-facts/xy-0000.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0000.bin",
+          "bytes": 16777216,
+          "sha256": "320f94221b21bcac964721bcb984c2f9805838394ee8499faa9e63fc192ad545"
+        },
+        "/facts/cost-facts/xy-0001.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0001.bin",
+          "bytes": 16777216,
+          "sha256": "e84e2e6e78cb1066d2146e941c604f5b58bb89b3220c148a90b2800e2f70e470"
+        },
+        "/facts/cost-facts/xy-0002.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0002.bin",
+          "bytes": 16777216,
+          "sha256": "18334220be60450fb6ae22be9c28dda43c3305d5010b3a186f7d9535a911611c"
+        },
+        "/facts/cost-facts/xy-0003.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0003.bin",
+          "bytes": 16777216,
+          "sha256": "799038aa56643672682a5c9f45c7a87ebb244816a6e17f89b7b0e7762cf137a5"
+        },
+        "/facts/cost-facts/xy-0004.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0004.bin",
+          "bytes": 16777216,
+          "sha256": "e53885e8faba4d6f73e377e4e066cc974cbc57cf528029577d114eea8d271946"
+        },
+        "/facts/cost-facts/xy-0005.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0005.bin",
+          "bytes": 16777216,
+          "sha256": "db4a7477af1c5f25bf460d73417e5a1e5841f1ef3aadd9d9b1fb0cbd49e5acc7"
+        },
+        "/facts/cost-facts/xy-0006.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0006.bin",
+          "bytes": 16777216,
+          "sha256": "8e5cad36418dc0c5ebfdf9d75e26e8cbbad5dc4f897e102023fa3e6dc1c5289a"
+        },
+        "/facts/cost-facts/xy-0007.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0007.bin",
+          "bytes": 16777216,
+          "sha256": "4f2e4ad4dd467003f30540833b2809fdec8ce7afc1eb9cb5e746d5da45dd99ef"
+        },
+        "/facts/cost-facts/xy-0008.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0008.bin",
+          "bytes": 16777216,
+          "sha256": "b35177870022b77689742f7f62be1cdbacb439ea61d7ef182b51c771bb14ab10"
+        },
+        "/facts/cost-facts/xy-0009.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0009.bin",
+          "bytes": 16777216,
+          "sha256": "0656f6f655d5d347906feeb37839f4cead4db1c439e4ba692108b11387aae05c"
+        },
+        "/facts/cost-facts/xy-0010.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0010.bin",
+          "bytes": 16777216,
+          "sha256": "208aa7500a7c8675ef1aa9c50275c9db5c7b0615cb19f35ef0d4cd68df18f321"
+        },
+        "/facts/cost-facts/xy-0011.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0011.bin",
+          "bytes": 16777216,
+          "sha256": "9cff0aa091e2b8de9b50cadc7c51348da29143fd94992c6be23fecd172dc7c95"
+        },
+        "/facts/cost-facts/xy-0012.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0012.bin",
+          "bytes": 16777216,
+          "sha256": "7f53acd7ed21ac8b2c762b0c504c7746d8614f0b8c094d1ecb185fe2bc27e545"
+        },
+        "/facts/cost-facts/xy-0013.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0013.bin",
+          "bytes": 16777216,
+          "sha256": "d7e37f309f58d9a6ca24ae83a24c09141bcccf45aee9fd9fa99996e1d6a11373"
+        },
+        "/facts/cost-facts/xy-0014.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0014.bin",
+          "bytes": 16777216,
+          "sha256": "950f3125a03c5dccd72ab4d80457ec57ca075de46994c9cb9143019dc2486455"
+        },
+        "/facts/cost-facts/xy-0015.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0015.bin",
+          "bytes": 16777216,
+          "sha256": "ce2027a448320bf727ad1a9023e52eb95342bf9c50bd5d593927ff78bb2dd577"
+        },
+        "/facts/cost-facts/xy-0016.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0016.bin",
+          "bytes": 16777216,
+          "sha256": "6259b541e1e8765b57e9fe2c52cf555d70b9aadb3c14bd2f166d06a52c0c7650"
+        },
+        "/facts/cost-facts/xy-0017.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0017.bin",
+          "bytes": 16777216,
+          "sha256": "5bf6a69fa95d120f02f4b001a83175b2c7948f3092b87558c7c2e6b22cbcefac"
+        },
+        "/facts/cost-facts/xy-0018.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0018.bin",
+          "bytes": 16777216,
+          "sha256": "07b223db93292a02d8002203cc0d7b83d6d4e2ec6bbbdfc3e6ca9f122cf6832c"
+        },
+        "/facts/cost-facts/xy-0019.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0019.bin",
+          "bytes": 16777216,
+          "sha256": "51f5a9e8c9ba80783e737356f3a5d1606f2dbe3a349af38bbfad10bb4f5fd146"
+        },
+        "/facts/cost-facts/xy-0020.bin": {
+          "source": "data/coarse-quality/us-osm-car-cost-country-run-v1/cost-facts/xy-0020.bin",
+          "bytes": 8404216,
+          "sha256": "ad8cd7cce0fe20e753f6a7b82fbea7b2ae819c8b5c072e1b813c90403d2de8e7"
+        }
+      },
+      "fields": {
+        "anchors": {
+          "source": "base",
+          "files": 2,
+          "bytes": 22927612
+        },
+        "arcs": {
+          "source": "overlay",
+          "files": 19,
+          "bytes": 316251904
+        },
+        "closures": {
+          "source": "base",
+          "files": 1,
+          "bytes": 1197592
+        },
+        "flags": {
+          "source": "overlay",
+          "files": 1,
+          "bytes": 5731903
+        },
+        "geometry": {
+          "source": "base",
+          "files": 12,
+          "bytes": 192654596
+        },
+        "ids": {
+          "source": "base",
+          "files": 21,
+          "bytes": 343948536
+        },
+        "invalid": {
+          "source": "base",
+          "files": 1,
+          "bytes": 262
+        },
+        "turns": {
+          "source": "base",
+          "files": 1,
+          "bytes": 16367120
+        },
+        "ways": {
+          "source": "overlay",
+          "files": 9,
+          "bytes": 135271616
+        },
+        "xy": {
+          "source": "base",
+          "files": 21,
+          "bytes": 343948536
+        }
+      }
+    }
+  },
+  "sourcePairs": {
+    "captured": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/graph-capture-closed-run-v5.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-controls-closed-v1.json"
+    },
+    "country": {
+      "base": "docs/evidence/coarse-osm-car-capacity-2026-11-01/country-cost-closed-run-v1.json",
+      "overlay": "docs/evidence/coarse-osm-car-capacity-2026-11-01/tagged-timing-country-run-closed-v1.json"
+    }
+  },
+  "originalLegalSpeedCatalog": "docs/evidence/coarse-osm-car-capacity-2026-11-01/explicit-lane-fact-views-v1.json",
+  "originalLegalSpeedCatalogSha256": "2150b7d1e96c2a0ef774b2bc78a285a29c471c04d31f0a70145284b5113fa268",
+  "derivedPolicy": {
+    "id": "explicit-speed-static-estimate-90-v1",
+    "taggedSpeedRatio": [
+      9,
+      10
+    ],
+    "defaultSpeedRatio": [
+      1,
+      1
+    ],
+    "scope": "Estimated driving speeds only;no access/direction/closure/node/turn/geometry change. Original legal-speed facts retained separately. No hosted settings or observed speed claim."
+  },
+  "costFactsMeaning": "Derived estimated driving speeds/costs;original legal/default speed source remains separately pinned and unchanged.",
+  "actualFactFilesReadOrCopiedOrLinked": 0,
+  "nativeProgramsExecuted": 0,
+  "scope": "Closed-metadata-only complete-field file-bind catalogs. Ways/arcs/flags select overlay as whole groups, all other typed base fields retained; no stale tail, no source/graph/IO/performance/accuracy or app admission."
+}

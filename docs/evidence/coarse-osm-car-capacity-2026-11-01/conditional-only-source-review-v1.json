@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-17",
+  "status": "fixed_generic_metadata_hypothesis_before_new_inventory_or_queries",
+  "sources": [
+    "https://wiki.openstreetmap.org/wiki/Relation:restriction#Mandatory_restriction",
+    "https://wiki.openstreetmap.org/wiki/Conditional_restrictions#Overview"
+  ],
+  "primarySemantics": "A mandatory turn specifies the permitted destination way from its source approach at the via junction. Conditional tags state exceptions to the normal rule. These describe source restriction semantics, not routing-provider behavior or road availability.",
+  "inference": "For a narrowly validated single mandatory kind, enforcing its exit constraint in every state yields a conservative subset of driving choices without evaluating opaque conditions. Other approaches and unrelated travel on the same roads can remain open subject to every independent constraint, instead of closing entire member roads. This is a proposed graph-scope inference requiring physical source validation, not a measured ETA improvement.",
+  "policy": "Exactly one from-way, one distinct to-way and one via-node, exact known car/general relation types and keys/exemptions, original car fallback. Same only_left_turn/only_right_turn/only_straight_on in every stated base/conditional value. Original Unicode/clause/depth/quotes/@ bounds. No unknown/mixed/no-turn/only-U-turn/same-way/via-way inference.",
+  "physicalRequirements": "Independently certify complete pre-closure incoming from-way ports, ALL outgoing ports and to-way outgoing ports by native IDs. For each affected incoming arc forbid all outgoing ports except the source to-way ports. Union with all old bans and independently retained closures; multiple envelopes conservatively intersect. Missing to-way ports forbids all other represented exits, never inactive-no-turn logic. Missing/unknown junction support retains fallback. Source/node/access/price constraints remain.",
+  "firstStage": "Synthetic metadata and exhaustive state/port controls, then separately frozen metadata-only inventory of every70376cached original unsupported relation. Rebuild original/current closure unions and retain all independent contributors. Potential unclosed way IDs are upper bounds before physical/native/captured qualification; no graph/model permission or local-surrogate transfer claim.",
+  "unchanged": "Every original accuracy/source/shore/166/full-app/package/first-estimate/API/camera gate and livev9. No price/default/access/node change, fit, place/coordinate/region rule, condition/departure-time evaluation, PBF scan/acquisition/provider/reference/DB/env/dependency/deploy. Ferries and whole-cell boundary coverage remain deferred."
+}

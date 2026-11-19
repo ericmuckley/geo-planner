@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-18T21:38:52.741Z",
+  "baseUrl": "https://geo-planner-orcin.vercel.app",
+  "commit": "25af389bc4d31254822deccd1b07764c96982d89",
+  "engineVersion": "coarse-road-grid-v9",
+  "publishedCatalogSha256": "67316f816137691ef867b8e309904732800460bdb075346472d9a755daac1319",
+  "catalogBytes": 4997468,
+  "stationCount": 108634,
+  "samples": [
+    {
+      "budgetMinutes": 30,
+      "reachedCells": 221,
+      "fuelMatches": 382,
+      "destinationIncluded": false
+    },
+    {
+      "budgetMinutes": 720,
+      "reachedCells": 155858,
+      "fuelMatches": 12184,
+      "destinationIncluded": true
+    }
+  ],
+  "requests": 5,
+  "historyWrites": 0,
+  "providerRequests": 0,
+  "scope": "Production home, config, exact catalog and two estimate API responses. Client matching functions exercised against the live responses. The browser interaction was verified independently in the local preview.",
+  "vercelDeployment": "https://vercel.com/erics-projects-d68d5ce3/geo-planner/DAAc4gwXDQj3Um1Uj76UWz2aSu9j",
+  "githubVercelStatus": "success",
+  "cleanReleasePreflight": {
+    "testsPassed": 89,
+    "typecheck": "passed",
+    "biome": "passed with existing warnings",
+    "vercelPackageBytes": 65091493,
+    "firstLocalEstimateAfterConfigMs": 3771.4765829999997
+  }
+}
