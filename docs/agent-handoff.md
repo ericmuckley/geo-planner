@@ -4,7 +4,7 @@ Updated November 19, 2026. Start with [AGENTS.md](../AGENTS.md) and this section
 
 ## Where to resume
 
-Resume in the same `geo-planner` checkout. The floating panel, shareable URL, automatic estimates, compact place badges and elevation range are **uncommitted**. Baseline `2d202c2` includes Google Maps directions and the destination-check removal. It still shows starting-point search, coordinates and saved queries. Run these from the repository root to confirm the state before editing:
+Resume in the same `geo-planner` checkout. Baseline `0d1d304` includes the simplified map, shareable URL, automatic estimates, compact place badges and elevation range. The responsive bottom bar and camera behavior are **uncommitted**. Run these from the repository root to confirm the state before editing.
 
 ```sh
 git status --short
@@ -12,13 +12,13 @@ git log -1 --oneline
 git diff --stat
 ```
 
-**Next action.** Review the local map and shared link. When a release is approved, build the exact release commit, confirm it is live on Vercel, and try short and six-hour trips including a copied URL on a phone. [Release criteria](next-steps.md#1-review-and-release-the-simplified-map).
+**Next action.** Review the bottom bar on a physical phone with the live basemap and check the shared link. When a release is approved, build the exact release commit, confirm it is live on Vercel, and try short and six-hour trips including a copied URL on a phone. [Release criteria](next-steps.md#1-review-and-release-the-simplified-map).
 
 Browse lists are live in `b765050`. The six-hour Flagstaff estimate returned 911 campgrounds and 323 trailheads with both filters and a 5,000-foot cutoff. Isolated Chrome verified both lists, Show more, selected pins and details, and clearing both lists and the popup at 15,000 feet. It made one estimate request and verified all six static assets byte for byte. [Hosted result](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-The local preview on port 4204 uses v9 with cloud history disabled. A bare URL automatically estimates two hours around Flagstaff. Clicking, tapping or pressing Enter on the focused map moves the pin and estimates from there. The share URL restores the pin, driving time, layers and elevation bounds. The panel header shows **Click map to set location** and **Details**. The dialog shows the USGS sources, the disclaimer, timings and a GitHub link. Check `lsof -nP -iTCP:4204 -sTCP:LISTEN` before restarting. [Preview and checks](local-development.md#try-the-simplified-map), [map URL settings](local-development.md#share-a-map-view).
+The local preview on port 4204 uses v9 with cloud history disabled. A bare URL automatically estimates two hours around Flagstaff. Tap or click the map to move the pin, or press Enter with the map focused. On phones, open **Trip controls** at the bottom for layers, filters and **Details**. Selecting a browsed place collapses the controls and opens its popup. The share URL restores the pin, driving time, layers and elevation bounds. Check `lsof -nP -iTCP:4204 -sTCP:LISTEN` before restarting. [Preview and checks](local-development.md#try-the-simplified-map), [map URL settings](local-development.md#share-a-map-view).
 
-Isolated Chrome used a minimal basemap with real catalogs and grids. The latest check confirmed the 8 px inset and dismissal of place popups on desktop and phone-sized views. Biome, typecheck, all 96 server tests and the app build passed. The preceding checks covered the starting-point header, automatic estimates, time changes, Back and Forward, Cancel and Retry, both elevation handles, and cluster hover and expansion. Both builds, the six static asset comparisons and the generated Vercel handler check passed for that earlier build. [Validation](implementation-status.md).
+Isolated Chrome used a minimal basemap with real catalogs and grids. It verified the 65 px collapsed bar, the half-height scrollable controls in portrait and landscape, touch selection and the driving-time slider, list selection and popup dismissal, and desktop collapse and keyboard access. Biome, typecheck, all 96 server tests, both builds, the six static asset comparisons and the local Vercel handler check passed. [Validation](implementation-status.md#mobile-trip-controls).
 
 Search release `06fb19a` added the starting-point search to production. Chrome verified a named starting point, a natural landmark and a real street address. Production passed the exact name catalog, one Census address lookup and the 30-minute and 12-hour Flagstaff estimates. The committed catalog at `public/places/search-us-v2.json` is enough to search names. The source files remain ignored in `data/map-layers/place-search-v1/`. Street-address submission uses the Census Geocoder without API keys. [Hosted checks](evidence/place-search-2026-11-18/hosted-release-v1.json), [release notes](local-development.md#try-place-search).
 
@@ -612,7 +612,7 @@ The completed owner-profile and source-outgoing build producers are also frozen.
 
 ## Suggested resume message
 
-> Resume Geo Planner in this checkout. Read AGENTS.md and the “Where to resume” section of docs/agent-handoff.md, then follow docs/next-steps.md. The map cleanup is locally verified and uncommitted. Review it before release and keep routing experiments paused.
+> Resume Geo Planner in this checkout. Read AGENTS.md and the “Where to resume” section of docs/agent-handoff.md, then follow docs/next-steps.md. The mobile trip controls are locally verified and uncommitted. Review them on a phone before release and keep routing experiments paused.
 
 November 2 core/storage verification: `npm run check` (217 files), `npm run typecheck`, `npm run build`, strict standalone script types and 23 Node reader/search/storage/loader tests pass. Four latest portable country/captured/packed/codec proofs pass without large graph/source or worker execution. Relative links/anchors: 62 pages/1,536 links, zero errors; `git diff --check` passes. App/config diff (`src`, package/lock, `.env.example`) stays empty. Logs `/tmp/geo-planner-wire-{check,typecheck,build,tests,script-types}.log`. Geometry native build/eight controls also pass; actual country geometry measurement is separate above.
 

@@ -5,6 +5,7 @@
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant planner-wide (@media (width >= 40rem) and (height >= 30rem));
 
 :root {
   --sea-ink: #173a40;

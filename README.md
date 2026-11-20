@@ -8,7 +8,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](docs/evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**In the working tree.** The map automatically estimates a two-hour Flagstaff example. Changing the pin or driving time starts a new estimate. Place badges show the category, and cluster hover shows the count. Trailhead and campground popups offer **View in Google Maps**. [Local review](docs/local-development.md#try-the-simplified-map).
+**Local preview.** The map automatically estimates a two-hour Flagstaff example. Changing the pin or driving time starts a new estimate. On phones, **Trip controls** opens from a compact bottom bar. Place badges show the category, and trailhead and campground popups offer **View in Google Maps**. [Local review](docs/local-development.md#try-the-simplified-map).
 
 
 ## What works today
@@ -18,7 +18,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 - The [live app](https://geo-planner-orcin.vercel.app/) includes optional layers for **Fuel stops**, **Trailheads**, **Campgrounds**, **Public lands** and **Elevation**. Estimate an area and enable the layers you want to see. [Overlay data and limits](docs/evidence/usgs-area-layers-2026-11-18/README.md).
 - Filled 30-minute–12-hour estimates from arbitrary supported contiguous-US land origins, with the same rules everywhere. The time slider starts at two hours and recalculates on pointer/key release with loading feedback.
 - **0.025° cells, about 1.8–2.8 km**, half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
-- Full-viewport MapLibre map with a compact, collapsible top-left control panel. Its header shows how to move the starting pin and provides **Details** for the disclaimer, timings, sources and project link. On mobile, the panel scrolls independently. [Local UI QA](docs/local-development.md#floating-map-controls).
+- Full-viewport MapLibre map with a collapsible top-left panel on desktop. On phones, the bottom bar starts collapsed and the expanded controls leave at least half the screen for the map. Selecting a place from a browse list folds the bar away. [Local UI QA](docs/local-development.md#floating-map-controls).
 - Source and model notices, timings and automatic run history with optional browser-private PostgreSQL backup.
 - Lossless storage puts the finer model in a **61.23 MB** bundled file and **65.05 MB** local Vercel function. First packaged computation is about **3.4 s after config**, with zero routing fetches.
 

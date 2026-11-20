@@ -20,6 +20,6 @@ The fuel-stop layer is live. Its catalog contains 108,634 mapped locations from 
 
 **Browse lists are live.** Open a list of matching trailheads or campgrounds and select one to see its map pin and details. [Open Geo Planner](https://geo-planner-orcin.vercel.app/) · [Production verification](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**The simplified map is ready to preview locally.** It estimates a two-hour Flagstaff area on open. The panel header shows how to move the pin and includes **Details**. Place icons identify each category, and cluster hover shows the count. Set both ends of the elevation range with the slider and copy the URL to share the view. [Try the preview](http://127.0.0.1:4204/), [map URL settings](local-development.md#share-a-map-view).
+**The simplified map is ready to preview locally.** On phones, a compact **Trip controls** bar leaves the map open for exploring. Tap it to adjust the driving time, layers and filters. It folds away when you choose a trailhead or campground. Copy the URL to share the map and its settings. [Try the preview](http://127.0.0.1:4204/), [map URL settings](local-development.md#share-a-map-view).
 
 **Next milestone.** Review the simplified map, then release it and try a short and a six-hour trip on the deployed app. [Release and trip checks](next-steps.md#1-review-and-release-the-simplified-map).

@@ -4,10 +4,12 @@ import {
 	useLocation,
 } from "@tanstack/react-router";
 import {
+	ChevronUp,
 	LoaderCircle,
 	MapPin,
 	PanelLeftClose,
 	PanelLeftOpen,
+	SlidersHorizontal,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AreaLayerControls } from "../components/area-layer-controls";
@@ -43,6 +45,7 @@ import {
 import { useAreaLayer } from "../lib/use-area-layer";
 import { useCloudHistory } from "../lib/use-cloud-history";
 import { usePlaceLayer } from "../lib/use-place-layer";
+import { cn } from "../lib/utils";
 
 export const Route = createFileRoute("/")({
 	validateSearch: (search: Partial<MapSearch> & SearchSchemaInput) =>
@@ -98,7 +101,9 @@ function Home() {
 	}, [hasSearch, updateSearch]);
 
 	const [controlsOpen, setControlsOpen] = useState(true);
+	const [mobileControlsOpen, setMobileControlsOpen] = useState(false);
 	const controlsRef = useRef<HTMLElement>(null);
+	const mobileControlsButton = useRef<HTMLButtonElement>(null);
 	const [minutesDraft, setMinutesDraft] = useState<number | null>(null);
 	const budgetMinutes = minutesDraft ?? minutes;
 	const [config, setConfig] = useState<EngineConfig | null>(null);
@@ -328,177 +333,233 @@ function Home() {
 	}
 
 	return (
-		<main className="fixed inset-0 isolate overflow-hidden bg-neutral-100 text-neutral-900">
-			<div className="absolute inset-0" aria-busy={running}>
-				<ResearchMap
-					origin={origin}
-					result={result}
-					selectedOutdoorPlace={selectedOutdoorPlace}
-					landGrid={landLayer.enabled ? landLayer.grid : null}
-					elevationGrid={elevationLayer.enabled ? elevationLayer.grid : null}
-					elevationRange={elevationRange}
-					places={{
-						fuel: fuelLayer.locations,
-						trailheads: trailheadLayer.locations,
-						campgrounds: campgroundLayer.locations,
-					}}
-					showContour
-					onOriginChange={selectOrigin}
-					onMapIdle={onMapIdle}
-					fullscreen
-					overlayRef={controlsRef}
-				/>
+		<main className="fixed inset-0 isolate flex flex-col overflow-hidden bg-neutral-100 text-neutral-900">
+			<div className="relative min-h-0 flex-1">
+				<div className="absolute inset-0" aria-busy={running}>
+					<ResearchMap
+						origin={origin}
+						result={result}
+						selectedOutdoorPlace={selectedOutdoorPlace}
+						landGrid={landLayer.enabled ? landLayer.grid : null}
+						elevationGrid={elevationLayer.enabled ? elevationLayer.grid : null}
+						elevationRange={elevationRange}
+						places={{
+							fuel: fuelLayer.locations,
+							trailheads: trailheadLayer.locations,
+							campgrounds: campgroundLayer.locations,
+						}}
+						showContour
+						onOriginChange={selectOrigin}
+						onMapIdle={onMapIdle}
+						fullscreen
+						overlayRef={controlsRef}
+					/>
+				</div>
+				{running && (
+					<output className="pointer-events-none absolute inset-x-0 bottom-14 z-10 flex justify-center">
+						<span className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white/95 px-4 py-2.5 text-sm font-semibold shadow-lg">
+							<LoaderCircle
+								className="animate-spin"
+								size={16}
+								aria-hidden="true"
+							/>
+							Updating area…
+						</span>
+					</output>
+				)}
 			</div>
-			{running && (
-				<output className="pointer-events-none absolute inset-x-0 bottom-14 z-10 flex justify-center">
-					<span className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white/95 px-4 py-2.5 text-sm font-semibold shadow-lg">
-						<LoaderCircle
-							className="animate-spin"
-							size={16}
-							aria-hidden="true"
-						/>{" "}
-						Updating area…
-					</span>
-				</output>
-			)}
 			<aside
 				ref={controlsRef}
 				aria-label="Map controls"
-				className="absolute left-[max(0.75rem,env(safe-area-inset-left))] top-[max(0.75rem,env(safe-area-inset-top))] z-20 flex max-h-[min(65dvh,calc(100dvh-5rem))] w-[min(320px,calc(100%-4.5rem))] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg shadow-black/10 [&_a]:text-neutral-700! [&_a]:decoration-neutral-400! [&_a:hover]:text-black! sm:left-5 sm:top-5 sm:max-h-[calc(100dvh-5rem)]"
+				className="z-20 flex max-h-[50dvh] shrink-0 flex-col overflow-hidden border-t border-neutral-200 bg-white pb-[env(safe-area-inset-bottom)] shadow-lg shadow-black/10 [&_a]:text-neutral-700! [&_a]:decoration-neutral-400! [&_a:hover]:text-black! planner-wide:absolute planner-wide:top-5 planner-wide:left-5 planner-wide:max-h-[calc(100dvh-5rem)] planner-wide:w-80 planner-wide:rounded-2xl planner-wide:border planner-wide:pb-0"
 			>
-				<div className="flex shrink-0 items-center gap-2.5 px-4 py-3">
-					<div className="flex size-7 shrink-0 items-center justify-center rounded-md bg-neutral-900 text-white">
-						<MapPin size={16} aria-hidden="true" />
-					</div>
-					<div className="min-w-0 flex-1">
-						<h1 className="text-xs font-bold">Click map to set starting location</h1>
-						<div className="-mt-1">
+				<button
+					ref={mobileControlsButton}
+					type="button"
+					className="flex min-h-16 shrink-0 cursor-pointer items-center gap-3 px-4 py-2 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-neutral-700 planner-wide:hidden"
+					onClick={() => setMobileControlsOpen((open) => !open)}
+					aria-expanded={mobileControlsOpen}
+					aria-controls="trip-controls"
+				>
+					<span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--sand)] text-[var(--sea-ink)]">
+						<SlidersHorizontal size={19} aria-hidden="true" />
+					</span>
+					<span className="min-w-0 flex-1">
+						<span className="block text-sm font-bold">Trip controls</span>
+						<span className="block text-xs text-neutral-600">
+							{formatDuration(budgetMinutes)} of driving
+						</span>
+					</span>
+					<ChevronUp
+						size={20}
+						className={cn(
+							"shrink-0 text-neutral-600",
+							mobileControlsOpen && "rotate-180",
+						)}
+						aria-hidden="true"
+					/>
+				</button>
+				<div
+					id="trip-controls"
+					className={cn(
+						"min-h-0 overflow-y-auto overscroll-contain planner-wide:flex planner-wide:flex-col planner-wide:overflow-hidden",
+						!mobileControlsOpen && "hidden",
+					)}
+				>
+					<div className="flex shrink-0 items-center gap-2.5 px-4 py-3">
+						<div className="hidden size-7 shrink-0 items-center justify-center rounded-md bg-neutral-900 text-white planner-wide:flex">
+							<MapPin size={16} aria-hidden="true" />
+						</div>
+						<div className="flex min-w-0 flex-1 items-center justify-between gap-2 planner-wide:block">
+							<h1 className="text-xs font-bold">
+								<span className="planner-wide:hidden">
+									Tap map to set starting point
+								</span>
+								<span className="hidden planner-wide:inline">
+									Click map to set starting location
+								</span>
+							</h1>
 							<RunDetails result={result} run={activeRun} />
 						</div>
+						<button
+							type="button"
+							className="hidden size-9 shrink-0 items-center justify-center rounded-lg text-neutral-600 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-neutral-700 planner-wide:flex"
+							onClick={() => setControlsOpen((open) => !open)}
+							aria-expanded={controlsOpen}
+							aria-controls="map-controls-content"
+							aria-label={
+								controlsOpen ? "Collapse controls" : "Expand controls"
+							}
+							title={controlsOpen ? "Collapse controls" : "Expand controls"}
+						>
+							{controlsOpen ? (
+								<PanelLeftClose size={18} />
+							) : (
+								<PanelLeftOpen size={18} />
+							)}
+						</button>
 					</div>
-					<button
-						type="button"
-						className="flex size-9 shrink-0 items-center justify-center rounded-lg text-neutral-600 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-neutral-700"
-						onClick={() => setControlsOpen((open) => !open)}
-						aria-expanded={controlsOpen}
-						aria-controls="map-controls-content"
-						aria-label={controlsOpen ? "Collapse controls" : "Expand controls"}
-						title={controlsOpen ? "Collapse controls" : "Expand controls"}
-					>
-						{controlsOpen ? (
-							<PanelLeftClose size={18} />
-						) : (
-							<PanelLeftOpen size={18} />
+					<div
+						id="map-controls-content"
+						className={cn(
+							"planner-wide:min-h-0 planner-wide:flex-col",
+							controlsOpen ? "planner-wide:flex" : "planner-wide:hidden",
 						)}
-					</button>
-				</div>
-				<div
-					id="map-controls-content"
-					hidden={!controlsOpen}
-					className="min-h-0 overflow-y-auto overscroll-contain border-t border-neutral-200"
-				>
-					<section
-						className="flex flex-col gap-2 p-4"
-						aria-labelledby="driving-time-label"
 					>
-						<div>
-							<label className="block text-xs font-semibold" htmlFor="minutes">
-								<span className="flex items-center justify-between gap-2">
-									<span id="driving-time-label">Driving time within {formatDuration(budgetMinutes)}</span>
-								</span>
-							</label>
-							<input
-								id="minutes"
-								className="block h-5 w-full cursor-pointer accent-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-not-allowed disabled:opacity-50"
-								type="range"
-								aria-label="Driving time"
-								aria-valuetext={formatDuration(budgetMinutes)}
-								min={minMinutes}
-								max={maxMinutes}
-								step={1}
-								value={budgetMinutes}
-								disabled={!canCompute}
-								onChange={(event) => {
-									const minutes = event.currentTarget.valueAsNumber;
-									pendingMinutes.current = minutes;
-									setMinutesDraft(minutes);
+						<div className="border-t border-neutral-200 planner-wide:min-h-0 planner-wide:overflow-y-auto planner-wide:overscroll-contain">
+							<section
+								className="flex flex-col gap-2 p-4"
+								aria-labelledby="driving-time-label"
+							>
+								<div>
+									<label
+										className="block text-xs font-semibold"
+										htmlFor="minutes"
+									>
+										<span className="flex items-center justify-between gap-2">
+											<span id="driving-time-label">
+												Driving time within {formatDuration(budgetMinutes)}
+											</span>
+										</span>
+									</label>
+									<input
+										id="minutes"
+										className="block h-9 w-full cursor-pointer accent-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-not-allowed disabled:opacity-50 planner-wide:h-5"
+										type="range"
+										aria-label="Driving time"
+										aria-valuetext={formatDuration(budgetMinutes)}
+										min={minMinutes}
+										max={maxMinutes}
+										step={1}
+										value={budgetMinutes}
+										disabled={!canCompute}
+										onChange={(event) => {
+											const minutes = event.currentTarget.valueAsNumber;
+											pendingMinutes.current = minutes;
+											setMinutesDraft(minutes);
+										}}
+										onPointerDown={(event) =>
+											event.currentTarget.setPointerCapture(event.pointerId)
+										}
+										onPointerUp={commitDrivingTime}
+										onKeyUp={commitDrivingTime}
+										onBlur={commitDrivingTime}
+										onPointerCancel={() => {
+											pendingMinutes.current = null;
+											setMinutesDraft(null);
+										}}
+									/>
+									<div
+										className="-mt-1 flex justify-between text-xs text-neutral-600"
+										aria-hidden="true"
+									>
+										<span>{formatDuration(minMinutes)}</span>
+										<span>{formatDuration(maxMinutes)}</span>
+									</div>
+								</div>
+								{estimateError && (
+									<p
+										role="alert"
+										className="rounded-lg border border-neutral-200 bg-neutral-100 p-3 text-sm"
+									>
+										{estimateError}
+									</p>
+								)}
+								{(running || (canCompute && (error || cancelled))) && (
+									<button
+										type="button"
+										className="min-h-7 self-start cursor-pointer rounded-sm text-xs font-semibold underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2"
+										onClick={() => {
+											if (running) {
+												clearResult();
+												setCancelled(true);
+											} else {
+												void runQuery(query, true);
+											}
+										}}
+									>
+										{running ? "Cancel estimate" : "Retry estimate"}
+									</button>
+								)}
+							</section>
+							<PlaceLayerControls
+								layers={placeLayers}
+								onLayerChange={changeLayer}
+								filtersActive={outdoorFiltersActive}
+								filtersPending={Boolean(result) && outdoorFilter === null}
+								onOutdoorPlaceSelect={(selection) => {
+									setSelectedOutdoorPlace(selection);
+									setMobileControlsOpen(false);
+									mobileControlsButton.current?.focus({ preventScroll: true });
 								}}
-								onPointerDown={(event) =>
-									event.currentTarget.setPointerCapture(event.pointerId)
+								outdoorFilters={
+									showOutdoorFilters && (
+										<OutdoorPlaceFilters
+											publicLandOnly={publicLandOnly}
+											onPublicLandOnlyChange={(checked) =>
+												updateSearch({ publicLandOnly: checked })
+											}
+											elevationOnly={elevationOnly}
+											onElevationOnlyChange={(checked) =>
+												updateSearch({ elevationOnly: checked })
+											}
+											elevationSlider={elevationSlider}
+											land={landLayer}
+											elevation={elevationLayer}
+										/>
+									)
 								}
-								onPointerUp={commitDrivingTime}
-								onKeyUp={commitDrivingTime}
-								onBlur={commitDrivingTime}
-								onPointerCancel={() => {
-									pendingMinutes.current = null;
-									setMinutesDraft(null);
-								}}
 							/>
-							<div
-								className="-mt-1 flex justify-between text-xs text-neutral-600"
-								aria-hidden="true"
-							>
-								<span>{formatDuration(minMinutes)}</span>
-								<span>{formatDuration(maxMinutes)}</span>
-							</div>
+							<AreaLayerControls
+								land={landLayer}
+								elevation={elevationLayer}
+								onLayerChange={changeLayer}
+								elevationSlider={elevationOnly ? undefined : elevationSlider}
+							/>
 						</div>
-						{estimateError && (
-							<p
-								role="alert"
-								className="rounded-lg border border-neutral-200 bg-neutral-100 p-3 text-sm"
-							>
-								{estimateError}
-							</p>
-						)}
-						{(running || (canCompute && (error || cancelled))) && (
-							<button
-								type="button"
-								className="min-h-7 self-start cursor-pointer rounded-sm text-xs font-semibold underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2"
-								onClick={() => {
-									if (running) {
-										clearResult();
-										setCancelled(true);
-									} else {
-										void runQuery(query, true);
-									}
-								}}
-							>
-								{running ? "Cancel estimate" : "Retry estimate"}
-							</button>
-						)}
-					</section>
-					<PlaceLayerControls
-						layers={placeLayers}
-						onLayerChange={changeLayer}
-						filtersActive={outdoorFiltersActive}
-						filtersPending={Boolean(result) && outdoorFilter === null}
-						onOutdoorPlaceSelect={setSelectedOutdoorPlace}
-						outdoorFilters={
-							showOutdoorFilters && (
-								<OutdoorPlaceFilters
-									publicLandOnly={publicLandOnly}
-									onPublicLandOnlyChange={(checked) =>
-										updateSearch({ publicLandOnly: checked })
-									}
-									elevationOnly={elevationOnly}
-									onElevationOnlyChange={(checked) =>
-										updateSearch({ elevationOnly: checked })
-									}
-									elevationSlider={elevationSlider}
-									land={landLayer}
-									elevation={elevationLayer}
-								/>
-							)
-						}
-					/>
-					<AreaLayerControls
-						land={landLayer}
-						elevation={elevationLayer}
-						onLayerChange={changeLayer}
-						elevationSlider={elevationOnly ? undefined : elevationSlider}
-					/>
+						<PlaceDataAttribution layers={placeLayers} />
+					</div>
 				</div>
-				{controlsOpen && <PlaceDataAttribution layers={placeLayers} />}
 			</aside>
 		</main>
 	);

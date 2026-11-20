@@ -224,6 +224,11 @@ export function ResearchMap(props: Props) {
 					if (!overlay || !container.current) return;
 					const bounds = container.current.getBoundingClientRect();
 					const panel = overlay.getBoundingClientRect();
+					if (panel.top >= bounds.bottom) {
+						// The mobile controls sit below the map. Resizing keeps the current view.
+						map.setPadding({ top: 24, right: 24, bottom: 24, left: 24 });
+						return;
+					}
 					// Keep the map's focus and fitted contours clear of the floating panel.
 					map.setPadding({
 						top:

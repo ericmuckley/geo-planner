@@ -72,7 +72,7 @@ HOST=127.0.0.1 PORT=4204 DATABASE_URL= node .output/server/index.mjs
 
 Open the homepage with an empty query string. The app automatically estimates a two-hour area from Flagstaff with **Trailheads**, **Campgrounds** and **Public lands** selected. Click or tap a land location to move the pin and estimate a new area. With the map focused, use the arrow keys to pan and Enter to estimate from its center. The driving-time slider previews the budget and estimates on release. **Cancel estimate** stops the current request, and **Retry estimate** appears after a cancellation or request error.
 
-After an estimate, enable **Fuel stops**, **Trailheads** and **Campgrounds**. Hover over each type of cluster to see its category and count. Click a cluster to zoom in. Open a trailhead or campground from a browse list or individual pin and choose **View in Google Maps**. Check the OpenStreetMap credit and snapshot date in the footer. Open **Details** beneath the starting-point instruction for both USGS sources, performance timings and the GitHub project link at the bottom. [Google Maps URL format](https://developers.google.com/maps/documentation/urls/get-started#search).
+On a phone, tap **Trip controls** at the bottom to find the driving-time slider, layers, filters and **Details**. After an estimate, enable **Fuel stops**, **Trailheads** and **Campgrounds**. Hover over each type of cluster with a mouse to see its category and count. Click or tap a cluster to zoom in. Open a trailhead or campground from a browse list or individual pin and choose **View in Google Maps**. Check the OpenStreetMap credit and snapshot date in the controls footer. Open **Details** next to the starting-point instruction for both USGS sources, performance timings and the GitHub project link. [Google Maps URL format](https://developers.google.com/maps/documentation/urls/get-started#search).
 
 ### Share a map view
 
@@ -1166,12 +1166,12 @@ The transient preview on 4184 has been stopped after QA. Rediscover local listen
 
 ## Floating map controls
 
-The local main map fills the viewport. A monochrome panel up to 320px wide floats at the top left. On phones it leaves room for zoom controls and scrolls internally within 65% of the viewport height. OpenStreetMap attribution stays in the footer as the controls scroll. The header pairs a pin icon with **Click map to set location**. **Details** opens a dialog with the planning disclaimer, USGS sources and a link to the project on GitHub. After an estimate, it also shows model information, warnings and all four timings. The main panel uses `/api/estimate` for every contour. Visit `/experiment` directly for the embedded research map.
+On desktop, a 320 px control panel floats over the top left of the full-viewport map. Below 640 px wide or 480 px tall, **Trip controls** sits below the map and starts collapsed with the current driving time. Tap the bar to open or close it. The controls scroll within half the viewport height, and the map resizes above them. The main page uses `/api/estimate` for every contour. Visit `/experiment` directly for the embedded research map.
 
-1. At desktop and mobile widths, confirm the map reaches all viewport edges without document scrolling and leaves zoom and attribution visible.
-2. Confirm the default pin appears and the map estimates its two-hour area automatically. Focus **Driving time** and press Home. Check 30 min in the control, `minutes=30` in the address bar, and a completed shaded result.
-3. Collapse and expand the panel to check that the contour refits. Select **Details** to check the disclaimer. After an estimate, scroll the dialog to **Performance** and check that all four timings and the millisecond conversion appear. The dialog also reports `coarse-road-grid-v9`. Dismiss it with Escape or **Close details** and check that keyboard focus returns to **Details**.
-4. Confirm the panel omits search, coordinate fields, **Save query**, **Saved queries & runs** and **Map & model**. The disclaimer and timings appear inside the dialog.
+1. At 390 × 844 and 844 × 390, confirm the map starts above the collapsed bar. Open **Trip controls** and scroll to the filters and attribution. The map should retain at least half the viewport, with zoom buttons and basemap credits accessible and no document scrolling.
+2. Confirm the default pin appears and the map estimates its two-hour area automatically. Drag **Driving time** on a phone or focus it and press Home at a keyboard. Check that releasing the slider updates the URL and shaded area. On a phone, collapse and reopen the controls after zooming and confirm the camera stays in place.
+3. In the phone layout, open **Browse trailheads** or **Browse campgrounds** and choose a place. Confirm the bar collapses, the map focuses the pin, and the popup and **View in Google Maps** link are accessible.
+4. On desktop, collapse and expand the panel and check that the contour refits. On both layouts, open **Details** after an estimate to see the sources, disclaimer, `coarse-road-grid-v9` model and four performance timings. Dismiss the dialog with Escape or **Close details** and check that keyboard focus returns to **Details**.
 
 ## Time slider
 
