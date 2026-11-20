@@ -17,6 +17,8 @@ export const areaLayers = {
 } as const;
 
 export type AreaLayerKind = keyof typeof areaLayers;
+export type ElevationRange = [minimumFeet: number, maximumFeet: number];
+export const maximumElevationFeet = 10_000;
 export const gridWidth = 3350;
 export const gridHeight = 1900;
 const west = -14_000_000;
@@ -51,8 +53,16 @@ export function gridCellIndex(lon: number, lat: number) {
 	return row * gridWidth + column;
 }
 
-export function elevationMatches(encoded: number, minimumFeet: number) {
-	return encoded !== 0 && encoded - 32768 >= minimumFeet * 0.3048;
+export function elevationMatches(
+	encoded: number,
+	[minimumFeet, maximumFeet]: ElevationRange,
+) {
+	const meters = encoded - 32768;
+	return (
+		encoded !== 0 &&
+		meters >= minimumFeet * 0.3048 &&
+		meters <= maximumFeet * 0.3048
+	);
 }
 
 export async function loadAreaGrid(kind: AreaLayerKind, signal: AbortSignal) {

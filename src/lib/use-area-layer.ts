@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { type AreaLayerKind, loadAreaGrid } from "./area-layers";
 
-export function useAreaLayer(kind: AreaLayerKind, usedByFilter = false) {
-	const [enabled, setEnabled] = useState(false);
+export function useAreaLayer(
+	kind: AreaLayerKind,
+	enabled: boolean,
+	usedByFilter: boolean,
+) {
 	const [grid, setGrid] = useState<Uint16Array | null>(null);
 	const [loadError, setLoadError] = useState(false);
 	const [attempt, setAttempt] = useState(0);
@@ -25,7 +28,6 @@ export function useAreaLayer(kind: AreaLayerKind, usedByFilter = false) {
 
 	return {
 		enabled,
-		setEnabled,
 		grid,
 		loadError,
 		retry: () => setAttempt((current) => current + 1),

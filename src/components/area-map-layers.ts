@@ -2,6 +2,7 @@ import type { Map as MapLibreMap } from "maplibre-gl";
 import {
 	type AreaLayerKind,
 	areaLayers,
+	type ElevationRange,
 	elevationMatches,
 	gridHeight,
 	gridPixel,
@@ -25,7 +26,7 @@ export function setAreaMapLayer(
 	kind: AreaLayerKind,
 	contours: Contours | undefined,
 	grid: Uint16Array | null | undefined,
-	minimumFeet = 0,
+	elevationRange?: ElevationRange,
 ) {
 	const id = `overlay-${kind}`;
 	if (map.getLayer(id)) map.removeLayer(id);
@@ -78,7 +79,9 @@ export function setAreaMapLayer(
 		for (let col = 0; col < width; col++) {
 			const value = grid[(row + top) * gridWidth + col + left];
 			const included =
-				kind === "land" ? value !== 0 : elevationMatches(value, minimumFeet);
+				kind === "land"
+					? value !== 0
+					: elevationRange && elevationMatches(value, elevationRange);
 			if (!included) continue;
 			const dest = (row * width + col) * 4;
 			pixels.data[dest] = red;

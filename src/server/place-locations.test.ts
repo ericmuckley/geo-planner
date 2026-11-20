@@ -113,7 +113,7 @@ test("outdoor filters combine the same grid cell, preserve exact cutoff, and exc
 	const matches = (
 		filter: NonNullable<ReturnType<typeof placeTerrainFilter>>,
 	) => filter(locations).features.map(({ id }) => id);
-	const cutoff = { grid: elevation, minimumFeet: 5000 };
+	const cutoff = { grid: elevation, range: [5000, 10000] as [number, number] };
 	const landOnly = placeTerrainFilter(land);
 	const elevationOnly = placeTerrainFilter(undefined, cutoff);
 	const combined = placeTerrainFilter(land, cutoff);
@@ -121,12 +121,14 @@ test("outdoor filters combine the same grid cell, preserve exact cutoff, and exc
 	assert.deepEqual(matches(landOnly), [0, 1, 3]);
 	assert.deepEqual(matches(elevationOnly), [0, 2]);
 	assert.deepEqual(matches(combined), [0]);
+	const narrowRange = placeTerrainFilter(undefined, {
+		...cutoff,
+		range: [5000, 5500],
+	});
+	assert.ok(narrowRange);
+	assert.deepEqual(matches(narrowRange), [0]);
 	assert.equal(placeTerrainFilter(undefined), undefined);
 	assert.equal(placeTerrainFilter(null, cutoff), null);
 	assert.equal(placeTerrainFilter(land, { ...cutoff, grid: null }), null);
-	assert.equal(
-		placeTerrainFilter(land, { ...cutoff, minimumFeet: null }),
-		null,
-	);
 	assert.equal(locations.features.length, 5);
 });

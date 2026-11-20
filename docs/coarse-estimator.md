@@ -1,6 +1,6 @@
 # Coarse nationwide estimator
 
-Implemented October 22, 2026 as the first slice of the user's product reset: a simple fullstack Vercel app estimating long isochrones from arbitrary contiguous-US land origins, with refinement later. The main page defaults to this model at two hours. A 30-minute–12-hour slider previews the duration while moving and automatically estimates on release; the optional compute button handles coordinate edits/retry. The connected provider and detailed regional experiment remain available separately.
+Implemented October 22, 2026 as a fullstack Vercel app estimating long isochrones from arbitrary contiguous-US land origins. The main page uses this model for every estimate. The local map estimates a two-hour example on open and recalculates when the pin moves or the 30-minute–12-hour slider is released. The connected provider and detailed regional experiment have separate development entry points. [Map URL settings](local-development.md#share-a-map-view).
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 

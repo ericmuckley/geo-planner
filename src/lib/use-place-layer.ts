@@ -11,10 +11,10 @@ import type { ReachabilityResult } from "./reachability";
 
 export function usePlaceLayer(
 	kind: PlaceKind,
+	enabled: boolean,
 	contours: ReachabilityResult["contours"] | undefined,
 	filter?: PlaceTerrainFilter | null,
 ) {
-	const [enabled, setEnabled] = useState(false);
 	const [catalog, setCatalog] = useState<PlaceCatalog | null>(null);
 	const [loadError, setLoadError] = useState(false);
 
@@ -49,7 +49,6 @@ export function usePlaceLayer(
 	}, [placesInArea, filter]);
 	return {
 		enabled,
-		setEnabled,
 		locations,
 		loadError,
 		sourceDate: catalog?.sourceDate,

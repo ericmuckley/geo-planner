@@ -1,5 +1,11 @@
-import type { GeoJSONSource, Map as MapLibreMap, Marker } from "maplibre-gl";
+import type {
+	GeoJSONSource,
+	LngLat,
+	Map as MapLibreMap,
+	Marker,
+} from "maplibre-gl";
 import { type RefObject, useEffect, useRef, useState } from "react";
+import type { ElevationRange } from "../lib/area-layers";
 import type { ExperimentResult } from "../lib/experiment";
 import type { MapPlaces, OutdoorPlaceSelection } from "../lib/place-locations";
 import type { Origin, ReachabilityResult } from "../lib/reachability";
@@ -8,13 +14,13 @@ import { setAreaMapLayer } from "./area-map-layers";
 import type { createPlaceMapLayers } from "./place-map-layers";
 
 type Props = {
-	origin: Origin;
+	origin: Origin | null;
 	result: ReachabilityResult | null;
 	places?: MapPlaces;
 	selectedOutdoorPlace?: OutdoorPlaceSelection | null;
 	landGrid?: Uint16Array | null;
 	elevationGrid?: Uint16Array | null;
-	minimumElevationFeet?: number;
+	elevationRange?: ElevationRange;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
 	fullscreen?: boolean;
@@ -92,26 +98,37 @@ export function ResearchMap(props: Props) {
 				mapRef.current = map;
 				markerRef.current = marker;
 				placesRef.current = places;
-				map
-					.getCanvas()
-					.setAttribute(
-						"aria-label",
-						"Reachability map. Click to select an origin, or use the coordinate fields.",
-					);
-				map.on("click", (event) => {
-					places.closePopup();
-					if (places.select(event, current.current.result?.query.origin))
-						return;
-					const { lngLat } = event;
+				const canvas = map.getCanvas();
+				const fullscreen = current.current.fullscreen;
+				canvas.setAttribute(
+					"aria-label",
+					fullscreen
+						? "Reachability map. Click or tap to set the starting point. Use the arrow keys to pan and Enter to select the map center."
+						: "Reachability map. Click to select an origin, or use the coordinate fields.",
+				);
+				function selectMapPoint(lngLat: LngLat) {
 					if (Math.abs(lngLat.lat) <= 85)
 						current.current.onOriginChange({
 							lat: lngLat.lat,
 							lon: lngLat.wrap().lng,
 						});
+				}
+				if (fullscreen) {
+					canvas.addEventListener("keydown", (event) => {
+						if (event.key !== "Enter" || event.repeat) return;
+						event.preventDefault();
+						places.closePopup();
+						selectMapPoint(map.getCenter());
+					});
+				}
+				map.on("click", (event) => {
+					places.closePopup();
+					if (places.select(event)) return;
+					selectMapPoint(event.lngLat);
 				});
 				map.on("error", () =>
 					setError(
-						"Some map resources could not load. Check the basemap URL, network, and archive coverage. Coordinate controls still work.",
+						"Some map resources could not load. Check the basemap URL, network, and archive coverage.",
 					),
 				);
 				map.on("load", () => {
@@ -229,7 +246,7 @@ export function ResearchMap(props: Props) {
 			.catch(() => {
 				if (!disposed)
 					setError(
-						"The map could not start. A WebGL-capable browser is required. You can still use coordinate controls.",
+						"The map could not start. A WebGL-capable browser is required.",
 					);
 			});
 		return () => {
@@ -244,23 +261,24 @@ export function ResearchMap(props: Props) {
 
 	useEffect(() => {
 		const map = mapRef.current;
-		if (!map || !ready) return;
-		markerRef.current?.setLngLat([props.origin.lon, props.origin.lat]);
-		if (!map.getBounds().contains([props.origin.lon, props.origin.lat])) {
-			map.easeTo({ center: [props.origin.lon, props.origin.lat] });
-		}
-	}, [props.origin, ready]);
+		const marker = markerRef.current;
+		if (!map || !marker || !props.origin) return;
+		const coordinates: [number, number] = [props.origin.lon, props.origin.lat];
+		marker.setLngLat(coordinates);
+		if (!marker.getElement().isConnected) marker.addTo(map);
+		if (!map.getBounds().contains(coordinates))
+			map.easeTo({ center: coordinates });
+	}, [props.origin]);
 
 	useEffect(() => {
 		if (ready) placesRef.current?.setLocations(props.places);
 	}, [props.places, ready]);
 
-	const resultOrigin = props.result?.query.origin;
 	useEffect(() => {
-		if (ready && props.selectedOutdoorPlace && resultOrigin) {
-			placesRef.current?.focusPlace(props.selectedOutdoorPlace, resultOrigin);
+		if (ready && props.selectedOutdoorPlace) {
+			placesRef.current?.focusPlace(props.selectedOutdoorPlace);
 		}
-	}, [props.selectedOutdoorPlace, ready, resultOrigin]);
+	}, [props.selectedOutdoorPlace, ready]);
 
 	const contours = props.result?.contours;
 
@@ -275,10 +293,10 @@ export function ResearchMap(props: Props) {
 				mapRef.current,
 				"elevation",
 				contours,
-				props.minimumElevationFeet === undefined ? null : props.elevationGrid,
-				props.minimumElevationFeet,
+				props.elevationGrid,
+				props.elevationRange,
 			);
-	}, [ready, contours, props.elevationGrid, props.minimumElevationFeet]);
+	}, [ready, contours, props.elevationGrid, props.elevationRange]);
 
 	useEffect(() => {
 		const map = mapRef.current;
@@ -324,6 +342,9 @@ export function ResearchMap(props: Props) {
 		<div
 			className={cn(
 				"relative h-full overflow-hidden bg-[var(--sand)]",
+				props.fullscreen &&
+					"[&_.maplibregl-canvas:focus-visible]:outline-2 [&_.maplibregl-canvas:focus-visible]:-outline-offset-4 [&_.maplibregl-canvas:focus-visible]:outline-neutral-900",
+				props.fullscreen && !props.origin && "maplibregl-crosshair",
 				!props.fullscreen &&
 					"min-h-[440px] rounded-2xl border border-[var(--line)]",
 			)}

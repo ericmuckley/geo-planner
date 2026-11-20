@@ -21,10 +21,12 @@ test("area pixels preserve the Web Mercator grid and return to the same map coor
 	assert.ok(Math.abs(recoveredLat - 39.5) < 1e-8);
 });
 
-test("minimum feet includes its exact threshold and omits nodata or lower ground", () => {
-	assert.equal(elevationMatches(32768 + 1524, 5000), true);
-	assert.equal(elevationMatches(32768 + 1523, 5000), false);
-	assert.equal(elevationMatches(32768 - 1, 0), false);
-	assert.equal(elevationMatches(32768, 0), true);
-	assert.equal(elevationMatches(0, 0), false);
+test("elevation includes both exact endpoints and excludes missing or out-of-range data", () => {
+	assert.equal(elevationMatches(32768 + 1524, [5000, 10000]), true);
+	assert.equal(elevationMatches(32768 + 1523, [5000, 10000]), false);
+	assert.equal(elevationMatches(32768 + 3048, [5000, 10000]), true);
+	assert.equal(elevationMatches(32768 + 3049, [5000, 10000]), false);
+	assert.equal(elevationMatches(32768 - 1, [0, 10000]), false);
+	assert.equal(elevationMatches(32768, [0, 10000]), true);
+	assert.equal(elevationMatches(0, [0, 10000]), false);
 });

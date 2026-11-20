@@ -8,18 +8,18 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](docs/evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**In the working tree.** The [local preview](http://127.0.0.1:4204/) removes **Check a destination** and its map pin. Choose a starting point, estimate an area and use the outdoor place popups for **Directions in Google Maps**. [Local review](docs/local-development.md#try-the-simplified-map).
+**In the working tree.** The map automatically estimates a two-hour Flagstaff example. Changing the pin or driving time starts a new estimate. Place badges show the category, and cluster hover shows the count. Trailhead and campground popups offer **View in Google Maps**. [Local review](docs/local-development.md#try-the-simplified-map).
 
 
 ## What works today
 
-- Filter trailheads and campgrounds by mapped public land, minimum elevation, or both. [Filter behavior and verification](docs/evidence/usgs-area-layers-2026-11-18/README.md#outdoor-place-filters).
-- Search for a town, natural landmark or street address to set the starting point. [Place search details](docs/evidence/place-search-2026-11-18/README.md).
+- Filter trailheads and campgrounds by mapped public land, elevation range, or both. A shared two-handle slider sets the range for filtering and elevation shading between 0 and 10,000 ft. [Local review](docs/local-development.md#try-outdoor-place-filters).
+- Click or tap the map to move the starting pin in the local preview. Links copied after running an estimate rebuild the area when opened. [Map URL settings](docs/local-development.md#share-a-map-view).
 - The [live app](https://geo-planner-orcin.vercel.app/) includes optional layers for **Fuel stops**, **Trailheads**, **Campgrounds**, **Public lands** and **Elevation**. Estimate an area and enable the layers you want to see. [Overlay data and limits](docs/evidence/usgs-area-layers-2026-11-18/README.md).
 - Filled 30-minute–12-hour estimates from arbitrary supported contiguous-US land origins, with the same rules everywhere. The time slider starts at two hours and recalculates on pointer/key release with loading feedback.
 - **0.025° cells, about 1.8–2.8 km**, half v7's cell width, rebuilt from national sources with paid Census road states. Routing runs in TypeScript without a provider, DB or worker.
-- Full-viewport MapLibre map with a compact, collapsible top-left control panel. History, model/layer settings and run details expand inside; mobile controls scroll independently. [Local UI QA](docs/local-development.md#floating-map-controls).
-- Source/model notices, timings, browser-private PostgreSQL history with local fallback, replay and export.
+- Full-viewport MapLibre map with a compact, collapsible top-left control panel. Its header shows how to move the starting pin and provides **Details** for the disclaimer, timings, sources and project link. On mobile, the panel scrolls independently. [Local UI QA](docs/local-development.md#floating-map-controls).
+- Source and model notices, timings and automatic run history with optional browser-private PostgreSQL backup.
 - Lossless storage puts the finer model in a **61.23 MB** bundled file and **65.05 MB** local Vercel function. First packaged computation is about **3.4 s after config**, with zero routing fetches.
 
 The model still merges crossings, assumes overland travel and omits traffic, turns, terrain, precise access, ferries and international crossings. Cell size is **not an accuracy bound**. [Model](docs/coarse-estimator.md).

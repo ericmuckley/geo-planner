@@ -33,7 +33,7 @@ export function OutdoorPlaceResults({
 
 	return (
 		<details
-			className="group rounded-lg border border-[var(--line)]"
+			className="group rounded-lg border border-neutral-200"
 			onToggle={(event) => setOpen(event.currentTarget.open)}
 		>
 			<summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-2 text-sm font-semibold [&::-webkit-details-marker]:hidden">
@@ -45,16 +45,16 @@ export function OutdoorPlaceResults({
 				/>
 			</summary>
 			{open && (
-				<div className="border-t border-[var(--line)]">
+				<div className="border-t border-neutral-200">
 					<ul
 						aria-label={`Matching ${label}`}
-						className="divide-y divide-[var(--line)]"
+						className="divide-y divide-neutral-200"
 					>
 						{sorted.slice(0, limit).map((location) => (
 							<li key={location.id}>
 								<button
 									type="button"
-									className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-[var(--sand)] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--lagoon-deep)]"
+									className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neutral-900"
 									onClick={() => onSelect({ kind, location })}
 								>
 									{location.properties.name}
@@ -70,7 +70,7 @@ export function OutdoorPlaceResults({
 					{sorted.length > limit && (
 						<button
 							type="button"
-							className="w-full border-t border-[var(--line)] px-3 py-2 text-left text-xs font-semibold text-[var(--lagoon-deep)] hover:bg-[var(--sand)]"
+							className="w-full border-t border-neutral-200 px-3 py-2 text-left text-xs font-semibold text-neutral-900 hover:bg-neutral-100"
 							onClick={() => setLimit((current) => current + pageSize)}
 						>
 							Show more {label}

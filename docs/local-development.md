@@ -10,20 +10,12 @@ python3 -B docs/evidence/coarse-osm-car-capacity-2026-11-01/verify_conditional_o
 
 ## Try place search
 
-Place search is live in `06fb19a`. The local preview uses the same catalog and Census service. Check the port owner before starting it. [Hosted verification](evidence/place-search-2026-11-18/hosted-release-v1.json).
+Production release `06fb19a` introduced starting-point search for towns, landmarks and submitted street addresses. The monochrome local panel uses map-based selection. The bundled name catalog and Census address endpoint are available for verification. [Hosted verification](evidence/place-search-2026-11-18/hosted-release-v1.json).
 
 ```sh
-lsof -nP -iTCP:4197 -sTCP:LISTEN
-npm run build
-HOST=127.0.0.1 PORT=4197 DATABASE_URL= node .output/server/index.mjs
-```
-
-In **Starting point**, search for **Flagstaff, AZ** and select the community to set the origin. Select **Estimate area**. The same search accepts **Grand Canyon, AZ** and street addresses such as **4600 Silver Hill Rd, Suitland, MD**. Only submitted street addresses need the Census service. Cloud history is disabled in the preview.
-
-```sh
+node --import tsx --test src/server/place-search.test.ts
 npm run build:vercel
 cmp public/places/search-us-v2.json .vercel/output/static/places/search-us-v2.json
-npm run check:coarse:vercel
 ```
 
 The catalog requires no source downloads at runtime. To reproduce it, copy the pinned archives into `data/map-layers/place-search-v1/` in a separate clean checkout without the generated output files and run:
@@ -42,7 +34,7 @@ python3 -B scripts/rank_place_search_v2.py
 
 Fuel stops, trailheads and campgrounds are live at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/outdoor-places-2026-11-18/hosted-release-v1.json).
 
-Estimate an area, enable any of the three layers, then click a cluster to zoom in or a point to see its name. Change the driving time and check that the counts update. Turn one layer off to verify the others stay visible. The preview uses the bundled estimator with cloud history disabled.
+Enable any of the three layers. In the local preview, look for gas pumps, signposts and tents on the map. Zoom out to see the cluster badges shrink, then hover over a cluster for its count and category. Click or tap a cluster to zoom in or a point to see its name. Check that the popup's close button has room at the right edge and dismisses the popup. Change the driving time and check that the counts update. The preview uses the bundled estimator with cloud history disabled.
 
 The catalogs in `public/places/` are static app assets. Serving them needs no data preparation, Docker, new environment variables or database setup. Validate the generated Vercel package:
 
@@ -60,11 +52,11 @@ The completed fuel output can restage the exact fuel file with `python3 -B scrip
 
 The filters are live in `6feea27` at [Geo Planner](https://geo-planner-orcin.vercel.app/). [Hosted verification](evidence/usgs-area-layers-2026-11-18/outdoor-filter-release-v1.json).
 
-Estimate a driving area and enable **Trailheads**, **Campgrounds** and **Fuel stops**. Under **Filter trailheads and campgrounds**, try **On mapped public land** and **At or above minimum elevation** separately and together. The outdoor pins and counts should narrow with each applicable filter. Fuel and the estimate should remain in place. Try 15,000 feet to see the empty results, then return to 5,000 feet. Turn on **Elevation** in the area layers to verify shading and filtering use the same cutoff. Both filters use the existing USGS images. [Measured counts and behavior](evidence/usgs-area-layers-2026-11-18/README.md#outdoor-place-filters).
+Enable **Trailheads**, **Campgrounds** and **Fuel stops**. Under **Filter trailheads and campgrounds**, try **On mapped public land** and **Within elevation range** separately and together. Drag each elevation handle or focus it and use the arrow keys. Turn on **Elevation** and confirm that shading and filtering use both inclusive bounds. Fuel and the driving area should stay in place as you adjust the slider. Both filters use the existing USGS images. [Original filter data and behavior](evidence/usgs-area-layers-2026-11-18/README.md#outdoor-place-filters).
 
 ## Try browsing matching places
 
-The browse lists are live in [Geo Planner](https://geo-planner-orcin.vercel.app/). Estimate an area and enable **Trailheads** or **Campgrounds**. Open its browse list and select a name. The map zooms to its pin and opens a popup. **Show more** displays 20 additional names from the same set. Around Flagstaff with both outdoor filters enabled, changing the elevation cutoff from 5,000 to 15,000 feet clears the results and selection. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#browsing-matching-places).
+The browse lists are live in [Geo Planner](https://geo-planner-orcin.vercel.app/). Estimate an area and enable **Trailheads** or **Campgrounds**. Open its browse list and select a name. The map zooms to its pin and opens a popup. **Show more** displays 20 additional names from the same set. If a filter removes the selected place, its pin and popup close. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#browsing-matching-places).
 
 <a id="try-directions-links"></a>
 
@@ -78,9 +70,23 @@ npm run build
 HOST=127.0.0.1 PORT=4204 DATABASE_URL= node .output/server/index.mjs
 ```
 
-Search for a starting point and estimate an area. Try the slider and click the blank map to select another starting point. The map has one search box and uses empty-map clicks for the start. Estimate again and enable **Trailheads** or **Campgrounds**, open a browse list and select a place. Choose **Directions in Google Maps** in the popup to open driving directions in a new tab. For a direct map check, zoom in until an individual pin is visible and click it. Both entry points should use the estimate’s start and the exact catalog coordinates of the selected place. [Behavior and verification](evidence/usgs-area-layers-2026-11-18/README.md#directions-links).
+Open the homepage with an empty query string. The app automatically estimates a two-hour area from Flagstaff with **Trailheads**, **Campgrounds** and **Public lands** selected. Click or tap a land location to move the pin and estimate a new area. With the map focused, use the arrow keys to pan and Enter to estimate from its center. The driving-time slider previews the budget and estimates on release. **Cancel estimate** stops the current request, and **Retry estimate** appears after a cancellation or request error.
 
-Isolated Chrome verified one search box before and after an estimate at desktop and mobile viewport sizes. The desktop check selected Flagstaff by name, opened directions from both outdoor browse lists, clicked an individual campground pin in the 30-minute San Diego area and selected a new start on the blank map. The Google Maps navigation was intercepted to verify the URL. The browser made three local estimates.
+After an estimate, enable **Fuel stops**, **Trailheads** and **Campgrounds**. Hover over each type of cluster to see its category and count. Click a cluster to zoom in. Open a trailhead or campground from a browse list or individual pin and choose **View in Google Maps**. Check the OpenStreetMap credit and snapshot date in the footer. Open **Details** beneath the starting-point instruction for both USGS sources, performance timings and the GitHub project link at the bottom. [Google Maps URL format](https://developers.google.com/maps/documentation/urls/get-started#search).
+
+### Share a map view
+
+Copy the address bar URL after setting the starting point, time, layers and elevation range. A bare homepage fills in the example settings. With a nonempty query string, omitted switches default to off. An omitted or invalid coordinate pair uses the example pin, and an invalid time falls back to 120 minutes. The app estimates on open and on origin or time changes, including Back and Forward. Earlier URLs with either value of `estimate` open automatically. Opening a link and using Back or Forward leave saved history as it was. Changing the pin or driving time saves a completed run.
+
+| Parameters | Accepted values |
+| --- | --- |
+| `lat`, `lon` | Decimal latitude from −85 to 85 and longitude from −180 to 180. Estimates use the model's contiguous US coverage. |
+| `minutes` | Whole driving minutes from 30 to 720. The URL updates when the slider is committed. |
+| `fuel`, `trailheads`, `campgrounds`, `land`, `elevation` | `true` or `false` for each layer. |
+| `publicLandOnly`, `elevationOnly` | `true` or `false` for each outdoor place filter. |
+| `minElevation`, `maxElevation` | The inclusive range for elevation shading and outdoor places, from 0 to 10,000 ft. The default is 5,000–10,000 ft. Fractional values round to whole feet and reversed bounds are ordered. Earlier minimum-only links use 10,000 ft as the upper bound, and earlier minimums above 10,000 through 15,000 ft are capped. |
+
+Try a [90-minute Denver estimate with a 5,500–8,000 ft elevation range](http://127.0.0.1:4204/?lat=39.7392&lon=-104.9903&minutes=90&elevation=true&minElevation=5500&maxElevation=8000). In a fresh tab, check the pin, budget, area, switches and both bounds. Change a layer or the range and confirm the URL updates without another estimate request. Move the pin and use Back to restore the previous area.
 
 ### Verify the simplified map build
 
@@ -98,19 +104,13 @@ done
 npm run check:coarse:vercel
 ```
 
-Pass when all tests and builds succeed, all six assets match and the local generated handler reports v9 with zero outbound requests. The packaged handler check uses the local output.
+Pass when all tests and builds succeed, all six assets match and the local generated handler reports v9 with zero outbound requests. Run the timed handler check after builds and other heavy work finish. A previous handler check exceeded the five-second gate during a build. The initial **Details** dialog build passed in 3.62 seconds after configuration.
 
 ## Try public lands and elevation
 
-The two optional USGS layers are live in `83e6566`. Use the [local preview](http://127.0.0.1:4195/) while the preview is running. [Hosted verification](evidence/usgs-area-layers-2026-11-18/hosted-release-v1.json). Check the port owner before restarting.
+The two optional USGS layers are live in `83e6566`. Start the [local preview](#try-the-simplified-map) for the current controls. [Hosted verification](evidence/usgs-area-layers-2026-11-18/hosted-release-v1.json).
 
-```sh
-lsof -nP -iTCP:4195 -sTCP:LISTEN
-npm run build
-HOST=127.0.0.1 PORT=4195 DATABASE_URL= node .output/server/index.mjs
-```
-
-From the default San Diego start, select **Estimate area** and switch on **Public lands** and **Elevation**. Green shades mapped public land and purple shows terrain at or above the cutoff. Change the elevation cutoff to 15,000 feet and check that the purple shading disappears while the green shading and the driving area stay visible. Set it back to 5,000 and change driving time to 12 hours to check both overlays update. Cloud history is disabled in the preview.
+Wait for the Flagstaff estimate and turn on **Public lands** and **Elevation**. Green shades mapped public land and purple shows terrain within the selected elevation range. Move the maximum handle left and confirm that the purple shading narrows while the green shading and driving area stay visible. Set it back to 10,000 feet and change driving time to 12 hours to check that both overlays update. Find both grid sources in **Details**. Cloud history is disabled in the preview.
 
 Check the static assets against Vercel output and verify the bundled handler:
 
@@ -1166,21 +1166,16 @@ The transient preview on 4184 has been stopped after QA. Rediscover local listen
 
 ## Floating map controls
 
-The current local UI puts the map across the full viewport. A 340px panel floats at the top left, with a Collapse/Expand controls button. On mobile it leaves room for zoom controls, is limited to 65% of viewport height and scrolls internally. Saved queries & runs, Map & model, and Run details expand in place. The time slider and compute/save/cancel behavior are preserved. The shared map's fullscreen mode and measured panel padding apply only to `/`; `/experiment` keeps its existing embedded presentation.
+The local main map fills the viewport. A monochrome panel up to 320px wide floats at the top left. On phones it leaves room for zoom controls and scrolls internally within 65% of the viewport height. OpenStreetMap attribution stays in the footer as the controls scroll. The header pairs a pin icon with **Click map to set location**. **Details** opens a dialog with the planning disclaimer, USGS sources and a link to the project on GitHub. After an estimate, it also shows model information, warnings and all four timings. The main panel uses `/api/estimate` for every contour. Visit `/experiment` directly for the embedded research map.
 
-Use the existing dev server, or start `npm run dev` after inspecting local listeners. Verify with `npm run check`, `npm run typecheck` and `npm run build`. Manual browser checks:
-
-1. At desktop and mobile widths, confirm the map reaches all viewport edges without document scrolling; zoom and attribution stay visible.
-2. Confirm default 2 hours, then focus Driving time and press Home. Check 30 min, Updating area… and a completed shaded result without submit. Estimate area still supports coordinate edits/retry.
-3. Collapse/expand the panel and resize the viewport. The contour should refit into the visible area without resetting the query.
-4. On mobile, scroll inside the panel to Map & model, toggle Show reachability contour off/on, and close it. Check keyboard access to disclosures and the collapse button.
-5. Existing history Load/Replay/export/backup controls are under Saved queries & runs. Do not inspect unrelated user history or rerun the live DB suite for layout-only work.
-
-Local browser checks pass at 1512×810 and 390×844, including viewport-sized canvases, min 30 loading/completion, collapse/expand/refitting, scrolling and the contour toggle. Check/typecheck/build pass. No new dependency, environment variable, migration, provider request or deployment. These UI changes are committed in `648c731` and user-reported deployed/verified; earlier measured evidence remains intact.
+1. At desktop and mobile widths, confirm the map reaches all viewport edges without document scrolling and leaves zoom and attribution visible.
+2. Confirm the default pin appears and the map estimates its two-hour area automatically. Focus **Driving time** and press Home. Check 30 min in the control, `minutes=30` in the address bar, and a completed shaded result.
+3. Collapse and expand the panel to check that the contour refits. Select **Details** to check the disclaimer. After an estimate, scroll the dialog to **Performance** and check that all four timings and the millisecond conversion appear. The dialog also reports `coarse-road-grid-v9`. Dismiss it with Escape or **Close details** and check that keyboard focus returns to **Details**.
+4. Confirm the panel omits search, coordinate fields, **Save query**, **Saved queries & runs** and **Map & model**. The disclaimer and timings appear inside the dialog.
 
 ## Time slider
 
-The main page defaults to **120 minutes** and uses one native slider from **30 to 720 whole minutes** for the coarse model. Pointer movement/key repeats preview the human-readable time without requests; pointer release/key-up/blur commits a pending value once. Pointer capture covers release outside the control. Automatic requests use the existing cancellation/sequence guard and show loading on the map/status. The optional submit button remains for coordinate edits/retry. The connected model keeps its own provider minimum/maximum and valid default.
+The main page defaults to **120 minutes** and uses one native slider from **30 to 720 whole minutes** for the coarse model. Pointer movement and key repeats preview the human-readable time. Pointer release, key-up or blur commits the value once. Pointer capture covers release outside the control. Automatic requests show a loading indicator on the map and can be cancelled. The separate connected-provider API uses provider-specific limits. [Connected-provider API](#optional-connected-provider-api).
 
 `GET /api/estimate` now reports `minMinutes: 30`; `POST` accepts 30 and rejects 29. No graph/data/hash, env, dependency, schema or migration change. Existing saved queries/replay still work. The unchanged persistence suite need not repeat.
 
@@ -1811,7 +1806,7 @@ VALHALLA_COVERAGE=your-region-and-known-boundary-limitations
 VALHALLA_COVERAGE_BOUNDS=[-119.8,30.8,-114.5,35.5]
 ```
 
-The URL is the base service URL, without `/isochrone`; credentials/URL are never returned to the browser. `GET /api/reachability` checks `/status`, isochrone capability and expected engine identity; the UI enables Compute/Replay only when ready. This check does not prove graph coverage. Compute the default 60-minute query after readiness. Engine errors and warnings remain visible. Missing provenance is reported as `unrecorded`, not inferred from the basemap.
+The URL is the base service URL, without `/isochrone`; credentials/URL are never returned to the browser. `GET /api/reachability` checks `/status`, isochrone capability and expected engine identity; Use that status to check direct connected-provider requests. This check does not prove graph coverage. Compute the default 60-minute query after readiness. Engine errors and warnings remain visible. Missing provenance is reported as `unrecorded`, not inferred from the basemap.
 
 For a separate Valhalla range experiment, both engine limits and the adapter cap would need configuration, a sufficiently buffered graph and independent validation. That is not the current six-hour task: `/experiment` uses our own scoped graph/native pipeline. The Valhalla adapter's fixed 30-second timeout also remains a separate limitation. Do not use a public routing demo as the repeated-query backend.
 
@@ -1839,7 +1834,7 @@ When `VITE_PMTILES_URL` is set, it takes precedence over `VITE_MAP_STYLE_URL`. O
 
 Ownership uses an unguessable server-issued `geo-planner-history` cookie (HttpOnly, SameSite=Lax, path `/`, one-year lifetime; Secure over HTTPS). PostgreSQL stores only its SHA-256 hash and a bounded JSON history row. There is no public global history listing, account or cross-device sync. Clearing cookies loses the browser's cloud-history identity; orphaned histories are not yet purged automatically. The cookie is a bearer credential: never print or commit it.
 
-New query/run saves back up automatically. Existing localStorage entries stay local until the user selects **Back up browser history**. The UI merges cloud and local records, labels Cloud saved/Browser only, keeps export/local saving available, and offers retry when cloud access fails. Failed saves remain queued within the tab; after reload, local-only entries can be uploaded with the backup button. Query model selection survives cloud restoration and controls Load/Replay; old records infer the model from metadata or current selection. Map-idle timing updates remain in the local cache unless that summary is backed up again.
+Completed estimates save to browser storage and back up automatically when cloud history is configured. The main panel keeps history controls out of view. It merges stored summaries with cloud responses and keeps map-idle timing updates in the local cache. Existing history continues to use the same storage keys and API.
 
 The [saved-history evidence](evidence/saved-history-2026-10-22/README.md) preserves this milestone's measurements. Its source hashes are a dated implementation snapshot, not a frozen routing recipe: product code can evolve normally, and later source differences should be interpreted as changes rather than restored blindly. Preserve the original evidence records and the separately sealed detailed-routing producers.
 
@@ -1895,7 +1890,7 @@ A successful response includes a run ID, timestamp, normalized query, validated 
 
 `engineRoundTripMs` measures fetch through reading the upstream body, including engine search/contouring and network. `decodeValidateMs` measures JSON decoding and Zod validation. `serverTotalMs` ends before response serialization/delivery. `clientRequestMs` includes browser HTTP, JSON parsing, and result validation. `sourceToMapIdleMs` begins immediately before updating the map source and includes pending tile work and camera fitting; it excludes map startup when a result arrives before the map is ready. None is an isolated graph-search or precise first-paint measurement.
 
-History uses localStorage plus the optional browser-private PostgreSQL backup described above, capped at 20 summaries per owner, with no geometry. JSON exports contain `{ "version": 1, "runs": [...] }`; there is no import flow yet. Replay uses the current graph/configuration, which may differ from the saved run. Browser storage failures produce a visible message and leave in-memory export available. The API has no authentication, rate limiting, global scheduling, or persistent jobs yet; address these before exposing an expensive routing service to public traffic.
+Completed run summaries use localStorage and optional browser-private PostgreSQL backup, capped at 20 entries without geometry. [Saved history API](#saved-history-api).
 
 API implementation references: [Valhalla isochrones](https://valhalla.github.io/valhalla/api/isochrone/), [Valhalla costing options](https://valhalla.github.io/valhalla/api/route/api-reference/), [MapLibre installation and Vite worker setup](https://maplibre.org/maplibre-gl-js/docs/), [PMTiles integration](https://docs.protomaps.com/pmtiles/maplibre), [Protomaps styling assets](https://docs.protomaps.com/basemaps/maplibre), and [OpenFreeMap quick start](https://openfreemap.org/quick_start/).
 

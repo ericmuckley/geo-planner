@@ -1,8 +1,8 @@
 import type { useAreaLayer } from "../lib/use-area-layer";
 import {
 	AreaLayerDataStatus,
-	type ElevationInputProps,
-	MinimumElevationInput,
+	ElevationRangeSlider,
+	type ElevationSliderProps,
 } from "./area-layer-controls";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 	onPublicLandOnlyChange: (checked: boolean) => void;
 	elevationOnly: boolean;
 	onElevationOnlyChange: (checked: boolean) => void;
-	minimumElevation: ElevationInputProps;
+	elevationSlider: ElevationSliderProps;
 	land: ReturnType<typeof useAreaLayer>;
 	elevation: ReturnType<typeof useAreaLayer>;
 };
@@ -20,12 +20,12 @@ export function OutdoorPlaceFilters({
 	onPublicLandOnlyChange,
 	elevationOnly,
 	onElevationOnlyChange,
-	minimumElevation,
+	elevationSlider,
 	land,
 	elevation,
 }: Props) {
 	return (
-		<fieldset className="space-y-2 rounded-lg border border-[var(--line)] px-3 pb-3">
+		<fieldset className="space-y-2 rounded-lg border border-neutral-200 px-3 pb-3">
 			<legend className="px-1 text-xs font-semibold">
 				Filter trailheads and campgrounds
 			</legend>
@@ -34,7 +34,7 @@ export function OutdoorPlaceFilters({
 					type="checkbox"
 					checked={publicLandOnly}
 					onChange={(event) => onPublicLandOnlyChange(event.target.checked)}
-					className="accent-[var(--lagoon-deep)]"
+					className="accent-neutral-900"
 				/>
 				On mapped public land
 			</label>
@@ -43,19 +43,17 @@ export function OutdoorPlaceFilters({
 					type="checkbox"
 					checked={elevationOnly}
 					onChange={(event) => onElevationOnlyChange(event.target.checked)}
-					className="accent-[var(--lagoon-deep)]"
+					className="accent-neutral-900"
 				/>
-				At or above minimum elevation
+				Within elevation range
 			</label>
-			{elevationOnly && <MinimumElevationInput {...minimumElevation} />}
-			{publicLandOnly && !land.grid && (
-				<AreaLayerDataStatus kind="land" layer={land} />
-			)}
-			{elevationOnly && !elevation.grid && (
+			{elevationOnly && <ElevationRangeSlider {...elevationSlider} />}
+			{publicLandOnly && <AreaLayerDataStatus kind="land" layer={land} />}
+			{elevationOnly && (
 				<AreaLayerDataStatus kind="elevation" layer={elevation} />
 			)}
 			{(publicLandOnly || elevationOnly) && (
-				<p className="text-xs text-[var(--sea-ink-soft)]">
+				<p className="text-xs text-neutral-600">
 					Approximate matches from USGS grid cells (~2 km).
 				</p>
 			)}

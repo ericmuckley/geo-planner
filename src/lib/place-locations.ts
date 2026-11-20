@@ -1,6 +1,10 @@
 import type { FeatureCollection, Point } from "geojson";
 import { z } from "zod";
-import { elevationMatches, gridCellIndex } from "./area-layers";
+import {
+	type ElevationRange,
+	elevationMatches,
+	gridCellIndex,
+} from "./area-layers";
 import { areaMembership } from "./contour-membership";
 import type { ReachabilityResult } from "./reachability";
 
@@ -75,11 +79,10 @@ export type PlaceTerrainFilter = (locations: PlaceLocations) => PlaceLocations;
 
 export function placeTerrainFilter(
 	land: Uint16Array | null | undefined,
-	elevation?: { grid: Uint16Array | null; minimumFeet: number | null },
+	elevation?: { grid: Uint16Array | null; range: ElevationRange },
 ): PlaceTerrainFilter | null | undefined {
 	const elevationGrid = elevation?.grid;
-	const minimumFeet = elevation?.minimumFeet;
-	if (land === null || elevationGrid === null || minimumFeet === null) {
+	if (land === null || elevationGrid === null) {
 		return null;
 	}
 	if (!land && !elevationGrid) return undefined;
@@ -92,9 +95,8 @@ export function placeTerrainFilter(
 			return (
 				index !== undefined &&
 				(!land || land[index] > 0) &&
-				(!elevationGrid ||
-					minimumFeet === undefined ||
-					elevationMatches(elevationGrid[index], minimumFeet))
+				(!elevation?.grid ||
+					elevationMatches(elevation.grid[index], elevation.range))
 			);
 		}),
 	});

@@ -11,13 +11,17 @@ import {
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { Protocol } from "pmtiles";
 import "maplibre-gl/dist/maplibre-gl.css";
-import type { Origin } from "../lib/reachability";
+import { defaultQuery, type Origin } from "../lib/reachability";
 import { createPlaceMapLayers } from "./place-map-layers";
 
 setWorkerUrl(workerUrl);
 addProtocol("pmtiles", new Protocol().tile);
 
-export function createResearchMap(container: HTMLDivElement, origin: Origin) {
+export function createResearchMap(
+	container: HTMLDivElement,
+	origin: Origin | null,
+) {
+	const center = origin ?? defaultQuery.origin;
 	const archive = import.meta.env.VITE_PMTILES_URL;
 	const style: string | StyleSpecification = archive
 		? {
@@ -43,15 +47,15 @@ export function createResearchMap(container: HTMLDivElement, origin: Origin) {
 	const map = new MapLibreMap({
 		container,
 		style,
-		center: [origin.lon, origin.lat],
+		center: [center.lon, center.lat],
 		zoom: 8.5,
 		maxPitch: 0,
 		renderWorldCopies: false,
 	});
 	map.addControl(new NavigationControl({ showCompass: false }), "top-right");
 	map.addControl(new ScaleControl({ unit: "imperial" }));
-	const marker = new Marker({ color: "#328f97" })
-		.setLngLat([origin.lon, origin.lat])
-		.addTo(map);
+	const marker = new Marker({ color: origin ? "#328f97" : "#171717" });
+	marker.getElement().setAttribute("aria-label", "Starting point");
+	if (origin) marker.setLngLat([origin.lon, origin.lat]).addTo(map);
 	return { map, marker, places: createPlaceMapLayers(map) };
 }
