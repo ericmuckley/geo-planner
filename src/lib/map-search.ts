@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { maximumElevationFeet } from "./area-layers";
-import { originSchema } from "./reachability";
+import { coarseBudgetMinutesSchema, originSchema } from "./reachability";
 
 const exampleOrigin = { lat: 35.1983, lon: -111.6513 };
 // Accept the earlier URL range and cap it at the slider's maximum.
@@ -13,7 +13,7 @@ const minimumElevationSchema = z
 const mapSearchSchema = z.object({
 	lat: originSchema.shape.lat.optional().catch(undefined),
 	lon: originSchema.shape.lon.optional().catch(undefined),
-	minutes: z.number().int().min(30).max(720).optional().catch(undefined),
+	minutes: coarseBudgetMinutesSchema.optional().catch(undefined),
 	fuel: z.boolean().catch(false),
 	trailheads: z.boolean().optional().catch(undefined),
 	campgrounds: z.boolean().optional().catch(undefined),

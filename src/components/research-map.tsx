@@ -13,6 +13,10 @@ import { cn } from "../lib/utils";
 import { setAreaMapLayer } from "./area-map-layers";
 import type { createPlaceMapLayers } from "./place-map-layers";
 
+const contourFill = "#d88a2a";
+const contourLine = "#9a580e";
+const contourOpacity = 0.22;
+
 type Props = {
 	origin: Origin | null;
 	result: ReachabilityResult | null;
@@ -23,6 +27,7 @@ type Props = {
 	elevationRange?: ElevationRange;
 	experiment?: ExperimentResult | null;
 	showContour: boolean;
+	areaLabel?: string | null;
 	fullscreen?: boolean;
 	overlayRef?: RefObject<HTMLElement | null>;
 	onOriginChange: (origin: Origin) => void;
@@ -88,6 +93,7 @@ export function ResearchMap(props: Props) {
 	useEffect(() => {
 		let disposed = false;
 		let resize: ResizeObserver | undefined;
+		let controlsDocked: boolean | undefined;
 		import("./map-client")
 			.then(({ createResearchMap }) => {
 				if (disposed || !container.current) return;
@@ -145,14 +151,17 @@ export function ResearchMap(props: Props) {
 						type: "fill",
 						source: "reachability",
 						filter: ["==", ["geometry-type"], "Polygon"],
-						paint: { "fill-color": "#328f97", "fill-opacity": 0.22 },
+						paint: {
+							"fill-color": contourFill,
+							"fill-opacity": contourOpacity,
+						},
 					});
 					map.addLayer({
 						id: "reachability-line",
 						type: "line",
 						source: "reachability",
 						filter: ["==", ["geometry-type"], "Polygon"],
-						paint: { "line-color": "#246f76", "line-width": 2 },
+						paint: { "line-color": contourLine, "line-width": 2 },
 					});
 					map.addLayer({
 						id: "experiment-roads",
@@ -224,7 +233,20 @@ export function ResearchMap(props: Props) {
 					if (!overlay || !container.current) return;
 					const bounds = container.current.getBoundingClientRect();
 					const panel = overlay.getBoundingClientRect();
-					if (panel.top >= bounds.bottom) {
+					const docked = panel.top >= bounds.bottom;
+					if (docked !== controlsDocked) {
+						const attribution =
+							container.current.querySelector<HTMLDetailsElement>(
+								"details.maplibregl-ctrl-attrib.maplibregl-compact",
+							);
+						if (attribution) {
+							// MapLibre tracks the disclosure with both the native state and a class.
+							attribution.open = !docked;
+							attribution.classList.toggle("maplibregl-compact-show", !docked);
+							controlsDocked = docked;
+						}
+					}
+					if (docked) {
 						// The mobile controls sit below the map. Resizing keeps the current view.
 						map.setPadding({ top: 24, right: 24, bottom: 24, left: 24 });
 						return;
@@ -348,7 +370,7 @@ export function ResearchMap(props: Props) {
 			className={cn(
 				"relative h-full overflow-hidden bg-[var(--sand)]",
 				props.fullscreen &&
-					"[&_.maplibregl-canvas:focus-visible]:outline-2 [&_.maplibregl-canvas:focus-visible]:-outline-offset-4 [&_.maplibregl-canvas:focus-visible]:outline-neutral-900",
+					"group [&_.maplibregl-canvas:focus-visible]:outline-2 [&_.maplibregl-canvas:focus-visible]:-outline-offset-4 [&_.maplibregl-canvas:focus-visible]:outline-neutral-900",
 				props.fullscreen && !props.origin && "maplibregl-crosshair",
 				!props.fullscreen &&
 					"min-h-[440px] rounded-2xl border border-[var(--line)]",
@@ -356,6 +378,29 @@ export function ResearchMap(props: Props) {
 		>
 			{/* MapLibre's unlayered CSS overrides Tailwind's position utility. */}
 			<div ref={container} style={{ position: "absolute", inset: 0 }} />
+			{ready && props.showContour && props.areaLabel && (
+				<p className="pointer-events-none absolute top-3 right-14 left-3 flex w-fit max-w-[calc(100%-4.25rem)] items-center gap-2 rounded-lg border border-neutral-200 bg-white/95 px-2.5 py-1.5 text-xs font-semibold shadow-sm planner-wide:left-auto planner-wide:max-w-[calc(100%-25.5rem)]">
+					<span
+						aria-hidden="true"
+						className="size-3 shrink-0 rounded-xs border"
+						style={{
+							borderColor: contourLine,
+							backgroundColor: `color-mix(in srgb, ${contourFill} ${contourOpacity * 100}%, transparent)`,
+						}}
+					/>
+					{props.areaLabel}
+				</p>
+			)}
+			{props.fullscreen &&
+				(!import.meta.env.VITE_MAP_STYLE_URL ||
+					import.meta.env.VITE_PMTILES_URL) && (
+					<a
+						className="absolute right-9 bottom-2.5 hidden h-6 items-center rounded-full bg-white/95 px-2 text-xs text-neutral-700 underline group-has-[.maplibregl-ctrl-attrib.maplibregl-compact:not(.maplibregl-compact-show)]:flex planner-wide:hidden"
+						href="https://www.openstreetmap.org/copyright"
+					>
+						© OpenStreetMap
+					</a>
+				)}
 			{!ready && !error && (
 				<output
 					className={cn(
@@ -380,7 +425,9 @@ export function ResearchMap(props: Props) {
 			)}
 			{!props.fullscreen && (
 				<div className="pointer-events-none absolute bottom-10 left-3 max-w-[260px] rounded-lg bg-white/95 p-3 text-xs text-[var(--sea-ink)] shadow-sm">
-					<p className="font-bold">Click the map to set your origin</p>
+					<p className="font-bold">
+						Click the map to set your starting location
+					</p>
 					<p className="mt-1">
 						{import.meta.env.VITE_PMTILES_URL
 							? "Regional PMTiles basemap"
@@ -395,7 +442,7 @@ export function ResearchMap(props: Props) {
 					)}
 					{props.result && !props.experiment && (
 						<p className="mt-1">
-							Teal: displayed contour
+							Amber: displayed contour
 							{props.result.contours.features.some(
 								(feature) => feature.properties?.type === "snapped",
 							) && " · orange: snapped origin"}

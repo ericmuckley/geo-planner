@@ -8,7 +8,7 @@ Continuing an existing session: read [the resume guide](docs/agent-handoff.md) a
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](docs/evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**Local preview.** The map automatically estimates a two-hour Flagstaff example. Changing the pin or driving time starts a new estimate. On phones, **Trip controls** opens from a compact bottom bar. Place badges show the category, and trailhead and campground popups offer **View in Google Maps**. [Local review](docs/local-development.md#try-the-simplified-map).
+**Local preview.** The map starts a two-hour driving estimate around Flagstaff as soon as the page loads. A large spinner appears directly on the map while it computes. Failed estimates show an error and Retry. **See where you can drive** opens the time and layer controls on phones. Tap the map to change the starting point. [Local review](docs/local-development.md#try-the-simplified-map).
 
 
 ## What works today

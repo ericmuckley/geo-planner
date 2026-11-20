@@ -28,9 +28,8 @@ import {
 	placeTerrainFilter,
 } from "../lib/place-locations";
 import {
+	coarseEstimateLimits,
 	defaultQuery,
-	type EngineConfig,
-	engineConfigSchema,
 	type Origin,
 	type ReachabilityQuery,
 	type ReachabilityResult,
@@ -54,6 +53,8 @@ export const Route = createFileRoute("/")({
 });
 
 const estimateEndpoint = "/api/estimate";
+const estimateFailure = "Could not calculate the driving area.";
+const plannerTitle = "See where you can drive";
 
 function formatDuration(minutes: number) {
 	const hours = Math.floor(minutes / 60);
@@ -106,8 +107,6 @@ function Home() {
 	const mobileControlsButton = useRef<HTMLButtonElement>(null);
 	const [minutesDraft, setMinutesDraft] = useState<number | null>(null);
 	const budgetMinutes = minutesDraft ?? minutes;
-	const [config, setConfig] = useState<EngineConfig | null>(null);
-	const [configError, setConfigError] = useState(false);
 	const [result, setResult] = useState<ReachabilityResult | null>(null);
 	const landLayer = useAreaLayer("land", search.land, publicLandOnly);
 	const elevationLayer = useAreaLayer(
@@ -164,37 +163,16 @@ function Home() {
 	const [historyDirty, setHistoryDirty] = useState(false);
 	const [error, setError] = useState<string | null>(null);
 	const [running, setRunning] = useState(false);
-	const [cancelled, setCancelled] = useState(false);
 	const loadCloudRuns = useCallback((runs: SavedRun[]) => {
 		setSavedRuns((current) => mergeSavedRuns(current, runs));
 		setHistoryDirty(true);
 	}, []);
 	const { save: saveCloudRun } = useCloudHistory(loadCloudRuns);
-	const canCompute = config?.configured && config.health === "ready";
-	const estimateError =
-		configError || (config && !canCompute)
-			? "Could not load estimate settings. Reload the page to try again."
-			: error;
 	const controller = useRef<AbortController | null>(null);
 	const sequence = useRef(0);
 	const pendingMinutes = useRef<number | null>(null);
 	const requestedQuery = useRef<ReachabilityQuery | null>(null);
-	const minMinutes = config?.minMinutes ?? 30;
-	const maxMinutes = config?.maxMinutes ?? 720;
-
-	useEffect(() => {
-		const abort = new AbortController();
-		fetch(estimateEndpoint, { signal: abort.signal })
-			.then(async (response) => {
-				if (!response.ok) throw new Error("Could not load estimate settings.");
-				return engineConfigSchema.parse(await response.json());
-			})
-			.then(setConfig)
-			.catch(() => {
-				if (!abort.signal.aborted) setConfigError(true);
-			});
-		return () => abort.abort();
-	}, []);
+	const { minMinutes, maxMinutes } = coarseEstimateLimits;
 
 	useEffect(() => {
 		try {
@@ -220,7 +198,6 @@ function Home() {
 		sequence.current += 1;
 		controller.current?.abort();
 		setRunning(false);
-		setCancelled(false);
 		setResult(null);
 		setActiveRun(null);
 		setSelectedOutdoorPlace(null);
@@ -253,7 +230,6 @@ function Home() {
 			controller.current = abort;
 			const requestNumber = ++sequence.current;
 			setRunning(true);
-			setCancelled(false);
 			setResult(null);
 			setActiveRun(null);
 			setError(null);
@@ -265,15 +241,15 @@ function Home() {
 					body: JSON.stringify(query),
 					signal: abort.signal,
 				});
-				const body = await response.json();
-				if (!response.ok)
-					throw new Error(
-						typeof body.error === "string"
-							? body.error
-							: "Reachability request failed.",
-					);
-				const next = resultSchema.parse(body);
+				const body = await response.json().catch(() => null);
 				if (abort.signal.aborted || sequence.current !== requestNumber) return;
+				if (!response.ok) {
+					setError(
+						typeof body?.error === "string" ? body.error : estimateFailure,
+					);
+					return;
+				}
+				const next = resultSchema.parse(body);
 				const run: SavedRun = {
 					id: next.id,
 					createdAt: next.createdAt,
@@ -289,13 +265,9 @@ function Home() {
 					setHistoryDirty(true);
 					saveCloudRun(run);
 				}
-			} catch (cause) {
+			} catch {
 				if (!abort.signal.aborted && sequence.current === requestNumber) {
-					setError(
-						cause instanceof Error
-							? cause.message
-							: "Reachability request failed.",
-					);
+					setError(estimateFailure);
 				}
 			} finally {
 				if (sequence.current === requestNumber) setRunning(false);
@@ -307,8 +279,6 @@ function Home() {
 	useEffect(() => {
 		clearResult();
 		const { budgetMinutes, origin } = query;
-		if (!canCompute || budgetMinutes < minMinutes || budgetMinutes > maxMinutes)
-			return;
 		const requested = requestedQuery.current;
 		requestedQuery.current = null;
 		// Automatic loads and browser history navigation do not create saved runs.
@@ -317,7 +287,7 @@ function Home() {
 			requested.origin.lon === origin.lon &&
 			requested.budgetMinutes === budgetMinutes;
 		void runQuery(query, save);
-	}, [clearResult, canCompute, query, minMinutes, maxMinutes, runQuery]);
+	}, [clearResult, query, runQuery]);
 
 	function commitDrivingTime() {
 		const pending = pendingMinutes.current;
@@ -349,23 +319,42 @@ function Home() {
 							campgrounds: campgroundLayer.locations,
 						}}
 						showContour
+						areaLabel={
+							result &&
+							`Estimated driving area · ${formatDuration(result.query.budgetMinutes)}`
+						}
 						onOriginChange={selectOrigin}
 						onMapIdle={onMapIdle}
 						fullscreen
 						overlayRef={controlsRef}
 					/>
 				</div>
-				{running && (
-					<output className="pointer-events-none absolute inset-x-0 bottom-14 z-10 flex justify-center">
-						<span className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white/95 px-4 py-2.5 text-sm font-semibold shadow-lg">
-							<LoaderCircle
-								className="animate-spin"
-								size={16}
-								aria-hidden="true"
-							/>
-							Updating area…
-						</span>
-					</output>
+				{(running || error) && (
+					<div className="pointer-events-none absolute inset-0 z-10 grid place-items-center px-4 planner-wide:pl-90">
+						{running ? (
+							<output className="rounded-full border border-neutral-200 bg-white p-4 shadow-lg">
+								<span className="sr-only">Calculating driving area</span>
+								<LoaderCircle
+									className="text-amber-700 motion-safe:animate-spin"
+									size={44}
+									aria-hidden="true"
+								/>
+							</output>
+						) : (
+							<div className="pointer-events-auto flex max-w-xs flex-col items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-center shadow-lg">
+								<p role="alert" className="text-sm font-semibold">
+									{error}
+								</p>
+								<button
+									type="button"
+									className="min-h-10 cursor-pointer rounded-md px-3 text-sm font-semibold underline underline-offset-2 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2"
+									onClick={() => void runQuery(query, true)}
+								>
+									Retry estimate
+								</button>
+							</div>
+						)}
+					</div>
 				)}
 			</div>
 			<aside
@@ -385,10 +374,15 @@ function Home() {
 						<SlidersHorizontal size={19} aria-hidden="true" />
 					</span>
 					<span className="min-w-0 flex-1">
-						<span className="block text-sm font-bold">Trip controls</span>
+						<span className="block text-sm font-bold">{plannerTitle}</span>
 						<span className="block text-xs text-neutral-600">
-							{formatDuration(budgetMinutes)} of driving
+							{formatDuration(budgetMinutes)} · Edit time &amp; layers
 						</span>
+						{!mobileControlsOpen && (
+							<span className="block text-xs text-neutral-600">
+								Tap the map to change your start
+							</span>
+						)}
 					</span>
 					<ChevronUp
 						size={20}
@@ -410,16 +404,21 @@ function Home() {
 						<div className="hidden size-7 shrink-0 items-center justify-center rounded-md bg-neutral-900 text-white planner-wide:flex">
 							<MapPin size={16} aria-hidden="true" />
 						</div>
-						<div className="flex min-w-0 flex-1 items-center justify-between gap-2 planner-wide:block">
-							<h1 className="text-xs font-bold">
-								<span className="planner-wide:hidden">
-									Tap map to set starting point
-								</span>
-								<span className="hidden planner-wide:inline">
-									Click map to set starting location
-								</span>
+						<div className="min-w-0 flex-1">
+							<h1 className="hidden text-sm font-bold planner-wide:block">
+								{plannerTitle}
 							</h1>
-							<RunDetails result={result} run={activeRun} />
+							<div className="flex items-center justify-between gap-2">
+								<p className="text-xs text-neutral-700">
+									<span className="planner-wide:hidden">
+										Tap the map to set your starting location
+									</span>
+									<span className="hidden planner-wide:inline">
+										Click map to set start
+									</span>
+								</p>
+								<RunDetails result={result} run={activeRun} />
+							</div>
 						</div>
 						<button
 							type="button"
@@ -464,7 +463,7 @@ function Home() {
 									</label>
 									<input
 										id="minutes"
-										className="block h-9 w-full cursor-pointer accent-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 disabled:cursor-not-allowed disabled:opacity-50 planner-wide:h-5"
+										className="block h-9 w-full cursor-pointer accent-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-700 planner-wide:h-5"
 										type="range"
 										aria-label="Driving time"
 										aria-valuetext={formatDuration(budgetMinutes)}
@@ -472,7 +471,6 @@ function Home() {
 										max={maxMinutes}
 										step={1}
 										value={budgetMinutes}
-										disabled={!canCompute}
 										onChange={(event) => {
 											const minutes = event.currentTarget.valueAsNumber;
 											pendingMinutes.current = minutes;
@@ -497,30 +495,6 @@ function Home() {
 										<span>{formatDuration(maxMinutes)}</span>
 									</div>
 								</div>
-								{estimateError && (
-									<p
-										role="alert"
-										className="rounded-lg border border-neutral-200 bg-neutral-100 p-3 text-sm"
-									>
-										{estimateError}
-									</p>
-								)}
-								{(running || (canCompute && (error || cancelled))) && (
-									<button
-										type="button"
-										className="min-h-7 self-start cursor-pointer rounded-sm text-xs font-semibold underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2"
-										onClick={() => {
-											if (running) {
-												clearResult();
-												setCancelled(true);
-											} else {
-												void runQuery(query, true);
-											}
-										}}
-									>
-										{running ? "Cancel estimate" : "Retry estimate"}
-									</button>
-								)}
 							</section>
 							<PlaceLayerControls
 								layers={placeLayers}

@@ -14,6 +14,14 @@ export const querySchema = z.strictObject({
 	budgetMinutes: z.number().int().min(1).max(720),
 });
 
+export const coarseEstimateLimits = {
+	minMinutes: 30,
+	maxMinutes: 720,
+} as const;
+export const coarseBudgetMinutesSchema = querySchema.shape.budgetMinutes
+	.min(coarseEstimateLimits.minMinutes)
+	.max(coarseEstimateLimits.maxMinutes);
+
 export type Origin = z.infer<typeof originSchema>;
 export type ReachabilityQuery = z.infer<typeof querySchema>;
 

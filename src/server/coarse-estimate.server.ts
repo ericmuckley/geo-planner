@@ -1,4 +1,6 @@
 import {
+	coarseBudgetMinutesSchema,
+	coarseEstimateLimits,
 	engineConfigSchema,
 	querySchema,
 	type ReachabilityResult,
@@ -20,8 +22,7 @@ const config = engineConfigSchema.parse({
 	provider: "coarse",
 	configured: true,
 	health: "ready",
-	minMinutes: 30,
-	maxMinutes: 720,
+	...coarseEstimateLimits,
 	engineVersion: "coarse-road-grid-v9",
 	graphVersion: data.version,
 	coverage:
@@ -29,6 +30,10 @@ const config = engineConfigSchema.parse({
 	coverageBounds: data.bounds,
 	healthMessage:
 		"Ready without a routing service or API key. Rough planning estimates; timing calibrated against selected development routes, not verified nationwide.",
+});
+
+const estimateQuerySchema = querySchema.extend({
+	budgetMinutes: coarseBudgetMinutesSchema,
 });
 
 function json(body: unknown, status = 200) {
@@ -52,12 +57,11 @@ export async function runEstimate(request: Request) {
 	} catch {
 		return json({ error: "Expected a JSON query." }, 400);
 	}
-	const parsed = querySchema.safeParse(input);
-	if (!parsed.success || parsed.data.budgetMinutes < 30)
+	const parsed = estimateQuerySchema.safeParse(input);
+	if (!parsed.success)
 		return json(
 			{
-				error:
-					"Choose valid coordinates and a whole-minute budget from 30 to 720.",
+				error: `Choose valid coordinates and a whole-minute budget from ${coarseEstimateLimits.minMinutes} to ${coarseEstimateLimits.maxMinutes}.`,
 			},
 			422,
 		);

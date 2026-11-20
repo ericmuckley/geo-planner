@@ -70,9 +70,9 @@ npm run build
 HOST=127.0.0.1 PORT=4204 DATABASE_URL= node .output/server/index.mjs
 ```
 
-Open the homepage with an empty query string. The app automatically estimates a two-hour area from Flagstaff with **Trailheads**, **Campgrounds** and **Public lands** selected. Click or tap a land location to move the pin and estimate a new area. With the map focused, use the arrow keys to pan and Enter to estimate from its center. The driving-time slider previews the budget and estimates on release. **Cancel estimate** stops the current request, and **Retry estimate** appears after a cancellation or request error.
+Open the homepage with an empty query string. The app automatically starts a two-hour estimate from Flagstaff with **Trailheads**, **Campgrounds** and **Public lands** selected. The Network panel shows one `POST /api/estimate` on open and no settings GET. Click or tap a land location to move the pin and estimate a new area. With the map focused, use the arrow keys to pan and Enter to estimate from its center. The driving-time slider previews the budget and estimates on release. A large spinner appears over the map while the request runs. If the request fails, an error and **Retry estimate** appear there.
 
-On a phone, tap **Trip controls** at the bottom to find the driving-time slider, layers, filters and **Details**. After an estimate, enable **Fuel stops**, **Trailheads** and **Campgrounds**. Hover over each type of cluster with a mouse to see its category and count. Click or tap a cluster to zoom in. Open a trailhead or campground from a browse list or individual pin and choose **View in Google Maps**. Check the OpenStreetMap credit and snapshot date in the controls footer. Open **Details** next to the starting-point instruction for both USGS sources, performance timings and the GitHub project link. [Google Maps URL format](https://developers.google.com/maps/documentation/urls/get-started#search).
+On a phone, tap **See where you can drive** at the bottom to find the driving-time slider, layers, filters and **Details**. The amber legend shows the driving time behind the shaded area. After an estimate, enable **Fuel stops**, **Trailheads** and **Campgrounds**. Hover over each type of cluster with a mouse to see its category and count. Click or tap a cluster to zoom in. Open a trailhead or campground from a browse list or individual pin and choose **View in Google Maps**. The map info button opens the basemap credits. The controls footer shows the places credit and snapshot date. Open **Details** next to the starting-point instruction for both USGS sources, performance timings and the GitHub project link. [Google Maps URL format](https://developers.google.com/maps/documentation/urls/get-started#search).
 
 ### Share a map view
 
@@ -110,7 +110,7 @@ Pass when all tests and builds succeed, all six assets match and the local gener
 
 The two optional USGS layers are live in `83e6566`. Start the [local preview](#try-the-simplified-map) for the current controls. [Hosted verification](evidence/usgs-area-layers-2026-11-18/hosted-release-v1.json).
 
-Wait for the Flagstaff estimate and turn on **Public lands** and **Elevation**. Green shades mapped public land and purple shows terrain within the selected elevation range. Move the maximum handle left and confirm that the purple shading narrows while the green shading and driving area stay visible. Set it back to 10,000 feet and change driving time to 12 hours to check that both overlays update. Find both grid sources in **Details**. Cloud history is disabled in the preview.
+Wait for the Flagstaff estimate and turn on **Public lands** and **Elevation**. Amber marks the driving area, green marks mapped public land, and purple marks terrain within the selected elevation range. Check that the toggle icons, checked boxes and elevation range slider match their overlay colors. Move the maximum handle left and confirm that the purple shading narrows while the green shading and driving area stay visible. Turn on **Within elevation range** in the outdoor-place filters and check the same slider there. Set the maximum back to 10,000 feet and change driving time to 12 hours to check that both overlays update. Find both grid sources in **Details**. Cloud history is disabled in the preview.
 
 Check the static assets against Vercel output and verify the bundled handler:
 
@@ -1166,18 +1166,19 @@ The transient preview on 4184 has been stopped after QA. Rediscover local listen
 
 ## Floating map controls
 
-On desktop, a 320 px control panel floats over the top left of the full-viewport map. Below 640 px wide or 480 px tall, **Trip controls** sits below the map and starts collapsed with the current driving time. Tap the bar to open or close it. The controls scroll within half the viewport height, and the map resizes above them. The main page uses `/api/estimate` for every contour. Visit `/experiment` directly for the embedded research map.
+On desktop, a 320 px control panel floats over the top left of the full-viewport map. Below 640 px wide or 480 px tall, **See where you can drive** sits below the map and starts collapsed with the current driving time. Tap the bar to open or close it. The controls scroll within half the viewport height, and the map resizes above them. The main page uses `/api/estimate` for every contour. Visit `/experiment` directly for the embedded research map.
 
-1. At 390 × 844 and 844 × 390, confirm the map starts above the collapsed bar. Open **Trip controls** and scroll to the filters and attribution. The map should retain at least half the viewport, with zoom buttons and basemap credits accessible and no document scrolling.
-2. Confirm the default pin appears and the map estimates its two-hour area automatically. Drag **Driving time** on a phone or focus it and press Home at a keyboard. Check that releasing the slider updates the URL and shaded area. On a phone, collapse and reopen the controls after zooming and confirm the camera stays in place.
+1. At 390 × 844 and 844 × 390, confirm the bar starts collapsed and displays **Tap the map to change your start**. The full credits start closed. Tap the map info button to reveal the credits and tap it again to close them. Open **See where you can drive** and scroll to the filters. The map should retain at least half the viewport, with the zoom and info buttons accessible and no document scrolling.
+2. With the phone controls collapsed, click or tap the map and check that a prominent spinner appears by itself near the center. Temporarily block `/api/estimate` in the browser to verify the error and Retry are visible, then restore the request and check that a successful retry clears the overlay. With reduced motion enabled, the spinner icon stays still. On desktop, the overlay should stay clear of the floating panel.
 3. In the phone layout, open **Browse trailheads** or **Browse campgrounds** and choose a place. Confirm the bar collapses, the map focuses the pin, and the popup and **View in Google Maps** link are accessible.
 4. On desktop, collapse and expand the panel and check that the contour refits. On both layouts, open **Details** after an estimate to see the sources, disclaimer, `coarse-road-grid-v9` model and four performance timings. Dismiss the dialog with Escape or **Close details** and check that keyboard focus returns to **Details**.
+5. Confirm the legend reads **Estimated driving area · 2 hours** on the default map. Drag **Driving time** on a phone or focus it and press Home at a keyboard. Check that releasing the slider updates the URL and that the shaded area and legend update together. On a phone, collapse and reopen the controls after zooming and confirm the camera stays in place.
 
 ## Time slider
 
-The main page defaults to **120 minutes** and uses one native slider from **30 to 720 whole minutes** for the coarse model. Pointer movement and key repeats preview the human-readable time. Pointer release, key-up or blur commits the value once. Pointer capture covers release outside the control. Automatic requests show a loading indicator on the map and can be cancelled. The separate connected-provider API uses provider-specific limits. [Connected-provider API](#optional-connected-provider-api).
+The main page defaults to **120 minutes** and uses one native slider from **30 to 720 whole minutes** for the coarse model. Pointer movement and key repeats preview the human-readable time. Pointer release, key-up or blur commits the value once. Pointer capture covers release outside the control. Automatic requests show a spinner on the map. Starting a new estimate replaces the previous request. The separate connected-provider API uses provider-specific limits. [Connected-provider API](#optional-connected-provider-api).
 
-`GET /api/estimate` now reports `minMinutes: 30`; `POST` accepts 30 and rejects 29. No graph/data/hash, env, dependency, schema or migration change. Existing saved queries/replay still work. The unchanged persistence suite need not repeat.
+`GET /api/estimate` reports `minMinutes: 30`; `POST` accepts 30 and rejects 29. The homepage starts with the POST and shares those limits with the server. The metadata GET is available for clients and verification.
 
 ```sh
 npm run check
@@ -1188,7 +1189,7 @@ npm run build:vercel
 npm run check:coarse:vercel
 ```
 
-Checks pass locally, including a generated-handler 30-minute result. For browser QA, reload once after builds/docs finish, confirm default120/min 30/max 720, click/release the track (375 minutes at its center), observe `Updating area…`, and wait for matching run metadata without using submit. Test Home→30, End→720, rapid End/ArrowLeft→719, reset→120 and keyboard auto-computation, then fixture Cloud saved→reload→Replay. Inspect only new public fixture history. [Evidence](evidence/time-slider-2026-10-23/checks.json).
+Checks pass locally, including a generated-handler 30-minute result. For browser QA, reload once after builds/docs finish, confirm default120/min 30/max 720, click/release the track (375 minutes at its center), observe the map spinner, and wait for matching run metadata without using submit. Test Home→30, End→720, rapid End/ArrowLeft→719, reset→120 and keyboard auto-computation, then fixture Cloud saved→reload→Replay. Inspect only new public fixture history. [Original slider checks](evidence/time-slider-2026-10-23/checks.json).
 
 The slider/min 30 update is committed at `9b3e83b` (`slider`), user-reported deployed. Fifteen hosted checks pass, plus browser default/minimum/pointer/keyboard/loading/latest-result checks. A first min60 response preceded the subsequent successful observation; retain both. Public responses do not expose the deployed Git SHA. Hosted Save query was rejected by automatic approval review, so persistence writes/replay were not retested. [Latest evidence](evidence/coarse-frontier-tool-2026-10-23/README.md). Native range controls need no new UI dependency.
 

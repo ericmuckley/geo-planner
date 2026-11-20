@@ -1,5 +1,5 @@
 import { Map as MapIcon, Mountain } from "lucide-react";
-import { type ReactNode, useState } from "react";
+import { type CSSProperties, type ReactNode, useState } from "react";
 import {
 	type AreaLayerKind,
 	areaLayers,
@@ -11,6 +11,16 @@ import { Slider } from "./ui/slider";
 
 const icons = { land: MapIcon, elevation: Mountain };
 type Layer = ReturnType<typeof useAreaLayer>;
+
+function areaLayerColor(kind: AreaLayerKind) {
+	return `rgb(${areaLayers[kind].color.join(" ")})`;
+}
+
+const elevationSliderTheme = {
+	"--primary": areaLayerColor("elevation"),
+	"--muted": "color-mix(in srgb, var(--primary) 14%, transparent)",
+	"--ring": "var(--primary)",
+} as CSSProperties;
 
 export function AreaLayerDataStatus({
 	kind,
@@ -62,13 +72,13 @@ export function ElevationRangeSlider({
 	const range = draft?.saved === value ? draft.range : value;
 
 	return (
-		<fieldset aria-label="Elevation range">
+		<fieldset aria-label="Elevation range" style={elevationSliderTheme}>
 			<div
 				className="flex items-center justify-between gap-2 text-xs text-neutral-700"
 				aria-hidden="true"
 			>
 				<span>Elevation range</span>
-				<span className="rounded-md bg-neutral-100 px-2 py-0.5 font-semibold tabular-nums">
+				<span className="rounded-md bg-muted px-2 py-0.5 font-semibold text-primary tabular-nums">
 					{formatElevation(range[0])} – {formatElevation(range[1])}
 				</span>
 			</div>
@@ -84,7 +94,7 @@ export function ElevationRangeSlider({
 				}
 				onValueCommit={([min, max]) => onChange([min, max])}
 				onPointerCancel={() => setDraft(undefined)}
-				className="h-8 cursor-pointer"
+				className="h-8 cursor-pointer [&_[data-slot=slider-thumb]]:bg-primary"
 			/>
 			<div
 				className="flex justify-between text-xs text-neutral-600"
@@ -110,16 +120,18 @@ function AreaLayerControl({
 }) {
 	const { label } = areaLayers[kind];
 	const Icon = icons[kind];
+	const layerColor = areaLayerColor(kind);
 	return (
 		<div className="space-y-2">
 			<label className="flex cursor-pointer items-center gap-2 text-sm font-semibold">
-				<Icon size={16} className="text-neutral-600" aria-hidden="true" />
+				<Icon size={16} style={{ color: layerColor }} aria-hidden="true" />
 				{label}
 				<input
 					type="checkbox"
 					checked={layer.enabled}
 					onChange={(event) => onLayerChange(kind, event.target.checked)}
-					className="ml-auto accent-neutral-900"
+					className="ml-auto"
+					style={{ accentColor: layerColor }}
 				/>
 			</label>
 			{layer.enabled && (

@@ -1,12 +1,12 @@
 # Geo Planner documentation
 
-For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [where to resume](agent-handoff.md#where-to-resume). Updated November 19, 2026. Baseline `0d1d304` includes the simplified map and shareable URL. The mobile bottom bar is uncommitted in this checkout. Large research inputs and generated data remain ignored and absent from a fresh clone.
+For a new agent or disconnected session, read [AGENTS.md](../AGENTS.md), then [where to resume](agent-handoff.md#where-to-resume). Updated November 20, 2026. Baseline `5b62cc5` includes the mobile bottom bar. The estimate startup and feedback, planner labels, compact credits and layer colors are uncommitted in this checkout. Large research inputs and generated data remain ignored and absent from a fresh clone.
 
 **V9 is committed at `648c731` (commit message `v8`), user-reported deployed and verified.** The agent's 15 production API checks also pass for `coarse-road-grid-v9`, min 30/max 720 and the saved 6/10/12 h counts. No provider call or history write was needed. Public model metadata does not expose deployed Git SHA; hosted browser verification is user-reported. [Hosted result and latest preflight](evidence/coarse-backbone-preflight-2026-10-25/README.md).
 
 **Production.** Release `b765050` adds **Browse trailheads** and **Browse campgrounds** to the v9 app. The live six-hour Flagstaff check verified both lists, their pins and the elevation filter. The replacement engine remains held after seven failed release checks. [Hosted release checks](evidence/usgs-area-layers-2026-11-18/browse-lists-release-v1.json).
 
-**Local preview.** The map automatically estimates a two-hour Flagstaff example. On phones, **Trip controls** starts as a compact bottom bar and leaves at least half the screen for the map when open. Share the URL to restore the starting point, driving time, layers and both elevation bounds. [Local review](local-development.md#try-the-simplified-map), [mobile checks](local-development.md#floating-map-controls), [map URL settings](local-development.md#share-a-map-view).
+**Local preview.** The map starts with a two-hour Flagstaff estimate. A centered spinner shows progress. Errors and Retry appear in the same spot. The collapsed phone bar explains how to change the starting point. Share the URL to restore the starting point, driving time, layers and both elevation bounds. [Local review](local-development.md#try-the-simplified-map), [mobile checks](local-development.md#floating-map-controls), [map URL settings](local-development.md#share-a-map-view).
 
 
 ## Current documents
